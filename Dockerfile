@@ -13,7 +13,7 @@ ENV NPM_CONFIG_LOGLEVEL warn
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get update
 RUN apt-get install -y nodejs
-RUN npm install -g yarn
+RUN npm install -g yarn parcel
 
 # Build Caddy
 RUN go get github.com/caddyserver/caddy/caddy

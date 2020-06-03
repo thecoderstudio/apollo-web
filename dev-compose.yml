@@ -6,7 +6,7 @@ services:
     build:
       context: .
     ports:
-      - "1970:1970"
+      - "1971:1971"
     volumes:
       - .:/apollo-web
       - /apollo-web/node_modules/ # Makes sure local node_modules doesn't get mounted
