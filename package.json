@@ -8,5 +8,9 @@
     "start": "parcel index.html --port 1971",
     "start:prod": "caddy",
     "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
