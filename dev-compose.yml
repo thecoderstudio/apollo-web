@@ -1,0 +1,15 @@
+version: '3'
+services:
+  apollo-web:
+    container_name: apollo-web
+    image: apollo-web:dev
+    build:
+      context: .
+    ports:
+      - "1970:1970"
+    volumes:
+      - .:/apollo-web
+      - /apollo-web/node_modules/ # Makes sure local node_modules doesn't get mounted
+    tty: true
+    stdin_open: true
+    command: start

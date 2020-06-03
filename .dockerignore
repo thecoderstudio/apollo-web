@@ -1,0 +1,10 @@
+Dockerfile
+dev-compose.yml
+.dockerignore
+.gitignore
+README.md
+
+build
+node_modules
+.git/
+.github/
