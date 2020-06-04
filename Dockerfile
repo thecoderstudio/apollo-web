@@ -18,7 +18,7 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get update && apt-get install -y --no-install-recommends nodejs=$NODE_VERSION \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
-RUN npm install -g yarn@$YARN_VERSION parcel@$PARCEL_VERSION
+RUN npm install -g yarn@"$YARN_VERSION" parcel@"$PARCEL_VERSION"
 
 # Build Caddy
 RUN go get github.com/caddyserver/caddy/caddy
