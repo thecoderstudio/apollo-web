@@ -1,0 +1,8 @@
+0.0.0.0:1971
+root dist
+tls off
+log stdout
+rewrite {
+  if    {path} not_match ^\/0.0.0.0
+  to    {path} {path}/ /?_url={uri}
+}

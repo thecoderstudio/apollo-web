@@ -1,0 +1,27 @@
+name: Test
+
+on:
+  pull_request:
+    branches:
+    - develop
+    - master
+  push:
+    branches:
+    - develop
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Test with Jest
+        run: yarn test --coverage
+
+      - name: Upload coverage report
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        run: bash <(curl -s https://codecov.io/bash)
