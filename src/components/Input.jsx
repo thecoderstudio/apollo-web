@@ -7,7 +7,7 @@ const Input = styled.input`
   font-family: 'Libre Franklin', sans-serif;
   font-size: 1rem;
   padding-left: 10px;
-  opacity: 0.5;
+  opacity: 0.9;
 `;
 
 export default Input;
