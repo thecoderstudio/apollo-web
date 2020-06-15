@@ -18,15 +18,18 @@ const OuterContainer = styled.div`
 const InnerContainer = styled.div`
   display: grid;
   justify-items: center;
+  column-gap: 50px;
   height: 90%;
-  max-height: 950px;
+  max-height: 650px;
   margin: 100px;
   grid-template-rows: [heading] 1fr [title] 1fr [content] 4fr;
   grid-template-columns: [img] 1fr [content] 1fr;
 
   ${
     media.phone`
-      margin: 20px;
+      grid-template-columns: [content] 1fr;
+      grid-template-rows: [title] 1fr [content] 4fr [footer] 1fr;
+      margin: 20px 20px 0px 20px;
     `
   }
 `;
@@ -49,7 +52,7 @@ const StyledCard = styled(Card)`
   ${
     media.phone`
       box-shadow: none;
-      background-color: ${props => props.theme.backgroundColorDark};
+      background-color: ${props => props.theme.black};
     `
   }
 `;
@@ -67,6 +70,14 @@ const SupportingImg = styled.img`
   width: 75%;
   max-width: 400px;
   align-self: center;
+
+  ${
+    media.phone`
+      grid-column: 1;
+      grid-row: footer;
+      width: 100%;
+    `
+  }
 `;
 
 class Login extends React.Component {
