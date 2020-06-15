@@ -1,10 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
-import styled, { createGlobalStyle} from 'styled-components';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import ProtectedRoute from './components/ProtectedRoute';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
+import { darkTheme } from './theme';
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=Roboto:wght@300;400&display=swap');
@@ -14,6 +15,8 @@ const GlobalStyle = createGlobalStyle`
     padding: 0px;
     height: 100%;
     width: 100%;
+    color: ${props => props.theme.white};
+    background-color: ${props => props.theme.black}; 
   }
 
   body {
@@ -36,14 +39,16 @@ const Content = styled.div`
 function App(props) {
   return (
     <div>
-      <BrowserRouter>
-        <Content>
-          <Switch>
-            <ProtectedRoute exact path='/' component={Dashboard} fallbackComponent={Login} />
-          </Switch>
-          <GlobalStyle />
-        </Content>
-      </BrowserRouter>
+      <ThemeProvider theme={darkTheme}>
+        <BrowserRouter>
+          <Content>
+            <Switch>
+              <ProtectedRoute exact path='/' component={Dashboard} fallbackComponent={Login} />
+            </Switch>
+            <GlobalStyle />
+          </Content>
+        </BrowserRouter>
+      </ThemeProvider>
     </div>
   );
 }
