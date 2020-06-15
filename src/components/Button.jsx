@@ -8,6 +8,11 @@ const Button = styled.button`
   font-family: 'B612', sans-serif;
   font-size: 1rem;
   font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.90;
+  }
 `;
 
 export default Button;
