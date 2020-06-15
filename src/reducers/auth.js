@@ -8,5 +8,5 @@ export default function authReducer(state = { authenticated: false }, action) {
   if (action.type == 'LOGOUT') {
     logout();
   }
-  return { authenticated: Boolean(Cookies.get('AIOHTTP_SESSION', { path: '/' })) };
+  return { authenticated: Boolean(Cookies.get('session', { path: '/' })) };
 }
