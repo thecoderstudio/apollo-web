@@ -7,6 +7,7 @@ import Input from '../components/Input';
 import Card from '../components/Card';
 import { login as loginAction } from '../actions/auth';
 import media from '../util/media';
+import moonImg from '../images/moon_rocket.svg';
 
 const OuterContainer = styled.div`
   height: 100%;
@@ -21,6 +22,7 @@ const InnerContainer = styled.div`
   max-height: 950px;
   margin: 100px;
   grid-template-rows: [heading] 1fr [title] 1fr [content] 4fr;
+  grid-template-columns: [img] 1fr [content] 1fr;
 
   ${
     media.phone`
@@ -31,6 +33,7 @@ const InnerContainer = styled.div`
 
 const Title = styled.h1`
   grid-row: title;
+  grid-column: content;
   color: ${props => props.theme.primary};
 `;
 
@@ -39,6 +42,7 @@ const StyledCard = styled(Card)`
   max-width: 400px;
   height: 350px;
   grid-row: content;
+  grid-column: content;
   display: grid;
   align-items: center;
 
@@ -55,6 +59,14 @@ const Form = styled.form`
   display: grid;
   grid-template-rows: auto;
   grid-row-gap: 40px;
+`;
+
+const SupportingImg = styled.img`
+  grid-column: img;
+  grid-row: 2 / 4;
+  width: 75%;
+  max-width: 400px;
+  align-self: center;
 `;
 
 class Login extends React.Component {
@@ -110,6 +122,7 @@ class Login extends React.Component {
     return (
       <OuterContainer>
         <InnerContainer>
+          <SupportingImg src={moonImg} />
           <Title>Log in to Apollo</Title>
           <StyledCard>
             <Form onSubmit={this.login}>
