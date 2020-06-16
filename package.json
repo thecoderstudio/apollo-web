@@ -35,6 +35,9 @@
     "transform": {
       "^.+\\.jsx?$": "babel-jest",
       "^.+\\.svg$": "jest-svg-transformer"
-    }
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ]
   }
 }
