@@ -40,6 +40,7 @@
       "src/**/*.{js,jsx}",
       "!src/index.js",
       "!src/store.js"
-    ]
+    ],
+    "clearMocks": true
   }
 }
