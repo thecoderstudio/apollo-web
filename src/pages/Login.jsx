@@ -68,7 +68,7 @@ const SupportingImg = styled.img`
   grid-column: img;
   grid-row: 2 / 4;
   width: 75%;
-  max-width: 400px;
+  max-width: 800px;
   align-self: center;
 
   ${
@@ -114,10 +114,11 @@ class Login extends React.Component {
         switch (res.status) {
           case 200:
             this.props.dispatch(loginAction());
+            break;
           default:
             return;
-        };
-      })
+        }
+      });
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
@@ -145,4 +146,6 @@ class Login extends React.Component {
   }
 }
 
-export default connect(({ auth }) => ({ authenticated: auth.authenticated }))(Login);
+export default connect(
+  state => ({ authenticated: state.authenticated })
+)(Login);

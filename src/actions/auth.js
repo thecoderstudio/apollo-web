@@ -7,7 +7,7 @@ function login() {
 function logout() {
   return {
     type: 'LOGOUT'
-  }
+  };
 }
 
 export { login, logout };

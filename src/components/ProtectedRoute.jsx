@@ -14,10 +14,10 @@ function ProtectedRoute ({
           rest.authenticated ? <Component {...props} /> : <FallbackComponent {...props} />
       }
     />
-  )
+  );
 }
 
 
 export default connect(
-  ({ auth }) => ({ authenticated: auth.authenticated })
+  state => ({ authenticated: state.authenticated })
 )(ProtectedRoute);

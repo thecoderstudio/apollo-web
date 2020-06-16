@@ -3,6 +3,6 @@ function changeTheme(theme) {
     type: 'CHANGE_THEME',
     theme
   };
-};
+}
 
 export { changeTheme };

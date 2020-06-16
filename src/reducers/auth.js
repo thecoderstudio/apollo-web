@@ -4,15 +4,14 @@ function logout() {
   Cookies.remove('session', {path: '/'});
 }
 
-export default function authReducer(state = { authenticated: false }, action) {
+export default function authReducer(state = false, action) {
   switch(action.type) {
     case 'LOGOUT':
       logout();
-    case 'LOGIN':
       break;
     default:
-      return state;
+      break;
   }
 
-  return { authenticated: Boolean(Cookies.get('session', { path: '/' })) };
+  return Boolean(Cookies.get('session', { path: '/' }));
 }
