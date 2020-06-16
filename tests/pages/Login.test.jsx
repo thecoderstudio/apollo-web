@@ -58,9 +58,9 @@ describe('login', () => {
   });
 
   it("correctly sets pathname on authentication", () => {
-    const component = getComponent(store)
-    const root = component.root.findByProps({authenticated: false})
-    const instance = root.instance
+    const component = getComponent(store);
+    const root = component.root.findByProps({authenticated: false});
+    const instance = root.instance;
 
     instance.props = ({ authenticated: true });
     instance.componentDidUpdate();
