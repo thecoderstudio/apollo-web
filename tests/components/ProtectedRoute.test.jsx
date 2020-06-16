@@ -46,4 +46,4 @@ describe('ProtectedRoute', () => {
     tree = getComponent(store).toJSON();
     expect(tree).toMatchSnapshot();
   });
-})
+});

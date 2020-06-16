@@ -36,9 +36,9 @@ describe('login', () => {
   });
 
   it("handles successful login", () => {
-    const component = getComponent(store)
-    const root = component.root.findByProps({authenticated: false})
-    const instance = root.instance
+    const component = getComponent(store);
+    const root = component.root.findByProps({authenticated: false});
+    const instance = root.instance;
 
     axios.post.mockResolvedValue({
       status: 200
@@ -64,6 +64,6 @@ describe('login', () => {
 
     instance.props = ({ authenticated: true });
     instance.componentDidUpdate();
-    expect(window.location.pathname).toEqual("/")
+    expect(window.location.pathname).toEqual("/");
   });
 });

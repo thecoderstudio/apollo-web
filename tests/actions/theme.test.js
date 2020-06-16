@@ -6,6 +6,6 @@ test("changeTheme creates an action to change the theme", () => {
   const expectedAction = {
     type: 'CHANGE_THEME',
     theme: expectedTheme
-  }
+  };
   expect(changeTheme(expectedTheme)).toEqual(expectedAction);
 });

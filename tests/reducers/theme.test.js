@@ -14,8 +14,6 @@ describe("theme reducer", () => {
         type: 'CHANGE_THEME',
         theme: darkTheme
       })
-    ).toEqual({
-      theme: darkTheme
-    });
+    ).toEqual(darkTheme);
   });
 });
