@@ -42,7 +42,6 @@ describe('ProtectedRoute', () => {
       authenticated: true
     });
 
-
     tree = getComponent(store).toJSON();
     expect(tree).toMatchSnapshot();
   });
