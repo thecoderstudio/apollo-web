@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`login renders correctly 1`] = `
+<div
+  className="sc-AxhCb KPxTP"
+>
+  <div
+    className="sc-AxhUy ipnyuM"
+  >
+    <img
+      className="sc-AxmLO bgjBrM"
+      src={[Function]}
+    />
+    <h1
+      className="sc-AxgMl dVtKuT"
+    >
+      Log in to Apollo
+    </h1>
+    <div
+      className="sc-AxiKw sc-AxheI gbjjdj"
+    >
+      <form
+        className="sc-Axmtr hUAPTi"
+        onSubmit={[Function]}
+      >
+        <input
+          className="sc-AxirZ foZgfu"
+          onChange={[Function]}
+          placeholder="Username"
+          type="username"
+        />
+        <input
+          className="sc-AxirZ foZgfu"
+          onChange={[Function]}
+          placeholder="Password"
+          type="password"
+        />
+        <button
+          className="sc-AxjAm bjwrOj"
+        >
+          Log in
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+`;
