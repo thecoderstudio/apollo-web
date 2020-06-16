@@ -118,9 +118,6 @@ class Login extends React.Component {
             return;
         };
       })
-      .catch(error => {
-        console.log(error)
-      });
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
