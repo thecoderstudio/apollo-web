@@ -111,12 +111,8 @@ class Login extends React.Component {
       { withCredentials: true }
     )
       .then(res => {
-        switch (res.status) {
-          case 200:
-            this.props.dispatch(loginAction());
-            break;
-          default:
-            return;
+        if (res.status == 200) {
+          this.props.dispatch(loginAction());
         }
       });
   }

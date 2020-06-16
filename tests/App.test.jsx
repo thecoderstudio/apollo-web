@@ -17,7 +17,7 @@ function getComponent(store) {
 describe('app', () => {
   it("renders correctly unauthenticated", () => {
     const store = mockStore({
-      auth: {authenticated: false}
+      authenticated: false
     });
     const tree = getComponent(store).toJSON();
     expect(tree).toMatchSnapshot();
@@ -25,7 +25,7 @@ describe('app', () => {
 
   it("renders correctly authenticated", () => {
     const store = mockStore({
-      auth: {authenticated: true}
+      authenticated: true
     });
     const tree = getComponent(store).toJSON();
     expect(tree).toMatchSnapshot();

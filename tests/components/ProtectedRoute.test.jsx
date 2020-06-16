@@ -25,7 +25,7 @@ describe('ProtectedRoute', () => {
 
   beforeEach(() => {
     store = mockStore({
-      auth: {authenticated: false}
+      authenticated: false
     });
   });
 
@@ -39,7 +39,7 @@ describe('ProtectedRoute', () => {
     expect(tree).toMatchSnapshot();
 
     store = mockStore({
-      auth: {authenticated: true}
+      authenticated: true
     });
 
 

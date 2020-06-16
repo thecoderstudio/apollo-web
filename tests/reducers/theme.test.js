@@ -3,9 +3,7 @@ import themeReducer from '../../src/reducers/theme';
 
 describe("theme reducer", () => {
   it("should return the initial state", () => {
-    expect(themeReducer(undefined, {})).toEqual({
-      theme: browserPreferredTheme
-    });
+    expect(themeReducer(undefined, {})).toEqual(browserPreferredTheme);
   });
 
   it("should correctly handle CHANGE_THEME", () => {

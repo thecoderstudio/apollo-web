@@ -5,49 +5,9 @@ exports[`app renders correctly authenticated 1`] = `
   <div
     className="sc-fzozJi iaqdxU"
   >
-    <div
-      className="sc-AxhCb KPxTP"
-    >
-      <div
-        className="sc-AxhUy ipnyuM"
-      >
-        <img
-          className="sc-AxmLO AMLso"
-          src={[Function]}
-        />
-        <h1
-          className="sc-AxgMl fxVaIM"
-        >
-          Log in to Apollo
-        </h1>
-        <div
-          className="sc-AxiKw sc-AxheI cTqUBt"
-        >
-          <form
-            className="sc-Axmtr hUAPTi"
-            onSubmit={[Function]}
-          >
-            <input
-              className="sc-AxirZ eKJIgn"
-              onChange={[Function]}
-              placeholder="Username"
-              type="username"
-            />
-            <input
-              className="sc-AxirZ eKJIgn"
-              onChange={[Function]}
-              placeholder="Password"
-              type="password"
-            />
-            <button
-              className="sc-AxjAm hNiYBm"
-            >
-              Log in
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
+    <p>
+      Welcome to Apollo!
+    </p>
   </div>
 </div>
 `;

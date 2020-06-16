@@ -52,7 +52,7 @@ exports[`ProtectedRoute correctly handles authenticated 1`] = `
 `;
 
 exports[`ProtectedRoute correctly handles authenticated 2`] = `
-<unauth
+<auth
   history={
     Object {
       "action": "POP",
