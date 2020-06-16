@@ -98,9 +98,7 @@ class Login extends React.Component {
   }
 
   login(e) {
-    if (e) {
-      e.preventDefault();
-    }
+    e.preventDefault();
 
     const credentials = {
       username: this.state.username,

@@ -2,10 +2,12 @@ import React from 'react';
 import configureStore from 'redux-mock-store';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
+import axios from 'axios';
 import Login from '../../src/pages/Login';
 import Button from '../../src/components/Button';
 
 const mockStore = configureStore([]);
+jest.mock('axios');
 
 function getComponent(store) {
   return renderer.create(
@@ -24,7 +26,8 @@ describe('login', () => {
     });
     process.env = {
       APOLLO_URL: 'http://localhost:1234'
-    }
+    };
+    store.dispatch = jest.fn();
   });
 
   it("renders correctly", () => {
@@ -36,10 +39,21 @@ describe('login', () => {
     const component = getComponent(store)
     const root = component.root.findByProps({authenticated: false})
     const instance = root.instance
-    instance.setState({
-      username: 'test',
-      password: 'test'
+
+    axios.post.mockResolvedValue({
+      status: 200
     });
-    root.findByType('form').props.onSubmit();
+
+    root.findByProps({type: 'username'}).props.onChange({ target: {
+      value: 'test'
+    }});
+    root.findByProps({type: 'password'}).props.onChange({ target: {
+      value: 'password'
+    }});
+    root.findByType('form').props.onSubmit({ preventDefault: jest.fn() });
+
+    setTimeout(() => {
+      expect(instance.props.dispatch).toHaveBeenCalled();
+    }, 100);
   });
 });
