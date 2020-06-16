@@ -5,8 +5,14 @@ function logout() {
 }
 
 export default function authReducer(state = { authenticated: false }, action) {
-  if (action.type == 'LOGOUT') {
-    logout();
+  switch(action.type) {
+    case 'LOGOUT':
+      logout();
+    case 'LOGIN':
+      break;
+    default:
+      return state;
   }
+
   return { authenticated: Boolean(Cookies.get('session', { path: '/' })) };
 }
