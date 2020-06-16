@@ -1,7 +1,7 @@
 import Cookies from 'js-cookie';
 
 function logout() {
-  Cookies.remove('AIOHTTP_SESSION', {path: '/'});
+  Cookies.remove('session', {path: '/'});
 }
 
 export default function authReducer(state = { authenticated: false }, action) {
