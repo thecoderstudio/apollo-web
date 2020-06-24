@@ -11,7 +11,7 @@ const Container = styled.li`
   border-radius: 8px;
 	border: 1px solid white;
 	
-  height: 60px;
+  height: 30px;
   padding: 20px;
   margin-top: 25px;
 `;

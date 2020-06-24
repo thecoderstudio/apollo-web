@@ -5,16 +5,16 @@ import Text from '../Text'
 const Container = styled.div`
   display: grid;
   grid-column: connection-status;
-  grid-template-columns: [status-indicator] 20px [status-text] 20px;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 `;
 
 const Indicator = styled.div`
   grid-column: status-indicator;
 
-  height: 25px;
-  width: 25px
-
-  border-radius: 8px;
+  height: 20px;
+  width: 20px;
+  
+  border-radius: 50%;
   background-color: black;
 `;
 
