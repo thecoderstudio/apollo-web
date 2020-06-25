@@ -8,18 +8,20 @@ import { listAgentsSuccess as listAgentsSuccessAction } from '../../actions/agen
 const Content = styled.div`
   display: grid;
   grid-column: agent-listing;
-  grid-template-rows: [title] 50px [list] 1fr;
-  background-color: blue;
+	grid-template-rows: [title] 50px [list] 1fr;
+	
+	background-color: ${props => props.theme.lightBlack};
+	border-radius: 8px;
+	padding: 20px;
+	width: 100%;
 `;
 
 const ListTitle = styled.h2`
   grid-row: title;
-  color: ${props => props.theme.primary};
 `;
 
 const List = styled.ul`
     grid-row: list;
-    background-color: green;
     list-style: none;
     padding-left: 0;
 `;
@@ -50,7 +52,7 @@ class AgentList extends React.Component {
 
 	generateAgents(agents) {
 		return agents.map(agent => {
-			return <AgentListItem agentName={agent.name} connectionState={agent.connection_state} />
+			return <AgentListItem key={agent.id} agentName={agent.name} connectionState={agent.connection_state} />
 		})
 	}
 

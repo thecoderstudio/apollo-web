@@ -119,9 +119,9 @@ class Login extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    // if (this.props.authenticated) {
-    //   window.location.pathname = "/";
-    // }
+    if (this.props.authenticated) {
+      window.location.pathname = "/";
+    }
   }
 
   render() {

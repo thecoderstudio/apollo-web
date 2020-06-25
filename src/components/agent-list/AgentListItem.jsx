@@ -1,4 +1,5 @@
 import ConnectionState from './ConnectionState'
+import media from '../../util/media';
 import React from 'react';
 import styled from 'styled-components'
 import Text from '../Text'
@@ -20,14 +21,26 @@ const Container = styled.li`
 	line-height: 30px;
 	padding: 15px;
 	margin-top: 25px;
-	
-	background-color: red;
+
+	${
+	media.phone`
+			grid-template-rows: [name] 1fr [connection-status] 1fr; 
+			grid-template-columns: [name-and-status] 1fr; 
+			height: 100px;
+		`
+	}
 `;
 
 const StyledText = styled(Text)`
 	grid-column: name;
-	background-color: black;
 	min-width: 100px;
+
+	${
+	media.phone`
+				grid-rows: name; 
+				grid-column: name-and-status;
+			`
+	}
 `;
 
 export default function AgentListItem(props) {
