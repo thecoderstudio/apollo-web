@@ -26,7 +26,7 @@ const InnerContainer = styled.div`
   grid-template-columns: [img] 1fr [content] 1fr;
 
   ${
-    media.phone`
+  media.phone`
       grid-template-columns: [content] 1fr;
       grid-template-rows: [title] 1fr [content] 4fr [footer] 1fr;
       margin: 20px 20px 0px 20px;
@@ -50,7 +50,7 @@ const StyledCard = styled(Card)`
   align-items: center;
 
   ${
-    media.phone`
+  media.phone`
       box-shadow: none;
       background-color: ${props => props.theme.black};
     `
@@ -72,7 +72,7 @@ const SupportingImg = styled.img`
   align-self: center;
 
   ${
-    media.phone`
+  media.phone`
       grid-column: 1;
       grid-row: footer;
       width: 100%;
@@ -112,15 +112,16 @@ class Login extends React.Component {
     )
       .then(res => {
         if (res.status === 200) {
+          console.log(this.props.dispatch)
           this.props.dispatch(loginAction());
         }
       });
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    if (this.props.authenticated) {
-      window.location.pathname = "/";
-    }
+    // if (this.props.authenticated) {
+    //   window.location.pathname = "/";
+    // }
   }
 
   render() {

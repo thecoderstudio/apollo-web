@@ -1,7 +1,13 @@
-import ConnectionStatus from './ConnectionStatus'
+import ConnectionState from './ConnectionState'
 import React from 'react';
 import styled from 'styled-components'
 import Text from '../Text'
+import PropTypes from 'prop-types';
+
+const propTypes = {
+	agentName: PropTypes.string.isRequired,
+	connectionState: PropTypes.string.isRequired
+}
 
 const Container = styled.li`
   display: grid;
@@ -22,14 +28,15 @@ const StyledText = styled(Text)`
 	grid-column: name;
 	background-color: black;
 	min-width: 100px;
-
 `;
 
 export default function AgentListItem(props) {
 	return (
 		<Container>
-			<StyledText>Agent name</StyledText>
-			<ConnectionStatus />
+			<StyledText>{props.agentName}</StyledText>
+			<ConnectionState connectionState={props.connectionState} />
 		</Container>
 	)
 }
+
+AgentListItem.propTypes = propTypes

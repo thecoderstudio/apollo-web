@@ -1,6 +1,9 @@
+import { connect } from 'react-redux';
+import axios from 'axios';
 import AgentListItem from './AgentListItem'
 import React from 'react';
 import styled from 'styled-components'
+import { listAgentsSuccess as listAgentsSuccessAction } from '../../actions/agent';
 
 const Content = styled.div`
   display: grid;
@@ -22,13 +25,50 @@ const List = styled.ul`
 `;
 
 
-export default function AgentList(props) {
-    return (
-        <Content>
-            <ListTitle>Agents</ListTitle>
-            <List>
-                <AgentListItem />
-            </List>
-        </Content>
-    )
+class AgentList extends React.Component {
+	constructor(props) {
+		super(props);
+		this.generateAgents = this.generateAgents.bind(this);
+	}
+
+	componentDidMount() {
+		this.requestAgents()
+	}
+
+	requestAgents() {
+		axios.get(
+			process.env.APOLLO_URL.concat("agent"),
+			{ withCredentials: true }
+		)
+			.then(response => {
+				this.props.dispatch(listAgentsSuccessAction(response.data));
+			})
+			.catch(error => {
+				console.log(error);
+			});
+	}
+
+	generateAgents(agents) {
+		return agents.map(agent => {
+			return <AgentListItem agentName={agent.name} connectionState={agent.connection_state} />
+		})
+	}
+
+	render() {
+
+		return (
+			<Content>
+				<ListTitle>Agents</ListTitle>
+				<List>
+					{this.generateAgents(this.props.agents)}
+				</List>
+			</Content>
+		)
+	}
 }
+
+const mapStateToProps = (state) => ({
+	agents: state.agent.agents,
+});
+
+export default connect(mapStateToProps)(AgentList);

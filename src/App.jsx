@@ -43,6 +43,7 @@ function App(props) {
         <BrowserRouter>
           <Content>
             <Switch>
+              <Route exact path='/login' component={Login} />
               <ProtectedRoute exact path='/' component={Dashboard} fallbackComponent={Login} />
             </Switch>
             <GlobalStyle />
