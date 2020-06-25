@@ -3,7 +3,7 @@ import axios from 'axios';
 import AgentListItem from './AgentListItem'
 import React from 'react';
 import styled from 'styled-components'
-import { listAgentsSuccess as listAgentsSuccessAction } from '../../actions/agent';
+import { listAgents as listAgentsAction } from '../../actions/agent';
 
 const Content = styled.div`
   display: grid;
@@ -44,10 +44,7 @@ class AgentList extends React.Component {
 			{ withCredentials: true }
 		)
 			.then(response => {
-				this.props.dispatch(listAgentsSuccessAction(response.data));
-			})
-			.catch(error => {
-				console.log(error);
+				this.props.dispatch(listAgentsAction(response.data));
 			});
 	}
 
