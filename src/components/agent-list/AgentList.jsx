@@ -12,8 +12,9 @@ const Content = styled.div`
 	
 	background-color: ${props => props.theme.lightBlack};
 	border-radius: 8px;
+	maring: 20px;
 	padding: 20px;
-	width: 100%;
+	
 `;
 
 const ListTitle = styled.h2`
@@ -21,9 +22,9 @@ const ListTitle = styled.h2`
 `;
 
 const List = styled.ul`
-    grid-row: list;
-    list-style: none;
-    padding-left: 0;
+	grid-row: list;
+	list-style: none;
+	padding-left: 0;
 `;
 
 
