@@ -5,9 +5,8 @@ import styled from 'styled-components'
 
 
 const Content = styled(ContentContainer)`
-  grid-template-columns: [agent-listing] 1fr;
+  grid-template-columns: [agent-listing] 1fr 1fr;
   grid-template-rows: 1fr;  
-  background-color: red;
 `;
 
 export default function Dashboard(props) {
