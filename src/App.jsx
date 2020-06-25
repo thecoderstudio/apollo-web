@@ -5,6 +5,7 @@ import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import ProtectedRoute from './components/ProtectedRoute';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
+import TestPage from './pages/TestPage';
 import { darkTheme } from './theme';
 
 const GlobalStyle = createGlobalStyle`
@@ -32,8 +33,6 @@ const Content = styled.div`
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-rows: [nav] 50px 1fr;
-  grid-row-gap: 8px;
 `;
 
 function App(props) {
@@ -44,6 +43,7 @@ function App(props) {
           <Content>
             <Switch>
               <ProtectedRoute exact path='/' component={Dashboard} fallbackComponent={Login} />
+              <Route exact path='/terminal' component={TestPage} />
             </Switch>
             <GlobalStyle />
           </Content>
