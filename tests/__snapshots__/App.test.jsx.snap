@@ -15,44 +15,44 @@ exports[`app renders correctly authenticated 1`] = `
 exports[`app renders correctly unauthenticated 1`] = `
 <div>
   <div
-    className="sc-fzozJi iaqdxU"
+    className="sc-fzoXzr krFqVx"
   >
     <div
-      className="sc-AxhCb KPxTP"
+      className="sc-fznZeY faKFAb"
     >
       <div
-        className="sc-AxhUy ipnyuM"
+        className="sc-fzokOt khOUuy"
       >
         <img
-          className="sc-AxmLO AMLso"
+          className="sc-fzoLag fFWBwa"
           src={[Function]}
         />
         <h1
-          className="sc-AxgMl fxVaIM"
+          className="sc-fzqBZW gfiTAB"
         >
           Log in to Apollo
         </h1>
         <div
-          className="sc-AxiKw sc-AxheI cTqUBt"
+          className="sc-fznKkj sc-fzqNJr lcwNrL"
         >
           <form
-            className="sc-Axmtr hUAPTi"
+            className="sc-fzoyAV bRqgJx"
             onSubmit={[Function]}
           >
             <input
-              className="sc-AxirZ eKJIgn"
+              className="sc-fznyAO iAFIbK"
               onChange={[Function]}
               placeholder="Username"
               type="username"
             />
             <input
-              className="sc-AxirZ eKJIgn"
+              className="sc-fznyAO iAFIbK"
               onChange={[Function]}
               placeholder="Password"
               type="password"
             />
             <button
-              className="sc-AxjAm hNiYBm"
+              className="sc-fzplWN guGGRs"
             >
               Log in
             </button>

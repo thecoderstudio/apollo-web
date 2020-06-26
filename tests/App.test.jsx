@@ -25,6 +25,9 @@ describe('app', () => {
 
   it("renders correctly authenticated", () => {
     const store = mockStore({
+      agent: {
+        agent: []
+      },
       authenticated: true
     });
     const tree = getComponent(store).toJSON();

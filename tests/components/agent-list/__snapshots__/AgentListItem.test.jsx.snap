@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<li
+  className="sc-AxgMl eBtYhh"
+>
+  <span
+    className="sc-AxjAm sc-AxheI jcegaq"
+  >
+    agentName
+  </span>
+  <div
+    className="sc-AxirZ hAvJBF"
+  >
+    <div
+      className="sc-AxiKw kpoPWF"
+    >
+      <div
+        className="sc-AxhCb guWnsS"
+      />
+      <span
+        className="sc-AxjAm sc-AxhUy lMjjz"
+      >
+        Connected
+      </span>
+    </div>
+  </div>
+</li>
+`;

@@ -1,6 +1,6 @@
-export const LIST_AGENTS_SUCCESS = 'LIST_AGENTS_SUCCESS';
+export const LIST_AGENTS = 'LIST_AGENTS';
 
-export const listAgentsSuccess = (agents) => ({
-    type: LIST_AGENTS_SUCCESS,
+export const listAgents = (agents) => ({
+    type: LIST_AGENTS,
     agents: agents
 });
