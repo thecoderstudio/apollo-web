@@ -26,10 +26,13 @@ describe('app', () => {
   it("renders correctly authenticated", () => {
     const store = mockStore({
       agent: {
-        agent: []
+        agents: []
       },
       authenticated: true
     });
+    process.env = {
+      APOLLO_URL: 'http://localhost:1234'
+    };
     const tree = getComponent(store).toJSON();
     expect(tree).toMatchSnapshot();
   });

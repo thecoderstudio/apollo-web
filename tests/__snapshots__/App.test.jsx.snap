@@ -3,11 +3,24 @@
 exports[`app renders correctly authenticated 1`] = `
 <div>
   <div
-    className="sc-fzozJi iaqdxU"
+    className="sc-fzoXzr krFqVx"
   >
-    <p>
-      Welcome to Apollo!
-    </p>
+    <div
+      className="sc-fzoLsD sc-fzpans eXutBA"
+    >
+      <div
+        className="sc-Axmtr iBOERz"
+      >
+        <h2
+          className="sc-AxmLO jBiGbn"
+        >
+          Agents
+        </h2>
+        <ul
+          className="sc-fzozJi jqZnKs"
+        />
+      </div>
+    </div>
   </div>
 </div>
 `;
