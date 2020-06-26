@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "draft-js": "^0.11.6",
     "js-cookie": "^2.2.1",
     "react": ">= 16.8.0",
     "react-dom": ">= 16.8.0",
@@ -21,7 +20,10 @@
     "react-router-dom": "^5.2.0",
     "redux": ">4.0.0",
     "redux-persist": "^6.0.0",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "xterm": "^4.7.0",
+    "xterm-addon-attach": "^0.6.0",
+    "xterm-addon-fit": "^0.4.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.10.2",

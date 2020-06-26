@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Card from '../components/Card';
-import { Editor, EditorState } from 'draft-js';
+import { Terminal as XTerm } from 'xterm';
+import { FitAddon } from 'xterm-addon-fit';
+import { AttachAddon } from 'xterm-addon-attach';
 
 const Container = styled(Card)`
   height: 100%;
@@ -9,7 +11,7 @@ const Container = styled(Card)`
   width: 700px;
 `
 
-const StyledEditor = styled(Editor)`
+const StyledXTerm = styled.div`
   height: 100%;
   width: 100%;
 `;
@@ -17,31 +19,23 @@ const StyledEditor = styled(Editor)`
 class Terminal extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.state = {editorState: EditorState.createEmpty()};
-    this.onEditorChange = this.onEditorChange.bind(this);
-    this.sendCommand = this.sendCommand.bind(this);
-    this.client = new WebSocket('ws://localhost:1970/agent/73d711e0-923d-42a7-9857-5f3d67d88370/shell');
   }
 
-  componentWillMount() {
-    this.client.onmessage = function incoming(data) {
-      console.log(data.data);
-    }
-  }
-
-  onEditorChange(newEditorState) {
-    this.sendCommand(newEditorState.getCurrentContent().getPlainText());
-    this.setState({editorState: newEditorState});
-  }
-
-  sendCommand(command) {
-    this.client.send(command);
+  componentDidMount() {
+    const socket = new WebSocket('ws://localhost:1970/agent/73d711e0-923d-42a7-9857-5f3d67d88370/shell');
+    var term = new XTerm();
+    var fitAddon = new FitAddon();
+    const attachAddon = new AttachAddon(socket);
+    term.loadAddon(attachAddon);
+    term.loadAddon(fitAddon)
+    term.open(document.getElementById('terminal'));
+    term.write('Hello from \x1B[1;3;31mxterm.js\x1B[0m $ ')
   }
 
   render() {
     return (
       <Container>
-        <StyledEditor editorState={this.state.editorState} onChange={this.onEditorChange}  />
+        <StyledXTerm id="terminal" />
       </Container>
     );
   }
