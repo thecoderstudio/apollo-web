@@ -6,7 +6,6 @@ import axios from 'axios';
 import AgentList from '../../../src/components/agent-list/AgentList';
 // import * as AgentActions from '../../../src/actions/agent';
 import { listAgents } from '../../../src/actions/agent'
-import { connect } from 'react-redux'
 
 
 const mockStore = configureStore([]);
@@ -41,7 +40,7 @@ describe('agentList', () => {
 			status: 200,
 			data: []
 		}));
-		const tree = getComponent(store).toJSON();
+		let tree = getComponent(store).toJSON();
 		expect(tree).toMatchSnapshot()
 	})
 
@@ -51,10 +50,9 @@ describe('agentList', () => {
 				status: 403
 			}
 		}));
-		const component = getComponent(mockStore({ authenticated: false, agent: { agents: [] } }));
-		console.log(component.root.findByProps({ authenticated: false, agents: [] }))
-		// const tree = getComponent(store).toJSON();
-		// expect(tree).toMatchSnapshot()
+		const component = getComponent(store);
+		const tree = getComponent(store).toJSON();
+		expect(tree).toMatchSnapshot()
 	})
 
 	it("handles unexpected error correctly", () => {
@@ -81,20 +79,4 @@ describe('agentList', () => {
 		const component = getComponent(store)
 		expect(component.root.findAllByType("li").length).toBe(2);
 	})
-
-	// it("correctly lists agents", () => {
-	// 	let a = false;
-
-	// 	jest.mock('../../../src/actions/agent', () => ({ listAgents: jest.fn() }))
-
-	// 	const responseData = [
-	// 		{ id: "1", name: "test", connection_state: "connected" }
-	// 	]
-	// 	axios.get.mockResolvedValue(Promise.resolve({
-	// 		data: responseData
-	// 	}));
-
-	// 	expect(store.dispatch).toHaveBeenCalled();
-
-	// })
 })
