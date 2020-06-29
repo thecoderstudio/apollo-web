@@ -24,10 +24,10 @@ const Container = styled.li`
 
 	${
 	media.phone`
-			grid-template-rows: [name] 1fr [connection-status] 1fr; 
-			grid-template-columns: [name-and-status] 1fr; 
-			height: 100px;
-		`
+		grid-template-rows: [name] 1fr [connection-status] 1fr; 
+		grid-template-columns: [name-and-status] 1fr; 
+		height: 100px;
+	`
 	}
 `;
 
@@ -37,9 +37,9 @@ const StyledText = styled(Text)`
 
 	${
 	media.phone`
-				grid-rows: name; 
-				grid-column: name-and-status;
-			`
+		grid-rows: name; 
+		grid-column: name-and-status;
+	`
 	}
 `;
 

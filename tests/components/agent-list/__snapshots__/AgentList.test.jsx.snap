@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`agentList renders correctly 1`] = `
+<div
+  className="sc-Axmtr gWuRTr"
+>
+  <h2
+    className="sc-AxmLO jBiGbn"
+  >
+    Agents
+  </h2>
+  <ul
+    className="sc-fzozJi cHlgEd"
+  />
+</div>
+`;

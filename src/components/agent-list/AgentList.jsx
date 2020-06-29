@@ -3,6 +3,7 @@ import axios from 'axios';
 import AgentListItem from './AgentListItem'
 import React from 'react';
 import styled from 'styled-components'
+import { logout as logoutAction } from '../../actions/auth'
 import { listAgents as listAgentsAction } from '../../actions/agent';
 
 const Content = styled.div`
@@ -35,16 +36,29 @@ class AgentList extends React.Component {
 	}
 
 	componentDidMount() {
+		console.log("COMPONENT DIDF MOUNT")
 		this.requestAgents()
 	}
 
+	componentDidUpdate() {
+		console.log("UPDATE KK HOND")
+	}
+
 	requestAgents() {
+		const { dispatch } = this.props;
 		axios.get(
 			process.env.APOLLO_URL.concat("agent"),
 			{ withCredentials: true }
 		)
 			.then(response => {
-				this.props.dispatch(listAgentsAction(response.data));
+				dispatch(listAgentsAction(response.data));
+			})
+			.catch(function (error) {
+				if (error.response) {
+					if (error.response.status == 403) {
+						dispatch(logoutAction())
+					}
+				}
 			});
 	}
 
@@ -68,7 +82,7 @@ class AgentList extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-	agents: state.agent.agents,
+	agents: state.agent.agents
 });
 
 export default connect(mapStateToProps)(AgentList);

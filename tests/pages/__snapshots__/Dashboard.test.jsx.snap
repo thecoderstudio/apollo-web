@@ -13,7 +13,7 @@ exports[`dashboard renders correctly 1`] = `
       Agents
     </h2>
     <ul
-      className="sc-fzozJi jqZnKs"
+      className="sc-fzozJi cHlgEd"
     />
   </div>
 </div>
