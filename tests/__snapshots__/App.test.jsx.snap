@@ -17,7 +17,7 @@ exports[`app renders correctly authenticated 1`] = `
           Agents
         </h2>
         <ul
-          className="sc-fzozJi cHlgEd"
+          className="sc-fzozJi jqZnKs"
         />
       </div>
     </div>

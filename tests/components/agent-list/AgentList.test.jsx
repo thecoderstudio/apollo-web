@@ -4,10 +4,15 @@ import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import axios from 'axios';
 import AgentList from '../../../src/components/agent-list/AgentList';
-import { listAgents as listAgentsAction } from '../../../src/actions/agent';
+// import * as AgentActions from '../../../src/actions/agent';
+import { listAgents } from '../../../src/actions/agent'
+import { connect } from 'react-redux'
+
 
 const mockStore = configureStore([]);
 jest.mock('axios');
+
+
 
 function getComponent(store) {
 	return renderer.create(
@@ -29,7 +34,7 @@ describe('agentList', () => {
 		process.env = {
 			APOLLO_URL: 'http://localhost:1234'
 		};
-		// store.dispatch = jest.fn();
+		store.dispatch = jest.fn();
 	});
 
 	it("renders correctly", () => {
@@ -42,10 +47,12 @@ describe('agentList', () => {
 	})
 
 	it("handles unauthenticated successful", () => {
-		axios.get.mockResolvedValue(Promise.resolve({
-			status: 403
+		axios.get.mockResolvedValue(Promise.reject({
+			response: {
+				status: 403
+			}
 		}));
-		getComponent(store);
+		const component = getComponent(store);
 		expect(window.location.pathname).toEqual("/");
 	})
 
@@ -64,32 +71,18 @@ describe('agentList', () => {
 	})
 
 	it("correctly lists agents", () => {
+		let a = false;
+
+		jest.mock('../../../src/actions/agent', () => ({ listAgents: jest.fn() }))
+
 		const responseData = [
 			{ id: "1", name: "test", connection_state: "connected" }
 		]
-
 		axios.get.mockResolvedValue(Promise.resolve({
 			data: responseData
 		}));
 
-		const component = getComponent(store);
+		expect(store.dispatch).toHaveBeenCalled();
 
-
-		expect(listAgentsAction).toHaveBeenCalledTimes(1);
-
-
-		// expect(instance.props.dispatch).toHaveBeenCalledTimes(1);
-		// expect(store.dispatch).toHaveBeenCalledWith(
-		// 	listAgentsAction(responseData)
-		// );
-
-		// tree.props.agents = [{ id: "1", name: "test", connection_state: "connected" }]
-		// console.log(component.toJSON())
-		// // console.log(component.root.findByType('agentList'))
-		// console.log(component.root.findByType('ul').children)
-		// const instance = component.root.findAllByProps({ key: "1", agentName: "test", connectionState: "connected" });
-		// });
-		// console.log(instance)
-		// console.log(instance.type)
 	})
 })

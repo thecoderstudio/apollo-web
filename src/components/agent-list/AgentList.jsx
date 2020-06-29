@@ -36,12 +36,7 @@ class AgentList extends React.Component {
 	}
 
 	componentDidMount() {
-		console.log("COMPONENT DIDF MOUNT")
 		this.requestAgents()
-	}
-
-	componentDidUpdate() {
-		console.log("UPDATE KK HOND")
 	}
 
 	requestAgents() {

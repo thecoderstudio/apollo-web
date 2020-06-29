@@ -58,6 +58,7 @@ describe('login', () => {
 
     setTimeout(() => {
       expect(instance.props.dispatch).toHaveBeenCalled();
+
     }, 100);
   });
 

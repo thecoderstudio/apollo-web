@@ -1,5 +1,5 @@
 import agentReducer from '../../src/reducers/agent';
-import LIST_AGENTS from '../../src/actions/agent'
+import { LIST_AGENTS } from '../../src/actions/agent'
 
 describe("agent reducer", () => {
     it("should return empty agent list as initial state", () => {
@@ -7,7 +7,10 @@ describe("agent reducer", () => {
     });
 
     it("should correctly handle agent listing", () => {
-        let state = { "agents": [{ id: "id" }] }
-        expect(agentReducer(state, { type: LIST_AGENTS })).toEqual(state)
+        let agents = [{ id: "id" }]
+        expect(agentReducer({}, {
+            type: LIST_AGENTS,
+            agents: agents
+        })).toEqual({ agents: agents })
     })
 })
