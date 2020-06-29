@@ -106,7 +106,7 @@ class Login extends React.Component {
     };
 
     axios.post(
-      process.env.APOLLO_URL.concat("auth/login"),
+      `${process.env.APOLLO_HTTP_URL}auth/login`,
       credentials,
       { withCredentials: true }
     )

@@ -34,23 +34,31 @@ const StyledXTerm = styled.div`
   }
 `;
 
+const TERMINAL_SETTINGS = {
+  theme : {
+    background: "#ffffff00"
+  },
+  allowTransparency: true
+}
+
 class Terminal extends React.PureComponent {
   constructor(props) {
     super(props);
   }
 
   componentDidMount() {
-    const socket = new WebSocket(`ws://localhost:1970/agent/${this.props.agent.id}/shell`);
-    var term = new XTerm({
-      theme : {
-        background: "#ffffff00"
-      },
-      allowTransparency: true
-    });
+    var term = new XTerm(TERMINAL_SETTINGS);
+    const agent = this.props.agent
+    const socket = new WebSocket(
+      `${process.env.APOLLO_WS_URL}agent/${agent.id}/shell`
+    );
+    socket.onerror = function() {
+      term.write(`Something went wrong in the connection with the agent.`)
+    }
     const attachAddon = new AttachAddon(socket);
     term.loadAddon(attachAddon);
     term.open(document.getElementById('terminal'));
-    term.write(`Connecting to agent ${this.props.agent.name}...`)
+    term.write(`Connecting to agent ${agent.name}...\n\r`)
   }
 
   render() {
