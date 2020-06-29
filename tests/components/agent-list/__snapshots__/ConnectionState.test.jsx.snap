@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`connectionState Gets correct color 1`] = `
+<div
+  className="sc-AxirZ hAvJBF"
+>
+  <div
+    className="sc-AxiKw kpoPWF"
+  >
+    <div
+      className="sc-AxhCb guWnsS"
+    />
+    <span
+      className="sc-AxjAm sc-AxhUy lMjjz"
+    >
+      Blanko
+    </span>
+  </div>
+</div>
+`;
+
+exports[`connectionState Gets correct color 2`] = `
+<div
+  className="sc-AxirZ hAvJBF"
+>
+  <div
+    className="sc-AxiKw kpoPWF"
+  >
+    <div
+      className="sc-AxhCb guWnsS"
+    />
+    <span
+      className="sc-AxjAm sc-AxhUy lMjjz"
+    >
+      Disconnected
+    </span>
+  </div>
+</div>
+`;
+
+exports[`connectionState Gets correct color 3`] = `
+<div
+  className="sc-AxirZ hAvJBF"
+>
+  <div
+    className="sc-AxiKw kpoPWF"
+  >
+    <div
+      className="sc-AxhCb guWnsS"
+    />
+    <span
+      className="sc-AxjAm sc-AxhUy lMjjz"
+    >
+      Connecting
+    </span>
+  </div>
+</div>
+`;
+
+exports[`connectionState Gets correct color 4`] = `
+<div
+  className="sc-AxirZ hAvJBF"
+>
+  <div
+    className="sc-AxiKw kpoPWF"
+  >
+    <div
+      className="sc-AxhCb guWnsS"
+    />
+    <span
+      className="sc-AxjAm sc-AxhUy lMjjz"
+    >
+      Connected
+    </span>
+  </div>
+</div>
+`;
+
+exports[`connectionState renders correctly 1`] = `
+<div
+  className="sc-AxirZ hAvJBF"
+>
+  <div
+    className="sc-AxiKw kpoPWF"
+  >
+    <div
+      className="sc-AxhCb guWnsS"
+    />
+    <span
+      className="sc-AxjAm sc-AxhUy lMjjz"
+    >
+      Connected
+    </span>
+  </div>
+</div>
+`;

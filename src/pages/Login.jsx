@@ -112,7 +112,6 @@ class Login extends React.Component {
     )
       .then(res => {
         if (res.status === 200) {
-          console.log(this.props.dispatch)
           this.props.dispatch(loginAction());
         }
       });

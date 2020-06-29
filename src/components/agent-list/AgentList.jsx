@@ -50,7 +50,7 @@ class AgentList extends React.Component {
 			})
 			.catch(function (error) {
 				if (error.response) {
-					if (error.response.status == 403) {
+					if (error.response.status === 403) {
 						dispatch(logoutAction())
 					}
 				}
