@@ -4,7 +4,8 @@ export const darkTheme = {
   lightBlack: "#1B1B1B",
   white: "#F8F8F8",
   primary: "#02A3EE",
-  accent: "#4D02EE"
+  accent: "#4D02EE",
+  error: "#ED3E2A"
 };
 
 function getBrowserPreferredTheme() {

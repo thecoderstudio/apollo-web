@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Card from '../components/Card';
 import { Terminal as XTerm } from 'xterm';
 import { AttachAddon } from 'xterm-addon-attach';
+import chalk from 'chalk';
 
 const testAgent = {
   id: "73d711e0-923d-42a7-9857-5f3d67d88370",
@@ -39,12 +40,18 @@ const TERMINAL_SETTINGS = {
     background: "#ffffff00"
   },
   allowTransparency: true
-}
+};
+
+const CHALK_SETTINGS = {
+  enabled: true,
+  level: 2
+};
 
 class Terminal extends React.PureComponent {
   constructor(props) {
     super(props);
     this.term = new XTerm(TERMINAL_SETTINGS);
+    this.chalk = new chalk.Instance(CHALK_SETTINGS);
     this.onSocketError = this.onSocketError.bind(this);
     this.connect = this.connect.bind(this);
     this.connect()
@@ -62,12 +69,15 @@ class Terminal extends React.PureComponent {
   }
 
   componentDidMount() {
+    const styledName = this.chalk.hex(this.props.theme.primary).bold(this.props.agent.name)
     this.term.open(document.getElementById('terminal'));
-    this.term.write(`Connecting to agent ${this.props.agent.name}...\n\r`)
+    this.term.write(`Connecting to agent ${styledName}...\n\r\n`);
   }
 
   onSocketError() {
-    this.term.write("Something went wrong in the connection with the agent.")
+    this.term.write(this.chalk.hex(this.props.theme.error).bold(
+      "Something went wrong in the connection with the agent."
+    ))
   }
 
   render() {
