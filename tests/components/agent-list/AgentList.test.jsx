@@ -4,8 +4,6 @@ import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import axios from 'axios';
 import AgentList from '../../../src/components/agent-list/AgentList';
-// import * as AgentActions from '../../../src/actions/agent';
-import { listAgents } from '../../../src/actions/agent'
 
 
 const mockStore = configureStore([]);
