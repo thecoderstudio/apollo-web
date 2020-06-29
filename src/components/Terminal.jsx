@@ -3,7 +3,6 @@ import styled, { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
 import Card from '../components/Card';
 import { Terminal as XTerm } from 'xterm';
-import { FitAddon } from 'xterm-addon-fit';
 import { AttachAddon } from 'xterm-addon-attach';
 
 const testAgent = {
@@ -48,7 +47,6 @@ class Terminal extends React.PureComponent {
       },
       allowTransparency: true
     });
-    var fitAddon = new FitAddon();
     const attachAddon = new AttachAddon(socket);
     term.loadAddon(attachAddon);
     term.open(document.getElementById('terminal'));
