@@ -44,21 +44,30 @@ const TERMINAL_SETTINGS = {
 class Terminal extends React.PureComponent {
   constructor(props) {
     super(props);
+    this.term = new XTerm(TERMINAL_SETTINGS);
+    this.onSocketError = this.onSocketError.bind(this);
+    this.connect = this.connect.bind(this);
+    this.connect()
   }
 
-  componentDidMount() {
-    var term = new XTerm(TERMINAL_SETTINGS);
+  connect() {
     const agent = this.props.agent
     const socket = new WebSocket(
       `${process.env.APOLLO_WS_URL}agent/${agent.id}/shell`
     );
-    socket.onerror = function() {
-      term.write(`Something went wrong in the connection with the agent.`)
-    }
+    socket.onerror = this.onSocketError;
+
     const attachAddon = new AttachAddon(socket);
-    term.loadAddon(attachAddon);
-    term.open(document.getElementById('terminal'));
-    term.write(`Connecting to agent ${agent.name}...\n\r`)
+    this.term.loadAddon(attachAddon);
+  }
+
+  componentDidMount() {
+    this.term.open(document.getElementById('terminal'));
+    this.term.write(`Connecting to agent ${this.props.agent.name}...\n\r`)
+  }
+
+  onSocketError() {
+    this.term.write("Something went wrong in the connection with the agent.")
   }
 
   render() {
