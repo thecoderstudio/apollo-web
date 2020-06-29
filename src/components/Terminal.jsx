@@ -6,17 +6,8 @@ import { Terminal as XTerm } from 'xterm';
 import { AttachAddon } from 'xterm-addon-attach';
 import chalk from 'chalk';
 
-const testAgent = {
-  id: "73d711e0-923d-42a7-9857-5f3d67d88370",
-  name: "test"
-}
-
 const propTypes = {
-  agent: PropTypes.object
-};
-
-const defaultProps = {
-  agent: testAgent
+  agent: PropTypes.object.isRequired
 };
 
 const Container = styled(Card)`
@@ -90,6 +81,5 @@ class Terminal extends React.PureComponent {
 }
 
 Terminal.propTypes = propTypes;
-Terminal.defaultProps = defaultProps;
 
 export default withTheme(Terminal);
