@@ -14,7 +14,7 @@ function getComponent(store) {
     <Provider store={store}>
       <AgentList />
     </Provider>
-  )
+  );
 }
 
 describe('agentList', () => {
@@ -38,8 +38,8 @@ describe('agentList', () => {
       data: []
     }));
     let tree = getComponent(store).toJSON();
-    expect(tree).toMatchSnapshot()
-  })
+    expect(tree).toMatchSnapshot();
+  });
 
   it("handles unauthenticated successful", () => {
     axios.get.mockResolvedValue(Promise.reject({
@@ -73,7 +73,7 @@ describe('agentList', () => {
         ]
       }
     })
-    const component = getComponent(store)
+    const component = getComponent(store);
     expect(component.root.findAllByType("li").length).toBe(2);
   })
 })

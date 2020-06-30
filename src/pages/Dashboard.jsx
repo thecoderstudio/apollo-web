@@ -1,8 +1,8 @@
-import AgentList from '../components/agent-list/AgentList'
+import AgentList from '../components/agent-list/AgentList';
 import media from '../util/media';
-import ContentContainer from '../components/Content'
+import ContentContainer from '../components/Content';
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 
 const Content = styled(ContentContainer)`
@@ -21,5 +21,5 @@ export default function Dashboard(props) {
     <Content>
       <AgentList />
     </Content>
-  )
+  );
 }

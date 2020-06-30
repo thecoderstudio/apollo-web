@@ -5,7 +5,7 @@ import ConnectionState from '../../../src/components/agent-list/ConnectionState'
 function getComponent(state) {
   return renderer.create(
     <ConnectionState connectionState={state} />
-  )
+  );
 }
 
 describe("connectionState", () => {
@@ -24,5 +24,5 @@ describe("connectionState", () => {
     tree = getComponent("connected").toJSON();
     expect(tree).toMatchSnapshot();
   });
-})
+});
 

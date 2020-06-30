@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Text = styled.span`
   grid-column: name;
@@ -6,4 +6,4 @@ const Text = styled.span`
   font-size: 1rem;
 `;
 
-export default Text
+export default Text;

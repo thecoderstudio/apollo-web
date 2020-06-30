@@ -1,25 +1,25 @@
 import React from 'react';
 import media from '../../util/media';
-import styled from 'styled-components'
-import Text from '../Text'
+import styled from 'styled-components';
+import Text from '../Text';
 import PropTypes from 'prop-types';
 
 const propTypes = {
   connectionState: PropTypes.string.isRequired
-}
+};
 
 const getConnectionStateColor = (connectionState, theme) => {
   switch (connectionState) {
     case 'connecting':
-      return theme.connectingColor
+      return theme.connectingColor;
     case 'connected':
-      return theme.connectedColor
+      return theme.connectedColor;
     case 'disconnected':
-      return theme.disconnectedColor
+      return theme.disconnectedColor;
     default:
-      return
+      return;
   }
-}
+};
 
 const Container = styled.div`
   grid-column: connection-status;
@@ -78,7 +78,7 @@ export default function ConnectionState(props) {
         </StyledText>
       </ContentWrapper>
     </Container >
-  )
+  );
 }
 
-ConnectionState.propTypes = propTypes
+ConnectionState.propTypes = propTypes;

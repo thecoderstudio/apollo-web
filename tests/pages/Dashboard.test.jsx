@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 
 describe('dashboard', () => {
   it("renders correctly", () => {
-    let mockStore = configureStore([])
+    let mockStore = configureStore([]);
     const store = mockStore({
       agent: {
         agents: []
@@ -16,8 +16,6 @@ describe('dashboard', () => {
     process.env = {
       APOLLO_URL: 'http://localhost:1234'
     };
-
-    store.dispatch = jest.fn()
 
     const tree = renderer.create(
       <Provider store={store} >
