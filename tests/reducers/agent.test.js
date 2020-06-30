@@ -10,7 +10,7 @@ describe("agent reducer", () => {
     let agents = [{ id: "id" }];
     expect(agentReducer({}, {
       type: LIST_AGENTS,
-      agents: agents
+      agents
     })).toEqual({ agents: agents });
   });
 })
