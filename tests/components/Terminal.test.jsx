@@ -11,9 +11,7 @@ const mockAgent = {
 
 function getComponent() {
   return renderer.create(
-    <div>
-      <Terminal agent={mockAgent} theme={darkTheme} />
-    </div>
+    <Terminal agent={mockAgent} theme={darkTheme} />
   );
 }
 
