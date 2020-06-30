@@ -27,10 +27,10 @@ const Container = styled.div`
   margin-right: 25px;
 
   ${
-  media.phone`
-        grid-row: connection-status; 
-        grid-column: name-and-status;
-      `
+    media.phone`
+      grid-row: connection-status; 
+      grid-column: name-and-status;
+    `
   }
 `;
 
@@ -40,9 +40,9 @@ const ContentWrapper = styled.div`
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 
   ${
-  media.phone`
-          float:left;
-        `
+    media.phone`
+      float:left;
+    `
   }
 `;
 

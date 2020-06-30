@@ -6,8 +6,8 @@ import Text from '../Text'
 import PropTypes from 'prop-types';
 
 const propTypes = {
-	agentName: PropTypes.string.isRequired,
-	connectionState: PropTypes.string.isRequired
+  agentName: PropTypes.string.isRequired,
+  connectionState: PropTypes.string.isRequired
 }
 
 const Container = styled.li`
@@ -23,12 +23,12 @@ const Container = styled.li`
 	margin-top: 25px;
 
 	${
-	media.phone`
-		grid-template-rows: [name] 1fr [connection-status] 1fr; 
-		grid-template-columns: [name-and-status] 1fr; 
-		height: 100px;
-	`
-	}
+    media.phone`
+      grid-template-rows: [name] 1fr [connection-status] 1fr; 
+      grid-template-columns: [name-and-status] 1fr; 
+      height: 100px;
+    `
+  }
 `;
 
 const StyledText = styled(Text)`
@@ -36,20 +36,20 @@ const StyledText = styled(Text)`
 	min-width: 100px;
 
 	${
-	media.phone`
-		grid-rows: name; 
-		grid-column: name-and-status;
-	`
-	}
+    media.phone`
+      grid-rows: name; 
+      grid-column: name-and-status;
+    `
+  }
 `;
 
 export default function AgentListItem(props) {
-	return (
-		<Container>
-			<StyledText>{props.agentName}</StyledText>
-			<ConnectionState connectionState={props.connectionState} />
-		</Container>
-	)
+  return (
+    <Container>
+      <StyledText>{props.agentName}</StyledText>
+      <ConnectionState connectionState={props.connectionState} />
+    </Container>
+  )
 }
 
 AgentListItem.propTypes = propTypes

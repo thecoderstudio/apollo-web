@@ -10,9 +10,9 @@ const Content = styled(ContentContainer)`
   grid-template-rows: 1fr;  
 
   ${
-  media.phone`
-    grid-template-columns: [agent-listing] 1fr;
-  `
+    media.phone`
+      grid-template-columns: [agent-listing] 1fr;
+    `
   }
 `;
 
