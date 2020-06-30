@@ -25,7 +25,7 @@ describe('login', () => {
       authenticated: false
     });
     process.env = {
-      APOLLO_URL: 'http://localhost:1234'
+      APOLLO_HTTP_URL: 'http://localhost:1234/'
     };
     store.dispatch = jest.fn();
   });
