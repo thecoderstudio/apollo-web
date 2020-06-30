@@ -2,18 +2,18 @@
 
 exports[`renders correctly 1`] = `
 <li
-  className="sc-AxgMl jATQKd"
+  className="sc-AxgMl kRLxzw"
 >
   <span
-    className="sc-AxjAm sc-AxheI mFgma"
+    className="sc-AxjAm sc-AxheI hmhMTv"
   >
     agentName
   </span>
   <div
-    className="sc-AxirZ hAvJBF"
+    className="sc-AxirZ ciZpUd"
   >
     <div
-      className="sc-AxiKw kpoPWF"
+      className="sc-AxiKw jeQNXl"
     >
       <div
         className="sc-AxhCb guWnsS"

@@ -2,10 +2,10 @@
 
 exports[`connectionState Gets correct color 1`] = `
 <div
-  className="sc-AxirZ hAvJBF"
+  className="sc-AxirZ ciZpUd"
 >
   <div
-    className="sc-AxiKw kpoPWF"
+    className="sc-AxiKw jeQNXl"
   >
     <div
       className="sc-AxhCb guWnsS"
@@ -21,10 +21,10 @@ exports[`connectionState Gets correct color 1`] = `
 
 exports[`connectionState Gets correct color 2`] = `
 <div
-  className="sc-AxirZ hAvJBF"
+  className="sc-AxirZ ciZpUd"
 >
   <div
-    className="sc-AxiKw kpoPWF"
+    className="sc-AxiKw jeQNXl"
   >
     <div
       className="sc-AxhCb guWnsS"
@@ -40,10 +40,10 @@ exports[`connectionState Gets correct color 2`] = `
 
 exports[`connectionState Gets correct color 3`] = `
 <div
-  className="sc-AxirZ hAvJBF"
+  className="sc-AxirZ ciZpUd"
 >
   <div
-    className="sc-AxiKw kpoPWF"
+    className="sc-AxiKw jeQNXl"
   >
     <div
       className="sc-AxhCb guWnsS"
@@ -59,10 +59,10 @@ exports[`connectionState Gets correct color 3`] = `
 
 exports[`connectionState Gets correct color 4`] = `
 <div
-  className="sc-AxirZ hAvJBF"
+  className="sc-AxirZ ciZpUd"
 >
   <div
-    className="sc-AxiKw kpoPWF"
+    className="sc-AxiKw jeQNXl"
   >
     <div
       className="sc-AxhCb guWnsS"
@@ -78,10 +78,10 @@ exports[`connectionState Gets correct color 4`] = `
 
 exports[`connectionState renders correctly 1`] = `
 <div
-  className="sc-AxirZ hAvJBF"
+  className="sc-AxirZ ciZpUd"
 >
   <div
-    className="sc-AxiKw kpoPWF"
+    className="sc-AxiKw jeQNXl"
   >
     <div
       className="sc-AxhCb guWnsS"
