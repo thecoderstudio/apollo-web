@@ -50,6 +50,7 @@ const CHALK_SETTINGS = {
 class Terminal extends React.PureComponent {
   constructor(props) {
     super(props);
+    this.terminalRef = React.createRef();
     this.term = new XTerm(TERMINAL_SETTINGS);
     this.chalk = new chalk.Instance(CHALK_SETTINGS);
     this.onSocketError = this.onSocketError.bind(this);
@@ -70,7 +71,7 @@ class Terminal extends React.PureComponent {
 
   componentDidMount() {
     const styledName = this.chalk.hex(this.props.theme.primary).bold(this.props.agent.name)
-    this.term.open(document.getElementById('terminal'));
+    this.term.open(this.terminalRef.current);
     this.term.write(`Connecting to agent ${styledName}...\n\r\n`);
   }
 
@@ -83,7 +84,7 @@ class Terminal extends React.PureComponent {
   render() {
     return (
       <Container>
-        <StyledXTerm id="terminal" />
+        <StyledXTerm ref={this.terminalRef} />
       </Container>
     );
   }
