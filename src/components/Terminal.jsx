@@ -52,7 +52,6 @@ export class Terminal extends React.PureComponent {
 
   connect() {
     const agent = this.props.agent
-    console.log(`${process.env.APOLLO_WS_URL}agent/${agent.id}/shell`)
     const socket = new WebSocket(
       `${process.env.APOLLO_WS_URL}agent/${agent.id}/shell`
     );
@@ -69,7 +68,6 @@ export class Terminal extends React.PureComponent {
   }
 
   onSocketError() {
-    console.log('called');
     this.write(this.chalk.hex(this.props.theme.error).bold(
       "Something went wrong in the connection with the agent."
     ))
