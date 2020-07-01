@@ -46,7 +46,7 @@ describe('Terminal', () => {
   const assertConnection = () => {
     const agentName = terminal.chalk.hex(darkTheme.primary).bold(mockAgent.name);
     expect(termWriteSpy).toHaveBeenCalledWith(`Connecting to agent ${agentName}...\n\r\n`);
-  }
+  };
 
   it('correctly handles unsuccessful connection', async () => {
     await server.connected;
