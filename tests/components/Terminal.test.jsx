@@ -15,6 +15,7 @@ const mockAgent = {
 
 describe('Terminal', () => {
   const server = new WS(`ws://localhost:1234/agent/a2346886-83ba-442d-9fb7-d024c6274e22/shell`);
+  var terminal;
   var termWriteSpy;
 
   beforeEach(() => {
@@ -35,38 +36,33 @@ describe('Terminal', () => {
       })),
     });
     termWriteSpy = jest.spyOn(Terminal.prototype, 'write'); 
+    terminal = mount(<Terminal theme={darkTheme} agent={mockAgent} />).find(Terminal).instance();
   });
 
   afterEach(() => {
     WS.clean();
   });
 
-  const assertConnection = terminalInstance => {
-    const agentName = terminalInstance.chalk.hex(darkTheme.primary).bold(mockAgent.name);
+  const assertConnection = () => {
+    const agentName = terminal.chalk.hex(darkTheme.primary).bold(mockAgent.name);
     expect(termWriteSpy).toHaveBeenCalledWith(`Connecting to agent ${agentName}...\n\r\n`);
   }
 
   it('correctly handles unsuccessful connection', async () => {
-    const container = mount(<Terminal theme={darkTheme} agent={mockAgent} />);
-    const instance = container.find(Terminal).instance();
-
     await server.connected;
     server.error();
 
-    assertConnection(instance);
-    expect(termWriteSpy).toHaveBeenCalledWith(instance.chalk.hex(darkTheme.error).bold(
+    assertConnection();
+    expect(termWriteSpy).toHaveBeenCalledWith(terminal.chalk.hex(darkTheme.error).bold(
       "Something went wrong in the connection with the agent."
     ));
   });
 
   it('correctly writes data', async () => {
-    const container = mount(<Terminal theme={darkTheme} agent={mockAgent} />);
-    const instance = container.find(Terminal).instance();
-
     await server.connected;
-    instance.term.write("test");
+    terminal.term.write("test");
 
-    assertConnection(instance);
+    assertConnection();
     expect(server).toReceiveMessage("test");
   });
 });
