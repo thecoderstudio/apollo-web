@@ -1,8 +1,11 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { darkTheme } from '../../src/theme';
-import { render } from '@testing-library/react';
-import Terminal from '../../src/components/Terminal';
+import { Terminal } from '../../src/components/Terminal';
+import chalk from 'chalk';
+import Enzyme, { mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 const mockAgent = {
   // Fake UUID
@@ -31,6 +34,9 @@ describe('Terminal', () => {
   });
 
   it('correctly renders with unsuccessful connection', () => {
-    render(<Terminal agent={mockAgent} theme={darkTheme} />);
+    const spy = jest.spyOn(Terminal.prototype, 'write');
+    const container = mount(<Terminal theme={darkTheme} agent={mockAgent} />);
+    const agentName = container.find(Terminal).instance().chalk.hex(darkTheme.primary).bold(mockAgent.name);
+    expect(spy).toHaveBeenCalledWith(`Connecting to agent ${agentName}...\n\r\n`);
   });
 });

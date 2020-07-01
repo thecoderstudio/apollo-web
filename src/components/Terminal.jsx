@@ -38,13 +38,14 @@ const CHALK_SETTINGS = {
   level: 2
 };
 
-class Terminal extends React.PureComponent {
+export class Terminal extends React.PureComponent {
   constructor(props) {
     super(props);
     this.terminalRef = React.createRef();
     this.term = new XTerm(TERMINAL_SETTINGS);
     this.chalk = new chalk.Instance(CHALK_SETTINGS);
     this.onSocketError = this.onSocketError.bind(this);
+    this.write = this.write.bind(this);
     this.connect = this.connect.bind(this);
     this.connect()
   }
@@ -63,19 +64,23 @@ class Terminal extends React.PureComponent {
   componentDidMount() {
     const styledName = this.chalk.hex(this.props.theme.primary).bold(this.props.agent.name)
     this.term.open(this.terminalRef.current);
-    this.term.write(`Connecting to agent ${styledName}...\n\r\n`);
+    this.write(`Connecting to agent ${styledName}...\n\r\n`);
   }
 
   onSocketError() {
-    this.term.write(this.chalk.hex(this.props.theme.error).bold(
+    this.write(this.chalk.hex(this.props.theme.error).bold(
       "Something went wrong in the connection with the agent."
     ))
+  }
+
+  write(text) {
+    this.term.write(text);
   }
 
   render() {
     return (
       <Container>
-        <StyledXTerm ref={this.terminalRef} />
+        <StyledXTerm ref={this.terminalRef} data-testid="terminal" />
       </Container>
     );
   }
