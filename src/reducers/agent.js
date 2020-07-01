@@ -1,16 +1,9 @@
 import { LIST_AGENTS } from '../actions/agent';
 
-const initialState = {
-  agents: [],
-};
-
-export default function agentReducer(state = initialState, action) {
+export default function agentReducer(state = [], action) {
   switch (action.type) {
     case LIST_AGENTS:
-      return {
-        ...state,
-        agents: action.agents,
-      };
+      return action.agents
     default: return state;
   }
 }

@@ -64,6 +64,7 @@ class AgentList extends React.Component {
   }
 
   render() {
+    console.log(this.props)
     return (
       <Content>
         <ListTitle>Agents</ListTitle>
@@ -75,8 +76,6 @@ class AgentList extends React.Component {
   };
 }
 
-const mapStateToProps = (state) => ({
-  agents: state.agent.agents
-});
-
-export default connect(mapStateToProps)(AgentList);
+export default connect(
+  state => ({agents: state.agent})
+)(AgentList);

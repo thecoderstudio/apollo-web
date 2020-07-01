@@ -12,7 +12,7 @@ const propTypes = {
 
 const Container = styled.li`
   display: grid;
-  grid-template-columns: [name] 20% [connection-status] 1fr; 
+  grid-template-columns: [name] 1fr [connection-status] 1fr; 
 
   border-radius: 8px;
 	border: 1px solid white;
@@ -20,7 +20,8 @@ const Container = styled.li`
   height: 30px;
 	line-height: 30px;
 	padding: 15px;
-	margin-top: 25px;
+  margin-top: 25px;
+  position: relative;
 
 	${
     media.phone`
@@ -33,7 +34,10 @@ const Container = styled.li`
 
 const StyledText = styled(Text)`
 	grid-column: name;
-	min-width: 100px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  
 
 	${
     media.phone`

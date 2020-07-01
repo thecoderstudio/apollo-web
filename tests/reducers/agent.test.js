@@ -11,6 +11,6 @@ describe("agent reducer", () => {
     expect(agentReducer({}, {
       type: LIST_AGENTS,
       agents
-    })).toEqual({ agents: agents });
+    })).toEqual({ agents });
   });
 })
