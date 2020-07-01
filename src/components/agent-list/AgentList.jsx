@@ -64,7 +64,6 @@ class AgentList extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <Content>
         <ListTitle>Agents</ListTitle>
