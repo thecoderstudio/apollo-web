@@ -11,7 +11,7 @@ const mockAgent = {
   // Fake UUID
   id: 'a2346886-83ba-442d-9fb7-d024c6274e22',
   name: 'test'
-}
+};
 
 describe('Terminal', () => {
   const server = new WS(`ws://localhost:1234/agent/a2346886-83ba-442d-9fb7-d024c6274e22/shell`);

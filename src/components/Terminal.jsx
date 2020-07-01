@@ -15,7 +15,7 @@ const Container = styled(Card)`
   max-height: 400px;
   width: 700px;
   padding: 20px;
-`
+`;
 
 const StyledXTerm = styled.div`
   height: 100%;
@@ -47,11 +47,11 @@ export class Terminal extends React.PureComponent {
     this.onSocketError = this.onSocketError.bind(this);
     this.write = this.write.bind(this);
     this.connect = this.connect.bind(this);
-    this.connect()
+    this.connect();
   }
 
   connect() {
-    const agent = this.props.agent
+    const agent = this.props.agent;
     const socket = new WebSocket(
       `${process.env.APOLLO_WS_URL}agent/${agent.id}/shell`
     );
@@ -62,7 +62,7 @@ export class Terminal extends React.PureComponent {
   }
 
   componentDidMount() {
-    const styledName = this.chalk.hex(this.props.theme.primary).bold(this.props.agent.name)
+    const styledName = this.chalk.hex(this.props.theme.primary).bold(this.props.agent.name);
     this.term.open(this.terminalRef.current);
     this.write(`Connecting to agent ${styledName}...\n\r\n`);
   }
@@ -70,7 +70,7 @@ export class Terminal extends React.PureComponent {
   onSocketError() {
     this.write(this.chalk.hex(this.props.theme.error).bold(
       "Something went wrong in the connection with the agent."
-    ))
+    ));
   }
 
   write(text) {
