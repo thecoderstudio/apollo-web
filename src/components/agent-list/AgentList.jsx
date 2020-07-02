@@ -1,9 +1,7 @@
 import { connect } from 'react-redux';
-import axios from 'axios';
 import AgentListItem from './AgentListItem';
 import React from 'react';
 import styled from 'styled-components';
-import { logout as logoutAction } from '../../actions/auth';
 import { listAgents as listAgentsAction } from '../../actions/agent';
 
 const Content = styled.div`
@@ -13,7 +11,8 @@ const Content = styled.div`
 	
 	background-color: ${props => props.theme.lightBlack};
 	border-radius: 8px;
-	maring: 20px;
+  maring: 20px;
+  
 	padding: 20px;
 	
 `;
@@ -33,28 +32,20 @@ class AgentList extends React.Component {
   constructor(props) {
     super(props);
     this.generateAgents = this.generateAgents.bind(this);
+    this.setupWebSocket = this.setupWebSocket.bind(this);
   }
 
   componentDidMount() {
-    this.requestAgents();
+    this.setupWebSocket()
   }
 
-  requestAgents() {
+  setupWebSocket() {
+    let socket = new WebSocket(`${process.env.APOLLO_WS_URL}agent`);
     const { dispatch } = this.props;
-    axios.get(
-      process.env.APOLLO_URL.concat("agent"),
-      { withCredentials: true }
-    )
-      .then(response => {
-        dispatch(listAgentsAction(response.data));
-      })
-      .catch(function (error) {
-        if (error.response) {
-          if (error.response.status === 403) {
-            dispatch(logoutAction());
-          }
-        }
-      });
+
+    socket.onmessage = (event) => {      
+      dispatch(listAgentsAction(JSON.parse(event.data))); 
+    }
   }
 
   generateAgents(agents) {
@@ -72,7 +63,7 @@ class AgentList extends React.Component {
         </List>
       </Content>
     )
-  };
+  }
 }
 
 export default connect(
