@@ -3,6 +3,7 @@ import configureStore from 'redux-mock-store';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import axios from 'axios';
+import waitForExpect from 'wait-for-expect';
 import Login from '../../src/pages/Login';
 import Button from '../../src/components/Button';
 
@@ -25,7 +26,7 @@ describe('login', () => {
       authenticated: false
     });
     process.env = {
-      APOLLO_URL: 'http://localhost:1234'
+      APOLLO_HTTP_URL: 'http://localhost:1234/'
     };
     store.dispatch = jest.fn();
   });
@@ -35,7 +36,7 @@ describe('login', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("handles successful login", () => {
+  it("handles successful login", async () => {
     const component = getComponent(store);
     const root = component.root.findByProps({ authenticated: false });
     const instance = root.instance;
@@ -56,12 +57,12 @@ describe('login', () => {
     });
     root.findByType('form').props.onSubmit({ preventDefault: jest.fn() });
 
-    setTimeout(() => {
+    await waitForExpect(() => {
       expect(instance.props.dispatch).toHaveBeenCalled();
-    }, 100);
+    });
   });
 
-  it("handles unsuccessful login", () => {
+  it("handles unsuccessful login", async () => {
     const component = getComponent(store);
     const root = component.root.findByProps({ authenticated: false });
     const instance = root.instance;
@@ -82,9 +83,9 @@ describe('login', () => {
     });
     root.findByType('form').props.onSubmit({ preventDefault: jest.fn() });
 
-    setTimeout(() => {
-      expect(instance.props.dispatch).toNotHaveBeenCalled();
-    }, 100);
+    await waitForExpect(() => {
+      expect(instance.props.dispatch).not.toHaveBeenCalled();
+    });
   });
 
   it("correctly sets pathname on authentication", () => {

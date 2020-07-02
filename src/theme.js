@@ -8,6 +8,7 @@ export const darkTheme = {
   connectedColor: "#27AE60",
   disconnectedColor: "#C0392B",
   connectingColor: "#F39C12",
+  error: "#ED3E2A"
 };
 
 function getBrowserPreferredTheme() {
