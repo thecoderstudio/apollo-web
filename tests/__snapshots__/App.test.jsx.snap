@@ -3,7 +3,7 @@
 exports[`app renders correctly authenticated 1`] = `
 <div>
   <div
-    className="sc-fzozJi iaqdxU"
+    className="sc-fzozJi deMZXu"
   >
     <p>
       Welcome to Apollo!
@@ -15,7 +15,7 @@ exports[`app renders correctly authenticated 1`] = `
 exports[`app renders correctly unauthenticated 1`] = `
 <div>
   <div
-    className="sc-fzozJi iaqdxU"
+    className="sc-fzozJi deMZXu"
   >
     <div
       className="sc-AxhCb KPxTP"

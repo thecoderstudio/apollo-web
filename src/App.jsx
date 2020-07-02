@@ -32,8 +32,6 @@ const Content = styled.div`
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-rows: [nav] 50px 1fr;
-  grid-row-gap: 8px;
 `;
 
 function App(props) {
