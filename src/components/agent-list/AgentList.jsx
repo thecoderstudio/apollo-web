@@ -32,19 +32,15 @@ class AgentList extends React.Component {
   constructor(props) {
     super(props);
     this.generateAgents = this.generateAgents.bind(this);
-    this.setupWebSocket = this.setupWebSocket.bind(this);
-  }
-
-  componentDidMount() {
+    this.dispatchListAgents = this.dispatchListAgents.bind(this)
     this.setupWebSocket()
   }
 
   setupWebSocket() {
     let socket = new WebSocket(`${process.env.APOLLO_WS_URL}agent`);
-    const { dispatch } = this.props;
-
-    socket.onmessage = (event) => {      
-      dispatch(listAgentsAction(JSON.parse(event.data))); 
+    socket.onmessage = (event) => {
+      console.log("*************")
+      this.dispatchListAgents(event.data);
     }
   }
 
@@ -52,6 +48,11 @@ class AgentList extends React.Component {
     return agents.map(agent => {
       return <AgentListItem key={agent.id} agentName={agent.name} connectionState={agent.connection_state} />;
     });
+  }
+
+  dispatchListAgents(data) {
+    const { dispatch } = this.props;
+    dispatch(listAgentsAction(JSON.parse(data))); 
   }
 
   render() {

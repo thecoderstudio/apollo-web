@@ -2,10 +2,10 @@
 
 exports[`renders correctly 1`] = `
 <li
-  className="sc-AxgMl kRLxzw"
+  className="sc-AxgMl bVQqoF"
 >
   <span
-    className="sc-AxjAm sc-AxheI hmhMTv"
+    className="sc-AxjAm sc-AxheI fkpGLs"
   >
     agentName
   </span>

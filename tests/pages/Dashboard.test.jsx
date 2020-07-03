@@ -8,14 +8,13 @@ describe('dashboard', () => {
   it("renders correctly", () => {
     let mockStore = configureStore([]);
     const store = mockStore({
-      agent: {
-        agents: []
-      },
+      agent: [],
       authenticated: true
     });
     process.env = {
-      APOLLO_URL: 'http://localhost:1234'
+      APOLLO_WS_URL: 'ws://localhost:1234/'
     };
+    
 
     const tree = renderer.create(
       <Provider store={store} >

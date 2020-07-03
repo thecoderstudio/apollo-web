@@ -3,13 +3,13 @@
 exports[`app renders correctly authenticated 1`] = `
 <div>
   <div
-    className="sc-fzozJi deMZXu"
+    className="sc-fzoXzr ccPRtL"
   >
     <div
       className="sc-fzoLsD sc-fzpans DDpSM"
     >
       <div
-        className="sc-Axmtr iBOERz"
+        className="sc-Axmtr cNWFxA"
       >
         <h2
           className="sc-AxmLO jBiGbn"
@@ -28,7 +28,7 @@ exports[`app renders correctly authenticated 1`] = `
 exports[`app renders correctly unauthenticated 1`] = `
 <div>
   <div
-    className="sc-fzozJi deMZXu"
+    className="sc-fzoXzr ccPRtL"
   >
     <div
       className="sc-fznZeY faKFAb"
