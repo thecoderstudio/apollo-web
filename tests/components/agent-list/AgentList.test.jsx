@@ -64,18 +64,7 @@ describe('agentList', () => {
     client.send(data);    
     expect(spy).toBeCalled()
     expect(spy).toBeCalledWith(data)
-  
-    client.send("hello");
   }) 
-
-  it("handles unexpected error correctly", async () => {
-    await socket.connected
-    socket.error()
-
-    const component = getComponent(store);
-    const tree = getComponent(store).toJSON();
-    expect(tree).toMatchSnapshot()
-  })
 
   it("correctly lists multiple agents", () => {
     store = mockStore({
