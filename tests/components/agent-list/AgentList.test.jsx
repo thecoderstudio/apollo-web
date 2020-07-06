@@ -46,8 +46,6 @@ describe('agentList', () => {
   });
 
   it("correctly dispatches list agents", async () => {
-    await socket.connected;
-
     const component = mount( 
       <Provider store={store}>
         <AgentList />
@@ -56,14 +54,18 @@ describe('agentList', () => {
 
     const spy = jest.spyOn(component.instance(), 'dispatchListAgents')
     const client = new WebSocket("ws://localhost:1234/agent");
+    
     const data = [
       { id: "id", name: "name", connection_state: "connected" },
       { id: "id2", name: "name", connection_state: "connected" },
-    ]
-
-    client.send(data)
+    ];
+    
+    await socket.connected;
+    client.send(data);    
     expect(spy).toBeCalled()
     expect(spy).toBeCalledWith(data)
+  
+    client.send("hello");
   }) 
 
   it("handles unexpected error correctly", async () => {
