@@ -2,11 +2,9 @@ import React from 'react';
 import configureStore from 'redux-mock-store';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import axios from 'axios';
 import WS from 'jest-websocket-mock';
 import AgentList from '../../../src/components/agent-list/AgentList';
-import Enzyme, { mount , shallow} from 'enzyme';
-import { ServerStyleSheet } from 'styled-components';
+import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 const mockStore = configureStore([]);
@@ -24,7 +22,6 @@ function getComponent(store) {
 
 describe('agentList', () => {
   let store;
-  const socket = new WS(`ws://localhost:1234/agent`);
 
   beforeEach(() => {
     store = mockStore({
@@ -53,18 +50,21 @@ describe('agentList', () => {
     ).find("AgentList");
 
     const spy = jest.spyOn(component.instance(), 'dispatchListAgents')
-    const client = new WebSocket("ws://localhost:1234/agent");
     
     const data = [
       { id: "id", name: "name", connection_state: "connected" },
       { id: "id2", name: "name", connection_state: "connected" },
     ];
     
-    await socket.connected;
+    const server = new WS(`ws://localhost:1234/agent`);
+    const client = new WebSocket("ws://localhost:1234/agent");
+    
+    await server.connected;
+    
     client.send(data);    
-    expect(spy).toBeCalled()
     expect(spy).toBeCalledWith(data)
   }) 
+
 
   it("correctly lists multiple agents", () => {
     store = mockStore({
