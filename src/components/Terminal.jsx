@@ -75,16 +75,16 @@ export class Terminal extends React.PureComponent {
     ));
   }
 
-  write(text) {
-    this.term.write(text);
-  }
-
   onSocketClose() {
-    this.term.write(this.chalk.hex(this.props.theme.error).bold(
+    this.write(this.chalk.hex(this.props.theme.error).bold(
       "\n\r\nConnection with agent is closed"
     ));
   }
 
+  write(text) {
+    this.term.write(text);
+  }
+  
   render() {
     return (
       <Container>
