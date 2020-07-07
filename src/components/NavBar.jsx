@@ -7,23 +7,29 @@ import Text from '../components/Text';
 
 const NavigationBar = styled.div`
   height: 100px;
-  padding: 25px; 
-  grid-template-rows: 1fr [options] 200px; 
+  padding: 25px;
+  
+  display: grid;
+  grid-template-column: 1fr [options] 10px [test] 1fr; 
 
+  background-color: green;
 `;
 
 const DropDownWrapper = styled.div`
-  grid-row: options;
+  grid-column: options;
 
-  width: 150px;
   position: relative;
   display: inline-block;
+  
+  background-color: blue
 `;
 
 const NameHolder = styled(Text)`
   &:hover {
     
   }
+
+  background-color: red;
 `;
 
 
@@ -34,6 +40,8 @@ const DropDownContent = styled.div`
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+
+  background-color: orange;
 `;
 
 const DropDownItem = styled.div`
@@ -48,7 +56,7 @@ class NavBar extends React.Component {
 
   logout() {
     let { dispatch } = this.props
-    dispatch(logout())
+    dispatch(logoutAction())
   }
 
   render() {
@@ -56,9 +64,9 @@ class NavBar extends React.Component {
       <NavigationBar>
         <DropDownWrapper>
           <NameHolder>Name</NameHolder>
-          <DropDownContent>
+          {/* <DropDownContent>
             <DropDownItem>Logout</DropDownItem>
-          </DropDownContent>
+          </DropDownContent> */}
         </DropDownWrapper>
       </NavigationBar>
     );
