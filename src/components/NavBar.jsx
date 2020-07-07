@@ -10,7 +10,7 @@ import { faCog } from '@fortawesome/free-solid-svg-icons'
 
 const NavigationBar = styled.div`
   height: 50px;
-  padding: 25px;
+  padding: 10px;
   
   display: grid;
   grid-template-columns: 1fr [options] 300px; 
@@ -66,7 +66,6 @@ const DropDownContent = styled.div`
 
   color: ${props => props.theme.lightBlack};
   background-color: ${props => props.theme.white};
-
   border-radius: 4px;
 
   &:hover {
@@ -86,7 +85,6 @@ const DropDownItem = styled.div`
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props)
     this.logout = this.logout.bind(this);
     this.toggleDropDown = this.toggleDropDown.bind(this)
     this.state = { collapsed: true };
