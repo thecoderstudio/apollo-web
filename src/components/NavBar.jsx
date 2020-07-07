@@ -104,7 +104,7 @@ class NavBar extends React.Component {
     return (
       <NavigationBar>
         <DropDownWrapper>
-          <NameAndOptionWrapper onClick={this.toggleDropDown} >
+          <NameAndOptionWrapper onClick={this.toggleDropDown}>
             <NameHolder>Rik van der Werf</NameHolder>
             <Icon icon={faCog} collapsed={this.props.collapsed} />
           </NameAndOptionWrapper>
