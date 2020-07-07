@@ -4,6 +4,11 @@ import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import axios from 'axios';
 import NavBar from '../../src/components/NavBar';
+import Enzyme, { mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+
+Enzyme.configure({ adapter: new Adapter() });
 
 const mockStore = configureStore([]);
 jest.mock('axios');
@@ -34,12 +39,21 @@ describe('login', () => {
   });
 
   it("handles successful show options", () => {
-    const component = getComponent(store);
-    const root = component.root.findByProps({ 
-        authenticated: true,
-        collapsed: true
-    });
-    const instance = root.instance;
+    // const component = getComponent(store);
+    // const root = component.root.findByProps({ 
+    //     authenticated: true,
+    //     collapsed: true
+    // });
+    // const instance = root.instance;
+
+    const component = mount(
+     <Provider store={store}>
+        <NavBar />
+     </Provider>
+    ).find("NameAndOptionWrapper");
+
+    console.log(component)
+
 
     // root.findByProps({onClick: 'username'}).props.onChange({ target: {
     //   value: 'test'
