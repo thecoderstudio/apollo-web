@@ -54,6 +54,7 @@ class Terminal extends React.PureComponent {
     this.term = new XTerm(TERMINAL_SETTINGS);
     this.chalk = new chalk.Instance(CHALK_SETTINGS);
     this.onSocketError = this.onSocketError.bind(this);
+    this.onSocketClose = this.onSocketClose.bind(this);
     this.connect = this.connect.bind(this);
     this.connect()
   }
@@ -64,6 +65,7 @@ class Terminal extends React.PureComponent {
       `${process.env.APOLLO_WS_URL}agent/${agent.id}/shell`
     );
     socket.onerror = this.onSocketError;
+    socket.onclose = this.onSocketClose;
 
     const attachAddon = new AttachAddon(socket);
     this.term.loadAddon(attachAddon);
@@ -79,6 +81,12 @@ class Terminal extends React.PureComponent {
     this.term.write(this.chalk.hex(this.props.theme.error).bold(
       "Something went wrong in the connection with the agent."
     ))
+  }
+
+  onSocketClose() {
+    this.term.write(this.chalk.hex(this.props.theme.error).bold(
+      "\n\r\nConnection with agent is closed"
+    ));
   }
 
   render() {
