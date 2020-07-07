@@ -2,56 +2,99 @@ import media from '../util/media';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { logout as logoutAction } from '../actions/auth';
+import { toggleOptions as toggleOptionAction } from '../actions/navbar'
 import React from 'react'
 import Text from '../components/Text';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCog } from '@fortawesome/free-solid-svg-icons'
 
 const NavigationBar = styled.div`
-  height: 100px;
+  height: 50px;
   padding: 25px;
   
   display: grid;
-  grid-template-column: 1fr [options] 10px [test] 1fr; 
+  grid-template-columns: 1fr [options] 300px; 
 
-  background-color: green;
+  background-color: ${props => props.theme.lightBlack};;
+
+  ${
+    media.phone`
+      grid-template-columns: [options] 1fr; 
+    `
+  }
 `;
 
 const DropDownWrapper = styled.div`
   grid-column: options;
-
-  position: relative;
-  display: inline-block;
-  
-  background-color: blue
+  max-height: 50px;
+  padding: 15px;    
+  min-width: 200px;
 `;
+
+const NameAndOptionWrapper = styled.div`
+  float: right;
+
+  &:hover {
+    cursor: pointer;
+  }
+`; 
 
 const NameHolder = styled(Text)`
-  &:hover {
-    
-  }
-
-  background-color: red;
+  margin: 15px;
+  line-heigth: 30px;
+  height: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 `;
 
+const Icon = styled(FontAwesomeIcon)`
+  transition: transform 0.5s;
+  -webkit-transform: ${props => props.collapsed ? 'rotate(0)' : 'rotate(90deg)'};
+  -ms-transform: ${props => props.collapsed ? 'rotate(0)' : 'rotate(90deg)'}
+  transform: ${props => props.collapsed ? 'rotate(0)' : 'rotate(90deg)'};
+`
 
 const DropDownContent = styled.div`
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: ${props => props.collapsed ? 'none' : 'block'};
+  margin-top: 10px;
+  padding: 10px;
+  float: right;
+  min-width: 100px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   z-index: 1;
 
-  background-color: orange;
+  color: ${props => props.theme.lightBlack};
+  background-color: ${props => props.theme.white};
+
+  border-radius: 4px;
+
+  &:hover {
+    background-color: ${props => props.theme.darkWhite};
+  }
 `;
 
 const DropDownItem = styled.div`
   display: block;
+  min-width: 150px;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props)
     this.logout = this.logout.bind(this);
+    this.toggleDropDown = this.toggleDropDown.bind(this)
+    this.state = { collapsed: true };
+  }
+
+  toggleDropDown() {
+    const { dispatch } = this.props
+    dispatch(toggleOptionAction())
   }
 
   logout() {
@@ -63,10 +106,13 @@ class NavBar extends React.Component {
     return (
       <NavigationBar>
         <DropDownWrapper>
-          <NameHolder>Name</NameHolder>
-          {/* <DropDownContent>
-            <DropDownItem>Logout</DropDownItem>
-          </DropDownContent> */}
+          <NameAndOptionWrapper onClick={this.toggleDropDown} >
+            <NameHolder>Rik van der Werf</NameHolder>
+            <Icon icon={faCog} collapsed={this.props.collapsed} />
+          </NameAndOptionWrapper>
+          <DropDownContent collapsed={this.props.collapsed}>
+            <DropDownItem onClick={this.logout}>Logout</DropDownItem>
+          </DropDownContent>
         </DropDownWrapper>
       </NavigationBar>
     );
@@ -74,5 +120,5 @@ class NavBar extends React.Component {
 }
 
 export default connect(
-  state => ({ authenticated: state.authenticated })
+  state => ({ authenticated: state.authenticated, collapsed: state.collapsed })
 )(NavBar) 
