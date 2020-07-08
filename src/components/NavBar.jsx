@@ -2,20 +2,18 @@ import media from '../util/media';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { logout as logoutAction } from '../actions/auth';
-import { toggleOptions as toggleOptionsAction } from '../actions/navbar'
-import React from 'react'
-import Text from '../components/Text';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCog } from '@fortawesome/free-solid-svg-icons'
+import { toggleOptions as toggleOptionsAction } from '../actions/navbar';
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCog } from '@fortawesome/free-solid-svg-icons';
 
 const NavigationBar = styled.div`
   height: 50px;
   padding: 10px;
-  
   display: grid;
   grid-template-columns: 1fr [options] 300px; 
 
-  background-color: ${props => props.theme.lightBlack};;
+  background-color: ${props => props.theme.lightBlack};
 
   ${
     media.phone`
@@ -33,15 +31,15 @@ const DropDownWrapper = styled.div`
 
 const Icon = styled(FontAwesomeIcon)`
   transition: transform 0.5s;
-  -webkit-transform: ${props => props.collapsed == 'true' ? 'rotate(0)' : 'rotate(90deg)'};
-  -ms-transform: ${props => props.collapsed == 'true' ? 'rotate(0)' : 'rotate(90deg)'}
-  transform: ${props => props.collapsed == 'true' ? 'rotate(0)' : 'rotate(90deg)'};
+  -webkit-transform: ${props => props.collapsed === 'true' ? 'rotate(0)' : 'rotate(90deg)'};
+  -ms-transform: ${props => props.collapsed === 'true' ? 'rotate(0)' : 'rotate(90deg)'}
+  transform: ${props => props.collapsed === 'true' ? 'rotate(0)' : 'rotate(90deg)'};
 
   float: right;
   &:hover {
     cursor: pointer;
   }
-`
+`;
 
 const DropDownContent = styled.div`
   display: ${props => props.collapsed ? 'none' : 'block'};
@@ -90,7 +88,7 @@ class NavBar extends React.Component {
   }
 
   logout() {
-    let { dispatch } = this.props
+    let { dispatch } = this.props;
     dispatch(logoutAction());
     dispatch(toggleOptionsAction(true));
   }
@@ -116,4 +114,4 @@ class NavBar extends React.Component {
 
 export default connect(
   state => ({ authenticated: state.authenticated, collapsed: state.collapsed })
-)(NavBar) 
+)(NavBar);

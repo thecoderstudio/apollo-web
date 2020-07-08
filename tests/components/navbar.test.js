@@ -2,13 +2,12 @@ import React from 'react';
 import configureStore from 'redux-mock-store';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import axios from 'axios';
 import NavBar from '../../src/components/NavBar';
 import waitForExpect from 'wait-for-expect';
 import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { toggleOptions as toggleOptionsAction } from '../../src/actions/navbar'
-import { logout as logoutAction } from '../../src/actions/auth'
+import { toggleOptions as toggleOptionsAction } from '../../src/actions/navbar';
+import { logout as logoutAction } from '../../src/actions/auth';
 
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -35,7 +34,7 @@ describe('login', () => {
     });
     
     store.dispatch = jest.fn()
-    spy = jest.spyOn(store, 'dispatch')
+    spy = jest.spyOn(store, 'dispatch');
   });
 
   it("renders correctly", () => {
@@ -52,13 +51,12 @@ describe('login', () => {
   });
 
   it("handles successful show options", async () => {
-    const spy = jest.spyOn(store, 'dispatch')
-  
     const component = mount(
       <Provider store={store}>
         <NavBar />
       </Provider>
-    )
+    );
+
     component.find("Icon").prop('onClick')();
     
     await waitForExpect(() => {
@@ -67,13 +65,11 @@ describe('login', () => {
   });
 
   it("handles successful logout", async () => {
-    const spy = jest.spyOn(store, 'dispatch')
-  
     const component = mount(
       <Provider store={store}>
         <NavBar />
       </Provider>
-    )
+    );
 
     component.find("DropDownItem").filterWhere((n) =>  
       n.text() === "Logout"
