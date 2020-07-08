@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="sc-AxjAm kJjrTz"
+  className="Card-sc-1s9gsyt-0 kTXtDk"
 >
   Test
 </div>

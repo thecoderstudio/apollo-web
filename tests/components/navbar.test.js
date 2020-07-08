@@ -4,8 +4,11 @@ import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import axios from 'axios';
 import NavBar from '../../src/components/NavBar';
-import Enzyme, { mount } from 'enzyme';
+import waitForExpect from 'wait-for-expect';
+import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import { toggleOptions as toggleOptionsAction } from '../../src/actions/navbar'
+import { logout as logoutAction } from '../../src/actions/auth'
 
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -23,14 +26,16 @@ function getComponent(store) {
 
 describe('login', () => {
   let store;
+  let spy;
 
   beforeEach(() => {
     store = mockStore({
       authenticated: true,
-      collapsed: "true"
+      collapsed: true
     });
-
-    store.dispatch = jest.fn();
+    
+    store.dispatch = jest.fn()
+    spy = jest.spyOn(store, 'dispatch')
   });
 
   it("renders correctly", () => {
@@ -39,41 +44,48 @@ describe('login', () => {
   });
 
   it("handles successful show options", async () => {
-    // const component = getComponent(store);
-    // const root = component.root.findByProps({ 
-    //     authenticated: true,
-    //     collapsed: true
-    // });
-    // const instance = root.instance;
+    const component = mount(
+      <Provider store={store}>
+        <NavBar />
+      </Provider>
+    )
+    component.find("NameAndOptionWrapper").prop('onClick')();
+    
+    await waitForExpect(() => {
+      expect(spy).toHaveBeenCalledWith(toggleOptionsAction());
+    });
+  });    
 
+  it("handles successful show options", async () => {
+    const spy = jest.spyOn(store, 'dispatch')
+  
+    const component = mount(
+      <Provider store={store}>
+        <NavBar />
+      </Provider>
+    )
+    component.find("NameAndOptionWrapper").prop('onClick')();
+    
+    await waitForExpect(() => {
+      expect(spy).toHaveBeenCalledWith(toggleOptionsAction());
+    });
+  });
 
-
+  it("handles successful logout", async () => {
+    const spy = jest.spyOn(store, 'dispatch')
+  
     const component = mount(
       <Provider store={store}>
         <NavBar />
       </Provider>
     )
 
-    console.log(component.render())
-    component.find("NameAndOptionWrapper").prop('onClick')();
-
+    component.find("DropDownItem").filterWhere((n) =>  
+      n.text() === "Logout"
+    ).prop('onClick')();
+    
     await waitForExpect(() => {
-      expect(component.instance.props.dispatch).toHaveBeenCalled();
+      expect(spy).toHaveBeenCalledWith(logoutAction());
     });
-
-    console.log(component)
-
-
-    // root.findByProps({onClick: 'username'}).props.onChange({ target: {
-    //   value: 'test'
-    // }});
-    // root.findByProps({type: 'password'}).props.onChange({ target: {
-    //   value: 'password'
-    // }});
-    // root.findByType('form').props.onSubmit({ preventDefault: jest.fn() });
-
-    // setTimeout(() => {
-    //   expect(instance.props.dispatch).toHaveBeenCalled();
-    // }, 100);
-  });
+  });    
 });

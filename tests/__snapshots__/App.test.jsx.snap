@@ -3,26 +3,27 @@
 exports[`app renders correctly authenticated 1`] = `
 <div>
   <div
-    className="sc-fzqBZW iCPRKW"
+    className="Content-gsjecy-0 hGYWTt"
   >
     <div
-      className="sc-AxirZ gZQfyf"
+      className="NavigationBar-h5ragj-0 ewDLZu"
     >
       <div
-        className="sc-AxiKw kJIwGq"
+        className="DropDownWrapper-h5ragj-1 dQznib"
       >
         <div
-          className="sc-AxhCb fVBSTb"
+          className="NameAndOptionWrapper-h5ragj-2 jACVcn"
           onClick={[Function]}
         >
           <span
-            className="sc-AxjAm sc-AxhUy epRVmw"
+            className="Text-o9sidv-0 NameHolder-h5ragj-3 guBYyz"
           >
             Rik van der Werf
           </span>
           <svg
             aria-hidden="true"
-            className="svg-inline--fa fa-cog fa-w-16 sc-AxgMl DowJD"
+            className="svg-inline--fa fa-cog fa-w-16 Icon-h5ragj-4 kQdKPE"
+            collapsed="true"
             data-icon="cog"
             data-prefix="fas"
             focusable="false"
@@ -39,14 +40,18 @@ exports[`app renders correctly authenticated 1`] = `
           </svg>
         </div>
         <div
-          className="sc-AxheI cAXiOR"
+          className="DropDownContent-h5ragj-5 irGBhW"
         >
-          <div
-            className="sc-Axmtr diqXic"
-            onClick={[Function]}
+          <ul
+            className="DropDownList-h5ragj-6 eMdHGB"
           >
-            Logout
-          </div>
+            <li
+              className="DropDownItem-h5ragj-7 ytxN"
+              onClick={[Function]}
+            >
+              Logout
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -57,44 +62,44 @@ exports[`app renders correctly authenticated 1`] = `
 exports[`app renders correctly unauthenticated 1`] = `
 <div>
   <div
-    className="sc-fzqBZW iCPRKW"
+    className="Content-gsjecy-0 hGYWTt"
   >
     <div
-      className="sc-fzpans eXahGT"
+      className="OuterContainer-sc-1mix3no-0 kBRFGS"
     >
       <div
-        className="sc-fzplWN deXAjE"
+        className="InnerContainer-sc-1mix3no-1 fCbGUO"
       >
         <img
-          className="sc-fzokOt bSpVgk"
+          className="SupportingImg-sc-1mix3no-5 dtziOb"
           src={[Function]}
         />
         <h1
-          className="sc-fznyAO iCSnie"
+          className="Title-sc-1mix3no-2 eOmHgu"
         >
           Log in to Apollo
         </h1>
         <div
-          className="sc-fzoLsD sc-fznKkj jgSNgI"
+          className="Card-sc-1s9gsyt-0 StyledCard-sc-1mix3no-3 hmXrol"
         >
           <form
-            className="sc-fznZeY enLmjM"
+            className="Form-sc-1mix3no-4 isrvwX"
             onSubmit={[Function]}
           >
             <input
-              className="sc-fzozJi bnCfop"
+              className="Input-sc-1bvgqy7-0 hxnYPY"
               onChange={[Function]}
               placeholder="Username"
               type="username"
             />
             <input
-              className="sc-fzozJi bnCfop"
+              className="Input-sc-1bvgqy7-0 hxnYPY"
               onChange={[Function]}
               placeholder="Password"
               type="password"
             />
             <button
-              className="sc-AxmLO jFHvki"
+              className="Button-xwmqaf-0 kTZZpw"
             >
               Log in
             </button>

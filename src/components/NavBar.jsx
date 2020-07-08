@@ -2,7 +2,7 @@ import media from '../util/media';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { logout as logoutAction } from '../actions/auth';
-import { toggleOptions as toggleOptionAction } from '../actions/navbar'
+import { toggleOptions as toggleOptionsAction } from '../actions/navbar'
 import React from 'react'
 import Text from '../components/Text';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -50,9 +50,9 @@ const NameHolder = styled(Text)`
 
 const Icon = styled(FontAwesomeIcon)`
   transition: transform 0.5s;
-  -webkit-transform: ${props => props.collapsed ? 'rotate(0)' : 'rotate(90deg)'};
-  -ms-transform: ${props => props.collapsed ? 'rotate(0)' : 'rotate(90deg)'}
-  transform: ${props => props.collapsed ? 'rotate(0)' : 'rotate(90deg)'};
+  -webkit-transform: ${props => props.collapsed == 'true' ? 'rotate(0)' : 'rotate(90deg)'};
+  -ms-transform: ${props => props.collapsed == 'true' ? 'rotate(0)' : 'rotate(90deg)'}
+  transform: ${props => props.collapsed == 'true' ? 'rotate(0)' : 'rotate(90deg)'};
 `
 
 const DropDownContent = styled.div`
@@ -73,10 +73,16 @@ const DropDownContent = styled.div`
   }
 `;
 
-const DropDownItem = styled.div`
+const DropDownList = styled.ul`
   display: block;
   min-width: 150px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`;
 
+
+const DropDownItem = styled.li`
   &:hover {
     cursor: pointer;
   }
@@ -92,7 +98,7 @@ class NavBar extends React.Component {
 
   toggleDropDown() {
     const { dispatch } = this.props
-    dispatch(toggleOptionAction())
+    dispatch(toggleOptionsAction())
   }
 
   logout() {
@@ -106,10 +112,12 @@ class NavBar extends React.Component {
         <DropDownWrapper>
           <NameAndOptionWrapper onClick={this.toggleDropDown}>
             <NameHolder>Rik van der Werf</NameHolder>
-            <Icon icon={faCog} collapsed={this.props.collapsed} />
+            <Icon icon={faCog} collapsed={this.props.collapsed.toString()} />
           </NameAndOptionWrapper>
           <DropDownContent collapsed={this.props.collapsed}>
-            <DropDownItem onClick={this.logout}>Logout</DropDownItem>
+            <DropDownList>
+              <DropDownItem onClick={this.logout}>Logout</DropDownItem>
+            </DropDownList>
           </DropDownContent>
         </DropDownWrapper>
       </NavigationBar>

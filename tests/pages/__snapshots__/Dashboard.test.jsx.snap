@@ -2,24 +2,24 @@
 
 exports[`dashboard renders correctly 1`] = `
 <div
-  className="sc-AxirZ iCCKvb"
+  className="NavigationBar-h5ragj-0 eeLIUy"
 >
   <div
-    className="sc-AxiKw kJIwGq"
+    className="DropDownWrapper-h5ragj-1 dQznib"
   >
     <div
-      className="sc-AxhCb fVBSTb"
+      className="NameAndOptionWrapper-h5ragj-2 jACVcn"
       onClick={[Function]}
     >
       <span
-        className="sc-AxjAm sc-AxhUy epRVmw"
+        className="Text-o9sidv-0 NameHolder-h5ragj-3 guBYyz"
       >
         Rik van der Werf
       </span>
       <svg
         aria-hidden="true"
-        className="svg-inline--fa fa-cog fa-w-16 sc-AxgMl MaHTY"
-        collapsed={true}
+        className="svg-inline--fa fa-cog fa-w-16 Icon-h5ragj-4 kQdKPE"
+        collapsed="true"
         data-icon="cog"
         data-prefix="fas"
         focusable="false"
@@ -36,14 +36,18 @@ exports[`dashboard renders correctly 1`] = `
       </svg>
     </div>
     <div
-      className="sc-AxheI dAhexL"
+      className="DropDownContent-h5ragj-5 hbJEeL"
     >
-      <div
-        className="sc-Axmtr diqXic"
-        onClick={[Function]}
+      <ul
+        className="DropDownList-h5ragj-6 eMdHGB"
       >
-        Logout
-      </div>
+        <li
+          className="DropDownItem-h5ragj-7 ytxN"
+          onClick={[Function]}
+        >
+          Logout
+        </li>
+      </ul>
     </div>
   </div>
 </div>

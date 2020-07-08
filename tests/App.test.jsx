@@ -25,7 +25,8 @@ describe('app', () => {
 
   it("renders correctly authenticated", () => {
     const store = mockStore({
-      authenticated: true
+      authenticated: true,
+      collapsed: true
     });
     const tree = getComponent(store).toJSON();
     expect(tree).toMatchSnapshot();
