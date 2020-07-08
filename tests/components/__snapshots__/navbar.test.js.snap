@@ -19,7 +19,7 @@ exports[`login renders correctly 1`] = `
       <svg
         aria-hidden="true"
         className="svg-inline--fa fa-cog fa-w-16 sc-AxgMl MaHTY"
-        collapsed={true}
+        collapsed="true"
         data-icon="cog"
         data-prefix="fas"
         focusable="false"

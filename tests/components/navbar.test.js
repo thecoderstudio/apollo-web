@@ -27,9 +27,9 @@ describe('login', () => {
   beforeEach(() => {
     store = mockStore({
       authenticated: true,
-      collapsed: true
+      collapsed: "true"
     });
-  
+
     store.dispatch = jest.fn();
   });
 
@@ -38,7 +38,7 @@ describe('login', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("handles successful show options", () => {
+  it("handles successful show options", async () => {
     // const component = getComponent(store);
     // const root = component.root.findByProps({ 
     //     authenticated: true,
@@ -46,11 +46,20 @@ describe('login', () => {
     // });
     // const instance = root.instance;
 
+
+
     const component = mount(
-     <Provider store={store}>
+      <Provider store={store}>
         <NavBar />
-     </Provider>
-    ).find("NameAndOptionWrapper");
+      </Provider>
+    )
+
+    console.log(component.render())
+    component.find("NameAndOptionWrapper").prop('onClick')();
+
+    await waitForExpect(() => {
+      expect(component.instance.props.dispatch).toHaveBeenCalled();
+    });
 
     console.log(component)
 
