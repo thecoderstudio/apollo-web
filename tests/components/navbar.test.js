@@ -33,7 +33,6 @@ describe('login', () => {
       collapsed: true
     });
     
-    store.dispatch = jest.fn()
     spy = jest.spyOn(store, 'dispatch');
   });
 
