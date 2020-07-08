@@ -31,16 +31,6 @@ const DropDownWrapper = styled.div`
   min-width: 200px;
 `;
 
-
-const NameHolder = styled(Text)`
-  margin: 15px;
-  line-heigth: 30px;
-  height: 30px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-`;
-
 const Icon = styled(FontAwesomeIcon)`
   transition: transform 0.5s;
   -webkit-transform: ${props => props.collapsed == 'true' ? 'rotate(0)' : 'rotate(90deg)'};

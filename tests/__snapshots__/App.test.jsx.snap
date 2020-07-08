@@ -13,7 +13,7 @@ exports[`app renders correctly authenticated 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="svg-inline--fa fa-cog fa-w-16 Icon-h5ragj-3 bSufPe"
+          className="svg-inline--fa fa-cog fa-w-16 Icon-h5ragj-2 qmehD"
           collapsed="true"
           data-icon="cog"
           data-prefix="fas"
@@ -31,13 +31,13 @@ exports[`app renders correctly authenticated 1`] = `
           />
         </svg>
         <div
-          className="DropDownContent-h5ragj-4 jMLsEt"
+          className="DropDownContent-h5ragj-3 YFTqC"
         >
           <ul
-            className="DropDownList-h5ragj-5 xXMgq"
+            className="DropDownList-h5ragj-4 YMIvf"
           >
             <li
-              className="DropDownItem-h5ragj-6 fdsVDo"
+              className="DropDownItem-h5ragj-5 diPQyb"
               onClick={[Function]}
             >
               Logout
