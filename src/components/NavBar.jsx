@@ -31,13 +31,6 @@ const DropDownWrapper = styled.div`
   min-width: 200px;
 `;
 
-const NameAndOptionWrapper = styled.div`
-  float: right;
-
-  &:hover {
-    cursor: pointer;
-  }
-`; 
 
 const NameHolder = styled(Text)`
   margin: 15px;
@@ -53,11 +46,16 @@ const Icon = styled(FontAwesomeIcon)`
   -webkit-transform: ${props => props.collapsed == 'true' ? 'rotate(0)' : 'rotate(90deg)'};
   -ms-transform: ${props => props.collapsed == 'true' ? 'rotate(0)' : 'rotate(90deg)'}
   transform: ${props => props.collapsed == 'true' ? 'rotate(0)' : 'rotate(90deg)'};
+
+  float: right;
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 const DropDownContent = styled.div`
   display: ${props => props.collapsed ? 'none' : 'block'};
-  margin-top: 10px;
+  margin-top: 25px;
   padding: 10px;
   float: right;
   min-width: 100px;
@@ -92,28 +90,29 @@ class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.logout = this.logout.bind(this);
-    this.toggleDropDown = this.toggleDropDown.bind(this)
+    this.toggleDropDown = this.toggleDropDown.bind(this);
     this.state = { collapsed: true };
   }
 
   toggleDropDown() {
-    const { dispatch } = this.props
-    dispatch(toggleOptionsAction())
+    const { dispatch } = this.props;
+    dispatch(toggleOptionsAction(!this.props.collapsed));
   }
 
   logout() {
     let { dispatch } = this.props
-    dispatch(logoutAction())
+    dispatch(logoutAction());
+    dispatch(toggleOptionsAction(true));
   }
 
   render() {
     return (
       <NavigationBar>
         <DropDownWrapper>
-          <NameAndOptionWrapper onClick={this.toggleDropDown}>
-            <NameHolder>Rik van der Werf</NameHolder>
-            <Icon icon={faCog} collapsed={this.props.collapsed.toString()} />
-          </NameAndOptionWrapper>
+          <Icon 
+            icon={faCog} 
+            collapsed={this.props.collapsed.toString()}
+            onClick={this.toggleDropDown}/>
           <DropDownContent collapsed={this.props.collapsed}>
             <DropDownList>
               <DropDownItem onClick={this.logout}>Logout</DropDownItem>

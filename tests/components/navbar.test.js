@@ -7,7 +7,7 @@ import NavBar from '../../src/components/NavBar';
 import waitForExpect from 'wait-for-expect';
 import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { toggleOptions as toggleOptionsAction } from '../../src/actions/navbar'
+import { toggleOptions as toggleOptionsAction, toggleOptions } from '../../src/actions/navbar'
 import { logout as logoutAction } from '../../src/actions/auth'
 
 
@@ -67,7 +67,7 @@ describe('login', () => {
     component.find("NameAndOptionWrapper").prop('onClick')();
     
     await waitForExpect(() => {
-      expect(spy).toHaveBeenCalledWith(toggleOptionsAction());
+      expect(spy).toHaveBeenCalledWith(toggleOptionsAction(false));
     });
   });
 
@@ -86,6 +86,7 @@ describe('login', () => {
     
     await waitForExpect(() => {
       expect(spy).toHaveBeenCalledWith(logoutAction());
+      expect(spy).toHaveBeenCalledWith(toggleOptionsAction(true));
     });
   });    
 });
