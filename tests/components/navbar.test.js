@@ -39,7 +39,15 @@ describe('login', () => {
   });
 
   it("renders correctly", () => {
-    const tree = getComponent(store).toJSON();
+    let tree = getComponent(store).toJSON();
+    expect(tree).toMatchSnapshot();
+
+    store = mockStore({
+      authenticated: true,
+      collapsed: false
+    });
+
+    tree = getComponent(store).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
