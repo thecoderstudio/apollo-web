@@ -7,6 +7,6 @@ describe("navBar reducer", () => {
   })
 
   it("should correctly handle toggle", () => {
-    expect(navBarReducer({}, { type: TOGGLE_OPTIONS })).toEqual(false)
+    expect(navBarReducer({}, { type: TOGGLE_OPTIONS, collapsed: false })).toEqual(false)
   })
 })

@@ -7,7 +7,7 @@ import NavBar from '../../src/components/NavBar';
 import waitForExpect from 'wait-for-expect';
 import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { toggleOptions as toggleOptionsAction, toggleOptions } from '../../src/actions/navbar'
+import { toggleOptions as toggleOptionsAction } from '../../src/actions/navbar'
 import { logout as logoutAction } from '../../src/actions/auth'
 
 
@@ -44,19 +44,6 @@ describe('login', () => {
   });
 
   it("handles successful show options", async () => {
-    const component = mount(
-      <Provider store={store}>
-        <NavBar />
-      </Provider>
-    )
-    component.find("NameAndOptionWrapper").prop('onClick')();
-    
-    await waitForExpect(() => {
-      expect(spy).toHaveBeenCalledWith(toggleOptionsAction());
-    });
-  });    
-
-  it("handles successful show options", async () => {
     const spy = jest.spyOn(store, 'dispatch')
   
     const component = mount(
@@ -64,7 +51,7 @@ describe('login', () => {
         <NavBar />
       </Provider>
     )
-    component.find("NameAndOptionWrapper").prop('onClick')();
+    component.find("Icon").prop('onClick')();
     
     await waitForExpect(() => {
       expect(spy).toHaveBeenCalledWith(toggleOptionsAction(false));
