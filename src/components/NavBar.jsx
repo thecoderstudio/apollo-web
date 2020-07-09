@@ -2,14 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { logout as logoutAction } from '../actions/auth';
+import Button from './buttons/Button';
 import OutlinedButton from './buttons/OutlinedButton';
-import NewAgentButton from './buttons/NewAgentButton';
+import Modal from './Modal';
 
 const NavigationBar = styled.div`
   height: 50px;
   padding: 10px;
   display: grid;
-  grid-template-columns: [rest] 1fr [new-agent] 100px [logout] 100px;
+  grid-template-columns: [rest] 1fr [new-agent] 300px [logout] 100px;
 
   background-color: ${props => props.theme.lightBlack};
 `;
@@ -24,17 +25,25 @@ const Logout = styled(OutlinedButton)`
   }
 `;
 
-const NewAgentButtonWrapper = styled(NewAgentButton)`
-  grid-column: rest;
-  float: right;
+const NewAgentButton = styled(Button)`
+  grid-column: new-agent;
 
-  max-width: 100px;
+  margin-left: 25px;
+  margin-right: 25px;
+  max-width: 250px;
 `;
 
 class NavBar extends React.PureComponent {
   constructor(props) {
     super(props);
     this.logout = this.logout.bind(this);
+    this.openAddAgentModal = this.openAddAgentModal.bind(this);
+    this.state = { modalOpen: false };
+
+  }
+
+  openAddAgentModal() {
+
   }
 
   logout() {
@@ -45,8 +54,9 @@ class NavBar extends React.PureComponent {
   render() {
     return (
       <NavigationBar>
-        <NewAgentButtonWrapper />
+        <NewAgentButton />
         <Logout onClick={this.logout}>Logout</Logout>
+        <Modal title='jemoeder'><div/></Modal>
       </NavigationBar>
     );
   }
