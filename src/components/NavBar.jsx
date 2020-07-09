@@ -54,7 +54,7 @@ class NavBar extends React.PureComponent {
   render() {
     return (
       <NavigationBar>
-        <NewAgentButton onClick={this.openAddAgentModal} />
+        <NewAgentButton onClick={this.openAddAgentModal}>Add new agent</NewAgentButton>
         <Logout onClick={this.logout}>Logout</Logout>
         <Modal visible={this.props.modalVisible} title='jemoeder'><div/></Modal>
       </NavigationBar>
