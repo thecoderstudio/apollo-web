@@ -1,11 +1,11 @@
 import React from 'react';
 import axios from 'axios';
-import Button from './Button';
+import Button from '../buttons/Button';
 
 class NewAgentButton extends React.Component {
   constructor(props) {
     super(props);
-    this.downloadBinary = this.downloadBinary.bind(this)
+    this.openDownloadModal = this.openDownloadModal.bind(this)
   };
 
   openDownloadModal() {

@@ -1,13 +1,11 @@
 import React from 'react';
 import configureStore from 'redux-mock-store';
-import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import NavBar from '../../src/components/NavBar';
+import renderer from 'react-test-renderer';
 import waitForExpect from 'wait-for-expect';
-import Adapter from 'enzyme-adapter-react-16';
+import NavBar from '../../src/components/NavBar';
 import { logout as logoutAction } from '../../src/actions/auth';
 
-Enzyme.configure({ adapter: new Adapter() });
 const mockStore = configureStore([]);
 
 function getComponent(store) {
@@ -33,12 +31,9 @@ describe('login', () => {
   });
 
   it("handles successful logout", async () => {
-    // component.find("Logout").filterWhere((n) =>
-    //   n.text() === "Logout"
-    // ).prop('onClick')();
-
-    // await waitForExpect(() => {
-    //   expect(spy).toHaveBeenCalledWith(logoutAction());
-    // });
+    let tree = getComponent(store);
+    const instance = tree.root
+    instance.findByType('button').props.onClick()
+    expect(tree).toMatchSnapshot()
   });
 });
