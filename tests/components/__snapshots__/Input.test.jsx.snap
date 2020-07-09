@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <input
-  className="Input-sc-1bvgqy7-0 HonTN"
+  className="sc-AxjAm gWnvPB"
   placeholder="username"
   type="username"
 />

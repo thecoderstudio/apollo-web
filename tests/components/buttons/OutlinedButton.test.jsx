@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import OutlinedButton from '../../src/components/buttons/OutlinedButton';
+import OutlinedButton from '../../../src/components/buttons/OutlinedButton'
 
 it('renders correctly', () => {
   const tree = renderer

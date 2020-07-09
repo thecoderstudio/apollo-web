@@ -2,41 +2,41 @@
 
 exports[`login renders correctly 1`] = `
 <div
-  className="OuterContainer-sc-1mix3no-0 kBRFGS"
+  className="sc-AxhCb KPxTP"
 >
   <div
-    className="InnerContainer-sc-1mix3no-1 fCbGUO"
+    className="sc-AxhUy ipnyuM"
   >
     <img
-      className="SupportingImg-sc-1mix3no-5 dtziOb"
+      className="sc-AxmLO AMLso"
       src={[Function]}
     />
     <h1
-      className="Title-sc-1mix3no-2 cOHrZJ"
+      className="sc-AxgMl dVtKuT"
     >
       Log in to Apollo
     </h1>
     <div
-      className="Card-sc-1s9gsyt-0 StyledCard-sc-1mix3no-3 dSOJxn"
+      className="sc-AxiKw sc-AxheI gbjjdj"
     >
       <form
-        className="Form-sc-1mix3no-4 isrvwX"
+        className="sc-Axmtr hUAPTi"
         onSubmit={[Function]}
       >
         <input
-          className="Input-sc-1bvgqy7-0 HonTN"
+          className="sc-AxirZ foZgfu"
           onChange={[Function]}
           placeholder="Username"
           type="username"
         />
         <input
-          className="Input-sc-1bvgqy7-0 HonTN"
+          className="sc-AxirZ foZgfu"
           onChange={[Function]}
           placeholder="Password"
           type="password"
         />
         <button
-          className="Button-xwmqaf-0 dRwrV"
+          className="sc-AxjAm bjwrOj"
         >
           Log in
         </button>

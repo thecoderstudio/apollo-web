@@ -31,12 +31,9 @@ describe('login', () => {
   });
 
   it("handles successful logout", async () => {
-    // component.find("Logout").filterWhere((n) =>
-    //   n.text() === "Logout"
-    // ).prop('onClick')();
-
-    // await waitForExpect(() => {
-    //   expect(spy).toHaveBeenCalledWith(logoutAction());
-    // });
+    let tree = getComponent(store);
+    const instance = tree.root
+    instance.findByType('button').props.onClick()
+    expect(tree).toMatchSnapshot()
   });
 });
