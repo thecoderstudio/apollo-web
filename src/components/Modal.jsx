@@ -5,8 +5,13 @@ import Card from './Card';
 
 const propTypes = {
   children: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  visible: PropTypes.bool
 };
+
+const defaultProps = {
+  visible: false
+}
 
 const ModalOverlay = styled.div`
   position: fixed;
@@ -14,37 +19,39 @@ const ModalOverlay = styled.div`
   left: 0;
   width:100%;
   height: 100%;
+
+  display: ${props => props.visible ? 'inline' : 'none'}
 `;
 
 const StyledCard = styled(Card)`
   display: grid;
   grid-template-rows: [title] 100px [content] 1fr;
 
-
   position:fixed;
-  background: white;
-  width: 80%;
-  height: auto;
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
+
+  width: 600px;
+  height: auto;
+
 `;
 
 const Title = styled.h1`
-  grid-row: content;
+  grid-row: title;
   width: 50%;
   margin: 0 auto;
   text-align: center;
 `;
 
 const Content = styled.div`
+  grid-row: content;
   padding: 25px;
 `;
 
 function Modal(props) {
-
   return (
-    <ModalOverlay>
+    <ModalOverlay visible={props.visible}>
       <StyledCard>
         <Title>{props.title}</Title>
         <Content>{props.children}</Content>
@@ -54,5 +61,6 @@ function Modal(props) {
 }
 
 Modal.propTypes = propTypes
+Modal.defaultProps = defaultProps
 
 export default Modal
