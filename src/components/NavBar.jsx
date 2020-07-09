@@ -1,20 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 import { logout as logoutAction } from '../actions/auth';
-import Text from './Text';
+import TextButton from './buttons/TextButton';
 
 const NavigationBar = styled.div`
   height: 50px;
   padding: 10px;
   display: grid;
-  grid-template-columns: 1fr [options] 300px;
+  grid-template-columns: 1fr [logout] 100px;
 
   background-color: ${props => props.theme.lightBlack};
 `;
 
-const Logout = styled(Text)`
+const Logout = styled(TextButton)`
+  grid-column: logout;
   float: right;
-  max-width: 300px;
+  max-width: 100px;
 
   &:hover {
     cursor: pointer;
@@ -35,10 +36,10 @@ class NavBar extends React.PureComponent {
   render() {
     return (
       <NavigationBar>
-        <Logout onClick={this.toggleDropDown}>Logout</Logout>
+        <Logout onClick={this.logout}>Logout</Logout>
       </NavigationBar>
     );
   }
 }
 
-export default  (NavBar);
+export default NavBar;
