@@ -10,13 +10,5 @@ module.exports = {
 			}
 		],
 		'@babel/preset-react'
-	],
-	"plugins": [
-		[
-			"babel-plugin-styled-components",
-			{
-				"fileName": false
-			}
-		]
 	]
 };

@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { connect } from 'react-redux';
 import { logout as logoutAction } from '../actions/auth';
-import media from '../util/media';
 import Text from './Text';
 
 const NavigationBar = styled.div`
@@ -43,4 +41,4 @@ class NavBar extends React.PureComponent {
   }
 }
 
-export default (NavBar);
+export default  (NavBar);
