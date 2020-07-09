@@ -8,7 +8,7 @@ const NavigationBar = styled.div`
   height: 50px;
   padding: 10px;
   display: grid;
-  grid-template-columns: 1fr [logout] 100px;
+  grid-template-columns: 1fr [logout];
 
   background-color: ${props => props.theme.lightBlack};
 `;

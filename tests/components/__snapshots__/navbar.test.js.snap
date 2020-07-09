@@ -2,7 +2,7 @@
 
 exports[`nav bar handles successful logout 1`] = `
 <div
-  className="sc-AxiKw cQhYjZ"
+  className="sc-AxiKw bDNfQg"
 >
   <button
     className="sc-AxjAm sc-AxirZ sc-AxhCb jfTlUh"
@@ -15,7 +15,7 @@ exports[`nav bar handles successful logout 1`] = `
 
 exports[`nav bar renders correctly 1`] = `
 <div
-  className="sc-AxiKw cQhYjZ"
+  className="sc-AxiKw bDNfQg"
 >
   <button
     className="sc-AxjAm sc-AxirZ sc-AxhCb jfTlUh"

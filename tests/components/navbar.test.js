@@ -30,14 +30,14 @@ describe('nav bar', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("handles successful logout", () => {
+  it("handles successful logout", async () => {
     let tree = getComponent(store);
     const instance = tree.root;
     instance.findByType('button').props.onClick();
     expect(tree).toMatchSnapshot();
 
-    waitForExpect(() => {
-      expect(spy).toHaveBeenCalledWith(LogoutAction());
+    await waitForExpect(() => {
+      expect(spy).toHaveBeenCalledWith(logoutAction());
     });
   });
 });
