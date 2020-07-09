@@ -32,7 +32,7 @@ describe('login', () => {
       authenticated: true,
       collapsed: true
     });
-    
+
     spy = jest.spyOn(store, 'dispatch');
   });
 
@@ -57,7 +57,7 @@ describe('login', () => {
     );
 
     component.find("Icon").prop('onClick')();
-    
+
     await waitForExpect(() => {
       expect(spy).toHaveBeenCalledWith(toggleOptionsAction(false));
     });
@@ -70,13 +70,13 @@ describe('login', () => {
       </Provider>
     );
 
-    component.find("DropDownItem").filterWhere((n) =>  
+    component.find("DropDownItem").filterWhere((n) =>
       n.text() === "Logout"
     ).prop('onClick')();
-    
+
     await waitForExpect(() => {
       expect(spy).toHaveBeenCalledWith(logoutAction());
       expect(spy).toHaveBeenCalledWith(toggleOptionsAction(true));
     });
-  });    
+  });
 });

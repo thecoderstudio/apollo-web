@@ -11,13 +11,13 @@ const NavigationBar = styled.div`
   height: 50px;
   padding: 10px;
   display: grid;
-  grid-template-columns: 1fr [options] 300px; 
+  grid-template-columns: 1fr [options] 300px;
 
   background-color: ${props => props.theme.lightBlack};
 
   ${
-    media.phone`
-      grid-template-columns: [options] 1fr; 
+  media.phone`
+      grid-template-columns: [options] 1fr;
     `
   }
 `;
@@ -25,7 +25,7 @@ const NavigationBar = styled.div`
 const DropDownWrapper = styled.div`
   grid-column: options;
   max-height: 50px;
-  padding: 15px;    
+  padding: 15px;
   min-width: 200px;
 `;
 
@@ -97,10 +97,10 @@ class NavBar extends React.Component {
     return (
       <NavigationBar>
         <DropDownWrapper>
-          <Icon 
-            icon={faCog} 
+          <Icon
+            icon={faCog}
             collapsed={this.props.collapsed.toString()}
-            onClick={this.toggleDropDown}/>
+            onClick={this.toggleDropDown} />
           <DropDownContent collapsed={this.props.collapsed}>
             <DropDownList>
               <DropDownItem onClick={this.logout}>Logout</DropDownItem>

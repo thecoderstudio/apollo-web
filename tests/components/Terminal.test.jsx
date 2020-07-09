@@ -35,7 +35,7 @@ describe('Terminal', () => {
         dispatchEvent: jest.fn(),
       })),
     });
-    termWriteSpy = jest.spyOn(Terminal.prototype, 'write'); 
+    termWriteSpy = jest.spyOn(Terminal.prototype, 'write');
     terminal = mount(<Terminal theme={darkTheme} agent={mockAgent} />).find(Terminal).instance();
   });
 
