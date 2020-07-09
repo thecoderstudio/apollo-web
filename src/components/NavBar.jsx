@@ -33,7 +33,7 @@ class NavBar extends React.PureComponent {
   render() {
     return (
       <NavigationBar>
-        <Logout onClick={this.logout}>Logout</Logout>
+        <Logout onClick={this.logout}>Log out</Logout>
       </NavigationBar>
     );
   }

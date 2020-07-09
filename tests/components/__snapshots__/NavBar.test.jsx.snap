@@ -8,7 +8,7 @@ exports[`nav bar handles successful logout 1`] = `
     className="sc-AxjAm sc-AxirZ sc-AxhCb jfTlUh"
     onClick={[Function]}
   >
-    Logout
+    Log out
   </button>
 </div>
 `;
@@ -21,7 +21,7 @@ exports[`nav bar renders correctly 1`] = `
     className="sc-AxjAm sc-AxirZ sc-AxhCb jfTlUh"
     onClick={[Function]}
   >
-    Logout
+    Log out
   </button>
 </div>
 `;
