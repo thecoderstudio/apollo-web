@@ -1,6 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
 import { logout as logoutAction } from '../actions/auth';
 import { showAddAgentModal } from '../actions/addAgentModal'
 import Button from './buttons/Button';
@@ -39,7 +39,6 @@ class NavBar extends React.PureComponent {
     super(props);
     this.logout = this.logout.bind(this);
     this.openAddAgentModal = this.openAddAgentModal.bind(this);
-    this.state = { modalVisible: false };
   }
 
   openAddAgentModal() {
@@ -62,6 +61,4 @@ class NavBar extends React.PureComponent {
   }
 }
 
-export default connect(
-  state => ({ modalVisible: state.addAgentModalVisible})
-)(NavBar);
+export default connect()(NavBar);
