@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import TextButton from '../../src/components/buttons/TextButton';
+import OutlinedButton from '../../src/components/buttons/OutlinedButton';
 
 it('renders correctly', () => {
   const tree = renderer
-    .create(<TextButton>Test</TextButton>)
+    .create(<OutlinedButton>Test</OutlinedButton>)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });

@@ -1,7 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { logout as logoutAction } from '../actions/auth';
-import TextButton from './buttons/TextButton';
+import OutlinedButton from './buttons/OutlinedButton';
 
 const NavigationBar = styled.div`
   height: 50px;
@@ -12,7 +13,7 @@ const NavigationBar = styled.div`
   background-color: ${props => props.theme.lightBlack};
 `;
 
-const Logout = styled(TextButton)`
+const Logout = styled(OutlinedButton)`
   grid-column: logout;
   float: right;
   max-width: 100px;
@@ -42,4 +43,4 @@ class NavBar extends React.PureComponent {
   }
 }
 
-export default NavBar;
+export default connect()(NavBar);
