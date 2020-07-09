@@ -5,7 +5,7 @@ import { logout as logoutAction } from '../actions/auth';
 import { showAddAgentModal } from '../actions/addAgentModal'
 import Button from './buttons/Button';
 import OutlinedButton from './buttons/OutlinedButton';
-import Modal from './Modal';
+import AddAgentModal from './add-agent/addAgentModal';
 
 const NavigationBar = styled.div`
   height: 50px;
@@ -56,7 +56,7 @@ class NavBar extends React.PureComponent {
       <NavigationBar>
         <NewAgentButton onClick={this.openAddAgentModal}>Add new agent</NewAgentButton>
         <Logout onClick={this.logout}>Logout</Logout>
-        <Modal visible={this.props.modalVisible} title='jemoeder'><div/></Modal>
+        <AddAgentModal />
       </NavigationBar>
     );
   }
