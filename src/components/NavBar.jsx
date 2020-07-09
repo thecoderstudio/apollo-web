@@ -48,7 +48,7 @@ class NavBar extends React.PureComponent {
   }
 
   logout() {
-    dispatch(logoutAction());
+    dispatch(logoutAction())
   }
 
   render() {
