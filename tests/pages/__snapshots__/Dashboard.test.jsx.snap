@@ -1,7 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`dashboard renders correctly 1`] = `
-<p>
-  Welcome to Apollo!
-</p>
+<div
+  className="sc-AxiKw bDNfQg"
+>
+  <button
+    className="sc-AxjAm sc-AxirZ sc-AxhCb jfTlUh"
+    onClick={[Function]}
+  >
+    Log out
+  </button>
+</div>
 `;

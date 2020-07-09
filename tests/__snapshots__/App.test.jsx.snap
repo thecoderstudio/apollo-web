@@ -3,11 +3,18 @@
 exports[`app renders correctly authenticated 1`] = `
 <div>
   <div
-    className="sc-fzozJi deMZXu"
+    className="sc-fzplWN iqrqGl"
   >
-    <p>
-      Welcome to Apollo!
-    </p>
+    <div
+      className="sc-AxiKw eLmrgg"
+    >
+      <button
+        className="sc-AxjAm sc-AxirZ sc-AxhCb ewCHgN"
+        onClick={[Function]}
+      >
+        Log out
+      </button>
+    </div>
   </div>
 </div>
 `;
@@ -15,38 +22,38 @@ exports[`app renders correctly authenticated 1`] = `
 exports[`app renders correctly unauthenticated 1`] = `
 <div>
   <div
-    className="sc-fzozJi deMZXu"
+    className="sc-fzplWN iqrqGl"
   >
     <div
-      className="sc-AxhCb KPxTP"
+      className="sc-AxheI SUxVu"
     >
       <div
-        className="sc-AxhUy ipnyuM"
+        className="sc-Axmtr cEHhGj"
       >
         <img
-          className="sc-AxmLO AMLso"
+          className="sc-fzpans sSDeb"
           src={[Function]}
         />
         <h1
-          className="sc-AxgMl fxVaIM"
+          className="sc-AxmLO kPhZTY"
         >
           Log in to Apollo
         </h1>
         <div
-          className="sc-AxiKw sc-AxheI cTqUBt"
+          className="sc-AxgMl sc-fzozJi cZVrlm"
         >
           <form
-            className="sc-Axmtr hUAPTi"
+            className="sc-fzoLsD gFdOzY"
             onSubmit={[Function]}
           >
             <input
-              className="sc-AxirZ eKJIgn"
+              className="sc-AxhUy ymxfm"
               onChange={[Function]}
               placeholder="Username"
               type="username"
             />
             <input
-              className="sc-AxirZ eKJIgn"
+              className="sc-AxhUy ymxfm"
               onChange={[Function]}
               placeholder="Password"
               type="password"
