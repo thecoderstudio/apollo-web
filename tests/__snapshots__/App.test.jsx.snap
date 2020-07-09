@@ -9,7 +9,7 @@ exports[`app renders correctly authenticated 1`] = `
       className="sc-AxiKw iEmVtl"
     >
       <button
-        className="sc-AxjAm sc-AxirZ sc-AxhCb kLpzuA"
+        className="sc-AxjAm sc-AxirZ sc-AxhCb ewCHgN"
         onClick={[Function]}
       >
         Logout

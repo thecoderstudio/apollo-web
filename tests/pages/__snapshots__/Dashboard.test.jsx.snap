@@ -5,7 +5,7 @@ exports[`dashboard renders correctly 1`] = `
   className="sc-AxiKw cQhYjZ"
 >
   <button
-    className="sc-AxjAm sc-AxirZ sc-AxhCb egA-DhE"
+    className="sc-AxjAm sc-AxirZ sc-AxhCb jfTlUh"
     onClick={[Function]}
   >
     Logout

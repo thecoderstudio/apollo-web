@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`login handles successful logout 1`] = `
+exports[`nav bar handles successful logout 1`] = `
 <div
   className="sc-AxiKw cQhYjZ"
 >
   <button
-    className="sc-AxjAm sc-AxirZ sc-AxhCb egA-DhE"
+    className="sc-AxjAm sc-AxirZ sc-AxhCb jfTlUh"
     onClick={[Function]}
   >
     Logout
@@ -13,12 +13,12 @@ exports[`login handles successful logout 1`] = `
 </div>
 `;
 
-exports[`login renders correctly 1`] = `
+exports[`nav bar renders correctly 1`] = `
 <div
   className="sc-AxiKw cQhYjZ"
 >
   <button
-    className="sc-AxjAm sc-AxirZ sc-AxhCb egA-DhE"
+    className="sc-AxjAm sc-AxirZ sc-AxhCb jfTlUh"
     onClick={[Function]}
   >
     Logout
