@@ -11,9 +11,6 @@
     "test": "jest --passWithNoTests"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.20",
-    "@fortawesome/free-solid-svg-icons": "^5.13.1",
-    "@fortawesome/react-fontawesome": "^0.1.11",
     "axios": "^0.19.2",
     "chalk": "^4.1.0",
     "js-cookie": "^2.2.1",

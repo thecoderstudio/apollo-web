@@ -9,11 +9,8 @@ import Adapter from 'enzyme-adapter-react-16';
 import { toggleOptions as toggleOptionsAction } from '../../src/actions/navbar';
 import { logout as logoutAction } from '../../src/actions/auth';
 
-
 Enzyme.configure({ adapter: new Adapter() });
-
 const mockStore = configureStore([]);
-jest.mock('axios');
 
 function getComponent(store) {
   return renderer.create(
@@ -28,39 +25,13 @@ describe('login', () => {
   let spy;
 
   beforeEach(() => {
-    store = mockStore({
-      authenticated: true,
-      collapsed: true
-    });
-
+    store = mockStore({});
     spy = jest.spyOn(store, 'dispatch');
   });
 
   it("renders correctly", () => {
     let tree = getComponent(store).toJSON();
     expect(tree).toMatchSnapshot();
-
-    store = mockStore({
-      authenticated: true,
-      collapsed: false
-    });
-
-    tree = getComponent(store).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it("handles successful show options", async () => {
-    const component = mount(
-      <Provider store={store}>
-        <NavBar />
-      </Provider>
-    );
-
-    component.find("Icon").prop('onClick')();
-
-    await waitForExpect(() => {
-      expect(spy).toHaveBeenCalledWith(toggleOptionsAction(false));
-    });
   });
 
   it("handles successful logout", async () => {
@@ -70,13 +41,12 @@ describe('login', () => {
       </Provider>
     );
 
-    component.find("DropDownItem").filterWhere((n) =>
+    component.find("Logout").filterWhere((n) =>
       n.text() === "Logout"
     ).prop('onClick')();
 
     await waitForExpect(() => {
       expect(spy).toHaveBeenCalledWith(logoutAction());
-      expect(spy).toHaveBeenCalledWith(toggleOptionsAction(true));
     });
   });
 });

@@ -1,14 +1,13 @@
-import configureStore from 'redux-mock-store';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Dashboard from '../../src/pages/Dashboard';
+import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
+import Dashboard from '../../src/pages/Dashboard';
 
 describe('dashboard', () => {
   it("renders correctly", () => {
     let mockStore = configureStore([]);
     const store = mockStore({
-      collapsed: true,
       authenticated: true
     });
 
