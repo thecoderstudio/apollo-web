@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components'
 import Card from './Card';
+import closeAddAgentModal from '../actions/add-agent';
 
 const propTypes = {
   children: PropTypes.node.isRequired,
@@ -50,15 +51,29 @@ const Content = styled.div`
   padding: 20px;
 `;
 
-function Modal(props) {
-  return (
-    <ModalOverlay visible={props.visible}>
-      <StyledCard>
-        <Title>{props.title}</Title>
-        <Content>{props.children}</Content>
-      </StyledCard>
-    </ModalOverlay>
-  );
+class Modal extends React.PureComponent {
+  closeModal(e) {
+    console.log(this.node);
+    if (!this.node.contains(e.target)) {
+      const { dispatch } = this.props;
+      dispatch(closeAddAgentModal());
+    }
+  }
+
+  componentDidMount() {
+    document.addEventListener('mousedown', this.closeModal, false);
+  }
+
+  render() {
+    return (
+      <ModalOverlay  visible={this.props.visible} >
+        <StyledCard ref={node => this.node = node}>
+          <Title>{this.props.title}</Title>
+          <Content>{this.props.children}</Content>
+        </StyledCard>
+      </ModalOverlay>
+    );
+  }
 }
 
 Modal.propTypes = propTypes
