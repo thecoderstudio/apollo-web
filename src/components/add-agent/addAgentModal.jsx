@@ -32,7 +32,9 @@ class AddAgentModal extends React.PureComponent {
   renderDirectlyOnMachineStepOne() {
     // this.setState({title: "Directly on target machine"})
     return(
-      <DropDown />
+      <DropDown options={[1,2,3]}>
+        [1,2,3]
+      </DropDown>
     );
   };
 
