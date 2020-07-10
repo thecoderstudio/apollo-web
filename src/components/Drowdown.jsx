@@ -59,20 +59,30 @@ const DropDownIcon = styled.div`
 	border-style: solid;
 	float: right;
 	margin-top: 5px;
-	border-width: 8px 8px 0px 8px;
+	border-width: 7px 7px 0px 7px;
 	height: 0px;
 	width: 0px;
 	margin-left: 10px;
   transform: ${props => props.collapsed ? 'rotate(0)' : 'rotate(180deg)'};	
-  transition: transform 0.5s;
-  
+  transition: transform 0.3s;
 `;
 
 class DropDown extends React.PureComponent {
   constructor(props) {
     super(props);
     this.toggleCollapse = this.toggleCollapse.bind(this)
+    this.closeDropdown = this.closeDropdown.bind(this);
     this.state = { collapsed: true }
+  }
+
+  closeDropdown(e) {
+    if (!this.state.collapsed && !this.node.contains(e.target)) {
+      this.setState({ collapsed: true })
+    }
+  }
+
+  componentDidMount() {
+    document.addEventListener('mousedown', this.closeDropdown , false);
   }
 
   toggleCollapse() {
@@ -81,8 +91,8 @@ class DropDown extends React.PureComponent {
 
   render() {
     return(
-      <DropDownWrapper>
-        <DropDownButton onClick={this.toggleCollapse}>Button<DropDownIcon collapsed={this.state.collapsed}/></DropDownButton>
+      <DropDownWrapper ref={node => this.node = node}>
+        <DropDownButton onClick={this.toggleCollapse}>s<DropDownIcon collapsed={this.state.collapsed}/></DropDownButton>
         <DropDownContent collapsed={this.state.collapsed}>
             <DropDownItem>items</DropDownItem>
             <DropDownItem>items</DropDownItem>
