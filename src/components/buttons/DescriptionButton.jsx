@@ -2,7 +2,7 @@ import React from 'react';
 import OutlinedButton from './OutlinedButton';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Text from '../Text';
+import { SmallText } from '../Text';
 
 const propTypes = {
   children: PropTypes.node.isRequired,
@@ -10,22 +10,21 @@ const propTypes = {
 };
 
 const StyledOutlinedButton = styled(OutlinedButton)`
-  background-color: transparent;
-  border: 1px solid ${props => props.theme.accent};
-
   display: grid;
-  grid-template-rows: [title] 100px [description] 1fr;
+  grid-template-rows: [title] 50px [description] 1fr;
+  padding: 20px;
 `;
 
+StyledOutlinedButton.displayName = 'OutlinedButton'
 
-const Title = styled.h1`
+const Title = styled.h3`
   grid-row: title;
   width: 80%;
   margin: 0 auto;
   text-align: center;
 `;
 
-const Description = styled(Text)`
+const Description = styled(SmallText)`
   grid-row: description;
   padding: 10px;
 `;

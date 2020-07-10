@@ -25,7 +25,7 @@ const ModalOverlay = styled.div`
 
 const StyledCard = styled(Card)`
   display: grid;
-  grid-template-rows: [title] 100px [content] 1fr;
+  grid-template-rows: [title] 50px [content] 1fr;
 
   position:fixed;
   top:50%;
@@ -37,7 +37,7 @@ const StyledCard = styled(Card)`
 
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
   grid-row: title;
   width: 50%;
   margin: 0 auto;
@@ -46,7 +46,7 @@ const Title = styled.h1`
 
 const Content = styled.div`
   grid-row: content;
-  padding: 25px;
+  padding: 20px;
 `;
 
 function Modal(props) {

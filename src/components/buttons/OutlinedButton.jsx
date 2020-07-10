@@ -6,4 +6,4 @@ const OutlinedButton = styled(Button)`
   border: 1px solid ${props => props.theme.accent};
 `;
 
-export default OutlinedButton;
+export default OutlinedButton
