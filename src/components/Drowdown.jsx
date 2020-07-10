@@ -78,7 +78,8 @@ class DropDown extends React.PureComponent {
     this.toggleCollapse = this.toggleCollapse.bind(this)
     this.closeDropdown = this.closeDropdown.bind(this);
     this.renderItems = this.renderItems.bind(this);
-    this.state = { collapsed: true, selected: this.props.children[0] };
+    this.selectItem = this.selectItem.bind(this);
+    this.state = { collapsed: true, selected: this.props.options[0] };
   }
 
   closeDropdown(e) {
@@ -96,16 +97,24 @@ class DropDown extends React.PureComponent {
     this.setState({ collapsed : !this.state.collapsed });
   }
 
+  selectItem(option) {
+    this.toggleCollapse();
+    this.setState({ selected: option });
+  }
+
   renderItems() {
     return this.props.options.map(option => {
-     return <DropDownItem>{option}</DropDownItem>
+      if (option === this.state.selected) { return }
+      return <DropDownItem key={option} onClick={() => this.selectItem(option)} >{option}</DropDownItem>;
     });
   }
 
   render() {
     return(
       <DropDownWrapper ref={node => this.node = node}>
-        <DropDownButton onClick={this.toggleCollapse}>s<DropDownIcon collapsed={this.state.collapsed}/></DropDownButton>
+        <DropDownButton onClick={this.toggleCollapse}>
+          {this.state.selected}<DropDownIcon collapsed={this.state.collapsed}/>
+        </DropDownButton>
         <DropDownContent collapsed={this.state.collapsed}>
           {this.renderItems()}
         </DropDownContent>
