@@ -19,33 +19,49 @@ const ManualButtonWraper = styled.div`
   margin-left: 10px;
 `;
 
-const StyledDescriptiveButtion = styled(DescriptionButton)`
-  > Outlinedbutton {
-    border: 1px solid ${props => props.theme.white};
-  }
-
-`;
-
 class AddAgentModal extends React.PureComponent {
   constructor(props) {
     super(props);
+    this.renderQuestion = this.renderQuestion.bind(this);
+    this.renderDirectlyOnMachineStepOne = this.renderDirectlyOnMachineStepOne.bind(this)
+    this.renderDirectlyOnMachineStepTwo = this.renderDirectlyOnMachineStepTwo.bind(this)
+    this.state = { renderFunction : this.renderQuestion, title: "Choose Intallation"};
   };
+
+  renderDirectlyOnMachineStepOne() {
+    this.setState({title: "Directly on target machine"})
+    return(
+
+    );
+  };
+
+  renderDirectlyOnMachineStepTwo() {
+    return(
+
+    );
+  };
+
+  renderQuestion() {
+    return (
+      <ButtonsWrapper>
+        <DirectlyButtonWraper>
+          <DescriptionButton title='Directly on target machine'>
+          You have the correct permissions to download and install the binary directly on the target machine.
+          </DescriptionButton>
+        </DirectlyButtonWraper>
+        <ManualButtonWraper>
+          <DescriptionButton title='Manual'>
+            You download, upload and install the binary yourself.
+          </DescriptionButton>
+        </ManualButtonWraper>
+      </ButtonsWrapper>
+    )
+  }
 
   render() {
     return (
-      <Modal visible={this.props.modalVisible} title='jemoeder'>
-        <ButtonsWrapper>
-          <DirectlyButtonWraper>
-            <StyledDescriptiveButtion title='Directly on target machine'>
-            You have the correct permissions to download and install the binary directly on the target machine.
-            </StyledDescriptiveButtion>
-          </DirectlyButtonWraper>
-          <ManualButtonWraper>
-            <StyledDescriptiveButtion title='Manual'>
-             You download, upload and install the binary yourself.
-            </StyledDescriptiveButtion>
-          </ManualButtonWraper>
-        </ButtonsWrapper>
+      <Modal visible={this.props.modalVisible} title={this.state.title}>
+        {this.state.renderFunction()}
       </Modal>
     );
   }
