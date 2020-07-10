@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import Modal from '../Modal';
 import DescriptionButton from '../buttons/DescriptionButton';
+import DropDown from "../Drowdown";
 
 const ButtonsWrapper = styled.div`
   display: grid;
@@ -25,19 +26,19 @@ class AddAgentModal extends React.PureComponent {
     this.renderQuestion = this.renderQuestion.bind(this);
     this.renderDirectlyOnMachineStepOne = this.renderDirectlyOnMachineStepOne.bind(this)
     this.renderDirectlyOnMachineStepTwo = this.renderDirectlyOnMachineStepTwo.bind(this)
-    this.state = { renderFunction : this.renderQuestion, title: "Choose Intallation"};
+    this.state = { renderFunction : this.renderDirectlyOnMachineStepOne, title: "Choose Intallation"};
   };
 
   renderDirectlyOnMachineStepOne() {
-    this.setState({title: "Directly on target machine"})
+    // this.setState({title: "Directly on target machine"})
     return(
-
+      <DropDown />
     );
   };
 
   renderDirectlyOnMachineStepTwo() {
     return(
-
+      <DropDown />
     );
   };
 

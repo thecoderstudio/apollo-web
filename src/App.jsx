@@ -8,13 +8,14 @@ import Login from './pages/Login';
 import { darkTheme } from './theme';
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=Roboto:wght@300;400&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=B612:wght@400;500,700&family=Roboto:wght@300;400&display=swap');
 
   html, body {
     margin: 0px;
     padding: 0px;
     height: 100%;
     width: 100%;
+    font-weight: 500;
     color: ${props => props.theme.white};
     background-color: ${props => props.theme.black}; 
   }

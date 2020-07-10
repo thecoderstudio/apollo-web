@@ -6,7 +6,8 @@ export const darkTheme = {
   darkWhite: "#F1F1F1",
   primary: "#02A3EE",
   accent: "#4D02EE",
-  error: "#ED3E2A"
+  error: "#ED3E2A",
+  overlay: "rgba(37, 37, 37, 0.6)"
 };
 
 function getBrowserPreferredTheme() {
