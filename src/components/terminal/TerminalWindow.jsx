@@ -31,6 +31,7 @@ const Title = styled.h4`
 export default class TerminalWindow extends React.PureComponent {
   constructor(props) {
     super(props);
+    this.openTerminalInNewWindow = this.openTerminalInNewWindow.bind(this);
     this.close = this.close.bind(this);
     this.terminal = React.createRef();
   }
@@ -38,6 +39,12 @@ export default class TerminalWindow extends React.PureComponent {
   close() {
     this.props.onClose();
   }
+
+  openTerminalInNewWindow() {
+    const location = window.location;
+    window.open(`${location.protocol}//${location.host}/agent/${this.props.agent.id}/shell`)
+  }
+
 
   render() {
     return (
@@ -58,7 +65,7 @@ export default class TerminalWindow extends React.PureComponent {
         <Window>
           <TaskBar>
             <Title>{this.props.agent.name}</Title>
-            <WindowButton color={'green'} />
+            <WindowButton onClick={this.openTerminalInNewWindow} color={'green'} />
             <WindowButton onClick={this.close} color={'red'} />
           </TaskBar>
           <Terminal agent={this.props.agent} ref={this.terminal} />
