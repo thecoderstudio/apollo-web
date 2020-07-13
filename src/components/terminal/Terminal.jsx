@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
-import Card from '../components/Card';
+import Card from '../../components/Card';
 import { Terminal as XTerm } from 'xterm';
 import Draggable from 'react-draggable';
 import { AttachAddon } from 'xterm-addon-attach';

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Text from '../Text';
 import ConnectionState from './ConnectionState';
-import Terminal from '../Terminal';
+import TerminalWindow from '../terminal/TerminalWindow';
 import media from '../../util/media';
 
 const propTypes = {
@@ -57,16 +57,6 @@ const TerminalIcon = styled(Icon)`
 
 `;
 
-const StyledTerminal = styled(Terminal)`
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-`
-
-
 export default class AgentListItem extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -82,7 +72,7 @@ export default class AgentListItem extends React.PureComponent {
         <StyledText>{this.props.agent.name}</StyledText>
           <ConnectionState connectionState={this.props.agent.connection_state} />
           <Icon onClick={this.openTerminal} className="fas fa-terminal" />
-          <StyledTerminal agent={this.props.agent} />
+          <TerminalWindow agent={this.props.agent} />
       </Container>
     );
   }
