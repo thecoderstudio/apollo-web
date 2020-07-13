@@ -11,10 +11,8 @@ const propTypes = {
   agent: PropTypes.object.isRequired
 };
 
-const Container = styled(Card)`
+const Container = styled.div`
   height: 100%;
-  max-height: 400px;
-  width: 700px;
   padding: 20px;
 `;
 
