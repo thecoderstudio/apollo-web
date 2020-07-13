@@ -41,7 +41,7 @@ const StyledCard = styled(Card)`
 
 const Title = styled.h2`
   grid-row: title;
-  width: 50%;
+  width: 75%;
   margin: 0 auto;
   text-align: center;
 `;
@@ -53,7 +53,6 @@ const Content = styled.div`
 
 class Modal extends React.PureComponent {
   closeModal(e) {
-    console.log(this.node);
     if (!this.node.contains(e.target)) {
       const { dispatch } = this.props;
       dispatch(closeAddAgentModal());

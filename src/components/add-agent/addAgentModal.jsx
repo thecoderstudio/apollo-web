@@ -6,6 +6,7 @@ import DescriptionButton from '../buttons/DescriptionButton';
 import Button from "../buttons/Button";
 import DropDown from "../Drowdown";
 import {Text} from "../Text";
+import { closeAddAgentModal } from "../../actions/add-agent";
 
 
 const ButtonsWrapper = styled.div`
@@ -46,17 +47,44 @@ const StyledButton = styled(Button)`
   margin-top: 25px;
 `;
 
+const ThreeRowDisplay = styled.div`
+  display: grid;
+  grid-template-rows: [description] 1fr [commands] 1fr [button] 1fr 
+`;
+
+const CommandWrapper = styled.div`
+  grid-row: commands;
+`;
+const CloseButton = styled(StyledButton)`
+  grid-row: button;
+`;
+const Description = styled(Text)`
+  grid-row: description;
+  text-align: center;
+`;
+
 class AddAgentModal extends React.PureComponent {
   constructor(props) {
     super(props);
     this.renderQuestion = this.renderQuestion.bind(this);
-    this.renderDirectlyOnMachineStepOne = this.renderDirectlyOnMachineStepOne.bind(this)
-    this.renderDirectlyOnMachineStepTwo = this.renderDirectlyOnMachineStepTwo.bind(this)
-    this.state = { renderFunction : this.renderDirectlyOnMachineStepOne, title: "Choose Intallation"};
+    this.renderDirectlyOnMachineStepOne = this.renderDirectlyOnMachineStepOne.bind(this);
+    this.renderDirectlyOnMachineStepTwo = this.renderDirectlyOnMachineStepTwo.bind(this);
+    this.setRenderFunction = this.setRenderFunction.bind(this);
+    this.closeModal = this.closeModal.bind(this)
+    this.state = { renderFunction : this.renderDirectlyOnMachineStepTwo, title: "Choose installation" };
   };
 
+  closeModal() {
+    const { dispatch } = this.props;
+    dispatch(closeAddAgentModal());
+  }
+
+  setRenderFunction(renderFunction) {
+    this.setState({ renderFunction: renderFunction});
+  }
+
   renderDirectlyOnMachineStepOne() {
-    // this.setState({title: "Directly on target machine"})
+    this.setState({title: "Directly on target machine"});
     return(
       <div>
         <DropDownAndTextWrapper>
@@ -71,14 +99,24 @@ class AddAgentModal extends React.PureComponent {
             <DropDown options={[1,2,3]} />
           </DropDownWrapper>
         </DropDownAndTextWrapper>
-        <StyledButton>Create agent</StyledButton>
+        <StyledButton onClick={() => this.setRenderFunction(this.renderDirectlyOnMachineStepTwo)}>
+          Create agent
+        </StyledButton>
       </div>
     );
   };
 
   renderDirectlyOnMachineStepTwo() {
     return(
-      <DropDown />
+      <ThreeRowDisplay>
+        <Description>
+          Copy and run the command on the target machine to install the client.
+        </Description>
+        <CommandWrapper>
+
+        </CommandWrapper>
+        <CloseButton onClick={this.closeModal}> Close </CloseButton>
+      </ThreeRowDisplay>
     );
   };
 
