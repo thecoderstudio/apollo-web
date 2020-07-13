@@ -7,6 +7,7 @@ import Button from "../buttons/Button";
 import DropDown from "../Drowdown";
 import {Text} from "../Text";
 import { closeAddAgentModal } from "../../actions/add-agent";
+import CopyToClipboard from "../CopyToClipboard";
 
 
 const ButtonsWrapper = styled.div`
@@ -113,7 +114,7 @@ class AddAgentModal extends React.PureComponent {
           Copy and run the command on the target machine to install the client.
         </Description>
         <CommandWrapper>
-
+          <CopyToClipboard text={"ooi"} />
         </CommandWrapper>
         <CloseButton onClick={this.closeModal}> Close </CloseButton>
       </ThreeRowDisplay>

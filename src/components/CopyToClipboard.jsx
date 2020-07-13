@@ -12,10 +12,26 @@ const Wrapper = styled.div`
 
 const TextField = styled.div`
   grid-column: textfield;
+  
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align:left;
+  padding: 15px;
+  background-color: ${props => props.theme.lightBlack};
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+  overflow: hidden;
 `;
+
 const Button = styled.div`
   grid-column: copy;
 `;
+
 const Icon = styled.div`
   text-align: center;
   display: block;
