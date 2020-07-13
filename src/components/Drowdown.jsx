@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types';
 
 const propTypes = {
-  options: PropTypes.array.isRequired
+  options: PropTypes.array.isRequired,
+  optionSelectedAction: PropTypes.func.isRequired
 }
 
 const DropDownWrapper = styled.div`

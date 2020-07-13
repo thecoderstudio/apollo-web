@@ -3,7 +3,10 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import Modal from '../Modal';
 import DescriptionButton from '../buttons/DescriptionButton';
+import Button from "../buttons/Button";
 import DropDown from "../Drowdown";
+import {Text} from "../Text";
+
 
 const ButtonsWrapper = styled.div`
   display: grid;
@@ -20,6 +23,29 @@ const ManualButtonWraper = styled.div`
   margin-left: 10px;
 `;
 
+const DropDownAndTextWrapper = styled.div`
+  display: grid;
+  width: 100%;
+  grid-template-columns: [text] 60% [dropdown] 40%; 
+  height: 75px;
+`;
+
+const DropDownWrapper = styled.div`
+  grid-column: dropdown; 
+`;
+const TextWrapper = styled(Text)`
+  grid-column: text;
+  line-height: 75px;
+`;
+
+const StyledButton = styled(Button)`
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+  margin-top: 25px;
+`;
+
 class AddAgentModal extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -32,9 +58,21 @@ class AddAgentModal extends React.PureComponent {
   renderDirectlyOnMachineStepOne() {
     // this.setState({title: "Directly on target machine"})
     return(
-      <DropDown options={[1,2,3]}>
-        [1,2,3]
-      </DropDown>
+      <div>
+        <DropDownAndTextWrapper>
+          <TextWrapper>Operating system</TextWrapper>
+          <DropDownWrapper>
+            <DropDown options={[1,2,3]} />
+          </DropDownWrapper>
+        </DropDownAndTextWrapper>
+        <DropDownAndTextWrapper>
+          <TextWrapper>Architecture</TextWrapper>
+          <DropDownWrapper>
+            <DropDown options={[1,2,3]} />
+          </DropDownWrapper>
+        </DropDownAndTextWrapper>
+        <StyledButton>Create agent</StyledButton>
+      </div>
     );
   };
 
