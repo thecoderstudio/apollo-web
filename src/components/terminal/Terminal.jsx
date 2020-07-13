@@ -1,10 +1,11 @@
 import React from 'react';
 import styled, { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
-import Card from '../../components/Card';
 import { Terminal as XTerm } from 'xterm';
 import { AttachAddon } from 'xterm-addon-attach';
+import { FitAddon } from 'xterm-addon-fit';
 import chalk from 'chalk';
+import Card from '../../components/Card';
 
 const propTypes = {
   agent: PropTypes.object.isRequired
@@ -12,6 +13,7 @@ const propTypes = {
 
 const Container = styled.div`
   height: 100%;
+  width: 100%;
   padding: 20px;
 `;
 
@@ -44,6 +46,7 @@ export class Terminal extends React.PureComponent {
     this.chalk = new chalk.Instance(CHALK_SETTINGS);
     this.onSocketError = this.onSocketError.bind(this);
     this.write = this.write.bind(this);
+    this.fit = this.fit.bind(this);
     this.connect = this.connect.bind(this);
     this.connect();
   }
@@ -56,12 +59,15 @@ export class Terminal extends React.PureComponent {
     socket.onerror = this.onSocketError;
 
     const attachAddon = new AttachAddon(socket);
+    this.fitAddon = new FitAddon();
     this.term.loadAddon(attachAddon);
+    this.term.loadAddon(this.fitAddon);
   }
 
   componentDidMount() {
     const styledName = this.chalk.hex(this.props.theme.primary).bold(this.props.agent.name);
     this.term.open(this.terminalRef.current);
+    this.fit();
     this.write(`Connecting to agent ${styledName}...\n\r\n`);
   }
 
@@ -73,6 +79,10 @@ export class Terminal extends React.PureComponent {
 
   write(text) {
     this.term.write(text);
+  }
+
+  fit() {
+    this.fitAddon.fit();
   }
 
   render() {

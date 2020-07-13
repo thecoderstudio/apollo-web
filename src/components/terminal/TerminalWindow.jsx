@@ -1,18 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Draggable from 'react-draggable';
+import { Rnd } from 'react-rnd';
 import Card from '../../components/Card';
 import Terminal from './Terminal';
 
 const Window = styled(Card)`
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  height: 400px;
-  width: 700px;
   padding: 0px;
 `;
 
@@ -40,6 +32,7 @@ export default class TerminalWindow extends React.PureComponent {
   constructor(props) {
     super(props);
     this.close = this.close.bind(this);
+    this.terminal = React.createRef();
   }
 
   close() {
@@ -48,16 +41,29 @@ export default class TerminalWindow extends React.PureComponent {
 
   render() {
     return (
-      <Draggable>
+      <Rnd
+        default={{
+          x: 0,
+          y: 0,
+          width: 700,
+          height: 400
+        }}
+        minWidth={700}
+        minHeight={300}
+        bounds="window"
+        onResize={(e, direction, ref, delta, position) => {
+          this.terminal.current.fit();
+        }}
+      >
         <Window>
           <TaskBar>
             <Title>{this.props.agent.name}</Title>
             <WindowButton color={'green'} />
             <WindowButton onClick={this.close} color={'red'} />
           </TaskBar>
-          <Terminal agent={this.props.agent} />
+          <Terminal agent={this.props.agent} ref={this.terminal} />
         </Window>
-      </Draggable>
+      </Rnd>
     );
   }
 }

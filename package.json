@@ -16,15 +16,16 @@
     "js-cookie": "^2.2.1",
     "react": ">= 16.8.0",
     "react-dom": ">= 16.8.0",
-    "react-draggable": "^4.4.3",
     "react-is": ">= 16.8.0",
     "react-redux": "^7.2.0",
+    "react-rnd": "^10.1.10",
     "react-router-dom": "^5.2.0",
     "redux": ">4.0.0",
     "redux-persist": "^6.0.0",
     "styled-components": "^5.1.1",
     "xterm": "^4.7.0",
-    "xterm-addon-attach": "^0.6.0"
+    "xterm-addon-attach": "^0.6.0",
+    "xterm-addon-fit": "^0.4.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.10.4",
