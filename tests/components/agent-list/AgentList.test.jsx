@@ -4,13 +4,10 @@ import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import WS from 'jest-websocket-mock';
 import AgentList from '../../../src/components/agent-list/AgentList';
-import Enzyme, { mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { listAgents } from '../../../src/actions/agent';
+import waitForExpect from 'wait-for-expect';
 
 const mockStore = configureStore([]);
-
-Enzyme.configure({ adapter: new Adapter() });
-
 
 function getComponent(store) {
   return renderer.create(
@@ -31,6 +28,7 @@ describe('agentList', () => {
     process.env = {
       APOLLO_WS_URL: 'ws://localhost:1234/'
     };
+    store.dispatch = jest.fn();
   });
 
   afterEach(() => {
@@ -43,26 +41,23 @@ describe('agentList', () => {
   });
 
   it("correctly dispatches list agents", async () => {
-    const component = mount( 
-      <Provider store={store}>
-        <AgentList />
-     </Provider>
-    ).find("AgentList");
-
-    const spy = jest.spyOn(component.instance(), 'dispatchListAgents')
-    
     const data = [
       { id: "id", name: "name", connection_state: "connected" },
       { id: "id2", name: "name", connection_state: "connected" },
     ];
-    
-    const server = new WS(`ws://localhost:1234/agent`);
-    const client = new WebSocket("ws://localhost:1234/agent");
-    
+
+    const server = new WS(`ws://localhost:1234/agent`, { jsonProtocol: true });
+    getComponent(store);
+
     await server.connected;
-    
-    client.send(data);    
-    expect(spy).toBeCalledWith(data)
+
+    server.send(data);
+
+    await waitForExpect(() => {
+      expect(store.dispatch).toHaveBeenCalledWith(
+        listAgents(data)
+      );
+    });
   }) 
 
 
