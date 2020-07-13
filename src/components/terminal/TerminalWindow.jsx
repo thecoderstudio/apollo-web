@@ -31,6 +31,11 @@ const WindowButton = styled.div`
   border-radius: 50%;
 `;
 
+const Title = styled.h4`
+  width: 100%;
+  text-align: center;
+`;
+
 export default class TerminalWindow extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -41,6 +46,7 @@ export default class TerminalWindow extends React.PureComponent {
       <Draggable>
         <Window>
           <TaskBar>
+            <Title>{this.props.agent.name}</Title>
             <WindowButton color={'green'} />
             <WindowButton color={'red'} />
           </TaskBar>
