@@ -1,13 +1,13 @@
-import ConnectionState from './ConnectionState';
-import media from '../../util/media';
 import React from 'react';
 import styled from 'styled-components';
-import Text from '../Text';
 import PropTypes from 'prop-types';
+import Text from '../Text';
+import ConnectionState from './ConnectionState';
+import Terminal from '../Terminal';
+import media from '../../util/media';
 
 const propTypes = {
-  agentName: PropTypes.string.isRequired,
-  connectionState: PropTypes.string.isRequired
+  agent: PropTypes.object.isRequired
 };
 
 const Container = styled.li`
@@ -20,7 +20,7 @@ const Container = styled.li`
 
   height: 30px;
 	line-height: 30px;
-	padding: 15px;
+	padding: 15px 30px;
   margin-top: 25px;
 
 	${
@@ -37,7 +37,6 @@ const StyledText = styled(Text)`
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  justify-self: start;
   
 
 	${
@@ -48,15 +47,45 @@ const StyledText = styled(Text)`
   }
 `;
 
+const Icon = styled.i`
+  &:active{
+      text-shadow: 2px 2px rgba(0,0,0,0.1);
+  }
+`;
 
-export default function AgentListItem(props) {
-  return (
-    <Container>
-      <StyledText>{props.agentName}</StyledText>
-        <ConnectionState connectionState={props.connectionState} />
-        <i class="fas fa-terminal" />
-    </Container>
-  );
+const TerminalIcon = styled(Icon)`
+
+`;
+
+const StyledTerminal = styled(Terminal)`
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+`
+
+
+export default class AgentListItem extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.openTerminal = this.openTerminal.bind(this);
+  }
+
+  openTerminal() {
+  }
+
+  render() {
+    return (
+      <Container>
+        <StyledText>{this.props.agent.name}</StyledText>
+          <ConnectionState connectionState={this.props.agent.connection_state} />
+          <Icon onClick={this.openTerminal} className="fas fa-terminal" />
+          <StyledTerminal agent={this.props.agent} />
+      </Container>
+    );
+  }
 }
 
 AgentListItem.propTypes = propTypes;

@@ -63,6 +63,7 @@ const StyledText = styled(Text)`
   grid-column: status-text;
   position: relative;
   text-align: left;
+  margin-left: 15px;
 
   color: ${props => getConnectionStateColor(props.connectionState, props.theme)}
 `;

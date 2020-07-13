@@ -79,7 +79,7 @@ export class Terminal extends React.PureComponent {
 
   render() {
     return (
-      <Container>
+      <Container className={this.props.className}>
         <StyledXTerm ref={this.terminalRef} data-testid="terminal" />
       </Container>
     );
