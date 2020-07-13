@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import Button from './buttons/Button';
+import copyImg from '../images/copy.svg'
 
 const propTypes = {
   text: PropTypes.string.isRequired
@@ -8,6 +10,8 @@ const propTypes = {
 
 const Wrapper = styled.div`
   grid-template-columns: [textfield] 1fr [copy] 50px;
+  display: grid;
+  height: 50px;
 `;
 
 const TextField = styled.div`
@@ -26,15 +30,20 @@ const TextField = styled.div`
   text-overflow: ellipsis; 
   white-space: nowrap;
   overflow: hidden;
+  
 `;
 
-const Button = styled.div`
+const StyledButton = styled(Button)`
   grid-column: copy;
+  height: 100%;
 `;
 
-const Icon = styled.div`
+const Icon = styled.img`
   text-align: center;
   display: block;
+  width: 60%;
+  margin-left: 20%;
+  height: 60%;
 `;
 
 class CopyToClipboard extends React.PureComponent {
@@ -51,7 +60,7 @@ class CopyToClipboard extends React.PureComponent {
     return(
       <Wrapper>
         <TextField>{this.props.text}</TextField>
-        <Button onClick={this.copyToClipboard}><Icon /></Button>
+        <StyledButton onClick={this.copyToClipboard}><Icon src={copyImg} /></StyledButton>
       </Wrapper>
     );
   };
