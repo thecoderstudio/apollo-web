@@ -3,6 +3,7 @@ import styled, { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
 import Card from '../components/Card';
 import { Terminal as XTerm } from 'xterm';
+import Draggable from 'react-draggable';
 import { AttachAddon } from 'xterm-addon-attach';
 import chalk from 'chalk';
 
@@ -79,9 +80,11 @@ export class Terminal extends React.PureComponent {
 
   render() {
     return (
-      <Container className={this.props.className}>
-        <StyledXTerm ref={this.terminalRef} data-testid="terminal" />
-      </Container>
+      <Draggable>
+        <Container className={this.props.className}>
+          <StyledXTerm ref={this.terminalRef} data-testid="terminal" />
+        </Container>
+    </Draggable>
     );
   }
 }
