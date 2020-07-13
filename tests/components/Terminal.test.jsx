@@ -58,7 +58,7 @@ describe('Terminal', () => {
       "Something went wrong in the connection with the agent."
     ));
     expect(termWriteSpy).toHaveBeenCalledWith(terminal.chalk.hex(darkTheme.error).bold(
-      "\n\r\nConnection with agent is closed"
+      "\n\r\nConnection with server is closed"
     ));
   });
 
@@ -77,7 +77,7 @@ describe('Terminal', () => {
     assertConnection()
     await waitForExpect(() => {
       expect(termWriteSpy).toHaveBeenCalledWith(terminal.chalk.hex(darkTheme.error).bold(
-        "\n\r\nConnection with agent is closed"
+        "\n\r\nConnection with server is closed"
       ));
     });
   });
