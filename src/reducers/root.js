@@ -6,5 +6,5 @@ import AddAgentReducer from './add-agent';
 export default combineReducers({
   authenticated: authReducer,
   theme: themeReducer,
-  addAgentModalVisible: AddAgentReducer
+  addAgent: AddAgentReducer
 });

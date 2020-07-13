@@ -1,11 +1,38 @@
-import { SHOW_ADD_AGENT_MODAL, CLOSE_ADD_AGENT_MODAL } from '../actions/add-agent';
+import {
+  SHOW_ADD_AGENT_MODAL,
+  CLOSE_ADD_AGENT_MODAL,
+  SELECT_OPERATING_SYSTEM,
+  SELECT_ARCHITECTURE,
+} from '../actions/add-agent';
 
-export default function addAgentReducer(state = true, action) {
+const initialState = {
+  modalVisible: true,
+  selectedArchitecture: "idk",
+  selectedOperatingSystem: "linux"
+}
+
+export default function addAgentReducer(state = initialState, action) {
   switch (action.type) {
     case CLOSE_ADD_AGENT_MODAL:
-      return false;
+      return {
+        ...state,
+        modalVisible: true
+      };
     case SHOW_ADD_AGENT_MODAL:
-      return true;
+      return {
+        ...state,
+        modalVisible: true
+      };
+    case SELECT_ARCHITECTURE:
+      return {
+        ...state,
+        selectedArchitecture: action.selectedArchitecture
+      }
+    case SELECT_OPERATING_SYSTEM:
+      return {
+        ...state,
+        selectedOperatingSystem: action.selectedOperatingSystem,
+      }
     default: return state;
   }
 }

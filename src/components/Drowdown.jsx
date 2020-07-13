@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   options: PropTypes.array.isRequired,
-  optionSelectedAction: PropTypes.func.isRequired
+  optionSelectedAction: PropTypes.func.isRequired,
+  selected: PropTypes.string
 }
 
 const DropDownWrapper = styled.div`
@@ -80,7 +81,7 @@ class DropDown extends React.PureComponent {
     this.closeDropdown = this.closeDropdown.bind(this);
     this.renderItems = this.renderItems.bind(this);
     this.selectItem = this.selectItem.bind(this);
-    this.state = { collapsed: true, selected: this.props.options[0] };
+    this.state = { collapsed: true };
   }
 
   closeDropdown(e) {
@@ -99,12 +100,12 @@ class DropDown extends React.PureComponent {
 
   selectItem(option) {
     this.toggleCollapse();
-    this.setState({ selected: option });
+    this.props.optionSelectedAction(option);
   }
 
   renderItems() {
     return this.props.options.map(option => {
-      if (option === this.state.selected) { return }
+      if (option === this.props.selected) { return }
       return <DropDownItem key={option} onClick={() => this.selectItem(option)} >{option}</DropDownItem>;
     });
   }
@@ -113,7 +114,8 @@ class DropDown extends React.PureComponent {
     return(
       <DropDownWrapper ref={node => this.node = node}>
         <DropDownButton onClick={this.toggleCollapse}>
-          {this.state.selected}<DropDownIcon collapsed={this.state.collapsed}/>
+          {this.props.selected}
+          <DropDownIcon collapsed={this.state.collapsed}/>
         </DropDownButton>
         <DropDownContent collapsed={this.state.collapsed}>
           {this.renderItems()}

@@ -15,18 +15,27 @@ function closeAddAgentModal() {
   };
 }
 
-function selectOperatingSystem() {
-
+function selectOperatingSystem(operating_system) {
+  return {
+    type: SELECT_OPERATING_SYSTEM,
+    selectedOperatingSystem: operating_system
+  };
 }
 
-function selectArchitecture() {
-
+function selectArchitecture(architecture) {
+  return {
+    type: SELECT_ARCHITECTURE,
+    selectedArchitecture: architecture
+  };
 }
-
 
 export {
   showAddAgentModal,
   SHOW_ADD_AGENT_MODAL,
   closeAddAgentModal,
-  CLOSE_ADD_AGENT_MODAL
+  CLOSE_ADD_AGENT_MODAL,
+  selectOperatingSystem,
+  SELECT_OPERATING_SYSTEM,
+  selectArchitecture,
+  SELECT_ARCHITECTURE
 };

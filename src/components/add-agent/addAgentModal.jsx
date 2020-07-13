@@ -6,7 +6,7 @@ import DescriptionButton from '../buttons/DescriptionButton';
 import Button from "../buttons/Button";
 import DropDown from "../Drowdown";
 import {Text} from "../Text";
-import { closeAddAgentModal } from "../../actions/add-agent";
+import { closeAddAgentModal, selectArchitecture, selectOperatingSystem } from "../../actions/add-agent";
 import CopyToClipboard from "../CopyToClipboard";
 
 
@@ -89,17 +89,12 @@ class AddAgentModal extends React.PureComponent {
     this.renderQuestion = this.renderQuestion.bind(this);
     this.setRenderFunction = this.setRenderFunction.bind(this);
     this.getStepOneComponents = this.getStepOneComponents.bind(this);
-
     this.selectStepOneDirectly = this.selectStepOneDirectly.bind(this);
     this.selectStepOneManual = this.selectStepOneManual.bind(this);
-
     this.renderDirectlyOnMachineStepOne = this.renderDirectlyOnMachineStepOne.bind(this);
     this.renderDirectlyOnMachineStepTwo = this.renderDirectlyOnMachineStepTwo.bind(this);
-
     this.renderManualInstallationStepOne = this.renderManualInstallationStepOne.bind(this);
     this.renderManualInstallationStepTwo = this.renderManualInstallationStepTwo.bind(this);
-
-
     this.closeModal = this.closeModal.bind(this);
   }
 
@@ -128,18 +123,27 @@ class AddAgentModal extends React.PureComponent {
   };
 
   getStepOneComponents(onclick) {
+    console.log(this.props)
     return(
       <div>
         <DropDownAndTextWrapper>
           <TextWrapper>Operating system</TextWrapper>
           <DropDownWrapper>
-            <DropDown options={[1,2,3]} />
+            <DropDown
+              selected={this.props.selectedOperatingSystem}
+              options={[1,2,3]}
+              optionSelectedAction={selectOperatingSystem}
+            />
           </DropDownWrapper>
         </DropDownAndTextWrapper>
         <DropDownAndTextWrapper>
           <TextWrapper>Architecture</TextWrapper>
           <DropDownWrapper>
-            <DropDown options={[1,2,3]} />
+            <DropDown
+              selected={this.props.selectedArchitecture}
+              options={[1,2,3]}
+              optionSelectedAction={selectArchitecture}
+            />
           </DropDownWrapper>
         </DropDownAndTextWrapper>
         <CreateAgentButton onClick={() => this.setRenderFunction(onclick)}>
@@ -220,5 +224,9 @@ class AddAgentModal extends React.PureComponent {
 }
 
 export default connect(
-  state => ({ modalVisible: state.addAgentModalVisible })
+  state => ({
+    modalVisible: state.addAgent.modalVisible,
+    selectedOperatingSystem: state.addAgent.selectedOperatingSystem,
+    selectedArchitecture: state.addAgent.selectedArchitecture
+  })
 )(AddAgentModal)
