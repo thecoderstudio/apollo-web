@@ -39,6 +39,11 @@ const Title = styled.h4`
 export default class TerminalWindow extends React.PureComponent {
   constructor(props) {
     super(props);
+    this.close = this.close.bind(this);
+  }
+
+  close() {
+    this.props.onClose();
   }
 
   render() {
@@ -48,7 +53,7 @@ export default class TerminalWindow extends React.PureComponent {
           <TaskBar>
             <Title>{this.props.agent.name}</Title>
             <WindowButton color={'green'} />
-            <WindowButton color={'red'} />
+            <WindowButton onClick={this.close} color={'red'} />
           </TaskBar>
           <Terminal agent={this.props.agent} />
         </Window>

@@ -61,6 +61,7 @@ export default class AgentListItem extends React.PureComponent {
   constructor(props) {
     super(props);
     this.openTerminal = this.openTerminal.bind(this);
+    this.closeTerminal = this.closeTerminal.bind(this);
     this.state = {terminalOpen: false};
   }
 
@@ -68,10 +69,14 @@ export default class AgentListItem extends React.PureComponent {
     this.setState({terminalOpen: true});
   }
 
+  closeTerminal() {
+    this.setState({terminalOpen: false});
+  }
+
   render() {
     let terminal;
     if (this.state.terminalOpen) {
-      terminal = <TerminalWindow agent={this.props.agent} />
+      terminal = <TerminalWindow agent={this.props.agent} onClose={this.closeTerminal} />
     }
 
     return (
