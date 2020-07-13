@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
+import axios from 'axios';
+import Input from "../Input";
 import Modal from '../Modal';
 import DescriptionButton from '../buttons/DescriptionButton';
 import Button from "../buttons/Button";
@@ -26,15 +28,14 @@ const ColumnTwo = styled.div`
   margin-left: 10px;
 `;
 
-const DropDownAndTextWrapper = styled.div`
+const TextAndInputFieldWrapper = styled.div`
   display: grid;
   width: 100%;
   grid-template-columns: [text] 60% [dropdown] 40%; 
   height: 80px;
-  
 `;
 
-const DropDownWrapper = styled.div`
+const InputFieldWrapper = styled.div`
   grid-column: dropdown; 
 `;
 
@@ -78,11 +79,33 @@ const CreateAgentButton = styled(StyledButton)`
   margin-top: 20px;
 `;
 
+const StyledInput = styled(Input)`
+  font-family: 'B612', sans-serif;
+  font-weight: 600;
+  width: 200px;
+  padding: 15px;
+  margin: 15px;
+  background-color: ${props => props.theme.lightBlack};
+  color: ${props => props.theme.white}; 
+  border: 1px solid transparent;
+   
+  &:focus{
+    outline: none;
+    border: 1px solid ${props => props.theme.accent};  
+  }
+  
+ 
+`;
+
 class AddAgentModal extends React.PureComponent {
   constructor(props) {
     super(props);
     this.bindMethods()
-    this.state = { renderFunction : this.renderQuestion, title: "Choose installation" };
+    this.state = {
+      renderFunction : this.renderQuestion,
+      title: "Choose installation",
+      agentName: ""
+    };
   };
 
   bindMethods() {
@@ -98,10 +121,14 @@ class AddAgentModal extends React.PureComponent {
     this.closeModal = this.closeModal.bind(this);
   }
 
+  createAgent() {
+
+  }
+
   closeModal() {
     const { dispatch } = this.props;
     dispatch(closeAddAgentModal());
-    this.setState({ renderFunction: this.renderQuestion })
+    this.setState({ renderFunction: this.renderQuestion });
   }
 
   setRenderFunction(renderFunction) {
@@ -122,30 +149,39 @@ class AddAgentModal extends React.PureComponent {
     });
   };
 
+  handleAgentNameChange(e) {
+    this.setState({ agentName: e.target.value });
+  }
+
   getStepOneComponents(onclick) {
-    console.log(this.props)
     return(
       <div>
-        <DropDownAndTextWrapper>
+        <TextAndInputFieldWrapper>
+          <TextWrapper>Agent name</TextWrapper>
+          <InputFieldWrapper>
+            <StyledInput placeholder="007" onChange={this.handleAgentNameChange} />
+          </InputFieldWrapper>
+        </TextAndInputFieldWrapper>
+        <TextAndInputFieldWrapper>
           <TextWrapper>Operating system</TextWrapper>
-          <DropDownWrapper>
+          <InputFieldWrapper>
             <DropDown
               selected={this.props.selectedOperatingSystem}
               options={[1,2,3]}
               optionSelectedAction={selectOperatingSystem}
             />
-          </DropDownWrapper>
-        </DropDownAndTextWrapper>
-        <DropDownAndTextWrapper>
+          </InputFieldWrapper>
+        </TextAndInputFieldWrapper>
+        <TextAndInputFieldWrapper>
           <TextWrapper>Architecture</TextWrapper>
-          <DropDownWrapper>
+          <InputFieldWrapper>
             <DropDown
               selected={this.props.selectedArchitecture}
               options={[1,2,3]}
               optionSelectedAction={selectArchitecture}
             />
-          </DropDownWrapper>
-        </DropDownAndTextWrapper>
+          </InputFieldWrapper>
+        </TextAndInputFieldWrapper>
         <CreateAgentButton onClick={() => this.setRenderFunction(onclick)}>
           Create agent
         </CreateAgentButton>

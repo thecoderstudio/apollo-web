@@ -16,14 +16,12 @@ const DropDownWrapper = styled.div`
 const DropDownButton = styled.div`
   border: none;
   border-radius: 5px;
-  color: white;
+  color: ${props => props.theme.white};
   font-family: 'B612', sans-serif;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   
-  min-width: 200px;
-  text-align:left;
   padding: 15px;
   background-color: ${props => props.theme.lightBlack};
   

@@ -57,6 +57,7 @@ class Modal extends React.PureComponent {
     super(props);
     this.closeModal = this.closeModal.bind(this);
   }
+
   closeModal(e) {
     if (!this.node.contains(e.target)) {
       const { dispatch } = this.props;

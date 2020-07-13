@@ -16,8 +16,6 @@ const StyledOutlinedButton = styled(OutlinedButton)`
   min-height: 160px;
 `;
 
-StyledOutlinedButton.displayName = 'OutlinedButton'
-
 const Title = styled.h3`
   grid-row: title;
   width: 80%;
