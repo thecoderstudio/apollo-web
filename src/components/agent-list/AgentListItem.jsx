@@ -11,8 +11,9 @@ const propTypes = {
 };
 
 const Container = styled.li`
-  display: grid;
-  grid-template-columns: [name] 1fr [connection-status] 1fr; 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
   border-radius: 8px;
 	border: 1px solid white;
@@ -21,7 +22,6 @@ const Container = styled.li`
 	line-height: 30px;
 	padding: 15px;
   margin-top: 25px;
-  position: relative;
 
 	${
     media.phone`
@@ -33,10 +33,11 @@ const Container = styled.li`
 `;
 
 const StyledText = styled(Text)`
-	grid-column: name;
+  width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  justify-self: start;
   
 
 	${
@@ -47,11 +48,13 @@ const StyledText = styled(Text)`
   }
 `;
 
+
 export default function AgentListItem(props) {
   return (
     <Container>
       <StyledText>{props.agentName}</StyledText>
-      <ConnectionState connectionState={props.connectionState} />
+        <ConnectionState connectionState={props.connectionState} />
+        <i class="fas fa-terminal" />
     </Container>
   );
 }

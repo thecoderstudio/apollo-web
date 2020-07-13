@@ -22,7 +22,6 @@ const getConnectionStateColor = (connectionState, theme) => {
 };
 
 const Container = styled.div`
-  grid-column: connection-status;
   margin-left: 25px;
   margin-right: 25px;
 
