@@ -1,8 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import styled from 'styled-components'
+import styled from 'styled-components';
 import Card from './Card';
-import closeAddAgentModal from '../actions/add-agent';
+import { closeAddAgentModal } from '../actions/add-agent';
 
 const propTypes = {
   children: PropTypes.node.isRequired,
@@ -52,6 +53,10 @@ const Content = styled.div`
 `;
 
 class Modal extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.closeModal = this.closeModal.bind(this);
+  }
   closeModal(e) {
     if (!this.node.contains(e.target)) {
       const { dispatch } = this.props;
@@ -65,7 +70,7 @@ class Modal extends React.PureComponent {
 
   render() {
     return (
-      <ModalOverlay  visible={this.props.visible} >
+      <ModalOverlay visible={this.props.visible} >
         <StyledCard ref={node => this.node = node}>
           <Title>{this.props.title}</Title>
           <Content>{this.props.children}</Content>
@@ -78,4 +83,4 @@ class Modal extends React.PureComponent {
 Modal.propTypes = propTypes
 Modal.defaultProps = defaultProps
 
-export default Modal
+export default connect()(Modal)

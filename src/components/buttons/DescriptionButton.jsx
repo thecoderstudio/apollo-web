@@ -13,6 +13,7 @@ const StyledOutlinedButton = styled(OutlinedButton)`
   display: grid;
   grid-template-rows: [title] 50px [description] 1fr;
   padding: 20px;
+  min-height: 160px;
 `;
 
 StyledOutlinedButton.displayName = 'OutlinedButton'
@@ -31,7 +32,7 @@ const Description = styled(SmallText)`
 
 function DescriptionButton(props) {
   return (
-    <StyledOutlinedButton>
+    <StyledOutlinedButton onClick={props.onClick}>
       <Title>{props.title}</Title>
       <Description>{props.children}</Description>
     </StyledOutlinedButton>

@@ -84,7 +84,6 @@ class DropDown extends React.PureComponent {
   }
 
   closeDropdown(e) {
-    console.log(this.node);
     if (!this.state.collapsed && !this.node.contains(e.target)) {
       this.setState({ collapsed: true });
     }

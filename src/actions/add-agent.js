@@ -11,7 +11,7 @@ function showAddAgentModal() {
 
 function closeAddAgentModal() {
   return {
-    type: SHOW_ADD_AGENT_MODAL
+    type: CLOSE_ADD_AGENT_MODAL
   };
 }
 

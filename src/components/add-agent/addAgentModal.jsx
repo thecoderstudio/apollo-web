@@ -13,7 +13,7 @@ import CopyToClipboard from "../CopyToClipboard";
 const TwoColumnGrid = styled.div`
   display: grid;
   grid-template-columns: [column-one] 50% [column-two] 50%;
-  margin: 15px 15px 20px 0px;
+  margin: 20px 0px 20px 0px;
 `;
 
 const ColumnOne = styled.div`
@@ -30,7 +30,8 @@ const DropDownAndTextWrapper = styled.div`
   display: grid;
   width: 100%;
   grid-template-columns: [text] 60% [dropdown] 40%; 
-  height: 75px;
+  height: 80px;
+  
 `;
 
 const DropDownWrapper = styled.div`
@@ -60,44 +61,68 @@ const ThreeRowDisplay = styled.div`
 
 const CommandWrapper = styled.div`
   grid-row: commands;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 `;
 
 const CloseButton = styled(StyledButton)`
   grid-row: button;
+  margin-top: 20px;
 `;
 
 const Description = styled(Text)`
   grid-row: description;
-  margin: 15px 0px 15px 0px;
+  margin: 20px 0px 20px 0px;
+`;
+
+const CreateAgentButton = styled(StyledButton)`
+  margin-top: 20px;
 `;
 
 class AddAgentModal extends React.PureComponent {
   constructor(props) {
     super(props);
+    this.bindMethods()
+    this.state = { renderFunction : this.renderQuestion, title: "Choose installation" };
+  };
+
+  bindMethods() {
     this.renderQuestion = this.renderQuestion.bind(this);
+    this.setRenderFunction = this.setRenderFunction.bind(this);
     this.getStepOneComponents = this.getStepOneComponents.bind(this);
+
+    this.selectStepOneDirectly = this.selectStepOneDirectly.bind(this);
+    this.selectStepOneManual = this.selectStepOneManual.bind(this);
+
     this.renderDirectlyOnMachineStepOne = this.renderDirectlyOnMachineStepOne.bind(this);
     this.renderDirectlyOnMachineStepTwo = this.renderDirectlyOnMachineStepTwo.bind(this);
+
     this.renderManualInstallationStepOne = this.renderManualInstallationStepOne.bind(this);
     this.renderManualInstallationStepTwo = this.renderManualInstallationStepTwo.bind(this);
-    this.setRenderFunction = this.setRenderFunction.bind(this);
+
+
     this.closeModal = this.closeModal.bind(this);
-    this.state = { renderFunction : this.renderManualInstallationStepTwo, title: "Choose installation" };
-  };
+  }
 
   closeModal() {
     const { dispatch } = this.props;
     dispatch(closeAddAgentModal());
+    this.setState({ renderFunction: this.renderQuestion })
   }
 
   setRenderFunction(renderFunction) {
     this.setState({ renderFunction: renderFunction});
   }
 
-  handleStepOneDirectly(title) {
+  selectStepOneDirectly(title) {
     this.setState({
-      renderFunction: this.renderStepOne(),
+      renderFunction: this.renderDirectlyOnMachineStepOne,
+      title: title
+    });
+  };
+
+  selectStepOneManual(title) {
+    this.setState({
+      renderFunction: this.renderManualInstallationStepOne,
       title: title
     });
   };
@@ -117,9 +142,9 @@ class AddAgentModal extends React.PureComponent {
             <DropDown options={[1,2,3]} />
           </DropDownWrapper>
         </DropDownAndTextWrapper>
-        <StyledButton onClick={() => this.setRenderFunction(onclick)}>
+        <CreateAgentButton onClick={() => this.setRenderFunction(onclick)}>
           Create agent
-        </StyledButton>
+        </CreateAgentButton>
       </div>
     );
   };
@@ -172,12 +197,12 @@ class AddAgentModal extends React.PureComponent {
     return (
       <TwoColumnGrid>
         <ColumnOne>
-          <DescriptionButton onclick={() => this.handleStepOne(directly)} title={directly}>
+          <DescriptionButton onClick={() => this.selectStepOneDirectly(directly)} title={directly}>
           You have the correct permissions to download and install the binary directly on the target machine.
           </DescriptionButton>
         </ColumnOne>
         <ColumnTwo>
-          <DescriptionButton onclick={() => this.handleStepOne(manual)} title={manual}>
+          <DescriptionButton onClick={() => this.selectStepOneManual(manual)} title={manual}>
             You download, upload and install the binary yourself.
           </DescriptionButton>
         </ColumnTwo>
