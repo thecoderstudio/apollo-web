@@ -61,18 +61,25 @@ export default class AgentListItem extends React.PureComponent {
   constructor(props) {
     super(props);
     this.openTerminal = this.openTerminal.bind(this);
+    this.state = {terminalOpen: false};
   }
 
   openTerminal() {
+    this.setState({terminalOpen: true});
   }
 
   render() {
+    let terminal;
+    if (this.state.terminalOpen) {
+      terminal = <TerminalWindow agent={this.props.agent} />
+    }
+
     return (
       <Container>
         <StyledText>{this.props.agent.name}</StyledText>
           <ConnectionState connectionState={this.props.agent.connection_state} />
           <Icon onClick={this.openTerminal} className="fas fa-terminal" />
-          <TerminalWindow agent={this.props.agent} />
+          {terminal}
       </Container>
     );
   }
