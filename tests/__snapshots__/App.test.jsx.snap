@@ -3,21 +3,21 @@
 exports[`app renders correctly authenticated 1`] = `
 <div>
   <div
-    className="sc-fzoXzr ccPRtL"
+    className="sc-fzoXWK kPYyZP"
   >
     <div
-      className="sc-fzoLsD sc-fzpans DDpSM"
+      className="sc-fzoXzr sc-fzpjYC eGEaRU"
     >
       <div
-        className="sc-Axmtr cNWFxA"
+        className="sc-fzqNJr jkRsjR"
       >
         <h2
-          className="sc-AxmLO jBiGbn"
+          className="sc-fzoyAV XWLst"
         >
           Agents
         </h2>
         <ul
-          className="sc-fzozJi jqZnKs"
+          className="sc-fzoLag chSeRf"
         />
       </div>
     </div>
@@ -28,44 +28,44 @@ exports[`app renders correctly authenticated 1`] = `
 exports[`app renders correctly unauthenticated 1`] = `
 <div>
   <div
-    className="sc-fzoXzr ccPRtL"
+    className="sc-fzoXWK kPYyZP"
   >
     <div
-      className="sc-fznZeY faKFAb"
+      className="sc-fznWqX gzfYeX"
     >
       <div
-        className="sc-fzokOt khOUuy"
+        className="sc-fzoiQi qRUoX"
       >
         <img
-          className="sc-fzoLag fFWBwa"
+          className="sc-fzoNJl hfHmpE"
           src={[Function]}
         />
         <h1
-          className="sc-fzqBZW gfiTAB"
+          className="sc-fzqARJ iPGxkT"
         >
           Log in to Apollo
         </h1>
         <div
-          className="sc-fznKkj sc-fzqNJr lcwNrL"
+          className="sc-AxhUy sc-fzqNqU IehLb"
         >
           <form
-            className="sc-fzoyAV bRqgJx"
+            className="sc-fzoyTs jcxBHF"
             onSubmit={[Function]}
           >
             <input
-              className="sc-fznyAO iAFIbK"
+              className="sc-fznJRM cgNHGQ"
               onChange={[Function]}
               placeholder="Username"
               type="username"
             />
             <input
-              className="sc-fznyAO iAFIbK"
+              className="sc-fznJRM cgNHGQ"
               onChange={[Function]}
               placeholder="Password"
               type="password"
             />
             <button
-              className="sc-fzplWN guGGRs"
+              className="sc-fznxsB bKqhla"
             >
               Log in
             </button>

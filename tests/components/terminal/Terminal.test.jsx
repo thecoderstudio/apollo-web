@@ -1,9 +1,9 @@
 import React from 'react';
-import { darkTheme } from '../../src/theme';
-import { Terminal } from '../../src/components/Terminal';
 import WS from 'jest-websocket-mock';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import { darkTheme } from '../../../src/theme';
+import { Terminal } from '../../../src/components/terminal/Terminal';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -35,7 +35,7 @@ describe('Terminal', () => {
         dispatchEvent: jest.fn(),
       })),
     });
-    termWriteSpy = jest.spyOn(Terminal.prototype, 'write'); 
+    termWriteSpy = jest.spyOn(Terminal.prototype, 'write');
     terminal = mount(<Terminal theme={darkTheme} agent={mockAgent} />).find(Terminal).instance();
   });
 

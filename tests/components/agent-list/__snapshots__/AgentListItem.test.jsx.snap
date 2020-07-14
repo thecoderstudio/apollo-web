@@ -2,28 +2,32 @@
 
 exports[`renders correctly 1`] = `
 <li
-  className="sc-AxgMl bVQqoF"
+  className="sc-fznyAO czxrNm"
 >
   <span
-    className="sc-AxjAm sc-AxheI fkpGLs"
+    className="sc-AxjAm sc-fznKkj eKuYEa"
   >
     agentName
   </span>
   <div
-    className="sc-AxirZ ciZpUd"
+    className="sc-fznZeY gwCZdU"
   >
     <div
-      className="sc-AxiKw jeQNXl"
+      className="sc-AxirZ hLbodF"
     >
       <div
-        className="sc-AxhCb guWnsS"
+        className="sc-AxiKw jLPcUa"
       />
       <span
-        className="sc-AxjAm sc-AxhUy lMjjz"
+        className="sc-AxjAm sc-AxhCb cNpZBW"
       >
         Connected
       </span>
     </div>
+    <i
+      className="sc-fzokOt sc-fzqBZW drFJih fas fa-terminal"
+      onClick={[Function]}
+    />
   </div>
 </li>
 `;

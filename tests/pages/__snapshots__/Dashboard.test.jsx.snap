@@ -2,18 +2,18 @@
 
 exports[`dashboard renders correctly 1`] = `
 <div
-  className="sc-fzoLsD sc-fzpans DDpSM"
+  className="sc-fzoXzr sc-fzpjYC eGEaRU"
 >
   <div
-    className="sc-Axmtr ldVHhQ"
+    className="sc-fzqNJr ixjFVZ"
   >
     <h2
-      className="sc-AxmLO jBiGbn"
+      className="sc-fzoyAV XWLst"
     >
       Agents
     </h2>
     <ul
-      className="sc-fzozJi jqZnKs"
+      className="sc-fzoLag chSeRf"
     />
   </div>
 </div>

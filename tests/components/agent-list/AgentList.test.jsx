@@ -23,7 +23,7 @@ describe('agentList', () => {
   beforeEach(() => {
     store = mockStore({
       authenticated: true,
-      agent: []
+      agent: new Map()
     });
     process.env = {
       APOLLO_WS_URL: 'ws://localhost:1234/'
@@ -58,16 +58,16 @@ describe('agentList', () => {
         listAgents(data)
       );
     });
-  }) 
+  })
 
 
   it("correctly lists multiple agents", () => {
+    const data = new Map();
+    data.set('id', { id: "id", name: "name", connection_state: "connected" })
+    data.set('id2', { id: "id2", name: "name2", connection_state: "connected" })
     store = mockStore({
       authenticated: true,
-      agent: [
-        { id: "id", name: "name", connection_state: "connected" },
-        { id: "id2", name: "name", connection_state: "connected" },
-      ]
+      agent: data
     })
     const component = getComponent(store);
     expect(component.root.findAllByType("li").length).toBe(2);
