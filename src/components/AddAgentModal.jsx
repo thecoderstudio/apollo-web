@@ -157,8 +157,7 @@ class AddAgentModal extends React.PureComponent {
         const url = window.URL.createObjectURL(new Blob([response.data]));
         const link = document.createElement('a');
         link.href = url;
-        link.setAttribute('download', 'apollo-agent');
-        document.body.appendChild(link);
+        link.setAttribute('download', 'apollo-agent.binary');
         link.click();
       })
       .catch(error => {
