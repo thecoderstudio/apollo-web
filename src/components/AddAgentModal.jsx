@@ -124,6 +124,7 @@ class AddAgentModal extends React.PureComponent {
     this.closeModal = this.closeModal.bind(this);
     this.handleAgentNameChange = this.handleAgentNameChange.bind(this);
     this.createAgent = this.createAgent.bind(this);
+    this.downloadBinary = this.downloadBinary.bind(this);
   }
 
   createAgent(renderFunctionCallback) {
@@ -132,7 +133,7 @@ class AddAgentModal extends React.PureComponent {
       { name : this.state.agentName },
       { withCredentials: true }
     )
-      .then(res => {
+      .then(response => {
         this.setRenderFunction(renderFunctionCallback);
       })
       .catch(error => {
@@ -141,7 +142,28 @@ class AddAgentModal extends React.PureComponent {
   }
 
   downloadBinary() {
+    axios.get(
+      `${process.env.APOLLO_HTTP_URL}agent/download`,
+      {
+        withCredentials: true,
+        params: {
+          target_os: this.props.selectedOperatingSystem,
+          target_arch: this.props.selectedArchitecture
+        },
+        responseType: "blob",
+      },
+    )
+      .then(response => {
+        const url = window.URL.createObjectURL(new Blob([response.data]));
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', 'apollo-agent');
+        document.body.appendChild(link);
+        link.click();
+      })
+      .catch(error => {
 
+      })
   }
 
   closeModal() {
@@ -242,7 +264,7 @@ class AddAgentModal extends React.PureComponent {
             <Text>Download the binary and upload it to the target machine.</Text>
           </ColumnOne>
           <ColumnTwo>
-            <DownloadBinaryButton>Download binary</DownloadBinaryButton>
+            <DownloadBinaryButton onClick={this.downloadBinary}>Download binary</DownloadBinaryButton>
           </ColumnTwo>
         </TwoColumnGrid>
         {this.getStepTwoComponents("command")}
