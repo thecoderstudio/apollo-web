@@ -2,14 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import axios from 'axios';
-import Input from "../Input";
-import Modal from '../Modal';
-import DescriptionButton from '../buttons/DescriptionButton';
-import Button from "../buttons/Button";
-import DropDown from "../Drowdown";
-import {Text} from "../Text";
-import { closeAddAgentModal, selectArchitecture, selectOperatingSystem } from "../../actions/add-agent";
-import CopyToClipboard from "../CopyToClipboard";
+import Input from "./Input";
+import Modal from './Modal';
+import DescriptionButton from './buttons/DescriptionButton';
+import Button from "./buttons/Button";
+import DropDown from "./Drowdown";
+import {Text} from "./Text";
+import { closeAddAgentModal, selectArchitecture, selectOperatingSystem } from "../actions/add-agent";
+import CopyToClipboard from "./CopyToClipboard";
+import NewAgentHandler from "../lib/NewAgentHandler";
 
 
 const TwoColumnGrid = styled.div`
@@ -101,11 +102,13 @@ class AddAgentModal extends React.PureComponent {
   constructor(props) {
     super(props);
     this.bindMethods()
+
     this.state = {
       renderFunction : this.renderQuestion,
       title: "Choose installation",
       agentName: ""
     };
+    this.newAgentHandler = new NewAgentHandler();
   };
 
   bindMethods() {
@@ -116,21 +119,29 @@ class AddAgentModal extends React.PureComponent {
     this.selectStepOneManual = this.selectStepOneManual.bind(this);
     this.renderDirectlyOnMachineStepOne = this.renderDirectlyOnMachineStepOne.bind(this);
     this.renderDirectlyOnMachineStepTwo = this.renderDirectlyOnMachineStepTwo.bind(this);
-    this.renderManualInstallationStepOne = this.renderManualInstallationStepOne.bind(this);
-    this.renderManualInstallationStepTwo = this.renderManualInstallationStepTwo.bind(this);
+    this.renderManualUploadStepOne = this.renderManualUploadStepOne.bind(this);
+    this.renderManualUploadStepTwo = this.renderManualUploadStepTwo.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.handleAgentNameChange = this.handleAgentNameChange.bind(this);
+    this.createAgent = this.createAgent.bind(this);
   }
 
-  createAgent() {
+  createAgent(renderFunctionCallback) {
     axios.post(
-      `${process.env.APOLLO_HTTP_URL}/agent`,
+      `${process.env.APOLLO_HTTP_URL}agent`,
+      { name : this.state.agentName },
       { withCredentials: true }
     )
       .then(res => {
-        if (res.status === 200) {
-          this.props.dispatch(loginAction());
-        }
+        this.setRenderFunction(renderFunctionCallback);
+      })
+      .catch(error => {
+        console.log(error)
       });
+  }
+
+  downloadBinary() {
+
   }
 
   closeModal() {
@@ -152,7 +163,7 @@ class AddAgentModal extends React.PureComponent {
 
   selectStepOneManual(title) {
     this.setState({
-      renderFunction: this.renderManualInstallationStepOne,
+      renderFunction: this.renderManualUploadStepOne,
       title: title
     });
   };
@@ -175,7 +186,7 @@ class AddAgentModal extends React.PureComponent {
           <InputFieldWrapper>
             <DropDown
               selected={this.props.selectedOperatingSystem}
-              options={[1,2,3]}
+              options={this.newAgentHandler.supportedOS}
               optionSelectedAction={selectOperatingSystem}
             />
           </InputFieldWrapper>
@@ -185,12 +196,12 @@ class AddAgentModal extends React.PureComponent {
           <InputFieldWrapper>
             <DropDown
               selected={this.props.selectedArchitecture}
-              options={[1,2,3]}
+              options={this.newAgentHandler.supportedArch}
               optionSelectedAction={selectArchitecture}
             />
           </InputFieldWrapper>
         </TextAndInputFieldWrapper>
-        <CreateAgentButton onClick={() => this.setRenderFunction(onclick)}>
+        <CreateAgentButton onClick={() => this.createAgent(onclick)}>
           Create agent
         </CreateAgentButton>
       </div>
@@ -219,11 +230,11 @@ class AddAgentModal extends React.PureComponent {
     return this.getStepTwoComponents("command");
   };
 
-  renderManualInstallationStepOne() {
-    return this.getStepOneComponents(this.renderManualInstallationStepTwo);
+  renderManualUploadStepOne() {
+    return this.getStepOneComponents(this.renderManualUploadStepTwo);
   };
 
-  renderManualInstallationStepTwo() {
+  renderManualUploadStepTwo() {
     return(
       <div>
         <TwoColumnGrid>

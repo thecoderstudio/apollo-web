@@ -5,7 +5,7 @@ import { logout as logoutAction } from '../actions/auth';
 import { showAddAgentModal } from '../actions/add-agent';
 import Button from './buttons/Button';
 import OutlinedButton from './buttons/OutlinedButton';
-import AddAgentModal from './add-agent/addAgentModal';
+import AddAgentModal from './AddAgentModal';
 
 const NavigationBar = styled.div`
   height: 50px;
@@ -47,6 +47,7 @@ class NavBar extends React.PureComponent {
   }
 
   logout() {
+    let { dispatch } = this.props;
     dispatch(logoutAction())
   }
 

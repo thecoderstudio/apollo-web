@@ -59,7 +59,7 @@ class Modal extends React.PureComponent {
   }
 
   closeModal(e) {
-    if (!this.node.contains(e.target)) {
+    if (this.props.visible  && !this.node.contains(e.target)) {
       const { dispatch } = this.props;
       dispatch(closeAddAgentModal());
     }

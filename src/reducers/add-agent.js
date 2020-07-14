@@ -7,7 +7,7 @@ import {
 
 const initialState = {
   modalVisible: true,
-  selectedArchitecture: "idk",
+  selectedArchitecture: "amd64",
   selectedOperatingSystem: "linux"
 }
 
@@ -16,7 +16,7 @@ export default function addAgentReducer(state = initialState, action) {
     case CLOSE_ADD_AGENT_MODAL:
       return {
         ...state,
-        modalVisible: true
+        modalVisible: false
       };
     case SHOW_ADD_AGENT_MODAL:
       return {
