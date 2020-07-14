@@ -27,9 +27,8 @@ const Container = styled.li`
 
 	${
     media.phone`
-      grid-template-rows: [name] 1fr [connection-status] 1fr; 
-      grid-template-columns: [name-and-status] 1fr; 
-      height: 100px;
+      flex-direction: column;
+      height: auto;
     `
   }
 `;
@@ -40,11 +39,24 @@ const StyledText = styled(Text)`
   white-space: nowrap;
   overflow: hidden;
   
+    ${
+      media.phone`
+        text-align: center;
+        width: 100%;
+      `
+    }
+`;
+
+const Controls = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  
 
 	${
     media.phone`
-      grid-rows: name; 
-      grid-column: name-and-status;
+      width: 100%;
     `
   }
 `;
@@ -92,8 +104,10 @@ export default class AgentListItem extends React.PureComponent {
     return (
       <Container>
         <StyledText>{this.props.agent.name}</StyledText>
-          <ConnectionState connectionState={this.props.agent.connection_state} />
-          <TerminalIcon active={connected} onClick={this.openTerminal} className="fas fa-terminal" />
+          <Controls>
+            <ConnectionState connectionState={this.props.agent.connection_state} />
+            <TerminalIcon active={connected} onClick={this.openTerminal} className="fas fa-terminal" />
+          </Controls>
           {terminal}
       </Container>
     );

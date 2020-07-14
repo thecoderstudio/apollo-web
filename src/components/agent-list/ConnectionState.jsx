@@ -21,18 +21,6 @@ const getConnectionStateColor = (connectionState, theme) => {
   }
 };
 
-const Container = styled.div`
-  margin-left: 25px;
-  margin-right: 25px;
-
-  ${
-    media.phone`
-      grid-row: connection-status; 
-      grid-column: name-and-status;
-    `
-  }
-`;
-
 const ContentWrapper = styled.div`
   float: right;
   display: grid;
@@ -70,14 +58,12 @@ const StyledText = styled(Text)`
 
 export default function ConnectionState(props) {
   return (
-    <Container>
-      <ContentWrapper>
-        <Indicator connectionState={props.connectionState} />
-        <StyledText connectionState={props.connectionState}>
-          {props.connectionState.replace(/^\w/, (c) => c.toUpperCase())}
-        </StyledText>
-      </ContentWrapper>
-    </Container >
+    <ContentWrapper className={props.className}>
+      <Indicator connectionState={props.connectionState} />
+      <StyledText connectionState={props.connectionState}>
+        {props.connectionState.replace(/^\w/, (c) => c.toUpperCase())}
+      </StyledText>
+    </ContentWrapper>
   );
 }
 
