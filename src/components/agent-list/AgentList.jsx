@@ -67,8 +67,5 @@ class AgentList extends React.Component {
 }
 
 export default connect(
-  state => {
-    console.log(state)
-    return {agents: state.agent}
-  }
+  state => ({agents: state.agent})
 )(AgentList);
