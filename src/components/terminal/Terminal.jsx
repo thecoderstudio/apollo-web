@@ -96,4 +96,9 @@ export class Terminal extends React.PureComponent {
 
 Terminal.propTypes = propTypes;
 
+export function openTerminal(agentId) {
+  const location = window.location;
+  window.open(`${location.protocol}//${location.host}/agent/${agentId}/shell`)
+}
+
 export default withTheme(Terminal);

@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Text from '../Text';
 import ConnectionState from './ConnectionState';
+import { openTerminal } from '../terminal/Terminal';
 import TerminalWindow from '../terminal/TerminalWindow';
+import MobileChecker from '../../util/MobileChecker';
 import media from '../../util/media';
 
 const propTypes = {
@@ -59,12 +61,21 @@ export default class AgentListItem extends React.PureComponent {
   constructor(props) {
     super(props);
     this.openTerminal = this.openTerminal.bind(this);
+    this.createTerminal = this.createTerminal.bind(this);
     this.closeTerminal = this.closeTerminal.bind(this);
     this.state = {terminalOpen: false};
   }
 
   openTerminal() {
+    if (new MobileChecker().isMobile ){
+      openTerminal(this.props.agent.id);
+      return;
+    }
     this.setState({terminalOpen: true});
+  }
+
+  createTerminal() {
+      return <TerminalWindow agent={this.props.agent} onClose={this.closeTerminal} />;
   }
 
   closeTerminal() {
@@ -75,7 +86,7 @@ export default class AgentListItem extends React.PureComponent {
     const connected = this.props.agent.connection_state == 'connected';
     let terminal;
     if (this.state.terminalOpen) {
-      terminal = <TerminalWindow agent={this.props.agent} onClose={this.closeTerminal} />
+      terminal = this.createTerminal();
     }
 
     return (

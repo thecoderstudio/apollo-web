@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Rnd } from 'react-rnd';
 import Card from '../../components/Card';
-import Terminal from './Terminal';
+import Terminal, { openTerminal } from './Terminal';
 
 const Window = styled(Card)`
   padding: 0px;
@@ -42,10 +42,8 @@ export default class TerminalWindow extends React.PureComponent {
   }
 
   openTerminalInNewWindow() {
-    const location = window.location;
-    window.open(`${location.protocol}//${location.host}/agent/${this.props.agent.id}/shell`)
+    openTerminal(this.props.agentid);
   }
-
 
   render() {
     return (
