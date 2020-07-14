@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 import { Rnd } from 'react-rnd';
 import Card from '../../components/Card';
 import Terminal, { openTerminal } from './Terminal';
@@ -29,7 +29,7 @@ const Title = styled.h4`
   text-align: center;
 `;
 
-export default class TerminalWindow extends React.PureComponent {
+class TerminalWindow extends React.PureComponent {
   constructor(props) {
     super(props);
     this.openTerminalInNewWindow = this.openTerminalInNewWindow.bind(this);
@@ -68,8 +68,8 @@ export default class TerminalWindow extends React.PureComponent {
         <Window>
           <TaskBar>
             <Title>{this.props.agent.name}</Title>
-            <WindowButton onClick={this.openTerminalInNewWindow} color={'green'} />
-            <WindowButton onClick={this.close} color={'red'} />
+            <WindowButton onClick={this.openTerminalInNewWindow} color={this.props.theme.green} />
+            <WindowButton onClick={this.close} color={this.props.theme.red} />
           </TaskBar>
           <Terminal agent={this.props.agent} ref={this.terminalRef} />
         </Window>
@@ -77,3 +77,5 @@ export default class TerminalWindow extends React.PureComponent {
     );
   }
 }
+
+export default withTheme(TerminalWindow);

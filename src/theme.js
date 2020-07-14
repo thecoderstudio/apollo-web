@@ -6,6 +6,8 @@ export const darkTheme = {
   inactive: "#363636",
   primary: "#02A3EE",
   accent: "#4D02EE",
+  green: "#32E67E",
+  red: "#ED3E2A",
   connectedColor: "#27AE60",
   disconnectedColor: "#C0392B",
   connectingColor: "#F39C12",
