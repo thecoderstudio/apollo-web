@@ -48,11 +48,11 @@ const StyledText = styled(Text)`
 `;
 
 const Icon = styled.i`
-  cursor: pointer;
+  cursor: ${props => props.active ? 'pointer' : 'inherit'};
 `;
 
 const TerminalIcon = styled(Icon)`
-
+  color: ${props => props.active ? props.theme.white : props.theme.inactive};
 `;
 
 export default class AgentListItem extends React.PureComponent {
@@ -72,6 +72,7 @@ export default class AgentListItem extends React.PureComponent {
   }
 
   render() {
+    const connected = this.props.agent.connection_state == 'connected';
     let terminal;
     if (this.state.terminalOpen) {
       terminal = <TerminalWindow agent={this.props.agent} onClose={this.closeTerminal} />
@@ -81,7 +82,7 @@ export default class AgentListItem extends React.PureComponent {
       <Container>
         <StyledText>{this.props.agent.name}</StyledText>
           <ConnectionState connectionState={this.props.agent.connection_state} />
-          <Icon onClick={this.openTerminal} className="fas fa-terminal" />
+          <TerminalIcon active={connected} onClick={this.openTerminal} className="fas fa-terminal" />
           {terminal}
       </Container>
     );
