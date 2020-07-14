@@ -21,6 +21,7 @@ const WindowButton = styled.div`
   margin-right: 15px;
   background-color: ${props => props.color}; 
   border-radius: 50%;
+  cursor: pointer;
 `;
 
 const Title = styled.h4`

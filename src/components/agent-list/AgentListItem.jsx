@@ -48,9 +48,7 @@ const StyledText = styled(Text)`
 `;
 
 const Icon = styled.i`
-  &:active{
-      text-shadow: 2px 2px rgba(0,0,0,0.1);
-  }
+  cursor: pointer;
 `;
 
 const TerminalIcon = styled(Icon)`
