@@ -6,12 +6,19 @@ import Terminal, { openTerminal } from './Terminal';
 
 const Window = styled(Card)`
   padding: 0px;
+  border: ${props => `1px solid ${props.statusColor}`};
+  border-style: none none solid none;
 `;
 
 const TaskBar = styled.div`
   display: flex;
   height: 30px;
   align-items: center;
+`;
+
+const Controls = styled.div`
+  flex: 1;
+  display: flex;
   justify-content: flex-end;
 `;
 
@@ -24,7 +31,12 @@ const WindowButton = styled.div`
   cursor: pointer;
 `;
 
+const Space = styled.div`
+  flex: 1;
+`;
+
 const Title = styled.h4`
+  flex: 1;
   width: 100%;
   text-align: center;
 `;
@@ -50,6 +62,11 @@ class TerminalWindow extends React.PureComponent {
   }
 
   render() {
+    let statusColor = this.props.theme.red;
+    if (this.props.agent.connection_state == 'connected') {
+      statusColor = this.props.theme.green;
+    }
+
     return (
       <Rnd
         default={{
@@ -65,11 +82,14 @@ class TerminalWindow extends React.PureComponent {
           this.terminalRef.current.fit();
         }}
       >
-        <Window>
+        <Window statusColor={statusColor}>
           <TaskBar>
+            <Space />
             <Title>{this.props.agent.name}</Title>
-            <WindowButton onClick={this.openTerminalInNewWindow} color={this.props.theme.green} />
-            <WindowButton onClick={this.close} color={this.props.theme.red} />
+            <Controls>
+              <WindowButton onClick={this.openTerminalInNewWindow} color={this.props.theme.green} />
+              <WindowButton onClick={this.close} color={this.props.theme.red} />
+            </Controls>
           </TaskBar>
           <Terminal agent={this.props.agent} ref={this.terminalRef} />
         </Window>
