@@ -12,6 +12,7 @@ import {Text} from "./Text";
 import { closeAddAgentModal, selectArchitecture, selectOperatingSystem } from "../actions/add-agent";
 import CopyToClipboard from "./CopyToClipboard";
 import NewAgentHandler from "../lib/NewAgentHandler";
+import LoadingButton from "./buttons/LoadingButton";
 
 
 const TwoColumnGrid = styled.div`
@@ -53,8 +54,12 @@ const StyledButton = styled(Button)`
   display: block;
 `;
 
-const DownloadBinaryButton = styled(StyledButton)`
+const DownloadBinaryButtonWrapper = styled.div`
   float: right;
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
 `;
 
 const ThreeRowDisplay = styled.div`
@@ -279,7 +284,9 @@ class AddAgentModal extends React.PureComponent {
             <Text>Download the binary and upload it to the target machine.</Text>
           </ColumnOne>
           <ColumnTwo>
-            <DownloadBinaryButton onClick={this.downloadBinary}>Download binary</DownloadBinaryButton>
+            <DownloadBinaryButtonWrapper>
+              <LoadingButton onClick={this.downloadBinary}>Download binary</LoadingButton>
+            </DownloadBinaryButtonWrapper>
           </ColumnTwo>
         </TwoColumnGrid>
         {this.getStepTwoComponents(

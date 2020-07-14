@@ -6,7 +6,8 @@ import { SmallText } from '../Text';
 
 const propTypes = {
   children: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired
 };
 
 const StyledOutlinedButton = styled(OutlinedButton)`
