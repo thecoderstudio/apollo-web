@@ -82,7 +82,16 @@ export class Terminal extends React.PureComponent {
   }
 
   fit() {
-    this.fitAddon.fit();
+    try {
+      this.fitAddon.fit();
+    } catch (e) {
+      // Ignore if required DOM parent is unavailable
+      if ("This API only accepts integers" == e.message) {
+        return;
+      }
+
+      throw e;
+    }
   }
 
   render() {
