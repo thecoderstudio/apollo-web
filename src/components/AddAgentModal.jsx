@@ -54,6 +54,13 @@ const StyledButton = styled(Button)`
   display: block;
 `;
 
+const CreateAgentButtonWrapper = styled.div`
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+`;
+
 const DownloadBinaryButtonWrapper = styled.div`
   float: right;
   width: 200px;
@@ -113,7 +120,8 @@ class AddAgentModal extends React.PureComponent {
     this.state = {
       renderFunction : this.renderQuestion,
       title: "Choose installation",
-      agentName: ""
+      agentName: "",
+      loading: false,
     };
     this.newAgentHandler = new NewAgentHandler();
   };
@@ -135,12 +143,14 @@ class AddAgentModal extends React.PureComponent {
   }
 
   createAgent(renderFunctionCallback) {
+    this.setState({ loading: true })
     axios.post(
       `${process.env.APOLLO_HTTP_URL}agent`,
       { name : this.state.agentName },
       { withCredentials: true }
     )
       .then(response => {
+        this.setState({ loading: false })
         this.setState({
           agentId: response.data['id'],
           secret: response.data['oauth_client']['secret']
@@ -148,11 +158,13 @@ class AddAgentModal extends React.PureComponent {
         this.setRenderFunction(renderFunctionCallback);
       })
       .catch(error => {
+        this.setState({ loading: false })
         console.log(error)
       });
   }
 
   downloadBinary() {
+    this.setState({ loading: true })
     axios.get(
       `${process.env.APOLLO_HTTP_URL}agent/download`,
       {
@@ -165,6 +177,7 @@ class AddAgentModal extends React.PureComponent {
       },
     )
       .then(response => {
+        this.setState({ loading: false })
         const url = window.URL.createObjectURL(new Blob([response.data]));
         const link = document.createElement('a');
         link.href = url;
@@ -172,6 +185,7 @@ class AddAgentModal extends React.PureComponent {
         link.click();
       })
       .catch(error => {
+        this.setState({ loading: false })
 
       })
   }
@@ -237,9 +251,11 @@ class AddAgentModal extends React.PureComponent {
           <CloseOutlinedButton onClick={this.closeModal}>
             Close
           </CloseOutlinedButton>
-          <StyledButton onClick={() => this.createAgent(onclick)}>
-            Create agent
-          </StyledButton>
+          <CreateAgentButtonWrapper>
+            <LoadingButton loading={this.state.loading} onClick={() => this.createAgent(onclick)}>
+              Create agent
+            </LoadingButton>
+          </CreateAgentButtonWrapper>
         </TwoColumnGrid>
       </div>
     );
@@ -285,7 +301,7 @@ class AddAgentModal extends React.PureComponent {
           </ColumnOne>
           <ColumnTwo>
             <DownloadBinaryButtonWrapper>
-              <LoadingButton onClick={this.downloadBinary}>Download binary</LoadingButton>
+              <LoadingButton loading={this.state.loading} onClick={this.downloadBinary}>Download binary</LoadingButton>
             </DownloadBinaryButtonWrapper>
           </ColumnTwo>
         </TwoColumnGrid>
