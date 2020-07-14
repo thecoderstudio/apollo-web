@@ -6,6 +6,7 @@ import Input from "./Input";
 import Modal from './Modal';
 import DescriptionButton from './buttons/DescriptionButton';
 import Button from "./buttons/Button";
+import OutlinedButton from "./buttons/OutlinedButton";
 import DropDown from "./Drowdown";
 import {Text} from "./Text";
 import { closeAddAgentModal, selectArchitecture, selectOperatingSystem } from "../actions/add-agent";
@@ -76,10 +77,6 @@ const Description = styled(Text)`
   margin: 20px 0px 20px 0px;
 `;
 
-const CreateAgentButton = styled(StyledButton)`
-  margin-top: 20px;
-`;
-
 const StyledInput = styled(Input)`
   font-family: 'B612', sans-serif;
   font-weight: 600;
@@ -94,8 +91,13 @@ const StyledInput = styled(Input)`
     outline: none;
     border: 1px solid ${props => props.theme.accent};  
   }
-  
- 
+`;
+
+const CloseOutlinedButton = styled(OutlinedButton)`
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block; 
 `;
 
 class AddAgentModal extends React.PureComponent {
@@ -226,9 +228,14 @@ class AddAgentModal extends React.PureComponent {
             />
           </InputFieldWrapper>
         </TextAndInputFieldWrapper>
-        <CreateAgentButton onClick={() => this.createAgent(onclick)}>
-          Create agent
-        </CreateAgentButton>
+        <TwoColumnGrid>
+          <CloseOutlinedButton onClick={this.closeModal}>
+            Close
+          </CloseOutlinedButton>
+          <StyledButton onClick={() => this.createAgent(onclick)}>
+            Create agent
+          </StyledButton>
+        </TwoColumnGrid>
       </div>
     );
   };
@@ -284,17 +291,17 @@ class AddAgentModal extends React.PureComponent {
 
   renderQuestion() {
     const directly = "Directly on target machine.";
-    const manual = "Manual installation";
+    const manual = "Manual upload";
     return (
       <TwoColumnGrid>
         <ColumnOne>
           <DescriptionButton onClick={() => this.selectStepOneDirectly(directly)} title={directly}>
-          You have the correct permissions to download and install the binary directly on the target machine.
+          You have the correct permissions to download the binary directly on the target machine.
           </DescriptionButton>
         </ColumnOne>
         <ColumnTwo>
           <DescriptionButton onClick={() => this.selectStepOneManual(manual)} title={manual}>
-            You download, upload and install the binary yourself.
+            You download and upload the binary yourself.
           </DescriptionButton>
         </ColumnTwo>
       </TwoColumnGrid>
