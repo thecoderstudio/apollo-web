@@ -34,7 +34,11 @@ export default class TerminalWindow extends React.PureComponent {
     super(props);
     this.openTerminalInNewWindow = this.openTerminalInNewWindow.bind(this);
     this.close = this.close.bind(this);
-    this.terminal = React.createRef();
+    this.terminalRef = React.createRef();
+  }
+
+  componentDidMount() {
+    this.terminalRef.current.fit();
   }
 
   close() {
@@ -42,7 +46,7 @@ export default class TerminalWindow extends React.PureComponent {
   }
 
   openTerminalInNewWindow() {
-    openTerminal(this.props.agentid);
+    openTerminal(this.props.agent.id);
   }
 
   render() {
@@ -58,7 +62,7 @@ export default class TerminalWindow extends React.PureComponent {
         minHeight={300}
         bounds="window"
         onResize={(e, direction, ref, delta, position) => {
-          this.terminal.current.fit();
+          this.terminalRef.current.fit();
         }}
       >
         <Window>
@@ -67,7 +71,7 @@ export default class TerminalWindow extends React.PureComponent {
             <WindowButton onClick={this.openTerminalInNewWindow} color={'green'} />
             <WindowButton onClick={this.close} color={'red'} />
           </TaskBar>
-          <Terminal agent={this.props.agent} ref={this.terminal} />
+          <Terminal agent={this.props.agent} ref={this.terminalRef} />
         </Window>
       </Rnd>
     );
