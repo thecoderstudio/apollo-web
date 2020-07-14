@@ -13,6 +13,7 @@ import { closeAddAgentModal, selectArchitecture, selectOperatingSystem } from ".
 import CopyToClipboard from "./CopyToClipboard";
 import NewAgentHandler from "../lib/NewAgentHandler";
 import LoadingButton from "./buttons/LoadingButton";
+import fs from 'fs';
 
 
 const TwoColumnGrid = styled.div`
@@ -172,7 +173,7 @@ class AddAgentModal extends React.PureComponent {
           target_os: this.props.selectedOperatingSystem,
           target_arch: this.props.selectedArchitecture
         },
-        responseType: "blob",
+        responseType: 'arraybuffer'
       },
     )
       .then(response => {
@@ -180,7 +181,8 @@ class AddAgentModal extends React.PureComponent {
         const url = window.URL.createObjectURL(new Blob([response.data]));
         const link = document.createElement('a');
         link.href = url;
-        link.setAttribute('download', 'apollo-agent.binary');
+        // link.setAttribute('download', 'apollo-agent');
+        link.download = 'apollo-agent';
         link.click();
       })
       .catch(error => {

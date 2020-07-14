@@ -10,6 +10,7 @@ export default class NewAgentHandler {
   };
 
   getExecuteCommand(agentId, secret, host) {
-    return `chmod +x apollo-agent && ./apollo-agent --agent-id=${agentId} --secret=${secret}, --host=${host}`;
+    return `mv apollo-agent.txt apollo-agent && chmod +x apollo-agent &&
+     ./apollo-agent --agent-id=${agentId} --secret=${secret}, --host=${host}`;
   };
 };
