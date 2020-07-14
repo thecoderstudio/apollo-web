@@ -36,7 +36,7 @@ function DescriptionButton(props) {
       <Description>{props.children}</Description>
     </StyledOutlinedButton>
   );
-};
+}
 
 DescriptionButton.propTypes = propTypes;
 

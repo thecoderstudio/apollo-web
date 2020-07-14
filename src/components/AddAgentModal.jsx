@@ -159,7 +159,6 @@ class AddAgentModal extends React.PureComponent {
       })
       .catch(error => {
         this.setState({ loading: false })
-        console.log(error)
       });
   }
 
@@ -218,6 +217,14 @@ class AddAgentModal extends React.PureComponent {
     this.setState({ agentName: e.target.value });
   }
 
+  renderDirectlyOnMachineStepOne() {
+    return this.getStepOneComponents(this.renderDirectlyOnMachineStepTwo);
+  };
+
+  renderManualUploadStepOne() {
+    return this.getStepOneComponents(this.renderManualUploadStepTwo);
+  };
+
   getStepOneComponents(onclick) {
     return(
       <div>
@@ -261,10 +268,6 @@ class AddAgentModal extends React.PureComponent {
     );
   };
 
-  renderDirectlyOnMachineStepOne() {
-    return this.getStepOneComponents(this.renderDirectlyOnMachineStepTwo);
-  };
-
   getStepTwoComponents(command) {
    return(
       <ThreeRowDisplay>
@@ -286,10 +289,6 @@ class AddAgentModal extends React.PureComponent {
         "localhost:1970"
       )
     );
-  };
-
-  renderManualUploadStepOne() {
-    return this.getStepOneComponents(this.renderManualUploadStepTwo);
   };
 
   renderManualUploadStepTwo() {
