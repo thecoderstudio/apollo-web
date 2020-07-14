@@ -134,6 +134,10 @@ class AddAgentModal extends React.PureComponent {
       { withCredentials: true }
     )
       .then(response => {
+        this.setState({
+          agentId: response.data['id'],
+          secret: response.data['oauth_client']['secret']
+        })
         this.setRenderFunction(renderFunctionCallback);
       })
       .catch(error => {
@@ -237,7 +241,7 @@ class AddAgentModal extends React.PureComponent {
    return(
       <ThreeRowDisplay>
         <Description>
-          Copy and run the command on the target machine to install the client.
+          Copy and run the command on the target machine to download run the client.
         </Description>
         <CommandWrapper>
           <CopyToClipboard text={command} />
@@ -248,7 +252,12 @@ class AddAgentModal extends React.PureComponent {
   }
 
   renderDirectlyOnMachineStepTwo() {
-    return this.getStepTwoComponents("command");
+    return this.getStepTwoComponents(
+      this.newAgentHandler.getDirectlyOnMachineCommand(
+        this.props.selectedOperatingSystem, this.props.selectedArchitecture, this.state.agentId, this.state.secret,
+        "localhost:1970"
+      )
+    );
   };
 
   renderManualUploadStepOne() {
@@ -264,8 +273,7 @@ class AddAgentModal extends React.PureComponent {
           </ColumnOne>
           <ColumnTwo>
             <DownloadBinaryButton onClick={this.downloadBinary}>Download binary</DownloadBinaryButton>
-          </ColumnTwo>
-        </TwoColumnGrid>
+          </ColumnTwo>        </TwoColumnGrid>
         {this.getStepTwoComponents("command")}
       </div>
     );
