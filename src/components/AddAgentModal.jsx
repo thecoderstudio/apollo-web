@@ -273,8 +273,11 @@ class AddAgentModal extends React.PureComponent {
           </ColumnOne>
           <ColumnTwo>
             <DownloadBinaryButton onClick={this.downloadBinary}>Download binary</DownloadBinaryButton>
-          </ColumnTwo>        </TwoColumnGrid>
-        {this.getStepTwoComponents("command")}
+          </ColumnTwo>
+        </TwoColumnGrid>
+        {this.getStepTwoComponents(
+          this.newAgentHandler.getExecuteCommand(this.state.agentId, this.state.secret, "localhost:1970")
+        )}
       </div>
     );
   };
