@@ -122,7 +122,15 @@ class AddAgentModal extends React.PureComponent {
   }
 
   createAgent() {
-
+    axios.post(
+      `${process.env.APOLLO_HTTP_URL}/agent`,
+      { withCredentials: true }
+    )
+      .then(res => {
+        if (res.status === 200) {
+          this.props.dispatch(loginAction());
+        }
+      });
   }
 
   closeModal() {

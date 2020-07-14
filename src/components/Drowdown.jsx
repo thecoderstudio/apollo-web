@@ -1,5 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import { connect } from 'react-redux';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const propTypes = {
@@ -98,7 +99,8 @@ class DropDown extends React.PureComponent {
 
   selectItem(option) {
     this.toggleCollapse();
-    this.props.optionSelectedAction(option);
+    const { dispatch } = this.props
+    dispatch(this.props.optionSelectedAction(option));
   }
 
   renderItems() {
@@ -125,4 +127,4 @@ class DropDown extends React.PureComponent {
 
 DropDown.propTypes = propTypes;
 
-export default DropDown;
+export default connect()(DropDown);
