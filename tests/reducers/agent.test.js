@@ -13,4 +13,4 @@ describe("agent reducer", () => {
       agents
     })).toEqual([{ id: "id" }]);
   });
-})
+});

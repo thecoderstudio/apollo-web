@@ -4,6 +4,7 @@ import { Terminal } from '../../src/components/Terminal';
 import WS from 'jest-websocket-mock';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import waitForExpect from 'wait-for-expect';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -35,7 +36,7 @@ describe('Terminal', () => {
         dispatchEvent: jest.fn(),
       })),
     });
-    termWriteSpy = jest.spyOn(Terminal.prototype, 'write'); 
+    termWriteSpy = jest.spyOn(Terminal.prototype, 'write');
     terminal = mount(<Terminal theme={darkTheme} agent={mockAgent} />).find(Terminal).instance();
   });
 
@@ -56,6 +57,9 @@ describe('Terminal', () => {
     expect(termWriteSpy).toHaveBeenCalledWith(terminal.chalk.hex(darkTheme.error).bold(
       "Something went wrong in the connection with the agent."
     ));
+    expect(termWriteSpy).toHaveBeenCalledWith(terminal.chalk.hex(darkTheme.error).bold(
+      "\n\r\nConnection with server is closed"
+    ));
   });
 
   it('correctly writes data', async () => {
@@ -64,5 +68,17 @@ describe('Terminal', () => {
 
     assertConnection();
     expect(server).toReceiveMessage("test");
+  });
+
+  it('correctly handles connection closure', async () => {
+    await server.connected;
+    server.close();
+
+    assertConnection()
+    await waitForExpect(() => {
+      expect(termWriteSpy).toHaveBeenCalledWith(terminal.chalk.hex(darkTheme.error).bold(
+        "\n\r\nConnection with server is closed"
+      ));
+    });
   });
 });

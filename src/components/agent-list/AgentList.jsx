@@ -32,8 +32,8 @@ class AgentList extends React.Component {
   constructor(props) {
     super(props);
     this.generateAgents = this.generateAgents.bind(this);
-    this.dispatchListAgents = this.dispatchListAgents.bind(this)
-    this.setupWebSocket()
+    this.dispatchListAgents = this.dispatchListAgents.bind(this);
+    this.setupWebSocket();
   }
 
   setupWebSocket() {
@@ -62,7 +62,7 @@ class AgentList extends React.Component {
           {this.generateAgents(this.props.agents)}
         </List>
       </Content>
-    )
+    );
   }
 }
 

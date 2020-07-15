@@ -3,7 +3,7 @@ import media from '../util/media';
 import ContentContainer from '../components/Content';
 import React from 'react';
 import styled from 'styled-components';
-
+import NavBar from '../components/NavBar';
 
 const Content = styled(ContentContainer)`
   grid-template-columns: [agent-listing] 1fr 1fr;
@@ -16,10 +16,13 @@ const Content = styled(ContentContainer)`
   }
 `;
 
-export default function Dashboard(props) {
+export default function Dashboard() {
   return (
-    <Content>
-      <AgentList />
-    </Content>
+    <div>
+      <NavBar />
+      <Content>
+        <AgentList />
+      </Content>
+    </div>
   );
 }

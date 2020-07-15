@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import styled from 'styled-components';
-import Button from '../components/Button';
+import Button from '../components/buttons/Button';
 import Input from '../components/Input';
 import Card from '../components/Card';
 import { login as loginAction } from '../actions/auth';

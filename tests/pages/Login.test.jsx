@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import axios from 'axios';
 import waitForExpect from 'wait-for-expect';
 import Login from '../../src/pages/Login';
-import Button from '../../src/components/Button';
 
 const mockStore = configureStore([]);
 jest.mock('axios');

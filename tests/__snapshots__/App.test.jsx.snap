@@ -3,22 +3,34 @@
 exports[`app renders correctly authenticated 1`] = `
 <div>
   <div
-    className="sc-fzoXzr ccPRtL"
+    className="sc-fznJRM ixDFnb"
   >
-    <div
-      className="sc-fzoLsD sc-fzpans DDpSM"
-    >
+    <div>
       <div
-        className="sc-Axmtr cNWFxA"
+        className="sc-fznyAO dqfeKx"
       >
-        <h2
-          className="sc-AxmLO jBiGbn"
+        <button
+          className="sc-fzpans sc-fzplWN sc-fznKkj dWgsfJ"
+          onClick={[Function]}
         >
-          Agents
-        </h2>
-        <ul
-          className="sc-fzozJi jqZnKs"
-        />
+          Log out
+        </button>
+      </div>
+      <div
+        className="sc-fzoLsD sc-fznZeY dctyrU"
+      >
+        <div
+          className="sc-Axmtr cNWFxA"
+        >
+          <h2
+            className="sc-AxmLO jBiGbn"
+          >
+            Agents
+          </h2>
+          <ul
+            className="sc-fzozJi jqZnKs"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -28,44 +40,44 @@ exports[`app renders correctly authenticated 1`] = `
 exports[`app renders correctly unauthenticated 1`] = `
 <div>
   <div
-    className="sc-fzoXzr ccPRtL"
+    className="sc-fznJRM ixDFnb"
   >
     <div
-      className="sc-fznZeY faKFAb"
+      className="sc-fzqNJr TOXuw"
     >
       <div
-        className="sc-fzokOt khOUuy"
+        className="sc-fzoyAV jNQZPY"
       >
         <img
-          className="sc-fzoLag fFWBwa"
+          className="sc-fznxsB eqinzM"
           src={[Function]}
         />
         <h1
-          className="sc-fzqBZW gfiTAB"
+          className="sc-fzoLag flKWgW"
         >
           Log in to Apollo
         </h1>
         <div
-          className="sc-fznKkj sc-fzqNJr lcwNrL"
+          className="sc-fzqBZW sc-fzoXzr uLdrn"
         >
           <form
-            className="sc-fzoyAV bRqgJx"
+            className="sc-fzpjYC cDswVg"
             onSubmit={[Function]}
           >
             <input
-              className="sc-fznyAO iAFIbK"
+              className="sc-fzokOt dbZLPA"
               onChange={[Function]}
               placeholder="Username"
               type="username"
             />
             <input
-              className="sc-fznyAO iAFIbK"
+              className="sc-fzokOt dbZLPA"
               onChange={[Function]}
               placeholder="Password"
               type="password"
             />
             <button
-              className="sc-fzplWN guGGRs"
+              className="sc-fzpans bCGSAF"
             >
               Log in
             </button>

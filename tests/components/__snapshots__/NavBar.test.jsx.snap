@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nav bar handles successful logout 1`] = `
+<div
+  className="sc-AxiKw bDNfQg"
+>
+  <button
+    className="sc-AxjAm sc-AxirZ sc-AxhCb jfTlUh"
+    onClick={[Function]}
+  >
+    Log out
+  </button>
+</div>
+`;
+
+exports[`nav bar renders correctly 1`] = `
+<div
+  className="sc-AxiKw bDNfQg"
+>
+  <button
+    className="sc-AxjAm sc-AxirZ sc-AxhCb jfTlUh"
+    onClick={[Function]}
+  >
+    Log out
+  </button>
+</div>
+`;
