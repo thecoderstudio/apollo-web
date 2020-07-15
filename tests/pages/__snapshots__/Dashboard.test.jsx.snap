@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dashboard renders correctly 1`] = `
+<div>
+  <div
+    className="sc-fznyAO etKfbt"
+  >
+    <button
+      className="sc-fzpans sc-fzplWN sc-fznKkj gBcifJ"
+      onClick={[Function]}
+    >
+      Log out
+    </button>
+  </div>
+  <div
+    className="sc-fzoLsD sc-fznZeY dctyrU"
+  >
+    <div
+      className="sc-Axmtr ldVHhQ"
+    >
+      <h2
+        className="sc-AxmLO jBiGbn"
+      >
+        Agents
+      </h2>
+      <ul
+        className="sc-fzozJi jqZnKs"
+      />
+    </div>
+  </div>
+</div>
+`;
