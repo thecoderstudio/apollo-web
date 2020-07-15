@@ -87,8 +87,8 @@ class TerminalWindow extends React.PureComponent {
             <Space />
             <Title>{this.props.agent.name}</Title>
             <Controls>
-              <WindowButton onClick={this.openTerminalInNewWindow} color={this.props.theme.green} />
-              <WindowButton onClick={this.close} color={this.props.theme.red} />
+              <WindowButton id="expand-button" onClick={this.openTerminalInNewWindow} color={this.props.theme.green} />
+              <WindowButton id="close-button" onClick={this.close} color={this.props.theme.red} />
             </Controls>
           </TaskBar>
           <Terminal agent={this.props.agent} ref={this.terminalRef} />

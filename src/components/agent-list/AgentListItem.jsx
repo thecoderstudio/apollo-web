@@ -69,7 +69,7 @@ const TerminalIcon = styled(Icon)`
   color: ${props => props.active ? props.theme.white : props.theme.inactive};
 `;
 
-export default class AgentListItem extends React.PureComponent {
+class AgentListItem extends React.PureComponent {
   constructor(props) {
     super(props);
     this.openTerminal = this.openTerminal.bind(this);
@@ -115,3 +115,5 @@ export default class AgentListItem extends React.PureComponent {
 }
 
 AgentListItem.propTypes = propTypes;
+
+export default AgentListItem;

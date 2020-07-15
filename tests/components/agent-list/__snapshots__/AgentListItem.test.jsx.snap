@@ -1,33 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
-<li
-  className="sc-fznyAO czxrNm"
->
-  <span
-    className="sc-AxjAm sc-fznKkj eKuYEa"
+exports[`agent list item renders connected correctly 1`] = `
+<div>
+  <li
+    className="sc-fznyAO czxrNm"
   >
-    agentName
-  </span>
-  <div
-    className="sc-fznZeY gwCZdU"
-  >
+    <span
+      className="sc-AxjAm sc-fznKkj eKuYEa"
+    >
+      agentName
+    </span>
     <div
-      className="sc-AxirZ hLbodF"
+      className="sc-fznZeY gwCZdU"
     >
       <div
-        className="sc-AxiKw jLPcUa"
-      />
-      <span
-        className="sc-AxjAm sc-AxhCb cNpZBW"
+        className="sc-AxirZ hLbodF"
       >
-        Connected
-      </span>
+        <div
+          className="sc-AxiKw cDPPUu"
+        />
+        <span
+          className="sc-AxjAm sc-AxhCb fnilXu"
+        >
+          Connected
+        </span>
+      </div>
+      <i
+        className="sc-fzokOt sc-fzqBZW gjFXho fas fa-terminal"
+        onClick={[Function]}
+      />
     </div>
-    <i
-      className="sc-fzokOt sc-fzqBZW drFJih fas fa-terminal"
-      onClick={[Function]}
-    />
-  </div>
-</li>
+  </li>
+</div>
+`;
+
+exports[`agent list item renders disconnected correctly 1`] = `
+<div>
+  <li
+    className="sc-fznyAO czxrNm"
+  >
+    <span
+      className="sc-AxjAm sc-fznKkj eKuYEa"
+    >
+      agentName
+    </span>
+    <div
+      className="sc-fznZeY gwCZdU"
+    >
+      <div
+        className="sc-AxirZ hLbodF"
+      >
+        <div
+          className="sc-AxiKw gYdmwA"
+        />
+        <span
+          className="sc-AxjAm sc-AxhCb bSClzs"
+        >
+          Disconnected
+        </span>
+      </div>
+      <i
+        className="sc-fzokOt sc-fzqBZW hmiIRt fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+  </li>
+</div>
 `;
