@@ -1,17 +1,14 @@
 export function parseSnakeCaseArray(arr) {
-  arr.forEach(item => {
-    parseSnakeCaseObj(item);
-  });
-  return arr
+  return arr.map(item => (
+    parseSnakeCaseObj(item)
+  ));
 }
 
 export function parseSnakeCaseObj(obj) {
+  let newObj = {};
   Object.keys(obj).forEach(key => {
     const newKey = key.replace(/(\_\w)/g, (m) => m[1].toUpperCase());
-    if (newKey != key) {
-      obj[newKey] = obj[key];
-      delete obj[key];
-    }
+    newObj[newKey] = obj[key];
   });
-  return obj
+  return newObj;
 }
