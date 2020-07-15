@@ -264,7 +264,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                 onClick={[Function]}
               >
                 <i
-                  className="sc-fzokOt c6 fas fa-terminal"
+                  className="sc-AxirZ c6 fas fa-terminal"
                   onClick={[Function]}
                 />
               </Styled(styled.i)>
@@ -472,7 +472,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                           statusColor="#32E67E"
                         >
                           <div
-                            className="sc-AxhUy c7"
+                            className="sc-AxgMl c7"
                           >
                             <styled.div>
                               <div
@@ -948,7 +948,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
                 onClick={[Function]}
               >
                 <i
-                  className="sc-fzokOt c6 fas fa-terminal"
+                  className="sc-AxirZ c6 fas fa-terminal"
                   onClick={[Function]}
                 />
               </Styled(styled.i)>
@@ -1091,7 +1091,7 @@ exports[`agent list item renders connected correctly 1`] = `
         </span>
       </div>
       <i
-        className="sc-fzokOt c6 fas fa-terminal"
+        className="sc-AxirZ c6 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
@@ -1229,7 +1229,7 @@ exports[`agent list item renders disconnected correctly 1`] = `
         </span>
       </div>
       <i
-        className="sc-fzokOt c6 fas fa-terminal"
+        className="sc-AxirZ c6 fas fa-terminal"
         onClick={[Function]}
       />
     </div>

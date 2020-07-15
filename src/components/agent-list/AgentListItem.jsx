@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Text from '../Text';
+import Icon from '../Icon';
 import ConnectionState from './ConnectionState';
 import { openTerminal } from '../terminal/Terminal';
 import TerminalWindow from '../terminal/TerminalWindow';
@@ -59,10 +60,6 @@ const Controls = styled.div`
       width: 100%;
     `
   }
-`;
-
-const Icon = styled.i`
-  cursor: ${props => props.active ? 'pointer' : 'inherit'};
 `;
 
 const TerminalIcon = styled(Icon)`

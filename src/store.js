@@ -8,9 +8,8 @@ import rootReducer from './reducers/root';
 const persistConfig = {
   key: 'root',
   whitelist: ['auth', 'agent'],
-  storage,
   transforms: [mapTransformer({ whitelist: 'agent' })],
-  debug: true
+  storage
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

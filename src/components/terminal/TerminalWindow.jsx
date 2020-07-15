@@ -1,8 +1,14 @@
 import React from 'react';
-import styled, { withTheme } from 'styled-components';
 import { Rnd } from 'react-rnd';
+import styled, { withTheme } from 'styled-components';
+import PropTypes from 'prop-types';
 import Card from '../../components/Card';
 import Terminal, { openTerminal } from './Terminal';
+
+const propTypes = {
+  agent: PropTypes.object.isRequired,
+  onClose: PropTypes.func.isRequired
+};
 
 const Window = styled(Card)`
   padding: 0px;
@@ -97,5 +103,7 @@ class TerminalWindow extends React.PureComponent {
     );
   }
 }
+
+TerminalWindow.propTypes = propTypes;
 
 export default withTheme(TerminalWindow);
