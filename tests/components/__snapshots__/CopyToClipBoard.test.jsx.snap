@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`copy to clipboard renders correctly 1`] = `
+<div
+  className="sc-AxirZ ieRQJI"
+>
+  <div
+    className="sc-AxiKw lhOKgZ"
+  >
+    test
+  </div>
+  <button
+    className="sc-AxjAm sc-AxhCb kCokwV"
+    id="copyToClipboardButton"
+    onClick={[Function]}
+  >
+    <img
+      className="sc-AxhUy hLpOXZ"
+      src={[Function]}
+    />
+  </button>
+</div>
+`;

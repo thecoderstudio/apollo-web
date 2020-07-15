@@ -6,6 +6,7 @@ exports[`Dropdown renders correctly 1`] = `
 >
   <div
     className="sc-AxirZ eWTnqv"
+    id="dropdown"
     onClick={[Function]}
   >
     1

@@ -60,7 +60,7 @@ class CopyToClipboard extends React.PureComponent {
     return(
       <Wrapper>
         <TextField>{this.props.text}</TextField>
-        <StyledButton onClick={this.copyToClipboard}><Icon src={copyImg} /></StyledButton>
+        <StyledButton id='copyToClipboardButton' onClick={this.copyToClipboard}><Icon src={copyImg} /></StyledButton>
       </Wrapper>
     );
   };
