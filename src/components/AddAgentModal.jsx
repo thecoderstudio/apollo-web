@@ -98,8 +98,8 @@ const StyledInput = styled(Input)`
   margin: 15px;
   background-color: ${props => props.theme.lightBlack};
   color: ${props => props.theme.white}; 
-  border: 1px solid transparent;
-   
+  border: 1px solid ${props => props.error ? props.theme.error : 'transparent'};
+  
   &:focus{
     outline: none;
     border: 1px solid ${props => props.theme.accent};  
@@ -123,6 +123,7 @@ class AddAgentModal extends React.PureComponent {
       title: "Choose installation",
       agentName: "",
       loading: false,
+      agentNameError: false
     };
     this.newAgentHandler = new NewAgentHandler();
   };
@@ -144,6 +145,10 @@ class AddAgentModal extends React.PureComponent {
   }
 
   createAgent(renderFunctionCallback) {
+    if (this.state.agentName === "") {
+      this.setState({ agentNameError: true })
+      return
+    }
     this.setState({ loading: true })
     axios.post(
       `${process.env.APOLLO_HTTP_URL}agent`,
@@ -158,7 +163,7 @@ class AddAgentModal extends React.PureComponent {
         })
         this.setRenderFunction(renderFunctionCallback);
       })
-      .catch(error => {
+      .catch(_ => {
         this.setState({ loading: false })
       });
   }
@@ -184,9 +189,8 @@ class AddAgentModal extends React.PureComponent {
         link.setAttribute('download', 'apollo-agent.bin');
         link.click();
       })
-      .catch(error => {
+      .catch(_ => {
         this.setState({ loading: false })
-
       })
   }
 
@@ -215,7 +219,7 @@ class AddAgentModal extends React.PureComponent {
   };
 
   handleAgentNameChange(e) {
-    this.setState({ agentName: e.target.value });
+    this.setState({ agentName: e.target.value, agentNameError: false });
   }
 
   renderDirectlyOnMachineStepOne() {
@@ -232,7 +236,7 @@ class AddAgentModal extends React.PureComponent {
         <TextAndInputFieldWrapper>
           <TextWrapper>Agent name</TextWrapper>
           <InputFieldWrapper>
-            <StyledInput placeholder="007" onChange={this.handleAgentNameChange} />
+            <StyledInput error={this.state.agentNameError} placeholder="007" onChange={this.handleAgentNameChange} />
           </InputFieldWrapper>
         </TextAndInputFieldWrapper>
         <TextAndInputFieldWrapper>
