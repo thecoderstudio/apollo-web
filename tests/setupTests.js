@@ -5,8 +5,9 @@ import 'jest-styled-components'
 Enzyme.configure({ adapter: new Adapter() });
 
 process.env = {
-      APOLLO_WS_URL: 'ws://localhost:1234/'
-    };
+  APOLLO_WS_URL: 'ws://localhost:1234/',
+  APOLLO_HTTP_URL: 'http://localhost:1234/'
+};
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({

@@ -16,22 +16,6 @@ describe('Terminal', () => {
   var termWriteSpy;
 
   beforeEach(() => {
-    process.env = {
-      APOLLO_WS_URL: 'ws://localhost:1234/'
-    };
-    Object.defineProperty(window, 'matchMedia', {
-      writable: true,
-      value: jest.fn().mockImplementation(query => ({
-        matches: false,
-        media: query,
-        onchange: null,
-        addListener: jest.fn(), // deprecated
-        removeListener: jest.fn(), // deprecated
-        addEventListener: jest.fn(),
-        removeEventListener: jest.fn(),
-        dispatchEvent: jest.fn(),
-      })),
-    });
     termWriteSpy = jest.spyOn(Terminal.prototype, 'write');
     terminal = mount(<Terminal theme={darkTheme} agent={mockAgent} />).find(Terminal).instance();
   });

@@ -25,9 +25,6 @@ describe('agentList', () => {
       authenticated: true,
       agent: new Map()
     });
-    process.env = {
-      APOLLO_WS_URL: 'ws://localhost:1234/'
-    };
     store.dispatch = jest.fn();
   });
 

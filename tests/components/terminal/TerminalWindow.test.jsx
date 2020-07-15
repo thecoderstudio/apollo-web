@@ -26,25 +26,6 @@ function getComponentTags(connection_state, onClose=jest.fn()) {
 describe('agent list item', () => {
   const server = new WS(`ws://localhost:1234/agent/a2346886-83ba-442d-9fb7-d024c6274e22/shell`);
 
-  beforeEach(() => {
-    process.env = {
-      APOLLO_WS_URL: 'ws://localhost:1234/'
-    };
-    Object.defineProperty(window, 'matchMedia', {
-      writable: true,
-      value: jest.fn().mockImplementation(query => ({
-        matches: false,
-        media: query,
-        onchange: null,
-        addListener: jest.fn(), // deprecated
-        removeListener: jest.fn(), // deprecated
-        addEventListener: jest.fn(),
-        removeEventListener: jest.fn(),
-        dispatchEvent: jest.fn(),
-      })),
-    });
-  });
-
   afterEach(() => {
     WS.clean();
   });
