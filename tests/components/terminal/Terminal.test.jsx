@@ -3,7 +3,7 @@ import WS from 'jest-websocket-mock';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { darkTheme } from '../../../src/theme';
-import { Terminal } from '../../../src/components/terminal/Terminal';
+import { Terminal, openTerminal } from '../../../src/components/terminal/Terminal';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -66,3 +66,11 @@ describe('Terminal', () => {
     expect(server).toReceiveMessage("test");
   });
 });
+
+test("openTerminal opens new window", () => {
+  const location = window.location;
+  const expectedHref = `${location.protocol}//${location.host}/agent/testid/shell`
+  global.open = jest.fn();
+  openTerminal("testid")
+  expect(global.open).toHaveBeenCalledWith(expectedHref);
+})
