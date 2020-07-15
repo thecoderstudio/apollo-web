@@ -1,8 +1,12 @@
 import {
-    SHOW_ADD_AGENT_MODAL,
-    CLOSE_ADD_AGENT_MODAL,
-    showAddAgentModal,
-    closeAddAgentModal,
+  SHOW_ADD_AGENT_MODAL,
+  CLOSE_ADD_AGENT_MODAL,
+  SELECT_OPERATING_SYSTEM,
+  SELECT_ARCHITECTURE,
+  showAddAgentModal,
+  closeAddAgentModal,
+  selectArchitecture,
+  selectOperatingSystem,
 } from '../../src/actions/add-agent';
 
 test("show add agent modal creates show action", () => {
@@ -17,4 +21,20 @@ test("close add agent modal creates close action", () => {
     type: CLOSE_ADD_AGENT_MODAL
   };
   expect(closeAddAgentModal()).toEqual(expectedAction);
+});
+
+test("select os creates select os action" , () => {
+  const expectedAction = {
+    type: SELECT_OPERATING_SYSTEM,
+    selectedOperatingSystem: "linux"
+  };
+  expect(showAddAgentModal('linux')).toEqual(expectedAction);
+});
+
+test("select arch creates select arch action", () => {
+  const expectedAction = {
+    type: SELECT_ARCHITECTURE,
+    selectedArchitecture: 'amd64'
+  };
+  expect(closeAddAgentModal('amd64')).toEqual(expectedAction);
 });
