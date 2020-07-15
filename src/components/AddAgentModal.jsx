@@ -13,7 +13,6 @@ import { closeAddAgentModal, selectArchitecture, selectOperatingSystem } from ".
 import CopyToClipboard from "./CopyToClipboard";
 import NewAgentHandler from "../lib/NewAgentHandler";
 import LoadingButton from "./buttons/LoadingButton";
-import fs from 'fs';
 
 
 const TwoColumnGrid = styled.div`
@@ -156,16 +155,15 @@ class AddAgentModal extends React.PureComponent {
       { withCredentials: true }
     )
       .then(response => {
-        this.setState({ loading: false })
         this.setState({
           agentId: response.data['id'],
           secret: response.data['oauth_client']['secret']
         })
         this.setRenderFunction(renderFunctionCallback);
       })
-      .catch(_ => {
+      .finally(_ => {
         this.setState({ loading: false })
-      });
+      })
   }
 
   downloadBinary() {
@@ -182,16 +180,11 @@ class AddAgentModal extends React.PureComponent {
       },
     )
       .then(response => {
-        this.setState({ loading: false })
-        const url = window.URL.createObjectURL(new Blob([response.data]));
-        const link = document.createElement('a');
-        link.href = url;
-        link.setAttribute('download', 'apollo-agent.bin');
-        link.click();
+        this.newAgentHandler.downloadFile(response.data)
       })
-      .catch(_ => {
-        this.setState({ loading: false })
-      })
+      .finally(_ => {
+        this.setState({loading: false})
+      });
   }
 
   closeModal() {

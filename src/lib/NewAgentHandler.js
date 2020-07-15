@@ -12,4 +12,11 @@ export default class NewAgentHandler {
   getExecuteCommand(agentId, secret, host) {
     return `chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=${agentId} --secret=${secret} --host=${host}`;
   };
+
+  downloadFile(data) {
+    const link = document.createElement('a');
+    link.href = window.URL.createObjectURL(new Blob([data]));
+    link.setAttribute('download', 'apollo-agent.bin');
+    link.click();
+  }
 };
