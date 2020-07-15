@@ -4,6 +4,11 @@ import { darkTheme } from '../../src/theme';
 test("root reducer should contain all reducers", () => {
   expect(rootReducer(undefined, {})).toEqual({
     authenticated: false,
-    theme: darkTheme
+    theme: darkTheme,
+    addAgent: {
+      modalVisible: false,
+      selectedArchitecture: "amd64",
+      selectedOperatingSystem: "linux"
+    }
   });
 });
