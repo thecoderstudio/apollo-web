@@ -1,11 +1,8 @@
 import React from 'react';
 import WS from 'jest-websocket-mock';
-import Enzyme, { mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { mount } from 'enzyme';
 import { darkTheme } from '../../../src/theme';
 import { Terminal, openTerminal } from '../../../src/components/terminal/Terminal';
-
-Enzyme.configure({ adapter: new Adapter() });
 
 const mockAgent = {
   // Fake UUID

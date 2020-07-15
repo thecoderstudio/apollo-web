@@ -1,12 +1,10 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import WS from 'jest-websocket-mock';
-import Enzyme, { mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { mount } from 'enzyme';
+import { Rnd } from 'react-rnd';
 import TerminalWindow from '../../../src/components/terminal/TerminalWindow';
 import { darkTheme } from '../../../src/theme';
-
-Enzyme.configure({ adapter: new Adapter() });
 
 function getComponentTags(connection_state, onClose=jest.fn()) {
   return (
@@ -53,14 +51,29 @@ describe('agent list item', () => {
 
   it('correctly renders connected', () => {
     const wrapper = mount(getComponentTags("connected"));
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('correctly renders disconnected', () => {
     const wrapper = mount(getComponentTags("disconnected"));
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('resizes', () => {
+    const wrapper = mount(getComponentTags("connected"));
+    wrapper.find(Rnd).instance().props.onResize(null, null, null, null, null);
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('opens terminal in new window', () => {
+    const location = window.location;
+    const expectedHref = `${location.protocol}//${location.host}/agent/fakeid/shell`
+    global.open = jest.fn();
 
+    const wrapper = mount(getComponentTags("connected"));
+    wrapper.find('#expand-button').at(0).simulate('click');
+
+    expect(global.open).toHaveBeenCalledWith(expectedHref);
   });
 
   it('closes', () => {

@@ -1,19 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`dashboard renders correctly 1`] = `
+.c1 {
+  display: grid;
+  grid-column: agent-listing;
+  grid-template-rows: [title] 50px [list] 1fr;
+  border-radius: 8px;
+  maring: 20px;
+  padding: 20px;
+}
+
+.c2 {
+  grid-row: title;
+}
+
+.c3 {
+  grid-row: list;
+  list-style: none;
+  padding-left: 0;
+}
+
+.c0 {
+  display: grid;
+  grid-row: 2;
+  margin: 25px;
+  grid-template-columns: [agent-listing] 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    grid-template-columns: [agent-listing] 1fr;
+  }
+}
+
 <div
-  className="sc-fzoXzr sc-fzpjYC eGEaRU"
+  className="sc-fzoXzr c0"
 >
   <div
-    className="sc-fzqNJr ixjFVZ"
+    className="c1"
   >
     <h2
-      className="sc-fzoyAV XWLst"
+      className="c2"
     >
       Agents
     </h2>
     <ul
-      className="sc-fzoLag chSeRf"
+      className="c3"
     />
   </div>
 </div>

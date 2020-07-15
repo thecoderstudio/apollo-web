@@ -1,16 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`agentList renders correctly 1`] = `
+.c0 {
+  display: grid;
+  grid-column: agent-listing;
+  grid-template-rows: [title] 50px [list] 1fr;
+  border-radius: 8px;
+  maring: 20px;
+  padding: 20px;
+}
+
+.c1 {
+  grid-row: title;
+}
+
+.c2 {
+  grid-row: list;
+  list-style: none;
+  padding-left: 0;
+}
+
 <div
-  className="sc-fzqNJr ixjFVZ"
+  className="c0"
 >
   <h2
-    className="sc-fzoyAV XWLst"
+    className="c1"
   >
     Agents
   </h2>
   <ul
-    className="sc-fzoLag chSeRf"
+    className="c2"
   />
 </div>
 `;

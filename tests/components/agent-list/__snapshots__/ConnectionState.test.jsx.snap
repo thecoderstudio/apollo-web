@@ -1,14 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`connectionState Gets correct color 1`] = `
+.c0 {
+  float: right;
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c1 {
+  grid-column: status-indicator;
+  height: 12px;
+  width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  float: right;
+  text-align: left;
+}
+
+.c2 {
+  font-size: 1rem;
+  grid-column: status-text;
+  position: relative;
+  text-align: left;
+  margin-left: 15px;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    float: left;
+  }
+}
+
 <div
-  className="sc-AxirZ hLbodF"
+  className="c0"
 >
   <div
-    className="sc-AxiKw jLPcUa"
+    className="c1"
   />
   <span
-    className="sc-AxjAm sc-AxhCb cNpZBW"
+    className="sc-AxjAm c2"
   >
     Blanko
   </span>
@@ -16,14 +46,44 @@ exports[`connectionState Gets correct color 1`] = `
 `;
 
 exports[`connectionState Gets correct color 2`] = `
+.c0 {
+  float: right;
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c1 {
+  grid-column: status-indicator;
+  height: 12px;
+  width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  float: right;
+  text-align: left;
+}
+
+.c2 {
+  font-size: 1rem;
+  grid-column: status-text;
+  position: relative;
+  text-align: left;
+  margin-left: 15px;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    float: left;
+  }
+}
+
 <div
-  className="sc-AxirZ hLbodF"
+  className="c0"
 >
   <div
-    className="sc-AxiKw jLPcUa"
+    className="c1"
   />
   <span
-    className="sc-AxjAm sc-AxhCb cNpZBW"
+    className="sc-AxjAm c2"
   >
     Disconnected
   </span>
@@ -31,14 +91,44 @@ exports[`connectionState Gets correct color 2`] = `
 `;
 
 exports[`connectionState Gets correct color 3`] = `
+.c0 {
+  float: right;
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c1 {
+  grid-column: status-indicator;
+  height: 12px;
+  width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  float: right;
+  text-align: left;
+}
+
+.c2 {
+  font-size: 1rem;
+  grid-column: status-text;
+  position: relative;
+  text-align: left;
+  margin-left: 15px;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    float: left;
+  }
+}
+
 <div
-  className="sc-AxirZ hLbodF"
+  className="c0"
 >
   <div
-    className="sc-AxiKw jLPcUa"
+    className="c1"
   />
   <span
-    className="sc-AxjAm sc-AxhCb cNpZBW"
+    className="sc-AxjAm c2"
   >
     Connecting
   </span>
@@ -46,14 +136,44 @@ exports[`connectionState Gets correct color 3`] = `
 `;
 
 exports[`connectionState Gets correct color 4`] = `
+.c0 {
+  float: right;
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c1 {
+  grid-column: status-indicator;
+  height: 12px;
+  width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  float: right;
+  text-align: left;
+}
+
+.c2 {
+  font-size: 1rem;
+  grid-column: status-text;
+  position: relative;
+  text-align: left;
+  margin-left: 15px;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    float: left;
+  }
+}
+
 <div
-  className="sc-AxirZ hLbodF"
+  className="c0"
 >
   <div
-    className="sc-AxiKw jLPcUa"
+    className="c1"
   />
   <span
-    className="sc-AxjAm sc-AxhCb cNpZBW"
+    className="sc-AxjAm c2"
   >
     Connected
   </span>
@@ -61,14 +181,44 @@ exports[`connectionState Gets correct color 4`] = `
 `;
 
 exports[`connectionState renders correctly 1`] = `
+.c0 {
+  float: right;
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c1 {
+  grid-column: status-indicator;
+  height: 12px;
+  width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  float: right;
+  text-align: left;
+}
+
+.c2 {
+  font-size: 1rem;
+  grid-column: status-text;
+  position: relative;
+  text-align: left;
+  margin-left: 15px;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    float: left;
+  }
+}
+
 <div
-  className="sc-AxirZ hLbodF"
+  className="c0"
 >
   <div
-    className="sc-AxiKw jLPcUa"
+    className="c1"
   />
   <span
-    className="sc-AxjAm sc-AxhCb cNpZBW"
+    className="sc-AxjAm c2"
   >
     Connected
   </span>

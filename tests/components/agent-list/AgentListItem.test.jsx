@@ -2,14 +2,11 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { ThemeProvider } from 'styled-components';
 import WS from 'jest-websocket-mock';
-import Enzyme, { mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { mount } from 'enzyme';
 import AgentListItem from '../../../src/components/agent-list/AgentListItem';
 import TerminalWindow from '../../../src/components/terminal/TerminalWindow';
 import { darkTheme } from '../../../src/theme';
 import MobileChecker from '../../../src/util/MobileChecker';
-
-Enzyme.configure({ adapter: new Adapter() });
 
 function getComponentTags(connection_state) {
   return (
@@ -69,11 +66,11 @@ describe('agent list item', () => {
 
   it('opens and closes the terminal', () => {
     wrapper.find('i').simulate('click');
-    expect(wrapper.find(TerminalWindow)).toHaveLength(1);
+    expect(wrapper).toMatchSnapshot();
 
     // Close is supposed to call a callback given by the list item.
     wrapper.find('#close-button').at(0).simulate('click');
-    expect(wrapper.find(TerminalWindow)).toHaveLength(0);
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('opens terminal in new window on mobile', () => {
