@@ -65,6 +65,16 @@ describe('Terminal', () => {
     assertConnection();
     expect(server).toReceiveMessage("test");
   });
+
+  it('throw unexpected fit errors', () => {
+    terminal.fitAddon.fit = jest.fn();
+    terminal.fitAddon.fit.mockImplementation(() => {
+      throw new Error()
+    });
+    expect(() => {
+      terminal.fit();
+    }).toThrow();
+  })
 });
 
 test("openTerminal opens new window", () => {
