@@ -57,7 +57,9 @@
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "!src/index.js",
-      "!src/store.js"
+      "!src/store.js",
+      "!src/transformers/**",
+      "!src/util/MobileChecker.js"
     ],
     "clearMocks": true,
     "setupFilesAfterEnv": ["<rootDir>/tests/setupTests.js"],
