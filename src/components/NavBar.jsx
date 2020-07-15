@@ -43,12 +43,12 @@ class NavBar extends React.PureComponent {
 
   openAddAgentModal() {
     let { dispatch } = this.props;
-    dispatch(showAddAgentModal())
+    dispatch(showAddAgentModal());
   }
 
   logout() {
     let { dispatch } = this.props;
-    dispatch(logoutAction())
+    dispatch(logoutAction());
   }
 
   render() {

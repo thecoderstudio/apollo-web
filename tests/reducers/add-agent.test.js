@@ -1,16 +1,61 @@
 import addAgentReducer from '../../src/reducers/add-agent';
-import { SHOW_ADD_AGENT_MODAL, CLOSE_ADD_AGENT_MODAL } from '../../src/actions/add-agent';
+import {
+  SHOW_ADD_AGENT_MODAL,
+  CLOSE_ADD_AGENT_MODAL,
+  SELECT_ARCHITECTURE,
+  SELECT_OPERATING_SYSTEM
+} from '../../src/actions/add-agent';
+
+const initialState = {
+  modalVisible: false,
+  selectedArchitecture: "amd64",
+  selectedOperatingSystem: "linux"
+}
 
 describe("auth reducer", () => {
   it("should return false as initial state", () => {
-    expect(addAgentReducer(undefined, {})).toEqual(false);
+    expect(addAgentReducer(undefined, {})).toEqual(initialState);
   });
 
   it("should correctly handle show", () => {
-    expect(addAgentReducer({}, { type: SHOW_ADD_AGENT_MODAL })).toEqual(true);
+    expect(addAgentReducer(initialState, { type: SHOW_ADD_AGENT_MODAL })).toEqual(
+      {
+        ...state,
+        modalVisible: true
+      }
+    );
   });
 
   it("should correctly handle close", () => {
-    expect(addAgentReducer({}, { type: CLOSE_ADD_AGENT_MODAL })).toEqual(false);
+    expect(addAgentReducer(initialState, { type: CLOSE_ADD_AGENT_MODAL })).toEqual(
+      {
+        ...state,
+        modalVisible: false
+      }
+    );
+  });
+
+  it("should correcty select architecture", () => {
+    expect(addAgentReducer(initialState, {
+      type: SELECT_ARCHITECTURE,
+      selectedArchitecture: 'amd64'
+    })).toEqual(
+      {
+        ...state,
+        selectedArchitecture: 'amd64'
+      }
+    );
+  })
+
+  it("should correcty select os", () => {
+    expect(addAgentReducer(initialState, {
+      type: SELECT_OPERATING_SYSTEM,
+      selectedOperatingSystem: 'linux'
+    })).toEqual(
+      {
+        ...state,
+        selectedOperatingSystem: 'os'
+      }
+    );
   });
 });

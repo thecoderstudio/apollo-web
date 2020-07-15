@@ -6,7 +6,7 @@ import {
 } from '../actions/add-agent';
 
 const initialState = {
-  modalVisible: true,
+  modalVisible: false,
   selectedArchitecture: "amd64",
   selectedOperatingSystem: "linux"
 }

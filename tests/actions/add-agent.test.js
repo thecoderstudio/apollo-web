@@ -28,7 +28,7 @@ test("select os creates select os action" , () => {
     type: SELECT_OPERATING_SYSTEM,
     selectedOperatingSystem: "linux"
   };
-  expect(showAddAgentModal('linux')).toEqual(expectedAction);
+  expect(selectOperatingSystem('linux')).toEqual(expectedAction);
 });
 
 test("select arch creates select arch action", () => {
@@ -36,5 +36,5 @@ test("select arch creates select arch action", () => {
     type: SELECT_ARCHITECTURE,
     selectedArchitecture: 'amd64'
   };
-  expect(closeAddAgentModal('amd64')).toEqual(expectedAction);
+  expect(selectArchitecture('amd64')).toEqual(expectedAction);
 });
