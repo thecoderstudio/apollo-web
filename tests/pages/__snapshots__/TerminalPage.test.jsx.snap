@@ -61,7 +61,7 @@ exports[`agent list item correctly renders 1`] = `
           agents={
             Map {
               "fakeid" => Object {
-                "connection_state": "connected",
+                "connectionState": "connected",
                 "id": "fakeid",
                 "name": "fake",
               },
@@ -79,7 +79,7 @@ exports[`agent list item correctly renders 1`] = `
           <WithTheme(Terminal)
             agent={
               Object {
-                "connection_state": "connected",
+                "connectionState": "connected",
                 "id": "fakeid",
                 "name": "fake",
               }
@@ -88,7 +88,7 @@ exports[`agent list item correctly renders 1`] = `
             <Terminal
               agent={
                 Object {
-                  "connection_state": "connected",
+                  "connectionState": "connected",
                   "id": "fakeid",
                   "name": "fake",
                 }

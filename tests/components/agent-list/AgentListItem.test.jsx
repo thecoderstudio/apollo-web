@@ -8,22 +8,22 @@ import TerminalWindow from '../../../src/components/terminal/TerminalWindow';
 import { darkTheme } from '../../../src/theme';
 import MobileChecker from '../../../src/util/MobileChecker';
 
-function getComponentTags(connection_state) {
+function getComponentTags(connectionState) {
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
         <AgentListItem agent={{
           id: "fakeid",
           name: "agentName",
-          connection_state: connection_state
+          connectionState: connectionState
         }} />
       </ThemeProvider>
     </div>
   );
 }
 
-function getComponent(connection_state) {
-  return renderer.create(getComponentTags(connection_state));
+function getComponent(connectionState) {
+  return renderer.create(getComponentTags(connectionState));
 }
 
 describe('agent list item', () => {

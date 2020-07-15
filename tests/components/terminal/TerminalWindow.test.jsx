@@ -6,7 +6,7 @@ import { Rnd } from 'react-rnd';
 import TerminalWindow from '../../../src/components/terminal/TerminalWindow';
 import { darkTheme } from '../../../src/theme';
 
-function getComponentTags(connection_state, onClose=jest.fn()) {
+function getComponentTags(connectionState, onClose=jest.fn()) {
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
@@ -15,7 +15,7 @@ function getComponentTags(connection_state, onClose=jest.fn()) {
           agent={{
             id: "fakeid",
             name: "agentName",
-            connection_state: connection_state
+            connectionState: connectionState
           }}
         />
       </ThemeProvider>

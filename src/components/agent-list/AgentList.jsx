@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import AgentListItem from './AgentListItem';
 import React from 'react';
 import styled from 'styled-components';
+import AgentListItem from './AgentListItem';
 import { listAgents as listAgentsAction } from '../../actions/agent';
 
 const Content = styled.div`

@@ -39,8 +39,8 @@ describe('agentList', () => {
 
   it("correctly dispatches list agents", async () => {
     const data = [
-      { id: "id", name: "name", connection_state: "connected" },
-      { id: "id2", name: "name", connection_state: "connected" },
+      { id: "id", name: "name", connectionState: "connected" },
+      { id: "id2", name: "name", connectionState: "connected" },
     ];
 
     const server = new WS(`ws://localhost:1234/agent`, { jsonProtocol: true });
@@ -60,8 +60,8 @@ describe('agentList', () => {
 
   it("correctly lists multiple agents", () => {
     const data = new Map();
-    data.set('id', { id: "id", name: "name", connection_state: "connected" })
-    data.set('id2', { id: "id2", name: "name2", connection_state: "connected" })
+    data.set('id', { id: "id", name: "name", connectionState: "connected" })
+    data.set('id2', { id: "id2", name: "name2", connectionState: "connected" })
     store = mockStore({
       authenticated: true,
       agent: data

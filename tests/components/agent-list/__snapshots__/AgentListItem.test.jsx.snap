@@ -211,7 +211,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
     <AgentListItem
       agent={
         Object {
-          "connection_state": "connected",
+          "connectionState": "connected",
           "id": "fakeid",
           "name": "agentName",
         }
@@ -273,7 +273,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
           <WithTheme(TerminalWindow)
             agent={
               Object {
-                "connection_state": "connected",
+                "connectionState": "connected",
                 "id": "fakeid",
                 "name": "agentName",
               }
@@ -283,7 +283,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
             <TerminalWindow
               agent={
                 Object {
-                  "connection_state": "connected",
+                  "connectionState": "connected",
                   "id": "fakeid",
                   "name": "agentName",
                 }
@@ -525,7 +525,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                             <WithTheme(Terminal)
                               agent={
                                 Object {
-                                  "connection_state": "connected",
+                                  "connectionState": "connected",
                                   "id": "fakeid",
                                   "name": "agentName",
                                 }
@@ -534,7 +534,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                               <Terminal
                                 agent={
                                   Object {
-                                    "connection_state": "connected",
+                                    "connectionState": "connected",
                                     "id": "fakeid",
                                     "name": "agentName",
                                   }
@@ -895,7 +895,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
     <AgentListItem
       agent={
         Object {
-          "connection_state": "connected",
+          "connectionState": "connected",
           "id": "fakeid",
           "name": "agentName",
         }

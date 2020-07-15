@@ -39,7 +39,7 @@ describe('agent list item', () => {
     agents.set('fakeid', {
       id: 'fakeid',
       name: 'fake',
-      connection_state: 'connected'
+      connectionState: 'connected'
     });
     const store = mockStore({
       agent: agents

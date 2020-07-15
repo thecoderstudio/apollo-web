@@ -107,7 +107,7 @@ exports[`agent list item correctly renders connected 1`] = `
     <WithTheme(TerminalWindow)
       agent={
         Object {
-          "connection_state": "connected",
+          "connectionState": "connected",
           "id": "fakeid",
           "name": "agentName",
         }
@@ -117,7 +117,7 @@ exports[`agent list item correctly renders connected 1`] = `
       <TerminalWindow
         agent={
           Object {
-            "connection_state": "connected",
+            "connectionState": "connected",
             "id": "fakeid",
             "name": "agentName",
           }
@@ -359,7 +359,7 @@ exports[`agent list item correctly renders connected 1`] = `
                       <WithTheme(Terminal)
                         agent={
                           Object {
-                            "connection_state": "connected",
+                            "connectionState": "connected",
                             "id": "fakeid",
                             "name": "agentName",
                           }
@@ -368,7 +368,7 @@ exports[`agent list item correctly renders connected 1`] = `
                         <Terminal
                           agent={
                             Object {
-                              "connection_state": "connected",
+                              "connectionState": "connected",
                               "id": "fakeid",
                               "name": "agentName",
                             }
@@ -705,7 +705,7 @@ exports[`agent list item correctly renders disconnected 1`] = `
     <WithTheme(TerminalWindow)
       agent={
         Object {
-          "connection_state": "disconnected",
+          "connectionState": "disconnected",
           "id": "fakeid",
           "name": "agentName",
         }
@@ -715,7 +715,7 @@ exports[`agent list item correctly renders disconnected 1`] = `
       <TerminalWindow
         agent={
           Object {
-            "connection_state": "disconnected",
+            "connectionState": "disconnected",
             "id": "fakeid",
             "name": "agentName",
           }
@@ -957,7 +957,7 @@ exports[`agent list item correctly renders disconnected 1`] = `
                       <WithTheme(Terminal)
                         agent={
                           Object {
-                            "connection_state": "disconnected",
+                            "connectionState": "disconnected",
                             "id": "fakeid",
                             "name": "agentName",
                           }
@@ -966,7 +966,7 @@ exports[`agent list item correctly renders disconnected 1`] = `
                         <Terminal
                           agent={
                             Object {
-                              "connection_state": "disconnected",
+                              "connectionState": "disconnected",
                               "id": "fakeid",
                               "name": "agentName",
                             }
@@ -1303,7 +1303,7 @@ exports[`agent list item resizes 1`] = `
     <WithTheme(TerminalWindow)
       agent={
         Object {
-          "connection_state": "connected",
+          "connectionState": "connected",
           "id": "fakeid",
           "name": "agentName",
         }
@@ -1313,7 +1313,7 @@ exports[`agent list item resizes 1`] = `
       <TerminalWindow
         agent={
           Object {
-            "connection_state": "connected",
+            "connectionState": "connected",
             "id": "fakeid",
             "name": "agentName",
           }
@@ -1555,7 +1555,7 @@ exports[`agent list item resizes 1`] = `
                       <WithTheme(Terminal)
                         agent={
                           Object {
-                            "connection_state": "connected",
+                            "connectionState": "connected",
                             "id": "fakeid",
                             "name": "agentName",
                           }
@@ -1564,7 +1564,7 @@ exports[`agent list item resizes 1`] = `
                         <Terminal
                           agent={
                             Object {
-                              "connection_state": "connected",
+                              "connectionState": "connected",
                               "id": "fakeid",
                               "name": "agentName",
                             }

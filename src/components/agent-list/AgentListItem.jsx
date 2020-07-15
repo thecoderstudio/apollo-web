@@ -92,7 +92,7 @@ class AgentListItem extends React.PureComponent {
   }
 
   render() {
-    const connected = this.props.agent.connection_state == 'connected';
+    const connected = this.props.agent.connectionState == 'connected';
     let terminal;
     if (this.state.terminalOpen) {
       terminal = this.createTerminal();
@@ -102,7 +102,7 @@ class AgentListItem extends React.PureComponent {
       <Container>
         <StyledText>{this.props.agent.name}</StyledText>
           <Controls>
-            <ConnectionState connectionState={this.props.agent.connection_state} />
+            <ConnectionState connectionState={this.props.agent.connectionState} />
             <TerminalIcon active={connected} onClick={this.openTerminal} className="fas fa-terminal" />
           </Controls>
           {terminal}
