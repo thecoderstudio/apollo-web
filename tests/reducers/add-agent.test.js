@@ -20,7 +20,7 @@ describe("auth reducer", () => {
   it("should correctly handle show", () => {
     expect(addAgentReducer(initialState, { type: SHOW_ADD_AGENT_MODAL })).toEqual(
       {
-        ...state,
+        ...initialState,
         modalVisible: true
       }
     );
@@ -29,7 +29,7 @@ describe("auth reducer", () => {
   it("should correctly handle close", () => {
     expect(addAgentReducer(initialState, { type: CLOSE_ADD_AGENT_MODAL })).toEqual(
       {
-        ...state,
+        ...initialState,
         modalVisible: false
       }
     );
@@ -41,7 +41,7 @@ describe("auth reducer", () => {
       selectedArchitecture: 'amd64'
     })).toEqual(
       {
-        ...state,
+        ...initialState,
         selectedArchitecture: 'amd64'
       }
     );
@@ -53,8 +53,8 @@ describe("auth reducer", () => {
       selectedOperatingSystem: 'linux'
     })).toEqual(
       {
-        ...state,
-        selectedOperatingSystem: 'os'
+        ...initialState,
+        selectedOperatingSystem: 'linux'
       }
     );
   });

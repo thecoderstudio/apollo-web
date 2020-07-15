@@ -6,8 +6,8 @@ import PropTypes from 'prop-types';
 const propTypes = {
   options: PropTypes.array.isRequired,
   optionSelectedAction: PropTypes.func.isRequired,
-  selected: PropTypes.string
-}
+  selected: PropTypes.string.isRequired
+};
 
 const DropDownWrapper = styled.div`
   padding: 15px;
@@ -113,7 +113,7 @@ class DropDown extends React.PureComponent {
   render() {
     return(
       <DropDownWrapper ref={node => this.node = node}>
-        <DropDownButton onClick={this.toggleCollapse}>
+        <DropDownButton id='dropdown' onClick={this.toggleCollapse}>
           {this.props.selected}
           <DropDownIcon collapsed={this.state.collapsed}/>
         </DropDownButton>

@@ -22,7 +22,10 @@ describe('login', () => {
 
   beforeEach(() => {
     store = mockStore({
-      authenticated: false
+      authenticated: false,
+      modalVisible: false,
+      selectedArchitecture: "amd64",
+      selectedOperatingSystem: "linux"
     });
     process.env = {
       APOLLO_HTTP_URL: 'http://localhost:1234/'

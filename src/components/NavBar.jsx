@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { logout as logoutAction } from '../actions/auth';
 import { showAddAgentModal } from '../actions/add-agent';
+
 import Button from './buttons/Button';
 import OutlinedButton from './buttons/OutlinedButton';
 import AddAgentModal from './AddAgentModal';
@@ -55,7 +56,7 @@ class NavBar extends React.PureComponent {
     return (
       <NavigationBar>
         <NewAgentButton onClick={this.openAddAgentModal}>Add new agent</NewAgentButton>
-        <Logout onClick={this.logout}>Logout</Logout>
+        <Logout id='logoutButton' onClick={this.logout}>Logout</Logout>
         <AddAgentModal />
       </NavigationBar>
     );

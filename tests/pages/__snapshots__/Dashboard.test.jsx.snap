@@ -2,13 +2,79 @@
 
 exports[`dashboard renders correctly 1`] = `
 <div
-  className="sc-AxiKw cQhYjZ"
+  className="sc-fzoxKX cTwhaG"
 >
   <button
-    className="sc-AxjAm sc-AxirZ sc-AxhCb egA-DhE"
+    className="sc-AxjAm sc-fzoYkl jcocaT"
+    onClick={[Function]}
+  >
+    Add new agent
+  </button>
+  <button
+    className="sc-AxjAm sc-AxirZ sc-fzoKki gKjcTr"
+    id="logoutButton"
     onClick={[Function]}
   >
     Logout
   </button>
+  <div
+    className="sc-AxhUy gGlIKc"
+  >
+    <div
+      className="sc-AxhCb sc-AxgMl jKdfLf"
+    >
+      <h2
+        className="sc-AxheI biVcmg"
+      >
+        Choose installation
+      </h2>
+      <div
+        className="sc-Axmtr ezmgWD"
+      >
+        <div
+          className="sc-fznJRM jIWmxl"
+        >
+          <div
+            className="sc-fznWqX ULKNC"
+          >
+            <button
+              className="sc-AxjAm sc-AxirZ sc-fzoLsD bCkLQg"
+              onClick={[Function]}
+            >
+              <h3
+                className="sc-fzpans jXuSvn"
+              >
+                Directly on target machine.
+              </h3>
+              <span
+                className="sc-fzozJi sc-fzplWN dJDgft"
+              >
+                You have the correct permissions to download the binary directly on the target machine.
+              </span>
+            </button>
+          </div>
+          <div
+            className="sc-fzoiQi jXGlMn"
+          >
+            <button
+              className="sc-AxjAm sc-AxirZ sc-fzoLsD bCkLQg"
+              onClick={[Function]}
+            >
+              <h3
+                className="sc-fzpans jXuSvn"
+              >
+                Manual upload
+              </h3>
+              <span
+                className="sc-fzozJi sc-fzplWN dJDgft"
+              >
+                You download and upload the binary yourself.
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;

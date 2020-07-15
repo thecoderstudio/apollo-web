@@ -3,17 +3,83 @@
 exports[`app renders correctly authenticated 1`] = `
 <div>
   <div
-    className="sc-fzplWN iqrqGl"
+    className="sc-fzqMAW jBnUOe"
   >
     <div
-      className="sc-AxiKw iEmVtl"
+      className="sc-fzoxKX jlZZNK"
     >
       <button
-        className="sc-AxjAm sc-AxirZ sc-AxhCb kLpzuA"
+        className="sc-AxjAm sc-fzoYkl dlumSS"
+        onClick={[Function]}
+      >
+        Add new agent
+      </button>
+      <button
+        className="sc-AxjAm sc-AxirZ sc-fzoKki hNrryL"
+        id="logoutButton"
         onClick={[Function]}
       >
         Logout
       </button>
+      <div
+        className="sc-AxhUy dienzb"
+      >
+        <div
+          className="sc-AxhCb sc-AxgMl lnGMRh"
+        >
+          <h2
+            className="sc-AxheI biVcmg"
+          >
+            Choose installation
+          </h2>
+          <div
+            className="sc-Axmtr ezmgWD"
+          >
+            <div
+              className="sc-fznJRM jIWmxl"
+            >
+              <div
+                className="sc-fznWqX ULKNC"
+              >
+                <button
+                  className="sc-AxjAm sc-AxirZ sc-fzoLsD iRZEIw"
+                  onClick={[Function]}
+                >
+                  <h3
+                    className="sc-fzpans jXuSvn"
+                  >
+                    Directly on target machine.
+                  </h3>
+                  <span
+                    className="sc-fzozJi sc-fzplWN dJDgft"
+                  >
+                    You have the correct permissions to download the binary directly on the target machine.
+                  </span>
+                </button>
+              </div>
+              <div
+                className="sc-fzoiQi jXGlMn"
+              >
+                <button
+                  className="sc-AxjAm sc-AxirZ sc-fzoLsD iRZEIw"
+                  onClick={[Function]}
+                >
+                  <h3
+                    className="sc-fzpans jXuSvn"
+                  >
+                    Manual upload
+                  </h3>
+                  <span
+                    className="sc-fzozJi sc-fzplWN dJDgft"
+                  >
+                    You download and upload the binary yourself.
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -22,44 +88,44 @@ exports[`app renders correctly authenticated 1`] = `
 exports[`app renders correctly unauthenticated 1`] = `
 <div>
   <div
-    className="sc-fzplWN iqrqGl"
+    className="sc-fzqMAW jBnUOe"
   >
     <div
-      className="sc-AxheI SUxVu"
+      className="sc-fzpkJw csegHJ"
     >
       <div
-        className="sc-Axmtr cEHhGj"
+        className="sc-fznzOf bDqSVE"
       >
         <img
-          className="sc-fzpans sSDeb"
+          className="sc-fzqAbL jYFClx"
           src={[Function]}
         />
         <h1
-          className="sc-AxmLO kPhZTY"
+          className="sc-fznMnq hFjLxv"
         >
           Log in to Apollo
         </h1>
         <div
-          className="sc-AxgMl sc-fzozJi cZVrlm"
+          className="sc-AxhCb sc-fzoant caqUfw"
         >
           <form
-            className="sc-fzoLsD gFdOzY"
+            className="sc-fzomME jzvFsa"
             onSubmit={[Function]}
           >
             <input
-              className="sc-AxhUy ymxfm"
+              className="sc-AxiKw ifmUuH"
               onChange={[Function]}
               placeholder="Username"
               type="username"
             />
             <input
-              className="sc-AxhUy ymxfm"
+              className="sc-AxiKw ifmUuH"
               onChange={[Function]}
               placeholder="Password"
               type="password"
             />
             <button
-              className="sc-AxjAm hNiYBm"
+              className="sc-AxjAm glRARr"
             >
               Log in
             </button>

@@ -1,8 +1,10 @@
 import React from 'react';
 import configureStore from 'redux-mock-store';
+import waitForExpect from 'wait-for-expect';
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
 import NavBar from '../../src/components/NavBar';
+import { logout as logoutAction } from '../../src/actions/auth';
 
 const mockStore = configureStore([]);
 
@@ -19,7 +21,13 @@ describe('login', () => {
   let spy;
 
   beforeEach(() => {
-    store = mockStore({});
+    store = mockStore({
+      addAgent: {
+        modalVisible: false,
+        selectedArchitecture: "amd64",
+        selectedOperatingSystem: "linux"
+      },
+    });
     spy = jest.spyOn(store, 'dispatch');
   });
 
@@ -29,9 +37,14 @@ describe('login', () => {
   });
 
   it("handles successful logout", async () => {
-    let tree = getComponent(store);
-    const instance = tree.root;
-    instance.findByType('button').props.onClick();
-    expect(tree).toMatchSnapshot();
+    let component = getComponent(store);
+    const instance = component.root;
+    instance.findByProps({ id: 'logoutButton' }).props.onClick();
+    expect(component.toJSON()).toMatchSnapshot();
+
+    await waitForExpect(() => {
+      expect(spy).toHaveBeenCalledWith(logoutAction());
+    });
   });
 });
+

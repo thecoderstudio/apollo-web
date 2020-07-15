@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown renders correctly 1`] = `
+<div
+  className="sc-AxjAm kOQHwu"
+>
+  <div
+    className="sc-AxirZ eWTnqv"
+    onClick={[Function]}
+  >
+    1
+    <div
+      className="sc-AxhUy fYxBsM"
+    />
+  </div>
+  <ul
+    className="sc-AxiKw eFHXOR"
+  >
+    <li
+      className="sc-AxhCb keVaas"
+      onClick={[Function]}
+    >
+      2
+    </li>
+  </ul>
+</div>
+`;

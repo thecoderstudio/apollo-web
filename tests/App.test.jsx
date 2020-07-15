@@ -25,7 +25,12 @@ describe('app', () => {
 
   it("renders correctly authenticated", () => {
     const store = mockStore({
-      authenticated: true
+      authenticated: true,
+      addAgent: {
+        modalVisible: false,
+        selectedArchitecture: "amd64",
+        selectedOperatingSystem: "linux"
+      },
     });
     const tree = getComponent(store).toJSON();
     expect(tree).toMatchSnapshot();

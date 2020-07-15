@@ -8,7 +8,12 @@ describe('dashboard', () => {
   it("renders correctly", () => {
     let mockStore = configureStore([]);
     const store = mockStore({
-      authenticated: true
+      authenticated: true,
+      addAgent: {
+        modalVisible: false,
+        selectedArchitecture: "amd64",
+        selectedOperatingSystem: "linux"
+      }
     });
 
     const tree = renderer.create(
