@@ -5,6 +5,7 @@ import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import ProtectedRoute from './components/ProtectedRoute';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
+import Users from './pages/Users';
 import { darkTheme } from './theme';
 
 const GlobalStyle = createGlobalStyle`
@@ -42,6 +43,7 @@ function App(props) {
           <Content>
             <Switch>
               <ProtectedRoute exact path='/' component={Dashboard} fallbackComponent={Login} />
+              <ProtectedRoute exact path='/users' component={Users} fallbackComponent={Login} />
             </Switch>
             <GlobalStyle />
           </Content>
