@@ -2,11 +2,9 @@ import React from 'react';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
-import DropDown from "../../src/components/Drowdown";
+import DropDown from "../../src/components/Dropdown";
 
 const mockStore = configureStore([]);
-
-
 
 function getComponent(store, props) {
   return renderer.create(
@@ -35,7 +33,7 @@ describe('Dropdown', () => {
   });
 
   it("opens dropdown correctly", () => {
-    let component = getComponent(store);
+    let component = getComponent(store, props);
     const instance = component.root;
     instance.findByProps({ id: 'dropdown' }).props.onClick();
     expect(component.toJSON()).toMatchSnapshot();

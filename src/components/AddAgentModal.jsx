@@ -7,7 +7,7 @@ import Modal from './Modal';
 import DescriptionButton from './buttons/DescriptionButton';
 import Button from "./buttons/Button";
 import OutlinedButton from "./buttons/OutlinedButton";
-import DropDown from "./Drowdown";
+import DropDown from "./Dropdown";
 import {Text} from "./Text";
 import { closeAddAgentModal, selectArchitecture, selectOperatingSystem } from "../actions/add-agent";
 import CopyToClipboard from "./CopyToClipboard";
@@ -34,12 +34,12 @@ const ColumnTwo = styled.div`
 const TextAndInputFieldWrapper = styled.div`
   display: grid;
   width: 100%;
-  grid-template-columns: [text] 60% [dropdown] 40%; 
+  grid-template-columns: [text] 60% [dropdown] 40%;
   height: 80px;
 `;
 
 const InputFieldWrapper = styled.div`
-  grid-column: dropdown; 
+  grid-column: dropdown;
 `;
 
 const TextWrapper = styled(Text)`
@@ -71,7 +71,7 @@ const DownloadBinaryButtonWrapper = styled.div`
 
 const ThreeRowDisplay = styled.div`
   display: grid;
-  grid-template-rows: [description] 1fr [commands] 1fr [button] 1fr 
+  grid-template-rows: [description] 1fr [commands] 1fr [button] 1fr
 `;
 
 const CommandWrapper = styled.div`
@@ -96,12 +96,12 @@ const StyledInput = styled(Input)`
   padding: 15px;
   margin: 15px;
   background-color: ${props => props.theme.lightBlack};
-  color: ${props => props.theme.white}; 
+  color: ${props => props.theme.white};
   border: 1px solid ${props => props.error ? props.theme.error : 'transparent'};
-  
+
   &:focus{
     outline: none;
-    border: 1px solid ${props => props.theme.accent};  
+    border: 1px solid ${props => props.theme.accent};
   }
 `;
 
@@ -109,7 +109,7 @@ const CloseOutlinedButton = styled(OutlinedButton)`
   width: 200px;
   height: 50px;
   margin: auto;
-  display: block; 
+  display: block;
 `;
 
 class AddAgentModal extends React.PureComponent {

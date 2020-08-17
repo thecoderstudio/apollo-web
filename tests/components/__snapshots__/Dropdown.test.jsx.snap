@@ -1,5 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Dropdown opens dropdown correctly 1`] = `
+<div
+  className="sc-AxjAm kOQHwu"
+>
+  <div
+    className="sc-AxirZ eWTnqv"
+    id="dropdown"
+    onClick={[Function]}
+  >
+    1
+    <div
+      className="sc-AxhUy jkziYj"
+    />
+  </div>
+  <ul
+    className="sc-AxiKw dshkOy"
+  >
+    <li
+      className="sc-AxhCb keVaas"
+      onClick={[Function]}
+    >
+      2
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`Dropdown renders correctly 1`] = `
 <div
   className="sc-AxjAm kOQHwu"
