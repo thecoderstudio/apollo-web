@@ -1,21 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dropdown opens dropdown correctly 1`] = `
+exports[`Dropdown closes dropdown correctly 1`] = `
 <div
   className="sc-AxjAm kOQHwu"
 >
   <div
-    className="sc-AxirZ eWTnqv"
+    className="sc-AxirZ jnYetP"
     id="dropdown"
     onClick={[Function]}
   >
     1
     <div
-      className="sc-AxhUy jkziYj"
+      className="sc-AxhUy kPlGDZ"
     />
   </div>
   <ul
-    className="sc-AxiKw dshkOy"
+    className="sc-AxiKw kvMfMt"
+  >
+    <li
+      className="sc-AxhCb keVaas"
+      onClick={[Function]}
+    >
+      2
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Dropdown opens dropdown correctly 1`] = `
+<div
+  className="sc-AxjAm kOQHwu"
+>
+  <div
+    className="sc-AxirZ jnYetP"
+    id="dropdown"
+    onClick={[Function]}
+  >
+    1
+    <div
+      className="sc-AxhUy eufzPu"
+    />
+  </div>
+  <ul
+    className="sc-AxiKw drPEUG"
   >
     <li
       className="sc-AxhCb keVaas"
@@ -32,17 +59,17 @@ exports[`Dropdown renders correctly 1`] = `
   className="sc-AxjAm kOQHwu"
 >
   <div
-    className="sc-AxirZ eWTnqv"
+    className="sc-AxirZ jnYetP"
     id="dropdown"
     onClick={[Function]}
   >
     1
     <div
-      className="sc-AxhUy fYxBsM"
+      className="sc-AxhUy kPlGDZ"
     />
   </div>
   <ul
-    className="sc-AxiKw eFHXOR"
+    className="sc-AxiKw kvMfMt"
   >
     <li
       className="sc-AxhCb keVaas"

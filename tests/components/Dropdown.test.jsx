@@ -1,6 +1,8 @@
 import React from 'react';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
+import waitForExpect from 'wait-for-expect';
+import { selectArchitecture } from "../../src/actions/add-agent";
 import renderer from 'react-test-renderer';
 import DropDown from "../../src/components/Dropdown";
 
@@ -16,16 +18,18 @@ function getComponent(store, props) {
 
 describe('Dropdown', () => {
   let store;
-  const spy = jest.fn();
+  let spy;
   let props;
+
 
   beforeEach(() => {
     store = mockStore({})
     props = {
       options: ['1', '2'],
-      optionSelectedAction: spy,
+      optionSelectedAction: selectArchitecture,
       selected: '1'
     };
+    spy = jest.spyOn(store, 'dispatch');
   });
 
   it("renders correctly", () => {
@@ -36,24 +40,43 @@ describe('Dropdown', () => {
     let component = getComponent(store, props);
     const instance = component.root;
     instance.findByProps({ id: 'dropdown' }).props.onClick();
+
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   it("closes dropdown correctly", () => {
+    let component = getComponent(store, props);
+    const instance = component.root;
+    const dropdown = instance.findByProps({ id: 'dropdown' })
 
+    dropdown.props.onClick();
+    dropdown.props.onClick();
+
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it("correctly calls options selected action", () => {
+  it("correctly calls optionSelectedAction on option click", async () => {
+    const newProps = {
+      ...props,
+      options: ['1']
+    };
 
+    const component = getComponent(store, newProps);
+    component.root.findByType('ul').children[0].props.onClick();
+
+    await waitForExpect(() => {
+      expect(spy).toHaveBeenCalledWith(selectArchitecture('1'));
+    });
   });
 
   it("correctly renders multiple items", () => {
     const newProps = {
       ...props,
       options: ['1', '2', '3']
-    }
-    const tree = getComponent(store, newProps).toJSON();
+    };
 
+    const tree = getComponent(store, newProps).toJSON();
+    expect(component.root.findByType('ul').children.toHaveLength(3));
   })
 
 });

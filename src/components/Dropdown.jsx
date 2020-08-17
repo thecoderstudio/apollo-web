@@ -22,31 +22,31 @@ const DropDownButton = styled.div`
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  
+
   padding: 15px;
   background-color: ${props => props.theme.lightBlack};
-  
-  text-overflow: ellipsis; 
+
+  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 `;
 
 const DropDownContent = styled.ul`
   display: ${props => props.collapsed ? 'none' : 'block'};
-  
+
   list-style: none;
   margin: 0;
   padding: 0;
   margin-top: 10px;
-  
+
   width: 230px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   z-index: 1;
-  
+
   color: ${props => props.theme.white};
   background-color: ${props => props.theme.lightBlack};
   border-radius: 4px;
-  
+
   position: fixed;
 `;
 
@@ -69,7 +69,7 @@ const DropDownIcon = styled.div`
 	height: 0px;
 	width: 0px;
 	margin-left: 10px;
-  transform: ${props => props.collapsed ? 'rotate(0)' : 'rotate(180deg)'};	
+  transform: ${props => props.collapsed ? 'rotate(0)' : 'rotate(180deg)'};
   transition: transform 0.3s;
 `;
 
