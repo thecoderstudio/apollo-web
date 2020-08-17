@@ -58,14 +58,14 @@ describe('Dropdown', () => {
   it("correctly calls optionSelectedAction on option click", async () => {
     const newProps = {
       ...props,
-      options: ['1']
+      options: ['1', '2']
     };
 
     const component = getComponent(store, newProps);
     component.root.findByType('ul').children[0].props.onClick();
 
     await waitForExpect(() => {
-      expect(spy).toHaveBeenCalledWith(selectArchitecture('1'));
+      expect(spy).toHaveBeenCalledWith(selectArchitecture('2'));
     });
   });
 
@@ -74,9 +74,7 @@ describe('Dropdown', () => {
       ...props,
       options: ['1', '2', '3']
     };
-
-    const tree = getComponent(store, newProps).toJSON();
+    const component = getComponent(store, newProps);
     expect(component.root.findByType('ul').children.toHaveLength(3));
   })
-
 });
