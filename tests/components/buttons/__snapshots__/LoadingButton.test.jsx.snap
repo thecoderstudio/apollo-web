@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingButton renders correctly 1`] = `
+<button
+  className="sc-AxjAm sc-AxiKw IzWly"
+  onClick={[MockFunction]}
+/>
+`;
+
+exports[`LoadingButton shows loading indicator 1`] = `
+<button
+  className="sc-AxjAm sc-AxiKw IzWly"
+  onClick={[MockFunction]}
+>
+  <img
+    className="sc-AxirZ cITnSC"
+    src={[Function]}
+  />
+</button>
+`;

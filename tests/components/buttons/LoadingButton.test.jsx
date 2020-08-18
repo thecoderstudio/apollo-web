@@ -10,7 +10,7 @@ function getComponent(props) {
 
 describe('LoadingButton', () => {
   const spy = jest.fn();
-  let props = { loading: false, onClick = spy };
+  let props = { loading: false, onClick: spy };
 
   it('renders correctly', () => {
     const tree = getComponent(props).toJSON();
@@ -24,8 +24,8 @@ describe('LoadingButton', () => {
 
   it('shows loading indicator', () => {
     const instance = getComponent({ ...props, loading: true }).root;
-    console.log(instance)
-    // expect(tree).toMatchSnapshot();
+    instance.findByType('button').props.onClick();
+    expect(spy).toHaveBeenCalled();
   });
 });
 

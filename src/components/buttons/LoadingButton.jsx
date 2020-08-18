@@ -6,7 +6,7 @@ import spinnerImg from '../../images/spinner.svg';
 
 const propTypes = {
   loading: PropTypes.bool,
-  onClick: PropTypes.node.isRequired
+  onClick: PropTypes.func.isRequired
 };
 
 const defaultProps = {
