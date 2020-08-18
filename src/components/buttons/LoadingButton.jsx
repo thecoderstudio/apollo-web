@@ -5,7 +5,8 @@ import Button from "./Button";
 import spinnerImg from '../../images/spinner.svg';
 
 const propTypes = {
-  loading: PropTypes.bool
+  loading: PropTypes.bool,
+  onClick: PropTypes.node.isRequired
 };
 
 const defaultProps = {

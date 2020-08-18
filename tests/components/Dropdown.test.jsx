@@ -75,6 +75,6 @@ describe('Dropdown', () => {
       options: ['1', '2', '3']
     };
     const component = getComponent(store, newProps);
-    expect(component.root.findByType('ul').children.toHaveLength(3));
+    expect(component.root.findByType('ul').children).toHaveLength(2);
   })
 });
