@@ -1,24 +1,19 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import LoadingButton from '../../../src/components/buttons/LoadingButton';
+import DescriptionButton from '../../../src/components/buttons/DescriptionButton';
 
 function getComponent(props) {
   return renderer.create(
-    <LoadingButton {...props} />
+    <DescriptionButton {...props} />
   );
 };
 
-describe('LoadingButton', () => {
+describe('DescriptionButton', () => {
   const spy = jest.fn();
-  let props = { loading: false, onClick: spy };
+  let props = { children: <div/>, onClick: spy, title: "title" };
 
   it('renders correctly', () => {
     const tree = getComponent(props).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('shows loading indicator', () => {
-    const tree = getComponent({ ...props, loading: true }).toJSON();
     expect(tree).toMatchSnapshot();
   });
 

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DescriptionButton renders correctly 1`] = `
+<button
+  className="sc-AxjAm sc-AxirZ sc-AxhUy eXDOuB"
+  onClick={[MockFunction]}
+>
+  <h3
+    className="sc-AxgMl hbEwps"
+  >
+    title
+  </h3>
+  <span
+    className="sc-AxhCb sc-AxheI foyGWt"
+  >
+    <div />
+  </span>
+</button>
+`;
