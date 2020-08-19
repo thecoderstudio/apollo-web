@@ -6,17 +6,23 @@ import OutlinedButton from './buttons/OutlinedButton';
 
 const NavigationBar = styled.div`
   height: 50px;
-  padding: 10px;
+  padding: 16px;
   display: grid;
-  grid-template-columns: 1fr [logout];
+  grid-template-columns: 1fr 8fr [logout];
+  align-items: center;
 
   background-color: ${props => props.theme.lightBlack};
+`;
+
+const Link = styled.a`
+  margin-right: 16px;
 `;
 
 const Logout = styled(OutlinedButton)`
   grid-column: logout;
   float: right;
   width: 100px;
+  height: 75%;
 `;
 
 class NavBar extends React.PureComponent {
@@ -33,6 +39,11 @@ class NavBar extends React.PureComponent {
   render() {
     return (
       <NavigationBar>
+        <h3>Apollo</h3>
+        <div>
+          <Link href='/'>Dashboard</Link>
+          <Link href='/admin'>Admin</Link>
+        </div>
         <Logout onClick={this.logout}>Log out</Logout>
       </NavigationBar>
     );
