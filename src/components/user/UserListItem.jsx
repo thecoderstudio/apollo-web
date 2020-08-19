@@ -10,7 +10,7 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const Username = styled.h4`
+const Username = styled.p`
   margin: 0px;
 `;
 

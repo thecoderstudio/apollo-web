@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import ProtectedRoute from './components/ProtectedRoute';
+import NavBar from './components/NavBar';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
 import Admin from './pages/Admin';
@@ -32,7 +33,6 @@ const GlobalStyle = createGlobalStyle`
 const Content = styled.div`
   height: 100%;
   width: 100%;
-  display: grid;
 `;
 
 function App(props) {
@@ -41,6 +41,7 @@ function App(props) {
       <ThemeProvider theme={darkTheme}>
         <BrowserRouter>
           <Content>
+            <NavBar />
             <Switch>
               <ProtectedRoute exact path='/' component={Dashboard} fallbackComponent={Login} />
               <ProtectedRoute exact path='/admin' component={Admin} fallbackComponent={Login} />
