@@ -1,6 +1,13 @@
 import React from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
 import UserListItem from './UserListItem';
+
+const List = styled.div`
+  >:nth-child(odd) {
+    background-color: ${props => props.theme.black};
+  }
+`;
 
 
 export default class UserList extends React.PureComponent {
@@ -31,11 +38,11 @@ export default class UserList extends React.PureComponent {
 
   render() {
     return (
-      <div>
+      <List>
         {this.state.users.map(user => (
           <UserListItem key={user.id} user={user} />
         ))}
-      </div>
+      </List>
     );
   }
 }
