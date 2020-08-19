@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  padding: 16px;
+  min-height: 60px;
+  padding: 0px 16px;
   margin: 0px;
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -17,6 +18,7 @@ const Role = styled.div`
 `;
 
 const Tag = styled.p`
+  float: right;
   width: 80px;
   padding: 4px;
   font-weight: bold;

@@ -4,8 +4,11 @@ import Card from '../components/Card';
 
 export default function Admin(props) {
   return (
-    <Card>
-      <UserList />
-    </Card>
+    <div>
+      <h1>Admin dashboard</h1>
+      <Card>
+        <UserList />
+      </Card>
+    </div>
   );
 }
