@@ -41,7 +41,7 @@ function App(props) {
       <ThemeProvider theme={darkTheme}>
         <BrowserRouter>
           <Content>
-            <NavBar />
+            {props.authenticated && <NavBar />}
             <Switch>
               <ProtectedRoute exact path='/' component={Dashboard} fallbackComponent={Login} />
               <ProtectedRoute exact path='/admin' component={Admin} fallbackComponent={Login} />
@@ -54,4 +54,6 @@ function App(props) {
   );
 }
 
-export default connect()(App);
+export default connect(
+  state => ({authenticated: state.authenticated})
+)(App);

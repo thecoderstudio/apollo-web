@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { logout as logoutAction } from '../actions/auth';
 import OutlinedButton from './buttons/OutlinedButton';
@@ -14,8 +15,14 @@ const NavigationBar = styled.div`
   background-color: ${props => props.theme.lightBlack};
 `;
 
-const Link = styled.a`
+const StyledLink = styled(Link)`
   margin-right: 16px;
+  text-decoration: none;
+  color: ${props => props.theme.white};
+
+  &:hover {
+    opacity: 0.90;
+  }
 `;
 
 const Logout = styled(OutlinedButton)`
@@ -41,8 +48,8 @@ class NavBar extends React.PureComponent {
       <NavigationBar>
         <h3>Apollo</h3>
         <div>
-          <Link href='/'>Dashboard</Link>
-          <Link href='/admin'>Admin</Link>
+          <StyledLink to='/'>Dashboard</StyledLink>
+          <StyledLink to='/admin'>Admin</StyledLink>
         </div>
         <Logout onClick={this.logout}>Log out</Logout>
       </NavigationBar>
