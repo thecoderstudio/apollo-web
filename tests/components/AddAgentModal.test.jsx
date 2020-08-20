@@ -8,13 +8,8 @@ import AddAgentModal from '../../src/components/AddAgentModal';
 import { closeAddAgentModal, } from "../../src/actions/add-agent";
 import NewAgentHandler from '../../src/lib/NewAgentHandler';
 
-
 const mockStore = configureStore([]);
 jest.mock('axios');
-// jest.mock('../../src/lib/NewAgentHandler', () => ({
-//     supportedArch: ['amd64', 'arm64', 'arm'],
-//     upportedOS: ['linux', 'darwin', 'freebsd', 'openbsd']
-// }));
 
 function getComponent(store) {
   return renderer.create(
@@ -107,7 +102,7 @@ describe('addAgentModal', () => {
     })
   });
 
-  it('creates agent', async () => {
+  it('calls download file correctly', async () => {
     const spy = jest.spyOn(NewAgentHandler.prototype, 'downloadFile').mockImplementation(() => { return });
     const component = getFinalPageComponent(store, 'manualButton');
     const instance = component.root;
