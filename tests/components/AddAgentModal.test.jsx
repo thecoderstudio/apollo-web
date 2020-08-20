@@ -106,10 +106,21 @@ describe('addAgentModal', () => {
       status: 400,
       response: { data: { name: 'error' } }
     });
+
     const component = getFinalPageComponent(store, 'directlyButton');
-    await waitForExpect(() => {
+
+    await waitForExpect(async () => {
       expect(component.toJSON()).toMatchSnapshot();
-    })
+      axios.post.mockRejectedValue({
+        status: 400,
+        response: { data: { somethingElse: 'error' } }
+      });
+
+      component.root.findByProps({ loading: false }).props.onClick();
+      await waitForExpect(() => {
+        expect(component.toJSON()).toMatchSnapshot();
+      });
+    });
   });
 
   it('calls download file correctly', async () => {
