@@ -90,10 +90,11 @@ describe('addAgentModal', () => {
   })
 
   it('creates agent', async () => {
-    axios.get.mockResolvedValue({
+    axios.post.mockResolvedValue({
       status: 200,
-      data: ''
+      data: { id: 'test', oauth_client: { secret: 'test' } }
     });
+
     const component = getFinalPageComponent(store, 'directlyButton');
     await waitForExpect(() => {
       expect(component.toJSON()).toMatchSnapshot();
@@ -112,14 +113,20 @@ describe('addAgentModal', () => {
   });
 
   it('calls download file correctly', async () => {
-    axios.get.mockResolvedValue({
+    axios.post.mockResolvedValue({
       status: 200,
-      data: ''
+      data: { id: 'test', oauth_client: { secret: 'test' } }
     });
+
     const spy = jest.spyOn(NewAgentHandler.prototype, 'downloadFile').mockImplementation(() => { return });
     const component = getFinalPageComponent(store, 'manualButton');
     const instance = component.root;
     component.toJSON();
+
+    axios.get.mockResolvedValue({
+      status: 200,
+      data: ''
+    });
 
     await waitForExpect(() => {
       instance.findByProps({ id: 'downloadBinaryButton' }).props.onClick();
