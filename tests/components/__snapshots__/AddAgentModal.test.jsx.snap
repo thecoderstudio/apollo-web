@@ -1,0 +1,643 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`addAgentModal check for empty agent name 1`] = `
+<div
+  className="sc-AxiKw eqPaRe"
+>
+  <div
+    className="sc-AxirZ sc-AxhCb gWcjrs"
+  >
+    <h2
+      className="sc-AxhUy kyqeXI"
+    >
+      Directly on target machine.
+    </h2>
+    <div
+      className="sc-AxgMl qesma"
+    >
+      <div>
+        <div
+          className="sc-fzqARJ gIhxgi"
+        >
+          <span
+            className="sc-AxmLO sc-fzoyTs jjJyjZ"
+          >
+            Agent name
+          </span>
+          <div
+            className="sc-fzqNqU bDXkCM"
+          >
+            <input
+              className="sc-AxjAm sc-fzqBkg haYrtI"
+              onChange={[Function]}
+              placeholder="007"
+            />
+          </div>
+        </div>
+        <div
+          className="sc-fzqARJ gIhxgi"
+        >
+          <span
+            className="sc-AxmLO sc-fzoyTs jjJyjZ"
+          >
+            Operating system
+          </span>
+          <div
+            className="sc-fzqNqU bDXkCM"
+          >
+            <div
+              className="sc-fznyAO crUbpk"
+            >
+              <div
+                className="sc-fznKkj cfTTXb"
+                id="dropdown"
+                onClick={[Function]}
+              >
+                linux
+                <div
+                  className="sc-fzqBZW jnzxYq"
+                />
+              </div>
+              <ul
+                className="sc-fznZeY xMdrF"
+              >
+                <li
+                  className="sc-fzokOt gDZuMP"
+                  onClick={[Function]}
+                >
+                  darwin
+                </li>
+                <li
+                  className="sc-fzokOt gDZuMP"
+                  onClick={[Function]}
+                >
+                  freebsd
+                </li>
+                <li
+                  className="sc-fzokOt gDZuMP"
+                  onClick={[Function]}
+                >
+                  openbsd
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          className="sc-fzqARJ gIhxgi"
+        >
+          <span
+            className="sc-AxmLO sc-fzoyTs jjJyjZ"
+          >
+            Architecture
+          </span>
+          <div
+            className="sc-fzqNqU bDXkCM"
+          >
+            <div
+              className="sc-fznyAO crUbpk"
+            >
+              <div
+                className="sc-fznKkj cfTTXb"
+                id="dropdown"
+                onClick={[Function]}
+              >
+                amd64
+                <div
+                  className="sc-fzqBZW jnzxYq"
+                />
+              </div>
+              <ul
+                className="sc-fznZeY xMdrF"
+              >
+                <li
+                  className="sc-fzokOt gDZuMP"
+                  onClick={[Function]}
+                >
+                  arm64
+                </li>
+                <li
+                  className="sc-fzokOt gDZuMP"
+                  onClick={[Function]}
+                >
+                  arm
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          className="sc-fznJRM jIWmxl"
+        >
+          <button
+            className="sc-AxheI sc-Axmtr sc-fzqPZZ eqyYUo"
+            id="closeButton"
+            onClick={[Function]}
+          >
+            Close
+          </button>
+          <div
+            className="sc-fzoXWK gBiqkr"
+          >
+            <button
+              className="sc-AxheI sc-fznxsB deHuBN"
+              onClick={[Function]}
+            >
+              Create agent
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`addAgentModal closes modal correctly 1`] = `
+<div
+  className="sc-AxiKw eqPaRe"
+>
+  <div
+    className="sc-AxirZ sc-AxhCb gWcjrs"
+  >
+    <h2
+      className="sc-AxhUy kyqeXI"
+    >
+      Directly on target machine.
+    </h2>
+    <div
+      className="sc-AxgMl qesma"
+    >
+      <div
+        className="sc-fznJRM jIWmxl"
+      >
+        <div
+          className="sc-fznWqX ULKNC"
+        >
+          <button
+            className="sc-AxheI sc-Axmtr sc-fzoLsD bCkLQg"
+            onClick={[Function]}
+          >
+            <h3
+              className="sc-fzpans jXuSvn"
+            >
+              Directly on target machine.
+            </h3>
+            <span
+              className="sc-fzozJi sc-fzplWN dJDgft"
+            >
+              You have the correct permissions to download the binary directly on the target machine.
+            </span>
+          </button>
+        </div>
+        <div
+          className="sc-fzoiQi jXGlMn"
+        >
+          <button
+            className="sc-AxheI sc-Axmtr sc-fzoLsD bCkLQg"
+            onClick={[Function]}
+          >
+            <h3
+              className="sc-fzpans jXuSvn"
+            >
+              Manual upload
+            </h3>
+            <span
+              className="sc-fzozJi sc-fzplWN dJDgft"
+            >
+              You download and upload the binary yourself.
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`addAgentModal creates agent 1`] = `
+<div
+  className="sc-AxiKw eqPaRe"
+>
+  <div
+    className="sc-AxirZ sc-AxhCb gWcjrs"
+  >
+    <h2
+      className="sc-AxhUy kyqeXI"
+    >
+      Directly on target machine.
+    </h2>
+    <div
+      className="sc-AxgMl qesma"
+    >
+      <div
+        className="sc-fznxKY hOhmQT"
+      >
+        <span
+          className="sc-AxmLO sc-fzolEj dTXSgD"
+        >
+          Copy and run the command on the target machine to download run the client.
+        </span>
+        <div
+          className="sc-fznMAR glbjV"
+        >
+          <div
+            className="sc-fzqNJr lglQoL"
+          >
+            <div
+              className="sc-fzoyAV dZsvGk"
+            >
+              curl http://localhost:1970/agent/download?target_os=linux&target_arch=amd64 && chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=test --secret=test --host=localhost:1970
+            </div>
+            <button
+              className="sc-AxheI sc-fzoLag jgDeBs"
+              id="copyToClipboardButton"
+              onClick={[Function]}
+            >
+              <img
+                className="sc-fzoXzr hlhLlT"
+                src={[Function]}
+              />
+            </button>
+          </div>
+        </div>
+        <button
+          className="sc-AxheI sc-fzoNJl sc-fznWOq gzFGsa"
+          id="closeButton"
+          onClick={[Function]}
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`addAgentModal renders correctly 1`] = `
+<div
+  className="sc-AxiKw eqPaRe"
+>
+  <div
+    className="sc-AxirZ sc-AxhCb gWcjrs"
+  >
+    <h2
+      className="sc-AxhUy kyqeXI"
+    >
+      Choose installation
+    </h2>
+    <div
+      className="sc-AxgMl qesma"
+    >
+      <div
+        className="sc-fznJRM jIWmxl"
+      >
+        <div
+          className="sc-fznWqX ULKNC"
+        >
+          <button
+            className="sc-AxheI sc-Axmtr sc-fzoLsD bCkLQg"
+            onClick={[Function]}
+          >
+            <h3
+              className="sc-fzpans jXuSvn"
+            >
+              Directly on target machine.
+            </h3>
+            <span
+              className="sc-fzozJi sc-fzplWN dJDgft"
+            >
+              You have the correct permissions to download the binary directly on the target machine.
+            </span>
+          </button>
+        </div>
+        <div
+          className="sc-fzoiQi jXGlMn"
+        >
+          <button
+            className="sc-AxheI sc-Axmtr sc-fzoLsD bCkLQg"
+            onClick={[Function]}
+          >
+            <h3
+              className="sc-fzpans jXuSvn"
+            >
+              Manual upload
+            </h3>
+            <span
+              className="sc-fzozJi sc-fzplWN dJDgft"
+            >
+              You download and upload the binary yourself.
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`addAgentModal selects directly correctly 1`] = `
+<div
+  className="sc-AxiKw eqPaRe"
+>
+  <div
+    className="sc-AxirZ sc-AxhCb gWcjrs"
+  >
+    <h2
+      className="sc-AxhUy kyqeXI"
+    >
+      Directly on target machine.
+    </h2>
+    <div
+      className="sc-AxgMl qesma"
+    >
+      <div>
+        <div
+          className="sc-fzqARJ gIhxgi"
+        >
+          <span
+            className="sc-AxmLO sc-fzoyTs jjJyjZ"
+          >
+            Agent name
+          </span>
+          <div
+            className="sc-fzqNqU bDXkCM"
+          >
+            <input
+              className="sc-AxjAm sc-fzqBkg dAOHwa"
+              onChange={[Function]}
+              placeholder="007"
+            />
+          </div>
+        </div>
+        <div
+          className="sc-fzqARJ gIhxgi"
+        >
+          <span
+            className="sc-AxmLO sc-fzoyTs jjJyjZ"
+          >
+            Operating system
+          </span>
+          <div
+            className="sc-fzqNqU bDXkCM"
+          >
+            <div
+              className="sc-fznyAO crUbpk"
+            >
+              <div
+                className="sc-fznKkj cfTTXb"
+                id="dropdown"
+                onClick={[Function]}
+              >
+                linux
+                <div
+                  className="sc-fzqBZW jnzxYq"
+                />
+              </div>
+              <ul
+                className="sc-fznZeY xMdrF"
+              >
+                <li
+                  className="sc-fzokOt gDZuMP"
+                  onClick={[Function]}
+                >
+                  darwin
+                </li>
+                <li
+                  className="sc-fzokOt gDZuMP"
+                  onClick={[Function]}
+                >
+                  freebsd
+                </li>
+                <li
+                  className="sc-fzokOt gDZuMP"
+                  onClick={[Function]}
+                >
+                  openbsd
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          className="sc-fzqARJ gIhxgi"
+        >
+          <span
+            className="sc-AxmLO sc-fzoyTs jjJyjZ"
+          >
+            Architecture
+          </span>
+          <div
+            className="sc-fzqNqU bDXkCM"
+          >
+            <div
+              className="sc-fznyAO crUbpk"
+            >
+              <div
+                className="sc-fznKkj cfTTXb"
+                id="dropdown"
+                onClick={[Function]}
+              >
+                amd64
+                <div
+                  className="sc-fzqBZW jnzxYq"
+                />
+              </div>
+              <ul
+                className="sc-fznZeY xMdrF"
+              >
+                <li
+                  className="sc-fzokOt gDZuMP"
+                  onClick={[Function]}
+                >
+                  arm64
+                </li>
+                <li
+                  className="sc-fzokOt gDZuMP"
+                  onClick={[Function]}
+                >
+                  arm
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          className="sc-fznJRM jIWmxl"
+        >
+          <button
+            className="sc-AxheI sc-Axmtr sc-fzqPZZ eqyYUo"
+            id="closeButton"
+            onClick={[Function]}
+          >
+            Close
+          </button>
+          <div
+            className="sc-fzoXWK gBiqkr"
+          >
+            <button
+              className="sc-AxheI sc-fznxsB deHuBN"
+              onClick={[Function]}
+            >
+              Create agent
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`addAgentModal selects manual correctly 1`] = `
+<div
+  className="sc-AxiKw eqPaRe"
+>
+  <div
+    className="sc-AxirZ sc-AxhCb gWcjrs"
+  >
+    <h2
+      className="sc-AxhUy kyqeXI"
+    >
+      Manual upload
+    </h2>
+    <div
+      className="sc-AxgMl qesma"
+    >
+      <div>
+        <div
+          className="sc-fzqARJ gIhxgi"
+        >
+          <span
+            className="sc-AxmLO sc-fzoyTs jjJyjZ"
+          >
+            Agent name
+          </span>
+          <div
+            className="sc-fzqNqU bDXkCM"
+          >
+            <input
+              className="sc-AxjAm sc-fzqBkg dAOHwa"
+              onChange={[Function]}
+              placeholder="007"
+            />
+          </div>
+        </div>
+        <div
+          className="sc-fzqARJ gIhxgi"
+        >
+          <span
+            className="sc-AxmLO sc-fzoyTs jjJyjZ"
+          >
+            Operating system
+          </span>
+          <div
+            className="sc-fzqNqU bDXkCM"
+          >
+            <div
+              className="sc-fznyAO crUbpk"
+            >
+              <div
+                className="sc-fznKkj cfTTXb"
+                id="dropdown"
+                onClick={[Function]}
+              >
+                linux
+                <div
+                  className="sc-fzqBZW jnzxYq"
+                />
+              </div>
+              <ul
+                className="sc-fznZeY xMdrF"
+              >
+                <li
+                  className="sc-fzokOt gDZuMP"
+                  onClick={[Function]}
+                >
+                  darwin
+                </li>
+                <li
+                  className="sc-fzokOt gDZuMP"
+                  onClick={[Function]}
+                >
+                  freebsd
+                </li>
+                <li
+                  className="sc-fzokOt gDZuMP"
+                  onClick={[Function]}
+                >
+                  openbsd
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          className="sc-fzqARJ gIhxgi"
+        >
+          <span
+            className="sc-AxmLO sc-fzoyTs jjJyjZ"
+          >
+            Architecture
+          </span>
+          <div
+            className="sc-fzqNqU bDXkCM"
+          >
+            <div
+              className="sc-fznyAO crUbpk"
+            >
+              <div
+                className="sc-fznKkj cfTTXb"
+                id="dropdown"
+                onClick={[Function]}
+              >
+                amd64
+                <div
+                  className="sc-fzqBZW jnzxYq"
+                />
+              </div>
+              <ul
+                className="sc-fznZeY xMdrF"
+              >
+                <li
+                  className="sc-fzokOt gDZuMP"
+                  onClick={[Function]}
+                >
+                  arm64
+                </li>
+                <li
+                  className="sc-fzokOt gDZuMP"
+                  onClick={[Function]}
+                >
+                  arm
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          className="sc-fznJRM jIWmxl"
+        >
+          <button
+            className="sc-AxheI sc-Axmtr sc-fzqPZZ eqyYUo"
+            id="closeButton"
+            onClick={[Function]}
+          >
+            Close
+          </button>
+          <div
+            className="sc-fzoXWK gBiqkr"
+          >
+            <button
+              className="sc-AxheI sc-fznxsB deHuBN"
+              onClick={[Function]}
+            >
+              Create agent
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

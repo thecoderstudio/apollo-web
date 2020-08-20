@@ -6,6 +6,7 @@ exports[`dashboard renders correctly 1`] = `
 >
   <button
     className="sc-AxjAm sc-fzoYkl jcocaT"
+    id="newAgentButton"
     onClick={[Function]}
   >
     Add new agent

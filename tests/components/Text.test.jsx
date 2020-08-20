@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Text, SmallText } from '../../../src/components/Text';
+import { Text, SmallText } from '../../src/components/Text';
 
 it('Text renders correctly', () => {
   const tree = renderer
@@ -10,8 +10,8 @@ it('Text renders correctly', () => {
 });
 
 it('SmallText renders correctly', () => {
-    const tree = renderer
-      .create(<SmallText>Test</SmallText>)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+  const tree = renderer
+    .create(<SmallText>Test</SmallText>)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});

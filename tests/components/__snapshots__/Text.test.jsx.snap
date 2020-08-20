@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SmallText renders correctly 1`] = `
+<span
+  className="sc-AxirZ kFPJny"
+>
+  Test
+</span>
+`;
+
+exports[`Text renders correctly 1`] = `
+<span
+  className="sc-AxjAm bTqaig"
+>
+  Test
+</span>
+`;

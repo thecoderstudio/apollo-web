@@ -253,11 +253,11 @@ class AddAgentModal extends React.PureComponent {
           </InputFieldWrapper>
         </TextAndInputFieldWrapper>
         <TwoColumnGrid>
-          <CloseOutlinedButton onClick={this.closeModal}>
+          <CloseOutlinedButton id='closeButton' onClick={this.closeModal}>
             Close
           </CloseOutlinedButton>
           <CreateAgentButtonWrapper>
-            <LoadingButton loading={this.state.loading} onClick={() => this.createAgent(onclick)}>
+            <LoadingButton id='createAgentButton' loading={this.state.loading} onClick={() => this.createAgent(onclick)}>
               Create agent
             </LoadingButton>
           </CreateAgentButtonWrapper>
@@ -273,9 +273,9 @@ class AddAgentModal extends React.PureComponent {
           Copy and run the command on the target machine to download run the client.
         </Description>
         <CommandWrapper>
-          <CopyToClipboard text={command} />
+          <CopyToClipboard id='copytoclip' text={command} />
         </CommandWrapper>
-        <CloseButton onClick={this.closeModal}>Close</CloseButton>
+        <CloseButton id='closeButton' onClick={this.closeModal}>Close</CloseButton>
       </ThreeRowDisplay>
     );
   }
@@ -298,7 +298,7 @@ class AddAgentModal extends React.PureComponent {
           </ColumnOne>
           <ColumnTwo>
             <DownloadBinaryButtonWrapper>
-              <LoadingButton loading={this.state.loading} onClick={this.downloadBinary}>Download binary</LoadingButton>
+              <LoadingButton id='downloadBinaryButton' loading={this.state.loading} onClick={this.downloadBinary}>Download binary</LoadingButton>
             </DownloadBinaryButtonWrapper>
           </ColumnTwo>
         </TwoColumnGrid>
@@ -315,12 +315,12 @@ class AddAgentModal extends React.PureComponent {
     return (
       <TwoColumnGrid>
         <ColumnOne>
-          <DescriptionButton onClick={() => this.selectStepOneDirectly(directly)} title={directly}>
+          <DescriptionButton id='directlyButton' onClick={() => this.selectStepOneDirectly(directly)} title={directly}>
           You have the correct permissions to download the binary directly on the target machine.
           </DescriptionButton>
         </ColumnOne>
         <ColumnTwo>
-          <DescriptionButton onClick={() => this.selectStepOneManual(manual)} title={manual}>
+          <DescriptionButton id='manualButton' onClick={() => this.selectStepOneManual(manual)} title={manual}>
             You download and upload the binary yourself.
           </DescriptionButton>
         </ColumnTwo>

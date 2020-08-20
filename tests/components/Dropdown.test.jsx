@@ -44,24 +44,8 @@ describe('Dropdown', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it("closes dropdown correctly", () => {
-    let component = getComponent(store, props);
-    const instance = component.root;
-    const dropdown = instance.findByProps({ id: 'dropdown' })
-
-    dropdown.props.onClick();
-    dropdown.props.onClick();
-
-    expect(component.toJSON()).toMatchSnapshot();
-  });
-
   it("correctly calls optionSelectedAction on option click", async () => {
-    const newProps = {
-      ...props,
-      options: ['1', '2']
-    };
-
-    const component = getComponent(store, newProps);
+    const component = getComponent(store, props);
     component.root.findByType('ul').children[0].props.onClick();
 
     await waitForExpect(() => {

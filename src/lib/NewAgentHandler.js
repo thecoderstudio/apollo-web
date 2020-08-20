@@ -6,7 +6,7 @@ export default class NewAgentHandler {
 
   getDirectlyOnMachineCommand(os, arch, agentId, secret, host) {
     let command = `curl http://localhost:1970/agent/download?target_os=${os}&target_arch=${arch}`;
-    return command += ` ${this.getExecuteCommand(agentId, secret, host)}`;
+    return command += ` && ${this.getExecuteCommand(agentId, secret, host)}`;
   };
 
   getExecuteCommand(agentId, secret, host) {
@@ -16,7 +16,7 @@ export default class NewAgentHandler {
   downloadFile(data) {
     const link = document.createElement('a');
     link.href = window.URL.createObjectURL(new Blob([data]));
-    link.setAttribute('download', 'apollo-agent.bin');
+    link.download = 'apollo-agent.bin';
     link.click();
   }
 };

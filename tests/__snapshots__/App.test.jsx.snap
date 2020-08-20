@@ -10,6 +10,7 @@ exports[`app renders correctly authenticated 1`] = `
     >
       <button
         className="sc-AxjAm sc-fzoYkl dlumSS"
+        id="newAgentButton"
         onClick={[Function]}
       >
         Add new agent
