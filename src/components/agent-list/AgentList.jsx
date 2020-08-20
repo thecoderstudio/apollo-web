@@ -7,14 +7,13 @@ import { listAgents as listAgentsAction } from '../../actions/agent';
 const Content = styled.div`
   display: grid;
   grid-column: agent-listing;
-	grid-template-rows: [title] 50px [list] 1fr;
-	
-	background-color: ${props => props.theme.lightBlack};
-	border-radius: 8px;
+  grid-template-rows: [title] 50px [list] 1fr;
+
+  background-color: ${props => props.theme.lightBlack};
+  border-radius: 8px;
   maring: 20px;
-  
-	padding: 20px;
-	
+
+  padding: 20px;
 `;
 
 const ListTitle = styled.h2`
@@ -22,9 +21,9 @@ const ListTitle = styled.h2`
 `;
 
 const List = styled.ul`
-	grid-row: list;
-	list-style: none;
-	padding-left: 0;
+  grid-row: list;
+  list-style: none;
+  padding-left: 0;
 `;
 
 
@@ -51,7 +50,7 @@ class AgentList extends React.Component {
 
   dispatchListAgents(data) {
     const { dispatch } = this.props;
-    dispatch(listAgentsAction(JSON.parse(data))); 
+    dispatch(listAgentsAction(JSON.parse(data)));
   }
 
   render() {
