@@ -28,11 +28,6 @@ function getFinalPageComponent(store, buttonId) {
     value: 'test'
   }});
 
-  axios.post.mockResolvedValue({
-    status: 200,
-    data: { id: 'test', oauth_client: { secret: 'test' } }
-  });
-
   instance.findByProps({ loading: false }).props.onClick();
   return component;
 }
@@ -94,8 +89,22 @@ describe('addAgentModal', () => {
     expect(component.toJSON()).toMatchSnapshot();
   })
 
-
   it('creates agent', async () => {
+    axios.get.mockResolvedValue({
+      status: 200,
+      data: ''
+    });
+    const component = getFinalPageComponent(store, 'directlyButton');
+    await waitForExpect(() => {
+      expect(component.toJSON()).toMatchSnapshot();
+    })
+  });
+
+  it('creates agent incorrect name error', async () => {
+    axios.post.mockRejectedValue({
+      status: 400,
+      response: { data: { name: 'error' } }
+    });
     const component = getFinalPageComponent(store, 'directlyButton');
     await waitForExpect(() => {
       expect(component.toJSON()).toMatchSnapshot();
@@ -103,15 +112,14 @@ describe('addAgentModal', () => {
   });
 
   it('calls download file correctly', async () => {
-    const spy = jest.spyOn(NewAgentHandler.prototype, 'downloadFile').mockImplementation(() => { return });
-    const component = getFinalPageComponent(store, 'manualButton');
-    const instance = component.root;
-    component.toJSON();
-
     axios.get.mockResolvedValue({
       status: 200,
       data: ''
     });
+    const spy = jest.spyOn(NewAgentHandler.prototype, 'downloadFile').mockImplementation(() => { return });
+    const component = getFinalPageComponent(store, 'manualButton');
+    const instance = component.root;
+    component.toJSON();
 
     await waitForExpect(() => {
       instance.findByProps({ id: 'downloadBinaryButton' }).props.onClick();

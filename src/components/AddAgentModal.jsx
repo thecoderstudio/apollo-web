@@ -148,7 +148,7 @@ class AddAgentModal extends React.PureComponent {
       this.setState({ agentNameError: true })
       return
     }
-    this.setState({ loading: true })
+    this.setState({ loading: true });
     axios.post(
       `${process.env.APOLLO_HTTP_URL}agent`,
       { name : this.state.agentName },
@@ -158,8 +158,13 @@ class AddAgentModal extends React.PureComponent {
         this.setState({
           agentId: response.data['id'],
           secret: response.data['oauth_client']['secret']
-        })
+        });
         this.setRenderFunction(renderFunctionCallback);
+      })
+      .catch(error => {
+        if ('name' in error.response.data) {
+          this.setState({ agentNameError: true });
+        }
       })
       .finally(_ => {
         this.setState({ loading: false })
