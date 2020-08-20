@@ -20,11 +20,7 @@ const NavigationBar = styled.div`
 const Logout = styled(OutlinedButton)`
   grid-column: logout;
   float: right;
-  max-width: 100px;
-
-  &:hover {
-    cursor: pointer;
-  }
+  width: 100px;
 `;
 
 const NewAgentButton = styled(Button)`

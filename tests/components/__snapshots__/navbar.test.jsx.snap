@@ -12,7 +12,7 @@ exports[`login handles successful logout 1`] = `
     Add new agent
   </button>
   <button
-    className="sc-AxjAm sc-AxirZ sc-fzoKki gKjcTr"
+    className="sc-AxjAm sc-AxirZ sc-fzoKki dRacWG"
     id="logoutButton"
     onClick={[Function]}
   >
@@ -92,7 +92,7 @@ exports[`login renders correctly 1`] = `
     Add new agent
   </button>
   <button
-    className="sc-AxjAm sc-AxirZ sc-fzoKki gKjcTr"
+    className="sc-AxjAm sc-AxirZ sc-fzoKki dRacWG"
     id="logoutButton"
     onClick={[Function]}
   >

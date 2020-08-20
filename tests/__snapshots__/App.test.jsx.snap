@@ -16,7 +16,7 @@ exports[`app renders correctly authenticated 1`] = `
         Add new agent
       </button>
       <button
-        className="sc-AxjAm sc-AxirZ sc-fzoKki hNrryL"
+        className="sc-AxjAm sc-AxirZ sc-fzoKki bDarm"
         id="logoutButton"
         onClick={[Function]}
       >
