@@ -19,10 +19,10 @@ exports[`dashboard renders correctly 1`] = `
     Logout
   </button>
   <div
-    className="sc-AxhUy gGlIKc"
+    className="sc-AxhUy dUfwVg"
   >
     <div
-      className="sc-AxhCb sc-AxgMl jKdfLf"
+      className="sc-AxhCb sc-AxgMl jOcdKz"
     >
       <h2
         className="sc-AxheI biVcmg"

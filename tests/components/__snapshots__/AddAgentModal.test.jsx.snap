@@ -2,10 +2,10 @@
 
 exports[`addAgentModal check for empty agent name 1`] = `
 <div
-  className="sc-AxiKw eqPaRe"
+  className="sc-AxiKw geTDIi"
 >
   <div
-    className="sc-AxirZ sc-AxhCb gWcjrs"
+    className="sc-AxirZ sc-AxhCb iLiNVA"
   >
     <h2
       className="sc-AxhUy kyqeXI"
@@ -155,10 +155,10 @@ exports[`addAgentModal check for empty agent name 1`] = `
 
 exports[`addAgentModal closes modal correctly 1`] = `
 <div
-  className="sc-AxiKw eqPaRe"
+  className="sc-AxiKw geTDIi"
 >
   <div
-    className="sc-AxirZ sc-AxhCb gWcjrs"
+    className="sc-AxirZ sc-AxhCb iLiNVA"
   >
     <h2
       className="sc-AxhUy kyqeXI"
@@ -217,10 +217,10 @@ exports[`addAgentModal closes modal correctly 1`] = `
 
 exports[`addAgentModal creates agent 1`] = `
 <div
-  className="sc-AxiKw eqPaRe"
+  className="sc-AxiKw geTDIi"
 >
   <div
-    className="sc-AxirZ sc-AxhCb gWcjrs"
+    className="sc-AxirZ sc-AxhCb iLiNVA"
   >
     <h2
       className="sc-AxhUy kyqeXI"
@@ -245,7 +245,7 @@ exports[`addAgentModal creates agent 1`] = `
             className="sc-fzqNJr lglQoL"
           >
             <div
-              className="sc-fzoyAV dZsvGk"
+              className="sc-fzoyAV kLdciA"
             >
               curl http://localhost:1970/agent/download?target_os=linux&target_arch=amd64 && chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=test --secret=test --host=localhost:1970
             </div>
@@ -276,10 +276,10 @@ exports[`addAgentModal creates agent 1`] = `
 
 exports[`addAgentModal creates agent incorrect name error 1`] = `
 <div
-  className="sc-AxiKw eqPaRe"
+  className="sc-AxiKw geTDIi"
 >
   <div
-    className="sc-AxirZ sc-AxhCb gWcjrs"
+    className="sc-AxirZ sc-AxhCb iLiNVA"
   >
     <h2
       className="sc-AxhUy kyqeXI"
@@ -429,10 +429,10 @@ exports[`addAgentModal creates agent incorrect name error 1`] = `
 
 exports[`addAgentModal creates agent incorrect name error 2`] = `
 <div
-  className="sc-AxiKw eqPaRe"
+  className="sc-AxiKw geTDIi"
 >
   <div
-    className="sc-AxirZ sc-AxhCb gWcjrs"
+    className="sc-AxirZ sc-AxhCb iLiNVA"
   >
     <h2
       className="sc-AxhUy kyqeXI"
@@ -582,10 +582,10 @@ exports[`addAgentModal creates agent incorrect name error 2`] = `
 
 exports[`addAgentModal renders correctly 1`] = `
 <div
-  className="sc-AxiKw eqPaRe"
+  className="sc-AxiKw geTDIi"
 >
   <div
-    className="sc-AxirZ sc-AxhCb gWcjrs"
+    className="sc-AxirZ sc-AxhCb iLiNVA"
   >
     <h2
       className="sc-AxhUy kyqeXI"
@@ -644,10 +644,10 @@ exports[`addAgentModal renders correctly 1`] = `
 
 exports[`addAgentModal selects directly correctly 1`] = `
 <div
-  className="sc-AxiKw eqPaRe"
+  className="sc-AxiKw geTDIi"
 >
   <div
-    className="sc-AxirZ sc-AxhCb gWcjrs"
+    className="sc-AxirZ sc-AxhCb iLiNVA"
   >
     <h2
       className="sc-AxhUy kyqeXI"
@@ -797,10 +797,10 @@ exports[`addAgentModal selects directly correctly 1`] = `
 
 exports[`addAgentModal selects manual correctly 1`] = `
 <div
-  className="sc-AxiKw eqPaRe"
+  className="sc-AxiKw geTDIi"
 >
   <div
-    className="sc-AxirZ sc-AxhCb gWcjrs"
+    className="sc-AxirZ sc-AxhCb iLiNVA"
   >
     <h2
       className="sc-AxhUy kyqeXI"

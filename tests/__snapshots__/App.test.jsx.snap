@@ -23,10 +23,10 @@ exports[`app renders correctly authenticated 1`] = `
         Logout
       </button>
       <div
-        className="sc-AxhUy dienzb"
+        className="sc-AxhUy dqQldz"
       >
         <div
-          className="sc-AxhCb sc-AxgMl lnGMRh"
+          className="sc-AxhCb sc-AxgMl jJKNxh"
         >
           <h2
             className="sc-AxheI biVcmg"
