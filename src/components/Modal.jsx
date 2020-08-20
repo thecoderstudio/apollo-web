@@ -12,7 +12,7 @@ const propTypes = {
 
 const defaultProps = {
   visible: false
-}
+};
 
 const ModalOverlay = styled.div`
   display: ${props => props.visible ? 'inline' : 'none'};
@@ -21,21 +21,21 @@ const ModalOverlay = styled.div`
   left: 0;
   width:100%;
   height: 100%;
-  
+
   background-color: ${props => props.theme.overlay};
 `;
 
 const StyledCard = styled(Card)`
   display: grid;
   grid-template-rows: [title] 50px [content] 1fr;
-  
+
   position:fixed;
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
   width: 600px;
   height: auto;
-  
+
   background-color: ${props => props.theme.black}
 `;
 
@@ -63,7 +63,7 @@ function Modal(props) {
   );
 }
 
-Modal.propTypes = propTypes
-Modal.defaultProps = defaultProps
+Modal.propTypes = propTypes;
+Modal.defaultProps = defaultProps;
 
-export default connect()(Modal)
+export default connect()(Modal);

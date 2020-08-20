@@ -15,7 +15,7 @@ function getComponent(store) {
       <NavBar />
     </Provider>
   );
-};
+}
 
 describe('login', () => {
   let store;

@@ -9,7 +9,7 @@ const initialState = {
   modalVisible: false,
   selectedArchitecture: "amd64",
   selectedOperatingSystem: "linux"
-}
+};
 
 export default function addAgentReducer(state = initialState, action) {
   switch (action.type) {

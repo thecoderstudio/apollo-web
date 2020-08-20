@@ -40,7 +40,7 @@ class LoadingButton extends React.PureComponent {
       <StyledButton onClick={this.props.onClick }>
         {this.props.loading ? <Icon src={spinnerImg} /> : this.props.children}
       </StyledButton>
-    )
+    );
   }
 }
 

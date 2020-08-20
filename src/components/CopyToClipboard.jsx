@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Button from './buttons/Button';
-import copyImg from '../images/copy.svg'
+import copyImg from '../images/copy.svg';
 
 const propTypes = {
   text: PropTypes.string.isRequired
-}
+};
 
 const Wrapper = styled.div`
   grid-template-columns: [textfield] 1fr [copy] 50px;
@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 
 const TextField = styled.div`
   grid-column: textfield;
-  
+
   border: none;
   border-radius: 5px;
   color: white;
@@ -27,10 +27,10 @@ const TextField = styled.div`
   text-align:left;
   padding: 15px;
   background-color: ${props => props.theme.lightBlack};
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  
+
 `;
 
 const StyledButton = styled(Button)`
@@ -63,7 +63,7 @@ class CopyToClipboard extends React.PureComponent {
         <StyledButton id='copyToClipboardButton' onClick={this.copyToClipboard}><Icon src={copyImg} /></StyledButton>
       </Wrapper>
     );
-  };
+  }
 }
 
 CopyToClipboard.propTypes = propTypes;

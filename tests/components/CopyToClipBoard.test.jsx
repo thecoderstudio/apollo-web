@@ -17,7 +17,7 @@ function getComponent(store, props) {
     <Provider store={store}>
       <CopyToClipboard {...props} />
     </Provider>
-  )
+  );
 }
 
 describe('copy to clipboard', () => {
@@ -29,11 +29,11 @@ describe('copy to clipboard', () => {
   });
 
   it('onClick copies to clipboard', () => {
-    const spy = spyOn(navigator.clipboard, 'writeText');
+  const spy = spyOn(navigator.clipboard, 'writeText');
     const component= getComponent(store, { text: 'test'});
     const instance = component.root;
 
     instance.findByProps({ id: 'copyToClipboardButton' }).props.onClick();
     expect(spy).toBeCalledWith('test');
-  })
+  });
 });

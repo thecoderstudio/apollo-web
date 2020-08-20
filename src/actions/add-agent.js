@@ -15,10 +15,10 @@ function closeAddAgentModal() {
   };
 }
 
-function selectOperatingSystem(operating_system) {
+function selectOperatingSystem(operatingSystem) {
   return {
     type: SELECT_OPERATING_SYSTEM,
-    selectedOperatingSystem: operating_system
+    selectedOperatingSystem: operatingSystem
   };
 }
 

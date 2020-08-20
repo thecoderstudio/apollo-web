@@ -6,7 +6,7 @@ function getComponent(props) {
   return renderer.create(
     <LoadingButton {...props} />
   );
-};
+}
 
 describe('LoadingButton', () => {
   const spy = jest.fn();

@@ -115,7 +115,7 @@ const CloseOutlinedButton = styled(OutlinedButton)`
 class AddAgentModal extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.bindMethods()
+    this.bindMethods();
 
     this.state = {
       renderFunction : this.renderQuestion,
@@ -125,7 +125,7 @@ class AddAgentModal extends React.PureComponent {
       agentNameError: false
     };
     this.newAgentHandler = new NewAgentHandler();
-  };
+  }
 
   bindMethods() {
     this.renderQuestion = this.renderQuestion.bind(this);
@@ -145,8 +145,8 @@ class AddAgentModal extends React.PureComponent {
 
   createAgent(renderFunctionCallback) {
     if (this.state.agentName === "") {
-      this.setState({ agentNameError: true })
-      return
+      this.setState({ agentNameError: true });
+      return;
     }
     this.setState({ loading: true });
     axios.post(
@@ -167,12 +167,12 @@ class AddAgentModal extends React.PureComponent {
         }
       })
       .finally(_ => {
-        this.setState({ loading: false })
+        this.setState({ loading: false });
       })
   }
 
   downloadBinary() {
-    this.setState({ loading: true })
+    this.setState({ loading: true });
     axios.get(
       `${process.env.APOLLO_HTTP_URL}agent/download`,
       {
@@ -185,7 +185,7 @@ class AddAgentModal extends React.PureComponent {
       },
     )
       .then(response => {
-        this.newAgentHandler.downloadFile(response.data)
+        this.newAgentHandler.downloadFile(response.data);
       })
       .finally(_ => {
         this.setState({loading: false})
@@ -199,13 +199,13 @@ class AddAgentModal extends React.PureComponent {
   }
 
   setRenderFunction(renderFunction) {
-    this.setState({ renderFunction: renderFunction});
+    this.setState({ renderFunction });
   }
 
   selectStepOneDirectly(title) {
     this.setState({
       renderFunction: this.renderDirectlyOnMachineStepOne,
-      title: title
+      title
     });
   };
 
@@ -348,4 +348,4 @@ export default connect(
     selectedOperatingSystem: state.addAgent.selectedOperatingSystem,
     selectedArchitecture: state.addAgent.selectedArchitecture
   })
-)(AddAgentModal)
+)(AddAgentModal);

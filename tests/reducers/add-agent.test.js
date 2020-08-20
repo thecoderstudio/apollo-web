@@ -10,7 +10,7 @@ const initialState = {
   modalVisible: false,
   selectedArchitecture: "amd64",
   selectedOperatingSystem: "linux"
-}
+};
 
 describe("auth reducer", () => {
   it("should return false as initial state", () => {
@@ -45,7 +45,7 @@ describe("auth reducer", () => {
         selectedArchitecture: 'amd64'
       }
     );
-  })
+  });
 
   it("should correcty select os", () => {
     expect(addAgentReducer(initialState, {

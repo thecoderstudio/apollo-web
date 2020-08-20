@@ -14,7 +14,7 @@ function getComponent(store, props) {
       <DropDown {...props} />
     </Provider>
   );
-};
+}
 
 describe('Dropdown', () => {
   let store;
@@ -23,7 +23,7 @@ describe('Dropdown', () => {
 
 
   beforeEach(() => {
-    store = mockStore({})
+    store = mockStore({});
     props = {
       options: ['1', '2'],
       optionSelectedAction: selectArchitecture,
@@ -60,5 +60,5 @@ describe('Dropdown', () => {
     };
     const component = getComponent(store, newProps);
     expect(component.root.findByType('ul').children).toHaveLength(2);
-  })
+  });
 });

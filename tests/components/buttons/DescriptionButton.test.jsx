@@ -6,7 +6,7 @@ function getComponent(props) {
   return renderer.create(
     <DescriptionButton {...props} />
   );
-};
+}
 
 describe('DescriptionButton', () => {
   const spy = jest.fn();

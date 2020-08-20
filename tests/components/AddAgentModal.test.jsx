@@ -17,10 +17,10 @@ function getComponent(store) {
       <AddAgentModal />
     </Provider>
   );
-};
+}
 
 function getFinalPageComponent(store, buttonId) {
-  const component = getComponent(store)
+  const component = getComponent(store);
   const instance = component.root;
   instance.findByProps({ id: buttonId }).props.onClick();
   component.toJSON();
@@ -87,7 +87,7 @@ describe('addAgentModal', () => {
     component.toJSON();
     instance.findByProps({ loading: false }).props.onClick();
     expect(component.toJSON()).toMatchSnapshot();
-  })
+  });
 
   it('creates agent', async () => {
     axios.post.mockResolvedValue({
@@ -129,7 +129,7 @@ describe('addAgentModal', () => {
       data: { id: 'test', oauth_client: { secret: 'test' } }
     });
 
-    const spy = jest.spyOn(NewAgentHandler.prototype, 'downloadFile').mockImplementation(() => { return });
+    const spy = jest.spyOn(NewAgentHandler.prototype, 'downloadFile').mockImplementation(() => { return; });
     const component = getFinalPageComponent(store, 'manualButton');
     const instance = component.root;
     component.toJSON();

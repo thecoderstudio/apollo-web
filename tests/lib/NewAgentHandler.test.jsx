@@ -10,7 +10,7 @@ describe('NewAgentHandler', () => {
       'curl http://localhost:1970/agent/download?target_os=test&target_arch=test &&' +
       ' chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=test --secret=test --host=test'
     );
-  })
+  });
 
   it('test download file', () => {
     const link = {
