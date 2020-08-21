@@ -94,7 +94,7 @@ class DropDown extends React.PureComponent {
 
   renderItems() {
     return this.props.options.map(option => {
-      if (option === this.props.selected) { return };
+      if (option === this.props.selected) { return; }
       return <DropDownItem key={option} onClick={() => this.selectItem(option)} >{option}</DropDownItem>;
     });
   }

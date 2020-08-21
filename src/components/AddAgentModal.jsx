@@ -168,7 +168,7 @@ class AddAgentModal extends React.PureComponent {
       })
       .finally(_ => {
         this.setState({ loading: false });
-      })
+      });
   }
 
   downloadBinary() {
@@ -188,7 +188,7 @@ class AddAgentModal extends React.PureComponent {
         this.newAgentHandler.downloadFile(response.data);
       })
       .finally(_ => {
-        this.setState({loading: false})
+        this.setState({loading: false});
       });
   }
 
@@ -207,14 +207,14 @@ class AddAgentModal extends React.PureComponent {
       renderFunction: this.renderDirectlyOnMachineStepOne,
       title
     });
-  };
+  }
 
   selectStepOneManual(title) {
     this.setState({
       renderFunction: this.renderManualUploadStepOne,
-      title: title
+      title
     });
-  };
+  }
 
   handleAgentNameChange(e) {
     this.setState({ agentName: e.target.value, agentNameError: false });
@@ -222,11 +222,11 @@ class AddAgentModal extends React.PureComponent {
 
   renderDirectlyOnMachineStepOne() {
     return this.getStepOneComponents(this.renderDirectlyOnMachineStepTwo);
-  };
+  }
 
   renderManualUploadStepOne() {
     return this.getStepOneComponents(this.renderManualUploadStepTwo);
-  };
+  }
 
   getStepOneComponents(onclick) {
     return(

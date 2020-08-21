@@ -53,7 +53,7 @@ describe('addAgentModal', () => {
   });
 
   it('selects directly correctly', () => {
-    const component = getComponent(store)
+    const component = getComponent(store);
     const instance = component.root;
 
     instance.findByProps({ id: 'directlyButton' }).props.onClick();
@@ -98,7 +98,7 @@ describe('addAgentModal', () => {
     const component = getFinalPageComponent(store, 'directlyButton');
     await waitForExpect(() => {
       expect(component.toJSON()).toMatchSnapshot();
-    })
+    });
   });
 
   it('creates agent incorrect name error', async () => {
