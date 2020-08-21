@@ -36,11 +36,20 @@ class NavBar extends React.PureComponent {
   constructor(props) {
     super(props);
     this.logout = this.logout.bind(this);
+    this.checkIfAdmin = this.checkIfAdmin.bind(this);
   }
 
   logout() {
     let { dispatch } = this.props;
     dispatch(logoutAction());
+  }
+
+  checkIfAdmin() {
+    if (this.props.currentUser.role) {
+      return this.props.currentUser.role.name == 'admin';
+    }
+
+    return false;
   }
 
   render() {
@@ -49,7 +58,7 @@ class NavBar extends React.PureComponent {
         <h3>Apollo</h3>
         <div>
           <StyledLink to='/'>Dashboard</StyledLink>
-          <StyledLink to='/admin'>Admin</StyledLink>
+          {this.checkIfAdmin() && <StyledLink to='/admin'>Admin</StyledLink>}
         </div>
         <Logout onClick={this.logout}>Log out</Logout>
       </NavigationBar>
@@ -57,4 +66,6 @@ class NavBar extends React.PureComponent {
   }
 }
 
-export default connect()(NavBar);
+export default connect(
+  state => ({ currentUser: state.currentUser })
+)(NavBar);
