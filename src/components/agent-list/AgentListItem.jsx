@@ -1,9 +1,8 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import ConnectionState from './ConnectionState';
 import media from '../../util/media';
-import React from 'react';
-import styled from 'styled-components';
-import Text from '../Text';
-import PropTypes from 'prop-types';
 
 const propTypes = {
   agentName: PropTypes.string.isRequired,
@@ -32,11 +31,12 @@ const Container = styled.li`
   }
 `;
 
-const StyledText = styled(Text)`
+const StyledText = styled.span`
   grid-column: name;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  margin-left: 25px;
 
   ${
     media.phone`
@@ -46,11 +46,36 @@ const StyledText = styled(Text)`
   }
 `;
 
+const ConnectionStateContent = styled.div`
+  grid-column: connection-status;
+
+  ${
+    media.phone`
+      grid-row: connection-status;
+      grid-column: name-and-status;
+    `
+  }
+`;
+
+const StyledConnectionState = styled(ConnectionState)`
+  float: right;
+
+  ${
+    media.phone`
+      float: left;
+    `
+  }
+`;
+
+StyledConnectionState.displayName = StyledConnectionState
+
 export default function AgentListItem(props) {
   return (
     <Container>
       <StyledText>{props.agentName}</StyledText>
-      <ConnectionState connectionState={props.connectionState} />
+      <ConnectionStateContent>
+        <StyledConnectionState connectionState={props.connectionState} />
+      </ConnectionStateContent>
     </Container>
   );
 }

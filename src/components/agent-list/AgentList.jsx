@@ -1,12 +1,11 @@
-import { connect } from 'react-redux';
-import AgentListItem from './AgentListItem';
 import React from 'react';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
+import AgentListItem from './AgentListItem';
 import { listAgents as listAgentsAction } from '../../actions/agent';
 
 const Content = styled.div`
   display: grid;
-  grid-column: agent-listing;
   grid-template-rows: [title] 50px [list] 1fr;
 
   background-color: ${props => props.theme.lightBlack};
@@ -25,7 +24,6 @@ const List = styled.ul`
   list-style: none;
   padding-left: 0;
 `;
-
 
 class AgentList extends React.Component {
   constructor(props) {

@@ -1,7 +1,5 @@
 import React from 'react';
-import media from '../../util/media';
-import styled from 'styled-components';
-import Text from '../Text';
+import styled, { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
 
 const propTypes = {
@@ -22,28 +20,10 @@ const getConnectionStateColor = (connectionState, theme) => {
 };
 
 const Container = styled.div`
-  grid-column: connection-status;
   margin-left: 25px;
   margin-right: 25px;
-
-  ${
-    media.phone`
-      grid-row: connection-status; 
-      grid-column: name-and-status;
-    `
-  }
-`;
-
-const ContentWrapper = styled.div`
-  float: right;
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
-
-  ${
-    media.phone`
-      float:left;
-    `
-  }
 `;
 
 const Indicator = styled.div`
@@ -57,28 +37,31 @@ const Indicator = styled.div`
   float: right;
   text-align: left;
 
-  background-color: ${props => getConnectionStateColor(props.connectionState, props.theme)}
+  background-color: ${props => props.connectionStateColor}
 `;
 
-const StyledText = styled(Text)`
+const StyledText = styled.span`
   grid-column: status-text;
   position: relative;
+  margin-left: 25px;
   text-align: left;
 
-  color: ${props => getConnectionStateColor(props.connectionState, props.theme)}
+  color: ${props => props.connectionStateColor}
 `;
 
-export default function ConnectionState(props) {
+function ConnectionState(props) {
+  const connectionStateColor = getConnectionStateColor(props.connectionState, props.theme);
+
   return (
-    <Container>
-      <ContentWrapper>
-        <Indicator connectionState={props.connectionState} />
-        <StyledText connectionState={props.connectionState}>
-          {props.connectionState.replace(/^\w/, (c) => c.toUpperCase())}
-        </StyledText>
-      </ContentWrapper>
+    <Container className={props.className}>
+      <Indicator connectionStateColor={connectionStateColor} />
+      <StyledText connectionStateColor={connectionStateColor}>
+        {props.connectionState.replace(/^\w/, (c) => c.toUpperCase())}
+      </StyledText>
     </Container >
   );
 }
 
 ConnectionState.propTypes = propTypes;
+
+export default withTheme(ConnectionState);
