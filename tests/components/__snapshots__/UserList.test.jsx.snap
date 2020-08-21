@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`user list renders correctly 1`] = `
+<div>
+  <h2
+    className="sc-AxhUy jVXawT"
+  >
+    Users
+  </h2>
+  <div
+    className="sc-AxgMl jXfldy"
+  />
+</div>
+`;
+
+exports[`user list renders correctly 2`] = `
+<div>
+  <h2
+    className="sc-AxhUy jVXawT"
+  >
+    Users
+  </h2>
+  <div
+    className="sc-AxgMl jXfldy"
+  >
+    <div
+      className="sc-AxjAm jahhFp"
+    >
+      <p
+        className="sc-AxirZ kXBegF"
+      >
+        test
+      </p>
+    </div>
+    <div
+      className="sc-AxjAm jahhFp"
+    >
+      <p
+        className="sc-AxirZ kXBegF"
+      >
+        admin
+      </p>
+      <div
+        className="sc-AxiKw cydMkg"
+      >
+        <p
+          className="sc-AxhCb hGORiL"
+        >
+          admin
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
