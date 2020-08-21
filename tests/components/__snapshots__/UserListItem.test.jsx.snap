@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`user list item render correctly with role 1`] = `
+<div
+  className="sc-AxjAm jahhFp"
+>
+  <p
+    className="sc-AxirZ kXBegF"
+  >
+    test
+  </p>
+  <div
+    className="sc-AxiKw cydMkg"
+  >
+    <p
+      className="sc-AxhCb hGORiL"
+    >
+      admin
+    </p>
+  </div>
+</div>
+`;
+
+exports[`user list item render correctly without role 1`] = `
+<div
+  className="sc-AxjAm jahhFp"
+>
+  <p
+    className="sc-AxirZ kXBegF"
+  >
+    test
+  </p>
+</div>
+`;
