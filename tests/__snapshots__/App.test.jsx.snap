@@ -3,18 +3,31 @@
 exports[`app renders correctly authenticated 1`] = `
 <div>
   <div
-    className="sc-fzplWN iqrqGl"
+    className="sc-fzoXzr bnGJwq"
   >
     <div
-      className="sc-AxiKw eLmrgg"
+      className="sc-AxiKw egZdpg"
     >
+      <h3>
+        Apollo
+      </h3>
+      <div>
+        <a
+          className="sc-AxhCb ibDnOD"
+          href="/"
+          onClick={[Function]}
+        >
+          Dashboard
+        </a>
+      </div>
       <button
-        className="sc-AxjAm sc-AxirZ sc-AxhCb ewCHgN"
+        className="sc-AxjAm sc-AxirZ sc-AxhUy bgSdZf"
         onClick={[Function]}
       >
         Log out
       </button>
     </div>
+    <div />
   </div>
 </div>
 `;
@@ -22,38 +35,38 @@ exports[`app renders correctly authenticated 1`] = `
 exports[`app renders correctly unauthenticated 1`] = `
 <div>
   <div
-    className="sc-fzplWN iqrqGl"
+    className="sc-fzoXzr bnGJwq"
   >
     <div
-      className="sc-AxheI SUxVu"
+      className="sc-Axmtr kbLgUh"
     >
       <div
-        className="sc-Axmtr cEHhGj"
+        className="sc-AxmLO eLaVVa"
       >
         <img
-          className="sc-fzpans sSDeb"
+          className="sc-fzplWN ctZptC"
           src={[Function]}
         />
         <h1
-          className="sc-AxmLO kPhZTY"
+          className="sc-fzozJi eZiksZ"
         >
           Log in to Apollo
         </h1>
         <div
-          className="sc-AxgMl sc-fzozJi cZVrlm"
+          className="sc-AxheI sc-fzoLsD hucFzw"
         >
           <form
-            className="sc-fzoLsD gFdOzY"
+            className="sc-fzpans gtnNFI"
             onSubmit={[Function]}
           >
             <input
-              className="sc-AxhUy ymxfm"
+              className="sc-AxgMl ksubo"
               onChange={[Function]}
               placeholder="Username"
               type="username"
             />
             <input
-              className="sc-AxhUy ymxfm"
+              className="sc-AxgMl ksubo"
               onChange={[Function]}
               placeholder="Password"
               type="password"

@@ -43,6 +43,9 @@ describe('login', () => {
     axios.post.mockResolvedValue({
       status: 200
     });
+    axios.get.mockResolvedValue({
+      status: 200
+    });
 
     root.findByProps({type: 'username'}).props.onChange({ target: {
       value: 'test'

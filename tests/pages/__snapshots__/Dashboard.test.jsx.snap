@@ -1,14 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`dashboard renders correctly 1`] = `
-<div
-  className="sc-AxiKw bDNfQg"
->
-  <button
-    className="sc-AxjAm sc-AxirZ sc-AxhCb jfTlUh"
-    onClick={[Function]}
-  >
-    Log out
-  </button>
-</div>
-`;
+exports[`dashboard renders correctly 1`] = `<div />`;
