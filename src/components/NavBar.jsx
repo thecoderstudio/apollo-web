@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { logout as logoutAction } from '../actions/auth';
+import { removeCurrentUser } from '../actions/current-user';
 import OutlinedButton from './buttons/OutlinedButton';
 
 const NavigationBar = styled.div`
@@ -42,6 +43,7 @@ class NavBar extends React.PureComponent {
   logout() {
     let { dispatch } = this.props;
     dispatch(logoutAction());
+    dispatch(removeCurrentUser());
   }
 
   checkIfAdmin() {
