@@ -50,6 +50,7 @@ const StyledText = styled.span`
 `;
 
 function ConnectionState(props) {
+  console.log(props)
   const connectionStateColor = getConnectionStateColor(props.connectionState, props.theme);
 
   return (

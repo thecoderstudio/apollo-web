@@ -1,10 +1,10 @@
 import { LIST_AGENTS, listAgents } from '../../src/actions/agent';
 
 test("list agents creates lists agents action", () => {
-  const expectedAgent = { id: '1' };
+  const expectedAgents = [{ id: '1' }];
   const expectedAction = {
     type: LIST_AGENTS,
-    expectedAgent
+    agents: expectedAgents
   };
-  expect(listAgents(expectedAgent)).toEqual(expectedAction);
+  expect(listAgents(expectedAgents)).toEqual(expectedAction);
 });

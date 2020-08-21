@@ -1,34 +1,101 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`app renders correctly authenticated 1`] = `
+.c4 {
+  display: grid;
+  grid-template-rows: [title] 50px [list] 1fr;
+  background-color: #1B1B1B;
+  border-radius: 8px;
+  maring: 20px;
+  padding: 20px;
+}
+
+.c5 {
+  grid-row: title;
+}
+
+.c6 {
+  grid-row: list;
+  list-style: none;
+  padding-left: 0;
+}
+
+.c1 {
+  height: 50px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr [logout];
+  background-color: #1B1B1B;
+}
+
+.c2 {
+  border: none;
+  background-color: #4D02EE;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #4D02EE;
+  grid-column: logout;
+  float: right;
+  width: 100px;
+}
+
+.c2:hover {
+  opacity: 0.90;
+}
+
+.c3 {
+  grid-template-columns: [agent-listing] 1fr 1fr;
+  grid-template-rows: 1fr;
+  display: grid;
+  grid-row: 2;
+  margin: 25px;
+}
+
+.c0 {
+  height: 100%;
+  width: 100%;
+  display: grid;
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    grid-template-columns: [agent-listing] 1fr;
+  }
+}
+
 <div>
   <div
-    className="sc-fznJRM ixDFnb"
+    className="c0"
   >
     <div>
       <div
-        className="sc-fznyAO dqfeKx"
+        className="c1"
       >
         <button
-          className="sc-fzpans sc-fzplWN sc-fznKkj dWgsfJ"
+          className="c2"
           onClick={[Function]}
         >
           Log out
         </button>
       </div>
       <div
-        className="sc-fzoLsD sc-fznZeY dctyrU"
+        className="c3"
       >
         <div
-          className="sc-Axmtr gyOFBq"
+          className="c4"
         >
           <h2
-            className="sc-AxmLO jBiGbn"
+            className="c5"
           >
             Agents
           </h2>
           <ul
-            className="sc-fzozJi exICPN"
+            className="c6"
           />
         </div>
       </div>
@@ -38,46 +105,161 @@ exports[`app renders correctly authenticated 1`] = `
 `;
 
 exports[`app renders correctly unauthenticated 1`] = `
+.c8 {
+  border: none;
+  background-color: #4D02EE;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c8:hover {
+  opacity: 0.90;
+}
+
+.c7 {
+  background: #F8F8F8;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+}
+
+.c1 {
+  height: 100%;
+  display: grid;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  display: grid;
+  justify-items: center;
+  -webkit-column-gap: 50px;
+  column-gap: 50px;
+  height: 90%;
+  max-height: 650px;
+  margin: 100px;
+  grid-template-rows: [heading] 1fr [title] 1fr [content] 4fr;
+  grid-template-columns: [img] 1fr [content] 1fr;
+}
+
+.c4 {
+  grid-row: title;
+  grid-column: content;
+  color: #02A3EE;
+}
+
+.c5 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+  width: 100%;
+  max-width: 400px;
+  height: 350px;
+  grid-row: content;
+  grid-column: content;
+  display: grid;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6 {
+  height: 75%;
+  display: grid;
+  grid-template-rows: auto;
+  grid-row-gap: 40px;
+}
+
+.c3 {
+  grid-column: img;
+  grid-row: 2 / 4;
+  width: 75%;
+  max-width: 800px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c0 {
+  height: 100%;
+  width: 100%;
+  display: grid;
+}
+
+@media (max-width:47.9375em) {
+  .c2 {
+    grid-template-columns: [content] 1fr;
+    grid-template-rows: [title] 1fr [content] 4fr [footer] 1fr;
+    margin: 20px 20px 0px 20px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c5 {
+    box-shadow: none;
+    background-color: #181818;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    grid-column: 1;
+    grid-row: footer;
+    width: 100%;
+  }
+}
+
 <div>
   <div
-    className="sc-fznJRM ixDFnb"
+    className="c0"
   >
     <div
-      className="sc-fzqNJr TOXuw"
+      className="c1"
     >
       <div
-        className="sc-fzoyAV jNQZPY"
+        className="c2"
       >
         <img
-          className="sc-fznxsB eqinzM"
+          className="c3"
           src={[Function]}
         />
         <h1
-          className="sc-fzoLag flKWgW"
+          className="c4"
         >
           Log in to Apollo
         </h1>
         <div
-          className="sc-fzqBZW sc-fzoXzr uLdrn"
+          className="c5"
         >
           <form
-            className="sc-fzpjYC cDswVg"
+            className="c6"
             onSubmit={[Function]}
           >
             <input
-              className="sc-fzokOt dbZLPA"
+              className="c7"
               onChange={[Function]}
               placeholder="Username"
               type="username"
             />
             <input
-              className="sc-fzokOt dbZLPA"
+              className="c7"
               onChange={[Function]}
               placeholder="Password"
               type="password"
             />
             <button
-              className="sc-fzpans bCGSAF"
+              className="c8"
             >
               Log in
             </button>

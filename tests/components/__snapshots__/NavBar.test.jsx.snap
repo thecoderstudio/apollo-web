@@ -1,11 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`nav bar handles successful logout 1`] = `
+.c0 {
+  height: 50px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr [logout];
+}
+
+.c1 {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  grid-column: logout;
+  float: right;
+  width: 100px;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
 <div
-  className="sc-AxiKw bDNfQg"
+  className="c0"
 >
   <button
-    className="sc-AxjAm sc-AxirZ sc-AxhCb jfTlUh"
+    className="c1"
     onClick={[Function]}
   >
     Log out
@@ -14,11 +40,37 @@ exports[`nav bar handles successful logout 1`] = `
 `;
 
 exports[`nav bar renders correctly 1`] = `
+.c0 {
+  height: 50px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr [logout];
+}
+
+.c1 {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  grid-column: logout;
+  float: right;
+  width: 100px;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
 <div
-  className="sc-AxiKw bDNfQg"
+  className="c0"
 >
   <button
-    className="sc-AxjAm sc-AxirZ sc-AxhCb jfTlUh"
+    className="c1"
     onClick={[Function]}
   >
     Log out
