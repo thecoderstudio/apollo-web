@@ -269,7 +269,7 @@ class AddAgentModal extends React.PureComponent {
         </TwoColumnGrid>
       </div>
     );
-  };
+  }
 
   getStepTwoComponents(command) {
    return(
@@ -292,7 +292,7 @@ class AddAgentModal extends React.PureComponent {
         "localhost:1970"
       )
     );
-  };
+  }
 
   renderManualUploadStepTwo() {
     return(
@@ -312,7 +312,7 @@ class AddAgentModal extends React.PureComponent {
         )}
       </div>
     );
-  };
+  }
 
   renderQuestion() {
     const directly = "Directly on target machine.";
@@ -331,7 +331,7 @@ class AddAgentModal extends React.PureComponent {
         </ColumnTwo>
       </TwoColumnGrid>
     );
-  };
+  }
 
   render() {
     return (

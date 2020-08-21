@@ -19,4 +19,4 @@ export default class NewAgentHandler {
     link.download = 'apollo-agent.bin';
     link.click();
   }
-};
+}

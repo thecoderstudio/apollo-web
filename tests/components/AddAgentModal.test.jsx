@@ -61,7 +61,7 @@ describe('addAgentModal', () => {
   });
 
   it('selects manual correctly', () => {
-    const component = getComponent(store)
+    const component = getComponent(store);
     const instance = component.root;
     instance.findByProps({ id: 'manualButton' }).props.onClick();
     expect(component.toJSON()).toMatchSnapshot();
