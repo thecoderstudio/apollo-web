@@ -58,7 +58,7 @@ describe('agentList', () => {
         listAgents(data)
       );
     });
-  }) 
+  });
 
 
   it("correctly lists multiple agents", () => {
