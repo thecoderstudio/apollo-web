@@ -339,7 +339,7 @@ class AddAgentModal extends React.PureComponent {
         {this.state.renderFunction()}
       </Modal>
     );
-  };
+  }
 }
 
 export default connect(

@@ -68,7 +68,7 @@ describe('addAgentModal', () => {
   });
 
   it('closes modal correctly', async () => {
-    const component = getComponent(store)
+    const component = getComponent(store);
     const instance = component.root;
     instance.findByProps({ id: 'directlyButton' }).props.onClick();
     component.toJSON();
