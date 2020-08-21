@@ -53,7 +53,7 @@ class AgentList extends React.Component {
 
   render() {
     return (
-      <Content>
+      <Content className={this.props.className}>
         <ListTitle>Agents</ListTitle>
         <List>
           {this.generateAgents(this.props.agents)}

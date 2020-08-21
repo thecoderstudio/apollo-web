@@ -4,7 +4,7 @@ import AgentList from '../components/agent-list/AgentList';
 import media from '../util/media';
 import NavBar from '../components/NavBar';
 
-const AgentListWrapper = styled.div`
+const StyledAgentList = styled(AgentList)`
   grid-column: agent-listing;
 `;
 
