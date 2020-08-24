@@ -2,15 +2,15 @@
 
 exports[`user list item render correctly with role 1`] = `
 <div
-  className="sc-AxjAm jahhFp"
+  className="sc-AxiKw jxeMgG"
 >
   <p
-    className="sc-AxirZ kXBegF"
+    className="sc-AxhCb klGZiV"
   >
     test
   </p>
   <p
-    className="sc-AxiKw cCmoQb"
+    className="sc-AxhUy hvjDNC"
   >
     admin
   </p>
@@ -19,10 +19,10 @@ exports[`user list item render correctly with role 1`] = `
 
 exports[`user list item render correctly without role 1`] = `
 <div
-  className="sc-AxjAm jahhFp"
+  className="sc-AxiKw jxeMgG"
 >
   <p
-    className="sc-AxirZ kXBegF"
+    className="sc-AxhCb klGZiV"
   >
     test
   </p>

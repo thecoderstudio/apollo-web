@@ -3,14 +3,30 @@ import renderer from 'react-test-renderer';
 import axios from 'axios';
 import waitForExpect from 'wait-for-expect';
 import Admin from '../../src/pages/Admin';
+import { Provider } from 'react-redux';
+import configureStore from 'redux-mock-store';
 
+const mockStore = configureStore([]);
 jest.mock('axios');
 
-function getComponent() {
-  return renderer.create(<Admin />);
+function getComponent(store) {
+  return renderer.create(
+    <Provider store={store}>
+      <Admin />
+    </Provider>
+  );
 }
 
 describe("user list", () => {
+  const store = mockStore({
+    currentUser: {
+      role: {
+        id: 'id',
+        name: 'admin'
+      }
+    }
+  });
+
   beforeEach(() => {
     process.env = {
       APOLLO_HTTP_URL: 'http://localhost:1234/'
@@ -35,7 +51,7 @@ describe("user list", () => {
       data: users
     });
 
-    const component = getComponent();
+    const component = getComponent(store);
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 

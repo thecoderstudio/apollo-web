@@ -1,6 +1,6 @@
-export default function checkIfAdmin(currentUser) {
-  if (currentUser && currentUser.role) {
-    return currentUser.role.name === 'admin';
+export default function checkIfAdmin(user) {
+  if (user && user.role) {
+    return user.role.name === 'admin';
   }
 
   return false;

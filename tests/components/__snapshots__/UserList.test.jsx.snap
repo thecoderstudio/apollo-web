@@ -3,12 +3,12 @@
 exports[`user list doesn't try to render users on error 1`] = `
 <div>
   <h2
-    className="sc-AxhCb dXpqyO"
+    className="sc-AxheI OiaRP"
   >
     Users
   </h2>
   <div
-    className="sc-AxhUy fkItVQ"
+    className="sc-Axmtr fGKBRD"
   />
 </div>
 `;
@@ -16,12 +16,12 @@ exports[`user list doesn't try to render users on error 1`] = `
 exports[`user list renders correctly 1`] = `
 <div>
   <h2
-    className="sc-AxhCb dXpqyO"
+    className="sc-AxheI OiaRP"
   >
     Users
   </h2>
   <div
-    className="sc-AxhUy fkItVQ"
+    className="sc-Axmtr fGKBRD"
   />
 </div>
 `;
@@ -29,32 +29,32 @@ exports[`user list renders correctly 1`] = `
 exports[`user list renders correctly 2`] = `
 <div>
   <h2
-    className="sc-AxhCb dXpqyO"
+    className="sc-AxheI OiaRP"
   >
     Users
   </h2>
   <div
-    className="sc-AxhUy fkItVQ"
+    className="sc-Axmtr fGKBRD"
   >
     <div
-      className="sc-AxjAm jahhFp"
+      className="sc-AxiKw jxeMgG"
     >
       <p
-        className="sc-AxirZ kXBegF"
+        className="sc-AxhCb klGZiV"
       >
         test
       </p>
     </div>
     <div
-      className="sc-AxjAm jahhFp"
+      className="sc-AxiKw jxeMgG"
     >
       <p
-        className="sc-AxirZ kXBegF"
+        className="sc-AxhCb klGZiV"
       >
         admin
       </p>
       <p
-        className="sc-AxiKw cCmoQb"
+        className="sc-AxhUy hvjDNC"
       >
         admin
       </p>
