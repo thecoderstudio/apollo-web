@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import OutlinedButton from '../buttons/OutlinedButton';
 
 const propTypes = {
   agent: PropTypes.object.isRequired
@@ -29,6 +30,14 @@ const Tag = styled.p`
   background-color: ${props => props.theme.accent};
 `;
 
+const DeleteButton = styled(OutlinedButton)`
+  grid-column: logout;
+  float: right;
+  width: 100px;
+  padding 4px;
+  border: 1px solid ${props => props.theme.error};
+`;
+
 function UserListItem(props) {
   let role;
   if (props.user.role !== null) {
@@ -39,6 +48,7 @@ function UserListItem(props) {
     <Container>
       <Username>{props.user.username}</Username>
       {role}
+      <DeleteButton>Delete</DeleteButton>
     </Container>
   );
 }
