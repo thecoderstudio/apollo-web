@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import OutlinedButton from '../buttons/OutlinedButton';
-import checkIfAdmin from '../../util/admin';
 
 const propTypes = {
   user: PropTypes.object.isRequired,
@@ -59,7 +58,6 @@ class UserListItem extends React.PureComponent {
   }
 
   render() {
-    console.log(this.props);
     let role;
     if (this.props.user.role !== null) {
       role = <Tag>{this.props.user.role.name}</Tag>;
@@ -69,7 +67,7 @@ class UserListItem extends React.PureComponent {
       <Container>
         <Username>{this.props.user.username}</Username>
         {role}
-        {!checkIfAdmin(this.props.user) && <DeleteButton onClick={this.deleteUser()}>Delete</DeleteButton>}
+        {this.props.user != this.props.currentUser && <DeleteButton onClick={this.deleteUser()}>Delete</DeleteButton>}
       </Container>
     );
   }
