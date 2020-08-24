@@ -3,6 +3,7 @@ import axios from 'axios';
 import styled from 'styled-components';
 import OutlinedButton from '../buttons/OutlinedButton';
 import UserListItem from './UserListItem';
+import CreateUser from './CreateUser';
 
 const Title = styled.h2`
 `;
@@ -60,6 +61,7 @@ export default class UserList extends React.PureComponent {
             return <UserListItem key={user.id} user={user} />;
           })}
         </List>
+        <CreateUser />
       </div>
     );
   }
