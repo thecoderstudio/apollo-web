@@ -9,7 +9,7 @@ const mockStore = configureStore([]);
 function getComponent(user, store) {
   return renderer.create(
     <Provider store={store}>
-      <UserListItem user={user} />
+      <UserListItem user={user} userDeleteCallback={() => {}} />
     </Provider>
   );
 }

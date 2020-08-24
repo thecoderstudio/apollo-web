@@ -44,6 +44,12 @@ exports[`user list renders correctly 2`] = `
       >
         test
       </p>
+      <button
+        className="sc-AxjAm sc-AxirZ sc-AxgMl kbcbn"
+        onClick={[Function]}
+      >
+        delete
+      </button>
     </div>
     <div
       className="sc-AxiKw jxeMgG"

@@ -36,10 +36,12 @@ describe("user list", () => {
   it("renders correctly", async () => {
     const users = [
       {
+        id: 'id1',
         username: 'test',
         role: null
       },
       {
+        id: 'id2',
         username: 'admin',
         role: {
           name: 'admin'
