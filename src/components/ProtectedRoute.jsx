@@ -11,7 +11,7 @@ const propTypes = {
 
 const defaultProps = {
   role: ''
-}
+};
 
 
 class ProtectedRoute extends React.PureComponent {
@@ -28,7 +28,7 @@ class ProtectedRoute extends React.PureComponent {
       return true;
     }
 
-    return false
+    return false;
   }
 
   render() {
