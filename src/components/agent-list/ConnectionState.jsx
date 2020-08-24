@@ -36,8 +36,8 @@ const Indicator = styled.div`
 
   float: right;
   text-align: left;
-
-  background-color: ${props => props.connectionStateColor}
+  color: ${props => props.connectionStateColor};
+  background-color: ${props => props.connectionStateColor};
 `;
 
 const StyledText = styled.span`
@@ -46,11 +46,10 @@ const StyledText = styled.span`
   margin-left: 25px;
   text-align: left;
 
-  color: ${props => props.connectionStateColor}
+  color: ${props => props.connectionStateColor};
 `;
 
 function ConnectionState(props) {
-  console.log(props)
   const connectionStateColor = getConnectionStateColor(props.connectionState, props.theme);
 
   return (

@@ -2,63 +2,21 @@
 
 exports[`connectionState Gets correct color 1`] = `
 .c0 {
-  margin-left: 25px;
-  margin-right: 25px;
-  display: grid;
-  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
-}
-
-.c1 {
-  grid-column: status-indicator;
-  height: 12px;
-  width: 12px;
-  margin: 10px;
-  border-radius: 50%;
-  float: right;
-  text-align: left;
-}
-
-.c2 {
   grid-column: status-text;
   position: relative;
   margin-left: 25px;
   text-align: left;
 }
 
-<div
+<span
   className="c0"
 >
-  <div
-    className="c1"
-  />
-  <span
-    className="c2"
-  >
-    Blanko
-  </span>
-</div>
+  Blanko
+</span>
 `;
 
 exports[`connectionState Gets correct color 2`] = `
 .c0 {
-  margin-left: 25px;
-  margin-right: 25px;
-  display: grid;
-  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
-}
-
-.c1 {
-  grid-column: status-indicator;
-  height: 12px;
-  width: 12px;
-  margin: 10px;
-  border-radius: 50%;
-  float: right;
-  text-align: left;
-  background-color: #C0392B;
-}
-
-.c2 {
   grid-column: status-text;
   position: relative;
   margin-left: 25px;
@@ -66,56 +24,43 @@ exports[`connectionState Gets correct color 2`] = `
   color: #C0392B;
 }
 
-<div
+<span
   className="c0"
 >
-  <div
-    className="c1"
-  />
-  <span
-    className="c2"
-  >
-    Disconnected
-  </span>
-</div>
+  Disconnected
+</span>
 `;
 
 exports[`connectionState Gets correct color 3`] = `
-<div
-  className="sc-AxirZ ciZpUd"
+.c0 {
+  grid-column: status-text;
+  position: relative;
+  margin-left: 25px;
+  text-align: left;
+  color: #F39C12;
+}
+
+<span
+  className="c0"
 >
-  <div
-    className="sc-AxiKw jeQNXl"
-  >
-    <div
-      className="sc-AxhCb guWnsS"
-    />
-    <span
-      className="sc-AxjAm sc-AxhUy lMjjz"
-    >
-      Connecting
-    </span>
-  </div>
-</div>
+  Connecting
+</span>
 `;
 
 exports[`connectionState Gets correct color 4`] = `
-<div
-  className="sc-AxirZ ciZpUd"
+.c0 {
+  grid-column: status-text;
+  position: relative;
+  margin-left: 25px;
+  text-align: left;
+  color: #27AE60;
+}
+
+<span
+  className="c0"
 >
-  <div
-    className="sc-AxiKw jeQNXl"
-  >
-    <div
-      className="sc-AxhCb guWnsS"
-    />
-    <span
-      className="sc-AxjAm sc-AxhUy lMjjz"
-    >
-      Connected
-    </span>
-  </div>
-</div>
+  Connected
+</span>
 `;
 
 exports[`connectionState renders correctly 1`] = `
@@ -134,6 +79,7 @@ exports[`connectionState renders correctly 1`] = `
   border-radius: 50%;
   float: right;
   text-align: left;
+  color: #27AE60;
   background-color: #27AE60;
 }
 

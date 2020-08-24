@@ -1,25 +1,108 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
+.c3 {
+  margin-left: 25px;
+  margin-right: 25px;
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c5 {
+  grid-column: status-indicator;
+  height: 12px;
+  width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  float: right;
+  text-align: left;
+  color: #27AE60;
+  background-color: #27AE60;
+}
+
+.c6 {
+  grid-column: status-text;
+  position: relative;
+  margin-left: 25px;
+  text-align: left;
+  color: #27AE60;
+}
+
+.c0 {
+  display: grid;
+  grid-template-columns: [name] 1fr [connection-status] 1fr;
+  border-radius: 8px;
+  border: 1px solid white;
+  height: 30px;
+  line-height: 30px;
+  padding: 15px;
+  margin-top: 25px;
+  position: relative;
+}
+
+.c1 {
+  grid-column: name;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: 25px;
+}
+
+.c2 {
+  grid-column: connection-status;
+}
+
+.c4 {
+  float: right;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    grid-template-rows: [name] 1fr [connection-status] 1fr;
+    grid-template-columns: [name-and-status] 1fr;
+    height: 100px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c1 {
+    grid-rows: name;
+    grid-column: name-and-status;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c2 {
+    grid-row: connection-status;
+    grid-column: name-and-status;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c4 {
+    float: left;
+  }
+}
+
 <li
-  className="sc-AxgMl llRWRB"
+  className="c0"
 >
   <span
-    className="sc-AxjAm sc-AxheI irzTJq"
+    className="c1"
   >
     agentName
   </span>
   <div
-    className="sc-AxirZ ciZpUd"
+    className="c2"
   >
     <div
-      className="sc-AxiKw jeQNXl"
+      className="c3 c4"
     >
       <div
-        className="sc-AxhCb guWnsS"
+        className="c5"
       />
       <span
-        className="sc-AxjAm sc-AxhUy lMjjz"
+        className="c6"
       >
         Connected
       </span>

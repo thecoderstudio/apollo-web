@@ -3,16 +3,21 @@ import configureStore from 'redux-mock-store';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import WS from 'jest-websocket-mock';
+import { ThemeProvider } from 'styled-components';
 import AgentList from '../../../src/components/agent-list/AgentList';
 import { listAgents } from '../../../src/actions/agent';
 import waitForExpect from 'wait-for-expect';
+import { darkTheme } from '../../../src/theme';
+
 
 const mockStore = configureStore([]);
 
 function getComponent(store) {
   return renderer.create(
     <Provider store={store}>
-      <AgentList />
+      <ThemeProvider theme={darkTheme}>
+        <AgentList />
+      </ThemeProvider>
     </Provider>
   );
 }
@@ -37,7 +42,7 @@ describe('agentList', () => {
 
   it("renders correctly", () => {
     let tree = getComponent(store).toJSON();
-
+    expect(tree).toMatchSnapshot()
   });
 
   it("correctly dispatches list agents", async () => {
