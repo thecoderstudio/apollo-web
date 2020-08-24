@@ -82,6 +82,31 @@ describe('login', () => {
     });
   });
 
+  it("handler get current user failure", async () => {
+    const component = getComponent(store);
+    const root = component.root.findByProps({authenticated: false});
+    const instance = root.instance;
+
+    axios.post.mockResolvedValue({
+      status: 200
+    });
+    axios.get.mockResolvedValue({
+      status: 500
+    });
+
+    root.findByProps({type: 'username'}).props.onChange({ target: {
+      value: 'test'
+    }});
+    root.findByProps({type: 'password'}).props.onChange({ target: {
+      value: 'password'
+    }});
+    root.findByType('form').props.onSubmit({ preventDefault: jest.fn() });
+
+    await waitForExpect(() => {
+      expect(instance.props.dispatch).toHaveBeenCalledTimes(1);
+    });
+  })
+
   it("correctly sets pathname on authentication", () => {
     const component = getComponent(store);
     const root = component.root.findByProps({authenticated: false});
