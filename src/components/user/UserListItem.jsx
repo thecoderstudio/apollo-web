@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
+import checkIfAdmin from '../../util/admin';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import OutlinedButton from '../buttons/OutlinedButton';
@@ -69,7 +70,7 @@ class UserListItem extends React.PureComponent {
       <Container>
         <Username>{this.props.user.username}</Username>
         {role}
-        {this.props.user.id != this.props.currentUser.id && <DeleteButton onClick={this.deleteUser()}>Delete</DeleteButton>}
+        {this.props.user.id != this.props.currentUser.id && !checkIfAdmin(this.props.user) && <DeleteButton onClick={this.deleteUser}>Delete</DeleteButton>}
       </Container>
     );
   }
