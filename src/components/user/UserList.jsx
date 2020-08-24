@@ -1,10 +1,17 @@
 import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import OutlinedButton from '../buttons/OutlinedButton';
 import UserListItem from './UserListItem';
 
 const Title = styled.h2`
-  margin: 16px;
+`;
+
+const Header = styled.div`
+  margin: 0px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 const List = styled.div`
@@ -44,7 +51,10 @@ export default class UserList extends React.PureComponent {
   render() {
     return (
       <div>
-        <Title>Users</Title>
+        <Header>
+          <Title>Users</Title>
+          <OutlinedButton><i className="fas fa-plus" /> Create User</OutlinedButton>
+        </Header>
         <List>
           {this.state.users.map(user => {
             return <UserListItem key={user.id} user={user} />;
