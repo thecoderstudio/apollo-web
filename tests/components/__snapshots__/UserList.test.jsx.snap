@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`user list doesn't try to render users on error 1`] = `
+<div>
+  <h2
+    className="sc-AxhUy jVXawT"
+  >
+    Users
+  </h2>
+  <div
+    className="sc-AxgMl jXfldy"
+  />
+</div>
+`;
+
 exports[`user list renders correctly 1`] = `
 <div>
   <h2

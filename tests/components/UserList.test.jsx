@@ -45,4 +45,21 @@ describe("user list", () => {
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it("doesn't try to render users on error", async () => {
+    axios.get.mockResolvedValue({
+      status: 500,
+      data: { detail: "generic error" }
+    });
+
+    const component = getComponent()
+    let tree = component.toJSON();
+
+    await waitForExpect(() => {
+      expect(axios.get).toHaveBeenCalled();
+    });
+    tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+
+  });
 });
