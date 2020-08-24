@@ -42,7 +42,6 @@ export default class UserList extends React.PureComponent {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div>
         <Title>Users</Title>
