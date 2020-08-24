@@ -47,7 +47,7 @@ const Content = styled.div`
 const Title = styled.h1`
   margin: 0px;
   text-align: center;
-  font-size: 300px;
+  font-size: 20em;
   color: ${props => props.theme.primary};
 
   ${
@@ -60,7 +60,7 @@ const Title = styled.h1`
 const SubTitle = styled.h2`
   margin: 0px;
   text-align: center;
-  font-size: 30px;
+  font-size: 2em;
   color: ${props => props.theme.darkGrey};
 
   ${

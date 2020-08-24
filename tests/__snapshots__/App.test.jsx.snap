@@ -3,7 +3,7 @@
 exports[`app renders correctly authenticated 1`] = `
 <div>
   <div
-    className="sc-fznWqX bBRglB"
+    className="sc-fzqARJ crFfVZ"
   >
     <div
       className="sc-AxhCb iPTYsw"
@@ -35,7 +35,7 @@ exports[`app renders correctly authenticated 1`] = `
 exports[`app renders correctly unauthenticated 1`] = `
 <div>
   <div
-    className="sc-fznWqX bBRglB"
+    className="sc-fzqARJ crFfVZ"
   >
     <div
       className="sc-AxmLO iBAgtE"

@@ -2,28 +2,36 @@
 
 exports[`not found renders correctly 1`] = `
 <div
-  className="sc-AxhCb cyPBzF"
+  className="sc-AxhCb gyWCqD"
 >
-  <h1
-    className="sc-AxhUy igmpiW"
+  <img
+    className="sc-AxhUy QOdit"
+    src={[Function]}
+  />
+  <div
+    className="sc-AxgMl Nvzeu"
   >
-    404
-  </h1>
-  <h2
-    className="sc-AxgMl eJemCI"
-  >
-    Page not found
-  </h2>
-  <button
-    className="sc-AxirZ sc-AxiKw sc-AxheI iJgUZp"
-  >
-    <a
-      className="sc-AxjAm eQVknK"
-      href="/"
-      onClick={[Function]}
+    <h1
+      className="sc-AxheI diEpea"
     >
-      Go home
-    </a>
-  </button>
+      404
+    </h1>
+    <h2
+      className="sc-Axmtr jCwoFE"
+    >
+      Houston, we have a problem
+    </h2>
+    <button
+      className="sc-AxirZ sc-AxiKw sc-AxmLO bQWLqX"
+    >
+      <a
+        className="sc-AxjAm eQVknK"
+        href="/"
+        onClick={[Function]}
+      >
+        Reroute
+      </a>
+    </button>
+  </div>
 </div>
 `;
