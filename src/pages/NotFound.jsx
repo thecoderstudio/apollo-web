@@ -52,7 +52,7 @@ const Title = styled.h1`
 
   ${
     media.phone`
-      font-size: 200px;
+      font-size: 10em;
     `
   }
 `;
@@ -65,7 +65,7 @@ const SubTitle = styled.h2`
 
   ${
     media.phone`
-      font-size: 25px;
+      font-size: 1em;
     `
   }
 `;
