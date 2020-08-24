@@ -25,6 +25,38 @@ exports[`nav bar handles successful logout 1`] = `
 </div>
 `;
 
+exports[`nav bar render admin link for admins 1`] = `
+<div
+  className="sc-AxiKw iRqncA"
+>
+  <h3>
+    Apollo
+  </h3>
+  <div>
+    <a
+      className="sc-AxhCb jOUXpu"
+      href="/"
+      onClick={[Function]}
+    >
+      Dashboard
+    </a>
+    <a
+      className="sc-AxhCb jOUXpu"
+      href="/admin"
+      onClick={[Function]}
+    >
+      Admin
+    </a>
+  </div>
+  <button
+    className="sc-AxjAm sc-AxirZ sc-AxhUy jkcmEz"
+    onClick={[Function]}
+  >
+    Log out
+  </button>
+</div>
+`;
+
 exports[`nav bar renders correctly 1`] = `
 <div
   className="sc-AxiKw iRqncA"

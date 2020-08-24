@@ -45,4 +45,17 @@ describe('nav bar', () => {
       expect(spy).toHaveBeenCalledWith(logoutAction());
     });
   });
+
+  it("render admin link for admins", () => {
+    store = mockStore({
+      currentUser: {
+        username: 'admin',
+        role: {
+          name: 'admin'
+        }
+      }
+    });
+    let tree = getComponent(store).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
