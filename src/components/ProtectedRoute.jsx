@@ -16,11 +16,11 @@ const defaultProps = {
 
 class ProtectedRoute extends React.PureComponent {
   constructor(props) {
-    super(props); 
+    super(props);
     const { role, currentUser } = props;
     this.state = {
       correctRole: this.checkIfCorrectRole(role, currentUser)
-    }
+    };
   }
 
   checkIfCorrectRole(role, currentUser) {
