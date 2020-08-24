@@ -31,15 +31,6 @@ class ProtectedRoute extends React.PureComponent {
     return false
   }
 
-  componentDidUpdate(prevProps) {
-    if (prevProps.currentUser !== this.props.currentUser || prevProps.role !== this.props.role) {
-      const { role, currentUser } = this.props;
-      this.setState({
-        correctRole: this.checkIfCorrectRole(role, currentUser)
-      });
-    }
-  } 
-
   render() {
     const {
       component: Component,
