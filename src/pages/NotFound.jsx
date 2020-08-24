@@ -1,13 +1,45 @@
 import React from 'react';
 import styled from 'styled-components';
+import media from '../util/media';
 import Link from '../components/Link';
 import OutlinedButton from '../components/buttons/OutlinedButton';
+import notFoundImg from '../images/lost.svg';
 
 const Container = styled.div`
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  max-width: 1750px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: [img] 1fr [content] 1fr;
+  justify-items: center;
+  align-items: center;
+
+  ${
+    media.phone`
+      grid-template-columns: [content] 1fr;
+    `
+  }
+`;
+
+const SupportingImg = styled.img`
+  grid-column: img;
+  width: 75%;
+
+  ${
+    media.phone`
+      display: none;
+    `
+  }
+`;
+
+const Content = styled.div`
   display: flex;
+  grid-column: content;
   flex-direction: column;
   height: 100%;
-  width: 100%;
   justify-content: center;
   align-items: center;
 `;
@@ -15,15 +47,27 @@ const Container = styled.div`
 const Title = styled.h1`
   margin: 0px;
   text-align: center;
-  font-size: 20em;
+  font-size: 300px;
   color: ${props => props.theme.primary};
+
+  ${
+    media.phone`
+      font-size: 200px;
+    `
+  }
 `;
 
 const SubTitle = styled.h2`
   margin: 0px;
   text-align: center;
-  font-size: 2em;
+  font-size: 30px;
   color: ${props => props.theme.darkGrey};
+
+  ${
+    media.phone`
+      font-size: 25px;
+    `
+  }
 `;
 
 const StyledButton = styled(OutlinedButton)`
@@ -34,9 +78,12 @@ const StyledButton = styled(OutlinedButton)`
 export default function NotFound(props) {
   return (
     <Container>
-      <Title>404</Title>
-      <SubTitle>Page not found</SubTitle>
-      <StyledButton><Link to='/'>Go home</Link></StyledButton>
+      <SupportingImg src={notFoundImg} />
+      <Content>
+        <Title>404</Title>
+        <SubTitle>Houston, we have a problem</SubTitle>
+        <StyledButton><Link to='/'>Reroute</Link></StyledButton>
+      </Content>
     </Container>
   );
 }
