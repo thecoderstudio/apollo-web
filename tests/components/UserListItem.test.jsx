@@ -6,10 +6,10 @@ import configureStore from 'redux-mock-store';
 
 const mockStore = configureStore([]);
 
-function getComponent(user, store) {
+function getComponent(user, store, callback=(() => {})) {
   return renderer.create(
     <Provider store={store}>
-      <UserListItem user={user} userDeleteCallback={() => {}} />
+      <UserListItem user={user} userDeleteCallback={callback} />
     </Provider>
   );
 }
@@ -17,8 +17,8 @@ function getComponent(user, store) {
 describe("user list item", () => {
   const store = mockStore({
     currentUser: {
+      id: 'id',
       role: {
-        id: 'id',
         name: 'admin'
       }
     }
@@ -42,4 +42,17 @@ describe("user list item", () => {
     const tree = getComponent(user, store).toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it("correctly removes user", () => {
+    const spy = jest.fn();
+    const user = {
+      id: 'id2',
+      role: {
+        name: 'not admin'
+      }
+    };
+    const tree = getComponent(user, store, spy);
+    tree.root.findByType('button').props.onClick();
+    expect(spy).toHaveBeenCalled();
+  })
 });

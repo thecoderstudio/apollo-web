@@ -26,5 +26,11 @@ exports[`user list item render correctly without role 1`] = `
   >
     test
   </p>
+  <button
+    className="sc-AxjAm sc-AxirZ sc-AxgMl kbcbn"
+    onClick={[Function]}
+  >
+    delete
+  </button>
 </div>
 `;
