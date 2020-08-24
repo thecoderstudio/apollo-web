@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`not found renders correctly 1`] = `
+<div
+  className="sc-AxhCb cyPBzF"
+>
+  <h1
+    className="sc-AxhUy igmpiW"
+  >
+    404
+  </h1>
+  <h2
+    className="sc-AxgMl eJemCI"
+  >
+    Page not found
+  </h2>
+  <button
+    className="sc-AxirZ sc-AxiKw sc-AxheI iJgUZp"
+  >
+    <a
+      className="sc-AxjAm eQVknK"
+      href="/"
+      onClick={[Function]}
+    >
+      Go home
+    </a>
+  </button>
+</div>
+`;
