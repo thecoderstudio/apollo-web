@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 import OutlinedButton from '../buttons/OutlinedButton';
+import checkIfAdmin from '../../util/admin';
 
 const propTypes = {
-  agent: PropTypes.object.isRequired
+  user: PropTypes.object.isRequired,
+  userDeleteCallback: PropTypes.func.isRequired
 };
 
 const Container = styled.div`
@@ -38,19 +41,38 @@ const DeleteButton = styled(OutlinedButton)`
   border: 1px solid ${props => props.theme.error};
 `;
 
-function UserListItem(props) {
-  let role;
-  if (props.user.role !== null) {
-    role = <Tag>{props.user.role.name}</Tag>;
+class UserListItem extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.deleteUser = this.deleteUser.bind(this)
   }
 
-  return (
-    <Container>
-      <Username>{props.user.username}</Username>
-      {role}
-      <DeleteButton>Delete</DeleteButton>
-    </Container>
-  );
+  deleteUser() {
+    axios.delete(
+      `${process.env.APOLLO_HTTP_URL}user/post`,
+      { withCredentials: true }
+    ).then(res => {
+      if (res.status === 204) {
+        onUserDeleteCallback();
+      }
+    });
+  }
+
+  render() {
+    console.log(this.props);
+    let role;
+    if (this.props.user.role !== null) {
+      role = <Tag>{this.props.user.role.name}</Tag>;
+    }
+
+    return (
+      <Container>
+        <Username>{this.props.user.username}</Username>
+        {role}
+        {!checkIfAdmin(this.props.user) && <DeleteButton onClick={this.deleteUser()}>Delete</DeleteButton>}
+      </Container>
+    );
+  }
 }
 
 UserListItem.propTypes = propTypes;
