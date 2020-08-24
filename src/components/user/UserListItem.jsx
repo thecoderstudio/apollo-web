@@ -50,17 +50,16 @@ class UserListItem extends React.PureComponent {
 
   deleteUser() {
     axios.delete(
-      `${process.env.APOLLO_HTTP_URL}user/post`,
+      `${process.env.APOLLO_HTTP_URL}user/${this.props.user.id}`,
       { withCredentials: true }
     ).then(res => {
       if (res.status === 204) {
-        onUserDeleteCallback();
+        this.props.userDeleteCallback();
       }
     });
   }
 
   render() {
-    console.log(this.props);
     let role;
     if (this.props.user.role !== null) {
       role = <Tag>{this.props.user.role.name}</Tag>;
@@ -70,7 +69,10 @@ class UserListItem extends React.PureComponent {
       <Container>
         <Username>{this.props.user.username}</Username>
         {role}
-        {this.props.user.id != this.props.currentUser.id && !checkIfAdmin(this.props.user) && <DeleteButton onClick={this.deleteUser}>Delete</DeleteButton>}
+        {
+          this.props.user.id != this.props.currentUser.id && !checkIfAdmin(this.props.user) &&
+          <DeleteButton onClick={this.deleteUser}>delete</DeleteButton>
+        }
       </Container>
     );
   }
