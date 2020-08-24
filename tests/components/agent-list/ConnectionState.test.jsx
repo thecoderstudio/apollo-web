@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'styled-components';
 import ConnectionState from '../../../src/components/agent-list/ConnectionState';
 import { darkTheme } from '../../../src/theme';
 
@@ -21,18 +21,18 @@ describe("connectionState", () => {
   it("Gets correct color", () => {
     let tree = getComponent("blanko").toJSON().children[1];
     expect(tree).toMatchSnapshot();
-    expect(tree).not.toHaveStyleRule('color', darkTheme.connectedColor)
-    expect(tree).not.toHaveStyleRule('color', darkTheme.disconnectedColor)
-    expect(tree).not.toHaveStyleRule('color', darkTheme.connectingColor)
+    expect(tree).not.toHaveStyleRule('color', darkTheme.connectedColor);
+    expect(tree).not.toHaveStyleRule('color', darkTheme.disconnectedColor);
+    expect(tree).not.toHaveStyleRule('color', darkTheme.connectingColor);
     tree = getComponent("disconnected").toJSON().children[1];
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('color', darkTheme.disconnectedColor);
     tree = getComponent("connecting").toJSON().children[1];
     expect(tree).toMatchSnapshot();
-    expect(tree).toHaveStyleRule('color', darkTheme.connectingColor)
+    expect(tree).toHaveStyleRule('color', darkTheme.connectingColor);
     tree = getComponent("connected").toJSON().children[1];
     expect(tree).toMatchSnapshot();
-    expect(tree).toHaveStyleRule('color', darkTheme.connectedColor)
+    expect(tree).toHaveStyleRule('color', darkTheme.connectedColor);
   });
 });
 

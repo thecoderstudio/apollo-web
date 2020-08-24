@@ -42,7 +42,7 @@ describe('agentList', () => {
 
   it("renders correctly", () => {
     let tree = getComponent(store).toJSON();
-    expect(tree).toMatchSnapshot()
+    expect(tree).toMatchSnapshot();
   });
 
   it("correctly dispatches list agents", async () => {
@@ -73,7 +73,7 @@ describe('agentList', () => {
         { id: "id", name: "name", connection_state: "connected" },
         { id: "id2", name: "name", connection_state: "connected" },
       ]
-    })
+    });
     expect(getComponent(store)).toMatchSnapshot();
   })
 })

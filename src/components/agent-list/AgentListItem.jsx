@@ -67,7 +67,7 @@ const StyledConnectionState = styled(ConnectionState)`
   }
 `;
 
-StyledConnectionState.displayName = StyledConnectionState
+StyledConnectionState.displayName = StyledConnectionState;
 
 export default function AgentListItem(props) {
   return (
