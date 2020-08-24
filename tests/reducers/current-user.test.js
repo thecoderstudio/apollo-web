@@ -9,7 +9,7 @@ describe("current user reducer", () => {
   it("should correctly CACHE_CURRENT_USER", () => {
     const user = {
       name: 'test'
-    }
+    };
     expect(currentUserReducer({}, cacheCurrentUser(user))).toEqual(user);
   });
 

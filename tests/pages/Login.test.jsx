@@ -105,7 +105,7 @@ describe('login', () => {
     await waitForExpect(() => {
       expect(instance.props.dispatch).toHaveBeenCalledTimes(1);
     });
-  })
+  });
 
   it("correctly sets pathname on authentication", () => {
     const component = getComponent(store);

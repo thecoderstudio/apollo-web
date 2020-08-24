@@ -10,7 +10,7 @@ function removeCurrentUser() {
 function cacheCurrentUser(user) {
   return {
     type: CACHE_CURRENT_USER,
-    user: user
+    user
   };
 }
 

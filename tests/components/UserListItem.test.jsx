@@ -16,7 +16,7 @@ describe("user list item", () => {
     };
     const tree = getComponent(user).toJSON();
     expect(tree).toMatchSnapshot();
-  })
+  });
 
   it("render correctly with role", () => {
     const user = {
@@ -27,5 +27,5 @@ describe("user list item", () => {
     };
     const tree = getComponent(user).toJSON();
     expect(tree).toMatchSnapshot();
-  })
+  });
 });

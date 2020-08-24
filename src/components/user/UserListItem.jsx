@@ -1,5 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
+const propTypes = {
+  agent: PropTypes.object.isRequired
+};
 
 const Container = styled.div`
   min-height: 60px;
@@ -14,9 +19,6 @@ const Username = styled.p`
   margin: 0px;
 `;
 
-const Role = styled.div`
-`;
-
 const Tag = styled.p`
   float: right;
   width: 80px;
@@ -27,10 +29,10 @@ const Tag = styled.p`
   background-color: ${props => props.theme.accent};
 `;
 
-export default function UserListItem(props) {
+function UserListItem(props) {
   let role;
-  if (props.user.role != null) {
-    role = <Role><Tag>{props.user.role.name}</Tag></Role>
+  if (props.user.role !== null) {
+    role = <Tag>{props.user.role.name}</Tag>;
   }
 
   return (
@@ -40,3 +42,7 @@ export default function UserListItem(props) {
     </Container>
   );
 }
+
+UserListItem.propTypes = propTypes;
+
+export default UserListItem;

@@ -35,7 +35,7 @@ describe("user list", () => {
       data: users
     });
 
-    const component = getComponent()
+    const component = getComponent();
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 

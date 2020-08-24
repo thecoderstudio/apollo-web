@@ -48,7 +48,7 @@ class NavBar extends React.PureComponent {
 
   checkIfAdmin() {
     if (this.props.currentUser.role) {
-      return this.props.currentUser.role.name == 'admin';
+      return this.props.currentUser.role.name === 'admin';
     }
 
     return false;

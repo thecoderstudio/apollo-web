@@ -15,14 +15,13 @@ margin-top: 16px;
   }
 `;
 
-
 export default class UserList extends React.PureComponent {
   constructor(props) {
     super(props);
     this.fetchUsers = this.fetchUsers.bind(this);
     this.state = {
       users: []
-    }
+    };
   }
 
   componentDidMount() {
@@ -48,7 +47,7 @@ export default class UserList extends React.PureComponent {
         <Title>Users</Title>
         <List>
           {this.state.users.map(user => {
-            return <UserListItem key={user.id} user={user} />
+            return <UserListItem key={user.id} user={user} />;
           })}
         </List>
       </div>
