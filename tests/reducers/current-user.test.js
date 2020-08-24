@@ -16,7 +16,7 @@ describe("current user reducer", () => {
 it("should correctly REMOVE_CURRENT_USER", () => {
     const user = {
       name: 'test'
-    }
+    };
     expect(currentUserReducer(user, removeCurrentUser())).toEqual({});
   });
 });

@@ -9,15 +9,11 @@ exports[`user list item render correctly with role 1`] = `
   >
     test
   </p>
-  <div
-    className="sc-AxiKw cydMkg"
+  <p
+    className="sc-AxiKw cCmoQb"
   >
-    <p
-      className="sc-AxhCb hGORiL"
-    >
-      admin
-    </p>
-  </div>
+    admin
+  </p>
 </div>
 `;
 

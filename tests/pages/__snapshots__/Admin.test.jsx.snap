@@ -2,22 +2,22 @@
 
 exports[`user list renders correctly 1`] = `
 <div
-  className="sc-Axmtr fxCZTr"
+  className="sc-AxheI iWCpdE"
 >
   <h1>
     Admin dashboard
   </h1>
   <div
-    className="sc-AxheI sc-AxmLO fOmNFA"
+    className="sc-AxgMl sc-Axmtr ffNyTV"
   >
     <div>
       <h2
-        className="sc-AxhUy jVXawT"
+        className="sc-AxhCb dXpqyO"
       >
         Users
       </h2>
       <div
-        className="sc-AxgMl jXfldy"
+        className="sc-AxhUy fkItVQ"
       />
     </div>
   </div>
@@ -26,22 +26,22 @@ exports[`user list renders correctly 1`] = `
 
 exports[`user list renders correctly 2`] = `
 <div
-  className="sc-Axmtr fxCZTr"
+  className="sc-AxheI iWCpdE"
 >
   <h1>
     Admin dashboard
   </h1>
   <div
-    className="sc-AxheI sc-AxmLO fOmNFA"
+    className="sc-AxgMl sc-Axmtr ffNyTV"
   >
     <div>
       <h2
-        className="sc-AxhUy jVXawT"
+        className="sc-AxhCb dXpqyO"
       >
         Users
       </h2>
       <div
-        className="sc-AxgMl jXfldy"
+        className="sc-AxhUy fkItVQ"
       >
         <div
           className="sc-AxjAm jahhFp"
@@ -60,15 +60,11 @@ exports[`user list renders correctly 2`] = `
           >
             admin
           </p>
-          <div
-            className="sc-AxiKw cydMkg"
+          <p
+            className="sc-AxiKw cCmoQb"
           >
-            <p
-              className="sc-AxhCb hGORiL"
-            >
-              admin
-            </p>
-          </div>
+            admin
+          </p>
         </div>
       </div>
     </div>

@@ -52,7 +52,7 @@ describe("user list", () => {
       data: { detail: "generic error" }
     });
 
-    const component = getComponent()
+    const component = getComponent();
     let tree = component.toJSON();
 
     await waitForExpect(() => {
