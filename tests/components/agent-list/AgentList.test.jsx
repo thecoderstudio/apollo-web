@@ -75,5 +75,5 @@ describe('agentList', () => {
       ]
     });
     expect(getComponent(store)).toMatchSnapshot();
-  })
-})
+  });
+});
