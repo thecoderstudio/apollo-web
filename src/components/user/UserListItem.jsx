@@ -54,6 +54,7 @@ class UserListItem extends React.PureComponent {
       { withCredentials: true }
     ).then(res => {
       if (res.status === 204) {
+
         this.props.userDeleteCallback();
       }
     });

@@ -1,9 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import UserListItem from '../../src/components/user/UserListItem';
+import axios from 'axios';
 import { Provider } from 'react-redux';
+import waitForExpect from 'wait-for-expect'
 import configureStore from 'redux-mock-store';
+import UserListItem from '../../src/components/user/UserListItem';
 
+jest.mock('axios');
 const mockStore = configureStore([]);
 
 function getComponent(user, store, callback=(() => {})) {
@@ -23,6 +26,7 @@ describe("user list item", () => {
       }
     }
   });
+  const spy = jest.fn();
   it("render correctly without role", () => {
     const user = {
       username: 'test',
@@ -44,7 +48,9 @@ describe("user list item", () => {
   });
 
   it("correctly removes user", () => {
-    const spy = jest.fn();
+    axios.delete.mockResolvedValue({
+      status: 204
+    });
     const user = {
       id: 'id2',
       role: {
@@ -53,6 +59,25 @@ describe("user list item", () => {
     };
     const tree = getComponent(user, store, spy);
     tree.root.findByType('button').props.onClick();
-    expect(spy).toHaveBeenCalled();
-  })
+    await waitForExpect(() => {
+      expect(spy).toHaveBeenCalled();
+    });
+  });
+
+  it("correctly not removes user", async () => {
+    axios.delete.mockResolvedValue({
+      status: 204
+    });
+    const user = {
+      id: 'id2',
+      role: {
+        name: 'admin'
+      }
+    };
+    const tree = getComponent(user, store, spy);
+    tree.root.findByType('button').props.onClick();
+    await waitForExpect(() => {
+      expect(spy).toNotHaveBeenCalled();
+    });
+  });
 });
