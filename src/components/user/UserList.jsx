@@ -28,6 +28,7 @@ export default class UserList extends React.PureComponent {
     super(props);
     this.fetchUsers = this.fetchUsers.bind(this);
     this.createUser = this.createUser.bind(this);
+    this.closeCreateUser = this.closeCreateUser.bind(this);
     this.state = {
       users: [],
       creatingUser: false
@@ -57,6 +58,12 @@ export default class UserList extends React.PureComponent {
     });
   }
 
+  closeCreateUser() {
+    this.setState({
+      creatingUser: false
+    });
+  }
+
   render() {
     return (
       <div>
@@ -71,7 +78,7 @@ export default class UserList extends React.PureComponent {
             return <UserListItem key={user.id} user={user} />;
           })}
         </List>
-        { this.state.creatingUser && <CreateUser /> }
+        { this.state.creatingUser && <CreateUser onClose={this.closeCreateUser} /> }
       </div>
     );
   }

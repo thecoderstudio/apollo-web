@@ -42,6 +42,15 @@ const Buttons = styled.div`
 `;
 
 export default class CreateUser extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.close = this.close.bind(this);
+  }
+
+  close() {
+    this.props.onClose();
+  }
+
   render() {
     return (
       <Container>
@@ -51,8 +60,8 @@ export default class CreateUser extends React.PureComponent {
           <Input type="password" placeholder="Password" />
           <Input type="password" placeholder="Confirm password" />
           <Buttons>
-          <OutlinedButton>Cancel</OutlinedButton>
-          <Button>Create user</Button>
+            <OutlinedButton onClick={this.close}>Cancel</OutlinedButton>
+            <Button>Create user</Button>
           </Buttons>
         </Form>
       </Container>
