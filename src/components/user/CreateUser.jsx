@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
+import media from '../../util/media';
 import Button from '../buttons/Button';
 import OutlinedButton from '../buttons/OutlinedButton';
 import Input from '../Input';
@@ -10,11 +11,30 @@ const Container = styled(Card)`
   position: absolute;
   left: 0;
   right: 0;
+  top: 50%;
   margin-left: auto;
   margin-right: auto;
-  min-height: 400px;
+  min-height: 450px;
   width: 100%;
   max-width: 400px;
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing:border-box;
+
+  ${
+    media.phone`
+      padding: 16px;
+      height: 100%;
+    `
+  }
+`;
+
+const Content = styled.div`
+  height: 100%;
+  max-height: 450px;
   display: grid;
   grid-template-rows: [title] 1fr [form ]4fr;
   align-items: center;
@@ -39,6 +59,13 @@ const Buttons = styled.div`
 
   &> button {
     min-width: 150px;
+  }
+
+  ${
+    media.phone`
+      justify-content: space-between;
+      flex-direction: column-reverse;
+    `
   }
 `;
 
@@ -118,16 +145,18 @@ export default class CreateUser extends React.PureComponent {
   render() {
     return (
       <Container>
-        <Title>Create new user</Title>
-        <Form onSubmit={this.createUser}>
-          <Input type="username" placeholder="Username" onChange={this.changeUsername} />
-          <Input type="password" placeholder="Password" onChange={this.changePassword} />
-          <Input type="password" placeholder="Confirm password" onChange={this.changeConfirmPassword} />
-          <Buttons>
-            <OutlinedButton onClick={this.close}>Cancel</OutlinedButton>
-            <Button>Create user</Button>
-          </Buttons>
-        </Form>
+        <Content>
+          <Title>Create new user</Title>
+          <Form onSubmit={this.createUser}>
+            <Input type="username" placeholder="Username" onChange={this.changeUsername} />
+            <Input type="password" placeholder="Password" onChange={this.changePassword} />
+            <Input type="password" placeholder="Confirm password" onChange={this.changeConfirmPassword} />
+            <Buttons>
+              <OutlinedButton onClick={this.close}>Cancel</OutlinedButton>
+              <Button>Create user</Button>
+            </Buttons>
+          </Form>
+        </Content>
       </Container>
     );
   }
