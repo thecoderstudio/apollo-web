@@ -47,7 +47,7 @@ describe("user list item", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("correctly removes user", () => {
+  it("correctly removes user", async () => {
     axios.delete.mockResolvedValue({
       status: 204
     });
