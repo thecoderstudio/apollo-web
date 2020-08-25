@@ -23,6 +23,8 @@ exports[`agentList correctly lists multiple agents 1`] = `
 .c9 {
   grid-column: status-text;
   position: relative;
+  margin: 0;
+  padding-top: 0;
   margin-left: 25px;
   text-align: left;
   color: #27AE60;
@@ -45,6 +47,8 @@ exports[`agentList correctly lists multiple agents 1`] = `
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  margin: 0;
+  padding-top: 0;
   margin-left: 25px;
 }
 
@@ -61,7 +65,6 @@ exports[`agentList correctly lists multiple agents 1`] = `
   grid-template-rows: [title] 50px [list] 1fr;
   background-color: #1B1B1B;
   border-radius: 8px;
-  maring: 20px;
   padding: 20px;
 }
 
@@ -117,11 +120,11 @@ exports[`agentList correctly lists multiple agents 1`] = `
     <li
       className="c3"
     >
-      <span
+      <p
         className="c4"
       >
         name
-      </span>
+      </p>
       <div
         className="c5"
       >
@@ -131,22 +134,22 @@ exports[`agentList correctly lists multiple agents 1`] = `
           <div
             className="c8"
           />
-          <span
+          <p
             className="c9"
           >
             Connected
-          </span>
+          </p>
         </div>
       </div>
     </li>
     <li
       className="c3"
     >
-      <span
+      <p
         className="c4"
       >
         name
-      </span>
+      </p>
       <div
         className="c5"
       >
@@ -156,11 +159,11 @@ exports[`agentList correctly lists multiple agents 1`] = `
           <div
             className="c8"
           />
-          <span
+          <p
             className="c9"
           >
             Connected
-          </span>
+          </p>
         </div>
       </div>
     </li>
@@ -174,7 +177,6 @@ exports[`agentList renders correctly 1`] = `
   grid-template-rows: [title] 50px [list] 1fr;
   background-color: #1B1B1B;
   border-radius: 8px;
-  maring: 20px;
   padding: 20px;
 }
 

@@ -2,6 +2,8 @@
 
 exports[`login renders correctly 1`] = `
 .c7 {
+  max-height: 50px;
+  padding: 12px;
   border: none;
   border-radius: 5px;
   color: white;

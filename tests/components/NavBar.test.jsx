@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
@@ -11,7 +12,9 @@ const mockStore = configureStore([]);
 function getComponent(store) {
   return renderer.create(
     <Provider store={store}>
-      <NavBar />
+      <BrowserRouter>
+        <NavBar />
+      </BrowserRouter>
     </Provider>
   );
 }
@@ -21,7 +24,9 @@ describe('nav bar', () => {
   let spy;
 
   beforeEach(() => {
-    store = mockStore({});
+    store = mockStore({
+      currentUser: {}
+    });
     spy = jest.spyOn(store, 'dispatch');
   });
 
@@ -39,5 +44,18 @@ describe('nav bar', () => {
     await waitForExpect(() => {
       expect(spy).toHaveBeenCalledWith(logoutAction());
     });
+  });
+
+  it("render admin link for admins", () => {
+    store = mockStore({
+      currentUser: {
+        username: 'admin',
+        role: {
+          name: 'admin'
+        }
+      }
+    });
+    let tree = getComponent(store).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

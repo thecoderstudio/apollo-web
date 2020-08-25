@@ -5,6 +5,7 @@ test("root reducer should contain all reducers", () => {
   expect(rootReducer(undefined, {})).toEqual({
     agent: [],
     authenticated: false,
+    currentUser: {},
     theme: darkTheme
   });
 });

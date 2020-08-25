@@ -23,6 +23,8 @@ exports[`renders correctly 1`] = `
 .c6 {
   grid-column: status-text;
   position: relative;
+  margin: 0;
+  padding-top: 0;
   margin-left: 25px;
   text-align: left;
   color: #27AE60;
@@ -45,6 +47,8 @@ exports[`renders correctly 1`] = `
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  margin: 0;
+  padding-top: 0;
   margin-left: 25px;
 }
 
@@ -87,11 +91,11 @@ exports[`renders correctly 1`] = `
 <li
   className="c0"
 >
-  <span
+  <p
     className="c1"
   >
     agentName
-  </span>
+  </p>
   <div
     className="c2"
   >
@@ -101,11 +105,11 @@ exports[`renders correctly 1`] = `
       <div
         className="c5"
       />
-      <span
+      <p
         className="c6"
       >
         Connected
-      </span>
+      </p>
     </div>
   </div>
 </li>
