@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`create user renders correctly 1`] = `
+<div
+  className="sc-AxhCb sc-AxhUy fSnuAc"
+>
+  <div
+    className="sc-AxgMl hyxyvR"
+  >
+    <h2
+      className="sc-AxheI fqRamg"
+    >
+      Create new user
+    </h2>
+    <form
+      className="sc-Axmtr iSIpMi"
+      onSubmit={[Function]}
+    >
+      <input
+        className="sc-AxiKw eDRdNW"
+        onChange={[Function]}
+        placeholder="Username"
+        type="username"
+      />
+      <input
+        className="sc-AxiKw eDRdNW"
+        onChange={[Function]}
+        placeholder="Password"
+        type="password"
+      />
+      <input
+        className="sc-AxiKw eDRdNW"
+        onChange={[Function]}
+        placeholder="Confirm password"
+        type="password"
+      />
+      <div
+        className="sc-AxmLO dhyFpl"
+      >
+        <button
+          className="sc-AxjAm sc-AxirZ txvCN"
+          onClick={[Function]}
+        >
+          Cancel
+        </button>
+        <button
+          className="sc-AxjAm gCJpuO"
+        >
+          Create user
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;

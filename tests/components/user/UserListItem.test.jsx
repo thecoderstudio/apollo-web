@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import UserListItem from '../../src/components/user/UserListItem';
+import UserListItem from '../../../src/components/user/UserListItem';
 
 function getComponent(user) {
   return renderer.create(
