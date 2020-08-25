@@ -123,7 +123,7 @@ exports[`login renders correctly 1`] = `
       Log in to Apollo
     </h1>
     <div
-      className="sc-AxiKw c4"
+      className="c4"
     >
       <form
         className="c5"
