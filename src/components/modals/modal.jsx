@@ -22,9 +22,9 @@ const ModalOverlay = styled.div`
 const StyledCard = styled(Card)`
   display: grid;
   grid-template-rows: [title] 50px [content] 1fr;
-  position:fixed;
-  top:50%;
-  left:50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%,-50%);
   width: 600px;
   height: auto;
