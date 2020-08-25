@@ -40,6 +40,13 @@ exports[`nav bar render admin link for admins 1`] = `
     >
       Dashboard
     </a>
+    <a
+      className="sc-AxiKw gtGpgZ sc-AxhUy jjMkGi"
+      href="/admin"
+      onClick={[Function]}
+    >
+      Admin
+    </a>
   </div>
   <button
     className="sc-AxjAm sc-AxirZ sc-AxgMl ZfUJg"

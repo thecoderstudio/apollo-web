@@ -58,17 +58,4 @@ describe('nav bar', () => {
     let tree = getComponent(store).toJSON();
     expect(tree).toMatchSnapshot();
   });
-
-  it("don't render admin link for admins", () => {
-    store = mockStore({
-      currentUser: {
-        username: 'admin',
-        role: {
-          name: 'not admin'
-        }
-      }
-    });
-    let tree = getComponent(store).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
 });

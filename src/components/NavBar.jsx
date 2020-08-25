@@ -45,7 +45,8 @@ class NavBar extends React.PureComponent {
         <h3>Apollo</h3>
         <div>
           <StyledLink to='/'>Dashboard</StyledLink>
-          {checkIfAdmin() && <StyledLink to='/admin'>Admin</StyledLink>}
+          {checkIfAdmin(this.props.currentUser) &&
+          <StyledLink to='/admin'>Admin</StyledLink>}
         </div>
         <Logout onClick={this.logout}>Log out</Logout>
       </NavigationBar>
