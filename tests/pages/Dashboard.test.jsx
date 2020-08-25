@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
@@ -9,15 +10,23 @@ describe('dashboard', () => {
     let mockStore = configureStore([]);
     const store = mockStore({
       agent: [],
+      currentUser: {
+        id: 'id',
+        role: {
+          name: 'admin'
+        }
+      },
       authenticated: true
     });
     process.env = {
       APOLLO_WS_URL: 'ws://localhost:1234/'
     };
-    
+
     const tree = renderer.create(
       <Provider store={store} >
-        <Dashboard />
+        <BrowserRouter>
+          <Dashboard />
+        </BrowserRouter>
       </Provider >
     ).toJSON();
     expect(tree).toMatchSnapshot();
