@@ -21,3 +21,5 @@ yarn-error.log*
 # Parcel related files
 dist/
 .cache/
+
+.eslintrc.json

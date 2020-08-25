@@ -37,7 +37,7 @@ describe('login', () => {
 
   it("handles successful login", async () => {
     const component = getComponent(store);
-    const root = component.root.findByProps({authenticated: false});
+    const root = component.root.findByProps({ authenticated: false });
     const instance = root.instance;
 
     axios.post.mockResolvedValue({
@@ -47,12 +47,16 @@ describe('login', () => {
       status: 200
     });
 
-    root.findByProps({type: 'username'}).props.onChange({ target: {
-      value: 'test'
-    }});
-    root.findByProps({type: 'password'}).props.onChange({ target: {
-      value: 'password'
-    }});
+    root.findByProps({ type: 'username' }).props.onChange({
+      target: {
+        value: 'test'
+      }
+    });
+    root.findByProps({ type: 'password' }).props.onChange({
+      target: {
+        value: 'password'
+      }
+    });
     root.findByType('form').props.onSubmit({ preventDefault: jest.fn() });
 
     await waitForExpect(() => {
@@ -62,19 +66,23 @@ describe('login', () => {
 
   it("handles unsuccessful login", async () => {
     const component = getComponent(store);
-    const root = component.root.findByProps({authenticated: false});
+    const root = component.root.findByProps({ authenticated: false });
     const instance = root.instance;
 
     axios.post.mockResolvedValue({
       status: 400
     });
 
-    root.findByProps({type: 'username'}).props.onChange({ target: {
-      value: 'test'
-    }});
-    root.findByProps({type: 'password'}).props.onChange({ target: {
-      value: 'password'
-    }});
+    root.findByProps({ type: 'username' }).props.onChange({
+      target: {
+        value: 'test'
+      }
+    });
+    root.findByProps({ type: 'password' }).props.onChange({
+      target: {
+        value: 'password'
+      }
+    });
     root.findByType('form').props.onSubmit({ preventDefault: jest.fn() });
 
     await waitForExpect(() => {
@@ -109,7 +117,7 @@ describe('login', () => {
 
   it("correctly sets pathname on authentication", () => {
     const component = getComponent(store);
-    const root = component.root.findByProps({authenticated: false});
+    const root = component.root.findByProps({ authenticated: false });
     const instance = root.instance;
 
     instance.props = ({ authenticated: true });

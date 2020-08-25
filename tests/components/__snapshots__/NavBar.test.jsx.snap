@@ -1,15 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`nav bar handles successful logout 1`] = `
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
+.c0 {
+  height: 50px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 8fr [logout];
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  margin-right: 16px;
+}
+
+.c3 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  grid-column: logout;
+  float: right;
+  width: 100px;
+  height: 75%;
+}
+
+.c3:hover {
+  opacity: 0.90;
+}
+
 <div
-  className="sc-AxhCb cFOhCU"
+  className="c0"
 >
   <h3>
     Apollo
   </h3>
   <div>
     <a
-      className="sc-AxiKw gtGpgZ sc-AxhUy jjMkGi"
+      className="c1 c2"
       href="/"
       onClick={[Function]}
     >
@@ -17,7 +63,7 @@ exports[`nav bar handles successful logout 1`] = `
     </a>
   </div>
   <button
-    className="sc-AxjAm sc-AxirZ sc-AxgMl ZfUJg"
+    className="c3"
     onClick={[Function]}
   >
     Log out
@@ -26,22 +72,68 @@ exports[`nav bar handles successful logout 1`] = `
 `;
 
 exports[`nav bar render admin link for admins 1`] = `
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
+.c0 {
+  height: 50px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 8fr [logout];
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  margin-right: 16px;
+}
+
+.c3 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  grid-column: logout;
+  float: right;
+  width: 100px;
+  height: 75%;
+}
+
+.c3:hover {
+  opacity: 0.90;
+}
+
 <div
-  className="sc-AxhCb cFOhCU"
+  className="c0"
 >
   <h3>
     Apollo
   </h3>
   <div>
     <a
-      className="sc-AxiKw gtGpgZ sc-AxhUy jjMkGi"
+      className="c1 c2"
       href="/"
       onClick={[Function]}
     >
       Dashboard
     </a>
     <a
-      className="sc-AxiKw gtGpgZ sc-AxhUy jjMkGi"
+      className="c1 c2"
       href="/admin"
       onClick={[Function]}
     >
@@ -49,7 +141,7 @@ exports[`nav bar render admin link for admins 1`] = `
     </a>
   </div>
   <button
-    className="sc-AxjAm sc-AxirZ sc-AxgMl ZfUJg"
+    className="c3"
     onClick={[Function]}
   >
     Log out
@@ -58,15 +150,61 @@ exports[`nav bar render admin link for admins 1`] = `
 `;
 
 exports[`nav bar renders correctly 1`] = `
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
+.c0 {
+  height: 50px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 8fr [logout];
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  margin-right: 16px;
+}
+
+.c3 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  grid-column: logout;
+  float: right;
+  width: 100px;
+  height: 75%;
+}
+
+.c3:hover {
+  opacity: 0.90;
+}
+
 <div
-  className="sc-AxhCb cFOhCU"
+  className="c0"
 >
   <h3>
     Apollo
   </h3>
   <div>
     <a
-      className="sc-AxiKw gtGpgZ sc-AxhUy jjMkGi"
+      className="c1 c2"
       href="/"
       onClick={[Function]}
     >
@@ -74,7 +212,7 @@ exports[`nav bar renders correctly 1`] = `
     </a>
   </div>
   <button
-    className="sc-AxjAm sc-AxirZ sc-AxgMl ZfUJg"
+    className="c3"
     onClick={[Function]}
   >
     Log out

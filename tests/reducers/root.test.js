@@ -3,6 +3,7 @@ import { darkTheme } from '../../src/theme';
 
 test("root reducer should contain all reducers", () => {
   expect(rootReducer(undefined, {})).toEqual({
+    agent: [],
     authenticated: false,
     currentUser: {},
     theme: darkTheme
