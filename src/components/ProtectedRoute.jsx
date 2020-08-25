@@ -11,16 +11,16 @@ const propTypes = {
 
 const defaultProps = {
   role: ''
-}
+};
 
 
 class ProtectedRoute extends React.PureComponent {
   constructor(props) {
-    super(props); 
+    super(props);
     const { role, currentUser } = props;
     this.state = {
       correctRole: this.checkIfCorrectRole(role, currentUser)
-    }
+    };
   }
 
   checkIfCorrectRole(role, currentUser) {
@@ -28,17 +28,8 @@ class ProtectedRoute extends React.PureComponent {
       return true;
     }
 
-    return false
+    return false;
   }
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.currentUser !== this.props.currentUser || prevProps.role !== this.props.role) {
-      const { role, currentUser } = this.props;
-      this.setState({
-        correctRole: this.checkIfCorrectRole(role, currentUser)
-      });
-    }
-  } 
 
   render() {
     const {
