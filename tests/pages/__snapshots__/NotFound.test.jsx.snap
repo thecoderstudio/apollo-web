@@ -130,7 +130,7 @@ exports[`not found renders correctly 1`] = `
       Houston, we have a problem
     </h2>
     <button
-      className="c5"
+      className="sc-AxirZ sc-AxiKw c5"
     >
       <a
         className="c6"

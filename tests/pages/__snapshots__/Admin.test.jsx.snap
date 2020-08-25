@@ -27,7 +27,7 @@ exports[`user list renders correctly 1`] = `
     Admin dashboard
   </h1>
   <div
-    className="c1"
+    className="sc-AxgMl c1"
   >
     <div>
       <h2
@@ -95,7 +95,7 @@ exports[`user list renders correctly 2`] = `
     Admin dashboard
   </h1>
   <div
-    className="c1"
+    className="sc-AxgMl c1"
   >
     <div>
       <h2

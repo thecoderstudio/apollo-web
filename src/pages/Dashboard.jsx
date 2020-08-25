@@ -26,7 +26,6 @@ const Content = styled.div`
 export default function Dashboard() {
   return (
     <div>
-      <NavBar />
       <Content>
         <AgentList />
       </Content>
