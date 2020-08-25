@@ -63,7 +63,7 @@ exports[`user list renders correctly 1`] = `
     Admin dashboard
   </h1>
   <div
-    className="sc-AxheI c1"
+    className="c1"
   >
     <div>
       <div
@@ -73,7 +73,7 @@ exports[`user list renders correctly 1`] = `
           Users
         </h2>
         <button
-          className="sc-AxjAm c3"
+          className="c3"
           onClick={[Function]}
         >
           <i
@@ -183,7 +183,7 @@ exports[`user list renders correctly 2`] = `
     Admin dashboard
   </h1>
   <div
-    className="sc-AxheI c1"
+    className="c1"
   >
     <div>
       <div
@@ -193,7 +193,7 @@ exports[`user list renders correctly 2`] = `
           Users
         </h2>
         <button
-          className="sc-AxjAm c3"
+          className="c3"
           onClick={[Function]}
         >
           <i

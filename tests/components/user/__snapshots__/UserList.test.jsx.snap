@@ -184,7 +184,7 @@ exports[`user list correctly toggles create user 1`] = `
     className="c3"
   />
   <div
-    className="sc-AxheI c4"
+    className="c4"
   >
     <div
       className="c5"
@@ -374,7 +374,7 @@ exports[`user list doesn't try to render users on error 1`] = `
       Users
     </h2>
     <button
-      className="sc-AxjAm c1"
+      className="c1"
       onClick={[Function]}
     >
       <i
@@ -463,7 +463,7 @@ exports[`user list refreshes on create user success 1`] = `
       Users
     </h2>
     <button
-      className="sc-AxjAm c1"
+      className="c1"
       onClick={[Function]}
     >
       <i
@@ -546,7 +546,7 @@ exports[`user list renders correctly 1`] = `
       Users
     </h2>
     <button
-      className="sc-AxjAm c1"
+      className="c1"
       onClick={[Function]}
     >
       <i
@@ -644,7 +644,7 @@ exports[`user list renders correctly 2`] = `
       Users
     </h2>
     <button
-      className="sc-AxjAm c1"
+      className="c1"
       onClick={[Function]}
     >
       <i

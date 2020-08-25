@@ -133,7 +133,7 @@ exports[`create user renders correctly 1`] = `
 }
 
 <div
-  className="sc-AxhCb c0"
+  className="c0"
 >
   <div
     className="c1"

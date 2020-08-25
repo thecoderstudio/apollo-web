@@ -102,7 +102,7 @@ exports[`dashboard renders correctly 1`] = `
       </a>
     </div>
     <button
-      className="sc-fzoLsD sc-fzpans c3"
+      className="c3"
       onClick={[Function]}
     >
       Log out
