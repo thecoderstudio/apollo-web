@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`not found renders correctly 1`] = `
+<div
+  className="sc-AxhCb gyWCqD"
+>
+  <img
+    className="sc-AxhUy QOdit"
+    src={[Function]}
+  />
+  <div
+    className="sc-AxgMl Nvzeu"
+  >
+    <h1
+      className="sc-AxheI jcPBBh"
+    >
+      404
+    </h1>
+    <h2
+      className="sc-Axmtr kzJoem"
+    >
+      Houston, we have a problem
+    </h2>
+    <button
+      className="sc-AxirZ sc-AxiKw sc-AxmLO bQWLqX"
+    >
+      <a
+        className="sc-AxjAm eQVknK"
+        href="/"
+        onClick={[Function]}
+      >
+        Reroute
+      </a>
+    </button>
+  </div>
+</div>
+`;

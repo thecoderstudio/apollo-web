@@ -7,13 +7,13 @@ import ProtectedRoute from '../../src/components/ProtectedRoute';
 
 const mockStore = configureStore([]);
 
-function getComponent(store) {
+function getComponent(store, role=undefined) {
   return renderer.create(
     <Provider store={store}>
       <MemoryRouter
         initialEntries={[ { pathname: '/', key: 'testKey' } ]}
       >
-        <ProtectedRoute exact path='/' component="auth" fallbackComponent="unauth" />
+        <ProtectedRoute exact path='/' component="auth" fallbackComponent="unauth" role={role} />
       </MemoryRouter>
     </Provider>
   );
@@ -43,6 +43,35 @@ describe('ProtectedRoute', () => {
     });
 
     tree = getComponent(store).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('correctly handlers matching roles', () => {
+    store = mockStore({
+      authenticated: true,
+      currentUser: {
+        username: 'admin',
+        role: {
+          name: 'admin'
+        }
+      }
+    });
+
+    const tree = getComponent(store, 'admin').toJSON();
+    expect(tree).toMatchSnapshot();
+
+  });
+
+  it('disallows non-matching roles', () => {
+     store = mockStore({
+      authenticated: true,
+      currentUser: {
+        username: 'admin',
+        role: null
+      }
+    });
+
+    const tree = getComponent(store, 'admin').toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

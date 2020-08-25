@@ -3,18 +3,31 @@
 exports[`app renders correctly authenticated 1`] = `
 <div>
   <div
-    className="sc-fzplWN iqrqGl"
+    className="sc-fzqARJ crFfVZ"
   >
     <div
-      className="sc-AxiKw eLmrgg"
+      className="sc-AxhCb iPTYsw"
     >
+      <h3>
+        Apollo
+      </h3>
+      <div>
+        <a
+          className="sc-AxiKw cJgpPc sc-AxhUy jjMkGi"
+          href="/"
+          onClick={[Function]}
+        >
+          Dashboard
+        </a>
+      </div>
       <button
-        className="sc-AxjAm sc-AxirZ sc-AxhCb ewCHgN"
+        className="sc-AxjAm sc-AxirZ sc-AxgMl dHhgMk"
         onClick={[Function]}
       >
         Log out
       </button>
     </div>
+    <div />
   </div>
 </div>
 `;
@@ -22,44 +35,44 @@ exports[`app renders correctly authenticated 1`] = `
 exports[`app renders correctly unauthenticated 1`] = `
 <div>
   <div
-    className="sc-fzplWN iqrqGl"
+    className="sc-fzqARJ crFfVZ"
   >
     <div
-      className="sc-AxheI SUxVu"
+      className="sc-AxmLO iBAgtE"
     >
       <div
-        className="sc-Axmtr cEHhGj"
+        className="sc-fzozJi bhlVcP"
       >
         <img
-          className="sc-fzpans sSDeb"
+          className="sc-fznyAO hWqdUS"
           src={[Function]}
         />
         <h1
-          className="sc-AxmLO kPhZTY"
+          className="sc-fzoLsD cBaJOP"
         >
           Log in to Apollo
         </h1>
         <div
-          className="sc-AxgMl sc-fzozJi cZVrlm"
+          className="sc-Axmtr sc-fzpans dnwFIQ"
         >
           <form
-            className="sc-fzoLsD gFdOzY"
+            className="sc-fzplWN cwlCix"
             onSubmit={[Function]}
           >
             <input
-              className="sc-AxhUy ymxfm"
+              className="sc-AxheI kqjpKa"
               onChange={[Function]}
               placeholder="Username"
               type="username"
             />
             <input
-              className="sc-AxhUy ymxfm"
+              className="sc-AxheI kqjpKa"
               onChange={[Function]}
               placeholder="Password"
               type="password"
             />
             <button
-              className="sc-AxjAm hNiYBm"
+              className="sc-AxjAm hygeQr"
             >
               Log in
             </button>

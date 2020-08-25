@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`user list renders correctly 1`] = `
+<div
+  className="sc-AxheI iWCpdE"
+>
+  <h1>
+    Admin dashboard
+  </h1>
+  <div
+    className="sc-AxgMl sc-Axmtr ffNyTV"
+  >
+    <div>
+      <h2
+        className="sc-AxhCb dXpqyO"
+      >
+        Users
+      </h2>
+      <div
+        className="sc-AxhUy fkItVQ"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`user list renders correctly 2`] = `
+<div
+  className="sc-AxheI iWCpdE"
+>
+  <h1>
+    Admin dashboard
+  </h1>
+  <div
+    className="sc-AxgMl sc-Axmtr ffNyTV"
+  >
+    <div>
+      <h2
+        className="sc-AxhCb dXpqyO"
+      >
+        Users
+      </h2>
+      <div
+        className="sc-AxhUy fkItVQ"
+      >
+        <div
+          className="sc-AxjAm jahhFp"
+        >
+          <p
+            className="sc-AxirZ kXBegF"
+          >
+            test
+          </p>
+        </div>
+        <div
+          className="sc-AxjAm jahhFp"
+        >
+          <p
+            className="sc-AxirZ kXBegF"
+          >
+            admin
+          </p>
+          <p
+            className="sc-AxiKw cCmoQb"
+          >
+            admin
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

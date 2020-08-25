@@ -2,10 +2,54 @@
 
 exports[`nav bar handles successful logout 1`] = `
 <div
-  className="sc-AxiKw bDNfQg"
+  className="sc-AxhCb cFOhCU"
 >
+  <h3>
+    Apollo
+  </h3>
+  <div>
+    <a
+      className="sc-AxiKw gtGpgZ sc-AxhUy jjMkGi"
+      href="/"
+      onClick={[Function]}
+    >
+      Dashboard
+    </a>
+  </div>
   <button
-    className="sc-AxjAm sc-AxirZ sc-AxhCb jfTlUh"
+    className="sc-AxjAm sc-AxirZ sc-AxgMl ZfUJg"
+    onClick={[Function]}
+  >
+    Log out
+  </button>
+</div>
+`;
+
+exports[`nav bar render admin link for admins 1`] = `
+<div
+  className="sc-AxhCb cFOhCU"
+>
+  <h3>
+    Apollo
+  </h3>
+  <div>
+    <a
+      className="sc-AxiKw gtGpgZ sc-AxhUy jjMkGi"
+      href="/"
+      onClick={[Function]}
+    >
+      Dashboard
+    </a>
+    <a
+      className="sc-AxiKw gtGpgZ sc-AxhUy jjMkGi"
+      href="/admin"
+      onClick={[Function]}
+    >
+      Admin
+    </a>
+  </div>
+  <button
+    className="sc-AxjAm sc-AxirZ sc-AxgMl ZfUJg"
     onClick={[Function]}
   >
     Log out
@@ -15,10 +59,22 @@ exports[`nav bar handles successful logout 1`] = `
 
 exports[`nav bar renders correctly 1`] = `
 <div
-  className="sc-AxiKw bDNfQg"
+  className="sc-AxhCb cFOhCU"
 >
+  <h3>
+    Apollo
+  </h3>
+  <div>
+    <a
+      className="sc-AxiKw gtGpgZ sc-AxhUy jjMkGi"
+      href="/"
+      onClick={[Function]}
+    >
+      Dashboard
+    </a>
+  </div>
   <button
-    className="sc-AxjAm sc-AxirZ sc-AxhCb jfTlUh"
+    className="sc-AxjAm sc-AxirZ sc-AxgMl ZfUJg"
     onClick={[Function]}
   >
     Log out
