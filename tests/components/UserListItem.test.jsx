@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import waitForExpect from 'wait-for-expect'
 import configureStore from 'redux-mock-store';
 import UserListItem from '../../src/components/user/UserListItem';
+import { darkTheme } from '../../src/theme';
 
 jest.mock('axios');
 const mockStore = configureStore([]);
@@ -12,7 +13,7 @@ const mockStore = configureStore([]);
 function getComponent(user, store, callback=(() => {})) {
   return renderer.create(
     <Provider store={store}>
-      <UserListItem user={user} userDeleteCallback={callback} />
+        <UserListItem theme={darkTheme} user={user} userDeleteCallback={callback} />
     </Provider>
   );
 }
@@ -47,7 +48,7 @@ describe("user list item", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("correctly removes user", async () => {
+  it("correctly opens confirmation modal", async () => {
     axios.delete.mockResolvedValue({
       status: 204
     });
@@ -59,12 +60,14 @@ describe("user list item", () => {
     };
     const tree = getComponent(user, store, spy);
     tree.root.findByType('button').props.onClick();
+    tree.toJSON();
+    tree.root.findAllByType('button')[2].props.onClick();
     await waitForExpect(() => {
       expect(spy).toHaveBeenCalled();
     });
   });
 
-  it("correctly not removes user", () => {
+  it("correctly cannot not remove user", () => {
     axios.delete.mockResolvedValue({
       status: 204
     });

@@ -64,9 +64,9 @@ class UserListItem extends React.PureComponent {
     axios.delete(
       `${process.env.APOLLO_HTTP_URL}user/${this.props.user.id}`,
       { withCredentials: true }
-    ).then(res => {
+    ).then(_ => {
       this.props.userDeleteCallback();
-      this.hideConrfirmationModal()
+      this.hideConfirmationModal()
     });
   }
 
@@ -87,10 +87,10 @@ class UserListItem extends React.PureComponent {
         {this.state.renderConfirmationModal &&
           <ConfirmationModal
             title={`Are you sure you want to delete ${this.props.user.username}`}
-            deleteCallback={this.deleteUser}
             cancelCallback={this.hideConfirmationModal}
             confirmationButtonText='delete'
             confirmationButtonColor={this.props.theme.error}
+            confirmationCallback={this.deleteUser}
           />
         }
       </Container>

@@ -7,15 +7,10 @@ import Card from '../Card';
 const propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
-  visible: PropTypes.bool
-};
-
-const defaultProps = {
-  visible: false
 };
 
 const ModalOverlay = styled.div`
-  display: ${props => props.visible ? 'inline' : 'none'};
+  display: inline;
   position: fixed;
   top: 0;
   left: 0;
@@ -50,7 +45,7 @@ const Content = styled.div`
 
 function Modal(props) {
   return (
-    <ModalOverlay visible={props.visible} >
+    <ModalOverlay>
       <StyledCard>
         <Title>{props.title}</Title>
         <Content>{props.children}</Content>
@@ -60,6 +55,5 @@ function Modal(props) {
 }
 
 Modal.propTypes = propTypes;
-Modal.defaultProps = defaultProps;
 
 export default connect()(Modal);

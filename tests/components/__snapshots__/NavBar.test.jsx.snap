@@ -17,7 +17,7 @@ exports[`nav bar handles successful logout 1`] = `
     </a>
   </div>
   <button
-    className="sc-AxjAm sc-AxirZ sc-AxgMl ZfUJg"
+    className="sc-AxjAm sc-AxirZ sc-AxgMl jrSzpm"
     onClick={[Function]}
   >
     Log out
@@ -49,7 +49,7 @@ exports[`nav bar render admin link for admins 1`] = `
     </a>
   </div>
   <button
-    className="sc-AxjAm sc-AxirZ sc-AxgMl ZfUJg"
+    className="sc-AxjAm sc-AxirZ sc-AxgMl jrSzpm"
     onClick={[Function]}
   >
     Log out
@@ -74,7 +74,7 @@ exports[`nav bar renders correctly 1`] = `
     </a>
   </div>
   <button
-    className="sc-AxjAm sc-AxirZ sc-AxgMl ZfUJg"
+    className="sc-AxjAm sc-AxirZ sc-AxgMl jrSzpm"
     onClick={[Function]}
   >
     Log out

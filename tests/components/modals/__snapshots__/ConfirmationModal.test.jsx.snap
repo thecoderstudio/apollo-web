@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConfirmationModal renders correctly 1`] = `
+<div
+  className="sc-AxirZ kMhrmD"
+>
+  <div
+    className="sc-AxjAm sc-AxiKw bBesvM"
+  >
+    <h2
+      className="sc-AxhCb ia-DMNp"
+    >
+      title
+    </h2>
+    <div
+      className="sc-AxhUy POmIQ"
+    >
+      <div
+        className="sc-Axmtr gUsWbS"
+      >
+        <button
+          className="sc-AxgMl sc-AxheI sc-AxmLO iTAkGp"
+          onClick={[MockFunction]}
+        >
+          cancel
+        </button>
+        <button
+          className="sc-AxgMl sc-fzozJi eMWGVu"
+          onClick={[MockFunction]}
+        >
+          confirm
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

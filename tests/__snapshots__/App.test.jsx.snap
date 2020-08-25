@@ -3,7 +3,7 @@
 exports[`app renders correctly authenticated 1`] = `
 <div>
   <div
-    className="sc-fzqNqU hWZry"
+    className="sc-fznWOq jTcyKW"
   >
     <div
       className="sc-AxhCb cgvbli"
@@ -21,7 +21,7 @@ exports[`app renders correctly authenticated 1`] = `
         </a>
       </div>
       <button
-        className="sc-AxjAm sc-AxirZ sc-AxgMl dHhgMk"
+        className="sc-AxjAm sc-AxirZ sc-AxgMl fRJiBS"
         onClick={[Function]}
       >
         Log out
@@ -35,7 +35,7 @@ exports[`app renders correctly authenticated 1`] = `
 exports[`app renders correctly unauthenticated 1`] = `
 <div>
   <div
-    className="sc-fzqNqU hWZry"
+    className="sc-fznWOq jTcyKW"
   >
     <div
       className="sc-AxmLO iBAgtE"
@@ -72,7 +72,7 @@ exports[`app renders correctly unauthenticated 1`] = `
               type="password"
             />
             <button
-              className="sc-AxjAm hygeQr"
+              className="sc-AxjAm hvhZjy"
             >
               Log in
             </button>

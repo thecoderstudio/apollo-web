@@ -36,7 +36,7 @@ exports[`login renders correctly 1`] = `
           type="password"
         />
         <button
-          className="sc-AxjAm gCJpuO"
+          className="sc-AxjAm rQrlH"
         >
           Log in
         </button>

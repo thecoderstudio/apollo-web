@@ -2,15 +2,15 @@
 
 exports[`user list item render correctly with role 1`] = `
 <div
-  className="sc-AxiKw jxeMgG"
+  className="sc-fzoLsD ffqgCm"
 >
   <p
-    className="sc-AxhCb klGZiV"
+    className="sc-fzpans kEnlFJ"
   >
     test
   </p>
   <p
-    className="sc-AxhUy hvjDNC"
+    className="sc-fzplWN dkHTim"
   >
     admin
   </p>
@@ -19,15 +19,15 @@ exports[`user list item render correctly with role 1`] = `
 
 exports[`user list item render correctly without role 1`] = `
 <div
-  className="sc-AxiKw jxeMgG"
+  className="sc-fzoLsD ffqgCm"
 >
   <p
-    className="sc-AxhCb klGZiV"
+    className="sc-fzpans kEnlFJ"
   >
     test
   </p>
   <button
-    className="sc-AxjAm sc-AxirZ sc-AxgMl kbcbn"
+    className="sc-AxjAm sc-AxirZ sc-fznyAO iiOVWb"
     onClick={[Function]}
   >
     delete

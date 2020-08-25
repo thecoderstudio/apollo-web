@@ -8,7 +8,7 @@ import { browserPreferredTheme } from '../../theme';
 
 const propTypes = {
   title: PropTypes.string.isRequired,
-  deleteCallback: PropTypes.func.isRequired,
+  confirmationCallback: PropTypes.func.isRequired,
   cancelCallback: PropTypes.func.isRequired,
   confirmationButtonColor: PropTypes.string,
   confirmationButtonText: PropTypes.string
@@ -40,7 +40,7 @@ export default function ConfirmationModal(props) {
     <Modal visible={true} title={props.title}>
       <Content>
         <CancelButton onClick={props.cancelCallback}>cancel</CancelButton>
-        <ConfirmButton color={props.confirmationButtonColor} onClick={props.deleteCallback}>{props.confirmationButtonText}</ConfirmButton>
+        <ConfirmButton color={props.confirmationButtonColor} onClick={props.confirmationCallback}>{props.confirmationButtonText}</ConfirmButton>
       </Content>
     </Modal>
   );

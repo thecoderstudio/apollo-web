@@ -2,22 +2,22 @@
 
 exports[`user list renders correctly 1`] = `
 <div
-  className="sc-fzozJi brZbRr"
+  className="sc-fzokOt fpFCxO"
 >
   <h1>
     Admin dashboard
   </h1>
   <div
-    className="sc-AxmLO sc-fzoLsD jhUayj"
+    className="sc-AxiKw sc-fzqBZW jaZjed"
   >
     <div>
       <h2
-        className="sc-AxheI OiaRP"
+        className="sc-fznKkj hRHxK"
       >
         Users
       </h2>
       <div
-        className="sc-Axmtr fGKBRD"
+        className="sc-fznZeY SPqpd"
       />
     </div>
   </div>
@@ -26,48 +26,48 @@ exports[`user list renders correctly 1`] = `
 
 exports[`user list renders correctly 2`] = `
 <div
-  className="sc-fzozJi brZbRr"
+  className="sc-fzokOt fpFCxO"
 >
   <h1>
     Admin dashboard
   </h1>
   <div
-    className="sc-AxmLO sc-fzoLsD jhUayj"
+    className="sc-AxiKw sc-fzqBZW jaZjed"
   >
     <div>
       <h2
-        className="sc-AxheI OiaRP"
+        className="sc-fznKkj hRHxK"
       >
         Users
       </h2>
       <div
-        className="sc-Axmtr fGKBRD"
+        className="sc-fznZeY SPqpd"
       >
         <div
-          className="sc-AxiKw jxeMgG"
+          className="sc-fzoLsD ffqgCm"
         >
           <p
-            className="sc-AxhCb klGZiV"
+            className="sc-fzpans kEnlFJ"
           >
             test
           </p>
           <button
-            className="sc-AxjAm sc-AxirZ sc-AxgMl kbcbn"
+            className="sc-AxjAm sc-AxirZ sc-fznyAO iiOVWb"
             onClick={[Function]}
           >
             delete
           </button>
         </div>
         <div
-          className="sc-AxiKw jxeMgG"
+          className="sc-fzoLsD ffqgCm"
         >
           <p
-            className="sc-AxhCb klGZiV"
+            className="sc-fzpans kEnlFJ"
           >
             admin
           </p>
           <p
-            className="sc-AxhUy hvjDNC"
+            className="sc-fzplWN dkHTim"
           >
             admin
           </p>
