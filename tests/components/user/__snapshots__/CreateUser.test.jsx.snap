@@ -20,18 +20,21 @@ exports[`create user renders correctly 1`] = `
         className="sc-AxiKw eDRdNW"
         onChange={[Function]}
         placeholder="Username"
+        required={true}
         type="username"
       />
       <input
         className="sc-AxiKw eDRdNW"
         onChange={[Function]}
         placeholder="Password"
+        required={true}
         type="password"
       />
       <input
         className="sc-AxiKw eDRdNW"
         onChange={[Function]}
         placeholder="Confirm password"
+        required={true}
         type="password"
       />
       <div

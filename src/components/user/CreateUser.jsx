@@ -147,9 +147,9 @@ export default class CreateUser extends React.PureComponent {
         <Content>
           <Title>Create new user</Title>
           <Form onSubmit={this.createUser}>
-            <Input type="username" placeholder="Username" onChange={this.changeUsername} />
-            <Input type="password" placeholder="Password" onChange={this.changePassword} />
-            <Input type="password" placeholder="Confirm password" onChange={this.changeConfirmPassword} />
+            <Input type="username" placeholder="Username" onChange={this.changeUsername} required />
+            <Input type="password" placeholder="Password" onChange={this.changePassword} autocomplete="new-password" required />
+            <Input type="password" placeholder="Confirm password" onChange={this.changeConfirmPassword} autocomplete="new-password" required />
             <Buttons>
               <OutlinedButton onClick={this.close}>Cancel</OutlinedButton>
               <Button>Create user</Button>

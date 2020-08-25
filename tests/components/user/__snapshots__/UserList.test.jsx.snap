@@ -45,18 +45,21 @@ exports[`user list correctly toggles create user 1`] = `
           className="sc-AxgMl bKQwSV"
           onChange={[Function]}
           placeholder="Username"
+          required={true}
           type="username"
         />
         <input
           className="sc-AxgMl bKQwSV"
           onChange={[Function]}
           placeholder="Password"
+          required={true}
           type="password"
         />
         <input
           className="sc-AxgMl bKQwSV"
           onChange={[Function]}
           placeholder="Confirm password"
+          required={true}
           type="password"
         />
         <div
