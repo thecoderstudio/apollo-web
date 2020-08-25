@@ -10,8 +10,6 @@ const Content = styled.div`
 
   background-color: ${props => props.theme.lightBlack};
   border-radius: 8px;
-  maring: 20px;
-
   padding: 20px;
 `;
 

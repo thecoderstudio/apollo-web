@@ -40,9 +40,11 @@ const Indicator = styled.div`
   background-color: ${props => props.connectionStateColor};
 `;
 
-const StyledText = styled.span`
+const StyledText = styled.p`
   grid-column: status-text;
   position: relative;
+  margin: 0;
+  padding-top: 0;
   margin-left: 25px;
   text-align: left;
 

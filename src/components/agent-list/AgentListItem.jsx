@@ -31,12 +31,15 @@ const Container = styled.li`
   }
 `;
 
-const StyledText = styled.span`
+const StyledText = styled.p`
   grid-column: name;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  margin: 0;
+  padding-top: 0;
   margin-left: 25px;
+
 
   ${
     media.phone`
