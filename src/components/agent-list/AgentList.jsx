@@ -1,20 +1,16 @@
-import { connect } from 'react-redux';
 import React from 'react';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
 import AgentListItem from './AgentListItem';
 import { listAgents as listAgentsAction } from '../../actions/agent';
 
 const Content = styled.div`
   display: grid;
-  grid-column: agent-listing;
-	grid-template-rows: [title] 50px [list] 1fr;
-	
-	background-color: ${props => props.theme.lightBlack};
-	border-radius: 8px;
-  maring: 20px;
-  
-	padding: 20px;
-	
+  grid-template-rows: [title] 50px [list] 1fr;
+
+  background-color: ${props => props.theme.lightBlack};
+  border-radius: 8px;
+  padding: 20px;
 `;
 
 const ListTitle = styled.h2`
@@ -22,18 +18,17 @@ const ListTitle = styled.h2`
 `;
 
 const List = styled.ul`
-	grid-row: list;
-	list-style: none;
-	padding-left: 0;
+  grid-row: list;
+  list-style: none;
+  padding-left: 0;
 `;
-
 
 class AgentList extends React.Component {
   constructor(props) {
     super(props);
     this.generateAgents = this.generateAgents.bind(this);
-    this.dispatchListAgents = this.dispatchListAgents.bind(this)
-    this.setupWebSocket()
+    this.dispatchListAgents = this.dispatchListAgents.bind(this);
+    this.setupWebSocket();
   }
 
   setupWebSocket() {
@@ -51,18 +46,18 @@ class AgentList extends React.Component {
 
   dispatchListAgents(data) {
     const { dispatch } = this.props;
-    dispatch(listAgentsAction(JSON.parse(data))); 
+    dispatch(listAgentsAction(JSON.parse(data)));
   }
 
   render() {
     return (
-      <Content>
+      <Content className={this.props.className}>
         <ListTitle>Agents</ListTitle>
         <List>
           {this.generateAgents(this.props.agents)}
         </List>
       </Content>
-    )
+    );
   }
 }
 

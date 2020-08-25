@@ -2,41 +2,87 @@
 
 exports[`app renders correctly authenticated 1`] = `
 .c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #F8F8F8;
+}
+
+.c2:hover {
+  opacity: 0.90;
+}
+
+.c1 {
+  height: 50px;
+  padding: 16px;
   display: grid;
-  grid-column: agent-listing;
-  grid-template-rows: [title] 50px [list] 1fr;
+  grid-template-columns: 1fr 8fr [logout];
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #1B1B1B;
-  border-radius: 8px;
-  maring: 20px;
-  padding: 20px;
 }
 
 .c3 {
-  grid-row: title;
+  margin-right: 16px;
 }
 
 .c4 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  background-color: #4D02EE;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #4D02EE;
+  grid-column: logout;
+  float: right;
+  width: 100px;
+  height: 75%;
+}
+
+.c4:hover {
+  opacity: 0.90;
+}
+
+.c6 {
+  display: grid;
+  grid-template-rows: [title] 50px [list] 1fr;
+  background-color: #1B1B1B;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.c7 {
+  grid-row: title;
+}
+
+.c8 {
   grid-row: list;
   list-style: none;
   padding-left: 0;
 }
 
-.c1 {
+.c5 {
+  grid-template-columns: [agent-listing] 1fr 1fr;
+  grid-template-rows: 1fr;
   display: grid;
   grid-row: 2;
   margin: 25px;
-  grid-template-columns: [agent-listing] 1fr 1fr;
-  grid-template-rows: 1fr;
 }
 
 .c0 {
   height: 100%;
   width: 100%;
-  display: grid;
 }
 
 @media (max-width:47.9375em) {
-  .c1 {
+  .c5 {
     grid-template-columns: [agent-listing] 1fr;
   }
 }
@@ -46,19 +92,65 @@ exports[`app renders correctly authenticated 1`] = `
     className="c0"
   >
     <div
-      className="sc-fzoXzr c1"
+      className="c1"
     >
-      <div
-        className="c2"
-      >
-        <h2
-          className="c3"
+      <h3>
+        Apollo
+      </h3>
+      <div>
+        <a
+          className="c2 c3"
+          href="/"
+          onClick={[Function]}
         >
-          Agents
-        </h2>
-        <ul
+          Dashboard
+        </a>
+      </div>
+      <button
+        className="c4"
+        onClick={[Function]}
+      >
+        Log out
+      </button>
+    </div>
+    <div>
+      <div
+        className="c1"
+      >
+        <h3>
+          Apollo
+        </h3>
+        <div>
+          <a
+            className="c2 c3"
+            href="/"
+            onClick={[Function]}
+          >
+            Dashboard
+          </a>
+        </div>
+        <button
           className="c4"
-        />
+          onClick={[Function]}
+        >
+          Log out
+        </button>
+      </div>
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        >
+          <h2
+            className="c7"
+          >
+            Agents
+          </h2>
+          <ul
+            className="c8"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -67,6 +159,8 @@ exports[`app renders correctly authenticated 1`] = `
 
 exports[`app renders correctly unauthenticated 1`] = `
 .c8 {
+  max-height: 50px;
+  padding: 12px;
   border: none;
   background-color: #4D02EE;
   border-radius: 5px;
@@ -155,7 +249,6 @@ exports[`app renders correctly unauthenticated 1`] = `
 .c0 {
   height: 100%;
   width: 100%;
-  display: grid;
 }
 
 @media (max-width:47.9375em) {
@@ -201,7 +294,7 @@ exports[`app renders correctly unauthenticated 1`] = `
           Log in to Apollo
         </h1>
         <div
-          className="sc-AxgMl c5"
+          className="c5"
         >
           <form
             className="c6"

@@ -3,7 +3,7 @@ import { LIST_AGENTS } from '../../src/actions/agent';
 
 describe("agent reducer", () => {
   it("should return empty agent list as initial state", () => {
-    expect(agentReducer({ agents: [] }, {})).toEqual({ agents: [] });
+    expect(agentReducer(undefined, {})).toEqual(new Map());
   });
 
   it("should correctly handle agent listing", () => {
@@ -11,6 +11,6 @@ describe("agent reducer", () => {
     expect(agentReducer({}, {
       type: LIST_AGENTS,
       agents
-    })).toEqual([{ id: "id" }]);
+    })).toEqual(agents);
   });
-})
+});

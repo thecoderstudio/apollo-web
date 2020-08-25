@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`user list doesn't try to render users on error 1`] = `
+.c0 {
+  margin: 16px;
+}
+
+.c1 {
+  margin-top: 16px;
+}
+
+<div>
+  <h2
+    className="c0"
+  >
+    Users
+  </h2>
+  <div
+    className="c1"
+  />
+</div>
+`;
+
+exports[`user list renders correctly 1`] = `
+.c0 {
+  margin: 16px;
+}
+
+.c1 {
+  margin-top: 16px;
+}
+
+<div>
+  <h2
+    className="c0"
+  >
+    Users
+  </h2>
+  <div
+    className="c1"
+  />
+</div>
+`;
+
+exports[`user list renders correctly 2`] = `
+.c2 {
+  min-height: 60px;
+  padding: 0px 16px;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  margin: 0px;
+}
+
+.c4 {
+  float: right;
+  width: 80px;
+  padding: 4px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.c0 {
+  margin: 16px;
+}
+
+.c1 {
+  margin-top: 16px;
+}
+
+<div>
+  <h2
+    className="c0"
+  >
+    Users
+  </h2>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <p
+        className="c3"
+      >
+        test
+      </p>
+    </div>
+    <div
+      className="c2"
+    >
+      <p
+        className="c3"
+      >
+        admin
+      </p>
+      <p
+        className="c4"
+      >
+        admin
+      </p>
+    </div>
+  </div>
+</div>
+`;

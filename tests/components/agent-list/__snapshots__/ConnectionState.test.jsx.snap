@@ -2,187 +2,83 @@
 
 exports[`connectionState Gets correct color 1`] = `
 .c0 {
-  float: right;
-  display: grid;
-  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
-}
-
-.c1 {
-  grid-column: status-indicator;
-  height: 12px;
-  width: 12px;
-  margin: 10px;
-  border-radius: 50%;
-  float: right;
-  text-align: left;
-}
-
-.c2 {
-  font-size: 1rem;
   grid-column: status-text;
   position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 25px;
   text-align: left;
   margin-left: 15px;
 }
 
-@media (max-width:47.9375em) {
-  .c0 {
-    float: left;
-  }
-}
-
-<div
+<p
   className="c0"
 >
-  <div
-    className="c1"
-  />
-  <span
-    className="sc-AxjAm c2"
-  >
-    Blanko
-  </span>
-</div>
+  Blanko
+</p>
 `;
 
 exports[`connectionState Gets correct color 2`] = `
 .c0 {
-  float: right;
-  display: grid;
-  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
-}
-
-.c1 {
-  grid-column: status-indicator;
-  height: 12px;
-  width: 12px;
-  margin: 10px;
-  border-radius: 50%;
-  float: right;
-  text-align: left;
-}
-
-.c2 {
-  font-size: 1rem;
   grid-column: status-text;
   position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 25px;
   text-align: left;
   margin-left: 15px;
+  color: #C0392B;
 }
 
-@media (max-width:47.9375em) {
-  .c0 {
-    float: left;
-  }
-}
-
-<div
+<p
   className="c0"
 >
-  <div
-    className="c1"
-  />
-  <span
-    className="sc-AxjAm c2"
-  >
-    Disconnected
-  </span>
-</div>
+  Disconnected
+</p>
 `;
 
 exports[`connectionState Gets correct color 3`] = `
 .c0 {
-  float: right;
-  display: grid;
-  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
-}
-
-.c1 {
-  grid-column: status-indicator;
-  height: 12px;
-  width: 12px;
-  margin: 10px;
-  border-radius: 50%;
-  float: right;
-  text-align: left;
-}
-
-.c2 {
-  font-size: 1rem;
   grid-column: status-text;
   position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 25px;
   text-align: left;
   margin-left: 15px;
+  color: #F39C12;
 }
 
-@media (max-width:47.9375em) {
-  .c0 {
-    float: left;
-  }
-}
-
-<div
+<p
   className="c0"
 >
-  <div
-    className="c1"
-  />
-  <span
-    className="sc-AxjAm c2"
-  >
-    Connecting
-  </span>
-</div>
+  Connecting
+</p>
 `;
 
 exports[`connectionState Gets correct color 4`] = `
 .c0 {
-  float: right;
-  display: grid;
-  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
-}
-
-.c1 {
-  grid-column: status-indicator;
-  height: 12px;
-  width: 12px;
-  margin: 10px;
-  border-radius: 50%;
-  float: right;
-  text-align: left;
-}
-
-.c2 {
-  font-size: 1rem;
   grid-column: status-text;
   position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 25px;
   text-align: left;
   margin-left: 15px;
+  color: #27AE60;
 }
 
-@media (max-width:47.9375em) {
-  .c0 {
-    float: left;
-  }
-}
-
-<div
+<p
   className="c0"
 >
-  <div
-    className="c1"
-  />
-  <span
-    className="sc-AxjAm c2"
-  >
-    Connected
-  </span>
-</div>
+  Connected
+</p>
 `;
 
 exports[`connectionState renders correctly 1`] = `
 .c0 {
-  float: right;
+  margin-left: 25px;
+  margin-right: 25px;
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
@@ -195,20 +91,19 @@ exports[`connectionState renders correctly 1`] = `
   border-radius: 50%;
   float: right;
   text-align: left;
+  color: #27AE60;
+  background-color: #27AE60;
 }
 
 .c2 {
-  font-size: 1rem;
   grid-column: status-text;
   position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 25px;
   text-align: left;
   margin-left: 15px;
-}
-
-@media (max-width:47.9375em) {
-  .c0 {
-    float: left;
-  }
+  color: #27AE60;
 }
 
 <div
@@ -217,10 +112,10 @@ exports[`connectionState renders correctly 1`] = `
   <div
     className="c1"
   />
-  <span
-    className="sc-AxjAm c2"
+  <p
+    className="c2"
   >
     Connected
-  </span>
+  </p>
 </div>
 `;

@@ -19,14 +19,14 @@ const Container = styled.li`
   align-items: center;
 
   border-radius: 8px;
-	border: 1px solid white;
+  border: 1px solid white;
 
   height: 30px;
 	line-height: 30px;
 	padding: 15px 30px;
   margin-top: 25px;
 
-	${
+  ${
     media.phone`
       flex-direction: column;
       height: auto;
@@ -34,28 +34,30 @@ const Container = styled.li`
   }
 `;
 
-const StyledText = styled(Text)`
-  width: 100%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  
-    ${
-      media.phone`
-        text-align: center;
-        width: 100%;
-      `
-    }
-`;
 
 const Controls = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 250px;
-  
 
-	${
+  ${
+    media.phone`
+      width: 100%;
+    `
+  }
+`;
+  
+const StyledText = styled.p`
+  grid-column: name;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 25px;
+
+  ${
     media.phone`
       width: 100%;
     `

@@ -2,10 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import styled from 'styled-components';
-import Button from '../components/Button';
+import Button from '../components/buttons/Button';
 import Input from '../components/Input';
 import Card from '../components/Card';
 import { login as loginAction } from '../actions/auth';
+import { cacheCurrentUser } from '../actions/current-user';
 import media from '../util/media';
 import moonImg from '../images/moon_rocket.svg';
 
@@ -86,6 +87,7 @@ class Login extends React.Component {
     this.handleUsernameChange = this.handleUsernameChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
     this.login = this.login.bind(this);
+    this.fetchCurrentUser = this.fetchCurrentUser.bind(this);
     this.state = { username: '', password: '' };
   }
 
@@ -113,8 +115,22 @@ class Login extends React.Component {
       .then(res => {
         if (res.status === 200) {
           this.props.dispatch(loginAction());
+          this.fetchCurrentUser();
         }
       });
+  }
+
+  fetchCurrentUser() {
+    axios.get(
+      `${process.env.APOLLO_HTTP_URL}user/me`,
+      { withCredentials: true }
+    )
+      .then(res => {
+        if (res.status === 200) {
+          this.props.dispatch(cacheCurrentUser(res.data));
+        }
+      });
+
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {

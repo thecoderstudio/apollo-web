@@ -1,5 +1,6 @@
 import React from 'react';
 import WS from 'jest-websocket-mock';
+import waitForExpect from 'wait-for-expect';
 import { mount } from 'enzyme';
 import { darkTheme } from '../../../src/theme';
 import { Terminal, openTerminal } from '../../../src/components/terminal/Terminal';
@@ -37,6 +38,9 @@ describe('Terminal', () => {
     expect(termWriteSpy).toHaveBeenCalledWith(terminal.chalk.hex(darkTheme.error).bold(
       "Something went wrong in the connection with the agent."
     ));
+    expect(termWriteSpy).toHaveBeenCalledWith(terminal.chalk.hex(darkTheme.error).bold(
+      "\n\r\nConnection with server is closed"
+    ));
   });
 
   it('correctly writes data', async () => {
@@ -56,6 +60,18 @@ describe('Terminal', () => {
       terminal.fit();
     }).toThrow();
   })
+
+  it('correctly handles connection closure', async () => {
+    await server.connected;
+    server.close();
+
+    assertConnection()
+    await waitForExpect(() => {
+      expect(termWriteSpy).toHaveBeenCalledWith(terminal.chalk.hex(darkTheme.error).bold(
+        "\n\r\nConnection with server is closed"
+      ));
+    });
+  });
 });
 
 test("openTerminal opens new window", () => {

@@ -4,6 +4,8 @@ export const darkTheme = {
   lightBlack: "#1B1B1B",
   white: "#F8F8F8",
   inactive: "#363636",
+  darkWhite: "#F1F1F1",
+  darkGrey: "#3E3E3E",
   primary: "#02A3EE",
   accent: "#4D02EE",
   green: "#32E67E",

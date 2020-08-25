@@ -1,7 +1,5 @@
 import React from 'react';
-import media from '../../util/media';
-import styled from 'styled-components';
-import Text from '../Text';
+import styled, { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
 
 const propTypes = {
@@ -21,16 +19,11 @@ const getConnectionStateColor = (connectionState, theme) => {
   }
 };
 
-const ContentWrapper = styled.div`
-  float: right;
+const Container = styled.div`
+  margin-left: 25px;
+  margin-right: 25px;
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
-
-  ${
-    media.phone`
-      float:left;
-    `
-  }
 `;
 
 const Indicator = styled.div`
@@ -43,28 +36,35 @@ const Indicator = styled.div`
 
   float: right;
   text-align: left;
-
-  background-color: ${props => getConnectionStateColor(props.connectionState, props.theme)}
+  color: ${props => props.connectionStateColor};
+  background-color: ${props => props.connectionStateColor};
 `;
 
-const StyledText = styled(Text)`
+const StyledText = styled.p`
   grid-column: status-text;
   position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 25px;
   text-align: left;
   margin-left: 15px;
 
-  color: ${props => getConnectionStateColor(props.connectionState, props.theme)}
+  color: ${props => props.connectionStateColor};
 `;
 
-export default function ConnectionState(props) {
+function ConnectionState(props) {
+  const connectionStateColor = getConnectionStateColor(props.connectionState, props.theme);
+
   return (
-    <ContentWrapper className={props.className}>
-      <Indicator connectionState={props.connectionState} />
-      <StyledText connectionState={props.connectionState}>
+    <Container className={props.className}>
+      <Indicator connectionStateColor={connectionStateColor} />
+      <StyledText connectionStateColor={connectionStateColor}>
         {props.connectionState.replace(/^\w/, (c) => c.toUpperCase())}
       </StyledText>
-    </ContentWrapper>
+    </Container >
   );
 }
 
 ConnectionState.propTypes = propTypes;
+
+export default withTheme(ConnectionState);

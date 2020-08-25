@@ -2,7 +2,8 @@
 
 exports[`agent list item opens and closes the terminal 1`] = `
 .c3 {
-  float: right;
+  margin-left: 25px;
+  margin-right: 25px;
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
@@ -15,13 +16,16 @@ exports[`agent list item opens and closes the terminal 1`] = `
   border-radius: 50%;
   float: right;
   text-align: left;
+  color: #27AE60;
   background-color: #27AE60;
 }
 
 .c5 {
-  font-size: 1rem;
   grid-column: status-text;
   position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 25px;
   text-align: left;
   margin-left: 15px;
   color: #27AE60;
@@ -131,14 +135,6 @@ exports[`agent list item opens and closes the terminal 1`] = `
   margin-top: 25px;
 }
 
-.c1 {
-  font-size: 1rem;
-  width: 100%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -155,15 +151,19 @@ exports[`agent list item opens and closes the terminal 1`] = `
   width: 250px;
 }
 
+.c1 {
+  grid-column: name;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 25px;
+}
+
 .c6 {
   cursor: pointer;
   color: #F8F8F8;
-}
-
-@media (max-width:47.9375em) {
-  .c3 {
-    float: left;
-  }
 }
 
 @media (max-width:47.9375em) {
@@ -176,14 +176,13 @@ exports[`agent list item opens and closes the terminal 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c1 {
-    text-align: center;
+  .c2 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c1 {
     width: 100%;
   }
 }
@@ -196,6 +195,8 @@ exports[`agent list item opens and closes the terminal 1`] = `
         "black": "#181818",
         "connectedColor": "#27AE60",
         "connectingColor": "#F39C12",
+        "darkGrey": "#3E3E3E",
+        "darkWhite": "#F1F1F1",
         "disconnectedColor": "#C0392B",
         "error": "#ED3E2A",
         "green": "#32E67E",
@@ -221,50 +222,73 @@ exports[`agent list item opens and closes the terminal 1`] = `
         <li
           className="c0"
         >
-          <Styled(styled.span)>
-            <span
-              className="sc-AxjAm c1"
+          <styled.p>
+            <p
+              className="c1"
             >
               agentName
-            </span>
-          </Styled(styled.span)>
+            </p>
+          </styled.p>
           <styled.div>
             <div
               className="c2"
             >
-              <ConnectionState
+              <WithTheme(ConnectionState)
                 connectionState="connected"
               >
-                <styled.div>
-                  <div
-                    className="c3"
-                  >
-                    <styled.div
-                      connectionState="connected"
+                <ConnectionState
+                  connectionState="connected"
+                  theme={
+                    Object {
+                      "accent": "#4D02EE",
+                      "black": "#181818",
+                      "connectedColor": "#27AE60",
+                      "connectingColor": "#F39C12",
+                      "darkGrey": "#3E3E3E",
+                      "darkWhite": "#F1F1F1",
+                      "disconnectedColor": "#C0392B",
+                      "error": "#ED3E2A",
+                      "green": "#32E67E",
+                      "inactive": "#363636",
+                      "lightBlack": "#1B1B1B",
+                      "name": "dark",
+                      "primary": "#02A3EE",
+                      "red": "#ED3E2A",
+                      "white": "#F8F8F8",
+                    }
+                  }
+                >
+                  <styled.div>
+                    <div
+                      className="c3"
                     >
-                      <div
-                        className="c4"
-                      />
-                    </styled.div>
-                    <Styled(styled.span)
-                      connectionState="connected"
-                    >
-                      <span
-                        className="sc-AxjAm c5"
+                      <styled.div
+                        connectionStateColor="#27AE60"
                       >
-                        Connected
-                      </span>
-                    </Styled(styled.span)>
-                  </div>
-                </styled.div>
-              </ConnectionState>
+                        <div
+                          className="c4"
+                        />
+                      </styled.div>
+                      <styled.p
+                        connectionStateColor="#27AE60"
+                      >
+                        <p
+                          className="c5"
+                        >
+                          Connected
+                        </p>
+                      </styled.p>
+                    </div>
+                  </styled.div>
+                </ConnectionState>
+              </WithTheme(ConnectionState)>
               <Styled(styled.i)
                 active={true}
                 className="fas fa-terminal"
                 onClick={[Function]}
               >
                 <i
-                  className="sc-AxirZ c6 fas fa-terminal"
+                  className="c6 fas fa-terminal"
                   onClick={[Function]}
                 />
               </Styled(styled.i)>
@@ -295,6 +319,8 @@ exports[`agent list item opens and closes the terminal 1`] = `
                   "black": "#181818",
                   "connectedColor": "#27AE60",
                   "connectingColor": "#F39C12",
+                  "darkGrey": "#3E3E3E",
+                  "darkWhite": "#F1F1F1",
                   "disconnectedColor": "#C0392B",
                   "error": "#ED3E2A",
                   "green": "#32E67E",
@@ -356,6 +382,240 @@ exports[`agent list item opens and closes the terminal 1`] = `
                   enableUserSelectHack={true}
                   grid={null}
                   handle={null}
+                  nodeRef={
+                    Object {
+                      "current": .c7 {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+.c8 {
+  height: 100%;
+  width: 100%;
+}
+
+.c8 .xterm-viewport {
+  overflow: hidden !important;
+}
+
+.c0 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+  padding: 0px;
+  border: 1px solid #32E67E;
+  border-style: none none solid none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c5 {
+  height: 12px;
+  width: 12px;
+  margin-right: 15px;
+  background-color: #32E67E;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.c6 {
+  height: 12px;
+  width: 12px;
+  margin-right: 15px;
+  background-color: #ED3E2A;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c3 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+<div
+                        class="react-draggable"
+                        style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
+                      >
+                        <div
+                          class="c0"
+                        >
+                          <div
+                            class="c1"
+                          >
+                            <div
+                              class="c2"
+                            />
+                            <h4
+                              class="c3"
+                            >
+                              agentName
+                            </h4>
+                            <div
+                              class="c4"
+                            >
+                              <div
+                                class="c5"
+                                color="#32E67E"
+                                id="expand-button"
+                              />
+                              <div
+                                class="c6"
+                                color="#ED3E2A"
+                                id="close-button"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="c7"
+                          >
+                            <div
+                              class="c8"
+                              data-testid="terminal"
+                            >
+                              <div
+                                class="terminal xterm"
+                                dir="ltr"
+                                tabindex="0"
+                              >
+                                <div
+                                  class="xterm-viewport"
+                                  style="background-color: rgba(255, 255, 255, 0);"
+                                >
+                                  <div
+                                    class="xterm-scroll-area"
+                                  />
+                                </div>
+                                <div
+                                  class="xterm-screen"
+                                >
+                                  <div
+                                    class="xterm-helpers"
+                                  >
+                                    <textarea
+                                      aria-label="Terminal input"
+                                      aria-multiline="false"
+                                      autocapitalize="off"
+                                      autocorrect="off"
+                                      class="xterm-helper-textarea"
+                                      spellcheck="false"
+                                      tabindex="0"
+                                    />
+                                    <span
+                                      aria-hidden="true"
+                                      class="xterm-char-measure-element"
+                                      style="font-family: courier-new, courier, monospace; font-size: 15px;"
+                                    >
+                                      W
+                                    </span>
+                                    <div
+                                      class="composition-view"
+                                    />
+                                  </div>
+                                  <canvas
+                                    class="xterm-text-layer"
+                                    style="z-index: 0;"
+                                  />
+                                  <canvas
+                                    class="xterm-selection-layer"
+                                    style="z-index: 1;"
+                                  />
+                                  <canvas
+                                    class="xterm-link-layer"
+                                    style="z-index: 2;"
+                                  />
+                                  <canvas
+                                    class="xterm-cursor-layer"
+                                    style="z-index: 3;"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <span>
+                          <div
+                            class=""
+                            style="position: absolute; user-select: none; width: 100%; height: 10px; top: -5px; left: 0px; cursor: row-resize;"
+                          />
+                          <div
+                            class=""
+                            style="position: absolute; user-select: none; width: 10px; height: 100%; top: 0px; right: -5px; cursor: col-resize;"
+                          />
+                          <div
+                            class=""
+                            style="position: absolute; user-select: none; width: 100%; height: 10px; bottom: -5px; left: 0px; cursor: row-resize;"
+                          />
+                          <div
+                            class=""
+                            style="position: absolute; user-select: none; width: 10px; height: 100%; top: 0px; left: -5px; cursor: col-resize;"
+                          />
+                          <div
+                            class=""
+                            style="position: absolute; user-select: none; width: 20px; height: 20px; right: -10px; top: -10px; cursor: ne-resize;"
+                          />
+                          <div
+                            class=""
+                            style="position: absolute; user-select: none; width: 20px; height: 20px; right: -10px; bottom: -10px; cursor: se-resize;"
+                          />
+                          <div
+                            class=""
+                            style="position: absolute; user-select: none; width: 20px; height: 20px; left: -10px; bottom: -10px; cursor: sw-resize;"
+                          />
+                          <div
+                            class=""
+                            style="position: absolute; user-select: none; width: 20px; height: 20px; left: -10px; top: -10px; cursor: nw-resize;"
+                          />
+                        </span>
+                      </div>,
+                    }
+                  }
                   offsetParent={null}
                   onDrag={[Function]}
                   onMouseDown={[Function]}
@@ -372,6 +632,145 @@ exports[`agent list item opens and closes the terminal 1`] = `
                     enableUserSelectHack={true}
                     grid={null}
                     handle={null}
+                    nodeRef={
+                      Object {
+                        "current": <div
+                          class="react-draggable"
+                          style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
+                        >
+                          <div
+                            class="c7"
+                          >
+                            <div
+                              class="c8"
+                            >
+                              <div
+                                class="c9"
+                              />
+                              <h4
+                                class="c10"
+                              >
+                                agentName
+                              </h4>
+                              <div
+                                class="c11"
+                              >
+                                <div
+                                  class="c12"
+                                  color="#32E67E"
+                                  id="expand-button"
+                                />
+                                <div
+                                  class="c13"
+                                  color="#ED3E2A"
+                                  id="close-button"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              class="c14"
+                            >
+                              <div
+                                class="c15"
+                                data-testid="terminal"
+                              >
+                                <div
+                                  class="terminal xterm"
+                                  dir="ltr"
+                                  tabindex="0"
+                                >
+                                  <div
+                                    class="xterm-viewport"
+                                    style="background-color: rgba(255, 255, 255, 0);"
+                                  >
+                                    <div
+                                      class="xterm-scroll-area"
+                                    />
+                                  </div>
+                                  <div
+                                    class="xterm-screen"
+                                  >
+                                    <div
+                                      class="xterm-helpers"
+                                    >
+                                      <textarea
+                                        aria-label="Terminal input"
+                                        aria-multiline="false"
+                                        autocapitalize="off"
+                                        autocorrect="off"
+                                        class="xterm-helper-textarea"
+                                        spellcheck="false"
+                                        tabindex="0"
+                                      />
+                                      <span
+                                        aria-hidden="true"
+                                        class="xterm-char-measure-element"
+                                        style="font-family: courier-new, courier, monospace; font-size: 15px;"
+                                      >
+                                        W
+                                      </span>
+                                      <div
+                                        class="composition-view"
+                                      />
+                                    </div>
+                                    <canvas
+                                      class="xterm-text-layer"
+                                      style="z-index: 0;"
+                                    />
+                                    <canvas
+                                      class="xterm-selection-layer"
+                                      style="z-index: 1;"
+                                    />
+                                    <canvas
+                                      class="xterm-link-layer"
+                                      style="z-index: 2;"
+                                    />
+                                    <canvas
+                                      class="xterm-cursor-layer"
+                                      style="z-index: 3;"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <span>
+                            <div
+                              class=""
+                              style="position: absolute; user-select: none; width: 100%; height: 10px; top: -5px; left: 0px; cursor: row-resize;"
+                            />
+                            <div
+                              class=""
+                              style="position: absolute; user-select: none; width: 10px; height: 100%; top: 0px; right: -5px; cursor: col-resize;"
+                            />
+                            <div
+                              class=""
+                              style="position: absolute; user-select: none; width: 100%; height: 10px; bottom: -5px; left: 0px; cursor: row-resize;"
+                            />
+                            <div
+                              class=""
+                              style="position: absolute; user-select: none; width: 10px; height: 100%; top: 0px; left: -5px; cursor: col-resize;"
+                            />
+                            <div
+                              class=""
+                              style="position: absolute; user-select: none; width: 20px; height: 20px; right: -10px; top: -10px; cursor: ne-resize;"
+                            />
+                            <div
+                              class=""
+                              style="position: absolute; user-select: none; width: 20px; height: 20px; right: -10px; bottom: -10px; cursor: se-resize;"
+                            />
+                            <div
+                              class=""
+                              style="position: absolute; user-select: none; width: 20px; height: 20px; left: -10px; bottom: -10px; cursor: sw-resize;"
+                            />
+                            <div
+                              class=""
+                              style="position: absolute; user-select: none; width: 20px; height: 20px; left: -10px; top: -10px; cursor: nw-resize;"
+                            />
+                          </span>
+                        </div>,
+                      }
+                    }
                     offsetParent={null}
                     onDrag={[Function]}
                     onMouseDown={[Function]}
@@ -421,7 +820,6 @@ exports[`agent list item opens and closes the terminal 1`] = `
                       onResizeStart={[Function]}
                       onResizeStop={[Function]}
                       onTouchEnd={[Function]}
-                      onTouchStart={[Function]}
                       resizeRatio={1}
                       scale={1}
                       snapGap={0}
@@ -433,7 +831,6 @@ exports[`agent list item opens and closes the terminal 1`] = `
                           "left": 0,
                           "position": "absolute",
                           "top": 0,
-                          "touchAction": "none",
                           "transform": "translate(0px,0px)",
                           "width": "auto",
                         }
@@ -445,7 +842,6 @@ exports[`agent list item opens and closes the terminal 1`] = `
                         onMouseDown={[Function]}
                         onMouseUp={[Function]}
                         onTouchEnd={[Function]}
-                        onTouchStart={[Function]}
                         style={
                           Object {
                             "boxSizing": "border-box",
@@ -460,7 +856,6 @@ exports[`agent list item opens and closes the terminal 1`] = `
                             "minWidth": 700,
                             "position": "absolute",
                             "top": 0,
-                            "touchAction": "none",
                             "transform": "translate(0px,0px)",
                             "userSelect": "auto",
                             "width": "700px",
@@ -472,7 +867,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                           statusColor="#32E67E"
                         >
                           <div
-                            className="sc-AxgMl c7"
+                            className="c7"
                           >
                             <styled.div>
                               <div
@@ -545,6 +940,8 @@ exports[`agent list item opens and closes the terminal 1`] = `
                                     "black": "#181818",
                                     "connectedColor": "#27AE60",
                                     "connectingColor": "#F39C12",
+                                    "darkGrey": "#3E3E3E",
+                                    "darkWhite": "#F1F1F1",
                                     "disconnectedColor": "#C0392B",
                                     "error": "#ED3E2A",
                                     "green": "#32E67E",
@@ -769,7 +1166,8 @@ exports[`agent list item opens and closes the terminal 1`] = `
 
 exports[`agent list item opens and closes the terminal 2`] = `
 .c3 {
-  float: right;
+  margin-left: 25px;
+  margin-right: 25px;
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
@@ -782,13 +1180,16 @@ exports[`agent list item opens and closes the terminal 2`] = `
   border-radius: 50%;
   float: right;
   text-align: left;
+  color: #27AE60;
   background-color: #27AE60;
 }
 
 .c5 {
-  font-size: 1rem;
   grid-column: status-text;
   position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 25px;
   text-align: left;
   margin-left: 15px;
   color: #27AE60;
@@ -815,14 +1216,6 @@ exports[`agent list item opens and closes the terminal 2`] = `
   margin-top: 25px;
 }
 
-.c1 {
-  font-size: 1rem;
-  width: 100%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -839,15 +1232,19 @@ exports[`agent list item opens and closes the terminal 2`] = `
   width: 250px;
 }
 
+.c1 {
+  grid-column: name;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 25px;
+}
+
 .c6 {
   cursor: pointer;
   color: #F8F8F8;
-}
-
-@media (max-width:47.9375em) {
-  .c3 {
-    float: left;
-  }
 }
 
 @media (max-width:47.9375em) {
@@ -860,14 +1257,13 @@ exports[`agent list item opens and closes the terminal 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c1 {
-    text-align: center;
+  .c2 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c1 {
     width: 100%;
   }
 }
@@ -880,6 +1276,8 @@ exports[`agent list item opens and closes the terminal 2`] = `
         "black": "#181818",
         "connectedColor": "#27AE60",
         "connectingColor": "#F39C12",
+        "darkGrey": "#3E3E3E",
+        "darkWhite": "#F1F1F1",
         "disconnectedColor": "#C0392B",
         "error": "#ED3E2A",
         "green": "#32E67E",
@@ -905,50 +1303,73 @@ exports[`agent list item opens and closes the terminal 2`] = `
         <li
           className="c0"
         >
-          <Styled(styled.span)>
-            <span
-              className="sc-AxjAm c1"
+          <styled.p>
+            <p
+              className="c1"
             >
               agentName
-            </span>
-          </Styled(styled.span)>
+            </p>
+          </styled.p>
           <styled.div>
             <div
               className="c2"
             >
-              <ConnectionState
+              <WithTheme(ConnectionState)
                 connectionState="connected"
               >
-                <styled.div>
-                  <div
-                    className="c3"
-                  >
-                    <styled.div
-                      connectionState="connected"
+                <ConnectionState
+                  connectionState="connected"
+                  theme={
+                    Object {
+                      "accent": "#4D02EE",
+                      "black": "#181818",
+                      "connectedColor": "#27AE60",
+                      "connectingColor": "#F39C12",
+                      "darkGrey": "#3E3E3E",
+                      "darkWhite": "#F1F1F1",
+                      "disconnectedColor": "#C0392B",
+                      "error": "#ED3E2A",
+                      "green": "#32E67E",
+                      "inactive": "#363636",
+                      "lightBlack": "#1B1B1B",
+                      "name": "dark",
+                      "primary": "#02A3EE",
+                      "red": "#ED3E2A",
+                      "white": "#F8F8F8",
+                    }
+                  }
+                >
+                  <styled.div>
+                    <div
+                      className="c3"
                     >
-                      <div
-                        className="c4"
-                      />
-                    </styled.div>
-                    <Styled(styled.span)
-                      connectionState="connected"
-                    >
-                      <span
-                        className="sc-AxjAm c5"
+                      <styled.div
+                        connectionStateColor="#27AE60"
                       >
-                        Connected
-                      </span>
-                    </Styled(styled.span)>
-                  </div>
-                </styled.div>
-              </ConnectionState>
+                        <div
+                          className="c4"
+                        />
+                      </styled.div>
+                      <styled.p
+                        connectionStateColor="#27AE60"
+                      >
+                        <p
+                          className="c5"
+                        >
+                          Connected
+                        </p>
+                      </styled.p>
+                    </div>
+                  </styled.div>
+                </ConnectionState>
+              </WithTheme(ConnectionState)>
               <Styled(styled.i)
                 active={true}
                 className="fas fa-terminal"
                 onClick={[Function]}
               >
                 <i
-                  className="sc-AxirZ c6 fas fa-terminal"
+                  className="c6 fas fa-terminal"
                   onClick={[Function]}
                 />
               </Styled(styled.i)>
@@ -963,7 +1384,8 @@ exports[`agent list item opens and closes the terminal 2`] = `
 
 exports[`agent list item renders connected correctly 1`] = `
 .c3 {
-  float: right;
+  margin-left: 25px;
+  margin-right: 25px;
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
@@ -976,13 +1398,16 @@ exports[`agent list item renders connected correctly 1`] = `
   border-radius: 50%;
   float: right;
   text-align: left;
+  color: #27AE60;
   background-color: #27AE60;
 }
 
 .c5 {
-  font-size: 1rem;
   grid-column: status-text;
   position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 25px;
   text-align: left;
   margin-left: 15px;
   color: #27AE60;
@@ -1009,14 +1434,6 @@ exports[`agent list item renders connected correctly 1`] = `
   margin-top: 25px;
 }
 
-.c1 {
-  font-size: 1rem;
-  width: 100%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1033,15 +1450,19 @@ exports[`agent list item renders connected correctly 1`] = `
   width: 250px;
 }
 
+.c1 {
+  grid-column: name;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 25px;
+}
+
 .c6 {
   cursor: pointer;
   color: #F8F8F8;
-}
-
-@media (max-width:47.9375em) {
-  .c3 {
-    float: left;
-  }
 }
 
 @media (max-width:47.9375em) {
@@ -1054,14 +1475,13 @@ exports[`agent list item renders connected correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c1 {
-    text-align: center;
+  .c2 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c1 {
     width: 100%;
   }
 }
@@ -1070,11 +1490,11 @@ exports[`agent list item renders connected correctly 1`] = `
   <li
     className="c0"
   >
-    <span
-      className="sc-AxjAm c1"
+    <p
+      className="c1"
     >
       agentName
-    </span>
+    </p>
     <div
       className="c2"
     >
@@ -1084,14 +1504,14 @@ exports[`agent list item renders connected correctly 1`] = `
         <div
           className="c4"
         />
-        <span
-          className="sc-AxjAm c5"
+        <p
+          className="c5"
         >
           Connected
-        </span>
+        </p>
       </div>
       <i
-        className="sc-AxirZ c6 fas fa-terminal"
+        className="c6 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
@@ -1101,7 +1521,8 @@ exports[`agent list item renders connected correctly 1`] = `
 
 exports[`agent list item renders disconnected correctly 1`] = `
 .c3 {
-  float: right;
+  margin-left: 25px;
+  margin-right: 25px;
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
@@ -1114,13 +1535,16 @@ exports[`agent list item renders disconnected correctly 1`] = `
   border-radius: 50%;
   float: right;
   text-align: left;
+  color: #C0392B;
   background-color: #C0392B;
 }
 
 .c5 {
-  font-size: 1rem;
   grid-column: status-text;
   position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 25px;
   text-align: left;
   margin-left: 15px;
   color: #C0392B;
@@ -1147,14 +1571,6 @@ exports[`agent list item renders disconnected correctly 1`] = `
   margin-top: 25px;
 }
 
-.c1 {
-  font-size: 1rem;
-  width: 100%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1171,15 +1587,19 @@ exports[`agent list item renders disconnected correctly 1`] = `
   width: 250px;
 }
 
+.c1 {
+  grid-column: name;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 25px;
+}
+
 .c6 {
   cursor: inherit;
   color: #363636;
-}
-
-@media (max-width:47.9375em) {
-  .c3 {
-    float: left;
-  }
 }
 
 @media (max-width:47.9375em) {
@@ -1192,14 +1612,13 @@ exports[`agent list item renders disconnected correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c1 {
-    text-align: center;
+  .c2 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c1 {
     width: 100%;
   }
 }
@@ -1208,11 +1627,11 @@ exports[`agent list item renders disconnected correctly 1`] = `
   <li
     className="c0"
   >
-    <span
-      className="sc-AxjAm c1"
+    <p
+      className="c1"
     >
       agentName
-    </span>
+    </p>
     <div
       className="c2"
     >
@@ -1222,14 +1641,14 @@ exports[`agent list item renders disconnected correctly 1`] = `
         <div
           className="c4"
         />
-        <span
-          className="sc-AxjAm c5"
+        <p
+          className="c5"
         >
           Disconnected
-        </span>
+        </p>
       </div>
       <i
-        className="sc-AxirZ c6 fas fa-terminal"
+        className="c6 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
