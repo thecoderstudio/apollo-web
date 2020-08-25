@@ -40,7 +40,6 @@ const StyledText = styled.p`
   padding-top: 0;
   margin-left: 25px;
 
-
   ${
     media.phone`
       grid-rows: name;
