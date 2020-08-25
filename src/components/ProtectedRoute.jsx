@@ -13,7 +13,6 @@ const defaultProps = {
   role: ''
 };
 
-
 class ProtectedRoute extends React.PureComponent {
   constructor(props) {
     super(props);
