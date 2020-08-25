@@ -104,9 +104,7 @@ export default class CreateUser extends React.PureComponent {
   }
 
   validatePassword(password) {
-    if (password.length < 8) {
-      return false;
-    } else if (password != this.state.confirmPassword) {
+    if (password.length < 8 || password != this.state.confirmPassword) {
       return false;
     }
 
@@ -114,7 +112,7 @@ export default class CreateUser extends React.PureComponent {
   }
 
   close(success=false) {
-    this.props.onClose();
+    this.props.onClose(success);
   }
 
   render() {

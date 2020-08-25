@@ -58,7 +58,10 @@ export default class UserList extends React.PureComponent {
     });
   }
 
-  closeCreateUser() {
+  closeCreateUser(success) {
+    if (success) {
+      this.fetchUsers();
+    }
     this.setState({
       creatingUser: false
     });
