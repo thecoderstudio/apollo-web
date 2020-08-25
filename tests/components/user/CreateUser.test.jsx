@@ -22,7 +22,16 @@ describe("create user", () => {
     expect(tree).toMatchSnapshot();
   })
 
-  it("cancels", async () => {
+  it("cancels", () => {
+    const onClose = jest.fn();
+    const component = getComponent(onClose);
+    const root = component.root;
+
+    root.findAllByType('button')[0].props.onClick();
+    expect(onClose).toHaveBeenCalledWith(false);
+  })
+
+  it("posts successfully", async () => {
     const onClose = jest.fn();
     const component = getComponent(onClose);
     const root = component.root;

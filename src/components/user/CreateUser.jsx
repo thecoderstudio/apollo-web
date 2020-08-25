@@ -107,7 +107,6 @@ export default class CreateUser extends React.PureComponent {
     }
 
     if (!this.validateCredentials(credentials.username, credentials.password)) {
-      console.log("failure");
       return;
     }
 
