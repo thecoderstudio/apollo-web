@@ -74,7 +74,7 @@ describe("user list", () => {
 
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
-  })
+  });
 
   it("refreshes on create user success", async () => {
     const component = getComponent();

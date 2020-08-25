@@ -27,12 +27,12 @@ describe("create user", () => {
     process.env = {
       APOLLO_HTTP_URL: 'http://localhost:1234/'
     };
-  })
+  });
 
   it("renders correctly", () => {
     const tree = getComponent().toJSON();
     expect(tree).toMatchSnapshot();
-  })
+  });
 
   it("cancels", () => {
     const onClose = jest.fn();
@@ -41,7 +41,7 @@ describe("create user", () => {
 
     root.findAllByType('button')[0].props.onClick();
     expect(onClose).toHaveBeenCalledWith(false);
-  })
+  });
 
   it("validates input", async () => {
     const onClose = jest.fn();
@@ -56,7 +56,7 @@ describe("create user", () => {
       expect(axios.post).not.toHaveBeenCalled();
       expect(onClose).not.toHaveBeenCalledWith(true);
     });
-  })
+  });
 
   it("posts successfully", async () => {
     const onClose = jest.fn();
@@ -73,7 +73,7 @@ describe("create user", () => {
     await waitForExpect(() => {
       expect(onClose).toHaveBeenCalledWith(true);
     });
-  })
+  });
 
   it("handles unsuccessful post", async () => {
     const onClose = jest.fn();
@@ -91,5 +91,5 @@ describe("create user", () => {
       expect(axios.post).toHaveBeenCalled();
       expect(onClose).not.toHaveBeenCalledWith(true);
     });
-  })
+  });
 });

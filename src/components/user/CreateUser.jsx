@@ -104,7 +104,7 @@ export default class CreateUser extends React.PureComponent {
     const credentials = {
       username: this.state.username,
       password: this.state.password
-    }
+    };
 
     if (!this.validateCredentials(credentials.username, credentials.password)) {
       return;
@@ -130,7 +130,7 @@ export default class CreateUser extends React.PureComponent {
   }
 
   validatePassword(password) {
-    if (password.length < 8 || password != this.state.confirmPassword) {
+    if (password.length < 8 || password !== this.state.confirmPassword) {
       return false;
     }
 
