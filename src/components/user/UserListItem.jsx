@@ -1,10 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 import { connect } from 'react-redux';
 import checkIfAdmin from '../../util/admin';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import OutlinedButton from '../buttons/OutlinedButton';
+import ConfirmationModal from '../modals/ConfirmationModal';
 
 const propTypes = {
   user: PropTypes.object.isRequired,
@@ -45,7 +46,18 @@ const DeleteButton = styled(OutlinedButton)`
 class UserListItem extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.deleteUser = this.deleteUser.bind(this)
+    this.deleteUser = this.deleteUser.bind(this);
+    this.hideConfirmationModal = this.hideConfirmationModal.bind(this);
+    this.showConfirmationModal = this.showConfirmationModal.bind(this);
+    this.state = { renderConfirmationModal: false };
+  }
+
+  showConfirmationModal() {
+    this.setState({ renderConfirmationModal: true });
+  }
+
+  hideConfirmationModal() {
+    this.setState({ renderConfirmationModal: false });
   }
 
   deleteUser() {
@@ -54,6 +66,7 @@ class UserListItem extends React.PureComponent {
       { withCredentials: true }
     ).then(res => {
       this.props.userDeleteCallback();
+      this.hideConrfirmationModal()
     });
   }
 
@@ -69,7 +82,16 @@ class UserListItem extends React.PureComponent {
         {role}
         {
           this.props.user.id != this.props.currentUser.id && !checkIfAdmin(this.props.user) &&
-          <DeleteButton onClick={this.deleteUser}>delete</DeleteButton>
+          <DeleteButton onClick={this.showConfirmationModal}>delete</DeleteButton>
+        }
+        {this.state.renderConfirmationModal &&
+          <ConfirmationModal
+            title={`Are you sure you want to delete ${this.props.user.username}`}
+            deleteCallback={this.deleteUser}
+            cancelCallback={this.hideConfirmationModal}
+            confirmationButtonText='delete'
+            confirmationButtonColor={this.props.theme.error}
+          />
         }
       </Container>
     );
@@ -80,4 +102,4 @@ UserListItem.propTypes = propTypes;
 
 export default connect(
   state => ({ currentUser: state.currentUser })
-)(UserListItem);
+)(withTheme(UserListItem));
