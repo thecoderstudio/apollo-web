@@ -3,17 +3,17 @@
 exports[`app renders correctly authenticated 1`] = `
 <div>
   <div
-    className="sc-fzoiQi lbcYIX"
+    className="sc-fznxKY hXfJYl"
   >
     <div
-      className="sc-AxiKw egZdpg"
+      className="sc-AxhCb iPTYsw"
     >
       <h3>
         Apollo
       </h3>
       <div>
         <a
-          className="sc-AxhCb ibDnOD"
+          className="sc-AxiKw cJgpPc sc-AxhUy jjMkGi"
           href="/"
           onClick={[Function]}
         >
@@ -21,7 +21,7 @@ exports[`app renders correctly authenticated 1`] = `
         </a>
       </div>
       <button
-        className="sc-AxjAm sc-AxirZ sc-AxhUy fuCdCa"
+        className="sc-AxjAm sc-AxirZ sc-AxgMl dHhgMk"
         onClick={[Function]}
       >
         Log out
@@ -35,38 +35,38 @@ exports[`app renders correctly authenticated 1`] = `
 exports[`app renders correctly unauthenticated 1`] = `
 <div>
   <div
-    className="sc-fzoiQi lbcYIX"
+    className="sc-fznxKY hXfJYl"
   >
     <div
-      className="sc-Axmtr kbLgUh"
+      className="sc-AxmLO iBAgtE"
     >
       <div
-        className="sc-AxmLO eLaVVa"
+        className="sc-fzozJi bhlVcP"
       >
         <img
-          className="sc-fzplWN ctZptC"
+          className="sc-fznyAO hWqdUS"
           src={[Function]}
         />
         <h1
-          className="sc-fzozJi eZiksZ"
+          className="sc-fzoLsD cBaJOP"
         >
           Log in to Apollo
         </h1>
         <div
-          className="sc-AxheI sc-fzoLsD hucFzw"
+          className="sc-Axmtr sc-fzpans dnwFIQ"
         >
           <form
-            className="sc-fzpans gtnNFI"
+            className="sc-fzplWN cwlCix"
             onSubmit={[Function]}
           >
             <input
-              className="sc-AxgMl ksubo"
+              className="sc-AxheI kqjpKa"
               onChange={[Function]}
               placeholder="Username"
               type="username"
             />
             <input
-              className="sc-AxgMl ksubo"
+              className="sc-AxheI kqjpKa"
               onChange={[Function]}
               placeholder="Password"
               type="password"

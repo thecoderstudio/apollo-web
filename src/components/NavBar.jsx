@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { logout as logoutAction } from '../actions/auth';
 import { removeCurrentUser } from '../actions/current-user';
 import OutlinedButton from './buttons/OutlinedButton';
+import Link from './Link';
 
 const NavigationBar = styled.div`
   height: 50px;
@@ -18,12 +18,6 @@ const NavigationBar = styled.div`
 
 const StyledLink = styled(Link)`
   margin-right: 16px;
-  text-decoration: none;
-  color: ${props => props.theme.white};
-
-  &:hover {
-    opacity: 0.90;
-  }
 `;
 
 const Logout = styled(OutlinedButton)`
