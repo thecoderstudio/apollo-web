@@ -49,16 +49,14 @@ const Controls = styled.div`
 `;
   
 const StyledText = styled.p`
-  grid-column: name;
+  width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  margin: 0;
-  padding-top: 0;
-  margin-left: 25px;
 
   ${
     media.phone`
+      text-align: center;
       width: 100%;
     `
   }
