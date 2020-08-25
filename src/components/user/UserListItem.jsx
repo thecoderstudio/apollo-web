@@ -53,10 +53,7 @@ class UserListItem extends React.PureComponent {
       `${process.env.APOLLO_HTTP_URL}user/${this.props.user.id}`,
       { withCredentials: true }
     ).then(res => {
-      if (res.status === 204) {
-
-        this.props.userDeleteCallback();
-      }
+      this.props.userDeleteCallback();
     });
   }
 
