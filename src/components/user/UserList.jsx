@@ -1,12 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import media from '../../util/media';
 import OutlinedButton from '../buttons/OutlinedButton';
 import UserListItem from './UserListItem';
 import CreateUser from './CreateUser';
-
-const Title = styled.h2`
-`;
 
 const Header = styled.div`
   margin: 0px 16px;
@@ -15,8 +13,16 @@ const Header = styled.div`
   justify-content: space-between;
 `;
 
+const ButtonContent = styled.span`
+  ${
+    media.phone`
+      display: none;
+    `
+  }
+`;
+
 const List = styled.div`
-margin-top: 16px;
+  margin-top: 16px;
 
   >:nth-child(odd) {
     background-color: ${props => props.theme.black};
@@ -71,9 +77,9 @@ export default class UserList extends React.PureComponent {
     return (
       <div>
         <Header>
-          <Title>Users</Title>
+          <h2>Users</h2>
           <OutlinedButton onClick={this.createUser}>
-            <i className="fas fa-plus" /> Create User
+            <i className="fas fa-plus" /> <ButtonContent>Create User</ButtonContent>
           </OutlinedButton>
         </Header>
         <List>

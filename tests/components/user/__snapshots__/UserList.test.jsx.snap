@@ -3,11 +3,9 @@
 exports[`user list correctly toggles create user 1`] = `
 <div>
   <div
-    className="sc-fznyAO gJSQLJ"
+    className="sc-fzplWN cMkDXx"
   >
-    <h2
-      className="sc-fzplWN fKnvyl"
-    >
+    <h2>
       Users
     </h2>
     <button
@@ -17,11 +15,16 @@ exports[`user list correctly toggles create user 1`] = `
       <i
         className="fas fa-plus"
       />
-       Create User
+       
+      <span
+        className="sc-fznyAO bXJKVe"
+      >
+        Create User
+      </span>
     </button>
   </div>
   <div
-    className="sc-fznKkj gnekHp"
+    className="sc-fznKkj pLnHF"
   />
   <div
     className="sc-AxheI sc-Axmtr jKVYwn"
@@ -80,11 +83,9 @@ exports[`user list correctly toggles create user 1`] = `
 exports[`user list correctly toggles create user 2`] = `
 <div>
   <div
-    className="sc-fznyAO gJSQLJ"
+    className="sc-fzplWN cMkDXx"
   >
-    <h2
-      className="sc-fzplWN fKnvyl"
-    >
+    <h2>
       Users
     </h2>
     <button
@@ -94,11 +95,16 @@ exports[`user list correctly toggles create user 2`] = `
       <i
         className="fas fa-plus"
       />
-       Create User
+       
+      <span
+        className="sc-fznyAO bXJKVe"
+      >
+        Create User
+      </span>
     </button>
   </div>
   <div
-    className="sc-fznKkj gnekHp"
+    className="sc-fznKkj pLnHF"
   />
 </div>
 `;
@@ -106,11 +112,9 @@ exports[`user list correctly toggles create user 2`] = `
 exports[`user list doesn't try to render users on error 1`] = `
 <div>
   <div
-    className="sc-fznyAO gJSQLJ"
+    className="sc-fzplWN cMkDXx"
   >
-    <h2
-      className="sc-fzplWN fKnvyl"
-    >
+    <h2>
       Users
     </h2>
     <button
@@ -120,11 +124,16 @@ exports[`user list doesn't try to render users on error 1`] = `
       <i
         className="fas fa-plus"
       />
-       Create User
+       
+      <span
+        className="sc-fznyAO bXJKVe"
+      >
+        Create User
+      </span>
     </button>
   </div>
   <div
-    className="sc-fznKkj gnekHp"
+    className="sc-fznKkj pLnHF"
   />
 </div>
 `;
@@ -132,11 +141,9 @@ exports[`user list doesn't try to render users on error 1`] = `
 exports[`user list refreshes on create user success 1`] = `
 <div>
   <div
-    className="sc-fznyAO gJSQLJ"
+    className="sc-fzplWN cMkDXx"
   >
-    <h2
-      className="sc-fzplWN fKnvyl"
-    >
+    <h2>
       Users
     </h2>
     <button
@@ -146,11 +153,16 @@ exports[`user list refreshes on create user success 1`] = `
       <i
         className="fas fa-plus"
       />
-       Create User
+       
+      <span
+        className="sc-fznyAO bXJKVe"
+      >
+        Create User
+      </span>
     </button>
   </div>
   <div
-    className="sc-fznKkj gnekHp"
+    className="sc-fznKkj pLnHF"
   >
     <div
       className="sc-AxiKw jxeMgG"
@@ -168,11 +180,9 @@ exports[`user list refreshes on create user success 1`] = `
 exports[`user list renders correctly 1`] = `
 <div>
   <div
-    className="sc-fznyAO gJSQLJ"
+    className="sc-fzplWN cMkDXx"
   >
-    <h2
-      className="sc-fzplWN fKnvyl"
-    >
+    <h2>
       Users
     </h2>
     <button
@@ -182,11 +192,16 @@ exports[`user list renders correctly 1`] = `
       <i
         className="fas fa-plus"
       />
-       Create User
+       
+      <span
+        className="sc-fznyAO bXJKVe"
+      >
+        Create User
+      </span>
     </button>
   </div>
   <div
-    className="sc-fznKkj gnekHp"
+    className="sc-fznKkj pLnHF"
   />
 </div>
 `;
@@ -194,11 +209,9 @@ exports[`user list renders correctly 1`] = `
 exports[`user list renders correctly 2`] = `
 <div>
   <div
-    className="sc-fznyAO gJSQLJ"
+    className="sc-fzplWN cMkDXx"
   >
-    <h2
-      className="sc-fzplWN fKnvyl"
-    >
+    <h2>
       Users
     </h2>
     <button
@@ -208,11 +221,16 @@ exports[`user list renders correctly 2`] = `
       <i
         className="fas fa-plus"
       />
-       Create User
+       
+      <span
+        className="sc-fznyAO bXJKVe"
+      >
+        Create User
+      </span>
     </button>
   </div>
   <div
-    className="sc-fznKkj gnekHp"
+    className="sc-fznKkj pLnHF"
   >
     <div
       className="sc-AxiKw jxeMgG"

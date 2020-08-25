@@ -12,11 +12,9 @@ exports[`user list renders correctly 1`] = `
   >
     <div>
       <div
-        className="sc-fznyAO gJSQLJ"
+        className="sc-fzplWN cMkDXx"
       >
-        <h2
-          className="sc-fzplWN fKnvyl"
-        >
+        <h2>
           Users
         </h2>
         <button
@@ -26,11 +24,16 @@ exports[`user list renders correctly 1`] = `
           <i
             className="fas fa-plus"
           />
-           Create User
+           
+          <span
+            className="sc-fznyAO bXJKVe"
+          >
+            Create User
+          </span>
         </button>
       </div>
       <div
-        className="sc-fznKkj gnekHp"
+        className="sc-fznKkj pLnHF"
       />
     </div>
   </div>
@@ -49,11 +52,9 @@ exports[`user list renders correctly 2`] = `
   >
     <div>
       <div
-        className="sc-fznyAO gJSQLJ"
+        className="sc-fzplWN cMkDXx"
       >
-        <h2
-          className="sc-fzplWN fKnvyl"
-        >
+        <h2>
           Users
         </h2>
         <button
@@ -63,11 +64,16 @@ exports[`user list renders correctly 2`] = `
           <i
             className="fas fa-plus"
           />
-           Create User
+           
+          <span
+            className="sc-fznyAO bXJKVe"
+          >
+            Create User
+          </span>
         </button>
       </div>
       <div
-        className="sc-fznKkj gnekHp"
+        className="sc-fznKkj pLnHF"
       >
         <div
           className="sc-AxiKw jxeMgG"
