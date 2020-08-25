@@ -1,5 +1,108 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`user list correctly toggles create user 1`] = `
+<div>
+  <div
+    className="sc-fznyAO gJSQLJ"
+  >
+    <h2
+      className="sc-fzplWN fKnvyl"
+    >
+      Users
+    </h2>
+    <button
+      className="sc-AxjAm sc-AxirZ txvCN"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-plus"
+      />
+       Create User
+    </button>
+  </div>
+  <div
+    className="sc-fznKkj gnekHp"
+  />
+  <div
+    className="sc-AxheI sc-Axmtr jKVYwn"
+  >
+    <div
+      className="sc-AxmLO iQvUUV"
+    >
+      <h2
+        className="sc-fzozJi kSlaeX"
+      >
+        Create new user
+      </h2>
+      <form
+        className="sc-fzoLsD szRCQ"
+        onSubmit={[Function]}
+      >
+        <input
+          className="sc-AxgMl bKQwSV"
+          onChange={[Function]}
+          placeholder="Username"
+          type="username"
+        />
+        <input
+          className="sc-AxgMl bKQwSV"
+          onChange={[Function]}
+          placeholder="Password"
+          type="password"
+        />
+        <input
+          className="sc-AxgMl bKQwSV"
+          onChange={[Function]}
+          placeholder="Confirm password"
+          type="password"
+        />
+        <div
+          className="sc-fzpans epxuNu"
+        >
+          <button
+            className="sc-AxjAm sc-AxirZ txvCN"
+            onClick={[Function]}
+          >
+            Cancel
+          </button>
+          <button
+            className="sc-AxjAm gCJpuO"
+          >
+            Create user
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`user list correctly toggles create user 2`] = `
+<div>
+  <div
+    className="sc-fznyAO gJSQLJ"
+  >
+    <h2
+      className="sc-fzplWN fKnvyl"
+    >
+      Users
+    </h2>
+    <button
+      className="sc-AxjAm sc-AxirZ txvCN"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-plus"
+      />
+       Create User
+    </button>
+  </div>
+  <div
+    className="sc-fznKkj gnekHp"
+  />
+</div>
+`;
+
 exports[`user list doesn't try to render users on error 1`] = `
 <div>
   <div
@@ -23,6 +126,42 @@ exports[`user list doesn't try to render users on error 1`] = `
   <div
     className="sc-fznKkj gnekHp"
   />
+</div>
+`;
+
+exports[`user list refreshes on create user success 1`] = `
+<div>
+  <div
+    className="sc-fznyAO gJSQLJ"
+  >
+    <h2
+      className="sc-fzplWN fKnvyl"
+    >
+      Users
+    </h2>
+    <button
+      className="sc-AxjAm sc-AxirZ txvCN"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-plus"
+      />
+       Create User
+    </button>
+  </div>
+  <div
+    className="sc-fznKkj gnekHp"
+  >
+    <div
+      className="sc-AxiKw jxeMgG"
+    >
+      <p
+        className="sc-AxhCb klGZiV"
+      >
+        test
+      </p>
+    </div>
+  </div>
 </div>
 `;
 
