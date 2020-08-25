@@ -69,13 +69,10 @@ exports[`agentList correctly lists multiple agents 1`] = `
 }
 
 .c4 {
-  grid-column: name;
+  width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  margin: 0;
-  padding-top: 0;
-  margin-left: 25px;
 }
 
 .c9 {
@@ -118,6 +115,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
 
 @media (max-width:47.9375em) {
   .c4 {
+    text-align: center;
     width: 100%;
   }
 }

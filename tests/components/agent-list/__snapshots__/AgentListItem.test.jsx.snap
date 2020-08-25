@@ -152,13 +152,10 @@ exports[`agent list item opens and closes the terminal 1`] = `
 }
 
 .c1 {
-  grid-column: name;
+  width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  margin: 0;
-  padding-top: 0;
-  margin-left: 25px;
 }
 
 .c6 {
@@ -183,6 +180,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
 
 @media (max-width:47.9375em) {
   .c1 {
+    text-align: center;
     width: 100%;
   }
 }
@@ -1233,13 +1231,10 @@ exports[`agent list item opens and closes the terminal 2`] = `
 }
 
 .c1 {
-  grid-column: name;
+  width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  margin: 0;
-  padding-top: 0;
-  margin-left: 25px;
 }
 
 .c6 {
@@ -1264,6 +1259,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
 
 @media (max-width:47.9375em) {
   .c1 {
+    text-align: center;
     width: 100%;
   }
 }
@@ -1451,13 +1447,10 @@ exports[`agent list item renders connected correctly 1`] = `
 }
 
 .c1 {
-  grid-column: name;
+  width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  margin: 0;
-  padding-top: 0;
-  margin-left: 25px;
 }
 
 .c6 {
@@ -1482,6 +1475,7 @@ exports[`agent list item renders connected correctly 1`] = `
 
 @media (max-width:47.9375em) {
   .c1 {
+    text-align: center;
     width: 100%;
   }
 }
@@ -1588,13 +1582,10 @@ exports[`agent list item renders disconnected correctly 1`] = `
 }
 
 .c1 {
-  grid-column: name;
+  width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  margin: 0;
-  padding-top: 0;
-  margin-left: 25px;
 }
 
 .c6 {
@@ -1619,6 +1610,7 @@ exports[`agent list item renders disconnected correctly 1`] = `
 
 @media (max-width:47.9375em) {
   .c1 {
+    text-align: center;
     width: 100%;
   }
 }
