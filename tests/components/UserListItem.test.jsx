@@ -64,7 +64,7 @@ describe("user list item", () => {
     });
   });
 
-  it("correctly not removes user", async () => {
+  it("correctly not removes user", () => {
     axios.delete.mockResolvedValue({
       status: 204
     });
@@ -75,9 +75,6 @@ describe("user list item", () => {
       }
     };
     const tree = getComponent(user, store, spy);
-    tree.root.findByType('button').props.onClick();
-    await waitForExpect(() => {
-      expect(spy).toNotHaveBeenCalled();
-    });
+    expect(tree.root.findAllByType('button').length).toBe(0);
   });
 });
