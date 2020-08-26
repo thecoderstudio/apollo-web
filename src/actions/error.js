@@ -1,17 +1,20 @@
 import { store } from '../store';
-import { notify } from './notification';
+import { notify as notifyAction } from './notification';
 
-function handleError(error, informUser=true) {
-  if (!informUser) {
+function handleError(error, notify=true) {
+  if (!notify) {
     return;
   }
 
-  store.dispatch(notify(error, 'error'));
+  store.dispatch(notifyAction(error, 'error'));
 }
 
-function handleHTTPResponse(response, informUser=true) {
+function handleHTTPResponse(response, notify=true, allowBadRequests=false) {
   if(response.status >= 200 && response.status < 400) {
     return true;
+  } else if (response.status == 400 && allowBadRequests) {
+    // The bad request won't be treated as an error but it isn't a successful response either.
+    return false;
   }
 
   handleError(response.statusText);
