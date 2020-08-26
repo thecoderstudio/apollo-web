@@ -52,8 +52,8 @@ class Notification extends React.PureComponent {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.timeToLiveInSeconds == this.props.timeToLiveInSeconds ||
-        this.props.timeToLiveInSeconds == null) {
+    if (prevProps.timeToLiveInSeconds === this.props.timeToLiveInSeconds ||
+        this.props.timeToLiveInSeconds === null) {
       return;
     }
 
@@ -91,6 +91,7 @@ class Notification extends React.PureComponent {
   }
 }
 
-Notification.propTypes = propTypes
+Notification.propTypes = propTypes;
+Notification.defaultProps = defaultProps; 
 
 export default withTheme(connect()(Notification));
