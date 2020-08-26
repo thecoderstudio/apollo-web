@@ -80,4 +80,4 @@ test("openTerminal opens new window", () => {
   global.open = jest.fn();
   openTerminal("testid");
   expect(global.open).toHaveBeenCalledWith(expectedHref);
-})
+});
