@@ -2,6 +2,7 @@ import React from 'react';
 import configureStore from 'redux-mock-store';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
+import { Map } from 'immutable';
 import App from '../src/App';
 
 const mockStore = configureStore([]);
@@ -18,7 +19,8 @@ describe('app', () => {
   it("renders correctly unauthenticated", () => {
     const store = mockStore({
       authenticated: false,
-      currentUser: {}
+      currentUser: {},
+      notifications: Map({})
     });
     const tree = getComponent(store).toJSON();
     expect(tree).toMatchSnapshot();
@@ -28,7 +30,8 @@ describe('app', () => {
     const store = mockStore({
       agent: [],
       authenticated: true,
-      currentUser: {}
+      currentUser: {},
+      notifications: Map({})
     });
     process.env = {
       APOLLO_WS_URL: 'ws://localhost:1234/',

@@ -1,10 +1,11 @@
 import React from 'react';
 import styled, { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
-import Card from '../components/Card';
 import { Terminal as XTerm } from 'xterm';
 import { AttachAddon } from 'xterm-addon-attach';
 import chalk from 'chalk';
+import Card from '../components/Card';
+import { handleError } from '../actions/error';
 
 const propTypes = {
   agent: PropTypes.object.isRequired
@@ -38,6 +39,8 @@ const CHALK_SETTINGS = {
   level: 2
 };
 
+const socketErrorMessage = "Something went wrong in the connection with the agent.";
+
 export class Terminal extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -70,9 +73,8 @@ export class Terminal extends React.PureComponent {
   }
 
   onSocketError() {
-    this.write(this.chalk.hex(this.props.theme.error).bold(
-      "Something went wrong in the connection with the agent."
-    ));
+    handleError(socketErrorMessage, false);
+    this.write(this.chalk.hex(this.props.theme.error).bold(socketErrorMessage));
   }
 
   onSocketClose() {

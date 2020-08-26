@@ -7,6 +7,7 @@ import Input from '../components/Input';
 import Card from '../components/Card';
 import { login as loginAction } from '../actions/auth';
 import { cacheCurrentUser } from '../actions/current-user';
+import { handleHTTPResponse } from '../actions/error';
 import media from '../util/media';
 import moonImg from '../images/moon_rocket.svg';
 
@@ -113,7 +114,7 @@ class Login extends React.Component {
       { withCredentials: true }
     )
       .then(res => {
-        if (res.status === 200) {
+        if (handleHTTPResponse(res)) {
           this.props.dispatch(loginAction());
           this.fetchCurrentUser();
         }
@@ -126,7 +127,7 @@ class Login extends React.Component {
       { withCredentials: true }
     )
       .then(res => {
-        if (res.status === 200) {
+        if (handleHTTPResponse(res)) {
           this.props.dispatch(cacheCurrentUser(res.data));
         }
       });

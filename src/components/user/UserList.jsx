@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import { handleHTTPResponse } from '../../actions/error';
 import UserListItem from './UserListItem';
 
 const Title = styled.h2`
@@ -33,7 +34,7 @@ export default class UserList extends React.PureComponent {
       `${process.env.APOLLO_HTTP_URL}user`,
       { withCredentials: true }
     ).then(res => {
-      if (res.status === 200) {
+      if (handleHTTPResponse(res)) {
         this.setState({
           users: res.data
         });
