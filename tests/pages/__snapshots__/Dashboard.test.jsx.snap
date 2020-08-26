@@ -1,70 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`dashboard renders correctly 1`] = `
-.c5 {
+.c1 {
   display: grid;
   grid-template-rows: [title] 50px [list] 1fr;
   border-radius: 8px;
   padding: 20px;
 }
 
-.c6 {
+.c2 {
   grid-row: title;
 }
 
-.c7 {
+.c3 {
   grid-row: list;
   list-style: none;
   padding-left: 0;
 }
 
-.c1 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c1:hover {
-  opacity: 0.90;
-}
-
 .c0 {
-  height: 50px;
-  padding: 16px;
-  display: grid;
-  grid-template-columns: 1fr 8fr [logout];
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c2 {
-  margin-right: 16px;
-}
-
-.c3 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
-  grid-column: logout;
-  float: right;
-  width: 100px;
-  height: 75%;
-}
-
-.c3:hover {
-  opacity: 0.90;
-}
-
-.c4 {
   grid-template-columns: [agent-listing] 1fr 1fr;
   grid-template-rows: 1fr;
   display: grid;
@@ -73,7 +27,7 @@ exports[`dashboard renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c0 {
     grid-template-columns: [agent-listing] 1fr;
   }
 }
@@ -82,45 +36,16 @@ exports[`dashboard renders correctly 1`] = `
   <div
     className="c0"
   >
-    <h3>
-      Apollo
-    </h3>
-    <div>
-      <a
-        className="c1 c2"
-        href="/"
-        onClick={[Function]}
-      >
-        Dashboard
-      </a>
-      <a
-        className="c1 c2"
-        href="/admin"
-        onClick={[Function]}
-      >
-        Admin
-      </a>
-    </div>
-    <button
-      className="c3"
-      onClick={[Function]}
-    >
-      Log out
-    </button>
-  </div>
-  <div
-    className="c4"
-  >
     <div
-      className="c5"
+      className="c1"
     >
       <h2
-        className="c6"
+        className="c2"
       >
         Agents
       </h2>
       <ul
-        className="c7"
+        className="c3"
       />
     </div>
   </div>
