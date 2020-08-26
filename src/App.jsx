@@ -46,7 +46,7 @@ function App(props) {
             {props.authenticated && <NavBar />}
             <Switch>
               <ProtectedRoute exact path='/' component={Dashboard} fallbackComponent={Login} />
-              <ProtectedRoute exact path='/agent/:agentId/shell' component={TerminalPage} fallbackComponent={NotFound} role='admin' />
+              <ProtectedRoute exact path='/agent/:agentId/shell' component={TerminalPage} fallbackComponent={NotFound} />
               <ProtectedRoute exact path='/admin' component={Admin} fallbackComponent={NotFound} role='admin' />
               <Route component={NotFound} />
             </Switch>
