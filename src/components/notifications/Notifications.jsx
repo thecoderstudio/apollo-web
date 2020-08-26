@@ -11,7 +11,7 @@ const Container = styled(CSSTransitionGroup)`
   position: absolute;
   left: 0px;
   right: 0px;
-  bottom: 0px;
+  bottom: 32px;
   z-index: 2;
 `;
 

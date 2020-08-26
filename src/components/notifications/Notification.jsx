@@ -18,7 +18,7 @@ const defaultProps = {
 
 const Container = styled.div`
   max-width: 700px;
-  width: 100%;
+  width: 95%;
   padding: 8px 16px;
   margin: 8px;
   border-radius: 5px;
@@ -28,6 +28,7 @@ const Container = styled.div`
               0 4px 4px rgba(0,0,0,0.12),
               0 8px 8px rgba(0,0,0,0.12),
               0 16px 16px rgba(0,0,0,0.12);
+  box-sizing: border-box;
 `;
 
 const CloseIcon = styled.i`
@@ -62,11 +63,11 @@ class Notification extends React.PureComponent {
   getColor(severity) {
     switch(severity) {
       case 'warning':
-        return this.props.theme.orange;
+        return this.props.theme.warning;
       case 'error':
-        return this.props.theme.red;
+        return this.props.theme.error;
       default:
-        return this.props.theme.primaryColor;
+        return this.props.theme.accent;
     }
   }
 
