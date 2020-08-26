@@ -2,7 +2,7 @@ import React from 'react';
 import configureStore from 'redux-mock-store';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import { MemoryRouter, Switch } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import ProtectedRoute from '../../src/components/ProtectedRoute';
 
 const mockStore = configureStore([]);
@@ -11,7 +11,7 @@ function getComponent(store, role=undefined) {
   return renderer.create(
     <Provider store={store}>
       <MemoryRouter
-        initialEntries={[ { pathname: '/', key: 'testKey' } ]}
+        initialEntries={[{ pathname: '/', key: 'testKey' }]}
       >
         <ProtectedRoute exact path='/' component="auth" fallbackComponent="unauth" role={role} />
       </MemoryRouter>

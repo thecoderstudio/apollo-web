@@ -35,6 +35,7 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "jest": "^26.0.1",
     "jest-canvas-mock": "^2.2.0",
+    "jest-styled-components": "^7.0.3",
     "jest-svg-transformer": "^1.0.0",
     "jest-websocket-mock": "^2.0.2",
     "mock-socket": "^9.0.3",
@@ -55,6 +56,7 @@
       "!src/index.js",
       "!src/store.js"
     ],
-    "clearMocks": true
+    "clearMocks": true,
+    "setupFilesAfterEnv": ["<rootDir>/tests/setupTests.js"]
   }
 }
