@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import Text from '../Text';
 import Icon from '../Icon';
 import ConnectionState from './ConnectionState';
 import { openTerminal } from '../terminal/Terminal';
@@ -22,8 +21,8 @@ const Container = styled.li`
   border: 1px solid white;
 
   height: 30px;
-	line-height: 30px;
-	padding: 15px 30px;
+  line-height: 30px;
+  padding: 15px 30px;
   margin-top: 25px;
 
   ${
@@ -33,7 +32,6 @@ const Container = styled.li`
     `
   }
 `;
-
 
 const Controls = styled.div`
   display: flex;
@@ -66,7 +64,7 @@ const TerminalIcon = styled(Icon)`
   color: ${props => props.active ? props.theme.white : props.theme.inactive};
 `;
 
-class AgentListItem extends React.PureComponent {
+export default class AgentListItem extends React.PureComponent {
   constructor(props) {
     super(props);
     this.openTerminal = this.openTerminal.bind(this);
@@ -112,5 +110,3 @@ class AgentListItem extends React.PureComponent {
 }
 
 AgentListItem.propTypes = propTypes;
-
-export default AgentListItem;

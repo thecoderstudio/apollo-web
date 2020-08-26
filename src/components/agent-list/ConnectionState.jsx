@@ -47,7 +47,6 @@ const StyledText = styled.p`
   padding-top: 0;
   margin-left: 25px;
   text-align: left;
-  margin-left: 15px;
 
   color: ${props => props.connectionStateColor};
 `;

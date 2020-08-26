@@ -27,7 +27,6 @@ exports[`agentList correctly lists multiple agents 1`] = `
   padding-top: 0;
   margin-left: 25px;
   text-align: left;
-  margin-left: 15px;
   color: #27AE60;
 }
 
