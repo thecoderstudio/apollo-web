@@ -92,7 +92,7 @@ class AgentListItem extends React.PureComponent {
   }
 
   render() {
-    const connected = this.props.agent.connectionState == 'connected';
+    const connected = this.props.agent.connectionState === 'connected';
     let terminal;
     if (this.state.terminalOpen) {
       terminal = this.createTerminal();

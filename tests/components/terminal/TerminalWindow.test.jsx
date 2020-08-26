@@ -15,7 +15,7 @@ function getComponentTags(connectionState, onClose=jest.fn()) {
           agent={{
             id: "fakeid",
             name: "agentName",
-            connectionState: connectionState
+            connectionState
           }}
         />
       </ThemeProvider>
@@ -48,7 +48,7 @@ describe('agent list item', () => {
 
   it('opens terminal in new window', () => {
     const location = window.location;
-    const expectedHref = `${location.protocol}//${location.host}/agent/fakeid/shell`
+    const expectedHref = `${location.protocol}//${location.host}/agent/fakeid/shell`;
     global.open = jest.fn();
 
     const wrapper = mount(getComponentTags("connected"));

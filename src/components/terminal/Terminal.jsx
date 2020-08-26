@@ -94,7 +94,7 @@ export class Terminal extends React.PureComponent {
       this.fitAddon.fit();
     } catch (e) {
       // Ignore if required DOM parent is unavailable
-      if ("This API only accepts integers" == e.message) {
+      if ("This API only accepts integers" === e.message) {
         return;
       }
 
@@ -115,7 +115,7 @@ Terminal.propTypes = propTypes;
 
 export function openTerminal(agentId) {
   const location = window.location;
-  window.open(`${location.protocol}//${location.host}/agent/${agentId}/shell`)
+  window.open(`${location.protocol}//${location.host}/agent/${agentId}/shell`);
 }
 
 export default withTheme(Terminal);

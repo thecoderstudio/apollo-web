@@ -15,7 +15,7 @@ function getComponentTags(connectionState) {
         <AgentListItem agent={{
           id: "fakeid",
           name: "agentName",
-          connectionState: connectionState
+          connectionState
         }} />
       </ThemeProvider>
     </div>
@@ -59,7 +59,7 @@ describe('agent list item', () => {
 
   it('opens terminal in new window on mobile', () => {
     const location = window.location;
-    const expectedHref = `${location.protocol}//${location.host}/agent/fakeid/shell`
+    const expectedHref = `${location.protocol}//${location.host}/agent/fakeid/shell`;
     global.open = jest.fn();
 
     const mock = jest.fn();

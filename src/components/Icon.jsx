@@ -4,11 +4,11 @@ import styled from 'styled-components';
 
 const propTypes = {
   active: PropTypes.bool
-}
+};
 
 const defaultProps = {
   active: true
-}
+};
 
 const Icon = styled.i`
   cursor: ${props => props.active ? 'pointer' : 'inherit'};
@@ -17,4 +17,4 @@ const Icon = styled.i`
 Icon.propTypes = propTypes;
 Icon.defaultProps = defaultProps;
 
-export default Icon
+export default Icon;

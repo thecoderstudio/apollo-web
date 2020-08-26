@@ -14,7 +14,7 @@ class TerminalPage extends React.PureComponent {
 
   render() {
     const { match: { params } } = this.props;
-    return <Terminal ref={this.terminalRef} agent={this.props.agents.get(params.agentId)} />
+    return <Terminal ref={this.terminalRef} agent={this.props.agents.get(params.agentId)} />;
   }
 }
 

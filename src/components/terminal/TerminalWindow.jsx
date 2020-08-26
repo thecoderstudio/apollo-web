@@ -69,7 +69,7 @@ class TerminalWindow extends React.PureComponent {
 
   render() {
     let statusColor = this.props.theme.red;
-    if (this.props.agent.connectionState == 'connected') {
+    if (this.props.agent.connectionState === 'connected') {
       statusColor = this.props.theme.green;
     }
 

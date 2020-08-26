@@ -65,12 +65,12 @@ describe('agentList', () => {
 
   it("correctly lists multiple agents", () => {
     const data = new Map();
-    data.set('id', { id: "id", name: "name", connectionState: "connected" })
-    data.set('id2', { id: "id2", name: "name2", connectionState: "connected" })
+    data.set('id', { id: "id", name: "name", connectionState: "connected" });
+    data.set('id2', { id: "id2", name: "name2", connectionState: "connected" });
     store = mockStore({
       authenticated: true,
       agent: data
-    })
+    });
     expect(getComponent(store)).toMatchSnapshot();
   });
 });

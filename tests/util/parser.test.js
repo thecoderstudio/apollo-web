@@ -25,7 +25,7 @@ test('parseSnakeCaseArray', () => {
       snake_case: 'abc',
       camelCase: 'cba'
     }
-  ]
+  ];
   const parsed = parseSnakeCaseArray(test);
 
   parsed.forEach((item, index) => {

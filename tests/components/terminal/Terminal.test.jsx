@@ -54,18 +54,18 @@ describe('Terminal', () => {
   it('throw unexpected fit errors', () => {
     terminal.fitAddon.fit = jest.fn();
     terminal.fitAddon.fit.mockImplementation(() => {
-      throw new Error()
+      throw new Error();
     });
     expect(() => {
       terminal.fit();
     }).toThrow();
-  })
+  });
 
   it('correctly handles connection closure', async () => {
     await server.connected;
     server.close();
 
-    assertConnection()
+    assertConnection();
     await waitForExpect(() => {
       expect(termWriteSpy).toHaveBeenCalledWith(terminal.chalk.hex(darkTheme.error).bold(
         "\n\r\nConnection with server is closed"
@@ -76,8 +76,8 @@ describe('Terminal', () => {
 
 test("openTerminal opens new window", () => {
   const location = window.location;
-  const expectedHref = `${location.protocol}//${location.host}/agent/testid/shell`
+  const expectedHref = `${location.protocol}//${location.host}/agent/testid/shell`;
   global.open = jest.fn();
-  openTerminal("testid")
+  openTerminal("testid");
   expect(global.open).toHaveBeenCalledWith(expectedHref);
 })
