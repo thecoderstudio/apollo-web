@@ -13,6 +13,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "chalk": "^4.1.0",
+    "immutable": "^4.0.0-rc.12",
     "js-cookie": "^2.2.1",
     "react": "16.x",
     "react-dom": ">= 16.8.0",
