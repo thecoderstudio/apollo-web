@@ -6,7 +6,7 @@ exports[`connectionState Gets correct color 1`] = `
   position: relative;
   margin: 0;
   padding-top: 0;
-  margin-left: 25px;
+  margin-left: 15px;
   text-align: left;
 }
 
@@ -23,7 +23,7 @@ exports[`connectionState Gets correct color 2`] = `
   position: relative;
   margin: 0;
   padding-top: 0;
-  margin-left: 25px;
+  margin-left: 15px;
   text-align: left;
   color: #C0392B;
 }
@@ -41,7 +41,7 @@ exports[`connectionState Gets correct color 3`] = `
   position: relative;
   margin: 0;
   padding-top: 0;
-  margin-left: 25px;
+  margin-left: 15px;
   text-align: left;
   color: #F39C12;
 }
@@ -59,7 +59,7 @@ exports[`connectionState Gets correct color 4`] = `
   position: relative;
   margin: 0;
   padding-top: 0;
-  margin-left: 25px;
+  margin-left: 15px;
   text-align: left;
   color: #27AE60;
 }
@@ -73,8 +73,6 @@ exports[`connectionState Gets correct color 4`] = `
 
 exports[`connectionState renders correctly 1`] = `
 .c0 {
-  margin-left: 25px;
-  margin-right: 25px;
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
@@ -96,7 +94,7 @@ exports[`connectionState renders correctly 1`] = `
   position: relative;
   margin: 0;
   padding-top: 0;
-  margin-left: 25px;
+  margin-left: 15px;
   text-align: left;
   color: #27AE60;
 }

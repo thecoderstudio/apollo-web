@@ -2,8 +2,6 @@
 
 exports[`agent list item opens and closes the terminal 1`] = `
 .c3 {
-  margin-left: 25px;
-  margin-right: 25px;
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
@@ -25,7 +23,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   position: relative;
   margin: 0;
   padding-top: 0;
-  margin-left: 25px;
+  margin-left: 15px;
   text-align: left;
   color: #27AE60;
 }
@@ -1163,8 +1161,6 @@ exports[`agent list item opens and closes the terminal 1`] = `
 
 exports[`agent list item opens and closes the terminal 2`] = `
 .c3 {
-  margin-left: 25px;
-  margin-right: 25px;
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
@@ -1186,7 +1182,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
   position: relative;
   margin: 0;
   padding-top: 0;
-  margin-left: 25px;
+  margin-left: 15px;
   text-align: left;
   color: #27AE60;
 }
@@ -1378,8 +1374,6 @@ exports[`agent list item opens and closes the terminal 2`] = `
 
 exports[`agent list item renders connected correctly 1`] = `
 .c3 {
-  margin-left: 25px;
-  margin-right: 25px;
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
@@ -1401,7 +1395,7 @@ exports[`agent list item renders connected correctly 1`] = `
   position: relative;
   margin: 0;
   padding-top: 0;
-  margin-left: 25px;
+  margin-left: 15px;
   text-align: left;
   color: #27AE60;
 }
@@ -1512,8 +1506,6 @@ exports[`agent list item renders connected correctly 1`] = `
 
 exports[`agent list item renders disconnected correctly 1`] = `
 .c3 {
-  margin-left: 25px;
-  margin-right: 25px;
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
@@ -1535,7 +1527,7 @@ exports[`agent list item renders disconnected correctly 1`] = `
   position: relative;
   margin: 0;
   padding-top: 0;
-  margin-left: 25px;
+  margin-left: 15px;
   text-align: left;
   color: #C0392B;
 }

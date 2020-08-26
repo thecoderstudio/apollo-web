@@ -2,8 +2,6 @@
 
 exports[`agentList correctly lists multiple agents 1`] = `
 .c6 {
-  margin-left: 25px;
-  margin-right: 25px;
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
@@ -25,7 +23,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
   position: relative;
   margin: 0;
   padding-top: 0;
-  margin-left: 25px;
+  margin-left: 15px;
   text-align: left;
   color: #27AE60;
 }
