@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import ProtectedRoute from './components/ProtectedRoute';
 import NavBar from './components/NavBar';
+import Notifications from './components/notifications/Notifications';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
 import Admin from './pages/Admin';
@@ -48,6 +49,7 @@ function App(props) {
               <ProtectedRoute exact path='/admin' component={Admin} fallbackComponent={NotFound} role='admin' />
               <Route component={NotFound} />
             </Switch>
+            <Notifications />
             <GlobalStyle />
           </Content>
         </BrowserRouter>
