@@ -148,8 +148,18 @@ class Login extends React.Component {
           <Title>Log in to Apollo</Title>
           <StyledCard>
             <Form onSubmit={this.login}>
-              <Input type="username" placeholder="Username" onChange={this.handleUsernameChange} />
-              <Input type="password" placeholder="Password" onChange={this.handlePasswordChange} />
+              <Input
+                type="username"
+                placeholder="Username"
+                error={this.state.usernameError}
+                onChange={this.handleUsernameChange}
+                required />
+              <Input
+                type="password"
+                placeholder="Password"
+                error={this.state.passwordError}
+                onChange={this.handlePasswordChange}
+                required />
               <Button>Log in</Button>
             </Form>
           </StyledCard>

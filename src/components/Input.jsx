@@ -1,5 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
+const propTypes = {
+  error: PropTypes.string
+}
+
+const defaultProps = {
+  error: ''
+}
 
 const Container = styled.div`
   height: 100%;
@@ -22,11 +31,14 @@ const Error = styled.p`
 `;
 
 export default function Input(props) {
-  const { className, ...rest } = props;
+  const { className, error, ...rest } = props;
   return (
     <Container className={className}>
       <StyledInput {...rest} />
-      <Error>Test</Error>
+      { error !== '' && <Error>{error}</Error>}
     </Container>
   );
 };
+
+Input.propTypes = propTypes;
+Input.defaultProps = defaultProps;
