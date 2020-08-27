@@ -3,7 +3,7 @@ const severity = {
   info: 'info',
   warning: 'warning',
   error: 'error'
-}
+};
 
 function notify(message, severity) {
   return {
