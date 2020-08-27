@@ -57,6 +57,15 @@ describe('agent list item', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it("doesn't open the terminal if not connected", () => {
+    const component = getComponent('connected');
+    let tree = component.toJSON();
+    component.update(getComponentTags('disconnected'));
+    tree = component.toJSON();
+    component.root.findByType('i').props.onClick();
+    expect(tree).toMatchSnapshot();
+  });
+
   it('opens terminal in new window on mobile', () => {
     const location = window.location;
     const expectedHref = `${location.protocol}//${location.host}/agent/fakeid/shell`;

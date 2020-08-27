@@ -1,5 +1,137 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`agent list item doesn't open the terminal if not connected 1`] = `
+.c3 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c4 {
+  grid-column: status-indicator;
+  height: 12px;
+  width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  float: right;
+  text-align: left;
+  color: #C0392B;
+  background-color: #C0392B;
+}
+
+.c5 {
+  grid-column: status-text;
+  position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 15px;
+  text-align: left;
+  color: #C0392B;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid white;
+  height: 30px;
+  line-height: 30px;
+  padding: 15px 30px;
+  margin-top: 25px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.c1 {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c6 {
+  cursor: inherit;
+  color: #363636;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c2 {
+    width: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c1 {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+<div>
+  <li
+    className="c0"
+  >
+    <p
+      className="c1"
+    >
+      agentName
+    </p>
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        />
+        <p
+          className="c5"
+        >
+          Disconnected
+        </p>
+      </div>
+      <i
+        className="c6 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+  </li>
+</div>
+`;
+
 exports[`agent list item opens and closes the terminal 1`] = `
 .c3 {
   display: grid;
@@ -145,7 +277,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 250px;
+  width: 300px;
 }
 
 .c1 {
@@ -1221,7 +1353,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 250px;
+  width: 300px;
 }
 
 .c1 {
@@ -1434,7 +1566,7 @@ exports[`agent list item renders connected correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 250px;
+  width: 300px;
 }
 
 .c1 {
@@ -1566,7 +1698,7 @@ exports[`agent list item renders disconnected correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 250px;
+  width: 300px;
 }
 
 .c1 {

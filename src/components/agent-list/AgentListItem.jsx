@@ -70,10 +70,27 @@ export default class AgentListItem extends React.PureComponent {
     this.openTerminal = this.openTerminal.bind(this);
     this.createTerminal = this.createTerminal.bind(this);
     this.closeTerminal = this.closeTerminal.bind(this);
-    this.state = {terminalOpen: false};
+    this.state = {
+      connected: props.agent.connectionState === 'connected',
+      terminalOpen: false
+    };
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.agent.connectionState === prevProps.agent.connectionState) {
+      return;
+    }
+
+    this.setState({
+      connected: this.props.agent.connectionState === 'connected',
+    });
   }
 
   openTerminal() {
+    if(!this.state.connected) {
+      return;
+    }
+
     if (new MobileChecker().isMobile ){
       openTerminal(this.props.agent.id);
       return;
@@ -90,7 +107,6 @@ export default class AgentListItem extends React.PureComponent {
   }
 
   render() {
-    const connected = this.props.agent.connectionState === 'connected';
     let terminal;
     if (this.state.terminalOpen) {
       terminal = this.createTerminal();
@@ -101,7 +117,7 @@ export default class AgentListItem extends React.PureComponent {
         <StyledText>{this.props.agent.name}</StyledText>
           <Controls>
             <ConnectionState connectionState={this.props.agent.connectionState} />
-            <TerminalIcon active={connected} onClick={this.openTerminal} className="fas fa-terminal" />
+            <TerminalIcon active={this.state.connected} onClick={this.openTerminal} className="fas fa-terminal" />
           </Controls>
           {terminal}
       </Container>
