@@ -47,7 +47,7 @@ describe('notifications', () => {
           severity: 'warning'
         }
       })
-    })
+    });
     store.dispatch = jest.fn();
 
     let tree = getComponent(store).toJSON();
