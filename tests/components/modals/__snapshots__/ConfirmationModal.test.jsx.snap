@@ -1,31 +1,135 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ConfirmationModal renders correctly 1`] = `
+.c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: [title] 50px [content] 1fr;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 600px;
+  height: auto;
+}
+
+.c2 {
+  grid-row: title;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c3 {
+  grid-row: content;
+  padding: 20px;
+}
+
+.c4 {
+  display: grid;
+  grid-template-columns: [cancel] 1fr [delete] 1fr;
+}
+
+.c5 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  margin: 20px;
+  grid-column: cancel;
+}
+
+.c5:hover {
+  opacity: 0.90;
+}
+
+.c5:focus {
+  outline: none;
+}
+
+.c5:active {
+  opacity: 0.80;
+}
+
+.c5:focus {
+  outline: none;
+}
+
+.c5:active {
+  opacity: 0.80;
+}
+
+.c6 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  grid-column: delete;
+  margin: 20px;
+}
+
+.c6:hover {
+  opacity: 0.90;
+}
+
+.c6:focus {
+  outline: none;
+}
+
+.c6:active {
+  opacity: 0.80;
+}
+
 <div
-  className="sc-AxirZ XgLAH"
+  className="c0"
 >
   <div
-    className="sc-AxjAm sc-AxiKw bBesvM"
+    className="c1"
   >
     <h2
-      className="sc-AxhCb ia-DMNp"
+      className="c2"
     >
       title
     </h2>
     <div
-      className="sc-AxhUy POmIQ"
+      className="c3"
     >
       <div
-        className="sc-Axmtr gUsWbS"
+        className="c4"
       >
         <button
-          className="sc-AxgMl sc-AxheI sc-AxmLO iTAkGp"
+          className="c5"
           onClick={[MockFunction]}
         >
           cancel
         </button>
         <button
-          className="sc-AxgMl sc-fzozJi eMWGVu"
+          className="c6"
           onClick={[MockFunction]}
         >
           confirm

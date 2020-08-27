@@ -1,42 +1,156 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`login renders correctly 1`] = `
+.c7 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c7:hover {
+  opacity: 0.90;
+}
+
+.c7:focus {
+  outline: none;
+}
+
+.c7:active {
+  opacity: 0.80;
+}
+
+.c6 {
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+}
+
+.c0 {
+  height: 100%;
+  display: grid;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  display: grid;
+  justify-items: center;
+  -webkit-column-gap: 50px;
+  column-gap: 50px;
+  height: 90%;
+  max-height: 650px;
+  margin: 100px;
+  grid-template-rows: [heading] 1fr [title] 1fr [content] 4fr;
+  grid-template-columns: [img] 1fr [content] 1fr;
+}
+
+.c3 {
+  grid-row: title;
+  grid-column: content;
+}
+
+.c4 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  height: 350px;
+  grid-row: content;
+  grid-column: content;
+  display: grid;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  height: 75%;
+  display: grid;
+  grid-template-rows: auto;
+  grid-row-gap: 40px;
+}
+
+.c2 {
+  grid-column: img;
+  grid-row: 2 / 4;
+  width: 75%;
+  max-width: 800px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+@media (max-width:47.9375em) {
+  .c1 {
+    grid-template-columns: [content] 1fr;
+    grid-template-rows: [title] 1fr [content] 4fr [footer] 1fr;
+    margin: 20px 20px 0px 20px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c4 {
+    box-shadow: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c2 {
+    grid-column: 1;
+    grid-row: footer;
+    width: 100%;
+  }
+}
+
 <div
-  className="sc-AxhCb KPxTP"
+  className="c0"
 >
   <div
-    className="sc-AxhUy ipnyuM"
+    className="c1"
   >
     <img
-      className="sc-AxmLO AMLso"
+      className="c2"
       src={[Function]}
     />
     <h1
-      className="sc-AxgMl dVtKuT"
+      className="c3"
     >
       Log in to Apollo
     </h1>
     <div
-      className="sc-AxiKw sc-AxheI gbjjdj"
+      className="c4"
     >
       <form
-        className="sc-Axmtr hUAPTi"
+        className="c5"
         onSubmit={[Function]}
       >
         <input
-          className="sc-AxirZ foZgfu"
+          className="c6"
           onChange={[Function]}
           placeholder="Username"
           type="username"
         />
         <input
-          className="sc-AxirZ foZgfu"
+          className="c6"
           onChange={[Function]}
           placeholder="Password"
           type="password"
         />
         <button
-          className="sc-AxjAm rQrlH"
+          className="c7"
         >
           Log in
         </button>

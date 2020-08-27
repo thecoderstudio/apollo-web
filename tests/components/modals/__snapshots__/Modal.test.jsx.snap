@@ -1,19 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Modal renders correctly 1`] = `
+.c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: [title] 50px [content] 1fr;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 600px;
+  height: auto;
+}
+
+.c2 {
+  grid-row: title;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c3 {
+  grid-row: content;
+  padding: 20px;
+}
+
 <div
-  className="sc-AxirZ XgLAH"
+  className="c0"
 >
   <div
-    className="sc-AxjAm sc-AxiKw bBesvM"
+    className="c1"
   >
     <h2
-      className="sc-AxhCb ia-DMNp"
+      className="c2"
     >
       title
     </h2>
     <div
-      className="sc-AxhUy POmIQ"
+      className="c3"
     >
       <div />
     </div>
