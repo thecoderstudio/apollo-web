@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-  agent: PropTypes.object.isRequired
+  user: PropTypes.object.isRequired
 };
 
 const Container = styled.div`
