@@ -1,6 +1,7 @@
+import React from 'react';
 import styled from 'styled-components';
 
-const Input = styled.input`
+const StyledInput = styled.input`
   background: ${props => props.theme.white};
   border: none;
   border-radius: 5px;
@@ -10,4 +11,8 @@ const Input = styled.input`
   opacity: 0.9;
 `;
 
-export default Input;
+export default function Input(props) {
+  return (
+    <StyledInput {...props} />
+  );
+};
