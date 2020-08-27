@@ -17,7 +17,7 @@ function handleHTTPResponse(response, notify=true, allowBadRequests=false) {
     return false;
   }
 
-  handleError(response.statusText);
+  handleError(response.statusText, notify);
   return false;
 }
 
