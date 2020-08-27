@@ -9,12 +9,12 @@ const propTypes = {
   id: PropTypes.number.isRequired,
   severity: PropTypes.string,
   timeToLiveInSeconds: PropTypes.number
-}
+};
 
 const defaultProps = {
   severity: 'info',
   timeToLiveInSeconds: null
-}
+};
 
 const Container = styled.div`
   max-width: 700px;
@@ -46,7 +46,7 @@ class Notification extends React.PureComponent {
     this.getColor = this.getColor.bind(this);
     this.dismissSelf = this.dismissSelf.bind(this);
     this.scheduleDismiss = this.scheduleDismiss.bind(this);
-    if (props.timeToLiveInSeconds != null) {
+    if (props.timeToLiveInSeconds !== null) {
       this.scheduleDismiss(props.timeToLiveInSeconds);
     }
   }

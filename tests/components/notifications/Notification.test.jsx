@@ -25,9 +25,7 @@ describe('notification', () => {
   let store;
 
   beforeEach(() => {
-    store = mockStore({
-
-    });
+    store = mockStore({});
     store.dispatch = jest.fn();
   });
 

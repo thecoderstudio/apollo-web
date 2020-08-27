@@ -7,7 +7,7 @@ test("root reducer should contain all reducers", () => {
     agent: [],
     authenticated: false,
     currentUser: {},
-    notifications: Map({}),
+    notifications: new Map({}),
     theme: darkTheme
   });
 });

@@ -1,4 +1,4 @@
-var id = 0
+var id = 0;
 
 function notify(message, severity) {
   return {
@@ -6,14 +6,14 @@ function notify(message, severity) {
     id: id++,
     message,
     severity
-  }
+  };
 }
 
 function dismiss(notificationId) {
   return {
     type: 'DISMISS',
     id: notificationId
-  }
+  };
 }
 
 export { notify, dismiss };

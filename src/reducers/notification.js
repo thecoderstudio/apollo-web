@@ -1,6 +1,6 @@
 import { Map } from 'immutable';
 
-export default function notificationReducer(state = Map({}), action) {
+export default function notificationReducer(state = new Map({}), action) {
   switch (action.type) {
     case 'NOTIFY':
       return state.set(action.id, {

@@ -36,7 +36,7 @@ class AgentList extends React.Component {
     let server = new WebSocket(`${process.env.APOLLO_WS_URL}agent`);
     server.onerror = () => {
       handleError("Something went wrong fetching the agent list");
-    }
+    };
     server.onmessage = (event) => {
       this.dispatchListAgents(event.data);
     };

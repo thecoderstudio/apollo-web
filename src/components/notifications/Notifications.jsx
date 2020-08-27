@@ -7,11 +7,11 @@ import Notification from './Notification';
 
 const propTypes = {
   timeToLiveInSeconds: PropTypes.number
-}
+};
 
 const defaultProps = {
   timeToLiveInSeconds: 5
-}
+};
 
 const Container = styled(CSSTransitionGroup)`
   display: flex;
@@ -48,7 +48,6 @@ const StyledNotification = styled(Notification)`
 
 
 function Notifications(props) {
-  console.log(props.notifications);
   return (
     <Container
         transitionName="fade"

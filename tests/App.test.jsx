@@ -20,7 +20,7 @@ describe('app', () => {
     const store = mockStore({
       authenticated: false,
       currentUser: {},
-      notifications: Map({})
+      notifications: new Map({})
     });
     const tree = getComponent(store).toJSON();
     expect(tree).toMatchSnapshot();
@@ -31,7 +31,7 @@ describe('app', () => {
       agent: [],
       authenticated: true,
       currentUser: {},
-      notifications: Map({})
+      notifications: new Map({})
     });
     process.env = {
       APOLLO_WS_URL: 'ws://localhost:1234/',
