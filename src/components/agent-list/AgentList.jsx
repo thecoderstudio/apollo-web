@@ -43,8 +43,8 @@ class AgentList extends React.Component {
   }
 
   generateAgents(agents) {
-    return agents.map(agent => {
-      return <AgentListItem key={agent.id} agentName={agent.name} connectionState={agent.connection_state} />;
+    return Array.from(agents).map(([id, agent]) => {
+      return <AgentListItem key={id} agent={agent} />;
     });
   }
 

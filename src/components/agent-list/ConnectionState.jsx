@@ -20,8 +20,6 @@ const getConnectionStateColor = (connectionState, theme) => {
 };
 
 const Container = styled.div`
-  margin-left: 25px;
-  margin-right: 25px;
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 `;
@@ -45,7 +43,7 @@ const StyledText = styled.p`
   position: relative;
   margin: 0;
   padding-top: 0;
-  margin-left: 25px;
+  margin-left: 15px;
   text-align: left;
 
   color: ${props => props.connectionStateColor};

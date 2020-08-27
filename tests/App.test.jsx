@@ -33,10 +33,6 @@ describe('app', () => {
       currentUser: {},
       notifications: new Map({})
     });
-    process.env = {
-      APOLLO_WS_URL: 'ws://localhost:1234/',
-      APOLLO_URL: 'http://localhost:1234'
-    };
     const tree = getComponent(store).toJSON();
     expect(tree).toMatchSnapshot();
   });
