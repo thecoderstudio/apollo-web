@@ -7,6 +7,7 @@ export const darkTheme = {
   darkGrey: "#3E3E3E",
   primary: "#02A3EE",
   accent: "#4D02EE",
+  overlay: "rgba(37, 37, 37, 0.6)",
   connectedColor: "#27AE60",
   disconnectedColor: "#C0392B",
   connectingColor: "#F39C12",

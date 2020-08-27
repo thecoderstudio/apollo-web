@@ -6,6 +6,7 @@ import Button from '../buttons/Button';
 import OutlinedButton from '../buttons/OutlinedButton';
 import Input from '../Input';
 import Card from '../Card';
+import ModalOverlay from '../modals/ModalOverlay';
 
 const Container = styled(Card)`
   position: absolute;
@@ -143,20 +144,22 @@ export default class CreateUser extends React.PureComponent {
 
   render() {
     return (
-      <Container>
-        <Content>
-          <Title>Create new user</Title>
-          <Form onSubmit={this.createUser}>
-            <Input type="username" placeholder="Username" onChange={this.changeUsername} required />
-            <Input type="password" placeholder="Password" onChange={this.changePassword} autocomplete="new-password" required />
-            <Input type="password" placeholder="Confirm password" onChange={this.changeConfirmPassword} autocomplete="new-password" required />
-            <Buttons>
-              <OutlinedButton onClick={this.close}>Cancel</OutlinedButton>
-              <Button>Create user</Button>
-            </Buttons>
-          </Form>
-        </Content>
-      </Container>
+      <ModalOverlay>
+        <Container>
+          <Content>
+            <Title>Create new user</Title>
+            <Form onSubmit={this.createUser}>
+              <Input type="username" placeholder="Username" onChange={this.changeUsername} required />
+              <Input type="password" placeholder="Password" onChange={this.changePassword} autocomplete="new-password" required />
+              <Input type="password" placeholder="Confirm password" onChange={this.changeConfirmPassword} autocomplete="new-password" required />
+              <Buttons>
+                <OutlinedButton onClick={this.close}>Cancel</OutlinedButton>
+                <Button>Create user</Button>
+              </Buttons>
+            </Form>
+          </Content>
+        </Container>
+      </ModalOverlay>
     );
   }
 }
