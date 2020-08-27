@@ -66,7 +66,7 @@ class UserListItem extends React.PureComponent {
       { withCredentials: true }
     ).then(_ => {
       this.props.userDeleteCallback();
-      this.hideConfirmationModal()
+      this.hideConfirmationModal();
     });
   }
 
@@ -81,7 +81,7 @@ class UserListItem extends React.PureComponent {
         <Username>{this.props.user.username}</Username>
         {role}
         {
-          this.props.user.id != this.props.currentUser.id && !checkIfAdmin(this.props.user) &&
+          this.props.user.id !== this.props.currentUser.id && !checkIfAdmin(this.props.user) &&
           <DeleteButton onClick={this.showConfirmationModal}>delete</DeleteButton>
         }
         {this.state.renderConfirmationModal &&

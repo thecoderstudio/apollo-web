@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import OutlinedButton from '../buttons/OutlinedButton';
 import Button from '../buttons/Button';
 import { browserPreferredTheme } from '../../theme';
-import Card from '../Card'
+import Card from '../Card';
 import ModalOverlay from '../modals/ModalOverlay';
 
 const propTypes = {
@@ -18,7 +18,7 @@ const propTypes = {
 const defaultProps = {
   confimationButtonColor: browserPreferredTheme.primary,
   confirmationButtonText: 'confirm'
-}
+};
 
 const Content = styled.div`
   display: grid;
