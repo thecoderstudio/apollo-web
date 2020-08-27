@@ -9,7 +9,7 @@ import Notification from '../../../src/components/notifications/Notification';
 
 const mockStore = configureStore([]);
 
-function getComponentUnrendered(store, id, message, ttl=null, severity='info') {
+function getComponentTags(store, id, message, ttl=null, severity='info') {
   return (
     <Provider store={store}>
       <Notification id={id} message={message} theme={darkTheme} timeToLiveInSeconds={ttl} severity={severity} />
@@ -18,7 +18,7 @@ function getComponentUnrendered(store, id, message, ttl=null, severity='info') {
 }
 
 function getComponent(store, id, message, ttl=null, severity='info') {
-  return renderer.create(getComponentUnrendered(store, id, message, ttl, severity));
+  return renderer.create(getComponentTags(store, id, message, ttl, severity));
 }
 
 describe('notification', () => {
@@ -59,9 +59,9 @@ describe('notification', () => {
   it("correctly updates TTL", async () => {
     const component = getComponent(store, 0, 'test', null); 
     let tree = component.toJSON();
-    component.update(getComponentUnrendered(store, 0, 'test', 1));
+    component.update(getComponentTags(store, 0, 'test', 1));
     tree = component.toJSON();
-    component.update(getComponentUnrendered(store, 0, 'test', null));
+    component.update(getComponentTags(store, 0, 'test', null));
     tree = component.toJSON();
 
     await waitForExpect(() => {
