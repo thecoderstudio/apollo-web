@@ -5,7 +5,7 @@ import { Terminal as XTerm } from 'xterm';
 import { AttachAddon } from 'xterm-addon-attach';
 import { FitAddon } from 'xterm-addon-fit';
 import chalk from 'chalk';
-import { handleError } from '../actions/error';
+import { handleError } from '../../actions/error';
 
 const propTypes = {
   agent: PropTypes.object.isRequired
