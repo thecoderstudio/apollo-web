@@ -53,7 +53,7 @@ const StyledText = styled.p`
 
 function ConnectionState(props) {
   const connectionStateColor = getConnectionStateColor(props.connectionState, props.theme);
-
+  console.log(props);
   return (
     <Container className={props.className}>
       <Indicator connectionStateColor={connectionStateColor} />
