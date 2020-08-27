@@ -52,8 +52,13 @@ class Notification extends React.PureComponent {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.timeToLiveInSeconds === this.props.timeToLiveInSeconds ||
-        this.props.timeToLiveInSeconds === null) {
+    if (prevProps.timeToLiveInSeconds === this.props.timeToLiveInSeconds) {
+      return;
+    }
+
+    clearTimeout(this.timeout);
+
+    if (this.props.timeToLiveInSeconds === null) {
       return;
     }
 
@@ -76,7 +81,7 @@ class Notification extends React.PureComponent {
   }
 
   scheduleDismiss(timeToLiveInSeconds) {
-    setTimeout(this.dismissSelf, timeToLiveInSeconds * 1000);
+    this.timeout = setTimeout(this.dismissSelf, timeToLiveInSeconds * 1000);
   }
 
   render() {

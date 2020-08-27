@@ -57,11 +57,18 @@ describe('notification', () => {
   });
 
   it("correctly updates TTL", async () => {
-    const component = getComponent(store, 0, 'test', null); 
+    const component = getComponent(store, 0, 'test', 2); 
     let tree = component.toJSON();
+    component.update(getComponentTags(store, 0, 'test', null));
+    tree = component.toJSON();
+
+    await waitForExpect(() => {
+      expect(store.dispatch).not.toHaveBeenCalledWith(dismiss(0));
+    });
+
     component.update(getComponentTags(store, 0, 'test', 1));
     tree = component.toJSON();
-    component.update(getComponentTags(store, 0, 'test', null));
+    component.update(getComponentTags(store, 0, 'test', 1, 'warning'));
     tree = component.toJSON();
 
     await waitForExpect(() => {
