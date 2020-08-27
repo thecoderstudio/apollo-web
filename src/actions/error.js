@@ -1,12 +1,12 @@
 import { store } from '../store';
-import { notify as notifyAction } from './notification';
+import { severity, notify as notifyAction } from './notification';
 
 function handleError(error, notify=true) {
   if (!notify) {
     return;
   }
 
-  store.dispatch(notifyAction(error, 'error'));
+  store.dispatch(notifyAction(error, severity.error));
 }
 
 function handleHTTPResponse(response, notify=true, allowBadRequests=false) {

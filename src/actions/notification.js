@@ -1,4 +1,9 @@
 var id = 0;
+const severity = {
+  info: 'info',
+  warning: 'warning',
+  error: 'error'
+}
 
 function notify(message, severity) {
   return {
@@ -16,4 +21,4 @@ function dismiss(notificationId) {
   };
 }
 
-export { notify, dismiss };
+export { severity, notify, dismiss };

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled, { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
-import { dismiss } from '../../actions/notification';
+import { severity, dismiss } from '../../actions/notification';
 
 const propTypes = {
   message: PropTypes.string.isRequired,
@@ -12,7 +12,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  severity: 'info',
+  severity: severity.info,
   timeToLiveInSeconds: null
 };
 
@@ -65,11 +65,11 @@ class Notification extends React.PureComponent {
     this.scheduleDismiss(this.props.timeToLiveInSeconds);
   }
 
-  getColor(severity) {
-    switch(severity) {
-      case 'warning':
+  getColor(notificationSeverity) {
+    switch(notificationSeverity) {
+      case severity.warning:
         return this.props.theme.warning;
-      case 'error':
+      case severity.error:
         return this.props.theme.error;
       default:
         return this.props.theme.accent;

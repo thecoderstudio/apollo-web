@@ -3,13 +3,13 @@ import configureStore from 'redux-mock-store';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import waitForExpect from 'wait-for-expect';
-import { dismiss } from '../../../src/actions/notification';
+import { severity as severityLevel, dismiss } from '../../../src/actions/notification';
 import { darkTheme } from '../../../src/theme';
 import Notification from '../../../src/components/notifications/Notification';
 
 const mockStore = configureStore([]);
 
-function getComponentTags(store, id, message, ttl=null, severity='info') {
+function getComponentTags(store, id, message, ttl=null, severity=severityLevel.info) {
   return (
     <Provider store={store}>
       <Notification id={id} message={message} theme={darkTheme} timeToLiveInSeconds={ttl} severity={severity} />
@@ -17,7 +17,7 @@ function getComponentTags(store, id, message, ttl=null, severity='info') {
   );
 }
 
-function getComponent(store, id, message, ttl=null, severity='info') {
+function getComponent(store, id, message, ttl=null, severity=severityLevel.info) {
   return renderer.create(getComponentTags(store, id, message, ttl, severity));
 }
 
@@ -33,10 +33,10 @@ describe('notification', () => {
     let tree = getComponent(store, 0, 'test').toJSON();
     expect(tree).toMatchSnapshot();
 
-    tree = getComponent(store, 0, 'test', null, 'warning').toJSON();
+    tree = getComponent(store, 0, 'test', null, severityLevel.warning).toJSON();
     expect(tree).toMatchSnapshot();
 
-    tree = getComponent(store, 0, 'test', null, 'error').toJSON();
+    tree = getComponent(store, 0, 'test', null, severityLevel.error).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
@@ -68,7 +68,7 @@ describe('notification', () => {
 
     component.update(getComponentTags(store, 0, 'test', 1));
     tree = component.toJSON();
-    component.update(getComponentTags(store, 0, 'test', 1, 'warning'));
+    component.update(getComponentTags(store, 0, 'test', 1, severityLevel.warning));
     tree = component.toJSON();
 
     await waitForExpect(() => {

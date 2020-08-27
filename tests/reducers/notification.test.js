@@ -1,5 +1,5 @@
 import { Map } from 'immutable';
-import { notify, dismiss } from '../../src/actions/notification';
+import { severity, notify, dismiss } from '../../src/actions/notification';
 import notificationReducer from '../../src/reducers/notification';
 
 describe("notification reducer", () => {
@@ -8,15 +8,15 @@ describe("notification reducer", () => {
   });
 
   it("should correctly handle notify action", () => {
-    const notifications = notificationReducer(undefined, notify('test', 'info'));
-    expect(notifications.get(0)).toEqual({ message: 'test', severity: 'info' });
+    const notifications = notificationReducer(undefined, notify('test', severity.info));
+    expect(notifications.get(0)).toEqual({ message: 'test', severity: severity.info });
   });
 
   it("should correctly handle dismiss action", () => {
     const notifications = new Map({
       "0": {
         message: 'test',
-        severity: 'info'
+        severity: severity.info
       }
     });
     expect(notificationReducer(notifications, dismiss("0"))).toEqual(new Map({}));

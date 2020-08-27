@@ -1,5 +1,6 @@
 import { store } from '../../src/store';
 import { handleError, handleHTTPResponse } from '../../src/actions/error';
+import { severity } from '../../src/actions/notification';
 
 describe("handleError", () => {
   it("notifies of error", () => {
@@ -8,7 +9,7 @@ describe("handleError", () => {
       type: 'NOTIFY',
       id: 0,
       message: 'test',
-      severity: 'error'
+      severity: severity.error 
     };
     handleError('test');
     expect(spy).toHaveBeenCalledWith(expectedAction);
@@ -28,7 +29,7 @@ describe("handleHTTPResponse", () => {
       type: 'NOTIFY',
       id: 1,
       message: "bad request",
-      severity: 'error'
+      severity: severity.error 
     };
     const response = { status: 400, statusText: "bad request" };
     expect(handleHTTPResponse(response)).toEqual(false);

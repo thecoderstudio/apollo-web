@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import { Map } from 'immutable';
 import waitForExpect from 'wait-for-expect';
-import { dismiss } from '../../../src/actions/notification';
+import { severity, dismiss } from '../../../src/actions/notification';
 import { darkTheme } from '../../../src/theme';
 import Notifications from '../../../src/components/notifications/Notifications';
 
@@ -40,11 +40,11 @@ describe('notifications', () => {
       notifications: new Map({
         0: {
           message: "test 1",
-          severity: 'info'
+          severity: severity.info
         },
         1: {
           message: "test 2",
-          severity: 'warning'
+          severity: severity.warning 
         }
       })
     });

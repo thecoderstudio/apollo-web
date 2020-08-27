@@ -7,7 +7,7 @@ import { ThemeProvider } from 'styled-components';
 import { store as globalStore } from '../../../src/store';
 import AgentList from '../../../src/components/agent-list/AgentList';
 import { listAgents } from '../../../src/actions/agent';
-import { notify } from '../../../src/actions/notification';
+import { severity, notify } from '../../../src/actions/notification';
 import waitForExpect from 'wait-for-expect';
 import { darkTheme } from '../../../src/theme';
 
@@ -91,7 +91,7 @@ describe('agentList', () => {
         type: 'NOTIFY',
         id: 1,
         message: "Something went wrong fetching the agent list",
-        severity: 'error'
+        severity: severity.error
       }
     );
   });
