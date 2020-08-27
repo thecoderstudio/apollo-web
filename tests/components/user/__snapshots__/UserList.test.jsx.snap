@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`user list correctly toggles create user 1`] = `
-.c10 {
+.c11 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -13,8 +13,16 @@ exports[`user list correctly toggles create user 1`] = `
   cursor: pointer;
 }
 
-.c10:hover {
+.c11:hover {
   opacity: 0.90;
+}
+
+.c11:focus {
+  outline: none;
+}
+
+.c11:active {
+  opacity: 0.80;
 }
 
 .c1 {
@@ -35,7 +43,32 @@ exports[`user list correctly toggles create user 1`] = `
   opacity: 0.90;
 }
 
-.c8 {
+.c1:focus {
+  outline: none;
+}
+
+.c1:active {
+  opacity: 0.80;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:active {
+  opacity: 0.80;
+}
+
+.c4 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c9 {
   border: none;
   border-radius: 5px;
   font-family: 'Libre Franklin',sans-serif;
@@ -44,7 +77,7 @@ exports[`user list correctly toggles create user 1`] = `
   opacity: 0.9;
 }
 
-.c4 {
+.c5 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
@@ -74,7 +107,7 @@ exports[`user list correctly toggles create user 1`] = `
   box-sizing: border-box;
 }
 
-.c5 {
+.c6 {
   height: 100%;
   max-height: 450px;
   display: grid;
@@ -85,12 +118,12 @@ exports[`user list correctly toggles create user 1`] = `
   align-items: center;
 }
 
-.c6 {
+.c7 {
   grid-row: title;
   text-align: center;
 }
 
-.c7 {
+.c8 {
   height: 95%;
   grid-row: form;
   display: grid;
@@ -98,7 +131,7 @@ exports[`user list correctly toggles create user 1`] = `
   grid-row-gap: 40px;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -109,7 +142,7 @@ exports[`user list correctly toggles create user 1`] = `
   justify-content: space-around;
 }
 
-.c9> button {
+.c10> button {
   min-width: 150px;
 }
 
@@ -134,14 +167,14 @@ exports[`user list correctly toggles create user 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     padding: 16px;
     height: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c9 {
+  .c10 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -189,52 +222,56 @@ exports[`user list correctly toggles create user 1`] = `
     <div
       className="c5"
     >
-      <h2
+      <div
         className="c6"
       >
-        Create new user
-      </h2>
-      <form
-        className="c7"
-        onSubmit={[Function]}
-      >
-        <input
-          className="c8"
-          onChange={[Function]}
-          placeholder="Username"
-          required={true}
-          type="username"
-        />
-        <input
-          className="c8"
-          onChange={[Function]}
-          placeholder="Password"
-          required={true}
-          type="password"
-        />
-        <input
-          className="c8"
-          onChange={[Function]}
-          placeholder="Confirm password"
-          required={true}
-          type="password"
-        />
-        <div
-          className="c9"
+        <h2
+          className="c7"
         >
-          <button
-            className="c1"
-            onClick={[Function]}
-          >
-            Cancel
-          </button>
-          <button
+          Create new user
+        </h2>
+        <form
+          className="c8"
+          onSubmit={[Function]}
+        >
+          <input
+            className="c9"
+            onChange={[Function]}
+            placeholder="Username"
+            required={true}
+            type="username"
+          />
+          <input
+            className="c9"
+            onChange={[Function]}
+            placeholder="Password"
+            required={true}
+            type="password"
+          />
+          <input
+            className="c9"
+            onChange={[Function]}
+            placeholder="Confirm password"
+            required={true}
+            type="password"
+          />
+          <div
             className="c10"
           >
-            Create user
-          </button>
-        </div>
-      </form>
+            <button
+              className="c1"
+              onClick={[Function]}
+            >
+              Cancel
+            </button>
+            <button
+              className="c11"
+            >
+              Create user
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>
@@ -257,6 +294,22 @@ exports[`user list correctly toggles create user 2`] = `
 
 .c1:hover {
   opacity: 0.90;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:active {
+  opacity: 0.80;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:active {
+  opacity: 0.80;
 }
 
 .c0 {
@@ -340,6 +393,22 @@ exports[`user list doesn't try to render users on error 1`] = `
   opacity: 0.90;
 }
 
+.c1:focus {
+  outline: none;
+}
+
+.c1:active {
+  opacity: 0.80;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:active {
+  opacity: 0.80;
+}
+
 .c0 {
   margin: 0px 16px;
   display: -webkit-box;
@@ -411,6 +480,22 @@ exports[`user list refreshes on create user success 1`] = `
 
 .c1:hover {
   opacity: 0.90;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:active {
+  opacity: 0.80;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:active {
+  opacity: 0.80;
 }
 
 .c4 {
@@ -512,6 +597,22 @@ exports[`user list renders correctly 1`] = `
   opacity: 0.90;
 }
 
+.c1:focus {
+  outline: none;
+}
+
+.c1:active {
+  opacity: 0.80;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:active {
+  opacity: 0.80;
+}
+
 .c0 {
   margin: 0px 16px;
   display: -webkit-box;
@@ -585,6 +686,22 @@ exports[`user list renders correctly 2`] = `
   opacity: 0.90;
 }
 
+.c1:focus {
+  outline: none;
+}
+
+.c1:active {
+  opacity: 0.80;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:active {
+  opacity: 0.80;
+}
+
 .c4 {
   min-height: 60px;
   padding: 0px 16px;
@@ -601,13 +718,52 @@ exports[`user list renders correctly 2`] = `
   margin: 0px;
 }
 
-.c6 {
+.c7 {
   float: right;
   width: 80px;
   padding: 4px;
   font-weight: bold;
   text-align: center;
   border-radius: 6px;
+}
+
+.c6 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  grid-column: logout;
+  float: right;
+  width: 100px;
+  padding: 4px;
+  border: 1px solid;
+}
+
+.c6:hover {
+  opacity: 0.90;
+}
+
+.c6:focus {
+  outline: none;
+}
+
+.c6:active {
+  opacity: 0.80;
+}
+
+.c6:focus {
+  outline: none;
+}
+
+.c6:active {
+  opacity: 0.80;
 }
 
 .c0 {
@@ -669,6 +825,12 @@ exports[`user list renders correctly 2`] = `
       >
         test
       </p>
+      <button
+        className="c6"
+        onClick={[Function]}
+      >
+        delete
+      </button>
     </div>
     <div
       className="c4"
@@ -679,7 +841,7 @@ exports[`user list renders correctly 2`] = `
         admin
       </p>
       <p
-        className="c6"
+        className="c7"
       >
         admin
       </p>

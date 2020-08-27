@@ -5,15 +5,18 @@ import waitForExpect from 'wait-for-expect';
 import UserList from '../../../src/components/user/UserList';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
+import { ThemeProvider } from 'styled-components';
+import { darkTheme } from '../../../src/theme';
 
 jest.mock('axios');
 const mockStore = configureStore([]);
 
 function getComponent(store) {
   return renderer.create(
-  <Provider store={store}>
-    <UserList />
-  </Provider>);
+    <Provider store={store}>
+        <UserList />
+    </Provider>
+  );
 }
 
 describe("user list", () => {
@@ -80,21 +83,21 @@ describe("user list", () => {
   });
 
   it("correctly toggles create user", () => {
-    const component = getComponent();
+    const component = getComponent(store);
     const root = component.root;
     root.findByType('button').props.onClick();
 
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 
-    root.instance.closeCreateUser(false);
+    root.children[0].instance.closeCreateUser(false);
 
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it("refreshes on create user success", async () => {
-    const component = getComponent();
+    const component = getComponent(store);
     const root = component.root;
 
     let tree = component.toJSON();
@@ -103,7 +106,7 @@ describe("user list", () => {
       status: 200,
       data: users
     });
-    root.instance.closeCreateUser(true);
+    root.children[0].instance.closeCreateUser(true);
 
     await waitForExpect(() => {
       expect(axios.get).toHaveBeenCalled();
