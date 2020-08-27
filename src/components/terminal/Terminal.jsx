@@ -1,19 +1,19 @@
 import React from 'react';
 import styled, { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
-import Card from '../components/Card';
 import { Terminal as XTerm } from 'xterm';
 import { AttachAddon } from 'xterm-addon-attach';
+import { FitAddon } from 'xterm-addon-fit';
 import chalk from 'chalk';
+import Card from '../../components/Card';
 
 const propTypes = {
   agent: PropTypes.object.isRequired
 };
 
-const Container = styled(Card)`
+const Container = styled.div`
   height: 100%;
-  max-height: 400px;
-  width: 700px;
+  width: 100%;
   padding: 20px;
 `;
 
@@ -47,6 +47,7 @@ export class Terminal extends React.PureComponent {
     this.onSocketError = this.onSocketError.bind(this);
     this.onSocketClose = this.onSocketClose.bind(this);
     this.write = this.write.bind(this);
+    this.fit = this.fit.bind(this);
     this.connect = this.connect.bind(this);
     this.connect();
   }
@@ -60,12 +61,15 @@ export class Terminal extends React.PureComponent {
     socket.onclose = this.onSocketClose;
 
     const attachAddon = new AttachAddon(socket);
+    this.fitAddon = new FitAddon();
     this.term.loadAddon(attachAddon);
+    this.term.loadAddon(this.fitAddon);
   }
 
   componentDidMount() {
     const styledName = this.chalk.hex(this.props.theme.primary).bold(this.props.agent.name);
     this.term.open(this.terminalRef.current);
+    this.fit();
     this.write(`Connecting to agent ${styledName}...\n\r\n`);
   }
 
@@ -85,9 +89,22 @@ export class Terminal extends React.PureComponent {
     this.term.write(text);
   }
 
+  fit() {
+    try {
+      this.fitAddon.fit();
+    } catch (e) {
+      // Ignore if required DOM parent is unavailable
+      if ("This API only accepts integers" === e.message) {
+        return;
+      }
+
+      throw e;
+    }
+  }
+
   render() {
     return (
-      <Container>
+      <Container className={this.props.className}>
         <StyledXTerm ref={this.terminalRef} data-testid="terminal" />
       </Container>
     );
@@ -95,5 +112,10 @@ export class Terminal extends React.PureComponent {
 }
 
 Terminal.propTypes = propTypes;
+
+export function openTerminal(agentId) {
+  const location = window.location;
+  window.open(`${location.protocol}//${location.host}/agent/${agentId}/shell`);
+}
 
 export default withTheme(Terminal);

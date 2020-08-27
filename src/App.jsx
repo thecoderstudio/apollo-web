@@ -6,6 +6,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import NavBar from './components/NavBar';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
+import TerminalPage from './pages/TerminalPage';
 import Admin from './pages/Admin';
 import NotFound from './pages/NotFound';
 import { darkTheme } from './theme';
@@ -45,6 +46,7 @@ function App(props) {
             {props.authenticated && <NavBar />}
             <Switch>
               <ProtectedRoute exact path='/' component={Dashboard} fallbackComponent={Login} />
+              <ProtectedRoute exact path='/agent/:agentId/shell' component={TerminalPage} fallbackComponent={NotFound} />
               <ProtectedRoute exact path='/admin' component={Admin} fallbackComponent={NotFound} role='admin' />
               <Route component={NotFound} />
             </Switch>

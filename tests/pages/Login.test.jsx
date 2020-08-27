@@ -24,9 +24,6 @@ describe('login', () => {
     store = mockStore({
       authenticated: false
     });
-    process.env = {
-      APOLLO_HTTP_URL: 'http://localhost:1234/'
-    };
     store.dispatch = jest.fn();
   });
 

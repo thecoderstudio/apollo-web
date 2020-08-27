@@ -3,7 +3,7 @@ import { LIST_AGENTS } from '../../src/actions/agent';
 
 describe("agent reducer", () => {
   it("should return empty agent list as initial state", () => {
-    expect(agentReducer(undefined, {})).toEqual([]);
+    expect(agentReducer(undefined, {})).toEqual(new Map());
   });
 
   it("should correctly handle agent listing", () => {
