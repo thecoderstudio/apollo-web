@@ -6,7 +6,7 @@ import { showAddAgentModal } from '../actions/add-agent';
 
 import Button from './buttons/Button';
 import OutlinedButton from './buttons/OutlinedButton';
-import AddAgentModal from './AddAgentModal';
+import AddAgentModal from './modals/AddAgentModal';
 
 const NavigationBar = styled.div`
   height: 50px;
@@ -36,10 +36,12 @@ class NavBar extends React.PureComponent {
     super(props);
     this.logout = this.logout.bind(this);
     this.openAddAgentModal = this.openAddAgentModal.bind(this);
+    this.state = { addingAgent: false }
   }
 
   openAddAgentModal() {
     let { dispatch } = this.props;
+    this.setState({ addingAgent: true })
     dispatch(showAddAgentModal());
   }
 
@@ -53,7 +55,7 @@ class NavBar extends React.PureComponent {
       <NavigationBar>
         <NewAgentButton id='newAgentButton' onClick={this.openAddAgentModal}>Add new agent</NewAgentButton>
         <Logout id='logoutButton' onClick={this.logout}>Logout</Logout>
-        <AddAgentModal />
+        {this.state.addingAgent && <AddAgentModal />}
       </NavigationBar>
     );
   }

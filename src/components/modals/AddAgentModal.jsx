@@ -2,18 +2,43 @@ import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import axios from 'axios';
-import Input from "./Input";
-import Modal from './Modal';
-import DescriptionButton from './buttons/DescriptionButton';
-import Button from "./buttons/Button";
-import OutlinedButton from "./buttons/OutlinedButton";
-import DropDown from "./Dropdown";
-import {Text} from "./Text";
-import { closeAddAgentModal, selectArchitecture, selectOperatingSystem } from "../actions/add-agent";
-import CopyToClipboard from "./CopyToClipboard";
-import NewAgentHandler from "../lib/NewAgentHandler";
-import LoadingButton from "./buttons/LoadingButton";
+import Input from "../Input";
+import ModalOverlay from './ModalOverlay';
+import DescriptionButton from '../buttons/DescriptionButton';
+import Button from "../buttons/Button";
+import Card from '../Card';
+import OutlinedButton from "../buttons/OutlinedButton";
+import DropDown from "../Dropdown";
+import {Text} from "../Text";
+import { closeAddAgentModal, selectArchitecture, selectOperatingSystem } from "../../actions/add-agent";
+import CopyToClipboard from "../CopyToClipboard";
+import NewAgentHandler from "../../lib/NewAgentHandler";
+import LoadingButton from "../buttons/LoadingButton";
 
+
+const StyledCard = styled(Card)`
+  display: grid;
+  grid-template-rows: [title] 50px [content] 1fr;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 600px;
+  height: auto;
+  background-color: ${props => props.theme.black}
+`;
+
+const Title = styled.h2`
+  grid-row: title;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+`;
+
+const Content = styled.div`
+  grid-row: content;
+  padding: 20px;
+`;
 
 const TwoColumnGrid = styled.div`
   display: grid;
@@ -47,7 +72,7 @@ const TextWrapper = styled(Text)`
   line-height: 75px;
 `;
 
-const StyledButton = styled(Button)`
+const StyledButton = styled(OutlinedButton)`
   width: 200px;
   height: 50px;
   margin: auto;
@@ -335,9 +360,12 @@ class AddAgentModal extends React.PureComponent {
 
   render() {
     return (
-      <Modal visible={this.props.modalVisible} title={this.state.title}>
-        {this.state.renderFunction()}
-      </Modal>
+      <ModalOverlay>
+        <StyledCard>
+          <Title>Add new agent</Title>
+          <Content>{this.state.renderFunction()}</Content>
+        </StyledCard>
+      </ModalOverlay>
     );
   }
 }
