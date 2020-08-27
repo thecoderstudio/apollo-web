@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
+import { handleHTTPResponse } from '../../actions/error';
 import media from '../../util/media';
 import Button from '../buttons/Button';
 import OutlinedButton from '../buttons/OutlinedButton';
@@ -115,7 +116,7 @@ export default class CreateUser extends React.PureComponent {
       credentials,
       { withCredentials: true }
     ).then(res => {
-      if (res.status === 201) {
+      if (handleHTTPResponse(res, true, true)) {
         this.close(true);
       }
     });
