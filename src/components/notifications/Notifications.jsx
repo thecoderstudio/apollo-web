@@ -1,8 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { CSSTransitionGroup } from 'react-transition-group';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Notification from './Notification';
+
+const propTypes = {
+  timeToLiveInSeconds: PropTypes.number
+}
+
+const defaultProps = {
+  timeToLiveInSeconds: 5
+}
 
 const Container = styled(CSSTransitionGroup)`
   display: flex;
@@ -39,16 +48,20 @@ const StyledNotification = styled(Notification)`
 
 
 function Notifications(props) {
+  console.log(props.notifications);
   return (
     <Container
         transitionName="fade"
         transitionEnterTimeout={200}
         transitionLeaveTimeout={200}>
         {props.notifications.keySeq().map((id, index) => (
-          <StyledNotification key={id} id={id} timeToLiveInSeconds={5} {...props.notifications.get(id)} />
+          <StyledNotification key={id} id={id} timeToLiveInSeconds={props.timeToLiveInSeconds} {...props.notifications.get(id)} />
         ))}
     </Container>
   );
 }
+
+Notifications.propTypes = propTypes;
+Notifications.defaultProps = defaultProps;
 
 export default connect(({ notifications }) => ({ notifications }))(Notifications);
