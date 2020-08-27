@@ -134,28 +134,6 @@ exports[`app renders correctly authenticated 1`] = `
     </div>
     <div>
       <div
-        className="c1"
-      >
-        <h3>
-          Apollo
-        </h3>
-        <div>
-          <a
-            className="c2 c3"
-            href="/"
-            onClick={[Function]}
-          >
-            Dashboard
-          </a>
-        </div>
-        <button
-          className="c4"
-          onClick={[Function]}
-        >
-          Log out
-        </button>
-      </div>
-      <div
         className="c5"
       >
         <div

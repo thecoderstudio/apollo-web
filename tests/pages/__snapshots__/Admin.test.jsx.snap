@@ -1,11 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`user list renders correctly 1`] = `
-.c2 {
-  margin: 16px;
+.c3 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
 }
 
-.c3 {
+.c3:hover {
+  opacity: 0.90;
+}
+
+.c2 {
+  margin: 0px 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c5 {
   margin-top: 16px;
 }
 
@@ -20,6 +50,12 @@ exports[`user list renders correctly 1`] = `
   padding: 8px 0px 0px;
 }
 
+@media (max-width:47.9375em) {
+  .c4 {
+    display: none;
+  }
+}
+
 <div
   className="c0"
 >
@@ -30,13 +66,29 @@ exports[`user list renders correctly 1`] = `
     className="c1"
   >
     <div>
-      <h2
+      <div
         className="c2"
       >
-        Users
-      </h2>
+        <h2>
+          Users
+        </h2>
+        <button
+          className="c3"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-plus"
+          />
+           
+          <span
+            className="c4"
+          >
+            Create User
+          </span>
+        </button>
+      </div>
       <div
-        className="c3"
+        className="c5"
       />
     </div>
   </div>
@@ -44,7 +96,25 @@ exports[`user list renders correctly 1`] = `
 `;
 
 exports[`user list renders correctly 2`] = `
-.c4 {
+.c3 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c3:hover {
+  opacity: 0.90;
+}
+
+.c6 {
   min-height: 60px;
   padding: 0px 16px;
   margin: 0px;
@@ -56,11 +126,11 @@ exports[`user list renders correctly 2`] = `
   align-items: center;
 }
 
-.c5 {
+.c7 {
   margin: 0px;
 }
 
-.c6 {
+.c8 {
   float: right;
   width: 80px;
   padding: 4px;
@@ -70,10 +140,22 @@ exports[`user list renders correctly 2`] = `
 }
 
 .c2 {
-  margin: 16px;
+  margin: 0px 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
-.c3 {
+.c5 {
   margin-top: 16px;
 }
 
@@ -88,6 +170,12 @@ exports[`user list renders correctly 2`] = `
   padding: 8px 0px 0px;
 }
 
+@media (max-width:47.9375em) {
+  .c4 {
+    display: none;
+  }
+}
+
 <div
   className="c0"
 >
@@ -98,33 +186,49 @@ exports[`user list renders correctly 2`] = `
     className="c1"
   >
     <div>
-      <h2
+      <div
         className="c2"
       >
-        Users
-      </h2>
+        <h2>
+          Users
+        </h2>
+        <button
+          className="c3"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-plus"
+          />
+           
+          <span
+            className="c4"
+          >
+            Create User
+          </span>
+        </button>
+      </div>
       <div
-        className="c3"
+        className="c5"
       >
         <div
-          className="c4"
+          className="c6"
         >
           <p
-            className="c5"
+            className="c7"
           >
             test
           </p>
         </div>
         <div
-          className="c4"
+          className="c6"
         >
           <p
-            className="c5"
+            className="c7"
           >
             admin
           </p>
           <p
-            className="c6"
+            className="c8"
           >
             admin
           </p>
