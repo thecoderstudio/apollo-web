@@ -1,12 +1,9 @@
 import React from 'react';
-import { darkTheme } from '../../src/theme';
-import { Terminal } from '../../src/components/Terminal';
 import WS from 'jest-websocket-mock';
-import Enzyme, { mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import waitForExpect from 'wait-for-expect';
-
-Enzyme.configure({ adapter: new Adapter() });
+import { mount } from 'enzyme';
+import { darkTheme } from '../../../src/theme';
+import { Terminal, openTerminal } from '../../../src/components/terminal/Terminal';
 
 const mockAgent = {
   // Fake UUID
@@ -20,22 +17,6 @@ describe('Terminal', () => {
   var termWriteSpy;
 
   beforeEach(() => {
-    process.env = {
-      APOLLO_WS_URL: 'ws://localhost:1234/'
-    };
-    Object.defineProperty(window, 'matchMedia', {
-      writable: true,
-      value: jest.fn().mockImplementation(query => ({
-        matches: false,
-        media: query,
-        onchange: null,
-        addListener: jest.fn(), // deprecated
-        removeListener: jest.fn(), // deprecated
-        addEventListener: jest.fn(),
-        removeEventListener: jest.fn(),
-        dispatchEvent: jest.fn(),
-      })),
-    });
     termWriteSpy = jest.spyOn(Terminal.prototype, 'write');
     terminal = mount(<Terminal theme={darkTheme} agent={mockAgent} />).find(Terminal).instance();
   });
@@ -70,15 +51,33 @@ describe('Terminal', () => {
     expect(server).toReceiveMessage("test");
   });
 
+  it('throw unexpected fit errors', () => {
+    terminal.fitAddon.fit = jest.fn();
+    terminal.fitAddon.fit.mockImplementation(() => {
+      throw new Error();
+    });
+    expect(() => {
+      terminal.fit();
+    }).toThrow();
+  });
+
   it('correctly handles connection closure', async () => {
     await server.connected;
     server.close();
 
-    assertConnection()
+    assertConnection();
     await waitForExpect(() => {
       expect(termWriteSpy).toHaveBeenCalledWith(terminal.chalk.hex(darkTheme.error).bold(
         "\n\r\nConnection with server is closed"
       ));
     });
   });
+});
+
+test("openTerminal opens new window", () => {
+  const location = window.location;
+  const expectedHref = `${location.protocol}//${location.host}/agent/testid/shell`;
+  global.open = jest.fn();
+  openTerminal("testid");
+  expect(global.open).toHaveBeenCalledWith(expectedHref);
 });

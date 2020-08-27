@@ -11,12 +11,6 @@ function getComponent() {
 }
 
 describe("user list", () => {
-  beforeEach(() => {
-    process.env = {
-      APOLLO_HTTP_URL: 'http://localhost:1234/'
-    };
-  });
-
   it("renders correctly", async () => {
     const users = [
       {

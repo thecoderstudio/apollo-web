@@ -2,13 +2,11 @@
 
 exports[`agentList correctly lists multiple agents 1`] = `
 .c6 {
-  margin-left: 25px;
-  margin-right: 25px;
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
 
-.c8 {
+.c7 {
   grid-column: status-indicator;
   height: 12px;
   width: 12px;
@@ -20,44 +18,63 @@ exports[`agentList correctly lists multiple agents 1`] = `
   background-color: #27AE60;
 }
 
-.c9 {
+.c8 {
   grid-column: status-text;
   position: relative;
   margin: 0;
   padding-top: 0;
-  margin-left: 25px;
+  margin-left: 15px;
   text-align: left;
   color: #27AE60;
 }
 
 .c3 {
-  display: grid;
-  grid-template-columns: [name] 1fr [connection-status] 1fr;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-radius: 8px;
   border: 1px solid white;
   height: 30px;
   line-height: 30px;
-  padding: 15px;
+  padding: 15px 30px;
   margin-top: 25px;
-  position: relative;
-}
-
-.c4 {
-  grid-column: name;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  margin: 0;
-  padding-top: 0;
-  margin-left: 25px;
 }
 
 .c5 {
-  grid-column: connection-status;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 300px;
 }
 
-.c7 {
-  float: right;
+.c4 {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c9 {
+  cursor: pointer;
+  color: #F8F8F8;
 }
 
 .c0 {
@@ -80,29 +97,23 @@ exports[`agentList correctly lists multiple agents 1`] = `
 
 @media (max-width:47.9375em) {
   .c3 {
-    grid-template-rows: [name] 1fr [connection-status] 1fr;
-    grid-template-columns: [name-and-status] 1fr;
-    height: 100px;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c4 {
-    grid-rows: name;
-    grid-column: name-and-status;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
   }
 }
 
 @media (max-width:47.9375em) {
   .c5 {
-    grid-row: connection-status;
-    grid-column: name-and-status;
+    width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
-    float: left;
+  .c4 {
+    text-align: center;
+    width: 100%;
   }
 }
 
@@ -129,17 +140,21 @@ exports[`agentList correctly lists multiple agents 1`] = `
         className="c5"
       >
         <div
-          className="c6 c7"
+          className="c6"
         >
           <div
-            className="c8"
+            className="c7"
           />
           <p
-            className="c9"
+            className="c8"
           >
             Connected
           </p>
         </div>
+        <i
+          className="c9 fas fa-terminal"
+          onClick={[Function]}
+        />
       </div>
     </li>
     <li
@@ -148,23 +163,27 @@ exports[`agentList correctly lists multiple agents 1`] = `
       <p
         className="c4"
       >
-        name
+        name2
       </p>
       <div
         className="c5"
       >
         <div
-          className="c6 c7"
+          className="c6"
         >
           <div
-            className="c8"
+            className="c7"
           />
           <p
-            className="c9"
+            className="c8"
           >
             Connected
           </p>
         </div>
+        <i
+          className="c9 fas fa-terminal"
+          onClick={[Function]}
+        />
       </div>
     </li>
   </ul>

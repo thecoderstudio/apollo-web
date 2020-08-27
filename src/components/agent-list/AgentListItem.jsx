@@ -1,83 +1,128 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import Icon from '../Icon';
 import ConnectionState from './ConnectionState';
+import { openTerminal } from '../terminal/Terminal';
+import TerminalWindow from '../terminal/TerminalWindow';
+import MobileChecker from '../../util/MobileChecker';
 import media from '../../util/media';
 
 const propTypes = {
-  agentName: PropTypes.string.isRequired,
-  connectionState: PropTypes.string.isRequired
+  agent: PropTypes.object.isRequired
 };
 
 const Container = styled.li`
-  display: grid;
-  grid-template-columns: [name] 1fr [connection-status] 1fr;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
   border-radius: 8px;
   border: 1px solid white;
 
   height: 30px;
   line-height: 30px;
-  padding: 15px;
+  padding: 15px 30px;
   margin-top: 25px;
-  position: relative;
 
   ${
     media.phone`
-      grid-template-rows: [name] 1fr [connection-status] 1fr;
-      grid-template-columns: [name-and-status] 1fr;
-      height: 100px;
+      flex-direction: column;
+      height: auto;
     `
   }
 `;
 
+const Controls = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+
+  ${
+    media.phone`
+      width: 100%;
+    `
+  }
+`;
+  
 const StyledText = styled.p`
-  grid-column: name;
+  width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  margin: 0;
-  padding-top: 0;
-  margin-left: 25px;
 
   ${
     media.phone`
-      grid-rows: name;
-      grid-column: name-and-status;
+      text-align: center;
+      width: 100%;
     `
   }
 `;
 
-const ConnectionStateContent = styled.div`
-  grid-column: connection-status;
-
-  ${
-    media.phone`
-      grid-row: connection-status;
-      grid-column: name-and-status;
-    `
-  }
+const TerminalIcon = styled(Icon)`
+  color: ${props => props.active ? props.theme.white : props.theme.inactive};
 `;
 
-const StyledConnectionState = styled(ConnectionState)`
-  float: right;
-
-  ${
-    media.phone`
-      float: left;
-    `
+export default class AgentListItem extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.openTerminal = this.openTerminal.bind(this);
+    this.createTerminal = this.createTerminal.bind(this);
+    this.closeTerminal = this.closeTerminal.bind(this);
+    this.state = {
+      connected: props.agent.connectionState === 'connected',
+      terminalOpen: false
+    };
   }
-`;
 
-export default function AgentListItem(props) {
-  return (
-    <Container>
-      <StyledText>{props.agentName}</StyledText>
-      <ConnectionStateContent>
-        <StyledConnectionState connectionState={props.connectionState} />
-      </ConnectionStateContent>
-    </Container>
-  );
+  componentDidUpdate(prevProps) {
+    if (this.props.agent.connectionState === prevProps.agent.connectionState) {
+      return;
+    }
+
+    this.setState({
+      connected: this.props.agent.connectionState === 'connected',
+    });
+  }
+
+  openTerminal() {
+    if(!this.state.connected) {
+      return;
+    }
+
+    if (new MobileChecker().isMobile ){
+      openTerminal(this.props.agent.id);
+      return;
+    }
+    this.setState({terminalOpen: true});
+  }
+
+  createTerminal() {
+      return <TerminalWindow agent={this.props.agent} onClose={this.closeTerminal} />;
+  }
+
+  closeTerminal() {
+    this.setState({terminalOpen: false});
+  }
+
+  render() {
+    let terminal;
+    if (this.state.terminalOpen) {
+      terminal = this.createTerminal();
+    }
+
+    return (
+      <Container>
+        <StyledText>{this.props.agent.name}</StyledText>
+          <Controls>
+            <ConnectionState connectionState={this.props.agent.connectionState} />
+            <TerminalIcon active={this.state.connected} onClick={this.openTerminal} className="fas fa-terminal" />
+          </Controls>
+          {terminal}
+      </Container>
+    );
+  }
 }
 
 AgentListItem.propTypes = propTypes;

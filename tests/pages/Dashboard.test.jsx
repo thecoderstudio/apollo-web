@@ -18,9 +18,6 @@ describe('dashboard', () => {
       },
       authenticated: true
     });
-    process.env = {
-      APOLLO_WS_URL: 'ws://localhost:1234/'
-    };
 
     const tree = renderer.create(
       <Provider store={store} >
