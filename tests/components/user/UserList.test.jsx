@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import axios from 'axios';
 import waitForExpect from 'wait-for-expect';
-import UserList from '../../src/components/user/UserList';
+import UserList from '../../../src/components/user/UserList';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 

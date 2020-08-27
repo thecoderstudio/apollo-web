@@ -59,6 +59,45 @@ exports[`user list item render correctly without role 1`] = `
   margin: 0px;
 }
 
+.c2 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  grid-column: logout;
+  float: right;
+  width: 100px;
+  padding: 4px;
+  border: 1px solid;
+}
+
+.c2:hover {
+  opacity: 0.90;
+}
+
+.c2:focus {
+  outline: none;
+}
+
+.c2:active {
+  opacity: 0.80;
+}
+
+.c2:focus {
+  outline: none;
+}
+
+.c2:active {
+  opacity: 0.80;
+}
+
 <div
   className="c0"
 >
@@ -67,5 +106,11 @@ exports[`user list item render correctly without role 1`] = `
   >
     test
   </p>
+  <button
+    className="c2"
+    onClick={[Function]}
+  >
+    delete
+  </button>
 </div>
 `;

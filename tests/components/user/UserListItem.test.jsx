@@ -4,8 +4,8 @@ import axios from 'axios';
 import { Provider } from 'react-redux';
 import waitForExpect from 'wait-for-expect'
 import configureStore from 'redux-mock-store';
-import UserListItem from '../../src/components/user/UserListItem';
-import { darkTheme } from '../../src/theme';
+import UserListItem from '../../../src/components/user/UserListItem';
+import { darkTheme } from '../../../src/theme';
 
 jest.mock('axios');
 const mockStore = configureStore([]);
