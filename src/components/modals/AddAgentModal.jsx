@@ -52,7 +52,7 @@ const TwoColumnGrid = styled.div`
   ${
     media.phone`
       grid-template-columns: [column-one] 100%;
-      grid-template-rows: [row-one] 250px [row-two] 250px;
+      grid-template-rows: [row-one] 1fr [row-two] 1fr;
     `
   }
 `;
@@ -65,6 +65,7 @@ const ColumnOne = styled.div`
     media.phone`
       grid-row: row-one;
       margin-right: 0px;
+      margin: 15px;
     `
   }
 `;
@@ -78,6 +79,7 @@ const ColumnTwo = styled.div`
       grid-column: column-one;
       grid-row: row-two;
       margin-left: 0px;
+      margin: 15px;
     `
   }
 `;
@@ -109,11 +111,18 @@ const StyledButton = styled(OutlinedButton)`
   display: block;
 `;
 
-const CreateAgentButtonWrapper = styled.div`
+const CreateAgentButton = styled(LoadingButton)`
   width: 200px;
   height: 50px;
   margin: auto;
   display: block;
+
+  ${
+    media.phone`
+      width: 100%;
+      margin-top: 15px;
+    `
+  }
 `;
 
 const DownloadBinaryButtonWrapper = styled.div`
@@ -165,6 +174,13 @@ const CloseOutlinedButton = styled(OutlinedButton)`
   height: 50px;
   margin: auto;
   display: block;
+
+  ${
+    media.phone`
+      width: 100%
+
+    `
+  }
 `;
 
 class AddAgentModal extends React.PureComponent {
@@ -309,11 +325,9 @@ class AddAgentModal extends React.PureComponent {
           <CloseOutlinedButton id='closeButton' onClick={this.props.onClose}>
             Close
           </CloseOutlinedButton>
-          <CreateAgentButtonWrapper>
-            <LoadingButton id='createAgentButton' loading={this.state.loading} onClick={() => this.createAgent(onclick)}>
-              Create agent
-            </LoadingButton>
-          </CreateAgentButtonWrapper>
+          <CreateAgentButton id='createAgentButton' loading={this.state.loading} onClick={() => this.createAgent(onclick)}>
+            Create agent
+          </CreateAgentButton>
         </TwoColumnGrid>
       </div>
     );

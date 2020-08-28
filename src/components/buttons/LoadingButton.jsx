@@ -37,7 +37,7 @@ const StyledButton = styled(Button)`
 class LoadingButton extends React.PureComponent {
   render() {
     return(
-      <StyledButton onClick={this.props.onClick }>
+      <StyledButton className={this.props.className} onClick={this.props.onClick }>
         {this.props.loading ? <Icon src={spinnerImg} /> : this.props.children}
       </StyledButton>
     );
