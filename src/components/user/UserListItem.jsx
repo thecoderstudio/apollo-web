@@ -1,15 +1,15 @@
 import React from 'react';
 import styled, { withTheme } from 'styled-components';
 import { connect } from 'react-redux';
-import checkIfAdmin from '../../util/admin';
 import PropTypes from 'prop-types';
 import axios from 'axios';
-import OutlinedButton from '../buttons/OutlinedButton';
+import checkIfAdmin from '../../util/admin';
 import ConfirmationModal from '../modals/ConfirmationModal';
+import Icon from '../Icon';
 
 const propTypes = {
   user: PropTypes.object.isRequired,
-  userDeleteCallback: PropTypes.func.isRequired
+  userDeleteCallback: PropTypes.func
 };
 
 const Container = styled.div`
@@ -35,12 +35,11 @@ const Tag = styled.p`
   background-color: ${props => props.theme.accent};
 `;
 
-const DeleteButton = styled(OutlinedButton)`
+const DeleteIcon = styled(Icon)`
+  color: ${props => props.theme.error};
   grid-column: logout;
   float: right;
-  width: 100px;
-  padding 4px;
-  border: 1px solid ${props => props.theme.error};
+  margin-right: 25px;
 `;
 
 class UserListItem extends React.PureComponent {
@@ -82,7 +81,7 @@ class UserListItem extends React.PureComponent {
         {role}
         {
           this.props.user.id !== this.props.currentUser.id && !checkIfAdmin(this.props.user) &&
-          <DeleteButton onClick={this.showConfirmationModal}>delete</DeleteButton>
+          <DeleteIcon onClick={this.showConfirmationModal} className="far fa-trash-alt" />
         }
         {this.state.renderConfirmationModal &&
           <ConfirmationModal

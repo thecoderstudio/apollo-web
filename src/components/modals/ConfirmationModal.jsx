@@ -17,12 +17,12 @@ const propTypes = {
 
 const defaultProps = {
   confimationButtonColor: browserPreferredTheme.primary,
-  confirmationButtonText: 'confirm'
+  confirmationButtonText: 'Confirm'
 };
 
 const Content = styled.div`
   display: grid;
-  grid-template-columns: [cancel] 1fr [delete] 1fr;
+  grid-template-columns: [cancel] 1fr [confirm] 1fr;
 `;
 
 const CancelButton = styled(OutlinedButton)`
@@ -31,7 +31,7 @@ const CancelButton = styled(OutlinedButton)`
 `;
 
 const ConfirmButton = styled(Button)`
-  grid-column: delete;
+  grid-column: confirm;
   margin: 20px;
   background-color: ${props => props.color}
 `;
@@ -67,7 +67,7 @@ export default function ConfirmationModal(props) {
         <Title>{props.title}</Title>
         <ContentWrapper>
           <Content>
-            <CancelButton onClick={props.cancelCallback}>cancel</CancelButton>
+            <CancelButton onClick={props.cancelCallback}>Cancel</CancelButton>
             <ConfirmButton color={props.confirmationButtonColor} onClick={props.confirmationCallback}>{props.confirmationButtonText}</ConfirmButton>
           </Content>
         </ContentWrapper>

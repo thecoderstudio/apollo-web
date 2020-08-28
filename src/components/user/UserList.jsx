@@ -29,7 +29,7 @@ const List = styled.div`
   }
 `;
 
-class UserList extends React.Component {
+export default class UserList extends React.PureComponent {
   constructor(props) {
     super(props);
     this.fetchUsers = this.fetchUsers.bind(this);
@@ -92,5 +92,3 @@ class UserList extends React.Component {
     );
   }
 }
-
-export default UserList;

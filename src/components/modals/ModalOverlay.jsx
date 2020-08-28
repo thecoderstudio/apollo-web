@@ -25,4 +25,3 @@ export default function ModalOverlay(props) {
 }
 
 ModalOverlay.propTypes = propTypes;
-
