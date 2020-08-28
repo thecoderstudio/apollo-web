@@ -11,7 +11,7 @@ const defaultProps = {
 }
 
 const Container = styled.div`
-  height: 100%;
+  height: 80px;
 `;
 
 const StyledInput = styled.input`

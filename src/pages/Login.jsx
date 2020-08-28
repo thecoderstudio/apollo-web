@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Formik } from 'formik';
 import axios from 'axios';
 import styled from 'styled-components';
 import Button from '../components/buttons/Button';
@@ -8,6 +9,7 @@ import Card from '../components/Card';
 import { login as loginAction } from '../actions/auth';
 import { cacheCurrentUser } from '../actions/current-user';
 import { handleHTTPResponse } from '../actions/error';
+import validateLoginCreds from '../validation/login';
 import media from '../util/media';
 import moonImg from '../images/moon_rocket.svg';
 
@@ -85,29 +87,11 @@ const SupportingImg = styled.img`
 class Login extends React.Component {
   constructor(props) {
     super(props);
-    this.handleUsernameChange = this.handleUsernameChange.bind(this);
-    this.handlePasswordChange = this.handlePasswordChange.bind(this);
     this.login = this.login.bind(this);
     this.fetchCurrentUser = this.fetchCurrentUser.bind(this);
-    this.state = { username: '', password: '' };
   }
 
-  handleUsernameChange(e) {
-    this.setState({ username: e.target.value });
-  }
-
-  handlePasswordChange(e) {
-    this.setState({ password: e.target.value });
-  }
-
-  login(e) {
-    e.preventDefault();
-
-    const credentials = {
-      username: this.state.username,
-      password: this.state.password
-    };
-
+  login(credentials) {
     axios.post(
       `${process.env.APOLLO_HTTP_URL}auth/login`,
       credentials,
@@ -147,21 +131,30 @@ class Login extends React.Component {
           <SupportingImg src={moonImg} />
           <Title>Log in to Apollo</Title>
           <StyledCard>
-            <Form onSubmit={this.login}>
-              <Input
-                type="username"
-                placeholder="Username"
-                error={this.state.usernameError}
-                onChange={this.handleUsernameChange}
-                required />
-              <Input
-                type="password"
-                placeholder="Password"
-                error={this.state.passwordError}
-                onChange={this.handlePasswordChange}
-                required />
-              <Button>Log in</Button>
-            </Form>
+            <Formik
+              initialValues={{ username: '', password: '' }}
+              validate={validateLoginCreds}
+              onSubmit={this.login}>
+              {({ values, errors, handleChange, handleSubmit }) => (
+                <Form onSubmit={handleSubmit}>
+                  <Input
+                    name="username"
+                    type="username"
+                    placeholder="Username"
+                    value={values.username}
+                    error={errors.username}
+                    onChange={handleChange} />
+                  <Input
+                    name="password"
+                    type="password"
+                    placeholder="Password"
+                    value={values.password}
+                    error={errors.password}
+                    onChange={handleChange} />
+                  <Button>Log in</Button>
+                </Form>
+              )}
+            </Formik>
           </StyledCard>
         </InnerContainer>
       </OuterContainer>
