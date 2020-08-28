@@ -39,7 +39,7 @@ const DeleteIcon = styled(Icon)`
   color: ${props => props.theme.error};
   grid-column: logout;
   float: right;
-  margin-right: 25px;
+  margin-right: 10px;
 `;
 
 class UserListItem extends React.PureComponent {
