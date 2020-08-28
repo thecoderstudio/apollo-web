@@ -2,9 +2,8 @@ import React from 'react';
 import styled, { withTheme } from 'styled-components';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import axios from 'axios';
 import checkIfAdmin from '../../util/admin';
-import ConfirmationModal from '../modals/ConfirmationModal';
+import DeleteUser from '../user/DeleteUser';
 import Icon from '../Icon';
 
 const propTypes = {
@@ -44,7 +43,6 @@ const DeleteIcon = styled(Icon)`
 class UserListItem extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.deleteUser = this.deleteUser.bind(this);
     this.hideConfirmationModal = this.hideConfirmationModal.bind(this);
     this.showConfirmationModal = this.showConfirmationModal.bind(this);
     this.state = { renderConfirmationModal: false };
@@ -56,16 +54,6 @@ class UserListItem extends React.PureComponent {
 
   hideConfirmationModal() {
     this.setState({ renderConfirmationModal: false });
-  }
-
-  deleteUser() {
-    axios.delete(
-      `${process.env.APOLLO_HTTP_URL}user/${this.props.user.id}`,
-      { withCredentials: true }
-    ).then(_ => {
-      this.props.userDeleteCallback();
-      this.hideConfirmationModal();
-    });
   }
 
   render() {
@@ -83,12 +71,9 @@ class UserListItem extends React.PureComponent {
           <DeleteIcon onClick={this.showConfirmationModal} className="far fa-trash-alt" />
         }
         {this.state.renderConfirmationModal &&
-          <ConfirmationModal
-            title={`Are you sure you want to delete ${this.props.user.username}`}
+          <DeleteUser
             cancelCallback={this.hideConfirmationModal}
-            confirmationButtonText='Delete'
-            confirmationButtonColor={this.props.theme.error}
-            confirmationCallback={this.deleteUser}
+            user={this.props.user}
           />
         }
       </Container>
