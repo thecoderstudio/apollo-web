@@ -13,7 +13,7 @@ const NavigationBar = styled.div`
   height: 50px;
   padding: 16px;
   display: grid;
-  grid-template-columns: [rest] 1fr [new-agent] 300px [logout] 100px;
+  grid-template-columns: [logo] 200px [menu] 1fr [new-agent] 300px [logout] 100px;
   align-items: center;
 
   background-color: ${props => props.theme.lightBlack};
@@ -23,11 +23,18 @@ const StyledLink = styled(Link)`
   margin-right: 16px;
 `;
 
+const Menu = styled.div`
+  grid-column: menu;
+`;
+
+const Logo = styled.div`
+  grid-column: logo;
+`;
+
 const Logout = styled(OutlinedButton)`
   grid-column: logout;
   float: right;
   width: 100px;
-  height: 75%;
 `;
 
 const NewAgentButton = styled(Button)`
@@ -70,11 +77,11 @@ class NavBar extends React.PureComponent {
   render() {
     return (
       <NavigationBar>
-        <h3>Apollo</h3>
-        <div>
+        <Logo>Apollo</Logo>
+        <Menu>
           <StyledLink to='/'>Dashboard</StyledLink>
           {this.checkIfAdmin() && <StyledLink to='/admin'>Admin</StyledLink>}
-        </div>
+        </Menu>
         <NewAgentButton id='newAgentButton' onClick={this.openAddAgentModal}>Add new agent</NewAgentButton>
         <Logout id='logoutButton' onClick={this.logout}>Logout</Logout>
         {this.state.addingAgent && <AddAgentModal />}
