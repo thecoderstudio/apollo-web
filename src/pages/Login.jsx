@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import Button from '../components/buttons/Button';
 import Input from '../components/Input';
 import Card from '../components/Card';
+import { parseHTTPErrors } from '../util/parser';
 import { login as loginAction } from '../actions/auth';
 import { cacheCurrentUser } from '../actions/current-user';
 import { handleHTTPResponse } from '../actions/error';
@@ -104,7 +105,7 @@ class Login extends React.Component {
       .catch(error => {
         handleHTTPResponse(error.response, true, true);
         if (error.response.status === 400) {
-          setErrors({ password: error.response.data.detail });
+          setErrors(parseHTTPErrors(error.response.data, { detail: 'password' }));
         }
       });
   }

@@ -25,7 +25,11 @@ export function parseHTTPErrors(errorBody, httpToLocalMapping={}) {
   for (const [httpKey, localKey] of Object.entries(httpToLocalMapping)) {
     const error = errorBody[httpKey];
     if (error) {
-      parsed[localKey] = error.msg
+      if (typeof error === 'string') {
+        parsed[localKey] = error;
+      } else {
+        parsed[localKey] = error.msg;
+      }
     }
   }
 
