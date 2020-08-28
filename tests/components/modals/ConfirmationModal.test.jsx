@@ -8,7 +8,7 @@ import { darkTheme } from '../../../src/theme';
 
 function getComponent(props) {
   return renderer.create(
-    <Provider theme={darkTheme} store={configureStore([])({})}>
+    <Provider store={configureStore([])({})}>
       <ConfirmationModal {...props}  />
     </Provider>
   );

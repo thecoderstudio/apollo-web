@@ -20,20 +20,14 @@ function getComponent(store) {
 describe("user list", () => {
   const store = mockStore({
     currentUser: {
+      id: 'id',
       role: {
-        id: 'id',
         name: 'admin'
       }
     }
   });
 
-  beforeEach(() => {
-    process.env = {
-      APOLLO_HTTP_URL: 'http://localhost:1234/'
-    };
-  });
-
-  it("renders correctly", async () => {
+  test("renders correctly", async () => {
     const users = [
       {
         id: 'id1',

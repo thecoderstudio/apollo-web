@@ -37,7 +37,6 @@ const Tag = styled.p`
 
 const DeleteIcon = styled(Icon)`
   color: ${props => props.theme.error};
-  grid-column: logout;
   float: right;
   margin-right: 10px;
 `;
@@ -87,7 +86,7 @@ class UserListItem extends React.PureComponent {
           <ConfirmationModal
             title={`Are you sure you want to delete ${this.props.user.username}`}
             cancelCallback={this.hideConfirmationModal}
-            confirmationButtonText='delete'
+            confirmationButtonText='Delete'
             confirmationButtonColor={this.props.theme.error}
             confirmationCallback={this.deleteUser}
           />

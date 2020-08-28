@@ -28,6 +28,7 @@ describe("user list item", () => {
     }
   });
   const spy = jest.fn();
+
   it("render correctly without role", () => {
     const user = {
       username: 'test',
@@ -48,7 +49,7 @@ describe("user list item", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("correctly opens confirmation modal", async () => {
+  it("correctly deletes user", async () => {
     axios.delete.mockResolvedValue({
       status: 204
     });
@@ -68,9 +69,6 @@ describe("user list item", () => {
   });
 
   it("correctly cannot not remove user", () => {
-    axios.delete.mockResolvedValue({
-      status: 204
-    });
     const user = {
       id: 'id2',
       role: {
