@@ -8,11 +8,12 @@ import DescriptionButton from '../buttons/DescriptionButton';
 import Card from '../Card';
 import OutlinedButton from "../buttons/OutlinedButton";
 import DropDown from "../Dropdown";
-import { closeAddAgentModal, selectArchitecture, selectOperatingSystem } from "../../actions/add-agent";
+import { selectArchitecture, selectOperatingSystem } from "../../actions/add-agent";
 import CopyToClipboard from "../CopyToClipboard";
 import NewAgentHandler from "../../lib/NewAgentHandler";
 import LoadingButton from "../buttons/LoadingButton";
 import PropTypes from 'prop-types';
+import media from '../../util/media';
 
 const propTypes = {
   onClose: PropTypes.func.isRequired
@@ -25,7 +26,8 @@ const StyledCard = styled(Card)`
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   height: auto;
   background-color: ${props => props.theme.black}
 `;
@@ -46,16 +48,42 @@ const TwoColumnGrid = styled.div`
   display: grid;
   grid-template-columns: [column-one] 50% [column-two] 50%;
   margin: 20px 0px 20px 0px;
+
+  ${
+    media.phone`
+      grid-template-columns: [column-one] 100%;
+      grid-template-rows: [row-one] 250px [row-two] 250px;
+    `
+  }
 `;
 
 const ColumnOne = styled.div`
   grid-column: column-one;
   margin-right: 10px;
+
+  ${
+    media.phone`
+      grid-row: row-one;
+      margin-right: 0px;
+    `
+  }
 `;
 
 const ColumnTwo = styled.div`
   grid-column: column-two;
   margin-left: 10px;
+
+  ${
+    media.phone`
+      grid-column: column-one;
+      grid-row: row-two;
+      margin-left: 0px;
+    `
+  }
+`;
+
+const StyledDescriptionButton = styled(DescriptionButton)`
+  width: 100%;
 `;
 
 const TextAndInputFieldWrapper = styled.div`
@@ -340,14 +368,14 @@ class AddAgentModal extends React.PureComponent {
     return (
       <TwoColumnGrid>
         <ColumnOne>
-          <DescriptionButton id='directlyButton' onClick={() => this.selectStepOneDirectly(directly)} title={directly}>
+          <StyledDescriptionButton id='directlyButton' onClick={() => this.selectStepOneDirectly(directly)} title={directly}>
           You have the correct permissions to download the binary directly on the target machine.
-          </DescriptionButton>
+          </StyledDescriptionButton>
         </ColumnOne>
         <ColumnTwo>
-          <DescriptionButton id='manualButton' onClick={() => this.selectStepOneManual(manual)} title={manual}>
+          <StyledDescriptionButton id='manualButton' onClick={() => this.selectStepOneManual(manual)} title={manual}>
             You download and upload the binary yourself.
-          </DescriptionButton>
+          </StyledDescriptionButton>
         </ColumnTwo>
       </TwoColumnGrid>
     );

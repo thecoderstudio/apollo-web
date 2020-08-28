@@ -31,7 +31,7 @@ const Description = styled.p`
 
 function DescriptionButton(props) {
   return (
-    <StyledOutlinedButton onClick={props.onClick}>
+    <StyledOutlinedButton className={props.className} onClick={props.onClick}>
       <Title>{props.title}</Title>
       <Description>{props.children}</Description>
     </StyledOutlinedButton>

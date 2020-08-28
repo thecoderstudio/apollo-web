@@ -13,7 +13,7 @@ const NavigationBar = styled.div`
   height: 50px;
   padding: 16px;
   display: grid;
-  grid-template-columns: [logo] 200px [menu] 1fr [new-agent] 300px [logout] 100px;
+  grid-template-columns: [logo] 200px [menu] 1fr [new-agent] 250px [logout] 100px;
   align-items: center;
 
   background-color: ${props => props.theme.lightBlack};
