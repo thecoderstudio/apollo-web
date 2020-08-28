@@ -1,14 +1,10 @@
+import * as Yup from 'yup';
+
 const requiredError = "Required";
 
-export default function validateLoginCreds(credentials) {
-  let errors = {}
+const loginSchema = Yup.object().shape({
+  username: Yup.string().required(requiredError),
+  password: Yup.string().required(requiredError)
+});
 
-  if (!credentials.username) {
-    errors.username = requiredError;
-  }
-  if (!credentials.password) {
-    errors.password = requiredError;
-  }
-
-  return errors
-}
+export default loginSchema;

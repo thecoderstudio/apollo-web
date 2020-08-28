@@ -9,7 +9,7 @@ import Card from '../components/Card';
 import { login as loginAction } from '../actions/auth';
 import { cacheCurrentUser } from '../actions/current-user';
 import { handleHTTPResponse } from '../actions/error';
-import validateLoginCreds from '../validation/login';
+import loginSchema from '../validation/login';
 import media from '../util/media';
 import moonImg from '../images/moon_rocket.svg';
 
@@ -137,7 +137,7 @@ class Login extends React.Component {
           <StyledCard>
             <Formik
               initialValues={{ username: '', password: '' }}
-              validate={validateLoginCreds}
+              validationSchema={loginSchema}
               onSubmit={this.login}>
               {({ values, errors, handleChange, handleSubmit }) => (
                 <Form onSubmit={handleSubmit}>
