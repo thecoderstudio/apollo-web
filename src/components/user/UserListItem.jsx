@@ -73,6 +73,7 @@ class UserListItem extends React.PureComponent {
         {this.state.renderConfirmationModal &&
           <DeleteUser
             cancelCallback={this.hideConfirmationModal}
+            userDeleteCallback={this.props.userDeleteCallback}
             user={this.props.user}
           />
         }

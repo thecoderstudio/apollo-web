@@ -39,6 +39,6 @@ class DeleteUser extends React.PureComponent {
   }
 }
 
-DeleteUser.prototype = propTypes;
+DeleteUser.propTypes = propTypes;
 
 export default withTheme(DeleteUser);
