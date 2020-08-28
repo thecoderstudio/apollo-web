@@ -5,7 +5,6 @@ import axios from 'axios';
 import Input from "../Input";
 import ModalOverlay from './ModalOverlay';
 import DescriptionButton from '../buttons/DescriptionButton';
-import Button from "../buttons/Button";
 import Card from '../Card';
 import OutlinedButton from "../buttons/OutlinedButton";
 import DropDown from "../Dropdown";

@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`create user renders correctly 1`] = `
+.c7 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c7:hover {
+  opacity: 0.90;
+}
+
+.c7:focus {
+  outline: none;
+}
+
+.c7:active {
+  opacity: 0.80;
+}
+
+.c6 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c6:hover {
+  opacity: 0.90;
+}
+
+.c6:focus {
+  outline: none;
+}
+
+.c6:active {
+  opacity: 0.80;
+}
+
+.c4 {
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+}
+
+.c0 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 450px;
+  width: 100%;
+  max-width: 400px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.c1 {
+  height: 100%;
+  max-height: 450px;
+  display: grid;
+  grid-template-rows: [title] 1fr [form ]4fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  grid-row: title;
+  text-align: center;
+}
+
+.c3 {
+  height: 95%;
+  grid-row: form;
+  display: grid;
+  grid-template-rows: auto;
+  grid-row-gap: 40px;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.c5> button {
+  min-width: 150px;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    padding: 16px;
+    height: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c5 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h2
+      className="c2"
+    >
+      Create new user
+    </h2>
+    <form
+      className="c3"
+      onSubmit={[Function]}
+    >
+      <input
+        className="c4"
+        onChange={[Function]}
+        placeholder="Username"
+        required={true}
+        type="username"
+      />
+      <input
+        className="c4"
+        onChange={[Function]}
+        placeholder="Password"
+        required={true}
+        type="password"
+      />
+      <input
+        className="c4"
+        onChange={[Function]}
+        placeholder="Confirm password"
+        required={true}
+        type="password"
+      />
+      <div
+        className="c5"
+      >
+        <button
+          className="c6"
+          onClick={[Function]}
+        >
+          Cancel
+        </button>
+        <button
+          className="c7"
+        >
+          Create user
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;

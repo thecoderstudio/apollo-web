@@ -1,21 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`copy to clipboard renders correctly 1`] = `
+.c0 {
+  grid-template-columns: [textfield] 1fr [copy] 50px;
+  display: grid;
+  height: 50px;
+}
+
+.c1 {
+  grid-column: textfield;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  padding: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c2 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  grid-column: copy;
+  height: 100%;
+}
+
+.c2:hover {
+  opacity: 0.90;
+}
+
+.c2:focus {
+  outline: none;
+}
+
+.c2:active {
+  opacity: 0.80;
+}
+
+.c3 {
+  text-align: center;
+  display: block;
+  width: 60%;
+  margin-left: 20%;
+  height: 60%;
+}
+
 <div
-  className="sc-AxirZ ieRQJI"
+  className="c0"
 >
   <div
-    className="sc-AxiKw IgNLx"
+    className="c1"
   >
     test
   </div>
   <button
-    className="sc-AxjAm sc-AxhCb kCokwV"
+    className="c2"
     id="copyToClipboardButton"
     onClick={[Function]}
   >
     <img
-      className="sc-AxhUy hLpOXZ"
+      className="c3"
       src={[Function]}
     />
   </button>

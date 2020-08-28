@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import configureStore from 'redux-mock-store';
 import waitForExpect from 'wait-for-expect';
 import { Provider } from 'react-redux';
@@ -12,7 +13,9 @@ const mockStore = configureStore([]);
 function getComponent(store) {
   return renderer.create(
     <Provider store={store}>
-      <NavBar />
+      <BrowserRouter>
+        <NavBar />
+      </BrowserRouter>
     </Provider>
   );
 }
@@ -28,6 +31,7 @@ describe('login', () => {
         selectedArchitecture: 'amd64',
         selectedOperatingSystem: 'linux'
       },
+      currentUser: {}
     });
     spy = jest.spyOn(store, 'dispatch');
   });
@@ -56,5 +60,18 @@ describe('login', () => {
     await waitForExpect(() => {
       expect(spy).toHaveBeenCalledWith(showAddAgentModalAction());
     });
+  });
+
+  it("render admin link for admins", () => {
+    store = mockStore({
+      currentUser: {
+        username: 'admin',
+        role: {
+          name: 'admin'
+        }
+      }
+    });
+    let tree = getComponent(store).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

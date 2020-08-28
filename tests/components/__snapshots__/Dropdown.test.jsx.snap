@@ -1,24 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdown opens dropdown correctly 1`] = `
+.c0 {
+  padding: 15px;
+  width: 200px;
+}
+
+.c1 {
+  border: none;
+  border-radius: 5px;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c3 {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  width: 230px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  z-index: 1;
+  border-radius: 4px;
+  position: fixed;
+}
+
+.c4 {
+  padding: 15px;
+}
+
+.c4:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.c2 {
+  border-color: white transparent;
+  border-style: solid;
+  float: right;
+  margin-top: 5px;
+  border-width: 7px 7px 0px 7px;
+  height: 0px;
+  width: 0px;
+  margin-left: 10px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+
 <div
-  className="sc-AxjAm kOQHwu"
+  className="c0"
 >
   <div
-    className="sc-AxirZ jnYetP"
+    className="c1"
     id="dropdown"
     onClick={[Function]}
   >
     1
     <div
-      className="sc-AxhUy eufzPu"
+      className="c2"
     />
   </div>
   <ul
-    className="sc-AxiKw drPEUG"
+    className="c3"
   >
     <li
-      className="sc-AxhCb keVaas"
+      className="c4"
       onClick={[Function]}
     >
       2
@@ -28,24 +85,81 @@ exports[`Dropdown opens dropdown correctly 1`] = `
 `;
 
 exports[`Dropdown renders correctly 1`] = `
+.c0 {
+  padding: 15px;
+  width: 200px;
+}
+
+.c1 {
+  border: none;
+  border-radius: 5px;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c3 {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  width: 230px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  z-index: 1;
+  border-radius: 4px;
+  position: fixed;
+}
+
+.c4 {
+  padding: 15px;
+}
+
+.c4:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.c2 {
+  border-color: white transparent;
+  border-style: solid;
+  float: right;
+  margin-top: 5px;
+  border-width: 7px 7px 0px 7px;
+  height: 0px;
+  width: 0px;
+  margin-left: 10px;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+
 <div
-  className="sc-AxjAm kOQHwu"
+  className="c0"
 >
   <div
-    className="sc-AxirZ jnYetP"
+    className="c1"
     id="dropdown"
     onClick={[Function]}
   >
     1
     <div
-      className="sc-AxhUy kPlGDZ"
+      className="c2"
     />
   </div>
   <ul
-    className="sc-AxiKw kvMfMt"
+    className="c3"
   >
     <li
-      className="sc-AxhCb keVaas"
+      className="c4"
       onClick={[Function]}
     >
       2

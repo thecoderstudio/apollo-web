@@ -4,9 +4,9 @@ import waitForExpect from 'wait-for-expect';
 import { Provider } from 'react-redux';
 import axios from 'axios';
 import renderer from 'react-test-renderer';
-import AddAgentModal from '../../src/components/AddAgentModal';
-import { closeAddAgentModal, } from "../../src/actions/add-agent";
-import NewAgentHandler from '../../src/lib/NewAgentHandler';
+import AddAgentModal from '../../../src/components/modals/AddAgentModal';
+import { closeAddAgentModal, } from "../../../src/actions/add-agent";
+import NewAgentHandler from '../../../src/lib/NewAgentHandler';
 
 const mockStore = configureStore([]);
 jest.mock('axios');

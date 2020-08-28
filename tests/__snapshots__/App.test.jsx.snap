@@ -1,84 +1,178 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`app renders correctly authenticated 1`] = `
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #F8F8F8;
+}
+
+.c2:hover {
+  opacity: 0.90;
+}
+
+.c1 {
+  height: 50px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: [rest] 1fr [new-agent] 300px [logout] 100px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #1B1B1B;
+}
+
+.c3 {
+  margin-right: 16px;
+}
+
+.c5 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  background-color: #4D02EE;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #4D02EE;
+  grid-column: logout;
+  float: right;
+  width: 100px;
+  height: 75%;
+}
+
+.c5:hover {
+  opacity: 0.90;
+}
+
+.c5:focus {
+  outline: none;
+}
+
+.c5:active {
+  opacity: 0.80;
+}
+
+.c4 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  background-color: #4D02EE;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  grid-column: new-agent;
+  margin-left: 25px;
+  margin-right: 25px;
+  max-width: 250px;
+}
+
+.c4:hover {
+  opacity: 0.90;
+}
+
+.c4:focus {
+  outline: none;
+}
+
+.c4:active {
+  opacity: 0.80;
+}
+
+.c7 {
+  display: grid;
+  grid-template-rows: [title] 50px [list] 1fr;
+  background-color: #1B1B1B;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.c8 {
+  grid-row: title;
+}
+
+.c9 {
+  grid-row: list;
+  list-style: none;
+  padding-left: 0;
+}
+
+.c6 {
+  grid-template-columns: [agent-listing] 1fr 1fr;
+  grid-template-rows: 1fr;
+  display: grid;
+  grid-row: 2;
+  margin: 25px;
+}
+
+.c0 {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width:47.9375em) {
+  .c6 {
+    grid-template-columns: [agent-listing] 1fr;
+  }
+}
+
 <div>
   <div
-    className="sc-fzqMAW jBnUOe"
+    className="c0"
   >
     <div
-      className="sc-fzoxKX jlZZNK"
+      className="c1"
     >
+      <h3>
+        Apollo
+      </h3>
+      <div>
+        <a
+          className="c2 c3"
+          href="/"
+          onClick={[Function]}
+        >
+          Dashboard
+        </a>
+      </div>
       <button
-        className="sc-AxjAm sc-fzoYkl dlumSS"
+        className="c4"
         id="newAgentButton"
         onClick={[Function]}
       >
         Add new agent
       </button>
       <button
-        className="sc-AxjAm sc-AxirZ sc-fzoKki bDarm"
+        className="c5"
         id="logoutButton"
         onClick={[Function]}
       >
         Logout
       </button>
+    </div>
+    <div>
       <div
-        className="sc-AxhUy dqQldz"
+        className="c6"
       >
         <div
-          className="sc-AxhCb sc-AxgMl jJKNxh"
+          className="c7"
         >
           <h2
-            className="sc-AxheI biVcmg"
+            className="c8"
           >
-            Choose installation
+            Agents
           </h2>
-          <div
-            className="sc-Axmtr ezmgWD"
-          >
-            <div
-              className="sc-fznJRM jIWmxl"
-            >
-              <div
-                className="sc-fznWqX ULKNC"
-              >
-                <button
-                  className="sc-AxjAm sc-AxirZ sc-fzoLsD iRZEIw"
-                  onClick={[Function]}
-                >
-                  <h3
-                    className="sc-fzpans jXuSvn"
-                  >
-                    Directly on target machine.
-                  </h3>
-                  <span
-                    className="sc-fzozJi sc-fzplWN dJDgft"
-                  >
-                    You have the correct permissions to download the binary directly on the target machine.
-                  </span>
-                </button>
-              </div>
-              <div
-                className="sc-fzoiQi jXGlMn"
-              >
-                <button
-                  className="sc-AxjAm sc-AxirZ sc-fzoLsD iRZEIw"
-                  onClick={[Function]}
-                >
-                  <h3
-                    className="sc-fzpans jXuSvn"
-                  >
-                    Manual upload
-                  </h3>
-                  <span
-                    className="sc-fzozJi sc-fzplWN dJDgft"
-                  >
-                    You download and upload the binary yourself.
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
+          <ul
+            className="c9"
+          />
         </div>
       </div>
     </div>
@@ -87,46 +181,170 @@ exports[`app renders correctly authenticated 1`] = `
 `;
 
 exports[`app renders correctly unauthenticated 1`] = `
+.c8 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  background-color: #4D02EE;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c8:hover {
+  opacity: 0.90;
+}
+
+.c8:focus {
+  outline: none;
+}
+
+.c8:active {
+  opacity: 0.80;
+}
+
+.c7 {
+  background: #F8F8F8;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+}
+
+.c1 {
+  height: 100%;
+  display: grid;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  display: grid;
+  justify-items: center;
+  -webkit-column-gap: 50px;
+  column-gap: 50px;
+  height: 90%;
+  max-height: 650px;
+  margin: 100px;
+  grid-template-rows: [heading] 1fr [title] 1fr [content] 4fr;
+  grid-template-columns: [img] 1fr [content] 1fr;
+}
+
+.c4 {
+  grid-row: title;
+  grid-column: content;
+  color: #02A3EE;
+}
+
+.c5 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+  width: 100%;
+  max-width: 400px;
+  height: 350px;
+  grid-row: content;
+  grid-column: content;
+  display: grid;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6 {
+  height: 75%;
+  display: grid;
+  grid-template-rows: auto;
+  grid-row-gap: 40px;
+}
+
+.c3 {
+  grid-column: img;
+  grid-row: 2 / 4;
+  width: 75%;
+  max-width: 800px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c0 {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width:47.9375em) {
+  .c2 {
+    grid-template-columns: [content] 1fr;
+    grid-template-rows: [title] 1fr [content] 4fr [footer] 1fr;
+    margin: 20px 20px 0px 20px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c5 {
+    box-shadow: none;
+    background-color: #181818;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    grid-column: 1;
+    grid-row: footer;
+    width: 100%;
+  }
+}
+
 <div>
   <div
-    className="sc-fzqMAW jBnUOe"
+    className="c0"
   >
     <div
-      className="sc-fzpkJw csegHJ"
+      className="c1"
     >
       <div
-        className="sc-fznzOf bDqSVE"
+        className="c2"
       >
         <img
-          className="sc-fzqAbL jYFClx"
+          className="c3"
           src={[Function]}
         />
         <h1
-          className="sc-fznMnq hFjLxv"
+          className="c4"
         >
           Log in to Apollo
         </h1>
         <div
-          className="sc-AxhCb sc-fzoant caqUfw"
+          className="c5"
         >
           <form
-            className="sc-fzomME jzvFsa"
+            className="c6"
             onSubmit={[Function]}
           >
             <input
-              className="sc-AxiKw ifmUuH"
+              className="c7"
               onChange={[Function]}
               placeholder="Username"
               type="username"
             />
             <input
-              className="sc-AxiKw ifmUuH"
+              className="c7"
               onChange={[Function]}
               placeholder="Password"
               type="password"
             />
             <button
-              className="sc-AxjAm glRARr"
+              className="c8"
             >
               Log in
             </button>

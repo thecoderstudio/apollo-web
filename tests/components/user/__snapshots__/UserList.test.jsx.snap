@@ -1,0 +1,745 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`user list correctly toggles create user 1`] = `
+.c10 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c10:hover {
+  opacity: 0.90;
+}
+
+.c10:focus {
+  outline: none;
+}
+
+.c10:active {
+  opacity: 0.80;
+}
+
+.c1 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:active {
+  opacity: 0.80;
+}
+
+.c8 {
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+}
+
+.c4 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 450px;
+  width: 100%;
+  max-width: 400px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.c5 {
+  height: 100%;
+  max-height: 450px;
+  display: grid;
+  grid-template-rows: [title] 1fr [form ]4fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6 {
+  grid-row: title;
+  text-align: center;
+}
+
+.c7 {
+  height: 95%;
+  grid-row: form;
+  display: grid;
+  grid-template-rows: auto;
+  grid-row-gap: 40px;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.c9> button {
+  min-width: 150px;
+}
+
+.c0 {
+  margin: 0px 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c3 {
+  margin-top: 16px;
+}
+
+@media (max-width:47.9375em) {
+  .c4 {
+    padding: 16px;
+    height: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c9 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c2 {
+    display: none;
+  }
+}
+
+<div>
+  <div
+    className="c0"
+  >
+    <h2>
+      Users
+    </h2>
+    <button
+      className="c1"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-plus"
+      />
+       
+      <span
+        className="c2"
+      >
+        Create User
+      </span>
+    </button>
+  </div>
+  <div
+    className="c3"
+  />
+  <div
+    className="c4"
+  >
+    <div
+      className="c5"
+    >
+      <h2
+        className="c6"
+      >
+        Create new user
+      </h2>
+      <form
+        className="c7"
+        onSubmit={[Function]}
+      >
+        <input
+          className="c8"
+          onChange={[Function]}
+          placeholder="Username"
+          required={true}
+          type="username"
+        />
+        <input
+          className="c8"
+          onChange={[Function]}
+          placeholder="Password"
+          required={true}
+          type="password"
+        />
+        <input
+          className="c8"
+          onChange={[Function]}
+          placeholder="Confirm password"
+          required={true}
+          type="password"
+        />
+        <div
+          className="c9"
+        >
+          <button
+            className="c1"
+            onClick={[Function]}
+          >
+            Cancel
+          </button>
+          <button
+            className="c10"
+          >
+            Create user
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`user list correctly toggles create user 2`] = `
+.c1 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:active {
+  opacity: 0.80;
+}
+
+.c0 {
+  margin: 0px 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c3 {
+  margin-top: 16px;
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+  .c2 {
+    display: none;
+  }
+}
+
+<div>
+  <div
+    className="c0"
+  >
+    <h2>
+      Users
+    </h2>
+    <button
+      className="c1"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-plus"
+      />
+       
+      <span
+        className="c2"
+      >
+        Create User
+      </span>
+    </button>
+  </div>
+  <div
+    className="c3"
+  />
+</div>
+`;
+
+exports[`user list doesn't try to render users on error 1`] = `
+.c1 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:active {
+  opacity: 0.80;
+}
+
+.c0 {
+  margin: 0px 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c3 {
+  margin-top: 16px;
+}
+
+@media (max-width:47.9375em) {
+  .c2 {
+    display: none;
+  }
+}
+
+<div>
+  <div
+    className="c0"
+  >
+    <h2>
+      Users
+    </h2>
+    <button
+      className="c1"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-plus"
+      />
+       
+      <span
+        className="c2"
+      >
+        Create User
+      </span>
+    </button>
+  </div>
+  <div
+    className="c3"
+  />
+</div>
+`;
+
+exports[`user list refreshes on create user success 1`] = `
+.c1 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:active {
+  opacity: 0.80;
+}
+
+.c4 {
+  min-height: 60px;
+  padding: 0px 16px;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  margin: 0px;
+}
+
+.c0 {
+  margin: 0px 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c3 {
+  margin-top: 16px;
+}
+
+@media (max-width:47.9375em) {
+  .c2 {
+    display: none;
+  }
+}
+
+<div>
+  <div
+    className="c0"
+  >
+    <h2>
+      Users
+    </h2>
+    <button
+      className="c1"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-plus"
+      />
+       
+      <span
+        className="c2"
+      >
+        Create User
+      </span>
+    </button>
+  </div>
+  <div
+    className="c3"
+  >
+    <div
+      className="c4"
+    >
+      <p
+        className="c5"
+      >
+        test
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`user list renders correctly 1`] = `
+.c1 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:active {
+  opacity: 0.80;
+}
+
+.c0 {
+  margin: 0px 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c3 {
+  margin-top: 16px;
+}
+
+@media (max-width:47.9375em) {
+  .c2 {
+    display: none;
+  }
+}
+
+<div>
+  <div
+    className="c0"
+  >
+    <h2>
+      Users
+    </h2>
+    <button
+      className="c1"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-plus"
+      />
+       
+      <span
+        className="c2"
+      >
+        Create User
+      </span>
+    </button>
+  </div>
+  <div
+    className="c3"
+  />
+</div>
+`;
+
+exports[`user list renders correctly 2`] = `
+.c1 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:active {
+  opacity: 0.80;
+}
+
+.c4 {
+  min-height: 60px;
+  padding: 0px 16px;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  margin: 0px;
+}
+
+.c6 {
+  float: right;
+  width: 80px;
+  padding: 4px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.c0 {
+  margin: 0px 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c3 {
+  margin-top: 16px;
+}
+
+@media (max-width:47.9375em) {
+  .c2 {
+    display: none;
+  }
+}
+
+<div>
+  <div
+    className="c0"
+  >
+    <h2>
+      Users
+    </h2>
+    <button
+      className="c1"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-plus"
+      />
+       
+      <span
+        className="c2"
+      >
+        Create User
+      </span>
+    </button>
+  </div>
+  <div
+    className="c3"
+  >
+    <div
+      className="c4"
+    >
+      <p
+        className="c5"
+      >
+        test
+      </p>
+    </div>
+    <div
+      className="c4"
+    >
+      <p
+        className="c5"
+      >
+        admin
+      </p>
+      <p
+        className="c6"
+      >
+        admin
+      </p>
+    </div>
+  </div>
+</div>
+`;

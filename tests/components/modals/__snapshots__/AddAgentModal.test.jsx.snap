@@ -1,0 +1,2292 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`addAgentModal check for empty agent name 1`] = `
+.c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c8 {
+  padding: 15px;
+  width: 200px;
+}
+
+.c9 {
+  border: none;
+  border-radius: 5px;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c11 {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  width: 230px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  z-index: 1;
+  border-radius: 4px;
+  position: fixed;
+}
+
+.c12 {
+  padding: 15px;
+}
+
+.c12:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.c10 {
+  border-color: white transparent;
+  border-style: solid;
+  float: right;
+  margin-top: 5px;
+  border-width: 7px 7px 0px 7px;
+  height: 0px;
+  width: 0px;
+  margin-left: 10px;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.c16 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c16:hover {
+  opacity: 0.90;
+}
+
+.c16:focus {
+  outline: none;
+}
+
+.c16:active {
+  opacity: 0.80;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: [title] 50px [content] 1fr;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 600px;
+  height: auto;
+}
+
+.c2 {
+  grid-row: title;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c3 {
+  grid-row: content;
+  padding: 20px;
+}
+
+.c13 {
+  display: grid;
+  grid-template-columns: [column-one] 50% [column-two] 50%;
+  margin: 20px 0px 20px 0px;
+}
+
+.c4 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: [text] 60% [dropdown] 40%;
+  height: 80px;
+}
+
+.c6 {
+  grid-column: dropdown;
+}
+
+.c5 {
+  font-size: 1rem;
+  grid-column: text;
+  line-height: 75px;
+}
+
+.c15 {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c7 {
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+  font-family: 'B612',sans-serif;
+  font-weight: 600;
+  width: 200px;
+  padding: 15px;
+  margin: 15px;
+  border: 1px solid;
+}
+
+.c7:focus {
+  outline: none;
+  border: 1px solid;
+}
+
+.c14 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c14:hover {
+  opacity: 0.90;
+}
+
+.c14:focus {
+  outline: none;
+}
+
+.c14:active {
+  opacity: 0.80;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h2
+      className="c2"
+    >
+      Add new agent
+    </h2>
+    <div
+      className="c3"
+    >
+      <div>
+        <div
+          className="c4"
+        >
+          <span
+            className="c5"
+          >
+            Agent name
+          </span>
+          <div
+            className="c6"
+          >
+            <input
+              className="c7"
+              onChange={[Function]}
+              placeholder="007"
+            />
+          </div>
+        </div>
+        <div
+          className="c4"
+        >
+          <span
+            className="c5"
+          >
+            Operating system
+          </span>
+          <div
+            className="c6"
+          >
+            <div
+              className="c8"
+            >
+              <div
+                className="c9"
+                id="dropdown"
+                onClick={[Function]}
+              >
+                linux
+                <div
+                  className="c10"
+                />
+              </div>
+              <ul
+                className="c11"
+              >
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  darwin
+                </li>
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  freebsd
+                </li>
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  openbsd
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c4"
+        >
+          <span
+            className="c5"
+          >
+            Architecture
+          </span>
+          <div
+            className="c6"
+          >
+            <div
+              className="c8"
+            >
+              <div
+                className="c9"
+                id="dropdown"
+                onClick={[Function]}
+              >
+                amd64
+                <div
+                  className="c10"
+                />
+              </div>
+              <ul
+                className="c11"
+              >
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  arm64
+                </li>
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  arm
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c13"
+        >
+          <button
+            className="c14"
+            id="closeButton"
+            onClick={[Function]}
+          >
+            Close
+          </button>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16"
+              onClick={[Function]}
+            >
+              Create agent
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`addAgentModal closes modal correctly 1`] = `
+.c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c6 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  display: grid;
+  grid-template-rows: [title] 50px [description] 1fr;
+  padding: 20px;
+  min-height: 160px;
+}
+
+.c6:hover {
+  opacity: 0.90;
+}
+
+.c6:focus {
+  outline: none;
+}
+
+.c6:active {
+  opacity: 0.80;
+}
+
+.c7 {
+  grid-row: title;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c8 {
+  font-size: 0.75rem;
+  grid-row: description;
+  padding: 10px;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: [title] 50px [content] 1fr;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 600px;
+  height: auto;
+}
+
+.c2 {
+  grid-row: title;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c3 {
+  grid-row: content;
+  padding: 20px;
+}
+
+.c4 {
+  display: grid;
+  grid-template-columns: [column-one] 50% [column-two] 50%;
+  margin: 20px 0px 20px 0px;
+}
+
+.c5 {
+  grid-column: column-one;
+  margin-right: 10px;
+}
+
+.c9 {
+  grid-column: column-two;
+  margin-left: 10px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h2
+      className="c2"
+    >
+      Add new agent
+    </h2>
+    <div
+      className="c3"
+    >
+      <div
+        className="c4"
+      >
+        <div
+          className="c5"
+        >
+          <button
+            className="c6"
+            onClick={[Function]}
+          >
+            <h3
+              className="c7"
+            >
+              Directly on target machine.
+            </h3>
+            <span
+              className="c8"
+            >
+              You have the correct permissions to download the binary directly on the target machine.
+            </span>
+          </button>
+        </div>
+        <div
+          className="c9"
+        >
+          <button
+            className="c6"
+            onClick={[Function]}
+          >
+            <h3
+              className="c7"
+            >
+              Manual upload
+            </h3>
+            <span
+              className="c8"
+            >
+              You download and upload the binary yourself.
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`addAgentModal creates agent 1`] = `
+.c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c7 {
+  grid-template-columns: [textfield] 1fr [copy] 50px;
+  display: grid;
+  height: 50px;
+}
+
+.c8 {
+  grid-column: textfield;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  padding: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c9 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  grid-column: copy;
+  height: 100%;
+}
+
+.c9:hover {
+  opacity: 0.90;
+}
+
+.c9:focus {
+  outline: none;
+}
+
+.c9:active {
+  opacity: 0.80;
+}
+
+.c10 {
+  text-align: center;
+  display: block;
+  width: 60%;
+  margin-left: 20%;
+  height: 60%;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: [title] 50px [content] 1fr;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 600px;
+  height: auto;
+}
+
+.c2 {
+  grid-row: title;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c3 {
+  grid-row: content;
+  padding: 20px;
+}
+
+.c4 {
+  display: grid;
+  grid-template-rows: [description] 1fr [commands] 1fr [button] 1fr;
+}
+
+.c6 {
+  grid-row: commands;
+  margin-bottom: 20px;
+}
+
+.c11 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+  grid-row: button;
+  margin-top: 20px;
+}
+
+.c11:hover {
+  opacity: 0.90;
+}
+
+.c11:focus {
+  outline: none;
+}
+
+.c11:active {
+  opacity: 0.80;
+}
+
+.c5 {
+  font-size: 1rem;
+  grid-row: description;
+  margin: 20px 0px 20px 0px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h2
+      className="c2"
+    >
+      Add new agent
+    </h2>
+    <div
+      className="c3"
+    >
+      <div
+        className="c4"
+      >
+        <span
+          className="c5"
+        >
+          Copy and run the command on the target machine to download run the client.
+        </span>
+        <div
+          className="c6"
+        >
+          <div
+            className="c7"
+          >
+            <div
+              className="c8"
+            >
+              curl http://localhost:1970/agent/download?target_os=linux&target_arch=amd64 && chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=test --secret=test --host=localhost:1970
+            </div>
+            <button
+              className="c9"
+              id="copyToClipboardButton"
+              onClick={[Function]}
+            >
+              <img
+                className="c10"
+                src={[Function]}
+              />
+            </button>
+          </div>
+        </div>
+        <button
+          className="c11"
+          id="closeButton"
+          onClick={[Function]}
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`addAgentModal creates agent incorrect name error 1`] = `
+.c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c8 {
+  padding: 15px;
+  width: 200px;
+}
+
+.c9 {
+  border: none;
+  border-radius: 5px;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c11 {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  width: 230px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  z-index: 1;
+  border-radius: 4px;
+  position: fixed;
+}
+
+.c12 {
+  padding: 15px;
+}
+
+.c12:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.c10 {
+  border-color: white transparent;
+  border-style: solid;
+  float: right;
+  margin-top: 5px;
+  border-width: 7px 7px 0px 7px;
+  height: 0px;
+  width: 0px;
+  margin-left: 10px;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.c16 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c16:hover {
+  opacity: 0.90;
+}
+
+.c16:focus {
+  outline: none;
+}
+
+.c16:active {
+  opacity: 0.80;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: [title] 50px [content] 1fr;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 600px;
+  height: auto;
+}
+
+.c2 {
+  grid-row: title;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c3 {
+  grid-row: content;
+  padding: 20px;
+}
+
+.c13 {
+  display: grid;
+  grid-template-columns: [column-one] 50% [column-two] 50%;
+  margin: 20px 0px 20px 0px;
+}
+
+.c4 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: [text] 60% [dropdown] 40%;
+  height: 80px;
+}
+
+.c6 {
+  grid-column: dropdown;
+}
+
+.c5 {
+  font-size: 1rem;
+  grid-column: text;
+  line-height: 75px;
+}
+
+.c15 {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c7 {
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+  font-family: 'B612',sans-serif;
+  font-weight: 600;
+  width: 200px;
+  padding: 15px;
+  margin: 15px;
+  border: 1px solid;
+}
+
+.c7:focus {
+  outline: none;
+  border: 1px solid;
+}
+
+.c14 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c14:hover {
+  opacity: 0.90;
+}
+
+.c14:focus {
+  outline: none;
+}
+
+.c14:active {
+  opacity: 0.80;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h2
+      className="c2"
+    >
+      Add new agent
+    </h2>
+    <div
+      className="c3"
+    >
+      <div>
+        <div
+          className="c4"
+        >
+          <span
+            className="c5"
+          >
+            Agent name
+          </span>
+          <div
+            className="c6"
+          >
+            <input
+              className="c7"
+              onChange={[Function]}
+              placeholder="007"
+            />
+          </div>
+        </div>
+        <div
+          className="c4"
+        >
+          <span
+            className="c5"
+          >
+            Operating system
+          </span>
+          <div
+            className="c6"
+          >
+            <div
+              className="c8"
+            >
+              <div
+                className="c9"
+                id="dropdown"
+                onClick={[Function]}
+              >
+                linux
+                <div
+                  className="c10"
+                />
+              </div>
+              <ul
+                className="c11"
+              >
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  darwin
+                </li>
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  freebsd
+                </li>
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  openbsd
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c4"
+        >
+          <span
+            className="c5"
+          >
+            Architecture
+          </span>
+          <div
+            className="c6"
+          >
+            <div
+              className="c8"
+            >
+              <div
+                className="c9"
+                id="dropdown"
+                onClick={[Function]}
+              >
+                amd64
+                <div
+                  className="c10"
+                />
+              </div>
+              <ul
+                className="c11"
+              >
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  arm64
+                </li>
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  arm
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c13"
+        >
+          <button
+            className="c14"
+            id="closeButton"
+            onClick={[Function]}
+          >
+            Close
+          </button>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16"
+              onClick={[Function]}
+            >
+              Create agent
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`addAgentModal creates agent incorrect name error 2`] = `
+.c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c8 {
+  padding: 15px;
+  width: 200px;
+}
+
+.c9 {
+  border: none;
+  border-radius: 5px;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c11 {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  width: 230px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  z-index: 1;
+  border-radius: 4px;
+  position: fixed;
+}
+
+.c12 {
+  padding: 15px;
+}
+
+.c12:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.c10 {
+  border-color: white transparent;
+  border-style: solid;
+  float: right;
+  margin-top: 5px;
+  border-width: 7px 7px 0px 7px;
+  height: 0px;
+  width: 0px;
+  margin-left: 10px;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.c16 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c16:hover {
+  opacity: 0.90;
+}
+
+.c16:focus {
+  outline: none;
+}
+
+.c16:active {
+  opacity: 0.80;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: [title] 50px [content] 1fr;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 600px;
+  height: auto;
+}
+
+.c2 {
+  grid-row: title;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c3 {
+  grid-row: content;
+  padding: 20px;
+}
+
+.c13 {
+  display: grid;
+  grid-template-columns: [column-one] 50% [column-two] 50%;
+  margin: 20px 0px 20px 0px;
+}
+
+.c4 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: [text] 60% [dropdown] 40%;
+  height: 80px;
+}
+
+.c6 {
+  grid-column: dropdown;
+}
+
+.c5 {
+  font-size: 1rem;
+  grid-column: text;
+  line-height: 75px;
+}
+
+.c15 {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c7 {
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+  font-family: 'B612',sans-serif;
+  font-weight: 600;
+  width: 200px;
+  padding: 15px;
+  margin: 15px;
+  border: 1px solid;
+}
+
+.c7:focus {
+  outline: none;
+  border: 1px solid;
+}
+
+.c14 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c14:hover {
+  opacity: 0.90;
+}
+
+.c14:focus {
+  outline: none;
+}
+
+.c14:active {
+  opacity: 0.80;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h2
+      className="c2"
+    >
+      Add new agent
+    </h2>
+    <div
+      className="c3"
+    >
+      <div>
+        <div
+          className="c4"
+        >
+          <span
+            className="c5"
+          >
+            Agent name
+          </span>
+          <div
+            className="c6"
+          >
+            <input
+              className="c7"
+              onChange={[Function]}
+              placeholder="007"
+            />
+          </div>
+        </div>
+        <div
+          className="c4"
+        >
+          <span
+            className="c5"
+          >
+            Operating system
+          </span>
+          <div
+            className="c6"
+          >
+            <div
+              className="c8"
+            >
+              <div
+                className="c9"
+                id="dropdown"
+                onClick={[Function]}
+              >
+                linux
+                <div
+                  className="c10"
+                />
+              </div>
+              <ul
+                className="c11"
+              >
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  darwin
+                </li>
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  freebsd
+                </li>
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  openbsd
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c4"
+        >
+          <span
+            className="c5"
+          >
+            Architecture
+          </span>
+          <div
+            className="c6"
+          >
+            <div
+              className="c8"
+            >
+              <div
+                className="c9"
+                id="dropdown"
+                onClick={[Function]}
+              >
+                amd64
+                <div
+                  className="c10"
+                />
+              </div>
+              <ul
+                className="c11"
+              >
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  arm64
+                </li>
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  arm
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c13"
+        >
+          <button
+            className="c14"
+            id="closeButton"
+            onClick={[Function]}
+          >
+            Close
+          </button>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16"
+              onClick={[Function]}
+            >
+              Create agent
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`addAgentModal renders correctly 1`] = `
+.c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c6 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  display: grid;
+  grid-template-rows: [title] 50px [description] 1fr;
+  padding: 20px;
+  min-height: 160px;
+}
+
+.c6:hover {
+  opacity: 0.90;
+}
+
+.c6:focus {
+  outline: none;
+}
+
+.c6:active {
+  opacity: 0.80;
+}
+
+.c7 {
+  grid-row: title;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c8 {
+  font-size: 0.75rem;
+  grid-row: description;
+  padding: 10px;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: [title] 50px [content] 1fr;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 600px;
+  height: auto;
+}
+
+.c2 {
+  grid-row: title;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c3 {
+  grid-row: content;
+  padding: 20px;
+}
+
+.c4 {
+  display: grid;
+  grid-template-columns: [column-one] 50% [column-two] 50%;
+  margin: 20px 0px 20px 0px;
+}
+
+.c5 {
+  grid-column: column-one;
+  margin-right: 10px;
+}
+
+.c9 {
+  grid-column: column-two;
+  margin-left: 10px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h2
+      className="c2"
+    >
+      Add new agent
+    </h2>
+    <div
+      className="c3"
+    >
+      <div
+        className="c4"
+      >
+        <div
+          className="c5"
+        >
+          <button
+            className="c6"
+            onClick={[Function]}
+          >
+            <h3
+              className="c7"
+            >
+              Directly on target machine.
+            </h3>
+            <span
+              className="c8"
+            >
+              You have the correct permissions to download the binary directly on the target machine.
+            </span>
+          </button>
+        </div>
+        <div
+          className="c9"
+        >
+          <button
+            className="c6"
+            onClick={[Function]}
+          >
+            <h3
+              className="c7"
+            >
+              Manual upload
+            </h3>
+            <span
+              className="c8"
+            >
+              You download and upload the binary yourself.
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`addAgentModal selects directly correctly 1`] = `
+.c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c8 {
+  padding: 15px;
+  width: 200px;
+}
+
+.c9 {
+  border: none;
+  border-radius: 5px;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c11 {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  width: 230px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  z-index: 1;
+  border-radius: 4px;
+  position: fixed;
+}
+
+.c12 {
+  padding: 15px;
+}
+
+.c12:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.c10 {
+  border-color: white transparent;
+  border-style: solid;
+  float: right;
+  margin-top: 5px;
+  border-width: 7px 7px 0px 7px;
+  height: 0px;
+  width: 0px;
+  margin-left: 10px;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.c16 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c16:hover {
+  opacity: 0.90;
+}
+
+.c16:focus {
+  outline: none;
+}
+
+.c16:active {
+  opacity: 0.80;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: [title] 50px [content] 1fr;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 600px;
+  height: auto;
+}
+
+.c2 {
+  grid-row: title;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c3 {
+  grid-row: content;
+  padding: 20px;
+}
+
+.c13 {
+  display: grid;
+  grid-template-columns: [column-one] 50% [column-two] 50%;
+  margin: 20px 0px 20px 0px;
+}
+
+.c4 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: [text] 60% [dropdown] 40%;
+  height: 80px;
+}
+
+.c6 {
+  grid-column: dropdown;
+}
+
+.c5 {
+  font-size: 1rem;
+  grid-column: text;
+  line-height: 75px;
+}
+
+.c15 {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c7 {
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+  font-family: 'B612',sans-serif;
+  font-weight: 600;
+  width: 200px;
+  padding: 15px;
+  margin: 15px;
+  border: 1px solid transparent;
+}
+
+.c7:focus {
+  outline: none;
+  border: 1px solid;
+}
+
+.c14 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c14:hover {
+  opacity: 0.90;
+}
+
+.c14:focus {
+  outline: none;
+}
+
+.c14:active {
+  opacity: 0.80;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h2
+      className="c2"
+    >
+      Add new agent
+    </h2>
+    <div
+      className="c3"
+    >
+      <div>
+        <div
+          className="c4"
+        >
+          <span
+            className="c5"
+          >
+            Agent name
+          </span>
+          <div
+            className="c6"
+          >
+            <input
+              className="c7"
+              onChange={[Function]}
+              placeholder="007"
+            />
+          </div>
+        </div>
+        <div
+          className="c4"
+        >
+          <span
+            className="c5"
+          >
+            Operating system
+          </span>
+          <div
+            className="c6"
+          >
+            <div
+              className="c8"
+            >
+              <div
+                className="c9"
+                id="dropdown"
+                onClick={[Function]}
+              >
+                linux
+                <div
+                  className="c10"
+                />
+              </div>
+              <ul
+                className="c11"
+              >
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  darwin
+                </li>
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  freebsd
+                </li>
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  openbsd
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c4"
+        >
+          <span
+            className="c5"
+          >
+            Architecture
+          </span>
+          <div
+            className="c6"
+          >
+            <div
+              className="c8"
+            >
+              <div
+                className="c9"
+                id="dropdown"
+                onClick={[Function]}
+              >
+                amd64
+                <div
+                  className="c10"
+                />
+              </div>
+              <ul
+                className="c11"
+              >
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  arm64
+                </li>
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  arm
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c13"
+        >
+          <button
+            className="c14"
+            id="closeButton"
+            onClick={[Function]}
+          >
+            Close
+          </button>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16"
+              onClick={[Function]}
+            >
+              Create agent
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`addAgentModal selects manual correctly 1`] = `
+.c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c8 {
+  padding: 15px;
+  width: 200px;
+}
+
+.c9 {
+  border: none;
+  border-radius: 5px;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c11 {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  width: 230px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  z-index: 1;
+  border-radius: 4px;
+  position: fixed;
+}
+
+.c12 {
+  padding: 15px;
+}
+
+.c12:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.c10 {
+  border-color: white transparent;
+  border-style: solid;
+  float: right;
+  margin-top: 5px;
+  border-width: 7px 7px 0px 7px;
+  height: 0px;
+  width: 0px;
+  margin-left: 10px;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.c16 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c16:hover {
+  opacity: 0.90;
+}
+
+.c16:focus {
+  outline: none;
+}
+
+.c16:active {
+  opacity: 0.80;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: [title] 50px [content] 1fr;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 600px;
+  height: auto;
+}
+
+.c2 {
+  grid-row: title;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c3 {
+  grid-row: content;
+  padding: 20px;
+}
+
+.c13 {
+  display: grid;
+  grid-template-columns: [column-one] 50% [column-two] 50%;
+  margin: 20px 0px 20px 0px;
+}
+
+.c4 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: [text] 60% [dropdown] 40%;
+  height: 80px;
+}
+
+.c6 {
+  grid-column: dropdown;
+}
+
+.c5 {
+  font-size: 1rem;
+  grid-column: text;
+  line-height: 75px;
+}
+
+.c15 {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c7 {
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+  font-family: 'B612',sans-serif;
+  font-weight: 600;
+  width: 200px;
+  padding: 15px;
+  margin: 15px;
+  border: 1px solid transparent;
+}
+
+.c7:focus {
+  outline: none;
+  border: 1px solid;
+}
+
+.c14 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c14:hover {
+  opacity: 0.90;
+}
+
+.c14:focus {
+  outline: none;
+}
+
+.c14:active {
+  opacity: 0.80;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h2
+      className="c2"
+    >
+      Add new agent
+    </h2>
+    <div
+      className="c3"
+    >
+      <div>
+        <div
+          className="c4"
+        >
+          <span
+            className="c5"
+          >
+            Agent name
+          </span>
+          <div
+            className="c6"
+          >
+            <input
+              className="c7"
+              onChange={[Function]}
+              placeholder="007"
+            />
+          </div>
+        </div>
+        <div
+          className="c4"
+        >
+          <span
+            className="c5"
+          >
+            Operating system
+          </span>
+          <div
+            className="c6"
+          >
+            <div
+              className="c8"
+            >
+              <div
+                className="c9"
+                id="dropdown"
+                onClick={[Function]}
+              >
+                linux
+                <div
+                  className="c10"
+                />
+              </div>
+              <ul
+                className="c11"
+              >
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  darwin
+                </li>
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  freebsd
+                </li>
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  openbsd
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c4"
+        >
+          <span
+            className="c5"
+          >
+            Architecture
+          </span>
+          <div
+            className="c6"
+          >
+            <div
+              className="c8"
+            >
+              <div
+                className="c9"
+                id="dropdown"
+                onClick={[Function]}
+              >
+                amd64
+                <div
+                  className="c10"
+                />
+              </div>
+              <ul
+                className="c11"
+              >
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  arm64
+                </li>
+                <li
+                  className="c12"
+                  onClick={[Function]}
+                >
+                  arm
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c13"
+        >
+          <button
+            className="c14"
+            id="closeButton"
+            onClick={[Function]}
+          >
+            Close
+          </button>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16"
+              onClick={[Function]}
+            >
+              Create agent
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

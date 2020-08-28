@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`connectionState Gets correct color 1`] = `
+.c0 {
+  grid-column: status-text;
+  position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 15px;
+  text-align: left;
+}
+
+<p
+  className="c0"
+>
+  Blanko
+</p>
+`;
+
+exports[`connectionState Gets correct color 2`] = `
+.c0 {
+  grid-column: status-text;
+  position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 15px;
+  text-align: left;
+  color: #C0392B;
+}
+
+<p
+  className="c0"
+>
+  Disconnected
+</p>
+`;
+
+exports[`connectionState Gets correct color 3`] = `
+.c0 {
+  grid-column: status-text;
+  position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 15px;
+  text-align: left;
+  color: #F39C12;
+}
+
+<p
+  className="c0"
+>
+  Connecting
+</p>
+`;
+
+exports[`connectionState Gets correct color 4`] = `
+.c0 {
+  grid-column: status-text;
+  position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 15px;
+  text-align: left;
+  color: #27AE60;
+}
+
+<p
+  className="c0"
+>
+  Connected
+</p>
+`;
+
+exports[`connectionState renders correctly 1`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c1 {
+  grid-column: status-indicator;
+  height: 12px;
+  width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  float: right;
+  text-align: left;
+  color: #27AE60;
+  background-color: #27AE60;
+}
+
+.c2 {
+  grid-column: status-text;
+  position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 15px;
+  text-align: left;
+  color: #27AE60;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  />
+  <p
+    className="c2"
+  >
+    Connected
+  </p>
+</div>
+`;

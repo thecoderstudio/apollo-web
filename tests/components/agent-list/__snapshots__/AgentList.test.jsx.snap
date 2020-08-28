@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`agentList correctly lists multiple agents 1`] = `
+.c6 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c7 {
+  grid-column: status-indicator;
+  height: 12px;
+  width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  float: right;
+  text-align: left;
+  color: #27AE60;
+  background-color: #27AE60;
+}
+
+.c8 {
+  grid-column: status-text;
+  position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 15px;
+  text-align: left;
+  color: #27AE60;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid white;
+  height: 30px;
+  line-height: 30px;
+  padding: 15px 30px;
+  margin-top: 25px;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.c4 {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c9 {
+  cursor: pointer;
+  color: #F8F8F8;
+}
+
+.c0 {
+  display: grid;
+  grid-template-rows: [title] 50px [list] 1fr;
+  background-color: #1B1B1B;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.c1 {
+  grid-row: title;
+}
+
+.c2 {
+  grid-row: list;
+  list-style: none;
+  padding-left: 0;
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c5 {
+    width: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c4 {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+<div
+  className="c0"
+>
+  <h2
+    className="c1"
+  >
+    Agents
+  </h2>
+  <ul
+    className="c2"
+  >
+    <li
+      className="c3"
+    >
+      <p
+        className="c4"
+      >
+        name
+      </p>
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        >
+          <div
+            className="c7"
+          />
+          <p
+            className="c8"
+          >
+            Connected
+          </p>
+        </div>
+        <i
+          className="c9 fas fa-terminal"
+          onClick={[Function]}
+        />
+      </div>
+    </li>
+    <li
+      className="c3"
+    >
+      <p
+        className="c4"
+      >
+        name2
+      </p>
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        >
+          <div
+            className="c7"
+          />
+          <p
+            className="c8"
+          >
+            Connected
+          </p>
+        </div>
+        <i
+          className="c9 fas fa-terminal"
+          onClick={[Function]}
+        />
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`agentList renders correctly 1`] = `
+.c0 {
+  display: grid;
+  grid-template-rows: [title] 50px [list] 1fr;
+  background-color: #1B1B1B;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.c1 {
+  grid-row: title;
+}
+
+.c2 {
+  grid-row: list;
+  list-style: none;
+  padding-left: 0;
+}
+
+<div
+  className="c0"
+>
+  <h2
+    className="c1"
+  >
+    Agents
+  </h2>
+  <ul
+    className="c2"
+  />
+</div>
+`;

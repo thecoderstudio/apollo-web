@@ -3,24 +3,31 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { logout as logoutAction } from '../actions/auth';
 import { showAddAgentModal } from '../actions/add-agent';
-
 import Button from './buttons/Button';
 import OutlinedButton from './buttons/OutlinedButton';
 import AddAgentModal from './modals/AddAgentModal';
+import { removeCurrentUser } from '../actions/current-user';
+import Link from './Link';
 
 const NavigationBar = styled.div`
   height: 50px;
-  padding: 10px;
+  padding: 16px;
   display: grid;
   grid-template-columns: [rest] 1fr [new-agent] 300px [logout] 100px;
+  align-items: center;
 
   background-color: ${props => props.theme.lightBlack};
+`;
+
+const StyledLink = styled(Link)`
+  margin-right: 16px;
 `;
 
 const Logout = styled(OutlinedButton)`
   grid-column: logout;
   float: right;
   width: 100px;
+  height: 75%;
 `;
 
 const NewAgentButton = styled(Button)`
@@ -37,6 +44,7 @@ class NavBar extends React.PureComponent {
     this.logout = this.logout.bind(this);
     this.openAddAgentModal = this.openAddAgentModal.bind(this);
     this.state = { addingAgent: false }
+    this.checkIfAdmin = this.checkIfAdmin.bind(this);
   }
 
   openAddAgentModal() {
@@ -48,11 +56,25 @@ class NavBar extends React.PureComponent {
   logout() {
     let { dispatch } = this.props;
     dispatch(logoutAction());
+    dispatch(removeCurrentUser());
+  }
+
+  checkIfAdmin() {
+    if (this.props.currentUser.role) {
+      return this.props.currentUser.role.name === 'admin';
+    }
+
+    return false;
   }
 
   render() {
     return (
       <NavigationBar>
+        <h3>Apollo</h3>
+        <div>
+          <StyledLink to='/'>Dashboard</StyledLink>
+          {this.checkIfAdmin() && <StyledLink to='/admin'>Admin</StyledLink>}
+        </div>
         <NewAgentButton id='newAgentButton' onClick={this.openAddAgentModal}>Add new agent</NewAgentButton>
         <Logout id='logoutButton' onClick={this.logout}>Logout</Logout>
         {this.state.addingAgent && <AddAgentModal />}
@@ -61,4 +83,6 @@ class NavBar extends React.PureComponent {
   }
 }
 
-export default connect()(NavBar);
+export default connect(
+  state => ({ currentUser: state.currentUser })
+)(NavBar);

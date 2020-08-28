@@ -1,17 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DescriptionButton renders correctly 1`] = `
+.c0 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  display: grid;
+  grid-template-rows: [title] 50px [description] 1fr;
+  padding: 20px;
+  min-height: 160px;
+}
+
+.c0:hover {
+  opacity: 0.90;
+}
+
+.c0:focus {
+  outline: none;
+}
+
+.c0:active {
+  opacity: 0.80;
+}
+
+.c1 {
+  grid-row: title;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c2 {
+  font-size: 0.75rem;
+  grid-row: description;
+  padding: 10px;
+}
+
 <button
-  className="sc-AxjAm sc-AxirZ sc-AxhUy eXDOuB"
+  className="c0"
   onClick={[MockFunction]}
 >
   <h3
-    className="sc-AxgMl hbEwps"
+    className="c1"
   >
     title
   </h3>
   <span
-    className="sc-AxhCb sc-AxheI foyGWt"
+    className="c2"
   >
     <div />
   </span>

@@ -1,161 +1,353 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`login handles successful logout 1`] = `
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
+.c0 {
+  height: 50px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: [rest] 1fr [new-agent] 300px [logout] 100px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  margin-right: 16px;
+}
+
+.c4 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  grid-column: logout;
+  float: right;
+  width: 100px;
+  height: 75%;
+}
+
+.c4:hover {
+  opacity: 0.90;
+}
+
+.c4:focus {
+  outline: none;
+}
+
+.c4:active {
+  opacity: 0.80;
+}
+
+.c3 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  grid-column: new-agent;
+  margin-left: 25px;
+  margin-right: 25px;
+  max-width: 250px;
+}
+
+.c3:hover {
+  opacity: 0.90;
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:active {
+  opacity: 0.80;
+}
+
 <div
-  className="sc-fzoxKX cTwhaG"
+  className="c0"
 >
+  <h3>
+    Apollo
+  </h3>
+  <div>
+    <a
+      className="c1 c2"
+      href="/"
+      onClick={[Function]}
+    >
+      Dashboard
+    </a>
+  </div>
   <button
-    className="sc-AxjAm sc-fzoYkl jcocaT"
+    className="c3"
     id="newAgentButton"
     onClick={[Function]}
   >
     Add new agent
   </button>
   <button
-    className="sc-AxjAm sc-AxirZ sc-fzoKki dRacWG"
+    className="c4"
     id="logoutButton"
     onClick={[Function]}
   >
     Logout
   </button>
-  <div
-    className="sc-AxhUy dUfwVg"
-  >
-    <div
-      className="sc-AxhCb sc-AxgMl jOcdKz"
+</div>
+`;
+
+exports[`login render admin link for admins 1`] = `
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
+.c0 {
+  height: 50px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: [rest] 1fr [new-agent] 300px [logout] 100px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  margin-right: 16px;
+}
+
+.c4 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  grid-column: logout;
+  float: right;
+  width: 100px;
+  height: 75%;
+}
+
+.c4:hover {
+  opacity: 0.90;
+}
+
+.c4:focus {
+  outline: none;
+}
+
+.c4:active {
+  opacity: 0.80;
+}
+
+.c3 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  grid-column: new-agent;
+  margin-left: 25px;
+  margin-right: 25px;
+  max-width: 250px;
+}
+
+.c3:hover {
+  opacity: 0.90;
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:active {
+  opacity: 0.80;
+}
+
+<div
+  className="c0"
+>
+  <h3>
+    Apollo
+  </h3>
+  <div>
+    <a
+      className="c1 c2"
+      href="/"
+      onClick={[Function]}
     >
-      <h2
-        className="sc-AxheI biVcmg"
-      >
-        Choose installation
-      </h2>
-      <div
-        className="sc-Axmtr ezmgWD"
-      >
-        <div
-          className="sc-fznJRM jIWmxl"
-        >
-          <div
-            className="sc-fznWqX ULKNC"
-          >
-            <button
-              className="sc-AxjAm sc-AxirZ sc-fzoLsD bCkLQg"
-              onClick={[Function]}
-            >
-              <h3
-                className="sc-fzpans jXuSvn"
-              >
-                Directly on target machine.
-              </h3>
-              <span
-                className="sc-fzozJi sc-fzplWN dJDgft"
-              >
-                You have the correct permissions to download the binary directly on the target machine.
-              </span>
-            </button>
-          </div>
-          <div
-            className="sc-fzoiQi jXGlMn"
-          >
-            <button
-              className="sc-AxjAm sc-AxirZ sc-fzoLsD bCkLQg"
-              onClick={[Function]}
-            >
-              <h3
-                className="sc-fzpans jXuSvn"
-              >
-                Manual upload
-              </h3>
-              <span
-                className="sc-fzozJi sc-fzplWN dJDgft"
-              >
-                You download and upload the binary yourself.
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+      Dashboard
+    </a>
+    <a
+      className="c1 c2"
+      href="/admin"
+      onClick={[Function]}
+    >
+      Admin
+    </a>
   </div>
+  <button
+    className="c3"
+    id="newAgentButton"
+    onClick={[Function]}
+  >
+    Add new agent
+  </button>
+  <button
+    className="c4"
+    id="logoutButton"
+    onClick={[Function]}
+  >
+    Logout
+  </button>
 </div>
 `;
 
 exports[`login renders correctly 1`] = `
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
+.c0 {
+  height: 50px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: [rest] 1fr [new-agent] 300px [logout] 100px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  margin-right: 16px;
+}
+
+.c4 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  grid-column: logout;
+  float: right;
+  width: 100px;
+  height: 75%;
+}
+
+.c4:hover {
+  opacity: 0.90;
+}
+
+.c4:focus {
+  outline: none;
+}
+
+.c4:active {
+  opacity: 0.80;
+}
+
+.c3 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  grid-column: new-agent;
+  margin-left: 25px;
+  margin-right: 25px;
+  max-width: 250px;
+}
+
+.c3:hover {
+  opacity: 0.90;
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:active {
+  opacity: 0.80;
+}
+
 <div
-  className="sc-fzoxKX cTwhaG"
+  className="c0"
 >
+  <h3>
+    Apollo
+  </h3>
+  <div>
+    <a
+      className="c1 c2"
+      href="/"
+      onClick={[Function]}
+    >
+      Dashboard
+    </a>
+  </div>
   <button
-    className="sc-AxjAm sc-fzoYkl jcocaT"
+    className="c3"
     id="newAgentButton"
     onClick={[Function]}
   >
     Add new agent
   </button>
   <button
-    className="sc-AxjAm sc-AxirZ sc-fzoKki dRacWG"
+    className="c4"
     id="logoutButton"
     onClick={[Function]}
   >
     Logout
   </button>
-  <div
-    className="sc-AxhUy dUfwVg"
-  >
-    <div
-      className="sc-AxhCb sc-AxgMl jOcdKz"
-    >
-      <h2
-        className="sc-AxheI biVcmg"
-      >
-        Choose installation
-      </h2>
-      <div
-        className="sc-Axmtr ezmgWD"
-      >
-        <div
-          className="sc-fznJRM jIWmxl"
-        >
-          <div
-            className="sc-fznWqX ULKNC"
-          >
-            <button
-              className="sc-AxjAm sc-AxirZ sc-fzoLsD bCkLQg"
-              onClick={[Function]}
-            >
-              <h3
-                className="sc-fzpans jXuSvn"
-              >
-                Directly on target machine.
-              </h3>
-              <span
-                className="sc-fzozJi sc-fzplWN dJDgft"
-              >
-                You have the correct permissions to download the binary directly on the target machine.
-              </span>
-            </button>
-          </div>
-          <div
-            className="sc-fzoiQi jXGlMn"
-          >
-            <button
-              className="sc-AxjAm sc-AxirZ sc-fzoLsD bCkLQg"
-              onClick={[Function]}
-            >
-              <h3
-                className="sc-fzpans jXuSvn"
-              >
-                Manual upload
-              </h3>
-              <span
-                className="sc-fzozJi sc-fzplWN dJDgft"
-              >
-                You download and upload the binary yourself.
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 `;

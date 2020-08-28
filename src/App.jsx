@@ -1,10 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { BrowserRouter, Route, Switch} from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import ProtectedRoute from './components/ProtectedRoute';
+import NavBar from './components/NavBar';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
+import TerminalPage from './pages/TerminalPage';
+import Admin from './pages/Admin';
+import NotFound from './pages/NotFound';
 import { darkTheme } from './theme';
 
 const GlobalStyle = createGlobalStyle`
@@ -32,7 +36,6 @@ const GlobalStyle = createGlobalStyle`
 const Content = styled.div`
   height: 100%;
   width: 100%;
-  display: grid;
 `;
 
 function App(props) {
@@ -41,8 +44,12 @@ function App(props) {
       <ThemeProvider theme={darkTheme}>
         <BrowserRouter>
           <Content>
+            {props.authenticated && <NavBar />}
             <Switch>
               <ProtectedRoute exact path='/' component={Dashboard} fallbackComponent={Login} />
+              <ProtectedRoute exact path='/agent/:agentId/shell' component={TerminalPage} fallbackComponent={NotFound} />
+              <ProtectedRoute exact path='/admin' component={Admin} fallbackComponent={NotFound} role='admin' />
+              <Route component={NotFound} />
             </Switch>
             <GlobalStyle />
           </Content>
@@ -52,4 +59,6 @@ function App(props) {
   );
 }
 
-export default connect()(App);
+export default connect(
+  state => ({authenticated: state.authenticated})
+)(App);
