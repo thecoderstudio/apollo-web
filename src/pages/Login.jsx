@@ -91,16 +91,20 @@ class Login extends React.Component {
     this.fetchCurrentUser = this.fetchCurrentUser.bind(this);
   }
 
-  login(credentials) {
+  login(credentials, { setErrors }) {
     axios.post(
       `${process.env.APOLLO_HTTP_URL}auth/login`,
       credentials,
       { withCredentials: true }
     )
       .then(res => {
-        if (handleHTTPResponse(res, false, true)) {
-          this.props.dispatch(loginAction());
-          this.fetchCurrentUser();
+        this.props.dispatch(loginAction());
+        this.fetchCurrentUser();
+      })
+      .catch(error => {
+        handleHTTPResponse(error.response, true, true);
+        if (error.response.status === 400) {
+          setErrors({ password: error.response.data.detail });
         }
       });
   }
@@ -111,11 +115,11 @@ class Login extends React.Component {
       { withCredentials: true }
     )
       .then(res => {
-        if (handleHTTPResponse(res)) {
-          this.props.dispatch(cacheCurrentUser(res.data));
-        }
+        this.props.dispatch(cacheCurrentUser(res.data));
+      })
+      .catch(error => {
+        handleHTTPResponse(error.response);
       });
-
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
