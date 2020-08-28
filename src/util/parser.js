@@ -12,3 +12,22 @@ export function parseSnakeCaseArray(arr) {
     parseSnakeCaseObj(item)
   ));
 }
+
+export function parseHTTPErrors(errorBody, httpToLocalMapping={}) {
+  let parsed = {};
+  if (Object.keys(httpToLocalMapping).length === 0) {
+    httpToLocalMapping = Object.keys(errorBody).reduce((map, key) => {
+      map[key] = key;
+      return map;
+    }, {});
+  }
+
+  for (const [httpKey, localKey] of Object.entries(httpToLocalMapping)) {
+    const error = errorBody[httpKey];
+    if (error) {
+      parsed[localKey] = error.msg
+    }
+  }
+
+  return parsed;
+}

@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Formik } from 'formik';
 import { handleHTTPResponse } from '../../actions/error';
 import { createUserSchema } from '../../validation/user';
+import { parseHTTPErrors } from '../../util/parser';
 import media from '../../util/media';
 import Button from '../buttons/Button';
 import OutlinedButton from '../buttons/OutlinedButton';
@@ -95,9 +96,8 @@ export default class CreateUser extends React.PureComponent {
     .catch(error => {
       handleHTTPResponse(error.response, true, true);
       if (error.response.status === 400) {
-        setErrors({
-          username: error.response.data.username.msg
-        });
+        console.log(error.response.data);
+        setErrors(parseHTTPErrors(error.response.data));
       }
     });
   }
