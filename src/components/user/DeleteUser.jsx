@@ -13,7 +13,7 @@ const propTypes = {
 class DeleteUser extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.deleteUser = this.deleteUser.bind(this);
+    this.deleteUserAndClose = this.deleteUserAndClose.bind(this);
   }
 
   deleteUserAndClose() {
@@ -22,7 +22,7 @@ class DeleteUser extends React.PureComponent {
       { withCredentials: true }
     ).then(_ => {
       this.props.userDeleteCallback();
-      this.props.cancelCallback();
+      this.props.cancel();
     });
   }
 
