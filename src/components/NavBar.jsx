@@ -50,20 +50,24 @@ class NavBar extends React.PureComponent {
     super(props);
     this.logout = this.logout.bind(this);
     this.openAddAgentModal = this.openAddAgentModal.bind(this);
-    this.state = { addingAgent: false }
     this.checkIfAdmin = this.checkIfAdmin.bind(this);
+    this.closeAddAgent = this.closeAddAgent.bind(this);
+    this.state = { showAddAgent: false }
   }
 
   openAddAgentModal() {
-    let { dispatch } = this.props;
-    this.setState({ addingAgent: true })
-    dispatch(showAddAgentModal());
+    this.setState({ showAddAgent: true })
   }
 
   logout() {
     let { dispatch } = this.props;
     dispatch(logoutAction());
     dispatch(removeCurrentUser());
+  }
+
+  closeAddAgent() {
+    console.log("******");
+    this.setState({ showAddAgent: false });
   }
 
   checkIfAdmin() {
@@ -84,7 +88,7 @@ class NavBar extends React.PureComponent {
         </Menu>
         <NewAgentButton id='newAgentButton' onClick={this.openAddAgentModal}>Add new agent</NewAgentButton>
         <Logout id='logoutButton' onClick={this.logout}>Logout</Logout>
-        {this.state.addingAgent && <AddAgentModal />}
+        {this.state.showAddAgent && <AddAgentModal onClose={this.closeAddAgent} />}
       </NavigationBar>
     );
   }

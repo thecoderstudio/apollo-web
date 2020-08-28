@@ -12,7 +12,11 @@ import { closeAddAgentModal, selectArchitecture, selectOperatingSystem } from ".
 import CopyToClipboard from "../CopyToClipboard";
 import NewAgentHandler from "../../lib/NewAgentHandler";
 import LoadingButton from "../buttons/LoadingButton";
+import PropTypes from 'prop-types';
 
+const propTypes = {
+  onClose: PropTypes.func.isRequired
+}
 
 const StyledCard = styled(Card)`
   display: grid;
@@ -160,7 +164,6 @@ class AddAgentModal extends React.PureComponent {
     this.renderDirectlyOnMachineStepTwo = this.renderDirectlyOnMachineStepTwo.bind(this);
     this.renderManualUploadStepOne = this.renderManualUploadStepOne.bind(this);
     this.renderManualUploadStepTwo = this.renderManualUploadStepTwo.bind(this);
-    this.closeModal = this.closeModal.bind(this);
     this.handleAgentNameChange = this.handleAgentNameChange.bind(this);
     this.createAgent = this.createAgent.bind(this);
     this.downloadBinary = this.downloadBinary.bind(this);
@@ -213,12 +216,6 @@ class AddAgentModal extends React.PureComponent {
       .finally(_ => {
         this.setState({loading: false});
       });
-  }
-
-  closeModal() {
-    const { dispatch } = this.props;
-    dispatch(closeAddAgentModal());
-    this.setState({ renderFunction: this.renderQuestion });
   }
 
   setRenderFunction(renderFunction) {
@@ -281,7 +278,7 @@ class AddAgentModal extends React.PureComponent {
           </InputFieldWrapper>
         </TextAndInputFieldWrapper>
         <TwoColumnGrid>
-          <CloseOutlinedButton id='closeButton' onClick={this.closeModal}>
+          <CloseOutlinedButton id='closeButton' onClick={this.props.onClose}>
             Close
           </CloseOutlinedButton>
           <CreateAgentButtonWrapper>
@@ -303,7 +300,7 @@ class AddAgentModal extends React.PureComponent {
         <CommandWrapper>
           <CopyToClipboard id='copytoclip' text={command} />
         </CommandWrapper>
-        <CloseButton id='closeButton' onClick={this.closeModal}>Close</CloseButton>
+        <CloseButton id='closeButton' onClick={this.props.onClose}>Close</CloseButton>
       </ThreeRowDisplay>
     );
   }
@@ -368,9 +365,10 @@ class AddAgentModal extends React.PureComponent {
   }
 }
 
+AddAgentModal.propTypes = propTypes;
+
 export default connect(
   state => ({
-    modalVisible: state.addAgent.modalVisible,
     selectedOperatingSystem: state.addAgent.selectedOperatingSystem,
     selectedArchitecture: state.addAgent.selectedArchitecture
   })
