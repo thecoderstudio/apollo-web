@@ -2,7 +2,6 @@ import React from 'react';
 import OutlinedButton from './OutlinedButton';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { SmallText } from '../Text';
 
 const propTypes = {
   children: PropTypes.node.isRequired,
@@ -14,7 +13,7 @@ const StyledOutlinedButton = styled(OutlinedButton)`
   display: grid;
   grid-template-rows: [title] 50px [description] 1fr;
   padding: 20px;
-  min-height: 160px;
+  min-height: 180px;
 `;
 
 const Title = styled.h3`
@@ -24,9 +23,10 @@ const Title = styled.h3`
   text-align: center;
 `;
 
-const Description = styled(SmallText)`
+const Description = styled.p`
   grid-row: description;
   padding: 10px;
+  font-size: 0.85rem;
 `;
 
 function DescriptionButton(props) {

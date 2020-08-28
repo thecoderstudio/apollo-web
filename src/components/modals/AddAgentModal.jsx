@@ -8,7 +8,6 @@ import DescriptionButton from '../buttons/DescriptionButton';
 import Card from '../Card';
 import OutlinedButton from "../buttons/OutlinedButton";
 import DropDown from "../Dropdown";
-import {Text} from "../Text";
 import { closeAddAgentModal, selectArchitecture, selectOperatingSystem } from "../../actions/add-agent";
 import CopyToClipboard from "../CopyToClipboard";
 import NewAgentHandler from "../../lib/NewAgentHandler";
@@ -66,7 +65,7 @@ const InputFieldWrapper = styled.div`
   grid-column: dropdown;
 `;
 
-const TextWrapper = styled(Text)`
+const TextWrapper = styled.p`
   grid-column: text;
   line-height: 75px;
 `;
@@ -108,7 +107,7 @@ const CloseButton = styled(StyledButton)`
   margin-top: 20px;
 `;
 
-const Description = styled(Text)`
+const Description = styled.p`
   grid-row: description;
   margin: 20px 0px 20px 0px;
 `;
@@ -323,7 +322,7 @@ class AddAgentModal extends React.PureComponent {
       <div>
         <TwoColumnGrid>
           <ColumnOne>
-            <Text>Download the binary and upload it to the target machine.</Text>
+            Download the binary and upload it to the target machine.
           </ColumnOne>
           <ColumnTwo>
             <DownloadBinaryButtonWrapper>
