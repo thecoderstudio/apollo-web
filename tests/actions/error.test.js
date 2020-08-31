@@ -39,14 +39,14 @@ describe("handleHTTPResponse", () => {
   it("doesn't notify of unsuccessful response if not required", () => {
     const spy = jest.spyOn(store, 'dispatch');
     const response = { status: 400, statusText: "bad request" };
-    expect(handleHTTPResponse(response, notify=false)).toEqual(false);
+    expect(handleHTTPResponse(response, undefined, false)).toEqual(false);
     expect(spy).not.toHaveBeenCalled();
   });
 
   it("doesn't notify bad requests if allowed", () => {
     const spy = jest.spyOn(store, 'dispatch');
     const response = { status: 400, statusText: "bad request" };
-    expect(handleHTTPResponse(response, notify=true, allowBadRequests=true)).toEqual(false);
+    expect(handleHTTPResponse(response, undefined, true, true)).toEqual(false);
     expect(spy).not.toHaveBeenCalled();
   });
 

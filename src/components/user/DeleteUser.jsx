@@ -38,7 +38,7 @@ class DeleteUser extends React.PureComponent {
         title={`Are you sure you want to delete ${this.props.user.username}`}
         cancelCallback={this.props.closeFunction}
         confirmationButtonText='Delete'
-        confirmationButtonColor={this.props.theme.error}
+        confirmationBu ttonColor={this.props.theme.error}
         confirmationCallback={this.deleteUserAndClose}
     />
     );

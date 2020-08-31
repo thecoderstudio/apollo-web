@@ -58,7 +58,6 @@ exports[`user list item correctly opens modal 1`] = `
   cursor: pointer;
   grid-column: confirm;
   margin: 20px;
-  background-color: #ED3E2A;
 }
 
 .c10:hover {
@@ -177,7 +176,6 @@ exports[`user list item correctly opens modal 1`] = `
           </button>
           <button
             className="c10"
-            color="#ED3E2A"
             onClick={[Function]}
           >
             Delete
