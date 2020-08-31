@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import axios from 'axios';
 import waitForExpect from 'wait-for-expect';
+import { StatusCodes } from 'http-status-codes';
 import CreateUser from '../../../src/components/user/CreateUser';
 
 jest.mock('axios');
@@ -73,7 +74,7 @@ describe("create user", () => {
     const root = component.root;
 
     axios.post.mockResolvedValue({
-      status: 201
+      status: StatusCodes.CREATED
     });
 
     root.findByType('form').props.onSubmit({ preventDefault: jest.fn() });
@@ -91,7 +92,7 @@ describe("create user", () => {
 
     axios.post.mockImplementationOnce(() => Promise.reject({
       response: {
-        status: 400,
+        status: StatusCodes.BAD_REQUEST,
         statusText: "Bad request",
         data: {}
       }
@@ -101,7 +102,7 @@ describe("create user", () => {
 
     axios.post.mockImplementationOnce(() => Promise.reject({
       response: {
-        status: 500,
+        status: StatusCodes.INTERNAL_SERVER_ERROR,
         statusText: "Something went wrong",
         data: {}
       }

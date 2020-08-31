@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import { Formik } from 'formik';
+import { StatusCodes } from 'http-status-codes';
 import { handleHTTPResponse } from '../../actions/error';
 import { createUserSchema } from '../../validation/user';
 import { parseHTTPErrors } from '../../util/parser';
@@ -95,7 +96,7 @@ export default class CreateUser extends React.PureComponent {
     })
     .catch(error => {
       handleHTTPResponse(error.response, true, true);
-      if (error.response.status === 400) {
+      if (error.response.status === StatusCodes.BAD_REQUEST) {
         setErrors(parseHTTPErrors(error.response.data));
       }
     });

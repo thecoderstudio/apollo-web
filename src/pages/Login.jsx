@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Formik } from 'formik';
 import axios from 'axios';
 import styled from 'styled-components';
+import { StatusCodes } from 'http-status-codes';
 import Button from '../components/buttons/Button';
 import Input from '../components/Input';
 import Card from '../components/Card';
@@ -104,7 +105,7 @@ class Login extends React.Component {
       })
       .catch(error => {
         handleHTTPResponse(error.response, true, true);
-        if (error.response.status === 400) {
+        if (error.response.status === StatusCodes.BAD_REQUEST) {
           setErrors(parseHTTPErrors(error.response.data, { detail: 'password' }));
         }
       });

@@ -4,6 +4,7 @@ import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import axios from 'axios';
 import waitForExpect from 'wait-for-expect';
+import { StatusCodes } from 'http-status-codes';
 import Login from '../../src/pages/Login';
 
 const mockStore = configureStore([]);
@@ -38,10 +39,10 @@ describe('login', () => {
     const instance = root.instance;
 
     axios.post.mockResolvedValue({
-      status: 200
+      status: StatusCodes.OK 
     });
     axios.get.mockResolvedValue({
-      status: 200
+      status: StatusCodes.OK 
     });
 
     root.findByProps({ type: 'username' }).props.onChange({
@@ -70,7 +71,7 @@ describe('login', () => {
 
     axios.post.mockImplementationOnce(() => Promise.reject({
       response: {
-        status: 400,
+        status: StatusCodes.BAD_REQUEST,
         statusText: "Bad request",
         data: {}
       }
@@ -92,7 +93,7 @@ describe('login', () => {
 
     axios.post.mockImplementationOnce(() => Promise.reject({
       response: {
-        status: 500,
+        status: StatusCodes.INTERNAL_SERVER_ERROR,
         statusText: "Something went wrong",
         data: {}
       }
@@ -111,11 +112,11 @@ describe('login', () => {
     const instance = root.instance;
 
     axios.post.mockResolvedValue({
-      status: 200
+      status: StatusCodes.OK 
     });
     axios.get.mockImplementationOnce(() => Promise.reject({
       response: {
-        status: 500,
+        status: StatusCodes.INTERNAL_SERVER_ERROR,
         statusText: "Something went wrong",
         data: {}
       }
