@@ -45,16 +45,18 @@ describe('login', () => {
     });
 
     root.findByProps({ type: 'username' }).props.onChange({
-      target: {
+      currentTarget: {
+        name: 'username',
         value: 'test'
       }
     });
     root.findByProps({ type: 'password' }).props.onChange({
-      target: {
+      currentTarget: {
+        name: 'password',
         value: 'password'
       }
     });
-    root.findByType('form').props.onSubmit({ preventDefault: jest.fn() });
+    root.findByType('form').props.onSubmit();
 
     await waitForExpect(() => {
       expect(instance.props.dispatch).toHaveBeenCalled();
@@ -66,21 +68,27 @@ describe('login', () => {
     const root = component.root.findByProps({ authenticated: false });
     const instance = root.instance;
 
-    axios.post.mockResolvedValue({
-      status: 400
-    });
+    axios.post.mockImplementationOnce(() => Promise.reject({
+      response: {
+        status: 400,
+        statusText: "Bad request",
+        data: {}
+      }
+    }));
 
     root.findByProps({ type: 'username' }).props.onChange({
-      target: {
+      currentTarget: {
+        name: 'username',
         value: 'test'
       }
     });
     root.findByProps({ type: 'password' }).props.onChange({
-      target: {
+      currentTarget: {
+        name: 'password',
         value: 'password'
       }
     });
-    root.findByType('form').props.onSubmit({ preventDefault: jest.fn() });
+    root.findByType('form').props.onSubmit();
 
     await waitForExpect(() => {
       expect(instance.props.dispatch).not.toHaveBeenCalled();
@@ -95,16 +103,27 @@ describe('login', () => {
     axios.post.mockResolvedValue({
       status: 200
     });
-    axios.get.mockResolvedValue({
-      status: 500
-    });
+    axios.get.mockImplementationOnce(() => Promise.reject({
+      response: {
+        status: 500,
+        statusText: "Something went wrong",
+        data: {}
+      }
+    }));
 
-    root.findByProps({type: 'username'}).props.onChange({ target: {
-      value: 'test'
-    }});
-    root.findByProps({type: 'password'}).props.onChange({ target: {
-      value: 'password'
-    }});
+
+    root.findByProps({type: 'username'}).props.onChange({ 
+      currentTarget: {
+        name: 'username',
+        value: 'test'
+      }
+    });
+    root.findByProps({type: 'password'}).props.onChange({
+      currentTarget: {
+        name: 'password',
+        value: 'password'
+      }
+    });
     root.findByType('form').props.onSubmit({ preventDefault: jest.fn() });
 
     await waitForExpect(() => {

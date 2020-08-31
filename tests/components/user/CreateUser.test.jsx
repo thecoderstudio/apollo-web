@@ -16,10 +16,19 @@ function submitForm(root, username, password, confirmPassword) {
   const confirmPasswordInput = root.findByProps({placeholder: 'Confirm password'});
   const form = root.findByType('form');
 
-  usernameInput.props.onChange({ target: { value: username }});
-  passwordInput.props.onChange({ target: { value: password }});
-  confirmPasswordInput.props.onChange({ target: { value: confirmPassword }});
-  form.props.onSubmit({ preventDefault: jest.fn() });
+  usernameInput.props.onChange({ currentTarget: {
+    name: 'username',
+    value: username
+  }});
+  passwordInput.props.onChange({ currentTarget: {
+    name: 'password',
+    value: password
+  }});
+  confirmPasswordInput.props.onChange({ currentTarget: {
+    name: 'confirmPassword',
+    value: confirmPassword
+  }});
+  form.props.onSubmit();
 }
 
 describe("create user", () => {
@@ -80,9 +89,14 @@ describe("create user", () => {
     const component = getComponent(onClose);
     const root = component.root;
 
-    axios.post.mockResolvedValue({
-      status: 400
-    });
+    axios.post.mockImplementationOnce(() => Promise.reject({
+      response: {
+        status: 400,
+        statusText: "Bad request",
+        data: {}
+      }
+    }));
+
 
     root.findByType('form').props.onSubmit({ preventDefault: jest.fn() });
     submitForm(root, 'test', 'password', 'password');
