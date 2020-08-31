@@ -90,6 +90,16 @@ describe('login', () => {
     });
     root.findByType('form').props.onSubmit();
 
+    axios.post.mockImplementationOnce(() => Promise.reject({
+      response: {
+        status: 500,
+        statusText: "Something went wrong",
+        data: {}
+      }
+    }));
+
+    root.findByType('form').props.onSubmit();
+
     await waitForExpect(() => {
       expect(instance.props.dispatch).not.toHaveBeenCalled();
     });
@@ -124,7 +134,7 @@ describe('login', () => {
         value: 'password'
       }
     });
-    root.findByType('form').props.onSubmit({ preventDefault: jest.fn() });
+    root.findByType('form').props.onSubmit();
 
     await waitForExpect(() => {
       expect(instance.props.dispatch).toHaveBeenCalledTimes(1);
@@ -135,6 +145,7 @@ describe('login', () => {
     const component = getComponent(store);
     const root = component.root.findByProps({ authenticated: false });
     const instance = root.instance;
+    instance.componentDidUpdate();
 
     instance.props = ({ authenticated: true });
     instance.componentDidUpdate();

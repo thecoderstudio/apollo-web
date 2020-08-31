@@ -99,12 +99,10 @@ class Login extends React.Component {
       { withCredentials: true }
     )
       .then(res => {
-        console.log(res)
         this.props.dispatch(loginAction());
         this.fetchCurrentUser();
       })
       .catch(error => {
-        console.log(error)
         handleHTTPResponse(error.response, true, true);
         if (error.response.status === 400) {
           setErrors(parseHTTPErrors(error.response.data, { detail: 'password' }));

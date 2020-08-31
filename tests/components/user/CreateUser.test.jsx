@@ -97,12 +97,20 @@ describe("create user", () => {
       }
     }));
 
+    submitForm(root, 'test', 'password123', 'password123');
 
-    root.findByType('form').props.onSubmit({ preventDefault: jest.fn() });
-    submitForm(root, 'test', 'password', 'password');
+    axios.post.mockImplementationOnce(() => Promise.reject({
+      response: {
+        status: 500,
+        statusText: "Something went wrong",
+        data: {}
+      }
+    }));
+
+    submitForm(root, 'test', 'password123', 'password123');
 
     await waitForExpect(() => {
-      expect(axios.post).toHaveBeenCalled();
+      expect(axios.post).toHaveBeenCalledTimes(2);
       expect(onClose).not.toHaveBeenCalledWith(true);
     });
   });
