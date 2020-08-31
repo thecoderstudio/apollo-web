@@ -17,7 +17,7 @@ const Container = styled(CSSTransitionGroup)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
+  position: fixed;
   left: 0px;
   right: 0px;
   bottom: 32px;
@@ -53,9 +53,9 @@ function Notifications(props) {
         transitionName="fade"
         transitionEnterTimeout={200}
         transitionLeaveTimeout={200}>
-        {props.notifications.keySeq().map((id, index) => (
-          <StyledNotification key={id} id={id} timeToLiveInSeconds={props.timeToLiveInSeconds} {...props.notifications.get(id)} />
-        ))}
+      {props.notifications.keySeq().map((id, index) => (
+        <StyledNotification key={id} id={id} timeToLiveInSeconds={props.timeToLiveInSeconds} {...props.notifications.get(id)} />
+      ))}
     </Container>
   );
 }

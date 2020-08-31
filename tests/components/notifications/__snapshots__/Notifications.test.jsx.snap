@@ -13,7 +13,7 @@ exports[`notifications renders correctly empty 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   left: 0px;
   right: 0px;
   bottom: 32px;
@@ -69,7 +69,7 @@ exports[`notifications renders notifications and then dismisses them 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   left: 0px;
   right: 0px;
   bottom: 32px;
@@ -178,7 +178,7 @@ exports[`notifications renders notifications and then dismisses them 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   left: 0px;
   right: 0px;
   bottom: 32px;
