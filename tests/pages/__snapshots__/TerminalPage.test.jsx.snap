@@ -46,6 +46,7 @@ exports[`agent list item correctly renders 1`] = `
           "name": "dark",
           "primary": "#02A3EE",
           "red": "#ED3E2A",
+          "warning": "#ED852A",
           "white": "#F8F8F8",
         }
       }
@@ -111,6 +112,7 @@ exports[`agent list item correctly renders 1`] = `
                   "name": "dark",
                   "primary": "#02A3EE",
                   "red": "#ED3E2A",
+                  "warning": "#ED852A",
                   "white": "#F8F8F8",
                 }
               }

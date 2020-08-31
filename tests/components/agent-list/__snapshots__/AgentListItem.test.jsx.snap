@@ -332,6 +332,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
         "name": "dark",
         "primary": "#02A3EE",
         "red": "#ED3E2A",
+        "warning": "#ED852A",
         "white": "#F8F8F8",
       }
     }
@@ -381,6 +382,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                       "name": "dark",
                       "primary": "#02A3EE",
                       "red": "#ED3E2A",
+                      "warning": "#ED852A",
                       "white": "#F8F8F8",
                     }
                   }
@@ -456,6 +458,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                   "name": "dark",
                   "primary": "#02A3EE",
                   "red": "#ED3E2A",
+                  "warning": "#ED852A",
                   "white": "#F8F8F8",
                 }
               }
@@ -1077,6 +1080,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                                     "name": "dark",
                                     "primary": "#02A3EE",
                                     "red": "#ED3E2A",
+                                    "warning": "#ED852A",
                                     "white": "#F8F8F8",
                                   }
                                 }
@@ -1408,6 +1412,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
         "name": "dark",
         "primary": "#02A3EE",
         "red": "#ED3E2A",
+        "warning": "#ED852A",
         "white": "#F8F8F8",
       }
     }
@@ -1457,6 +1462,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
                       "name": "dark",
                       "primary": "#02A3EE",
                       "red": "#ED3E2A",
+                      "warning": "#ED852A",
                       "white": "#F8F8F8",
                     }
                   }

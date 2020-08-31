@@ -50,6 +50,25 @@ exports[`app renders correctly authenticated 1`] = `
   opacity: 0.90;
 }
 
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 32px;
+  z-index: 2;
+}
+
 .c6 {
   display: grid;
   grid-template-rows: [title] 50px [list] 1fr;
@@ -131,6 +150,9 @@ exports[`app renders correctly authenticated 1`] = `
         </div>
       </div>
     </div>
+    <span
+      className="c9"
+    />
   </div>
 </div>
 `;
@@ -151,6 +173,25 @@ exports[`app renders correctly unauthenticated 1`] = `
 
 .c8:hover {
   opacity: 0.90;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 32px;
+  z-index: 2;
 }
 
 .c7 {
@@ -299,6 +340,9 @@ exports[`app renders correctly unauthenticated 1`] = `
         </div>
       </div>
     </div>
+    <span
+      className="c9"
+    />
   </div>
 </div>
 `;
