@@ -88,7 +88,7 @@ describe('agentList', () => {
         id: 1,
         type: 'NOTIFY',
         message: "Something went wrong fetching the agent list",
-        severity: severity.error
+        severity: severity.ERROR
       }
     );
   });

@@ -7,7 +7,7 @@ function handleError(error, notify=true) {
     return;
   }
 
-  store.dispatch(notifyAction(error, severity.error));
+  store.dispatch(notifyAction(error, severity.ERROR));
 }
 
 function handleHTTPResponse(response, notify=true, allowBadRequests=false) {
