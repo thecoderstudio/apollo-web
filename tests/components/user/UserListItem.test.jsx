@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import axios from 'axios';
+import { ThemeProvider } from 'styled-components'
 import { Provider } from 'react-redux';
 import waitForExpect from 'wait-for-expect';
 import configureStore from 'redux-mock-store';
@@ -10,10 +11,12 @@ import { darkTheme } from '../../../src/theme';
 jest.mock('axios');
 const mockStore = configureStore([]);
 
-function getComponent(user, store, callback=(() => {})) {
+function getComponent(user, store) {
   return renderer.create(
     <Provider store={store}>
-        <UserListItem theme={darkTheme} user={user} userDeleteCallback={callback} />
+      <ThemeProvider theme={darkTheme}>
+        <UserListItem  user={user} userDeleteCallback={() => {}} />
+      </ThemeProvider>
     </Provider>
   );
 }
@@ -27,7 +30,6 @@ describe("user list item", () => {
       }
     }
   });
-  const spy = jest.fn();
 
   it("render correctly without role", () => {
     const user = {
@@ -49,7 +51,7 @@ describe("user list item", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("correctly calls callback", async () => {
+  it("correctly opens modal", async () => {
     axios.delete.mockResolvedValue({
       status: 204
     });
@@ -59,13 +61,10 @@ describe("user list item", () => {
         name: 'not admin'
       }
     };
-    const tree = getComponent(user, store, spy);
-    tree.root.findByType('button').props.onClick();
+    const tree = getComponent(user, store);
+    tree.root.findByType('i').props.onClick();
     tree.toJSON();
-    tree.root.findAllByType('button')[2].props.onClick();
-    await waitForExpect(() => {
-      expect(spy).toHaveBeenCalled();
-    });
+    expect(tree).toMatchSnapshot()
   });
 
   it("correctly cannot not remove user", () => {
@@ -75,7 +74,7 @@ describe("user list item", () => {
         name: 'admin'
       }
     };
-    const tree = getComponent(user, store, spy);
-    expect(tree.root.findAllByType('button').length).toBe(0);
+    const tree = getComponent(user, store);
+    expect(tree.root.findAllByType('i').length).toBe(0);
   });
 });

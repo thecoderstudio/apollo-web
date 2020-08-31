@@ -8,15 +8,16 @@ import { darkTheme } from '../../../src/theme';
 
 jest.mock('axios');
 
-function getComponent(user) {
+function getComponent(user, callback) {
+  const func = jest.fn()
   return renderer.create(
-    <Provider>
-      <DeleteUser theme={darkTheme} user={user} userDeleteCallback={callback} cancelCallback={() => {}} />
-    </Provider>
+    <DeleteUser theme={darkTheme} user={user} userDeleteCallback={callback} closeFunction={jest.fn()} />
   );
 }
 
 describe("Delete user", () => {
+  const spy = jest.fn();
+
   it("correctly deletes user", async () => {
     axios.delete.mockResolvedValue({
       status: 204
@@ -27,7 +28,7 @@ describe("Delete user", () => {
         name: 'not admin'
       }
     };
-    const tree = getComponent(user, store, spy);
+    const tree = getComponent(user, spy);
     tree.root.findAllByType('button')[1].props.onClick();
     await waitForExpect(() => {
       expect(spy).toHaveBeenCalled();
