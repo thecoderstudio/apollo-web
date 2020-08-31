@@ -1,4 +1,4 @@
-import { parseSnakeCaseArray, parseSnakeCaseObj } from '../../src/util/parser';
+import { parseSnakeCaseArray, parseSnakeCaseObj, parseHTTPErrors } from '../../src/util/parser';
 
 test('parseSnakeCaseObj', () => {
   const test = {
@@ -32,5 +32,36 @@ test('parseSnakeCaseArray', () => {
     expect(item.snake_case).not.toBeDefined();
     expect(item.snakeCase).toBe(test[index].snake_case);
     expect(item.camelCase).toBe(test[index].camelCase);
+  });
+});
+
+describe('parseHTTPErrors', () => {
+  it("parses all errors if no mapping is given", () => {
+    const unparsed = {
+      details: "Test error",
+      username: {
+        msg: "Test username error"
+      }
+    };
+    const parsed = parseHTTPErrors(unparsed);
+    expect(parsed).toMatchObject({
+      details: "Test error",
+      username: "Test username error"
+    });
+  });
+
+  it("handle custom mapping correctly", () => {
+    const unparsed = {
+      username: {
+        msg: "Test username error"
+      },
+      password: {
+        msg: "Test password error"
+      }
+    };
+    const parsed = parseHTTPErrors(unparsed, { username: "test" });
+    expect(parsed).toMatchObject({
+      test: "Test username error"
+    });
   });
 });

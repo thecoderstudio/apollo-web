@@ -96,7 +96,6 @@ export default class CreateUser extends React.PureComponent {
     .catch(error => {
       handleHTTPResponse(error.response, true, true);
       if (error.response.status === 400) {
-        console.log(error.response.data);
         setErrors(parseHTTPErrors(error.response.data));
       }
     });
