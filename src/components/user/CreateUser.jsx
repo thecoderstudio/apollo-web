@@ -117,7 +117,7 @@ export default class CreateUser extends React.PureComponent {
       credentials,
       { withCredentials: true }
     ).then(res => {
-      if (handleHTTPResponse(res, true, true)) {
+      if (handleHTTPResponse(res, notify=true, allowBadRequest=false)) {
         this.close(true);
       }
     });

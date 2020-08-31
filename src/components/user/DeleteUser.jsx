@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
+import { handleHTTPResponse } from '../../actions/error';
 import ConfirmationModal from '../modals/ConfirmationModal';
 
 const propTypes = {
@@ -23,7 +24,12 @@ class DeleteUser extends React.PureComponent {
     ).then(_ => {
       this.props.userDeleteCallback();
       this.props.closeFunction();
+    })
+    .catch(error => {
+      handleHTTPResponse(error, error.response.data.detail);
+      this.props.closeFunction();
     });
+
   }
 
   render() {

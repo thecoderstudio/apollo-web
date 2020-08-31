@@ -9,7 +9,7 @@ describe("handleError", () => {
       type: 'NOTIFY',
       id: 0,
       message: 'test',
-      severity: severity.error 
+      severity: severity.error
     };
     handleError('test');
     expect(spy).toHaveBeenCalledWith(expectedAction);
@@ -29,7 +29,7 @@ describe("handleHTTPResponse", () => {
       type: 'NOTIFY',
       id: 1,
       message: "bad request",
-      severity: severity.error 
+      severity: severity.error
     };
     const response = { status: 400, statusText: "bad request" };
     expect(handleHTTPResponse(response)).toEqual(false);
@@ -39,14 +39,14 @@ describe("handleHTTPResponse", () => {
   it("doesn't notify of unsuccessful response if not required", () => {
     const spy = jest.spyOn(store, 'dispatch');
     const response = { status: 400, statusText: "bad request" };
-    expect(handleHTTPResponse(response, false)).toEqual(false);
+    expect(handleHTTPResponse(response, notify=false)).toEqual(false);
     expect(spy).not.toHaveBeenCalled();
   });
 
   it("doesn't notify bad requests if allowed", () => {
     const spy = jest.spyOn(store, 'dispatch');
     const response = { status: 400, statusText: "bad request" };
-    expect(handleHTTPResponse(response, true, true)).toEqual(false);
+    expect(handleHTTPResponse(response, notify=true, allowBadRequests=true)).toEqual(false);
     expect(spy).not.toHaveBeenCalled();
   });
 
