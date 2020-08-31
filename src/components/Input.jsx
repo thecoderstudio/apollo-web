@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   error: PropTypes.string
-}
+};
 
 const defaultProps = {
   error: ''
-}
+};
 
 const Container = styled.div`
   height: 80px;
@@ -38,7 +38,7 @@ export default function Input(props) {
       { error !== '' && <Error>{error}</Error>}
     </Container>
   );
-};
+}
 
 Input.propTypes = propTypes;
 Input.defaultProps = defaultProps;
