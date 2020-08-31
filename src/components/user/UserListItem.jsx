@@ -16,7 +16,7 @@ const Container = styled.div`
   padding: 0px 16px;
   margin: 0px;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1fr 25px;
   align-items: center;
 `;
 
@@ -38,6 +38,7 @@ const DeleteIcon = styled(Icon)`
   color: ${props => props.theme.error};
   float: right;
   margin-right: 10px;
+  grid-column: 3;
 `;
 
 class UserListItem extends React.PureComponent {
