@@ -333,6 +333,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
         "overlay": "rgba(37, 37, 37, 0.6)",
         "primary": "#02A3EE",
         "red": "#ED3E2A",
+        "warning": "#ED852A",
         "white": "#F8F8F8",
       }
     }
@@ -383,6 +384,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                       "overlay": "rgba(37, 37, 37, 0.6)",
                       "primary": "#02A3EE",
                       "red": "#ED3E2A",
+                      "warning": "#ED852A",
                       "white": "#F8F8F8",
                     }
                   }
@@ -459,6 +461,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                   "overlay": "rgba(37, 37, 37, 0.6)",
                   "primary": "#02A3EE",
                   "red": "#ED3E2A",
+                  "warning": "#ED852A",
                   "white": "#F8F8F8",
                 }
               }
@@ -1081,6 +1084,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                                     "overlay": "rgba(37, 37, 37, 0.6)",
                                     "primary": "#02A3EE",
                                     "red": "#ED3E2A",
+                                    "warning": "#ED852A",
                                     "white": "#F8F8F8",
                                   }
                                 }
@@ -1413,6 +1417,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
         "overlay": "rgba(37, 37, 37, 0.6)",
         "primary": "#02A3EE",
         "red": "#ED3E2A",
+        "warning": "#ED852A",
         "white": "#F8F8F8",
       }
     }
@@ -1463,6 +1468,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
                       "overlay": "rgba(37, 37, 37, 0.6)",
                       "primary": "#02A3EE",
                       "red": "#ED3E2A",
+                      "warning": "#ED852A",
                       "white": "#F8F8F8",
                     }
                   }

@@ -5,7 +5,7 @@ import { Terminal as XTerm } from 'xterm';
 import { AttachAddon } from 'xterm-addon-attach';
 import { FitAddon } from 'xterm-addon-fit';
 import chalk from 'chalk';
-import Card from '../../components/Card';
+import { handleError } from '../../actions/error';
 
 const propTypes = {
   agent: PropTypes.object.isRequired
@@ -37,6 +37,8 @@ const CHALK_SETTINGS = {
   enabled: true,
   level: 2
 };
+
+const socketErrorMessage = "Something went wrong in the connection with the agent.";
 
 export class Terminal extends React.PureComponent {
   constructor(props) {
@@ -74,9 +76,8 @@ export class Terminal extends React.PureComponent {
   }
 
   onSocketError() {
-    this.write(this.chalk.hex(this.props.theme.error).bold(
-      "Something went wrong in the connection with the agent."
-    ));
+    handleError(socketErrorMessage, false);
+    this.write(this.chalk.hex(this.props.theme.error).bold(socketErrorMessage));
   }
 
   onSocketClose() {

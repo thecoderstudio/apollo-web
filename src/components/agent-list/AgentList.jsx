@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import AgentListItem from './AgentListItem';
 import { listAgents as listAgentsAction } from '../../actions/agent';
+import { handleError } from '../../actions/error';
 
 const Content = styled.div`
   display: grid;
@@ -33,6 +34,9 @@ class AgentList extends React.Component {
 
   setupWebSocket() {
     let server = new WebSocket(`${process.env.APOLLO_WS_URL}agent`);
+    server.onerror = () => {
+      handleError("Something went wrong fetching the agent list");
+    };
     server.onmessage = (event) => {
       this.dispatchListAgents(event.data);
     };

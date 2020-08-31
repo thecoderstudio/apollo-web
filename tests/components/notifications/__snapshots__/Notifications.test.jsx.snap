@@ -1,0 +1,244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`notifications renders correctly empty 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 32px;
+  z-index: 2;
+}
+
+<span
+  className="c0"
+/>
+`;
+
+exports[`notifications renders notifications and then dismisses them 1`] = `
+.c1 {
+  max-width: 700px;
+  width: 95%;
+  padding: 8px 16px;
+  margin: 8px;
+  border-radius: 5px;
+  background-color: #4D02EE;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
+  box-sizing: border-box;
+}
+
+.c5 {
+  max-width: 700px;
+  width: 95%;
+  padding: 8px 16px;
+  margin: 8px;
+  border-radius: 5px;
+  background-color: #ED852A;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
+  box-sizing: border-box;
+}
+
+.c3 {
+  float: right;
+  color: white;
+}
+
+.c4 {
+  color: white;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 32px;
+  z-index: 2;
+}
+
+.c2 {
+  margin: 8px;
+}
+
+.c2.fade-enter {
+  opacity: 0.01;
+}
+
+.c2.fade-enter.fade-enter-active {
+  opacity: 1;
+  -webkit-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in;
+}
+
+.c2.fade-leave {
+  opacity: 1;
+}
+
+.c2.fade-leave.fade-leave-active {
+  opacity: 0.01;
+  -webkit-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in;
+}
+
+<span
+  className="c0"
+>
+  <div
+    className="c1 c2"
+    color="#4D02EE"
+  >
+    <i
+      className="c3 fas fa-times"
+      onClick={[Function]}
+    />
+    <h5
+      className="c4"
+    >
+      test 1
+    </h5>
+  </div>
+  <div
+    className="c5 c2"
+    color="#ED852A"
+  >
+    <i
+      className="c3 fas fa-times"
+      onClick={[Function]}
+    />
+    <h5
+      className="c4"
+    >
+      test 2
+    </h5>
+  </div>
+</span>
+`;
+
+exports[`notifications renders notifications and then dismisses them 2`] = `
+.c1 {
+  max-width: 700px;
+  width: 95%;
+  padding: 8px 16px;
+  margin: 8px;
+  border-radius: 5px;
+  background-color: #4D02EE;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
+  box-sizing: border-box;
+}
+
+.c5 {
+  max-width: 700px;
+  width: 95%;
+  padding: 8px 16px;
+  margin: 8px;
+  border-radius: 5px;
+  background-color: #ED852A;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
+  box-sizing: border-box;
+}
+
+.c3 {
+  float: right;
+  color: white;
+}
+
+.c4 {
+  color: white;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 32px;
+  z-index: 2;
+}
+
+.c2 {
+  margin: 8px;
+}
+
+.c2.fade-enter {
+  opacity: 0.01;
+}
+
+.c2.fade-enter.fade-enter-active {
+  opacity: 1;
+  -webkit-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in;
+}
+
+.c2.fade-leave {
+  opacity: 1;
+}
+
+.c2.fade-leave.fade-leave-active {
+  opacity: 0.01;
+  -webkit-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in;
+}
+
+<span
+  className="c0"
+>
+  <div
+    className="c1 c2"
+    color="#4D02EE"
+  >
+    <i
+      className="c3 fas fa-times"
+      onClick={[Function]}
+    />
+    <h5
+      className="c4"
+    >
+      test 1
+    </h5>
+  </div>
+  <div
+    className="c5 c2"
+    color="#ED852A"
+  >
+    <i
+      className="c3 fas fa-times"
+      onClick={[Function]}
+    />
+    <h5
+      className="c4"
+    >
+      test 2
+    </h5>
+  </div>
+</span>
+`;
