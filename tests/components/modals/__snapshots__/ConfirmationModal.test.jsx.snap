@@ -12,7 +12,7 @@ exports[`ConfirmationModal renders correctly 1`] = `
 
 .c4 {
   display: grid;
-  grid-template-columns: [cancel] 1fr [delete] 1fr;
+  grid-template-columns: [cancel] 1fr [confirm] 1fr;
 }
 
 .c5 {
@@ -43,14 +43,6 @@ exports[`ConfirmationModal renders correctly 1`] = `
   opacity: 0.80;
 }
 
-.c5:focus {
-  outline: none;
-}
-
-.c5:active {
-  opacity: 0.80;
-}
-
 .c6 {
   max-height: 50px;
   padding: 12px;
@@ -61,7 +53,7 @@ exports[`ConfirmationModal renders correctly 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  grid-column: delete;
+  grid-column: confirm;
   margin: 20px;
 }
 
@@ -126,13 +118,13 @@ exports[`ConfirmationModal renders correctly 1`] = `
           className="c5"
           onClick={[MockFunction]}
         >
-          cancel
+          Cancel
         </button>
         <button
           className="c6"
           onClick={[MockFunction]}
         >
-          confirm
+          Confirm
         </button>
       </div>
     </div>

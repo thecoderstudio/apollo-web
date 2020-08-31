@@ -51,14 +51,6 @@ exports[`create user renders correctly 1`] = `
   opacity: 0.80;
 }
 
-.c7:focus {
-  outline: none;
-}
-
-.c7:active {
-  opacity: 0.80;
-}
-
 .c5 {
   border: none;
   border-radius: 5px;

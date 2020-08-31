@@ -27,14 +27,6 @@ exports[`user list renders correctly 1`] = `
   opacity: 0.80;
 }
 
-.c3:focus {
-  outline: none;
-}
-
-.c3:active {
-  opacity: 0.80;
-}
-
 .c2 {
   margin: 0px 16px;
   display: -webkit-box;
@@ -138,20 +130,12 @@ exports[`user list renders correctly 2`] = `
   opacity: 0.80;
 }
 
-.c3:focus {
-  outline: none;
-}
-
-.c3:active {
-  opacity: 0.80;
-}
-
 .c6 {
   min-height: 60px;
   padding: 0px 16px;
   margin: 0px;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1fr 25px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -172,42 +156,10 @@ exports[`user list renders correctly 2`] = `
 }
 
 .c8 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
   cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
-  grid-column: logout;
   float: right;
-  width: 100px;
-  padding: 4px;
-  border: 1px solid;
-}
-
-.c8:hover {
-  opacity: 0.90;
-}
-
-.c8:focus {
-  outline: none;
-}
-
-.c8:active {
-  opacity: 0.80;
-}
-
-.c8:focus {
-  outline: none;
-}
-
-.c8:active {
-  opacity: 0.80;
+  margin-right: 10px;
+  grid-column: 3;
 }
 
 .c2 {
@@ -289,12 +241,10 @@ exports[`user list renders correctly 2`] = `
           >
             test
           </p>
-          <button
-            className="c8"
+          <i
+            className="c8 far fa-trash-alt"
             onClick={[Function]}
-          >
-            delete
-          </button>
+          />
         </div>
         <div
           className="c6"

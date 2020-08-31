@@ -58,14 +58,6 @@ exports[`app renders correctly authenticated 1`] = `
   opacity: 0.80;
 }
 
-.c4:focus {
-  outline: none;
-}
-
-.c4:active {
-  opacity: 0.80;
-}
-
 .c6 {
   display: grid;
   grid-template-rows: [title] 50px [list] 1fr;

@@ -27,14 +27,6 @@ exports[`renders correctly 1`] = `
   opacity: 0.80;
 }
 
-.c0:focus {
-  outline: none;
-}
-
-.c0:active {
-  opacity: 0.80;
-}
-
 <button
   className="c0"
 >

@@ -49,7 +49,7 @@ describe("user list item", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("correctly deletes user", async () => {
+  it("correctly calls callback", async () => {
     axios.delete.mockResolvedValue({
       status: 204
     });

@@ -51,14 +51,6 @@ exports[`user list correctly toggles create user 1`] = `
   opacity: 0.80;
 }
 
-.c1:focus {
-  outline: none;
-}
-
-.c1:active {
-  opacity: 0.80;
-}
-
 .c4 {
   display: inline;
   position: fixed;
@@ -304,14 +296,6 @@ exports[`user list correctly toggles create user 2`] = `
   opacity: 0.80;
 }
 
-.c1:focus {
-  outline: none;
-}
-
-.c1:active {
-  opacity: 0.80;
-}
-
 .c0 {
   margin: 0px 16px;
   display: -webkit-box;
@@ -391,14 +375,6 @@ exports[`user list doesn't try to render users on error 1`] = `
 
 .c1:hover {
   opacity: 0.90;
-}
-
-.c1:focus {
-  outline: none;
-}
-
-.c1:active {
-  opacity: 0.80;
 }
 
 .c1:focus {
@@ -490,20 +466,12 @@ exports[`user list refreshes on create user success 1`] = `
   opacity: 0.80;
 }
 
-.c1:focus {
-  outline: none;
-}
-
-.c1:active {
-  opacity: 0.80;
-}
-
 .c4 {
   min-height: 60px;
   padding: 0px 16px;
   margin: 0px;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1fr 25px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -512,6 +480,13 @@ exports[`user list refreshes on create user success 1`] = `
 
 .c5 {
   margin: 0px;
+}
+
+.c6 {
+  cursor: pointer;
+  float: right;
+  margin-right: 10px;
+  grid-column: 3;
 }
 
 .c0 {
@@ -573,6 +548,10 @@ exports[`user list refreshes on create user success 1`] = `
       >
         test
       </p>
+      <i
+        className="c6 far fa-trash-alt"
+        onClick={[Function]}
+      />
     </div>
   </div>
 </div>
@@ -595,14 +574,6 @@ exports[`user list renders correctly 1`] = `
 
 .c1:hover {
   opacity: 0.90;
-}
-
-.c1:focus {
-  outline: none;
-}
-
-.c1:active {
-  opacity: 0.80;
 }
 
 .c1:focus {
@@ -694,20 +665,12 @@ exports[`user list renders correctly 2`] = `
   opacity: 0.80;
 }
 
-.c1:focus {
-  outline: none;
-}
-
-.c1:active {
-  opacity: 0.80;
-}
-
 .c4 {
   min-height: 60px;
   padding: 0px 16px;
   margin: 0px;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1fr 25px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -718,52 +681,13 @@ exports[`user list renders correctly 2`] = `
   margin: 0px;
 }
 
-.c7 {
+.c6 {
   float: right;
   width: 80px;
   padding: 4px;
   font-weight: bold;
   text-align: center;
   border-radius: 6px;
-}
-
-.c6 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
-  grid-column: logout;
-  float: right;
-  width: 100px;
-  padding: 4px;
-  border: 1px solid;
-}
-
-.c6:hover {
-  opacity: 0.90;
-}
-
-.c6:focus {
-  outline: none;
-}
-
-.c6:active {
-  opacity: 0.80;
-}
-
-.c6:focus {
-  outline: none;
-}
-
-.c6:active {
-  opacity: 0.80;
 }
 
 .c0 {
@@ -825,12 +749,6 @@ exports[`user list renders correctly 2`] = `
       >
         test
       </p>
-      <button
-        className="c6"
-        onClick={[Function]}
-      >
-        delete
-      </button>
     </div>
     <div
       className="c4"
@@ -841,7 +759,7 @@ exports[`user list renders correctly 2`] = `
         admin
       </p>
       <p
-        className="c7"
+        className="c6"
       >
         admin
       </p>
