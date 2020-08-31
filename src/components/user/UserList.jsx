@@ -50,13 +50,13 @@ export default class UserList extends React.PureComponent {
     axios.get(
       `${process.env.APOLLO_HTTP_URL}user`,
       { withCredentials: true }
-    ).then(res => {
-      if (handleHTTPResponse(res)) {
-        this.setState({
-          users: res.data
-        });
-      }
-    });
+    )
+      .then(res => {
+        this.setState({ users: res.data });
+      })
+      .catch(error => {
+        handleHTTPResponse(error.response);
+      });
   }
 
   createUser() {

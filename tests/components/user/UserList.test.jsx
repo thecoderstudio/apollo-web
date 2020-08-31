@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import axios from 'axios';
 import waitForExpect from 'wait-for-expect';
+import { StatusCodes } from 'http-status-codes';
 import UserList from '../../../src/components/user/UserList';
 
 jest.mock('axios');
@@ -41,10 +42,13 @@ describe("user list", () => {
   });
 
   it("doesn't try to render users on error", async () => {
-    axios.get.mockResolvedValue({
-      status: 500,
-      data: { detail: "generic error" }
-    });
+    axios.get.mockImplementationOnce(() => Promise.reject({
+      response: {
+        status: StatusCodes.INTERNAL_SERVER_ERROR,
+        statusText: "Something went wrong",
+        data: {}
+      }
+    }));
 
     const component = getComponent();
     let tree = component.toJSON();
