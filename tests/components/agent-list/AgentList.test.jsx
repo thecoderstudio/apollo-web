@@ -79,7 +79,7 @@ describe('agentList', () => {
   it("handles websocket error", async () => {
     const spy = jest.spyOn(globalStore, 'dispatch');
     const server = new WS(`ws://localhost:1234/agent`, { jsonProtocol: true });
-    getComponent(store).toJSON();     
+    getComponent(store).toJSON();
 
     await server.connected;
 

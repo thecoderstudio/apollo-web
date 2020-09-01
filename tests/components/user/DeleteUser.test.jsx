@@ -38,7 +38,12 @@ describe("Delete user", () => {
   it("does not delete user", async () => {
     const spy = jest.fn();
     axios.delete.mockRejectedValue({
-      status: 400
+      status: 400,
+      response: {
+        data: {
+          detail: "error"
+        }
+      }
     });
     const user = {
       id: 'id2',
