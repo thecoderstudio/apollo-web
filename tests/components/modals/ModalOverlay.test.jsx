@@ -35,7 +35,7 @@ describe('ModalOverlay', () => {
         <div id='test' />
       </ModalOverlay>
     );
-    wrapper.find('#test').simulate('click')
+    wrapper.find('#test').simulate('click');
     expect(spy).toHaveBeenCalledTimes(0);
   });
 });
