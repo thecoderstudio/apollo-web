@@ -24,7 +24,7 @@ export default class ModalOverlay extends React.PureComponent {
   }
 
   closeModal(e) {
-    if (this.node == e.target) {
+    if (this.node === e.target) {
       this.props.closeModalFunction();
     }
   }

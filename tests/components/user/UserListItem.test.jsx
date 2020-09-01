@@ -1,9 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import axios from 'axios';
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'styled-components';
 import { Provider } from 'react-redux';
-import waitForExpect from 'wait-for-expect';
 import configureStore from 'redux-mock-store';
 import UserListItem from '../../../src/components/user/UserListItem';
 import { darkTheme } from '../../../src/theme';
@@ -64,7 +63,7 @@ describe("user list item", () => {
     const tree = getComponent(user, store);
     tree.root.findByType('i').props.onClick();
     tree.toJSON();
-    expect(tree).toMatchSnapshot()
+    expect(tree).toMatchSnapshot();
   });
 
   it("correctly cannot not remove user", () => {

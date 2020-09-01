@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { mount } from 'enzyme';
 import ModalOverlay from '../../../src/components/modals/ModalOverlay';
-import { mount } from 'enzyme'
 
 
 function getComponent(spy) {
@@ -24,7 +24,7 @@ describe('ModalOverlay', () => {
         <div />
       </ModalOverlay>
     );
-    wrapper.find('div').first().simulate('click')
+    wrapper.find('div').first().simulate('click');
     expect(spy).toHaveBeenCalled();
   });
 
@@ -35,7 +35,7 @@ describe('ModalOverlay', () => {
         <div id='test' />
       </ModalOverlay>
     );
-    wrapper.find('#test').simulate('click')
+    wrapper.find('#test').simulate('click');
     expect(spy).toHaveBeenCalledTimes(0);
   });
 });

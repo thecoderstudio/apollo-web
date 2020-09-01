@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import axios from 'axios';
 import waitForExpect from 'wait-for-expect';
-import DeleteUser from '../../../src/components/user/DeleteUser'
+import DeleteUser from '../../../src/components/user/DeleteUser';
 import { darkTheme } from '../../../src/theme';
 
 jest.mock('axios');
@@ -56,4 +56,4 @@ describe("Delete user", () => {
       expect(spy).toHaveBeenCalledTimes(0);
     });
   });
-})
+});
