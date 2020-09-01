@@ -10,7 +10,7 @@ import ModalOverlay from '../modals/ModalOverlay';
 const propTypes = {
   title: PropTypes.string.isRequired,
   confirmationCallback: PropTypes.func.isRequired,
-  cancelCallback: PropTypes.func.isRequired,
+  closeModalFunction: PropTypes.func.isRequired,
   confirmationButtonColor: PropTypes.string,
   confirmationButtonText: PropTypes.string
 };
@@ -62,12 +62,12 @@ const ContentWrapper = styled.div`
 
 export default function ConfirmationModal(props) {
   return(
-    <ModalOverlay title={props.title}>
+    <ModalOverlay title={props.title} closeModalFunction={props.closeModalFunction}>
       <StyledCard>
         <Title>{props.title}</Title>
         <ContentWrapper>
           <Content>
-            <CancelButton onClick={props.cancelCallback}>Cancel</CancelButton>
+            <CancelButton onClick={props.closeModalFunction}>Cancel</CancelButton>
             <ConfirmButton color={props.confirmationButtonColor} onClick={props.confirmationCallback}>{props.confirmationButtonText}</ConfirmButton>
           </Content>
         </ContentWrapper>

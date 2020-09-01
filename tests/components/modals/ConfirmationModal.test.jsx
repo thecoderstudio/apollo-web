@@ -18,7 +18,7 @@ describe('ConfirmationModal', () => {
   const props = {
     title: 'title',
     confirmationCallback: confirmSpy,
-    cancelCallback: cancelSpy,
+    closeModalFunction: cancelSpy,
   };
 
   it('renders correctly', () => {

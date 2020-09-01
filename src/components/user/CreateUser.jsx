@@ -145,7 +145,7 @@ export default class CreateUser extends React.PureComponent {
 
   render() {
     return (
-      <ModalOverlay>
+      <ModalOverlay closeModalFunction={this.close}>
         <Container>
           <Content>
             <Title>Create new user</Title>

@@ -36,7 +36,7 @@ class DeleteUser extends React.PureComponent {
     return(
       <ConfirmationModal
         title={`Are you sure you want to delete ${this.props.user.username}`}
-        cancelCallback={this.props.closeFunction}
+        closeModalFunction={this.props.closeFunction}
         confirmationButtonText='Delete'
         confirmationBu ttonColor={this.props.theme.error}
         confirmationCallback={this.deleteUserAndClose}
