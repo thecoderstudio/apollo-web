@@ -12,7 +12,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  severity: severity.info,
+  severity: severity.INFO,
   timeToLiveInSeconds: null
 };
 
@@ -67,9 +67,9 @@ class Notification extends React.PureComponent {
 
   getColor(notificationSeverity) {
     switch(notificationSeverity) {
-      case severity.warning:
+      case severity.WARNING:
         return this.props.theme.warning;
-      case severity.error:
+      case severity.ERROR:
         return this.props.theme.error;
       default:
         return this.props.theme.accent;

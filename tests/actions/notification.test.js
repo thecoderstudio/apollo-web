@@ -5,12 +5,12 @@ test("notify creates a notify action with new id", () => {
     type: 'NOTIFY',
     id: 0,
     message: 'test',
-    severity: severity.info
+    severity: severity.INFO
   };
-  expect(notify('test', severity.info)).toEqual(expectedAction);
+  expect(notify('test', severity.INFO)).toEqual(expectedAction);
 
   expectedAction.id = 1;
-  expect(notify('test', severity.info)).toEqual(expectedAction);
+  expect(notify('test', severity.INFO)).toEqual(expectedAction);
 });
 
 test("dismiss create a dismiss action", () => {

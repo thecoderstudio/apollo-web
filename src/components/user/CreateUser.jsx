@@ -1,7 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
+import { Formik } from 'formik';
+import { StatusCodes } from 'http-status-codes';
 import { handleHTTPResponse } from '../../actions/error';
+import { createUserSchema } from '../../validation/user';
+import { parseHTTPErrors } from '../../util/parser';
 import media from '../../util/media';
 import Button from '../buttons/Button';
 import OutlinedButton from '../buttons/OutlinedButton';
@@ -74,12 +78,7 @@ const Buttons = styled.div`
 export default class CreateUser extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.changeUsername = this.changeUsername.bind(this);
-    this.changePassword = this.changePassword.bind(this);
-    this.changeConfirmPassword = this.changeConfirmPassword.bind(this);
     this.createUser = this.createUser.bind(this);
-    this.validateCredentials = this.validateCredentials.bind(this);
-    this.validatePassword = this.validatePassword.bind(this);
     this.close = this.close.bind(this);
     this.state = {
       username: '',
@@ -88,55 +87,20 @@ export default class CreateUser extends React.PureComponent {
     };
   }
 
-  changeUsername(e) {
-    this.setState({ username: e.target.value });
-  }
-
-  changePassword(e) {
-    this.setState({ password: e.target.value });
-  }
-
-  changeConfirmPassword(e) {
-    this.setState({ confirmPassword: e.target.value });
-  }
-
-  createUser(e) {
-    e.preventDefault();
-
-    const credentials = {
-      username: this.state.username,
-      password: this.state.password
-    };
-
-    if (!this.validateCredentials(credentials.username, credentials.password)) {
-      return;
-    }
-
+  createUser(credentials, { setErrors }) {
     axios.post(
       `${process.env.APOLLO_HTTP_URL}user`,
       credentials,
       { withCredentials: true }
     ).then(res => {
-      if (handleHTTPResponse(res, true, false)) {
-        this.close(true);
+      this.close(true);
+    })
+    .catch(error => {
+      handleHTTPResponse(error.response, true, true);
+      if (error.response.status === StatusCodes.BAD_REQUEST) {
+        setErrors(parseHTTPErrors(error.response.data));
       }
     });
-  }
-
-  validateCredentials(username, password) {
-    if (username.length < 1 || password > 36) {
-      return false;
-    }
-
-    return this.validatePassword(password);
-  }
-
-  validatePassword(password) {
-    if (password.length < 8 || password !== this.state.confirmPassword) {
-      return false;
-    }
-
-    return true;
   }
 
   close(success=false) {
@@ -149,15 +113,42 @@ export default class CreateUser extends React.PureComponent {
         <Container>
           <Content>
             <Title>Create new user</Title>
-            <Form onSubmit={this.createUser}>
-              <Input type="username" placeholder="Username" onChange={this.changeUsername} required />
-              <Input type="password" placeholder="Password" onChange={this.changePassword} autocomplete="new-password" required />
-              <Input type="password" placeholder="Confirm password" onChange={this.changeConfirmPassword} autocomplete="new-password" required />
-              <Buttons>
-                <OutlinedButton onClick={this.close}>Cancel</OutlinedButton>
-                <Button>Create user</Button>
-              </Buttons>
-            </Form>
+            <Formik
+              initialValues={{ username: '', password: '', confirmPassword: '' }}
+              validationSchema={createUserSchema}
+              onSubmit={this.createUser}>
+              {({ values, errors, handleChange, handleSubmit }) => (
+                <Form onSubmit={handleSubmit}>
+                  <Input
+                    name="username"
+                    type="username"
+                    placeholder="Username"
+                    value={values.username}
+                    error={errors.username}
+                    onChange={handleChange} />
+                  <Input
+                    name="password"
+                    type="password"
+                    placeholder="Password"
+                    value={values.password}
+                    error={errors.password}
+                    onChange={handleChange}
+                    autocomplete="new-password" />
+                  <Input
+                    name="confirmPassword"
+                    type="password"
+                    placeholder="Confirm password"
+                    value={values.confirmPassword}
+                    error={errors.confirmPassword}
+                    onChange={handleChange}
+                    autocomplete="new-password" />
+                  <Buttons>
+                    <OutlinedButton onClick={this.close}>Cancel</OutlinedButton>
+                    <Button>Create user</Button>
+                  </Buttons>
+                </Form>
+              )}
+            </Formik>
           </Content>
         </Container>
       </ModalOverlay>

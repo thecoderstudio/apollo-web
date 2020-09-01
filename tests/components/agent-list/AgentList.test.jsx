@@ -85,10 +85,10 @@ describe('agentList', () => {
 
     expect(spy).toHaveBeenCalledWith(
       {
-        type: 'NOTIFY',
         id: 1,
+        type: 'NOTIFY',
         message: "Something went wrong fetching the agent list",
-        severity: severity.error
+        severity: severity.ERROR
       }
     );
   });

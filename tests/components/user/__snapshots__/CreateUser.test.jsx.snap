@@ -1,6 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`create user renders correctly 1`] = `
+.c9 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c9:hover {
+  opacity: 0.90;
+}
+
+.c9:focus {
+  outline: none;
+}
+
+.c9:active {
+  opacity: 0.80;
+}
+
 .c8 {
   max-height: 50px;
   padding: 12px;
@@ -11,6 +35,8 @@ exports[`create user renders correctly 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
 }
 
 .c8:hover {
@@ -25,33 +51,13 @@ exports[`create user renders correctly 1`] = `
   opacity: 0.80;
 }
 
-.c7 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
-}
-
-.c7:hover {
-  opacity: 0.90;
-}
-
-.c7:focus {
-  outline: none;
-}
-
-.c7:active {
-  opacity: 0.80;
-}
-
 .c5 {
+  height: 80px;
+}
+
+.c6 {
+  min-height: 50px;
+  width: 100%;
   border: none;
   border-radius: 5px;
   font-family: 'Libre Franklin',sans-serif;
@@ -123,7 +129,7 @@ exports[`create user renders correctly 1`] = `
   grid-row-gap: 40px;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -134,7 +140,7 @@ exports[`create user renders correctly 1`] = `
   justify-content: space-around;
 }
 
-.c6> button {
+.c7> button {
   min-width: 150px;
 }
 
@@ -146,7 +152,7 @@ exports[`create user renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c7 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -176,38 +182,53 @@ exports[`create user renders correctly 1`] = `
         className="c4"
         onSubmit={[Function]}
       >
-        <input
-          className="c5"
-          onChange={[Function]}
-          placeholder="Username"
-          required={true}
-          type="username"
-        />
-        <input
-          className="c5"
-          onChange={[Function]}
-          placeholder="Password"
-          required={true}
-          type="password"
-        />
-        <input
-          className="c5"
-          onChange={[Function]}
-          placeholder="Confirm password"
-          required={true}
-          type="password"
-        />
         <div
-          className="c6"
+          className="c5"
+        >
+          <input
+            className="c6"
+            name="username"
+            onChange={[Function]}
+            placeholder="Username"
+            type="username"
+            value=""
+          />
+        </div>
+        <div
+          className="c5"
+        >
+          <input
+            className="c6"
+            name="password"
+            onChange={[Function]}
+            placeholder="Password"
+            type="password"
+            value=""
+          />
+        </div>
+        <div
+          className="c5"
+        >
+          <input
+            className="c6"
+            name="confirmPassword"
+            onChange={[Function]}
+            placeholder="Confirm password"
+            type="password"
+            value=""
+          />
+        </div>
+        <div
+          className="c7"
         >
           <button
-            className="c7"
+            className="c8"
             onClick={[Function]}
           >
             Cancel
           </button>
           <button
-            className="c8"
+            className="c9"
           >
             Create user
           </button>

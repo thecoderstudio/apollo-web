@@ -2,6 +2,12 @@
 
 exports[`renders correctly 1`] = `
 .c0 {
+  height: 80px;
+}
+
+.c1 {
+  min-height: 50px;
+  width: 100%;
   border: none;
   border-radius: 5px;
   font-family: 'Libre Franklin',sans-serif;
@@ -10,9 +16,13 @@ exports[`renders correctly 1`] = `
   opacity: 0.9;
 }
 
-<input
+<div
   className="c0"
-  placeholder="username"
-  type="username"
-/>
+>
+  <input
+    className="c1"
+    placeholder="username"
+    type="username"
+  />
+</div>
 `;

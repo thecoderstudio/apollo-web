@@ -9,7 +9,7 @@ describe("handleError", () => {
       type: 'NOTIFY',
       id: 0,
       message: 'test',
-      severity: severity.error
+      severity: severity.ERROR
     };
     handleError('test');
     expect(spy).toHaveBeenCalledWith(expectedAction);
@@ -29,7 +29,7 @@ describe("handleHTTPResponse", () => {
       type: 'NOTIFY',
       id: 1,
       message: "bad request",
-      severity: severity.error
+      severity: severity.ERROR
     };
     const response = { status: 400, statusText: "bad request" };
     expect(handleHTTPResponse(response)).toEqual(false);
@@ -42,7 +42,7 @@ describe("handleHTTPResponse", () => {
       type: 'NOTIFY',
       id: 2,
       message: "error",
-      severity: severity.error
+      severity: severity.ERROR
     };
     const response = { status: 400, detail: "error", statusText: "bad request" };
     expect(handleHTTPResponse(response)).toEqual(false);

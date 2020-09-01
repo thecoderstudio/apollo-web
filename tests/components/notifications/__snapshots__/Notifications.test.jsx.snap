@@ -37,17 +37,6 @@ exports[`notifications renders notifications and then dismisses them 1`] = `
   box-sizing: border-box;
 }
 
-.c5 {
-  max-width: 700px;
-  width: 95%;
-  padding: 8px 16px;
-  margin: 8px;
-  border-radius: 5px;
-  background-color: #ED852A;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
-  box-sizing: border-box;
-}
-
 .c3 {
   float: right;
   color: white;
@@ -118,8 +107,8 @@ exports[`notifications renders notifications and then dismisses them 1`] = `
     </h5>
   </div>
   <div
-    className="c5 c2"
-    color="#ED852A"
+    className="c1 c2"
+    color="#4D02EE"
   >
     <i
       className="c3 fas fa-times"
@@ -146,17 +135,6 @@ exports[`notifications renders notifications and then dismisses them 2`] = `
   box-sizing: border-box;
 }
 
-.c5 {
-  max-width: 700px;
-  width: 95%;
-  padding: 8px 16px;
-  margin: 8px;
-  border-radius: 5px;
-  background-color: #ED852A;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
-  box-sizing: border-box;
-}
-
 .c3 {
   float: right;
   color: white;
@@ -227,8 +205,8 @@ exports[`notifications renders notifications and then dismisses them 2`] = `
     </h5>
   </div>
   <div
-    className="c5 c2"
-    color="#ED852A"
+    className="c1 c2"
+    color="#4D02EE"
   >
     <i
       className="c3 fas fa-times"

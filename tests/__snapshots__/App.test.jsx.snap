@@ -166,7 +166,7 @@ exports[`app renders correctly authenticated 1`] = `
 `;
 
 exports[`app renders correctly unauthenticated 1`] = `
-.c8 {
+.c9 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -179,19 +179,19 @@ exports[`app renders correctly unauthenticated 1`] = `
   cursor: pointer;
 }
 
-.c8:hover {
+.c9:hover {
   opacity: 0.90;
 }
 
-.c8:focus {
+.c9:focus {
   outline: none;
 }
 
-.c8:active {
+.c9:active {
   opacity: 0.80;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -211,6 +211,12 @@ exports[`app renders correctly unauthenticated 1`] = `
 }
 
 .c7 {
+  height: 80px;
+}
+
+.c8 {
+  min-height: 50px;
+  width: 100%;
   background: #F8F8F8;
   border: none;
   border-radius: 5px;
@@ -335,20 +341,32 @@ exports[`app renders correctly unauthenticated 1`] = `
             className="c6"
             onSubmit={[Function]}
           >
-            <input
+            <div
               className="c7"
-              onChange={[Function]}
-              placeholder="Username"
-              type="username"
-            />
-            <input
+            >
+              <input
+                className="c8"
+                name="username"
+                onChange={[Function]}
+                placeholder="Username"
+                type="username"
+                value=""
+              />
+            </div>
+            <div
               className="c7"
-              onChange={[Function]}
-              placeholder="Password"
-              type="password"
-            />
+            >
+              <input
+                className="c8"
+                name="password"
+                onChange={[Function]}
+                placeholder="Password"
+                type="password"
+                value=""
+              />
+            </div>
             <button
-              className="c8"
+              className="c9"
             >
               Log in
             </button>
@@ -357,7 +375,7 @@ exports[`app renders correctly unauthenticated 1`] = `
       </div>
     </div>
     <span
-      className="c9"
+      className="c10"
     />
   </div>
 </div>
