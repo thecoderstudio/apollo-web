@@ -9,7 +9,7 @@ import Notification from '../../../src/components/notifications/Notification';
 
 const mockStore = configureStore([]);
 
-function getComponentTags(store, id, message, ttl=null, severity=severityLevel.info) {
+function getComponentTags(store, id, message, ttl=null, severity=severityLevel.INFO) {
   return (
     <Provider store={store}>
       <Notification id={id} message={message} theme={darkTheme} timeToLiveInSeconds={ttl} severity={severity} />
@@ -17,7 +17,7 @@ function getComponentTags(store, id, message, ttl=null, severity=severityLevel.i
   );
 }
 
-function getComponent(store, id, message, ttl=null, severity=severityLevel.info) {
+function getComponent(store, id, message, ttl=null, severity=severityLevel.INFO) {
   return renderer.create(getComponentTags(store, id, message, ttl, severity));
 }
 
@@ -33,10 +33,10 @@ describe('notification', () => {
     let tree = getComponent(store, 0, 'test').toJSON();
     expect(tree).toMatchSnapshot();
 
-    tree = getComponent(store, 0, 'test', null, severityLevel.warning).toJSON();
+    tree = getComponent(store, 0, 'test', null, severityLevel.WARNING).toJSON();
     expect(tree).toMatchSnapshot();
 
-    tree = getComponent(store, 0, 'test', null, severityLevel.error).toJSON();
+    tree = getComponent(store, 0, 'test', null, severityLevel.ERROR).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
@@ -68,7 +68,7 @@ describe('notification', () => {
 
     component.update(getComponentTags(store, 0, 'test', 1));
     tree = component.toJSON();
-    component.update(getComponentTags(store, 0, 'test', 1, severityLevel.warning));
+    component.update(getComponentTags(store, 0, 'test', 1, severityLevel.WARNING));
     tree = component.toJSON();
 
     await waitForExpect(() => {

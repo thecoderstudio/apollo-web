@@ -8,15 +8,15 @@ describe("notification reducer", () => {
   });
 
   it("should correctly handle notify action", () => {
-    const notifications = notificationReducer(undefined, notify('test', severity.info));
-    expect(notifications.get(0)).toEqual({ message: 'test', severity: severity.info });
+    const notifications = notificationReducer(undefined, notify('test', severity.INFO));
+    expect(notifications.get(0)).toEqual({ message: 'test', severity: severity.INFO});
   });
 
   it("should correctly handle dismiss action", () => {
     const notifications = new Map({
       "0": {
         message: 'test',
-        severity: severity.info
+        severity: severity.INFO
       }
     });
     expect(notificationReducer(notifications, dismiss("0"))).toEqual(new Map({}));

@@ -1,6 +1,22 @@
+import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-const Input = styled.input`
+const propTypes = {
+  error: PropTypes.string
+};
+
+const defaultProps = {
+  error: ''
+};
+
+const Container = styled.div`
+  height: 80px;
+`;
+
+const StyledInput = styled.input`
+  min-height: 50px;
+  width: 100%;
   background: ${props => props.theme.white};
   border: none;
   border-radius: 5px;
@@ -10,4 +26,19 @@ const Input = styled.input`
   opacity: 0.9;
 `;
 
-export default Input;
+const Error = styled.p`
+  color: ${props => props.theme.error};
+`;
+
+export default function Input(props) {
+  const { className, error, ...rest } = props;
+  return (
+    <Container className={className}>
+      <StyledInput {...rest} />
+      { error !== '' && <Error>{error}</Error>}
+    </Container>
+  );
+}
+
+Input.propTypes = propTypes;
+Input.defaultProps = defaultProps;
