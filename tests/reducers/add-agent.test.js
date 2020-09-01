@@ -10,7 +10,7 @@ const initialState = {
 };
 
 describe("auth reducer", () => {
-  it("should return false as initial state", () => {
+ it("should return false as initial state", () => {
     expect(addAgentReducer(undefined, {})).toEqual(initialState);
   });
 
