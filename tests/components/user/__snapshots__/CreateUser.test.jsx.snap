@@ -159,6 +159,7 @@ exports[`create user renders correctly 1`] = `
 
 <div
   className="c0"
+  onClick={[Function]}
 >
   <div
     className="c1"
