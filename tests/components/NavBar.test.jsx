@@ -27,7 +27,6 @@ describe('login', () => {
   beforeEach(() => {
     store = mockStore({
       addAgent: {
-        modalVisible: false,
         selectedArchitecture: 'amd64',
         selectedOperatingSystem: 'linux'
       },

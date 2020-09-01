@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`app renders correctly authenticated 1`] = `
-.c2 {
+.c4 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #F8F8F8;
 }
 
-.c2:hover {
+.c4:hover {
   opacity: 0.90;
 }
 
@@ -15,7 +15,7 @@ exports[`app renders correctly authenticated 1`] = `
   height: 50px;
   padding: 16px;
   display: grid;
-  grid-template-columns: [rest] 1fr [new-agent] 300px [logout] 100px;
+  grid-template-columns: [logo] 200px [menu] 1fr [new-agent] 250px [logout] 100px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -23,11 +23,19 @@ exports[`app renders correctly authenticated 1`] = `
   background-color: #1B1B1B;
 }
 
-.c3 {
+.c5 {
   margin-right: 16px;
 }
 
-.c5 {
+.c3 {
+  grid-column: menu;
+}
+
+.c2 {
+  grid-column: logo;
+}
+
+.c7 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -43,22 +51,21 @@ exports[`app renders correctly authenticated 1`] = `
   grid-column: logout;
   float: right;
   width: 100px;
-  height: 75%;
 }
 
-.c5:hover {
+.c7:hover {
   opacity: 0.90;
 }
 
-.c5:focus {
+.c7:focus {
   outline: none;
 }
 
-.c5:active {
+.c7:active {
   opacity: 0.80;
 }
 
-.c4 {
+.c6 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -75,19 +82,38 @@ exports[`app renders correctly authenticated 1`] = `
   max-width: 250px;
 }
 
-.c4:hover {
+.c6:hover {
   opacity: 0.90;
 }
 
-.c4:focus {
+.c6:focus {
   outline: none;
 }
 
-.c4:active {
+.c6:active {
   opacity: 0.80;
 }
 
-.c7 {
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 32px;
+  z-index: 2;
+}
+
+.c9 {
   display: grid;
   grid-template-rows: [title] 50px [list] 1fr;
   background-color: #1B1B1B;
@@ -95,17 +121,17 @@ exports[`app renders correctly authenticated 1`] = `
   padding: 20px;
 }
 
-.c8 {
+.c10 {
   grid-row: title;
 }
 
-.c9 {
+.c11 {
   grid-row: list;
   list-style: none;
   padding-left: 0;
 }
 
-.c6 {
+.c8 {
   grid-template-columns: [agent-listing] 1fr 1fr;
   grid-template-rows: 1fr;
   display: grid;
@@ -119,7 +145,7 @@ exports[`app renders correctly authenticated 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c8 {
     grid-template-columns: [agent-listing] 1fr;
   }
 }
@@ -131,12 +157,16 @@ exports[`app renders correctly authenticated 1`] = `
     <div
       className="c1"
     >
-      <h3>
+      <div
+        className="c2"
+      >
         Apollo
-      </h3>
-      <div>
+      </div>
+      <div
+        className="c3"
+      >
         <a
-          className="c2 c3"
+          className="c4 c5"
           href="/"
           onClick={[Function]}
         >
@@ -144,14 +174,14 @@ exports[`app renders correctly authenticated 1`] = `
         </a>
       </div>
       <button
-        className="c4"
+        className="c6"
         id="newAgentButton"
         onClick={[Function]}
       >
         Add new agent
       </button>
       <button
-        className="c5"
+        className="c7"
         id="logoutButton"
         onClick={[Function]}
       >
@@ -160,28 +190,31 @@ exports[`app renders correctly authenticated 1`] = `
     </div>
     <div>
       <div
-        className="c6"
+        className="c8"
       >
         <div
-          className="c7"
+          className="c9"
         >
           <h2
-            className="c8"
+            className="c10"
           >
             Agents
           </h2>
           <ul
-            className="c9"
+            className="c11"
           />
         </div>
       </div>
     </div>
+    <span
+      className="c12"
+    />
   </div>
 </div>
 `;
 
 exports[`app renders correctly unauthenticated 1`] = `
-.c8 {
+.c9 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -194,19 +227,25 @@ exports[`app renders correctly unauthenticated 1`] = `
   cursor: pointer;
 }
 
-.c8:hover {
+.c9:hover {
   opacity: 0.90;
 }
 
-.c8:focus {
+.c9:focus {
   outline: none;
 }
 
-.c8:active {
+.c9:active {
   opacity: 0.80;
 }
 
 .c7 {
+  height: 80px;
+}
+
+.c8 {
+  min-height: 50px;
+  width: 100%;
   background: #F8F8F8;
   border: none;
   border-radius: 5px;
@@ -214,6 +253,25 @@ exports[`app renders correctly unauthenticated 1`] = `
   font-size: 1rem;
   padding-left: 10px;
   opacity: 0.9;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 32px;
+  z-index: 2;
 }
 
 .c1 {
@@ -331,20 +389,32 @@ exports[`app renders correctly unauthenticated 1`] = `
             className="c6"
             onSubmit={[Function]}
           >
-            <input
+            <div
               className="c7"
-              onChange={[Function]}
-              placeholder="Username"
-              type="username"
-            />
-            <input
+            >
+              <input
+                className="c8"
+                name="username"
+                onChange={[Function]}
+                placeholder="Username"
+                type="username"
+                value=""
+              />
+            </div>
+            <div
               className="c7"
-              onChange={[Function]}
-              placeholder="Password"
-              type="password"
-            />
+            >
+              <input
+                className="c8"
+                name="password"
+                onChange={[Function]}
+                placeholder="Password"
+                type="password"
+                value=""
+              />
+            </div>
             <button
-              className="c8"
+              className="c9"
             >
               Log in
             </button>
@@ -352,6 +422,9 @@ exports[`app renders correctly unauthenticated 1`] = `
         </div>
       </div>
     </div>
+    <span
+      className="c10"
+    />
   </div>
 </div>
 `;

@@ -1,6 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`addAgentModal check for empty agent name 1`] = `
+.c7 {
+  height: 80px;
+}
+
+.c9 {
+  min-height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+}
+
 .c0 {
   display: inline;
   position: fixed;
@@ -8,14 +23,15 @@ exports[`addAgentModal check for empty agent name 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
-.c8 {
+.c10 {
   padding: 15px;
   width: 200px;
 }
 
-.c9 {
+.c11 {
   border: none;
   border-radius: 5px;
   font-family: 'B612',sans-serif;
@@ -28,7 +44,7 @@ exports[`addAgentModal check for empty agent name 1`] = `
   overflow: hidden;
 }
 
-.c11 {
+.c13 {
   display: none;
   list-style: none;
   margin: 0;
@@ -41,16 +57,16 @@ exports[`addAgentModal check for empty agent name 1`] = `
   position: fixed;
 }
 
-.c12 {
+.c14 {
   padding: 15px;
 }
 
-.c12:hover {
+.c14:hover {
   cursor: pointer;
   opacity: 0.6;
 }
 
-.c10 {
+.c12 {
   border-color: white transparent;
   border-style: solid;
   float: right;
@@ -67,7 +83,7 @@ exports[`addAgentModal check for empty agent name 1`] = `
   transition: transform 0.3s;
 }
 
-.c16 {
+.c17 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -83,15 +99,15 @@ exports[`addAgentModal check for empty agent name 1`] = `
   display: block;
 }
 
-.c16:hover {
+.c17:hover {
   opacity: 0.90;
 }
 
-.c16:focus {
+.c17:focus {
   outline: none;
 }
 
-.c16:active {
+.c17:active {
   opacity: 0.80;
 }
 
@@ -107,7 +123,8 @@ exports[`addAgentModal check for empty agent name 1`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   height: auto;
 }
 
@@ -123,7 +140,7 @@ exports[`addAgentModal check for empty agent name 1`] = `
   padding: 20px;
 }
 
-.c13 {
+.c15 {
   display: grid;
   grid-template-columns: [column-one] 50% [column-two] 50%;
   margin: 20px 0px 20px 0px;
@@ -141,25 +158,18 @@ exports[`addAgentModal check for empty agent name 1`] = `
 }
 
 .c5 {
-  font-size: 1rem;
   grid-column: text;
   line-height: 75px;
 }
 
-.c15 {
+.c18 {
   width: 200px;
   height: 50px;
   margin: auto;
   display: block;
 }
 
-.c7 {
-  border: none;
-  border-radius: 5px;
-  font-family: 'Libre Franklin',sans-serif;
-  font-size: 1rem;
-  padding-left: 10px;
-  opacity: 0.9;
+.c8 {
   font-family: 'B612',sans-serif;
   font-weight: 600;
   width: 200px;
@@ -168,12 +178,12 @@ exports[`addAgentModal check for empty agent name 1`] = `
   border: 1px solid;
 }
 
-.c7:focus {
+.c8:focus {
   outline: none;
   border: 1px solid;
 }
 
-.c14 {
+.c16 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -191,16 +201,44 @@ exports[`addAgentModal check for empty agent name 1`] = `
   display: block;
 }
 
-.c14:hover {
+.c16:hover {
   opacity: 0.90;
 }
 
-.c14:focus {
+.c16:focus {
   outline: none;
 }
 
-.c14:active {
+.c16:active {
   opacity: 0.80;
+}
+
+@media (max-width:47.9375em) {
+  .c15 {
+    grid-template-columns: [column-one] 100%;
+    grid-template-rows: [row-one] 1fr [row-two] 1fr;
+  }
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+  .c18 {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c16 {
+    width: 100%;
+  }
 }
 
 <div
@@ -221,62 +259,69 @@ exports[`addAgentModal check for empty agent name 1`] = `
         <div
           className="c4"
         >
-          <span
+          <p
             className="c5"
           >
             Agent name
-          </span>
+          </p>
           <div
             className="c6"
           >
-            <input
-              className="c7"
-              onChange={[Function]}
-              placeholder="007"
-            />
+            <div
+              className="c7 c8"
+            >
+              <input
+                className="c9"
+                onChange={[Function]}
+                placeholder="007"
+              />
+              <p
+                className=""
+              />
+            </div>
           </div>
         </div>
         <div
           className="c4"
         >
-          <span
+          <p
             className="c5"
           >
             Operating system
-          </span>
+          </p>
           <div
             className="c6"
           >
             <div
-              className="c8"
+              className="c10"
             >
               <div
-                className="c9"
+                className="c11"
                 id="dropdown"
                 onClick={[Function]}
               >
                 linux
                 <div
-                  className="c10"
+                  className="c12"
                 />
               </div>
               <ul
-                className="c11"
+                className="c13"
               >
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   darwin
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   freebsd
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   openbsd
@@ -288,38 +333,38 @@ exports[`addAgentModal check for empty agent name 1`] = `
         <div
           className="c4"
         >
-          <span
+          <p
             className="c5"
           >
             Architecture
-          </span>
+          </p>
           <div
             className="c6"
           >
             <div
-              className="c8"
+              className="c10"
             >
               <div
-                className="c9"
+                className="c11"
                 id="dropdown"
                 onClick={[Function]}
               >
                 amd64
                 <div
-                  className="c10"
+                  className="c12"
                 />
               </div>
               <ul
-                className="c11"
+                className="c13"
               >
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   arm64
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   arm
@@ -329,25 +374,20 @@ exports[`addAgentModal check for empty agent name 1`] = `
           </div>
         </div>
         <div
-          className="c13"
+          className="c15"
         >
           <button
-            className="c14"
+            className="c16"
             id="closeButton"
-            onClick={[Function]}
           >
             Close
           </button>
-          <div
-            className="c15"
+          <button
+            className="c17 c18"
+            onClick={[Function]}
           >
-            <button
-              className="c16"
-              onClick={[Function]}
-            >
-              Create agent
-            </button>
-          </div>
+            Create agent
+          </button>
         </div>
       </div>
     </div>
@@ -521,6 +561,7 @@ exports[`addAgentModal creates agent 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
 .c7 {
@@ -591,7 +632,8 @@ exports[`addAgentModal creates agent 1`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   height: auto;
 }
 
@@ -650,9 +692,28 @@ exports[`addAgentModal creates agent 1`] = `
 }
 
 .c5 {
-  font-size: 1rem;
   grid-row: description;
   margin: 20px 0px 20px 0px;
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
 }
 
 <div
@@ -672,11 +733,11 @@ exports[`addAgentModal creates agent 1`] = `
       <div
         className="c4"
       >
-        <span
+        <p
           className="c5"
         >
           Copy and run the command on the target machine to download run the client.
-        </span>
+        </p>
         <div
           className="c6"
         >
@@ -703,7 +764,6 @@ exports[`addAgentModal creates agent 1`] = `
         <button
           className="c11"
           id="closeButton"
-          onClick={[Function]}
         >
           Close
         </button>
@@ -714,6 +774,21 @@ exports[`addAgentModal creates agent 1`] = `
 `;
 
 exports[`addAgentModal creates agent incorrect name error 1`] = `
+.c7 {
+  height: 80px;
+}
+
+.c9 {
+  min-height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+}
+
 .c0 {
   display: inline;
   position: fixed;
@@ -721,14 +796,15 @@ exports[`addAgentModal creates agent incorrect name error 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
-.c8 {
+.c10 {
   padding: 15px;
   width: 200px;
 }
 
-.c9 {
+.c11 {
   border: none;
   border-radius: 5px;
   font-family: 'B612',sans-serif;
@@ -741,7 +817,7 @@ exports[`addAgentModal creates agent incorrect name error 1`] = `
   overflow: hidden;
 }
 
-.c11 {
+.c13 {
   display: none;
   list-style: none;
   margin: 0;
@@ -754,16 +830,16 @@ exports[`addAgentModal creates agent incorrect name error 1`] = `
   position: fixed;
 }
 
-.c12 {
+.c14 {
   padding: 15px;
 }
 
-.c12:hover {
+.c14:hover {
   cursor: pointer;
   opacity: 0.6;
 }
 
-.c10 {
+.c12 {
   border-color: white transparent;
   border-style: solid;
   float: right;
@@ -780,7 +856,7 @@ exports[`addAgentModal creates agent incorrect name error 1`] = `
   transition: transform 0.3s;
 }
 
-.c16 {
+.c17 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -796,15 +872,15 @@ exports[`addAgentModal creates agent incorrect name error 1`] = `
   display: block;
 }
 
-.c16:hover {
+.c17:hover {
   opacity: 0.90;
 }
 
-.c16:focus {
+.c17:focus {
   outline: none;
 }
 
-.c16:active {
+.c17:active {
   opacity: 0.80;
 }
 
@@ -820,7 +896,8 @@ exports[`addAgentModal creates agent incorrect name error 1`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   height: auto;
 }
 
@@ -836,7 +913,7 @@ exports[`addAgentModal creates agent incorrect name error 1`] = `
   padding: 20px;
 }
 
-.c13 {
+.c15 {
   display: grid;
   grid-template-columns: [column-one] 50% [column-two] 50%;
   margin: 20px 0px 20px 0px;
@@ -854,25 +931,18 @@ exports[`addAgentModal creates agent incorrect name error 1`] = `
 }
 
 .c5 {
-  font-size: 1rem;
   grid-column: text;
   line-height: 75px;
 }
 
-.c15 {
+.c18 {
   width: 200px;
   height: 50px;
   margin: auto;
   display: block;
 }
 
-.c7 {
-  border: none;
-  border-radius: 5px;
-  font-family: 'Libre Franklin',sans-serif;
-  font-size: 1rem;
-  padding-left: 10px;
-  opacity: 0.9;
+.c8 {
   font-family: 'B612',sans-serif;
   font-weight: 600;
   width: 200px;
@@ -881,12 +951,12 @@ exports[`addAgentModal creates agent incorrect name error 1`] = `
   border: 1px solid;
 }
 
-.c7:focus {
+.c8:focus {
   outline: none;
   border: 1px solid;
 }
 
-.c14 {
+.c16 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -904,16 +974,44 @@ exports[`addAgentModal creates agent incorrect name error 1`] = `
   display: block;
 }
 
-.c14:hover {
+.c16:hover {
   opacity: 0.90;
 }
 
-.c14:focus {
+.c16:focus {
   outline: none;
 }
 
-.c14:active {
+.c16:active {
   opacity: 0.80;
+}
+
+@media (max-width:47.9375em) {
+  .c15 {
+    grid-template-columns: [column-one] 100%;
+    grid-template-rows: [row-one] 1fr [row-two] 1fr;
+  }
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+  .c18 {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c16 {
+    width: 100%;
+  }
 }
 
 <div
@@ -934,62 +1032,69 @@ exports[`addAgentModal creates agent incorrect name error 1`] = `
         <div
           className="c4"
         >
-          <span
+          <p
             className="c5"
           >
             Agent name
-          </span>
+          </p>
           <div
             className="c6"
           >
-            <input
-              className="c7"
-              onChange={[Function]}
-              placeholder="007"
-            />
+            <div
+              className="c7 c8"
+            >
+              <input
+                className="c9"
+                onChange={[Function]}
+                placeholder="007"
+              />
+              <p
+                className=""
+              />
+            </div>
           </div>
         </div>
         <div
           className="c4"
         >
-          <span
+          <p
             className="c5"
           >
             Operating system
-          </span>
+          </p>
           <div
             className="c6"
           >
             <div
-              className="c8"
+              className="c10"
             >
               <div
-                className="c9"
+                className="c11"
                 id="dropdown"
                 onClick={[Function]}
               >
                 linux
                 <div
-                  className="c10"
+                  className="c12"
                 />
               </div>
               <ul
-                className="c11"
+                className="c13"
               >
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   darwin
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   freebsd
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   openbsd
@@ -1001,38 +1106,38 @@ exports[`addAgentModal creates agent incorrect name error 1`] = `
         <div
           className="c4"
         >
-          <span
+          <p
             className="c5"
           >
             Architecture
-          </span>
+          </p>
           <div
             className="c6"
           >
             <div
-              className="c8"
+              className="c10"
             >
               <div
-                className="c9"
+                className="c11"
                 id="dropdown"
                 onClick={[Function]}
               >
                 amd64
                 <div
-                  className="c10"
+                  className="c12"
                 />
               </div>
               <ul
-                className="c11"
+                className="c13"
               >
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   arm64
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   arm
@@ -1042,25 +1147,20 @@ exports[`addAgentModal creates agent incorrect name error 1`] = `
           </div>
         </div>
         <div
-          className="c13"
+          className="c15"
         >
           <button
-            className="c14"
+            className="c16"
             id="closeButton"
-            onClick={[Function]}
           >
             Close
           </button>
-          <div
-            className="c15"
+          <button
+            className="c17 c18"
+            onClick={[Function]}
           >
-            <button
-              className="c16"
-              onClick={[Function]}
-            >
-              Create agent
-            </button>
-          </div>
+            Create agent
+          </button>
         </div>
       </div>
     </div>
@@ -1069,6 +1169,21 @@ exports[`addAgentModal creates agent incorrect name error 1`] = `
 `;
 
 exports[`addAgentModal creates agent incorrect name error 2`] = `
+.c7 {
+  height: 80px;
+}
+
+.c9 {
+  min-height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+}
+
 .c0 {
   display: inline;
   position: fixed;
@@ -1076,14 +1191,15 @@ exports[`addAgentModal creates agent incorrect name error 2`] = `
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
-.c8 {
+.c10 {
   padding: 15px;
   width: 200px;
 }
 
-.c9 {
+.c11 {
   border: none;
   border-radius: 5px;
   font-family: 'B612',sans-serif;
@@ -1096,7 +1212,7 @@ exports[`addAgentModal creates agent incorrect name error 2`] = `
   overflow: hidden;
 }
 
-.c11 {
+.c13 {
   display: none;
   list-style: none;
   margin: 0;
@@ -1109,16 +1225,16 @@ exports[`addAgentModal creates agent incorrect name error 2`] = `
   position: fixed;
 }
 
-.c12 {
+.c14 {
   padding: 15px;
 }
 
-.c12:hover {
+.c14:hover {
   cursor: pointer;
   opacity: 0.6;
 }
 
-.c10 {
+.c12 {
   border-color: white transparent;
   border-style: solid;
   float: right;
@@ -1135,7 +1251,7 @@ exports[`addAgentModal creates agent incorrect name error 2`] = `
   transition: transform 0.3s;
 }
 
-.c16 {
+.c17 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -1151,15 +1267,15 @@ exports[`addAgentModal creates agent incorrect name error 2`] = `
   display: block;
 }
 
-.c16:hover {
+.c17:hover {
   opacity: 0.90;
 }
 
-.c16:focus {
+.c17:focus {
   outline: none;
 }
 
-.c16:active {
+.c17:active {
   opacity: 0.80;
 }
 
@@ -1175,7 +1291,8 @@ exports[`addAgentModal creates agent incorrect name error 2`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   height: auto;
 }
 
@@ -1191,7 +1308,7 @@ exports[`addAgentModal creates agent incorrect name error 2`] = `
   padding: 20px;
 }
 
-.c13 {
+.c15 {
   display: grid;
   grid-template-columns: [column-one] 50% [column-two] 50%;
   margin: 20px 0px 20px 0px;
@@ -1209,25 +1326,18 @@ exports[`addAgentModal creates agent incorrect name error 2`] = `
 }
 
 .c5 {
-  font-size: 1rem;
   grid-column: text;
   line-height: 75px;
 }
 
-.c15 {
+.c18 {
   width: 200px;
   height: 50px;
   margin: auto;
   display: block;
 }
 
-.c7 {
-  border: none;
-  border-radius: 5px;
-  font-family: 'Libre Franklin',sans-serif;
-  font-size: 1rem;
-  padding-left: 10px;
-  opacity: 0.9;
+.c8 {
   font-family: 'B612',sans-serif;
   font-weight: 600;
   width: 200px;
@@ -1236,12 +1346,12 @@ exports[`addAgentModal creates agent incorrect name error 2`] = `
   border: 1px solid;
 }
 
-.c7:focus {
+.c8:focus {
   outline: none;
   border: 1px solid;
 }
 
-.c14 {
+.c16 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -1259,16 +1369,44 @@ exports[`addAgentModal creates agent incorrect name error 2`] = `
   display: block;
 }
 
-.c14:hover {
+.c16:hover {
   opacity: 0.90;
 }
 
-.c14:focus {
+.c16:focus {
   outline: none;
 }
 
-.c14:active {
+.c16:active {
   opacity: 0.80;
+}
+
+@media (max-width:47.9375em) {
+  .c15 {
+    grid-template-columns: [column-one] 100%;
+    grid-template-rows: [row-one] 1fr [row-two] 1fr;
+  }
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+  .c18 {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c16 {
+    width: 100%;
+  }
 }
 
 <div
@@ -1289,62 +1427,69 @@ exports[`addAgentModal creates agent incorrect name error 2`] = `
         <div
           className="c4"
         >
-          <span
+          <p
             className="c5"
           >
             Agent name
-          </span>
+          </p>
           <div
             className="c6"
           >
-            <input
-              className="c7"
-              onChange={[Function]}
-              placeholder="007"
-            />
+            <div
+              className="c7 c8"
+            >
+              <input
+                className="c9"
+                onChange={[Function]}
+                placeholder="007"
+              />
+              <p
+                className=""
+              />
+            </div>
           </div>
         </div>
         <div
           className="c4"
         >
-          <span
+          <p
             className="c5"
           >
             Operating system
-          </span>
+          </p>
           <div
             className="c6"
           >
             <div
-              className="c8"
+              className="c10"
             >
               <div
-                className="c9"
+                className="c11"
                 id="dropdown"
                 onClick={[Function]}
               >
                 linux
                 <div
-                  className="c10"
+                  className="c12"
                 />
               </div>
               <ul
-                className="c11"
+                className="c13"
               >
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   darwin
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   freebsd
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   openbsd
@@ -1356,38 +1501,38 @@ exports[`addAgentModal creates agent incorrect name error 2`] = `
         <div
           className="c4"
         >
-          <span
+          <p
             className="c5"
           >
             Architecture
-          </span>
+          </p>
           <div
             className="c6"
           >
             <div
-              className="c8"
+              className="c10"
             >
               <div
-                className="c9"
+                className="c11"
                 id="dropdown"
                 onClick={[Function]}
               >
                 amd64
                 <div
-                  className="c10"
+                  className="c12"
                 />
               </div>
               <ul
-                className="c11"
+                className="c13"
               >
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   arm64
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   arm
@@ -1397,25 +1542,20 @@ exports[`addAgentModal creates agent incorrect name error 2`] = `
           </div>
         </div>
         <div
-          className="c13"
+          className="c15"
         >
           <button
-            className="c14"
+            className="c16"
             id="closeButton"
-            onClick={[Function]}
           >
             Close
           </button>
-          <div
-            className="c15"
+          <button
+            className="c17 c18"
+            onClick={[Function]}
           >
-            <button
-              className="c16"
-              onClick={[Function]}
-            >
-              Create agent
-            </button>
-          </div>
+            Create agent
+          </button>
         </div>
       </div>
     </div>
@@ -1431,6 +1571,7 @@ exports[`addAgentModal renders correctly 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
 .c6 {
@@ -1448,7 +1589,7 @@ exports[`addAgentModal renders correctly 1`] = `
   display: grid;
   grid-template-rows: [title] 50px [description] 1fr;
   padding: 20px;
-  min-height: 160px;
+  min-height: 180px;
 }
 
 .c6:hover {
@@ -1463,17 +1604,17 @@ exports[`addAgentModal renders correctly 1`] = `
   opacity: 0.80;
 }
 
-.c7 {
+.c8 {
   grid-row: title;
   width: 80%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c8 {
-  font-size: 0.75rem;
+.c9 {
   grid-row: description;
   padding: 10px;
+  font-size: 0.85rem;
 }
 
 .c1 {
@@ -1488,7 +1629,8 @@ exports[`addAgentModal renders correctly 1`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   height: auto;
 }
 
@@ -1515,9 +1657,37 @@ exports[`addAgentModal renders correctly 1`] = `
   margin-right: 10px;
 }
 
-.c9 {
+.c10 {
   grid-column: column-two;
   margin-left: 10px;
+}
+
+.c7 {
+  width: 100%;
+}
+
+@media (max-width:47.9375em) {
+  .c4 {
+    grid-template-columns: [column-one] 100%;
+    grid-template-rows: [row-one] 1fr [row-two] 1fr;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c5 {
+    grid-row: row-one;
+    margin-right: 0px;
+    margin: 15px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c10 {
+    grid-column: column-one;
+    grid-row: row-two;
+    margin-left: 0px;
+    margin: 15px;
+  }
 }
 
 <div
@@ -1541,38 +1711,38 @@ exports[`addAgentModal renders correctly 1`] = `
           className="c5"
         >
           <button
-            className="c6"
+            className="c6 c7"
             onClick={[Function]}
           >
             <h3
-              className="c7"
+              className="c8"
             >
               Directly on target machine.
             </h3>
-            <span
-              className="c8"
+            <p
+              className="c9"
             >
               You have the correct permissions to download the binary directly on the target machine.
-            </span>
+            </p>
           </button>
         </div>
         <div
-          className="c9"
+          className="c10"
         >
           <button
-            className="c6"
+            className="c6 c7"
             onClick={[Function]}
           >
             <h3
-              className="c7"
+              className="c8"
             >
               Manual upload
             </h3>
-            <span
-              className="c8"
+            <p
+              className="c9"
             >
               You download and upload the binary yourself.
-            </span>
+            </p>
           </button>
         </div>
       </div>
@@ -1582,6 +1752,21 @@ exports[`addAgentModal renders correctly 1`] = `
 `;
 
 exports[`addAgentModal selects directly correctly 1`] = `
+.c7 {
+  height: 80px;
+}
+
+.c9 {
+  min-height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+}
+
 .c0 {
   display: inline;
   position: fixed;
@@ -1589,14 +1774,15 @@ exports[`addAgentModal selects directly correctly 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
-.c8 {
+.c10 {
   padding: 15px;
   width: 200px;
 }
 
-.c9 {
+.c11 {
   border: none;
   border-radius: 5px;
   font-family: 'B612',sans-serif;
@@ -1609,7 +1795,7 @@ exports[`addAgentModal selects directly correctly 1`] = `
   overflow: hidden;
 }
 
-.c11 {
+.c13 {
   display: none;
   list-style: none;
   margin: 0;
@@ -1622,16 +1808,16 @@ exports[`addAgentModal selects directly correctly 1`] = `
   position: fixed;
 }
 
-.c12 {
+.c14 {
   padding: 15px;
 }
 
-.c12:hover {
+.c14:hover {
   cursor: pointer;
   opacity: 0.6;
 }
 
-.c10 {
+.c12 {
   border-color: white transparent;
   border-style: solid;
   float: right;
@@ -1648,7 +1834,7 @@ exports[`addAgentModal selects directly correctly 1`] = `
   transition: transform 0.3s;
 }
 
-.c16 {
+.c17 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -1664,15 +1850,15 @@ exports[`addAgentModal selects directly correctly 1`] = `
   display: block;
 }
 
-.c16:hover {
+.c17:hover {
   opacity: 0.90;
 }
 
-.c16:focus {
+.c17:focus {
   outline: none;
 }
 
-.c16:active {
+.c17:active {
   opacity: 0.80;
 }
 
@@ -1688,7 +1874,8 @@ exports[`addAgentModal selects directly correctly 1`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   height: auto;
 }
 
@@ -1704,7 +1891,7 @@ exports[`addAgentModal selects directly correctly 1`] = `
   padding: 20px;
 }
 
-.c13 {
+.c15 {
   display: grid;
   grid-template-columns: [column-one] 50% [column-two] 50%;
   margin: 20px 0px 20px 0px;
@@ -1722,25 +1909,18 @@ exports[`addAgentModal selects directly correctly 1`] = `
 }
 
 .c5 {
-  font-size: 1rem;
   grid-column: text;
   line-height: 75px;
 }
 
-.c15 {
+.c18 {
   width: 200px;
   height: 50px;
   margin: auto;
   display: block;
 }
 
-.c7 {
-  border: none;
-  border-radius: 5px;
-  font-family: 'Libre Franklin',sans-serif;
-  font-size: 1rem;
-  padding-left: 10px;
-  opacity: 0.9;
+.c8 {
   font-family: 'B612',sans-serif;
   font-weight: 600;
   width: 200px;
@@ -1749,12 +1929,12 @@ exports[`addAgentModal selects directly correctly 1`] = `
   border: 1px solid transparent;
 }
 
-.c7:focus {
+.c8:focus {
   outline: none;
   border: 1px solid;
 }
 
-.c14 {
+.c16 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -1772,16 +1952,44 @@ exports[`addAgentModal selects directly correctly 1`] = `
   display: block;
 }
 
-.c14:hover {
+.c16:hover {
   opacity: 0.90;
 }
 
-.c14:focus {
+.c16:focus {
   outline: none;
 }
 
-.c14:active {
+.c16:active {
   opacity: 0.80;
+}
+
+@media (max-width:47.9375em) {
+  .c15 {
+    grid-template-columns: [column-one] 100%;
+    grid-template-rows: [row-one] 1fr [row-two] 1fr;
+  }
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+  .c18 {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c16 {
+    width: 100%;
+  }
 }
 
 <div
@@ -1802,62 +2010,69 @@ exports[`addAgentModal selects directly correctly 1`] = `
         <div
           className="c4"
         >
-          <span
+          <p
             className="c5"
           >
             Agent name
-          </span>
+          </p>
           <div
             className="c6"
           >
-            <input
-              className="c7"
-              onChange={[Function]}
-              placeholder="007"
-            />
+            <div
+              className="c7 c8"
+            >
+              <input
+                className="c9"
+                onChange={[Function]}
+                placeholder="007"
+              />
+              <p
+                className=""
+              />
+            </div>
           </div>
         </div>
         <div
           className="c4"
         >
-          <span
+          <p
             className="c5"
           >
             Operating system
-          </span>
+          </p>
           <div
             className="c6"
           >
             <div
-              className="c8"
+              className="c10"
             >
               <div
-                className="c9"
+                className="c11"
                 id="dropdown"
                 onClick={[Function]}
               >
                 linux
                 <div
-                  className="c10"
+                  className="c12"
                 />
               </div>
               <ul
-                className="c11"
+                className="c13"
               >
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   darwin
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   freebsd
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   openbsd
@@ -1869,38 +2084,38 @@ exports[`addAgentModal selects directly correctly 1`] = `
         <div
           className="c4"
         >
-          <span
+          <p
             className="c5"
           >
             Architecture
-          </span>
+          </p>
           <div
             className="c6"
           >
             <div
-              className="c8"
+              className="c10"
             >
               <div
-                className="c9"
+                className="c11"
                 id="dropdown"
                 onClick={[Function]}
               >
                 amd64
                 <div
-                  className="c10"
+                  className="c12"
                 />
               </div>
               <ul
-                className="c11"
+                className="c13"
               >
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   arm64
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   arm
@@ -1910,25 +2125,20 @@ exports[`addAgentModal selects directly correctly 1`] = `
           </div>
         </div>
         <div
-          className="c13"
+          className="c15"
         >
           <button
-            className="c14"
+            className="c16"
             id="closeButton"
-            onClick={[Function]}
           >
             Close
           </button>
-          <div
-            className="c15"
+          <button
+            className="c17 c18"
+            onClick={[Function]}
           >
-            <button
-              className="c16"
-              onClick={[Function]}
-            >
-              Create agent
-            </button>
-          </div>
+            Create agent
+          </button>
         </div>
       </div>
     </div>
@@ -1937,6 +2147,21 @@ exports[`addAgentModal selects directly correctly 1`] = `
 `;
 
 exports[`addAgentModal selects manual correctly 1`] = `
+.c7 {
+  height: 80px;
+}
+
+.c9 {
+  min-height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+}
+
 .c0 {
   display: inline;
   position: fixed;
@@ -1944,14 +2169,15 @@ exports[`addAgentModal selects manual correctly 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
-.c8 {
+.c10 {
   padding: 15px;
   width: 200px;
 }
 
-.c9 {
+.c11 {
   border: none;
   border-radius: 5px;
   font-family: 'B612',sans-serif;
@@ -1964,7 +2190,7 @@ exports[`addAgentModal selects manual correctly 1`] = `
   overflow: hidden;
 }
 
-.c11 {
+.c13 {
   display: none;
   list-style: none;
   margin: 0;
@@ -1977,16 +2203,16 @@ exports[`addAgentModal selects manual correctly 1`] = `
   position: fixed;
 }
 
-.c12 {
+.c14 {
   padding: 15px;
 }
 
-.c12:hover {
+.c14:hover {
   cursor: pointer;
   opacity: 0.6;
 }
 
-.c10 {
+.c12 {
   border-color: white transparent;
   border-style: solid;
   float: right;
@@ -2003,7 +2229,7 @@ exports[`addAgentModal selects manual correctly 1`] = `
   transition: transform 0.3s;
 }
 
-.c16 {
+.c17 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -2019,15 +2245,15 @@ exports[`addAgentModal selects manual correctly 1`] = `
   display: block;
 }
 
-.c16:hover {
+.c17:hover {
   opacity: 0.90;
 }
 
-.c16:focus {
+.c17:focus {
   outline: none;
 }
 
-.c16:active {
+.c17:active {
   opacity: 0.80;
 }
 
@@ -2043,7 +2269,8 @@ exports[`addAgentModal selects manual correctly 1`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   height: auto;
 }
 
@@ -2059,7 +2286,7 @@ exports[`addAgentModal selects manual correctly 1`] = `
   padding: 20px;
 }
 
-.c13 {
+.c15 {
   display: grid;
   grid-template-columns: [column-one] 50% [column-two] 50%;
   margin: 20px 0px 20px 0px;
@@ -2077,25 +2304,18 @@ exports[`addAgentModal selects manual correctly 1`] = `
 }
 
 .c5 {
-  font-size: 1rem;
   grid-column: text;
   line-height: 75px;
 }
 
-.c15 {
+.c18 {
   width: 200px;
   height: 50px;
   margin: auto;
   display: block;
 }
 
-.c7 {
-  border: none;
-  border-radius: 5px;
-  font-family: 'Libre Franklin',sans-serif;
-  font-size: 1rem;
-  padding-left: 10px;
-  opacity: 0.9;
+.c8 {
   font-family: 'B612',sans-serif;
   font-weight: 600;
   width: 200px;
@@ -2104,12 +2324,12 @@ exports[`addAgentModal selects manual correctly 1`] = `
   border: 1px solid transparent;
 }
 
-.c7:focus {
+.c8:focus {
   outline: none;
   border: 1px solid;
 }
 
-.c14 {
+.c16 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -2127,16 +2347,44 @@ exports[`addAgentModal selects manual correctly 1`] = `
   display: block;
 }
 
-.c14:hover {
+.c16:hover {
   opacity: 0.90;
 }
 
-.c14:focus {
+.c16:focus {
   outline: none;
 }
 
-.c14:active {
+.c16:active {
   opacity: 0.80;
+}
+
+@media (max-width:47.9375em) {
+  .c15 {
+    grid-template-columns: [column-one] 100%;
+    grid-template-rows: [row-one] 1fr [row-two] 1fr;
+  }
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+  .c18 {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c16 {
+    width: 100%;
+  }
 }
 
 <div
@@ -2157,62 +2405,69 @@ exports[`addAgentModal selects manual correctly 1`] = `
         <div
           className="c4"
         >
-          <span
+          <p
             className="c5"
           >
             Agent name
-          </span>
+          </p>
           <div
             className="c6"
           >
-            <input
-              className="c7"
-              onChange={[Function]}
-              placeholder="007"
-            />
+            <div
+              className="c7 c8"
+            >
+              <input
+                className="c9"
+                onChange={[Function]}
+                placeholder="007"
+              />
+              <p
+                className=""
+              />
+            </div>
           </div>
         </div>
         <div
           className="c4"
         >
-          <span
+          <p
             className="c5"
           >
             Operating system
-          </span>
+          </p>
           <div
             className="c6"
           >
             <div
-              className="c8"
+              className="c10"
             >
               <div
-                className="c9"
+                className="c11"
                 id="dropdown"
                 onClick={[Function]}
               >
                 linux
                 <div
-                  className="c10"
+                  className="c12"
                 />
               </div>
               <ul
-                className="c11"
+                className="c13"
               >
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   darwin
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   freebsd
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   openbsd
@@ -2224,38 +2479,38 @@ exports[`addAgentModal selects manual correctly 1`] = `
         <div
           className="c4"
         >
-          <span
+          <p
             className="c5"
           >
             Architecture
-          </span>
+          </p>
           <div
             className="c6"
           >
             <div
-              className="c8"
+              className="c10"
             >
               <div
-                className="c9"
+                className="c11"
                 id="dropdown"
                 onClick={[Function]}
               >
                 amd64
                 <div
-                  className="c10"
+                  className="c12"
                 />
               </div>
               <ul
-                className="c11"
+                className="c13"
               >
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   arm64
                 </li>
                 <li
-                  className="c12"
+                  className="c14"
                   onClick={[Function]}
                 >
                   arm
@@ -2265,25 +2520,20 @@ exports[`addAgentModal selects manual correctly 1`] = `
           </div>
         </div>
         <div
-          className="c13"
+          className="c15"
         >
           <button
-            className="c14"
+            className="c16"
             id="closeButton"
-            onClick={[Function]}
           >
             Close
           </button>
-          <div
-            className="c15"
+          <button
+            className="c17 c18"
+            onClick={[Function]}
           >
-            <button
-              className="c16"
-              onClick={[Function]}
-            >
-              Create agent
-            </button>
-          </div>
+            Create agent
+          </button>
         </div>
       </div>
     </div>

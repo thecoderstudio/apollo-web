@@ -4,8 +4,10 @@ import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import WS from 'jest-websocket-mock';
 import { ThemeProvider } from 'styled-components';
+import { store as globalStore } from '../../../src/store';
 import AgentList from '../../../src/components/agent-list/AgentList';
 import { listAgents } from '../../../src/actions/agent';
+import { severity, notify } from '../../../src/actions/notification';
 import waitForExpect from 'wait-for-expect';
 import { darkTheme } from '../../../src/theme';
 
@@ -72,5 +74,22 @@ describe('agentList', () => {
       agent: data
     });
     expect(getComponent(store)).toMatchSnapshot();
+  });
+
+  it("handles websocket error", async () => {
+    const spy = jest.spyOn(globalStore, 'dispatch');
+    const server = new WS(`ws://localhost:1234/agent`, { jsonProtocol: true });
+    getComponent(store).toJSON();     
+
+    await server.connected;
+
+    expect(spy).toHaveBeenCalledWith(
+      {
+        id: 1,
+        type: 'NOTIFY',
+        message: "Something went wrong fetching the agent list",
+        severity: severity.ERROR
+      }
+    );
   });
 });

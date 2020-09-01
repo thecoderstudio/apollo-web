@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`login renders correctly 1`] = `
-.c7 {
+.c8 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -13,19 +13,25 @@ exports[`login renders correctly 1`] = `
   cursor: pointer;
 }
 
-.c7:hover {
+.c8:hover {
   opacity: 0.90;
 }
 
-.c7:focus {
+.c8:focus {
   outline: none;
 }
 
-.c7:active {
+.c8:active {
   opacity: 0.80;
 }
 
 .c6 {
+  height: 80px;
+}
+
+.c7 {
+  min-height: 50px;
+  width: 100%;
   border: none;
   border-radius: 5px;
   font-family: 'Libre Franklin',sans-serif;
@@ -137,20 +143,32 @@ exports[`login renders correctly 1`] = `
         className="c5"
         onSubmit={[Function]}
       >
-        <input
+        <div
           className="c6"
-          onChange={[Function]}
-          placeholder="Username"
-          type="username"
-        />
-        <input
+        >
+          <input
+            className="c7"
+            name="username"
+            onChange={[Function]}
+            placeholder="Username"
+            type="username"
+            value=""
+          />
+        </div>
+        <div
           className="c6"
-          onChange={[Function]}
-          placeholder="Password"
-          type="password"
-        />
+        >
+          <input
+            className="c7"
+            name="password"
+            onChange={[Function]}
+            placeholder="Password"
+            type="password"
+            value=""
+          />
+        </div>
         <button
-          className="c7"
+          className="c8"
         >
           Log in
         </button>

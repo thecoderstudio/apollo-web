@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`notification renders correctly for different severity levels 1`] = `
+.c0 {
+  max-width: 700px;
+  width: 95%;
+  padding: 8px 16px;
+  margin: 8px;
+  border-radius: 5px;
+  background-color: #4D02EE;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
+  box-sizing: border-box;
+}
+
+.c1 {
+  float: right;
+  color: white;
+}
+
+.c2 {
+  color: white;
+}
+
+<div
+  className="c0"
+  color="#4D02EE"
+>
+  <i
+    className="c1 fas fa-times"
+    onClick={[Function]}
+  />
+  <h5
+    className="c2"
+  >
+    test
+  </h5>
+</div>
+`;
+
+exports[`notification renders correctly for different severity levels 2`] = `
+.c0 {
+  max-width: 700px;
+  width: 95%;
+  padding: 8px 16px;
+  margin: 8px;
+  border-radius: 5px;
+  background-color: #ED852A;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
+  box-sizing: border-box;
+}
+
+.c1 {
+  float: right;
+  color: white;
+}
+
+.c2 {
+  color: white;
+}
+
+<div
+  className="c0"
+  color="#ED852A"
+>
+  <i
+    className="c1 fas fa-times"
+    onClick={[Function]}
+  />
+  <h5
+    className="c2"
+  >
+    test
+  </h5>
+</div>
+`;
+
+exports[`notification renders correctly for different severity levels 3`] = `
+.c0 {
+  max-width: 700px;
+  width: 95%;
+  padding: 8px 16px;
+  margin: 8px;
+  border-radius: 5px;
+  background-color: #ED3E2A;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
+  box-sizing: border-box;
+}
+
+.c1 {
+  float: right;
+  color: white;
+}
+
+.c2 {
+  color: white;
+}
+
+<div
+  className="c0"
+  color="#ED3E2A"
+>
+  <i
+    className="c1 fas fa-times"
+    onClick={[Function]}
+  />
+  <h5
+    className="c2"
+  >
+    test
+  </h5>
+</div>
+`;

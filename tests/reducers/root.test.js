@@ -1,3 +1,4 @@
+import { Map as ImmutableMap } from 'immutable';
 import rootReducer from '../../src/reducers/root';
 import { darkTheme } from '../../src/theme';
 
@@ -9,6 +10,9 @@ test("root reducer should contain all reducers", () => {
     addAgent: {
       selectedArchitecture: "amd64",
       selectedOperatingSystem: "linux"
-    }
+    },
+    currentUser: {},
+    notifications: new ImmutableMap({}),
+    theme: darkTheme
   });
 });

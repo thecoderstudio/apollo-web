@@ -11,7 +11,6 @@ describe('dashboard', () => {
     const store = mockStore({
       authenticated: true,
       addAgent: {
-        modalVisible: false,
         selectedArchitecture: "amd64",
         selectedOperatingSystem: "linux"
       },

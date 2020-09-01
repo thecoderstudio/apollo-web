@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import axios from 'axios';
 import waitForExpect from 'wait-for-expect';
+import { StatusCodes } from 'http-status-codes';
 import CreateUser from '../../../src/components/user/CreateUser';
 
 jest.mock('axios');
@@ -16,10 +17,19 @@ function submitForm(root, username, password, confirmPassword) {
   const confirmPasswordInput = root.findByProps({placeholder: 'Confirm password'});
   const form = root.findByType('form');
 
-  usernameInput.props.onChange({ target: { value: username }});
-  passwordInput.props.onChange({ target: { value: password }});
-  confirmPasswordInput.props.onChange({ target: { value: confirmPassword }});
-  form.props.onSubmit({ preventDefault: jest.fn() });
+  usernameInput.props.onChange({ currentTarget: {
+    name: 'username',
+    value: username
+  }});
+  passwordInput.props.onChange({ currentTarget: {
+    name: 'password',
+    value: password
+  }});
+  confirmPasswordInput.props.onChange({ currentTarget: {
+    name: 'confirmPassword',
+    value: confirmPassword
+  }});
+  form.props.onSubmit();
 }
 
 describe("create user", () => {
@@ -64,7 +74,7 @@ describe("create user", () => {
     const root = component.root;
 
     axios.post.mockResolvedValue({
-      status: 201
+      status: StatusCodes.CREATED
     });
 
     root.findByType('form').props.onSubmit({ preventDefault: jest.fn() });
@@ -80,15 +90,28 @@ describe("create user", () => {
     const component = getComponent(onClose);
     const root = component.root;
 
-    axios.post.mockResolvedValue({
-      status: 400
-    });
+    axios.post.mockImplementationOnce(() => Promise.reject({
+      response: {
+        status: StatusCodes.BAD_REQUEST,
+        statusText: "Bad request",
+        data: {}
+      }
+    }));
 
-    root.findByType('form').props.onSubmit({ preventDefault: jest.fn() });
-    submitForm(root, 'test', 'password', 'password');
+    submitForm(root, 'test', 'password123', 'password123');
+
+    axios.post.mockImplementationOnce(() => Promise.reject({
+      response: {
+        status: StatusCodes.INTERNAL_SERVER_ERROR,
+        statusText: "Something went wrong",
+        data: {}
+      }
+    }));
+
+    submitForm(root, 'test', 'password123', 'password123');
 
     await waitForExpect(() => {
-      expect(axios.post).toHaveBeenCalled();
+      expect(axios.post).toHaveBeenCalledTimes(2);
       expect(onClose).not.toHaveBeenCalledWith(true);
     });
   });

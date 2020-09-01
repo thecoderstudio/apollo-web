@@ -1,13 +1,10 @@
 import addAgentReducer from '../../src/reducers/add-agent';
 import {
-  SHOW_ADD_AGENT_MODAL,
-  CLOSE_ADD_AGENT_MODAL,
   SELECT_ARCHITECTURE,
   SELECT_OPERATING_SYSTEM
 } from '../../src/actions/add-agent';
 
 const initialState = {
-  modalVisible: false,
   selectedArchitecture: "amd64",
   selectedOperatingSystem: "linux"
 };
@@ -15,24 +12,6 @@ const initialState = {
 describe("auth reducer", () => {
   it("should return false as initial state", () => {
     expect(addAgentReducer(undefined, {})).toEqual(initialState);
-  });
-
-  it("should correctly handle show", () => {
-    expect(addAgentReducer(initialState, { type: SHOW_ADD_AGENT_MODAL })).toEqual(
-      {
-        ...initialState,
-        modalVisible: true
-      }
-    );
-  });
-
-  it("should correctly handle close", () => {
-    expect(addAgentReducer(initialState, { type: CLOSE_ADD_AGENT_MODAL })).toEqual(
-      {
-        ...initialState,
-        modalVisible: false
-      }
-    );
   });
 
   it("should correcty select architecture", () => {

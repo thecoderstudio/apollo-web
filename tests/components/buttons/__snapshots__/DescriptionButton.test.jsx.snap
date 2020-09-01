@@ -16,7 +16,7 @@ exports[`DescriptionButton renders correctly 1`] = `
   display: grid;
   grid-template-rows: [title] 50px [description] 1fr;
   padding: 20px;
-  min-height: 160px;
+  min-height: 180px;
 }
 
 .c0:hover {
@@ -39,9 +39,9 @@ exports[`DescriptionButton renders correctly 1`] = `
 }
 
 .c2 {
-  font-size: 0.75rem;
   grid-row: description;
   padding: 10px;
+  font-size: 0.85rem;
 }
 
 <button
@@ -53,10 +53,10 @@ exports[`DescriptionButton renders correctly 1`] = `
   >
     title
   </h3>
-  <span
+  <p
     className="c2"
   >
     <div />
-  </span>
+  </p>
 </button>
 `;

@@ -39,7 +39,6 @@ describe('addAgentModal', () => {
   beforeEach(() => {
     store = mockStore({
       addAgent: {
-        modalVisible: true,
         selectedArchitecture: 'amd64',
         selectedOperatingSystem: 'linux'
       },

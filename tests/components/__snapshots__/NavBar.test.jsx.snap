@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`login handles successful logout 1`] = `
-.c1 {
+.c3 {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c1:hover {
+.c3:hover {
   opacity: 0.90;
 }
 
@@ -14,18 +14,26 @@ exports[`login handles successful logout 1`] = `
   height: 50px;
   padding: 16px;
   display: grid;
-  grid-template-columns: [rest] 1fr [new-agent] 300px [logout] 100px;
+  grid-template-columns: [logo] 200px [menu] 1fr [new-agent] 250px [logout] 100px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
-.c2 {
+.c4 {
   margin-right: 16px;
 }
 
-.c4 {
+.c2 {
+  grid-column: menu;
+}
+
+.c1 {
+  grid-column: logo;
+}
+
+.c6 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -40,22 +48,21 @@ exports[`login handles successful logout 1`] = `
   grid-column: logout;
   float: right;
   width: 100px;
-  height: 75%;
 }
 
-.c4:hover {
+.c6:hover {
   opacity: 0.90;
 }
 
-.c4:focus {
+.c6:focus {
   outline: none;
 }
 
-.c4:active {
+.c6:active {
   opacity: 0.80;
 }
 
-.c3 {
+.c5 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -71,27 +78,31 @@ exports[`login handles successful logout 1`] = `
   max-width: 250px;
 }
 
-.c3:hover {
+.c5:hover {
   opacity: 0.90;
 }
 
-.c3:focus {
+.c5:focus {
   outline: none;
 }
 
-.c3:active {
+.c5:active {
   opacity: 0.80;
 }
 
 <div
   className="c0"
 >
-  <h3>
+  <div
+    className="c1"
+  >
     Apollo
-  </h3>
-  <div>
+  </div>
+  <div
+    className="c2"
+  >
     <a
-      className="c1 c2"
+      className="c3 c4"
       href="/"
       onClick={[Function]}
     >
@@ -99,14 +110,14 @@ exports[`login handles successful logout 1`] = `
     </a>
   </div>
   <button
-    className="c3"
+    className="c5"
     id="newAgentButton"
     onClick={[Function]}
   >
     Add new agent
   </button>
   <button
-    className="c4"
+    className="c6"
     id="logoutButton"
     onClick={[Function]}
   >
@@ -116,12 +127,12 @@ exports[`login handles successful logout 1`] = `
 `;
 
 exports[`login render admin link for admins 1`] = `
-.c1 {
+.c3 {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c1:hover {
+.c3:hover {
   opacity: 0.90;
 }
 
@@ -129,18 +140,26 @@ exports[`login render admin link for admins 1`] = `
   height: 50px;
   padding: 16px;
   display: grid;
-  grid-template-columns: [rest] 1fr [new-agent] 300px [logout] 100px;
+  grid-template-columns: [logo] 200px [menu] 1fr [new-agent] 250px [logout] 100px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
-.c2 {
+.c4 {
   margin-right: 16px;
 }
 
-.c4 {
+.c2 {
+  grid-column: menu;
+}
+
+.c1 {
+  grid-column: logo;
+}
+
+.c6 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -155,22 +174,21 @@ exports[`login render admin link for admins 1`] = `
   grid-column: logout;
   float: right;
   width: 100px;
-  height: 75%;
 }
 
-.c4:hover {
+.c6:hover {
   opacity: 0.90;
 }
 
-.c4:focus {
+.c6:focus {
   outline: none;
 }
 
-.c4:active {
+.c6:active {
   opacity: 0.80;
 }
 
-.c3 {
+.c5 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -186,34 +204,38 @@ exports[`login render admin link for admins 1`] = `
   max-width: 250px;
 }
 
-.c3:hover {
+.c5:hover {
   opacity: 0.90;
 }
 
-.c3:focus {
+.c5:focus {
   outline: none;
 }
 
-.c3:active {
+.c5:active {
   opacity: 0.80;
 }
 
 <div
   className="c0"
 >
-  <h3>
+  <div
+    className="c1"
+  >
     Apollo
-  </h3>
-  <div>
+  </div>
+  <div
+    className="c2"
+  >
     <a
-      className="c1 c2"
+      className="c3 c4"
       href="/"
       onClick={[Function]}
     >
       Dashboard
     </a>
     <a
-      className="c1 c2"
+      className="c3 c4"
       href="/admin"
       onClick={[Function]}
     >
@@ -221,14 +243,14 @@ exports[`login render admin link for admins 1`] = `
     </a>
   </div>
   <button
-    className="c3"
+    className="c5"
     id="newAgentButton"
     onClick={[Function]}
   >
     Add new agent
   </button>
   <button
-    className="c4"
+    className="c6"
     id="logoutButton"
     onClick={[Function]}
   >
@@ -238,12 +260,12 @@ exports[`login render admin link for admins 1`] = `
 `;
 
 exports[`login renders correctly 1`] = `
-.c1 {
+.c3 {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c1:hover {
+.c3:hover {
   opacity: 0.90;
 }
 
@@ -251,18 +273,26 @@ exports[`login renders correctly 1`] = `
   height: 50px;
   padding: 16px;
   display: grid;
-  grid-template-columns: [rest] 1fr [new-agent] 300px [logout] 100px;
+  grid-template-columns: [logo] 200px [menu] 1fr [new-agent] 250px [logout] 100px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
-.c2 {
+.c4 {
   margin-right: 16px;
 }
 
-.c4 {
+.c2 {
+  grid-column: menu;
+}
+
+.c1 {
+  grid-column: logo;
+}
+
+.c6 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -277,22 +307,21 @@ exports[`login renders correctly 1`] = `
   grid-column: logout;
   float: right;
   width: 100px;
-  height: 75%;
 }
 
-.c4:hover {
+.c6:hover {
   opacity: 0.90;
 }
 
-.c4:focus {
+.c6:focus {
   outline: none;
 }
 
-.c4:active {
+.c6:active {
   opacity: 0.80;
 }
 
-.c3 {
+.c5 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -308,27 +337,31 @@ exports[`login renders correctly 1`] = `
   max-width: 250px;
 }
 
-.c3:hover {
+.c5:hover {
   opacity: 0.90;
 }
 
-.c3:focus {
+.c5:focus {
   outline: none;
 }
 
-.c3:active {
+.c5:active {
   opacity: 0.80;
 }
 
 <div
   className="c0"
 >
-  <h3>
+  <div
+    className="c1"
+  >
     Apollo
-  </h3>
-  <div>
+  </div>
+  <div
+    className="c2"
+  >
     <a
-      className="c1 c2"
+      className="c3 c4"
       href="/"
       onClick={[Function]}
     >
@@ -336,14 +369,14 @@ exports[`login renders correctly 1`] = `
     </a>
   </div>
   <button
-    className="c3"
+    className="c5"
     id="newAgentButton"
     onClick={[Function]}
   >
     Add new agent
   </button>
   <button
-    className="c4"
+    className="c6"
     id="logoutButton"
     onClick={[Function]}
   >
