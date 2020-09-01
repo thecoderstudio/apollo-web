@@ -1,5 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`user list item correctly closes modal 1`] = `
+.c0 {
+  min-height: 60px;
+  padding: 0px 16px;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: 3fr 1fr 25px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  margin: 0px;
+}
+
+.c2 {
+  float: right;
+  width: 80px;
+  padding: 4px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #4D02EE;
+}
+
+.c3 {
+  cursor: pointer;
+  color: #ED3E2A;
+  float: right;
+  margin-right: 10px;
+  grid-column: 3;
+}
+
+<div
+  className="c0"
+>
+  <p
+    className="c1"
+  />
+  <p
+    className="c2"
+  >
+    not admin
+  </p>
+  <i
+    className="c3 far fa-trash-alt"
+    onClick={[Function]}
+  />
+</div>
+`;
+
 exports[`user list item correctly opens modal 1`] = `
 .c4 {
   display: inline;

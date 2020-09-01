@@ -66,6 +66,23 @@ describe("user list item", () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it("correctly closes modal", async () => {
+    axios.delete.mockResolvedValue({
+      status: 204
+    });
+    const user = {
+      id: 'id2',
+      role: {
+        name: 'not admin'
+      }
+    };
+    const tree = getComponent(user, store);
+    tree.root.findByType('i').props.onClick();
+    tree.toJSON();
+    tree.root.findAllByType('button')[0].props.onClick();
+    expect(tree.toJSON()).toMatchSnapshot();
+  });
+
   it("correctly cannot not remove user", () => {
     const user = {
       id: 'id2',
