@@ -14,8 +14,6 @@ exports[`ModalOverlay renders correctly 1`] = `
   className="c0"
   onClick={[Function]}
 >
-  <button
-    id="test"
-  />
+  <div />
 </div>
 `;
