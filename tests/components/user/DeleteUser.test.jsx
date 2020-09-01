@@ -1,7 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import axios from 'axios';
-import { Provider } from 'react-redux';
 import waitForExpect from 'wait-for-expect';
 import DeleteUser from '../../../src/components/user/DeleteUser'
 import { darkTheme } from '../../../src/theme';
