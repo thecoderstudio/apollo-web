@@ -26,7 +26,7 @@ class DeleteUser extends React.PureComponent {
       this.props.closeFunction();
     })
     .catch(error => {
-      handleHTTPResponse(error, error.response.data.detail);
+      handleHTTPResponse(error.response);
       this.props.closeFunction();
     });
 

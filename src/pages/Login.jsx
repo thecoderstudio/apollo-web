@@ -114,7 +114,7 @@ class Login extends React.Component {
       { withCredentials: true }
     )
       .then(res => {
-        if (handleHTTPResponse(res, undefined, false, true)) {
+        if (handleHTTPResponse(res, false, true)) {
           this.props.dispatch(loginAction());
           this.fetchCurrentUser();
         }
