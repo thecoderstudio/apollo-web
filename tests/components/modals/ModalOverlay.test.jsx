@@ -6,8 +6,8 @@ import { mount } from 'enzyme'
 
 function getComponent(spy) {
   return renderer.create(
-    <ModalOverlay id='modal' closeModalFunction={spy}>
-      <button id='test' />
+    <ModalOverlay closeModalFunction={spy}>
+      <div />
     </ModalOverlay>
   );
 }
@@ -21,22 +21,21 @@ describe('ModalOverlay', () => {
     const spy = jest.fn();
     const wrapper = mount(
       <ModalOverlay closeModalFunction={spy}>
-        <div id='test' />
+        <div />
       </ModalOverlay>
     );
-    const btn = wrapper.find('div').first().simulate('click')
-
+    wrapper.find('div').first().simulate('click')
     expect(spy).toHaveBeenCalled();
   });
 
-  // it('does not call close function', () => {
-  //   const spy = jest.fn();
-  //   const wrapper = mount(
-  //     <ModalOverlay closeModalFunction={spy}>
-  //       <div id='test' />
-  //     </ModalOverlay>
-  //   );
-  //   const btn = wrapper.find('#test').simulate('click')
-  //   expect(spy).toHaveBeenCalledTimes(0);
-  // });
+  it('does not call close function', () => {
+    const spy = jest.fn();
+    const wrapper = mount(
+      <ModalOverlay closeModalFunction={spy}>
+        <div id='test' />
+      </ModalOverlay>
+    );
+    wrapper.find('#test').simulate('click')
+    expect(spy).toHaveBeenCalledTimes(0);
+  });
 });
