@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
+import { Formik } from 'formik';
 import axios from 'axios';
 import Input from "../Input";
 import ModalOverlay from './ModalOverlay';
@@ -157,16 +158,10 @@ const StyledInput = styled(Input)`
   font-family: 'B612', sans-serif;
   font-weight: 600;
   width: 200px;
-  padding: 15px;
-  margin: 15px;
-  background-color: ${props => props.theme.lightBlack};
-  color: ${props => props.theme.white};
-  border: 1px solid ${props => props.error ? props.theme.error : 'transparent'};
 
-  &:focus{
-    outline: none;
-    border: 1px solid ${props => props.theme.accent};
-  }
+  margin: 15px;
+
+
 `;
 
 const CloseOutlinedButton = styled(OutlinedButton)`
@@ -295,10 +290,20 @@ class AddAgentModal extends React.PureComponent {
   getStepOneComponents(onclick) {
     return(
       <div>
+        <Formik
+          initialValues={{ agentName: '' }}
+          validationSchema={createAgentSchema}
+          >
+          <Form>
         <TextAndInputFieldWrapper>
           <TextWrapper>Agent name</TextWrapper>
           <InputFieldWrapper>
-            <StyledInput error={this.state.agentNameError} placeholder="007" onChange={this.handleAgentNameChange} />
+            <StyledInput
+              inverted
+              placeholder="007"
+              onChange={this.handleAgentNameChange}
+
+              />
           </InputFieldWrapper>
         </TextAndInputFieldWrapper>
         <TextAndInputFieldWrapper>
@@ -329,6 +334,8 @@ class AddAgentModal extends React.PureComponent {
             Create agent
           </CreateAgentButton>
         </TwoColumnGrid>
+        </Form>
+        </Formik>
       </div>
     );
   }
