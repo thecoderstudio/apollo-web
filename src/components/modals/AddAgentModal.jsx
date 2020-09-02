@@ -190,9 +190,7 @@ class AddAgentModal extends React.PureComponent {
     this.state = {
       renderFunction : this.renderQuestion,
       title: "Choose installation",
-      agentName: "",
       loading: false,
-      agentNameError: false
     };
     this.newAgentHandler = new NewAgentHandler();
   }
@@ -206,8 +204,8 @@ class AddAgentModal extends React.PureComponent {
     this.renderDirectlyOnMachineStepOne = this.renderDirectlyOnMachineStepOne.bind(this);
     this.renderDirectlyOnMachineStepTwo = this.renderDirectlyOnMachineStepTwo.bind(this);
     this.renderManualUploadStepOne = this.renderManualUploadStepOne.bind(this);
+    this.setFinalRenderFunction = this.setFinalRenderFunction.bind(this);
     this.renderManualUploadStepTwo = this.renderManualUploadStepTwo.bind(this);
-    this.handleAgentNameChange = this.handleAgentNameChange.bind(this);
     this.createAgent = this.createAgent.bind(this);
     this.downloadBinary = this.downloadBinary.bind(this);
   }
@@ -224,7 +222,7 @@ class AddAgentModal extends React.PureComponent {
           agentId: response.data['id'],
           secret: response.data['oauth_client']['secret']
         });
-        // this.setRenderFunction(renderFunctionCallback);
+        setFinalRenderFunction();
       })
       .catch(error => {
         handleHTTPResponse(error.response, true, true);
@@ -259,6 +257,14 @@ class AddAgentModal extends React.PureComponent {
       });
   }
 
+  setFinalRenderFunction() {
+    if (this.state.renderFunction == this.renderDirectlyOnMachineStepOne) {
+      this.setState({ renderFunction: this.renderDirectlyOnMachineStepTwo })
+    } else {
+      this.setState({ renderFunction: this.renderManualUploadStepTwo })
+    }
+  }
+
   setRenderFunction(renderFunction) {
     this.setState({ renderFunction });
   }
@@ -275,10 +281,6 @@ class AddAgentModal extends React.PureComponent {
       renderFunction: this.renderManualUploadStepOne,
       title
     });
-  }
-
-  handleAgentNameChange(e) {
-    this.setState({ agentName: e.target.value, agentNameError: false });
   }
 
   renderDirectlyOnMachineStepOne() {
