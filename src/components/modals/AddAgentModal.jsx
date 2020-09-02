@@ -245,7 +245,6 @@ class AddAgentModal extends React.PureComponent {
 
   bindMethods() {
     this.renderQuestion = this.renderQuestion.bind(this);
-    this.setRenderFunction = this.setRenderFunction.bind(this);
     this.getStepOneComponents = this.getStepOneComponents.bind(this);
     this.selectStepOneDirectly = this.selectStepOneDirectly.bind(this);
     this.selectStepOneManual = this.selectStepOneManual.bind(this);
@@ -313,10 +312,6 @@ class AddAgentModal extends React.PureComponent {
     } else {
       this.setState({ renderFunction: this.renderManualUploadStepTwo })
     }
-  }
-
-  setRenderFunction(renderFunction) {
-    this.setState({ renderFunction });
   }
 
   selectStepOneDirectly(title) {
