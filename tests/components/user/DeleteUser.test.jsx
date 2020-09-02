@@ -7,17 +7,22 @@ import { darkTheme } from '../../../src/theme';
 
 jest.mock('axios');
 
-function getComponent(user, callback) {
+function getComponent(user, callback, closeFunction) {
   return renderer.create(
     <DeleteUser theme={darkTheme} user={user} userDeleteCallback={callback} closeFunction={jest.fn()} />
   );
 }
 
 describe("Delete user", () => {
+  const userDeleteCallback;
+  const closeFunction;
 
+  beforeEach(() => {
+    userDeleteCallback = jest.fn();
+    closeFunction = jest.fn();
+  });
 
   it("correctly deletes user", async () => {
-    const spy = jest.fn();
     axios.delete.mockResolvedValue({
       status: 204
     });
@@ -30,12 +35,12 @@ describe("Delete user", () => {
     const tree = getComponent(user, spy);
     tree.root.findAllByType('button')[1].props.onClick();
     await waitForExpect(() => {
-      expect(spy).toHaveBeenCalled();
+      expect(userDeleteCallback).toHaveBeenCalled();
+      expect(closeFunction).toHaveBeenCalled();
     });
   });
 
   it("does not delete user", async () => {
-    const spy = jest.fn();
     axios.delete.mockRejectedValue({
       status: 400,
       response: {
@@ -53,7 +58,8 @@ describe("Delete user", () => {
     const tree = getComponent(user, spy);
     tree.root.findAllByType('button')[1].props.onClick();
     await waitForExpect(() => {
-      expect(spy).toHaveBeenCalledTimes(0);
+      expect(spy).not.toHaveBeenCalled();
+      expect(userDeleteCallback).toHaveBeenCalled();
     });
   });
 });

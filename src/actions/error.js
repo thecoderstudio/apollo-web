@@ -17,7 +17,7 @@ function handleHTTPResponse(response, notify=true, allowBadRequests=false) {
     // The bad request won't be treated as an error but it isn't a successful response either.
     return false;
   }
-  const message = response.detail ? response.detail : response.statusText;
+  const message = response.data.detail ? response.data.detail : response.statusText;
   handleError(message, notify);
   return false;
 }

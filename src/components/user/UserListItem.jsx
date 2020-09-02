@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { withTheme } from 'styled-components';
+import styled from 'styled-components';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import checkIfAdmin from '../../util/admin';
@@ -87,4 +87,4 @@ UserListItem.propTypes = propTypes;
 
 export default connect(
   state => ({ currentUser: state.currentUser })
-)(withTheme(UserListItem));
+)(UserListItem);

@@ -51,9 +51,6 @@ describe("user list item", () => {
   });
 
   it("correctly opens modal", async () => {
-    axios.delete.mockResolvedValue({
-      status: 204
-    });
     const user = {
       id: 'id2',
       role: {
@@ -67,9 +64,6 @@ describe("user list item", () => {
   });
 
   it("correctly closes modal", async () => {
-    axios.delete.mockResolvedValue({
-      status: 204
-    });
     const user = {
       id: 'id2',
       role: {

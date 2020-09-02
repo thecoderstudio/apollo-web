@@ -36,7 +36,7 @@ describe("handleHTTPResponse", () => {
     expect(spy).toHaveBeenCalledWith(expectedAction);
   });
 
-  it("notifies of unsuccessful response wit herror detail", () => {
+  it("notifies of unsuccessful response with error detail", () => {
     const spy = jest.spyOn(store, 'dispatch');
     const expectedAction = {
       type: 'NOTIFY',
@@ -44,7 +44,7 @@ describe("handleHTTPResponse", () => {
       message: "error",
       severity: severity.ERROR
     };
-    const response = { status: 400, detail: "error", statusText: "bad request" };
+    const response = { status: 400, data: { detail: "error" }, statusText: "bad request" };
     expect(handleHTTPResponse(response)).toEqual(false);
     expect(spy).toHaveBeenCalledWith(expectedAction);
   });
