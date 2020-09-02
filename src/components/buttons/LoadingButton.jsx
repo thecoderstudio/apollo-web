@@ -6,11 +6,12 @@ import spinnerImg from '../../images/spinner.svg';
 
 const propTypes = {
   loading: PropTypes.bool,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func
 };
 
 const defaultProps = {
-  loading: false
+  loading: false,
+  onClick: null
 };
 
 const rotate = keyframes`

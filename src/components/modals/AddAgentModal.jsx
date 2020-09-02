@@ -3,13 +3,17 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { Formik } from 'formik';
 import axios from 'axios';
+import { StatusCodes } from 'http-status-codes';
 import Input from "../Input";
 import ModalOverlay from './ModalOverlay';
 import DescriptionButton from '../buttons/DescriptionButton';
 import Card from '../Card';
 import OutlinedButton from "../buttons/OutlinedButton";
 import DropDown from "../Dropdown";
+import { createAgentSchema } from '../../validation/agent';
+import { parseHTTPErrors } from '../../util/parser';
 import { selectArchitecture, selectOperatingSystem } from "../../actions/add-agent";
+import { handleHTTPResponse } from '../../actions/error';
 import CopyToClipboard from "../CopyToClipboard";
 import NewAgentHandler from "../../lib/NewAgentHandler";
 import LoadingButton from "../buttons/LoadingButton";
@@ -208,15 +212,11 @@ class AddAgentModal extends React.PureComponent {
     this.downloadBinary = this.downloadBinary.bind(this);
   }
 
-  createAgent(renderFunctionCallback) {
-    if (this.state.agentName === "") {
-      this.setState({ agentNameError: true });
-      return;
-    }
+  createAgent(values, { setErrors }) {
     this.setState({ loading: true });
     axios.post(
       `${process.env.APOLLO_HTTP_URL}agent`,
-      { name : this.state.agentName },
+      values,
       { withCredentials: true }
     )
       .then(response => {
@@ -224,11 +224,13 @@ class AddAgentModal extends React.PureComponent {
           agentId: response.data['id'],
           secret: response.data['oauth_client']['secret']
         });
-        this.setRenderFunction(renderFunctionCallback);
+        // this.setRenderFunction(renderFunctionCallback);
       })
       .catch(error => {
-        if ('name' in error.response.data) {
-          this.setState({ agentNameError: true });
+        handleHTTPResponse(error.response, true, true);
+        console.log(error.response.data)
+        if (error.response.status === StatusCodes.BAD_REQUEST) {
+          setErrors(parseHTTPErrors(error.response.data, { detail: 'name' }));
         }
       })
       .finally(_ => {
@@ -291,50 +293,54 @@ class AddAgentModal extends React.PureComponent {
     return(
       <div>
         <Formik
-          initialValues={{ agentName: '' }}
+          initialValues={{ name: '' }}
           validationSchema={createAgentSchema}
-          >
-          <Form>
-        <TextAndInputFieldWrapper>
-          <TextWrapper>Agent name</TextWrapper>
-          <InputFieldWrapper>
-            <StyledInput
-              inverted
-              placeholder="007"
-              onChange={this.handleAgentNameChange}
-
-              />
-          </InputFieldWrapper>
-        </TextAndInputFieldWrapper>
-        <TextAndInputFieldWrapper>
-          <TextWrapper>Operating system</TextWrapper>
-          <InputFieldWrapper>
-            <DropDown
-              selected={this.props.selectedOperatingSystem}
-              options={this.newAgentHandler.supportedOS}
-              optionSelectedAction={selectOperatingSystem}
-            />
-          </InputFieldWrapper>
-        </TextAndInputFieldWrapper>
-        <TextAndInputFieldWrapper>
-          <TextWrapper>Architecture</TextWrapper>
-          <InputFieldWrapper>
-            <DropDown
-              selected={this.props.selectedArchitecture}
-              options={this.newAgentHandler.supportedArch}
-              optionSelectedAction={selectArchitecture}
-            />
-          </InputFieldWrapper>
-        </TextAndInputFieldWrapper>
-        <TwoColumnGrid>
-          <CloseOutlinedButton id='closeButton' onClick={this.props.onClose}>
-            Close
-          </CloseOutlinedButton>
-          <CreateAgentButton id='createAgentButton' loading={this.state.loading} onClick={() => this.createAgent(onclick)}>
-            Create agent
-          </CreateAgentButton>
-        </TwoColumnGrid>
-        </Form>
+          onSubmit={this.createAgent}>
+          {({ values, errors, handleChange, handleSubmit }) => (
+          <form onSubmit={handleSubmit}>
+            <TextAndInputFieldWrapper>
+              <TextWrapper>Agent name</TextWrapper>
+              <InputFieldWrapper>
+                <StyledInput
+                  inverted
+                  name="name"
+                  type="name"
+                  value={values.name}
+                  error={errors.name}
+                  placeholder="007"
+                  onChange={handleChange} />
+              </InputFieldWrapper>
+            </TextAndInputFieldWrapper>
+            <TextAndInputFieldWrapper>
+              <TextWrapper>Operating system</TextWrapper>
+              <InputFieldWrapper>
+                <DropDown
+                  selected={this.props.selectedOperatingSystem}
+                  options={this.newAgentHandler.supportedOS}
+                  optionSelectedAction={selectOperatingSystem}
+                />
+              </InputFieldWrapper>
+            </TextAndInputFieldWrapper>
+            <TextAndInputFieldWrapper>
+              <TextWrapper>Architecture</TextWrapper>
+              <InputFieldWrapper>
+                <DropDown
+                  selected={this.props.selectedArchitecture}
+                  options={this.newAgentHandler.supportedArch}
+                  optionSelectedAction={selectArchitecture}
+                />
+              </InputFieldWrapper>
+            </TextAndInputFieldWrapper>
+            <TwoColumnGrid>
+              <CloseOutlinedButton type='button' id='closeButton' onClick={this.props.onClose}>
+                Close
+              </CloseOutlinedButton>
+              <CreateAgentButton type='submit' id='createAgentButton' loading={this.state.loading}>
+                Create agent
+              </CreateAgentButton>
+            </TwoColumnGrid>
+          </form>
+          )}
         </Formik>
       </div>
     );

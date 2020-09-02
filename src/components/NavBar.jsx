@@ -66,7 +66,6 @@ class NavBar extends React.PureComponent {
   }
 
   closeAddAgent() {
-    console.log("******");
     this.setState({ showAddAgent: false });
   }
 

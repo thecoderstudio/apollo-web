@@ -27,7 +27,7 @@ const StyledInput = styled.input`
   font-size: 1rem;
   padding-left: 10px;
   opacity: 0.9;
-  border: 1px solid ${props => props.error ? props.theme.error : 'transparent'};
+  border: 1px solid ${props => props.hasError ? props.theme.error : 'transparent'};
 
   &:focus{
     outline: none;
@@ -37,13 +37,15 @@ const StyledInput = styled.input`
 
 const Error = styled.p`
   color: ${props => props.theme.error};
+  margin-top: 5px;
+  font-size: 0.9rem;
 `;
 
 export default function Input(props) {
   const { className, error, ...rest } = props;
   return (
     <Container className={className}>
-      <StyledInput {...rest} />
+      <StyledInput hasError={error.length > 0} {...rest} />
       { error !== '' && <Error>{error}</Error>}
     </Container>
   );
