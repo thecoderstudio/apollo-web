@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
 import NavBar from '../../src/components/NavBar';
 import { logout as logoutAction } from '../../src/actions/auth';
-import { showAddAgentModal as showAddAgentModalAction } from '../../src/actions/add-agent';
 
 const mockStore = configureStore([]);
 
@@ -55,10 +54,7 @@ describe('login', () => {
     const component = getComponent(store);
     const instance = component.root;
     instance.findByProps({ id: 'newAgentButton' }).props.onClick();
-
-    await waitForExpect(() => {
-      expect(spy).toHaveBeenCalledWith(showAddAgentModalAction());
-    });
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it("render admin link for admins", () => {

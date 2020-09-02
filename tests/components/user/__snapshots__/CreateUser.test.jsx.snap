@@ -64,6 +64,12 @@ exports[`create user renders correctly 1`] = `
   font-size: 1rem;
   padding-left: 10px;
   opacity: 0.9;
+  border: 1px solid transparent;
+}
+
+.c5:focus {
+  outline: none;
+  border: 1px solid;
 }
 
 .c0 {

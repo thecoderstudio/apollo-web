@@ -64,6 +64,12 @@ exports[`user list correctly toggles create user 1`] = `
   font-size: 1rem;
   padding-left: 10px;
   opacity: 0.9;
+  border: 1px solid transparent;
+}
+
+.c9:focus {
+  outline: none;
+  border: 1px solid;
 }
 
 .c4 {

@@ -259,6 +259,7 @@ class AddAgentModal extends React.PureComponent {
   }
 
   createAgent(values, { setErrors }) {
+    console.log('creating agent******');
     this.setState({ loading: true });
     axios.post(
       `${process.env.APOLLO_HTTP_URL}agent`,
@@ -273,6 +274,7 @@ class AddAgentModal extends React.PureComponent {
         this.setFinalRenderFunction();
       })
       .catch(error => {
+        console.log('error')
         handleHTTPResponse(error.response, true, true);
         if (error.response.status === StatusCodes.BAD_REQUEST) {
           setErrors(parseHTTPErrors(error.response.data, { name: 'name' }));

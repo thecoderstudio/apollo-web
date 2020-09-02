@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { logout as logoutAction } from '../actions/auth';
-import { showAddAgentModal } from '../actions/add-agent';
 import Button from './buttons/Button';
 import OutlinedButton from './buttons/OutlinedButton';
 import AddAgentModal from './modals/AddAgentModal';

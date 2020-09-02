@@ -253,6 +253,12 @@ exports[`app renders correctly unauthenticated 1`] = `
   font-size: 1rem;
   padding-left: 10px;
   opacity: 0.9;
+  border: 1px solid transparent;
+}
+
+.c8:focus {
+  outline: none;
+  border: 1px solid #4D02EE;
 }
 
 .c10 {
