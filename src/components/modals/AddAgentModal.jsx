@@ -218,11 +218,10 @@ class AddAgentModal extends React.PureComponent {
           agentId: response.data['id'],
           secret: response.data['oauth_client']['secret']
         });
-        setFinalRenderFunction();
+        this.setFinalRenderFunction();
       })
       .catch(error => {
         handleHTTPResponse(error.response, true, true);
-        console.log(error.response.data)
         if (error.response.status === StatusCodes.BAD_REQUEST) {
           setErrors(parseHTTPErrors(error.response.data, { name: 'name' }));
         }
