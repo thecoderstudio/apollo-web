@@ -166,7 +166,7 @@ const CreateAgentButton = styled(LoadingButton)`
   }
 `;
 
-const DownloadBinaryButtonWrapper = styled.div`
+const DownloadBinaryButton = styled(LoadingButton)`
   float: right;
   width: 200px;
   height: 50px;
@@ -187,7 +187,7 @@ const ThreeRowDisplay = styled.div`
   grid-template-rows: [description] 1fr [commands] 1fr [button] 1fr
 `;
 
-const CommandWrapper = styled.div`
+const StyledCopyToClipboard = styled(CopyToClipboard)`
   grid-row: commands;
   margin-bottom: 20px;
 `;
@@ -402,9 +402,7 @@ class AddAgentModal extends React.PureComponent {
         <Description>
           Copy and run the command on the target machine to download run the client.
         </Description>
-        <CommandWrapper>
-          <CopyToClipboard id='copytoclip' text={command} />
-        </CommandWrapper>
+        <StyledCopyToClipboard id='copytoclip' text={command} />
         <CloseButton id='closeButton' onClick={this.props.onClose}>Close</CloseButton>
       </ThreeRowDisplay>
     );
@@ -427,9 +425,9 @@ class AddAgentModal extends React.PureComponent {
             Download the binary and upload it to the target machine.
           </ColumnOne>
           <ColumnTwo>
-            <DownloadBinaryButtonWrapper>
-              <LoadingButton id='downloadBinaryButton' loading={this.state.loading} onClick={this.downloadBinary}>Download binary</LoadingButton>
-            </DownloadBinaryButtonWrapper>
+            <DownloadBinaryButton id='downloadBinaryButton' loading={this.state.loading} onClick={this.downloadBinary}>
+              Download binary
+            </DownloadBinaryButton>
           </ColumnTwo>
         </TwoColumnGrid>
         {this.getStepTwoComponents(
