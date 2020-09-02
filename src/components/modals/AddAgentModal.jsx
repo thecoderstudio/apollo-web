@@ -97,7 +97,7 @@ const TextAndInputFieldWrapper = styled.div`
   display: grid;
   width: 100%;
   grid-template-columns: [text] 60% [dropdown] 40%;
-  height: 80px;
+  height: 100px;
 `;
 
 const InputFieldWrapper = styled.div`
@@ -162,10 +162,7 @@ const StyledInput = styled(Input)`
   font-family: 'B612', sans-serif;
   font-weight: 600;
   width: 200px;
-
   margin: 15px;
-
-
 `;
 
 const CloseOutlinedButton = styled(OutlinedButton)`
@@ -177,7 +174,6 @@ const CloseOutlinedButton = styled(OutlinedButton)`
   ${
     media.phone`
       width: 100%
-
     `
   }
 `;
@@ -228,7 +224,7 @@ class AddAgentModal extends React.PureComponent {
         handleHTTPResponse(error.response, true, true);
         console.log(error.response.data)
         if (error.response.status === StatusCodes.BAD_REQUEST) {
-          setErrors(parseHTTPErrors(error.response.data, { detail: 'name' }));
+          setErrors(parseHTTPErrors(error.response.data, { name: 'name' }));
         }
       })
       .finally(_ => {
