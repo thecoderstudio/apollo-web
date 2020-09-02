@@ -9,11 +9,6 @@ const propTypes = {
   selected: PropTypes.string.isRequired
 };
 
-const DropDownWrapper = styled.div`
-  padding: 15px;
-  width: 200px;
-`;
-
 const DropDownButton = styled.div`
   border: none;
   border-radius: 5px;
@@ -112,7 +107,7 @@ class DropDown extends React.PureComponent {
 
   render() {
     return(
-      <DropDownWrapper ref={node => this.node = node}>
+      <div className={this.props.className} ref={node => this.node = node}>
         <DropDownButton id='dropdown' onClick={this.toggleCollapse}>
           {this.props.selected}
           <DropDownIcon collapsed={this.state.collapsed}/>
@@ -120,7 +115,7 @@ class DropDown extends React.PureComponent {
         <DropDownContent collapsed={this.state.collapsed}>
           {this.renderItems()}
         </DropDownContent>
-      </DropDownWrapper>
+      </div>
     );
   }
 }

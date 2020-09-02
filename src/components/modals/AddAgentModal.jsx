@@ -27,7 +27,7 @@ const propTypes = {
 const StyledCard = styled(Card)`
   display: grid;
   grid-template-rows: [title] 50px [content] 1fr;
-  position:fixed;
+  position: fixed;
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
@@ -96,17 +96,53 @@ const StyledDescriptionButton = styled(DescriptionButton)`
 const TextAndInputFieldWrapper = styled.div`
   display: grid;
   width: 100%;
-  grid-template-columns: [text] 60% [dropdown] 40%;
-  height: 100px;
+  grid-template-columns: [text] 50% [dropdown] 50%;
+
+  ${
+    media.phone`
+      grid-template-columns: [column-one] 100%;
+      grid-template-rows: [text] 30px [dropdown] 85px;
+    `
+  }
 `;
 
 const InputFieldWrapper = styled.div`
   grid-column: dropdown;
+
+  ${
+    media.phone`
+      grid-column: column-one;
+      grid-row: dropdown;
+      width: 100%;
+    `
+  }
+`;
+
+const StyledDropDown = styled(DropDown)`
+  width: 200px;
+  float: right;
+
+  ${
+    media.phone`
+      width: 100%;
+    `
+  }
 `;
 
 const TextWrapper = styled.p`
   grid-column: text;
   line-height: 75px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  ${
+    media.phone`
+      width: 100%;
+      line-height: 100%;
+      grid-column: column-one;
+      grid-row: text;
+    `
+  }
 `;
 
 const StyledButton = styled(OutlinedButton)`
@@ -136,6 +172,14 @@ const DownloadBinaryButtonWrapper = styled.div`
   height: 50px;
   margin: auto;
   display: block;
+
+  ${
+    media.phone`
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+    `
+  }
 `;
 
 const ThreeRowDisplay = styled.div`
@@ -162,7 +206,14 @@ const StyledInput = styled(Input)`
   font-family: 'B612', sans-serif;
   font-weight: 600;
   width: 200px;
-  margin: 15px;
+  float: right;
+
+  ${
+    media.phone`
+      width: 100%;
+      grid-row: row-two;
+    `
+  }
 `;
 
 const CloseOutlinedButton = styled(OutlinedButton)`
@@ -313,7 +364,7 @@ class AddAgentModal extends React.PureComponent {
             <TextAndInputFieldWrapper>
               <TextWrapper>Operating system</TextWrapper>
               <InputFieldWrapper>
-                <DropDown
+                <StyledDropDown
                   selected={this.props.selectedOperatingSystem}
                   options={this.newAgentHandler.supportedOS}
                   optionSelectedAction={selectOperatingSystem}
@@ -323,7 +374,7 @@ class AddAgentModal extends React.PureComponent {
             <TextAndInputFieldWrapper>
               <TextWrapper>Architecture</TextWrapper>
               <InputFieldWrapper>
-                <DropDown
+                <StyledDropDown
                   selected={this.props.selectedArchitecture}
                   options={this.newAgentHandler.supportedArch}
                   optionSelectedAction={selectArchitecture}
