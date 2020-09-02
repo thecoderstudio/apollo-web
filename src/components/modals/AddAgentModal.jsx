@@ -173,7 +173,8 @@ const CloseOutlinedButton = styled(OutlinedButton)`
 
   ${
     media.phone`
-      width: 100%
+      width: 100%;
+      grid-row: row-two;
     `
   }
 `;
@@ -253,6 +254,7 @@ class AddAgentModal extends React.PureComponent {
   }
 
   setFinalRenderFunction() {
+    console.log(this.state.renderFunction)
     if (this.state.renderFunction == this.renderDirectlyOnMachineStepOne) {
       this.setState({ renderFunction: this.renderDirectlyOnMachineStepTwo })
     } else {
@@ -330,7 +332,7 @@ class AddAgentModal extends React.PureComponent {
             </TextAndInputFieldWrapper>
             <TwoColumnGrid>
               <CloseOutlinedButton type='button' id='closeButton' onClick={this.props.onClose}>
-                Close
+                Cancel
               </CloseOutlinedButton>
               <CreateAgentButton type='submit' id='createAgentButton' loading={this.state.loading}>
                 Create agent
