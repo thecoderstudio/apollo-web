@@ -9,13 +9,13 @@ jest.mock('axios');
 
 function getComponent(user, callback, closeFunction) {
   return renderer.create(
-    <DeleteUser theme={darkTheme} user={user} userDeleteCallback={callback} closeFunction={jest.fn()} />
+    <DeleteUser theme={darkTheme} user={user} userDeleteCallback={callback} closeFunction={closeFunction} />
   );
 }
 
 describe("Delete user", () => {
-  const userDeleteCallback;
-  const closeFunction;
+  let userDeleteCallback;
+  let closeFunction;
 
   beforeEach(() => {
     userDeleteCallback = jest.fn();
@@ -32,7 +32,7 @@ describe("Delete user", () => {
         name: 'not admin'
       }
     };
-    const tree = getComponent(user, spy);
+    const tree = getComponent(user, userDeleteCallback, closeFunction);
     tree.root.findAllByType('button')[1].props.onClick();
     await waitForExpect(() => {
       expect(userDeleteCallback).toHaveBeenCalled();
@@ -55,11 +55,11 @@ describe("Delete user", () => {
         name: 'not admin'
       }
     };
-    const tree = getComponent(user, spy);
+    const tree = getComponent(user, userDeleteCallback, closeFunction);
     tree.root.findAllByType('button')[1].props.onClick();
     await waitForExpect(() => {
-      expect(spy).not.toHaveBeenCalled();
-      expect(userDeleteCallback).toHaveBeenCalled();
+      expect(userDeleteCallback).not.toHaveBeenCalled();
+      expect(closeFunction).toHaveBeenCalled();
     });
   });
 });
