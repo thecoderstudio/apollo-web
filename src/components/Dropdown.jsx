@@ -80,6 +80,17 @@ class DropDown extends React.PureComponent {
     this.renderItems = this.renderItems.bind(this);
     this.selectItem = this.selectItem.bind(this);
     this.state = { collapsed: true };
+    this.closeDropdown = this.closeDropdown.bind(this);
+  }
+
+  closeDropdown(e) {
+    if (!this.state.collapsed && !this.node.contains(e.target)) {
+      this.setState({ collapsed: true });
+    }
+  }
+
+  componentDidMount() {
+    document.addEventListener('mousedown', this.closeDropdown , false);
   }
 
   toggleCollapse() {
