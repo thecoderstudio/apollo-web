@@ -66,7 +66,7 @@ describe('Dropdown', () => {
     const root = component.root;
     root.findByProps({ id: 'dropdown' }).props.onClick();
     component.toJSON();
-    root.findByType(PlainDropDown).instance.closeDropdown({ target: "test" })
+    root.findByType(PlainDropDown).instance.closeDropdown({ target: "test" });
     component.toJSON();
     expect(root.findAllByProps({ collapsed: true }).length).toBe(0);
   });
