@@ -85,7 +85,7 @@ export default class UserList extends React.PureComponent {
         </Header>
         <List>
           {this.state.users.map(user => {
-            return <UserListItem key={user.id} user={user} />;
+            return <UserListItem key={user.id} user={user} userDeleteCallback={this.fetchUsers} />;
           })}
         </List>
         { this.state.creatingUser && <CreateUser onClose={this.closeCreateUser} /> }

@@ -17,6 +17,14 @@ exports[`login renders correctly 1`] = `
   opacity: 0.90;
 }
 
+.c8:focus {
+  outline: none;
+}
+
+.c8:active {
+  opacity: 0.80;
+}
+
 .c6 {
   height: 80px;
 }

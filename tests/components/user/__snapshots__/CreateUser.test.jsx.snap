@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`create user renders correctly 1`] = `
-.c8 {
+.c9 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -13,11 +13,19 @@ exports[`create user renders correctly 1`] = `
   cursor: pointer;
 }
 
-.c8:hover {
+.c9:hover {
   opacity: 0.90;
 }
 
-.c7 {
+.c9:focus {
+  outline: none;
+}
+
+.c9:active {
+  opacity: 0.80;
+}
+
+.c8 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -31,15 +39,23 @@ exports[`create user renders correctly 1`] = `
   border: 1px solid;
 }
 
-.c7:hover {
+.c8:hover {
   opacity: 0.90;
 }
 
-.c4 {
-  height: 80px;
+.c8:focus {
+  outline: none;
+}
+
+.c8:active {
+  opacity: 0.80;
 }
 
 .c5 {
+  height: 80px;
+}
+
+.c6 {
   min-height: 50px;
   width: 100%;
   border: none;
@@ -51,6 +67,15 @@ exports[`create user renders correctly 1`] = `
 }
 
 .c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c1 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
@@ -80,7 +105,7 @@ exports[`create user renders correctly 1`] = `
   box-sizing: border-box;
 }
 
-.c1 {
+.c2 {
   height: 100%;
   max-height: 450px;
   display: grid;
@@ -91,12 +116,12 @@ exports[`create user renders correctly 1`] = `
   align-items: center;
 }
 
-.c2 {
+.c3 {
   grid-row: title;
   text-align: center;
 }
 
-.c3 {
+.c4 {
   height: 95%;
   grid-row: form;
   display: grid;
@@ -104,7 +129,7 @@ exports[`create user renders correctly 1`] = `
   grid-row-gap: 40px;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -115,19 +140,19 @@ exports[`create user renders correctly 1`] = `
   justify-content: space-around;
 }
 
-.c6> button {
+.c7> button {
   min-width: 150px;
 }
 
 @media (max-width:47.9375em) {
-  .c0 {
+  .c1 {
     padding: 16px;
     height: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c7 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -140,71 +165,76 @@ exports[`create user renders correctly 1`] = `
 
 <div
   className="c0"
+  onClick={[Function]}
 >
   <div
     className="c1"
   >
-    <h2
+    <div
       className="c2"
     >
-      Create new user
-    </h2>
-    <form
-      className="c3"
-      onSubmit={[Function]}
-    >
-      <div
+      <h2
+        className="c3"
+      >
+        Create new user
+      </h2>
+      <form
         className="c4"
+        onSubmit={[Function]}
       >
-        <input
+        <div
           className="c5"
-          name="username"
-          onChange={[Function]}
-          placeholder="Username"
-          type="username"
-          value=""
-        />
-      </div>
-      <div
-        className="c4"
-      >
-        <input
+        >
+          <input
+            className="c6"
+            name="username"
+            onChange={[Function]}
+            placeholder="Username"
+            type="username"
+            value=""
+          />
+        </div>
+        <div
           className="c5"
-          name="password"
-          onChange={[Function]}
-          placeholder="Password"
-          type="password"
-          value=""
-        />
-      </div>
-      <div
-        className="c4"
-      >
-        <input
+        >
+          <input
+            className="c6"
+            name="password"
+            onChange={[Function]}
+            placeholder="Password"
+            type="password"
+            value=""
+          />
+        </div>
+        <div
           className="c5"
-          name="confirmPassword"
-          onChange={[Function]}
-          placeholder="Confirm password"
-          type="password"
-          value=""
-        />
-      </div>
-      <div
-        className="c6"
-      >
-        <button
+        >
+          <input
+            className="c6"
+            name="confirmPassword"
+            onChange={[Function]}
+            placeholder="Confirm password"
+            type="password"
+            value=""
+          />
+        </div>
+        <div
           className="c7"
-          onClick={[Function]}
         >
-          Cancel
-        </button>
-        <button
-          className="c8"
-        >
-          Create user
-        </button>
-      </div>
-    </form>
+          <button
+            className="c8"
+            onClick={[Function]}
+          >
+            Cancel
+          </button>
+          <button
+            className="c9"
+          >
+            Create user
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
 `;

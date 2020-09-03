@@ -50,6 +50,14 @@ exports[`app renders correctly authenticated 1`] = `
   opacity: 0.90;
 }
 
+.c4:focus {
+  outline: none;
+}
+
+.c4:active {
+  opacity: 0.80;
+}
+
 .c9 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -173,6 +181,14 @@ exports[`app renders correctly unauthenticated 1`] = `
 
 .c9:hover {
   opacity: 0.90;
+}
+
+.c9:focus {
+  outline: none;
+}
+
+.c9:active {
+  opacity: 0.80;
 }
 
 .c10 {

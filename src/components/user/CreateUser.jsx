@@ -11,6 +11,7 @@ import Button from '../buttons/Button';
 import OutlinedButton from '../buttons/OutlinedButton';
 import Input from '../Input';
 import Card from '../Card';
+import ModalOverlay from '../modals/ModalOverlay';
 
 const Container = styled(Card)`
   position: absolute;
@@ -108,47 +109,49 @@ export default class CreateUser extends React.PureComponent {
 
   render() {
     return (
-      <Container>
-        <Content>
-          <Title>Create new user</Title>
-          <Formik
-            initialValues={{ username: '', password: '', confirmPassword: '' }}
-            validationSchema={createUserSchema}
-            onSubmit={this.createUser}>
-            {({ values, errors, handleChange, handleSubmit }) => (
-              <Form onSubmit={handleSubmit}>
-                <Input
-                  name="username"
-                  type="username"
-                  placeholder="Username"
-                  value={values.username}
-                  error={errors.username}
-                  onChange={handleChange} />
-                <Input
-                  name="password"
-                  type="password"
-                  placeholder="Password"
-                  value={values.password}
-                  error={errors.password}
-                  onChange={handleChange}
-                  autocomplete="new-password" />
-                <Input
-                  name="confirmPassword"
-                  type="password"
-                  placeholder="Confirm password"
-                  value={values.confirmPassword}
-                  error={errors.confirmPassword}
-                  onChange={handleChange}
-                  autocomplete="new-password" />
-                <Buttons>
-                  <OutlinedButton onClick={this.close}>Cancel</OutlinedButton>
-                  <Button>Create user</Button>
-                </Buttons>
-              </Form>
-            )}
-          </Formik>
-        </Content>
-      </Container>
+      <ModalOverlay closeModalFunction={this.close}>
+        <Container>
+          <Content>
+            <Title>Create new user</Title>
+            <Formik
+              initialValues={{ username: '', password: '', confirmPassword: '' }}
+              validationSchema={createUserSchema}
+              onSubmit={this.createUser}>
+              {({ values, errors, handleChange, handleSubmit }) => (
+                <Form onSubmit={handleSubmit}>
+                  <Input
+                    name="username"
+                    type="username"
+                    placeholder="Username"
+                    value={values.username}
+                    error={errors.username}
+                    onChange={handleChange} />
+                  <Input
+                    name="password"
+                    type="password"
+                    placeholder="Password"
+                    value={values.password}
+                    error={errors.password}
+                    onChange={handleChange}
+                    autocomplete="new-password" />
+                  <Input
+                    name="confirmPassword"
+                    type="password"
+                    placeholder="Confirm password"
+                    value={values.confirmPassword}
+                    error={errors.confirmPassword}
+                    onChange={handleChange}
+                    autocomplete="new-password" />
+                  <Buttons>
+                    <OutlinedButton onClick={this.close}>Cancel</OutlinedButton>
+                    <Button>Create user</Button>
+                  </Buttons>
+                </Form>
+              )}
+            </Formik>
+          </Content>
+        </Container>
+      </ModalOverlay>
     );
   }
 }
