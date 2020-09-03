@@ -13,5 +13,4 @@ export default combineReducers({
   addAgent: AddAgentReducer,
   currentUser: currentUserReducer,
   notifications: notificationReducer,
-  theme: themeReducer
 });

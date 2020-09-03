@@ -34,7 +34,6 @@ describe('app', () => {
         selectedOperatingSystem: "linux"
       },
       agent: [],
-      authenticated: true,
       currentUser: {},
       notifications: new Map({})
     });

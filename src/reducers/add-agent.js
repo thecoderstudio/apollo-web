@@ -12,12 +12,12 @@ export default function addAgentReducer(state = initialState, action) {
   switch (action.type) {
     case SELECT_ARCHITECTURE:
       return {
-        ...state,
+        selectedOperatingSystem: state.selectedOperatingSystem,
         selectedArchitecture: action.selectedArchitecture
       };
     case SELECT_OPERATING_SYSTEM:
       return {
-        ...state,
+        selectedArchitecture: state.selectedArchitecture,
         selectedOperatingSystem: action.selectedOperatingSystem,
       };
     default: return state;

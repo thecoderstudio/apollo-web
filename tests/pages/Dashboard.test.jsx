@@ -20,8 +20,7 @@ describe('dashboard', () => {
         role: {
           name: 'admin'
         }
-      },
-      authenticated: true
+      }
     });
 
     const tree = renderer.create(

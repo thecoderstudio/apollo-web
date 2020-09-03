@@ -12,7 +12,6 @@ test("root reducer should contain all reducers", () => {
       selectedOperatingSystem: "linux"
     },
     currentUser: {},
-    notifications: new ImmutableMap({}),
-    theme: darkTheme
+    notifications: new ImmutableMap({})
   });
 });

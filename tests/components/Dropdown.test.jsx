@@ -8,7 +8,7 @@ import DropDown, { DropDown as PlainDropDown } from "../../src/components/Dropdo
 
 const mockStore = configureStore([]);
 
-function getComponent(store, props) {
+function getComponent(store, props, mockReturnValue=false) {
   return renderer.create(
     <Provider  store={store}>
       <DropDown {...props} />
@@ -16,7 +16,7 @@ function getComponent(store, props) {
       createNodeMock: (_) => {
         return {
           contains: (_) => {
-            return false;
+            return mockReturnValue;
           }
         };
       }
@@ -51,14 +51,24 @@ describe('Dropdown', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it("opens dropdown correctly", () => {
+  it("closes dropdown correctly", () => {
     const component = getComponent(store, props);
     const root = component.root;
     root.findByProps({ id: 'dropdown' }).props.onClick();
     component.toJSON();
-    root.findByType(PlainDropDown).instance.closeDropdown({ target: document.createElement('a') })
+    root.findByType(PlainDropDown).instance.closeDropdown({ target: "test" });
     component.toJSON();
     expect(root.findAllByProps({ collapsed: true }).length).toBe(2);
+  });
+
+  it("does set collapsed to true when node contains target", () => {
+    const component = getComponent(store, props, true);
+    const root = component.root;
+    root.findByProps({ id: 'dropdown' }).props.onClick();
+    component.toJSON();
+    root.findByType(PlainDropDown).instance.closeDropdown({ target: "test" })
+    component.toJSON();
+    expect(root.findAllByProps({ collapsed: true }).length).toBe(0);
   });
 
   it("correctly calls optionSelectedAction on option click", async () => {

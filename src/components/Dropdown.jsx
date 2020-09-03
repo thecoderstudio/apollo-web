@@ -1,4 +1,3 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -124,4 +123,4 @@ DropDown.propTypes = propTypes;
 
 export default connect()(DropDown);
 
-export { DropDown }
+export { DropDown };

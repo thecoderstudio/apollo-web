@@ -8,7 +8,6 @@ export const darkTheme = {
   darkGrey: "#3E3E3E",
   primary: "#02A3EE",
   accent: "#4D02EE",
-  error: "#ED3E2A",
   overlay: "rgba(37, 37, 37, 0.6)",
   green: "#32E67E",
   red: "#ED3E2A",

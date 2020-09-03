@@ -51,11 +51,11 @@ class NavBar extends React.PureComponent {
     this.openAddAgentModal = this.openAddAgentModal.bind(this);
     this.checkIfAdmin = this.checkIfAdmin.bind(this);
     this.closeAddAgentModal = this.closeAddAgentModal.bind(this);
-    this.state = { showAddAgent: false }
+    this.state = { showAddAgent: false };
   }
 
   openAddAgentModal() {
-    this.setState({ showAddAgent: true })
+    this.setState({ showAddAgent: true });
   }
 
   logout() {

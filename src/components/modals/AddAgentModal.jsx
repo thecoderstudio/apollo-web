@@ -22,7 +22,7 @@ import media from '../../util/media';
 
 const propTypes = {
   onClose: PropTypes.func.isRequired
-}
+};
 
 const StyledCard = styled(Card)`
   display: grid;
@@ -258,7 +258,6 @@ class AddAgentModal extends React.PureComponent {
   }
 
   createAgent(values, { setErrors }) {
-    console.log('creating agent******');
     this.setState({ loading: true });
     axios.post(
       `${process.env.APOLLO_HTTP_URL}agent`,
@@ -273,7 +272,6 @@ class AddAgentModal extends React.PureComponent {
         this.setFinalRenderFunction();
       })
       .catch(error => {
-        console.log('error')
         handleHTTPResponse(error.response, true, true);
         if (error.response.status === StatusCodes.BAD_REQUEST) {
           setErrors(parseHTTPErrors(error.response.data, { name: 'name' }));
@@ -306,11 +304,10 @@ class AddAgentModal extends React.PureComponent {
   }
 
   setFinalRenderFunction() {
-    console.log(this.state.renderFunction)
-    if (this.state.renderFunction == this.renderDirectlyOnMachineStepOne) {
-      this.setState({ renderFunction: this.renderDirectlyOnMachineStepTwo })
+    if (this.state.renderFunction === this.renderDirectlyOnMachineStepOne) {
+      this.setState({ renderFunction: this.renderDirectlyOnMachineStepTwo });
     } else {
-      this.setState({ renderFunction: this.renderManualUploadStepTwo })
+      this.setState({ renderFunction: this.renderManualUploadStepTwo });
     }
   }
 

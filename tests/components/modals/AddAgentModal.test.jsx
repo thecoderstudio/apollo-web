@@ -8,8 +8,6 @@ import renderer from 'react-test-renderer';
 import AddAgentModal from '../../../src/components/modals/AddAgentModal';
 import NewAgentHandler from '../../../src/lib/NewAgentHandler';
 
-const { act } = renderer
-
 const mockStore = configureStore([]);
 jest.mock('axios');
 
@@ -21,16 +19,6 @@ function getComponent(store, spy=jest.fn()) {
   );
 }
 
-function getFinalPageComponent(store, buttonId) {
-  const component = getComponent(store);
-  const instance = component.root;
-  instance.findByProps({ id: buttonId }).props.onClick();
-  component.toJSON();
-
-  submitForm(instance, 'test');
-  return component;
-}
-
 function submitForm(root, name) {
   const nameInput = root.findByProps({ placeholder: '007' });
   const form = root.findByType('form');
@@ -40,8 +28,17 @@ function submitForm(root, name) {
     value: name
   }});
 
-  console.log(form.props);
   form.props.onSubmit();
+}
+
+function getFinalPageComponent(store, buttonId) {
+  const component = getComponent(store);
+  const instance = component.root;
+  instance.findByProps({ id: buttonId }).props.onClick();
+  component.toJSON();
+
+  submitForm(instance, 'test');
+  return component;
 }
 
 describe('addAgentModal', () => {
@@ -92,13 +89,13 @@ describe('addAgentModal', () => {
   });
 
   it('validates input', async () => {
-    const component = getComponent(store)
+    const component = getComponent(store);
     const instance = component.root;
     instance.findByProps({ id: 'directlyButton' }).props.onClick();
     component.toJSON();
 
     submitForm(instance, '');
-    submitForm(instance, new Array(102).join( 'x' ))
+    submitForm(instance, new Array(102).join( 'x' ));
 
     await waitForExpect(() => {
       expect(axios.post).not.toHaveBeenCalled();

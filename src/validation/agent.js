@@ -7,4 +7,4 @@ const createAgentSchema = Yup.object().shape({
     .required("Required")
 });
 
-export { createAgentSchema }
+export { createAgentSchema };
