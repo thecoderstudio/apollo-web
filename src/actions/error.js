@@ -19,7 +19,7 @@ function handleHTTPResponse(response, notify=true, allowBadRequests=false) {
   }
   let message = response.statusText;
   if (response.data && response.data.detail) {
-    message = response.data.detail
+    message = response.data.detail;
   }
   handleError(message, notify);
   return false;

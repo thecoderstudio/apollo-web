@@ -36,6 +36,6 @@ describe('ModalOverlay', () => {
       </ModalOverlay>
     );
     wrapper.find('#test').simulate('click');
-    expect(spy).not.toHaveBeenCalled();;
+    expect(spy).not.toHaveBeenCalled();
   });
 });
