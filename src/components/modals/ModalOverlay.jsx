@@ -21,17 +21,18 @@ export default class ModalOverlay extends React.PureComponent {
   constructor(props) {
     super(props);
     this.closeModal = this.closeModal.bind(this);
+    this.node = React.createRef();
   }
 
   closeModal(e) {
-    if (this.node === e.target) {
+    if (this.node.current === e.target) {
       this.props.closeModalFunction();
     }
   }
 
   render() {
     return (
-      <Overlay ref={node => this.node = node} onClick={this.closeModal}>
+      <Overlay ref={this.node} onClick={this.closeModal}>
         {this.props.children}
       </Overlay>
     );
