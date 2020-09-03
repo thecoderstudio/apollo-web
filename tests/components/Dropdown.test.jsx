@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import waitForExpect from 'wait-for-expect';
 import { selectArchitecture } from "../../src/actions/add-agent";
 import renderer from 'react-test-renderer';
-import DropDown from "../../src/components/Dropdown";
+import DropDown, { DropDown as PlainDropDown } from "../../src/components/Dropdown";
 
 const mockStore = configureStore([]);
 
@@ -12,7 +12,15 @@ function getComponent(store, props) {
   return renderer.create(
     <Provider  store={store}>
       <DropDown {...props} />
-    </Provider>
+    </Provider>, {
+      createNodeMock: (_) => {
+        return {
+          contains: (_) => {
+            return false;
+          }
+        };
+      }
+    }
   );
 }
 
@@ -20,7 +28,6 @@ describe('Dropdown', () => {
   let store;
   let spy;
   let props;
-
 
   beforeEach(() => {
     store = mockStore({});
@@ -37,15 +44,26 @@ describe('Dropdown', () => {
   });
 
   it("opens dropdown correctly", () => {
-    let component = getComponent(store, props);
-    const instance = component.root;
-    instance.findByProps({ id: 'dropdown' }).props.onClick();
+    const component = getComponent(store, props);
+    const root = component.root;
+    root.findByProps({ id: 'dropdown' }).props.onClick();
 
     expect(component.toJSON()).toMatchSnapshot();
   });
 
+  it("opens dropdown correctly", () => {
+    const component = getComponent(store, props);
+    const root = component.root;
+    root.findByProps({ id: 'dropdown' }).props.onClick();
+    component.toJSON();
+    root.findByType(PlainDropDown).instance.closeDropdown({ target: document.createElement('a') })
+    component.toJSON();
+    expect(root.findAllByProps({ collapsed: true }).length).toBe(2);
+  });
+
   it("correctly calls optionSelectedAction on option click", async () => {
     const component = getComponent(store, props);
+
     component.root.findByType('ul').children[0].props.onClick();
 
     await waitForExpect(() => {

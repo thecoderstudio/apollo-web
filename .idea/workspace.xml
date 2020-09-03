@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ca4b91c5-f628-49dd-ac84-d9342654099f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/tests/components/Dropdown.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/tests/components/Dropdown.test.jsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1eU7im9GaH6XDCP9OrCILWAAD9C" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/images" />
+      <recent name="$PROJECT_DIR$/src/components" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="" />
+          <option name="buildCliOptions" value="" />
+          <option name="command" value="" />
+          <option name="containerName" value="" />
+          <option name="entrypoint" value="" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.Dockerfile" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ca4b91c5-f628-49dd-ac84-d9342654099f" name="Default Changelist" comment="" />
+      <created>1594364446794</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594364446794</updated>
+      <workItem from="1594364450996" duration="41000" />
+      <workItem from="1594364508322" duration="53000" />
+      <workItem from="1594364579896" duration="4903000" />
+      <workItem from="1594374126341" duration="89000" />
+      <workItem from="1594375158397" duration="65913000" />
+      <workItem from="1597651598624" duration="355000" />
+      <workItem from="1597666975987" duration="1379000" />
+      <workItem from="1597668944804" duration="2000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1412" y="288" key="#Dockerfile" timestamp="1594372947113">
+      <screen x="0" y="0" width="3440" height="1440" />
+    </state>
+    <state x="1412" y="288" key="#Dockerfile/0.0.3440.1440/3440.0.3440.1440@0.0.3440.1440" timestamp="1594372947113" />
+    <state x="1456" y="350" key="#JavaScript" timestamp="1594365784945">
+      <screen x="0" y="0" width="3440" height="1440" />
+    </state>
+    <state x="1456" y="350" key="#JavaScript/0.0.3440.1440/3440.0.3440.1440@0.0.3440.1440" timestamp="1594365784945" />
+    <state x="1556" y="580" key="#Other_File_Types" timestamp="1594723131910">
+      <screen x="0" y="0" width="3440" height="1440" />
+    </state>
+    <state x="1556" y="580" key="#Other_File_Types/3440.0.3440.1440/0.0.3440.1440@0.0.3440.1440" timestamp="1594723131910" />
+    <state x="1421" y="520" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594717873731">
+      <screen x="0" y="0" width="3440" height="1440" />
+    </state>
+    <state x="1421" y="520" key="#com.intellij.fileTypes.FileTypeChooser/3440.0.3440.1440/0.0.3440.1440@0.0.3440.1440" timestamp="1594717873731" />
+    <state x="1303" y="208" key="CommitChangelistDialog2" timestamp="1594365067366">
+      <screen x="0" y="0" width="3440" height="1440" />
+    </state>
+    <state x="1303" y="208" key="CommitChangelistDialog2/0.0.3440.1440/3440.0.3440.1440@0.0.3440.1440" timestamp="1594365067366" />
+    <state width="3398" height="419" key="GridCell.Tab.0.bottom" timestamp="1595247444146">
+      <screen x="0" y="23" width="3440" height="1417" />
+    </state>
+    <state width="3398" height="419" key="GridCell.Tab.0.bottom/3440.0.3440.1440/0.0.3440.1440@0.0.3440.1440" timestamp="1594817280827" />
+    <state width="3398" height="419" key="GridCell.Tab.0.bottom/3440.23.3440.1417/0.23.3440.1417@0.23.3440.1417" timestamp="1595247444146" />
+    <state width="3398" height="419" key="GridCell.Tab.0.center" timestamp="1595247444145">
+      <screen x="0" y="23" width="3440" height="1417" />
+    </state>
+    <state width="3398" height="419" key="GridCell.Tab.0.center/3440.0.3440.1440/0.0.3440.1440@0.0.3440.1440" timestamp="1594817280825" />
+    <state width="3398" height="419" key="GridCell.Tab.0.center/3440.23.3440.1417/0.23.3440.1417@0.23.3440.1417" timestamp="1595247444145" />
+    <state width="3398" height="419" key="GridCell.Tab.0.left" timestamp="1595247444143">
+      <screen x="0" y="23" width="3440" height="1417" />
+    </state>
+    <state width="3398" height="419" key="GridCell.Tab.0.left/3440.0.3440.1440/0.0.3440.1440@0.0.3440.1440" timestamp="1594817280824" />
+    <state width="3398" height="419" key="GridCell.Tab.0.left/3440.23.3440.1417/0.23.3440.1417@0.23.3440.1417" timestamp="1595247444143" />
+    <state width="3398" height="419" key="GridCell.Tab.0.right" timestamp="1595247444145">
+      <screen x="0" y="23" width="3440" height="1417" />
+    </state>
+    <state width="3398" height="419" key="GridCell.Tab.0.right/3440.0.3440.1440/0.0.3440.1440@0.0.3440.1440" timestamp="1594817280826" />
+    <state width="3398" height="419" key="GridCell.Tab.0.right/3440.23.3440.1417/0.23.3440.1417@0.23.3440.1417" timestamp="1595247444145" />
+    <state x="1229" y="359" key="SettingsEditor" timestamp="1594374109335">
+      <screen x="0" y="0" width="3440" height="1440" />
+    </state>
+    <state x="1229" y="359" key="SettingsEditor/0.0.3440.1440/3440.0.3440.1440@0.0.3440.1440" timestamp="1594374078677" />
+    <state x="1229" y="359" key="SettingsEditor/0.0.3440.1440/3440.23.3440.1417@0.0.3440.1440" timestamp="1594374109335" />
+    <state x="1450" y="470" width="540" height="540" key="StructurePopup" timestamp="1594384027997">
+      <screen x="0" y="0" width="3440" height="1440" />
+    </state>
+    <state x="1450" y="470" width="540" height="540" key="StructurePopup/0.0.3440.1440/3440.0.3440.1440@0.0.3440.1440" timestamp="1594384027997" />
+    <state x="1320" y="456" key="Vcs.Push.Dialog.v2" timestamp="1594365071748">
+      <screen x="0" y="0" width="3440" height="1440" />
+    </state>
+    <state x="1320" y="456" key="Vcs.Push.Dialog.v2/0.0.3440.1440/3440.0.3440.1440@0.0.3440.1440" timestamp="1594365071748" />
+    <state x="1422" y="328" width="596" height="783" key="find.popup" timestamp="1594820852500">
+      <screen x="0" y="0" width="3440" height="1440" />
+    </state>
+    <state x="1422" y="328" width="596" height="783" key="find.popup/0.0.3440.1440/3440.0.3440.1440@0.0.3440.1440" timestamp="1594654158843" />
+    <state x="1422" y="328" width="596" height="783" key="find.popup/3440.0.3440.1440/0.0.3440.1440@0.0.3440.1440" timestamp="1594820852500" />
+    <state x="1385" y="331" width="670" height="676" key="search.everywhere.popup" timestamp="1594821470672">
+      <screen x="0" y="0" width="3440" height="1440" />
+    </state>
+    <state x="1385" y="331" width="670" height="676" key="search.everywhere.popup/0.0.3440.1440/3440.0.3440.1440@0.0.3440.1440" timestamp="1594649166028" />
+    <state x="1385" y="331" width="670" height="676" key="search.everywhere.popup/3440.0.3440.1440/0.0.3440.1440@0.0.3440.1440" timestamp="1594821470672" />
+    <state x="1385" y="331" width="670" height="676" key="search.everywhere.popup/3440.23.3440.1417/0.0.3440.1440@0.0.3440.1440" timestamp="1594817707012" />
+  </component>
+</project>

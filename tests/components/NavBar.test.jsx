@@ -4,7 +4,7 @@ import configureStore from 'redux-mock-store';
 import waitForExpect from 'wait-for-expect';
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
-import NavBar from '../../src/components/NavBar';
+import NavBar, { NavBar as PlainNavBar } from '../../src/components/NavBar';
 import { logout as logoutAction } from '../../src/actions/auth';
 
 const mockStore = configureStore([]);
@@ -19,7 +19,7 @@ function getComponent(store) {
   );
 }
 
-describe('login', () => {
+describe('navbar', () => {
   let store;
   let spy;
 
@@ -41,8 +41,8 @@ describe('login', () => {
 
   it('handles successful logout', async () => {
     const component = getComponent(store);
-    const instance = component.root;
-    instance.findByProps({ id: 'logoutButton' }).props.onClick();
+    const root = component.root;
+    root.findByProps({ id: 'logoutButton' }).props.onClick();
     expect(component.toJSON()).toMatchSnapshot();
 
     await waitForExpect(() => {
@@ -52,8 +52,11 @@ describe('login', () => {
 
   it('handles add agent modal', async () => {
     const component = getComponent(store);
-    const instance = component.root;
-    instance.findByProps({ id: 'newAgentButton' }).props.onClick();
+    const root = component.root;
+    root.findByProps({ id: 'newAgentButton' }).props.onClick();
+    expect(component.toJSON()).toMatchSnapshot();
+
+    root.findByType(PlainNavBar).instance.closeAddAgentModal()
     expect(component.toJSON()).toMatchSnapshot();
   });
 

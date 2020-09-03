@@ -123,3 +123,5 @@ class DropDown extends React.PureComponent {
 DropDown.propTypes = propTypes;
 
 export default connect()(DropDown);
+
+export { DropDown }

@@ -68,7 +68,7 @@ describe("user list", () => {
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 
-    root.instance.closeCreateUser(false);    
+    root.instance.closeCreateUser(false);
 
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -84,7 +84,7 @@ describe("user list", () => {
       status: 200,
       data: users
     });
-    root.instance.closeCreateUser(true);    
+    root.instance.closeCreateUser(true);
 
     await waitForExpect(() => {
       expect(axios.get).toHaveBeenCalled();
