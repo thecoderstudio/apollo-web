@@ -14,6 +14,6 @@ export default function addAgentReducer(state = initialState, action) {
       state['selectedArchitecture'] = action.selectedArchitecture
     case SELECT_OPERATING_SYSTEM:
       state['selectedOperatingSystem'] = action.selectedOperatingSystem
-    return state;
   }
+  return state;
 }

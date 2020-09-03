@@ -1,3 +1,4 @@
+import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -75,10 +76,11 @@ class DropDown extends React.PureComponent {
     this.selectItem = this.selectItem.bind(this);
     this.state = { collapsed: true };
     this.closeDropdown = this.closeDropdown.bind(this);
+    this.node = React.createRef();
   }
 
   closeDropdown(e) {
-    if (!this.state.collapsed && !this.node.contains(e.target)) {
+    if (!this.state.collapsed && !this.node.current.contains(e.target)) {
       this.setState({ collapsed: true });
     }
   }
@@ -106,7 +108,7 @@ class DropDown extends React.PureComponent {
 
   render() {
     return(
-      <div className={this.props.className} ref={node => this.node = node}>
+      <div className={this.props.className} ref={this.node}>
         <DropDownButton id='dropdown' onClick={this.toggleCollapse}>
           {this.props.selected}
           <DropDownIcon collapsed={this.state.collapsed}/>
