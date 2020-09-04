@@ -92,7 +92,7 @@ class Login extends React.Component {
     super(props);
     this.login = this.login.bind(this);
     this.fetchCurrentUser = this.fetchCurrentUser.bind(this);
-		this.state = { changePassword: true }
+    this.state = { changePassword: true, oldPassword: 'oldpassword'}
   }
 
   login(credentials, { setErrors }) {
@@ -102,6 +102,7 @@ class Login extends React.Component {
       { withCredentials: true }
     )
       .then(res => {
+        this.setState({ oldPassword: credentials['password'] })
         this.props.dispatch(loginAction());
         this.fetchCurrentUser();
       })
@@ -164,8 +165,7 @@ class Login extends React.Component {
                   </Form>
                 )}
               </Formik>
-              : <div/>}
-            <ChangePassword />
+              : <ChangePassword oldPassword={this.state.oldPassword}/>}
           </StyledCard>
         </InnerContainer>
       </OuterContainer>
