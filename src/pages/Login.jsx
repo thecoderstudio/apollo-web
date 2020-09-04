@@ -14,6 +14,7 @@ import { handleHTTPResponse } from '../actions/error';
 import loginSchema from '../validation/login';
 import media from '../util/media';
 import moonImg from '../images/moon_rocket.svg';
+import ChangePassword from '../components/user/ChangePassword';
 
 const OuterContainer = styled.div`
   height: 100%;
@@ -91,6 +92,7 @@ class Login extends React.Component {
     super(props);
     this.login = this.login.bind(this);
     this.fetchCurrentUser = this.fetchCurrentUser.bind(this);
+		this.state = { changePassword: true }
   }
 
   login(credentials, { setErrors }) {
@@ -125,7 +127,7 @@ class Login extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    if (this.props.authenticated) {
+    if (this.props.authenticated && this.state.changePassword === false) {
       window.location.pathname = "/";
     }
   }
@@ -137,30 +139,33 @@ class Login extends React.Component {
           <SupportingImg src={moonImg} />
           <Title>Log in to Apollo</Title>
           <StyledCard>
-            <Formik
-              initialValues={{ username: '', password: '' }}
-              validationSchema={loginSchema}
-              onSubmit={this.login}>
-              {({ values, errors, handleChange, handleSubmit }) => (
-                <Form onSubmit={handleSubmit}>
-                  <Input
-                    name="username"
-                    type="username"
-                    placeholder="Username"
-                    value={values.username}
-                    error={errors.username}
-                    onChange={handleChange} />
-                  <Input
-                    name="password"
-                    type="password"
-                    placeholder="Password"
-                    value={values.password}
-                    error={errors.password}
-                    onChange={handleChange} />
-                  <Button>Log in</Button>
-                </Form>
-              )}
-            </Formik>
+            { this.state.changePassword === null ? 
+              <Formik
+                initialValues={{ username: '', password: '' }}
+                validationSchema={loginSchema}
+                onSubmit={this.login}>
+                {({ values, errors, handleChange, handleSubmit }) => (
+                  <Form onSubmit={handleSubmit}>
+                    <Input
+                      name="username"
+                      type="username"
+                      placeholder="Username"
+                      value={values.username}
+                      error={errors.username}
+                      onChange={handleChange} />
+                    <Input
+                      name="password"
+                      type="password"
+                      placeholder="Password"
+                      value={values.password}
+                      error={errors.password}
+                      onChange={handleChange} />
+                    <Button>Log in</Button>
+                  </Form>
+                )}
+              </Formik>
+              : <div/>}
+            <ChangePassword />
           </StyledCard>
         </InnerContainer>
       </OuterContainer>
