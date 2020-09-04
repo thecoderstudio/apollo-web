@@ -33,6 +33,7 @@ class ChangePassword extends React.PureComponent {
 	constructor(props) {
 		super(props);	
     this.getButton = this.getButton.bind(this);
+    this.goToDashboard = this.goToDashboard.bind(this);
 	}
 
 	changePassword(values, { setErrors }) {
@@ -41,8 +42,8 @@ class ChangePassword extends React.PureComponent {
       { withCredentials: true }
 		)
 			.then(res => {
-			  // relocate to dashboard
-			})
+        this.goToDashboard();
+      })
       .catch(error => {
         handleHTTPResponse(error.response, true, true);
         if (error.reponse.status === StatusCodes.BAD_REQUEST) {
@@ -50,6 +51,10 @@ class ChangePassword extends React.PureComponent {
         }
       })
 	}
+
+  goToDashboard() {
+    window.location.pathname = '/'
+  }
 
   getButton(errors, values) {
     if ((values['password'] === '' && values['password_confirm'] === '') || Object.keys(errors).length !== 0) {
@@ -70,6 +75,7 @@ class ChangePassword extends React.PureComponent {
               name='old_password'
               type='password'
               value={values.old_password}
+              readOnly
             /> 
             <Input 
               inverted
@@ -90,7 +96,7 @@ class ChangePassword extends React.PureComponent {
               onChange={handleChange}
             />
             {this.getButton(errors, values)}
-            <StyledOutlinedButton>Skip this step</StyledOutlinedButton>
+            <StyledOutlinedButton onClick={this.goToDashboard}>Skip this step</StyledOutlinedButton>
           </form>
         )}
       </Formik>
@@ -98,7 +104,7 @@ class ChangePassword extends React.PureComponent {
   }
 }
 
-ChangePassword.PropTypes = propTypes;
+ChangePassword.propTypes = propTypes;
 
 export default connect( 
 	state => ({ currentUser: state.currentUser })
