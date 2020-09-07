@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Formik } from 'formik';
 import axios from 'axios';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import Button from '../buttons/Button';
 import OutlinedButton from '../buttons/OutlinedButton';
 import Input from '../../components/Input';
@@ -12,7 +13,7 @@ import { handleHTTPResponse } from '../../actions/error';
 import { parseHTTPErrors } from '../../util/parser';
 import { cacheCurrentUser } from '../../actions/current-user.js';
 import Card from '../Card';
-import { remindPasswordChange } from '../../actions/change-password.js'
+import { prompedPasswordChange } from '../../actions/change-password';
 
 const StyledOutlinedButton = styled(OutlinedButton)`
   margin-top: 15px;
@@ -45,21 +46,20 @@ class ChangePassword extends React.PureComponent {
 	}
 
   changePassword(values, { setErrors }) {
+    const currentUser = this.props.currentUser;
 		axios.put(
 		  `${process.env.APOLLO_HTTP_URL}user/${this.props.currentUser.id}`,
       values,
       { withCredentials: true }
 		)
 			.then(res => {
-        const currentUser = this.props.currentUser;
-        this.currentUser.changedInitialPassword = true;
+        currentUser.has_changed_initial_password = true;
         this.props.dispatch(cacheCurrentUser(currentUser));
+        this.props.dispatch(prompedPasswordChange())
       })
       .catch(error => {
         handleHTTPResponse(error.response, true, true);
-        console.log(error.response)
         if (error.reponse.status === StatusCodes.BAD_REQUEST) {
-          console.log(error.response.data)
           setErrors(parseHTTPErrors(error.response.data))
         }
       })
@@ -110,7 +110,7 @@ class ChangePassword extends React.PureComponent {
                 onChange={handleChange}
               />
               { this.getButton(errors, values) }
-              <StyledOutlinedButton onClick={this.props.onFinishedCallback}>Remind me later</StyledOutlinedButton>
+              <StyledOutlinedButton onClick={() => this.props.dispatch(prompedPasswordChange())}>Remind me later</StyledOutlinedButton>
             </form>
           )}
         </Formik>

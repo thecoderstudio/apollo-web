@@ -39,12 +39,12 @@ const PasswordChange = styled(ChangePassword)`
 class Dashboard extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.checkForPasswordChange = this.checkForPasswordChange.bind();
-    this.state = { promptChangePassword: this.props.currentUser.has_changed_initial_password == false }
+    this.checkForPasswordChange = this.checkForPasswordChange.bind(this);
+    this.state = { initial_passcode_changed : this.props.currentUser.has_changed_initial_password };
   }
 
   checkForPasswordChange() {
-    this.setState({ promptChangePassword: this.props.currentUser.has_changed_initial_password == false })
+    this.setState({ initial_passcode_changed : this.props.currentUser.has_changed_initial_password })
   }
   
   render() {
@@ -53,7 +53,7 @@ class Dashboard extends React.PureComponent {
         <Content>
           <AgentList />
         </Content>
-        { (this.state.promptChangePassword == true && !this.props.passwordChangeRemindLater) && 
+        { (!this.state.initial_passcode_changed && !this.props.prompedPasswordChange) && 
           <PasswordChange />
         }
       </div>
@@ -62,5 +62,8 @@ class Dashboard extends React.PureComponent {
 }
 
 export default connect(
-  state => ({ currentUser: state.currentUser })
+  state => ({ 
+    currentUser: state.currentUser,
+    prompedPasswordChange: state.prompedPasswordChange
+  })
 )(Dashboard);
