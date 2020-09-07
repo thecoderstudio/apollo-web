@@ -110,7 +110,7 @@ class ChangePassword extends React.PureComponent {
                 onChange={handleChange}
               />
               { this.getButton(errors, values) }
-              <StyledOutlinedButton onClick={() => this.props.dispatch(prompedPasswordChange())}>Remind me later</StyledOutlinedButton>
+              <StyledOutlinedButton onClick={() => this.props.dispatch(prompedPasswordChange())}>Don't change password</StyledOutlinedButton>
             </form>
           )}
         </Formik>
