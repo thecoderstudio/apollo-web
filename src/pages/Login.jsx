@@ -92,7 +92,8 @@ class Login extends React.Component {
     super(props);
     this.login = this.login.bind(this);
     this.fetchCurrentUser = this.fetchCurrentUser.bind(this);
-    this.state = { changePassword: true, oldPassword: 'oldpassword'}
+    this.cacheAndLogin = this.cacheAndLogin.bind(this);
+    this.state = { changePassword: null , oldPassword: null }
   }
 
   login(credentials, { setErrors }) {
@@ -103,7 +104,6 @@ class Login extends React.Component {
     )
       .then(res => {
         this.setState({ oldPassword: credentials['password'] })
-        this.props.dispatch(loginAction());
         this.fetchCurrentUser();
       })
       .catch(error => {
@@ -114,23 +114,26 @@ class Login extends React.Component {
       });
   }
 
+  cacheAndLogin() {
+    this.props.dispatch(loginAction());
+    this.props.dispatch(cacheCurrentUser(res.data));
+  }
+
   fetchCurrentUser() {
     axios.get(
       `${process.env.APOLLO_HTTP_URL}user/me`,
       { withCredentials: true }
     )
       .then(res => {
-        this.props.dispatch(cacheCurrentUser(res.data));
+        this.setState({ changePassword: res.data['has_changed_initial_password'] == false });
+        if (this.state.changePassword == false) {
+          this.cacheAndLogin();
+        }
       })
       .catch(error => {
         handleHTTPResponse(error.response);
+        this.props.dispatch(loginAction());
       });
-  }
-
-  componentDidUpdate(prevProps, prevState, snapshot) {
-    if (this.props.authenticated && this.state.changePassword === false) {
-      window.location.pathname = "/";
-    }
   }
 
   render() {
@@ -140,7 +143,7 @@ class Login extends React.Component {
           <SupportingImg src={moonImg} />
           <Title>Log in to Apollo</Title>
           <StyledCard>
-            { this.state.changePassword === null ? 
+            { this.state.changePassword != true ? 
               <Formik
                 initialValues={{ username: '', password: '' }}
                 validationSchema={loginSchema}
@@ -165,7 +168,7 @@ class Login extends React.Component {
                   </Form>
                 )}
               </Formik>
-              : <ChangePassword oldPassword={this.state.oldPassword}/>}
+              : <ChangePassword onFinishedCallbacl={this.cacheAndLogin} oldPassword={this.state.oldPassword}/>}
           </StyledCard>
         </InnerContainer>
       </OuterContainer>

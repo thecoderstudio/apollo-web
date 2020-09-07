@@ -13,7 +13,8 @@ import { handleHTTPResponse } from '../../actions/error';
 import { parseHTTPErrors } from '../../util/parser';
 
 const propTypes = {
-  oldPassword: PropTypes.string.isRequired
+  oldPassword: PropTypes.string.isRequired,
+  onFinishedCallback: PropTypes.func.inRequired
 };
 
 const StyledOutlinedButton = styled(OutlinedButton)`
@@ -33,7 +34,6 @@ class ChangePassword extends React.PureComponent {
 	constructor(props) {
 		super(props);	
     this.getButton = this.getButton.bind(this);
-    this.goToDashboard = this.goToDashboard.bind(this);
 	}
 
 	changePassword(values, { setErrors }) {
@@ -42,7 +42,7 @@ class ChangePassword extends React.PureComponent {
       { withCredentials: true }
 		)
 			.then(res => {
-        this.goToDashboard();
+        this.props.onFinishedCallback();
       })
       .catch(error => {
         handleHTTPResponse(error.response, true, true);
@@ -51,11 +51,7 @@ class ChangePassword extends React.PureComponent {
         }
       })
 	}
-
-  goToDashboard() {
-    window.location.pathname = '/'
-  }
-
+  
   getButton(errors, values) {
     if ((values['password'] === '' && values['password_confirm'] === '') || Object.keys(errors).length !== 0) {
       return <StyledButton disabled>Change password</StyledButton>;
@@ -95,8 +91,8 @@ class ChangePassword extends React.PureComponent {
               error={errors.password_confirm}
               onChange={handleChange}
             />
-            {this.getButton(errors, values)}
-            <StyledOutlinedButton onClick={this.goToDashboard}>Skip this step</StyledOutlinedButton>
+            { this.getButton(errors, values) }
+            <StyledOutlinedButton onClick={this.props.onFinishedCallback}>Skip this step</StyledOutlinedButton>
           </form>
         )}
       </Formik>
