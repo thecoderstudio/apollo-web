@@ -14,11 +14,10 @@ import { handleHTTPResponse } from '../actions/error';
 import loginSchema from '../validation/login';
 import media from '../util/media';
 import moonImg from '../images/moon_rocket.svg';
-import ChangePassword from '../components/user/ChangePassword';
 
 const OuterContainer = styled.div`
   height: 100%;
-  display: grid;
+  display: rid;
   align-items: center;
 `;
 
@@ -31,7 +30,6 @@ const InnerContainer = styled.div`
   margin: 100px;
   grid-template-rows: [heading] 1fr [title] 1fr [content] 4fr;
   grid-template-columns: [img] 1fr [content] 1fr;
-
   ${
     media.phone`
       grid-template-columns: [content] 1fr;
@@ -55,7 +53,6 @@ const StyledCard = styled(Card)`
   grid-column: content;
   display: grid;
   align-items: center;
-
   ${
     media.phone`
       box-shadow: none;
@@ -77,7 +74,6 @@ const SupportingImg = styled.img`
   width: 75%;
   max-width: 800px;
   align-self: center;
-
   ${
     media.phone`
       grid-column: 1;
@@ -92,8 +88,6 @@ class Login extends React.Component {
     super(props);
     this.login = this.login.bind(this);
     this.fetchCurrentUser = this.fetchCurrentUser.bind(this);
-    this.cacheAndLogin = this.cacheAndLogin.bind(this);
-    this.state = { changePassword: null , oldPassword: null }
   }
 
   login(credentials, { setErrors }) {
@@ -103,7 +97,7 @@ class Login extends React.Component {
       { withCredentials: true }
     )
       .then(res => {
-        this.setState({ oldPassword: credentials['password'] })
+        this.props.dispatch(loginAction());
         this.fetchCurrentUser();
       })
       .catch(error => {
@@ -114,26 +108,23 @@ class Login extends React.Component {
       });
   }
 
-  cacheAndLogin() {
-    this.props.dispatch(loginAction());
-    this.props.dispatch(cacheCurrentUser(res.data));
-  }
-
   fetchCurrentUser() {
     axios.get(
       `${process.env.APOLLO_HTTP_URL}user/me`,
       { withCredentials: true }
     )
       .then(res => {
-        this.setState({ changePassword: res.data['has_changed_initial_password'] == false });
-        if (this.state.changePassword == false) {
-          this.cacheAndLogin();
-        }
+        this.props.dispatch(cacheCurrentUser(res.data));
       })
       .catch(error => {
         handleHTTPResponse(error.response);
-        this.props.dispatch(loginAction());
       });
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (this.props.authenticated) {
+      window.location.pathname = "/";
+    }
   }
 
   render() {
@@ -143,32 +134,30 @@ class Login extends React.Component {
           <SupportingImg src={moonImg} />
           <Title>Log in to Apollo</Title>
           <StyledCard>
-            { this.state.changePassword != true ? 
-              <Formik
-                initialValues={{ username: '', password: '' }}
-                validationSchema={loginSchema}
-                onSubmit={this.login}>
-                {({ values, errors, handleChange, handleSubmit }) => (
-                  <Form onSubmit={handleSubmit}>
-                    <Input
-                      name="username"
-                      type="username"
-                      placeholder="Username"
-                      value={values.username}
-                      error={errors.username}
-                      onChange={handleChange} />
-                    <Input
-                      name="password"
-                      type="password"
-                      placeholder="Password"
-                      value={values.password}
-                      error={errors.password}
-                      onChange={handleChange} />
-                    <Button>Log in</Button>
-                  </Form>
-                )}
-              </Formik>
-              : <ChangePassword onFinishedCallbacl={this.cacheAndLogin} oldPassword={this.state.oldPassword}/>}
+            <Formik
+              initialValues={{ username: '', password: '' }}
+              validationSchema={loginSchema}
+              onSubmit={this.login}>
+              {({ values, errors, handleChange, handleSubmit }) => (
+                <Form onSubmit={handleSubmit}>
+                  <Input
+                    name="username"
+                    type="username"
+                    placeholder="Username"
+                    value={values.username}
+                    error={errors.username}
+                    onChange={handleChange} />
+                  <Input
+                    name="password"
+                    type="password"
+                    placeholder="Password"
+                    value={values.password}
+                    error={errors.password}
+                    onChange={handleChange} />
+                  <Button>Log in</Button>
+                </Form>
+              )}
+            </Formik>
           </StyledCard>
         </InnerContainer>
       </OuterContainer>

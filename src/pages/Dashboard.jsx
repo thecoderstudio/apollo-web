@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
 import AgentList from '../components/agent-list/AgentList';
 import media from '../util/media';
 import NavBar from '../components/NavBar';
+import ChangePassword from '../components/user/ChangePassword';
 
 const StyledAgentList = styled(AgentList)`
   grid-column: agent-listing;
@@ -23,12 +25,42 @@ const Content = styled.div`
   }
 `;
 
-export default function Dashboard() {
-  return (
-    <div>
-      <Content>
-        <AgentList />
-      </Content>
-    </div>
-  );
+const PasswordChange = styled(ChangePassword)`
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  z-index: 2;
+`;
+
+class Dashboard extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.checkForPasswordChange = this.checkForPasswordChange.bind();
+    this.state = { promptChangePassword: this.props.currentUser.has_changed_initial_password == false }
+  }
+
+  checkForPasswordChange() {
+    this.setState({ promptChangePassword: this.props.currentUser.has_changed_initial_password == false })
+  }
+  
+  render() {
+    return (
+      <div>
+        <Content>
+          <AgentList />
+        </Content>
+        { (this.state.promptChangePassword == true && !this.props.passwordChangeRemindLater) && 
+          <PasswordChange />
+        }
+      </div>
+    );
+  }
 }
+
+export default connect(
+  state => ({ currentUser: state.currentUser })
+)(Dashboard);
