@@ -39,14 +39,9 @@ const PasswordChange = styled(ChangePassword)`
 class Dashboard extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.checkForPasswordChange = this.checkForPasswordChange.bind(this);
     this.state = { initial_passcode_changed : this.props.currentUser.has_changed_initial_password };
   }
 
-  checkForPasswordChange() {
-    this.setState({ initial_passcode_changed : this.props.currentUser.has_changed_initial_password })
-  }
-  
   render() {
     return (
       <div>

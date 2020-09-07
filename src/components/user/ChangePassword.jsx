@@ -17,7 +17,7 @@ import { prompedPasswordChange } from '../../actions/change-password';
 
 const StyledOutlinedButton = styled(OutlinedButton)`
   margin-top: 15px;
-	width: 100%;
+  width: 100%;
 `;
 
 const StyledInput = styled(Input)`
@@ -39,7 +39,7 @@ const Title = styled.h3`
 `;
 
 class ChangePassword extends React.PureComponent {
-	constructor(props) {
+  constructor(props) {
     super(props);	
     this.getButton = this.getButton.bind(this);
     this.changePassword = this.changePassword.bind(this);

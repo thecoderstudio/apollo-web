@@ -31,7 +31,8 @@ describe('app', () => {
       agent: [],
       authenticated: true,
       currentUser: {},
-      notifications: new Map({})
+      notifications: new Map({}),
+      prompedPasswordChange: true
     });
     const tree = getComponent(store).toJSON();
     expect(tree).toMatchSnapshot();
