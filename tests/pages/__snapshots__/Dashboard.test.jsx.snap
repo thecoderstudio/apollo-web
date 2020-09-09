@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`dashboard renders correctly 1`] = `
+exports[`dashboard Does not render change password 1`] = `
 .c1 {
   display: grid;
   grid-template-rows: [title] 50px [list] 1fr;
@@ -48,6 +48,233 @@ exports[`dashboard renders correctly 1`] = `
         className="c3"
       />
     </div>
+  </div>
+</div>
+`;
+
+exports[`dashboard renders correctly 1`] = `
+.c1 {
+  display: grid;
+  grid-template-rows: [title] 50px [list] 1fr;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.c2 {
+  grid-row: title;
+}
+
+.c3 {
+  grid-row: list;
+  list-style: none;
+  padding-left: 0;
+}
+
+.c7 {
+  height: 80px;
+}
+
+.c8 {
+  min-height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+  border: 1px solid transparent;
+}
+
+.c8:focus {
+  outline: none border:1px solid;
+}
+
+.c10 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.c10:hover {
+  opacity: 0.90;
+}
+
+.c10:focus {
+  outline: none;
+}
+
+.c10:active {
+  opacity: 0.80;
+}
+
+.c10:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c9 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+}
+
+.c9:hover {
+  opacity: 0.90;
+}
+
+.c9:focus {
+  outline: none;
+}
+
+.c9:active {
+  opacity: 0.80;
+}
+
+.c9:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c4 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.c6 {
+  width: 100%;
+  text-align: center;
+}
+
+.c0 {
+  grid-template-columns: [agent-listing] 1fr 1fr;
+  grid-template-rows: 1fr;
+  display: grid;
+  grid-row: 2;
+  margin: 25px;
+}
+
+.c5 {
+  padding: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  z-index: 2;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    grid-template-columns: [agent-listing] 1fr;
+  }
+}
+
+<div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <h2
+        className="c2"
+      >
+        Agents
+      </h2>
+      <ul
+        className="c3"
+      />
+    </div>
+  </div>
+  <div
+    className="c4 c5"
+  >
+    <h3
+      className="c6"
+    >
+      Change password
+    </h3>
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="c7"
+      >
+        <input
+          className="c8"
+          name="oldPassword"
+          onChange={[Function]}
+          placeholder="Current password"
+          type="password"
+        />
+      </div>
+      <div
+        className="c7"
+      >
+        <input
+          className="c8"
+          name="password"
+          onChange={[Function]}
+          placeholder="New password"
+          type="password"
+          value=""
+        />
+      </div>
+      <div
+        className="c7"
+      >
+        <input
+          className="c8"
+          name="passwordConfirm"
+          onChange={[Function]}
+          placeholder="Confirm new password"
+          type="password"
+          value=""
+        />
+      </div>
+      <button
+        className="c9"
+        disabled={true}
+      >
+        Change password
+      </button>
+      <button
+        className="c10"
+        onClick={[Function]}
+      >
+        Don't change password
+      </button>
+    </form>
   </div>
 </div>
 `;

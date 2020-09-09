@@ -18,7 +18,7 @@ const createUserSchema = Yup.object().shape({
 });
 
 const changePasswordSchema = Yup.object().shape({
-	old_password: Yup.string()
+	oldPassword: Yup.string()
     .min(8, "Min 8 characters")
     .trim()
     .required(requiredError),
@@ -26,7 +26,7 @@ const changePasswordSchema = Yup.object().shape({
     .min(8, "Min 8 characters")
     .trim()
     .required(requiredError),
-  password_confirm: Yup.string()
+  passwordConfirm: Yup.string()
 		.oneOf([Yup.ref('password'), null], "Passwords don't match")
     .min(8, "Min 8 characters")
     .trim()

@@ -55,6 +55,11 @@ exports[`nav bar handles successful logout 1`] = `
   opacity: 0.80;
 }
 
+.c3:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
 <div
   className="c0"
 >
@@ -132,6 +137,11 @@ exports[`nav bar render admin link for admins 1`] = `
 
 .c3:active {
   opacity: 0.80;
+}
+
+.c3:disabled:hover {
+  opacity: 1;
+  cursor: auto;
 }
 
 <div
@@ -218,6 +228,11 @@ exports[`nav bar renders correctly 1`] = `
 
 .c3:active {
   opacity: 0.80;
+}
+
+.c3:disabled:hover {
+  opacity: 1;
+  cursor: auto;
 }
 
 <div

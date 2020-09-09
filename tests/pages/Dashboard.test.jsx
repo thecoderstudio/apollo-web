@@ -50,5 +50,5 @@ describe('dashboard', () => {
       prompedPasswordChange: true 
     });
     expect(getComponent(store)).toMatchSnapshot();
-  }
+  });
 });

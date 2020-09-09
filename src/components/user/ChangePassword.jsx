@@ -49,24 +49,26 @@ class ChangePassword extends React.PureComponent {
     const currentUser = this.props.currentUser;
 		axios.put(
 		  `${process.env.APOLLO_HTTP_URL}user/${this.props.currentUser.id}`,
-      values,
+      {
+        'old_password': values['oldPassword'],
+        'password': values['password'],
+        'password_confirm': values['passwordConfirm']
+      },
       { withCredentials: true }
 		)
 			.then(res => {
-        currentUser.has_changed_initial_password = true;
-        this.props.dispatch(cacheCurrentUser(currentUser));
-        this.props.dispatch(prompedPasswordChange())
+        this.props.dispatch(prompedPasswordChange());
       })
       .catch(error => {
         handleHTTPResponse(error.response, true, true);
-        if (error.reponse.status === StatusCodes.BAD_REQUEST) {
-          setErrors(parseHTTPErrors(error.response.data))
+        if (error.response.status === StatusCodes.BAD_REQUEST) {
+          setErrors(parseHTTPErrors(error.response.data));
         }
       })
 	}
   
   getButton(errors, values) {
-    if ((values['password'] === '' && values['password_confirm'] === '') || Object.keys(errors).length !== 0) {
+    if ((values['password'] === '' && values['passwordConfirm'] === '') || Object.keys(errors).length !== 0) {
       return <StyledButton disabled>Change password</StyledButton>;
     }
     return <StyledButton type="submit">Change password</StyledButton>; 
@@ -77,36 +79,36 @@ class ChangePassword extends React.PureComponent {
       <StyledCard className={this.props.className}> 
         <Title>Change password</Title>
         <Formik
-          initialValues={{ password: '', password_confirm: '', old_password: ''}}
+          initialValues={{ password: '', passwordConfirm: '', oldPassword: ''}}
           validationSchema={changePasswordSchema}
           onSubmit={this.changePassword}>
           {({ values, errors, handleChange, handleSubmit }) => (
             <form onSubmit={handleSubmit}>
               <Input
                 inverted
-                name='old_password'
-                placeholder='current password'
+                name='oldPassword'
+                placeholder='Current password'
                 type='password'
-                value={values.old_password}
-                error={errors.old_password}
+                value={values.oldPssword}
+                error={errors.oldPassword}
                 onChange={handleChange} 
               /> 
               <Input 
                 inverted
                 name='password'
                 type='password'
-                placeholder='new password'
+                placeholder='New password'
                 value={values.password}
                 error={errors.password}
                 onChange={handleChange}
               />
               <Input 
                 inverted
-                name='password_confirm'
+                name='passwordConfirm'
                 type='password'
-                placeholder='confirm new password'
-                value={values.password_confirm}
-                error={errors.password_confirm}
+                placeholder='Confirm new password'
+                value={values.passwordConfirm}
+                error={errors.passwordConfirm}
                 onChange={handleChange}
               />
               { this.getButton(errors, values) }
