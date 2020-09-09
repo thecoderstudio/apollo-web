@@ -6,6 +6,7 @@ import media from '../util/media';
 import NavBar from '../components/NavBar';
 import ChangePassword from '../components/user/ChangePassword';
 import { fetchCurrentUser } from '../util/user';
+import checkIfAdmin from '../util/admin';
 
 const StyledAgentList = styled(AgentList)`
   grid-column: agent-listing;
@@ -50,7 +51,7 @@ class Dashboard extends React.PureComponent {
         <Content>
           <AgentList />
         </Content>
-        { (!this.state.initial_passcode_changed && !this.props.promptedPasswordChange) &&
+        { (!this.state.initial_passcode_changed && checkIfAdmin(currentUser) && !this.props.promptedPasswordChange) &&
           <PasswordChange />
         }
       </div>
