@@ -40,7 +40,6 @@ function submitForm(root, oldPassword, password, passwordConfirm) {
     value: passwordConfirm
   }});
 
-  console.log("SUBMITTING");
   form.props.onSubmit();
 }
 

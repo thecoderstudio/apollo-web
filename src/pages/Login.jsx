@@ -88,7 +88,6 @@ class Login extends React.Component {
   constructor(props) {
     super(props);
     this.login = this.login.bind(this);
-    this.fetchCurrentUser = this.fetchCurrentUser.bind(this);
   }
 
   login(credentials, { setErrors }) {

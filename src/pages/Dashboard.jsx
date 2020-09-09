@@ -40,7 +40,6 @@ const PasswordChange = styled(ChangePassword)`
 class Dashboard extends React.PureComponent {
   constructor(props) {
     super(props);
-    console.log("*&*&**&")
     fetchCurrentUser(this.props.dispatch);
     this.state = { initial_passcode_changed : this.props.currentUser.has_changed_initial_password };
   }
