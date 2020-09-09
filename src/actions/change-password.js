@@ -1,7 +1,7 @@
-export const PROMPED_PASSWORD_CHANGE = 'PROMPED_PASSWORD_CHANGE'
+export const prompted_PASSWORD_CHANGE = 'prompted_PASSWORD_CHANGE'
 
-export function prompedPasswordChange() {
+export function promptedPasswordChange() {
   return {
-    type: PROMPED_PASSWORD_CHANGE
+    type: prompted_PASSWORD_CHANGE
   };
 }

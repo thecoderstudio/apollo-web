@@ -12,5 +12,5 @@ export default combineReducers({
   currentUser: currentUserReducer,
   notifications: notificationReducer,
   theme: themeReducer,
-  prompedPasswordChange: changePasswordReducer 
+  promptedPasswordChange: changePasswordReducer
 });

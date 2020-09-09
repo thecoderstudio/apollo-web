@@ -48,7 +48,7 @@ class Dashboard extends React.PureComponent {
         <Content>
           <AgentList />
         </Content>
-        { (!this.state.initial_passcode_changed && !this.props.prompedPasswordChange) && 
+        { (!this.state.initial_passcode_changed && !this.props.promptedPasswordChange) &&
           <PasswordChange />
         }
       </div>
@@ -57,8 +57,8 @@ class Dashboard extends React.PureComponent {
 }
 
 export default connect(
-  state => ({ 
+  state => ({
     currentUser: state.currentUser,
-    prompedPasswordChange: state.prompedPasswordChange
+    promptedPasswordChange: state.promptedPasswordChange
   })
 )(Dashboard);

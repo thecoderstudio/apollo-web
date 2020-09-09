@@ -31,12 +31,12 @@ describe('dashboard', () => {
         has_changed_initial_password: false
       },
       authenticated: true,
-      prompedPasswordChange: false
+      promptedPasswordChange: false
     });
     expect(getComponent(store)).toMatchSnapshot();
   });
 
-  it("Does not render change password", () => {   
+  it("Does not render change password", () => {
     const store = mockStore({
       agent: [],
       currentUser: {
@@ -44,10 +44,10 @@ describe('dashboard', () => {
         role: {
           name: 'admin'
         },
-        has_changed_initial_password: true 
+        has_changed_initial_password: true
       },
       authenticated: true,
-      prompedPasswordChange: true 
+      promptedPasswordChange: true
     });
     expect(getComponent(store)).toMatchSnapshot();
   });

@@ -13,7 +13,7 @@ import { handleHTTPResponse } from '../../actions/error';
 import { parseHTTPErrors } from '../../util/parser';
 import { cacheCurrentUser } from '../../actions/current-user.js';
 import Card from '../Card';
-import { prompedPasswordChange } from '../../actions/change-password';
+import { promptedPasswordChange } from '../../actions/change-password';
 
 const StyledOutlinedButton = styled(OutlinedButton)`
   margin-top: 15px;
@@ -40,7 +40,7 @@ const Title = styled.h3`
 
 class ChangePassword extends React.PureComponent {
   constructor(props) {
-    super(props);	
+    super(props);
     this.getButton = this.getButton.bind(this);
     this.changePassword = this.changePassword.bind(this);
 	}
@@ -57,7 +57,7 @@ class ChangePassword extends React.PureComponent {
       { withCredentials: true }
 		)
 			.then(res => {
-        this.props.dispatch(prompedPasswordChange());
+        this.props.dispatch(promptedPasswordChange());
       })
       .catch(error => {
         handleHTTPResponse(error.response, true, true);
@@ -66,17 +66,17 @@ class ChangePassword extends React.PureComponent {
         }
       })
 	}
-  
+
   getButton(errors, values) {
     if ((values['password'] === '' && values['passwordConfirm'] === '') || Object.keys(errors).length !== 0) {
       return <StyledButton disabled>Change password</StyledButton>;
     }
-    return <StyledButton type="submit">Change password</StyledButton>; 
+    return <StyledButton type="submit">Change password</StyledButton>;
   }
 
   render() {
     return (
-      <StyledCard className={this.props.className}> 
+      <StyledCard className={this.props.className}>
         <Title>Change password</Title>
         <Formik
           initialValues={{ password: '', passwordConfirm: '', oldPassword: ''}}
@@ -91,9 +91,9 @@ class ChangePassword extends React.PureComponent {
                 type='password'
                 value={values.oldPssword}
                 error={errors.oldPassword}
-                onChange={handleChange} 
-              /> 
-              <Input 
+                onChange={handleChange}
+              />
+              <Input
                 inverted
                 name='password'
                 type='password'
@@ -102,7 +102,7 @@ class ChangePassword extends React.PureComponent {
                 error={errors.password}
                 onChange={handleChange}
               />
-              <Input 
+              <Input
                 inverted
                 name='passwordConfirm'
                 type='password'
@@ -112,7 +112,7 @@ class ChangePassword extends React.PureComponent {
                 onChange={handleChange}
               />
               { this.getButton(errors, values) }
-              <StyledOutlinedButton onClick={() => this.props.dispatch(prompedPasswordChange())}>Don't change password</StyledOutlinedButton>
+              <StyledOutlinedButton onClick={() => this.props.dispatch(promptedPasswordChange())}>Don't change password</StyledOutlinedButton>
             </form>
           )}
         </Formik>
@@ -121,6 +121,6 @@ class ChangePassword extends React.PureComponent {
   }
 }
 
-export default connect( 
+export default connect(
 	state => ({ currentUser: state.currentUser })
 )(ChangePassword);
