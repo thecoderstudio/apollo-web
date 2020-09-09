@@ -57,6 +57,7 @@ exports[`app renders correctly authenticated 1`] = `
   opacity: 0.90;
 }
 
+<<<<<<< HEAD
 .c7:focus {
   outline: none;
 }
@@ -95,6 +96,17 @@ exports[`app renders correctly authenticated 1`] = `
 }
 
 .c12 {
+=======
+.c4:focus {
+  outline: none;
+}
+
+.c4:active {
+  opacity: 0.80;
+}
+
+.c9 {
+>>>>>>> 373e4a3580f755e02608a84c59d0255707991f22
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -239,6 +251,7 @@ exports[`app renders correctly unauthenticated 1`] = `
   opacity: 0.80;
 }
 
+<<<<<<< HEAD
 .c7 {
   height: 80px;
 }
@@ -261,6 +274,8 @@ exports[`app renders correctly unauthenticated 1`] = `
   border: 1px solid #4D02EE;
 }
 
+=======
+>>>>>>> 373e4a3580f755e02608a84c59d0255707991f22
 .c10 {
   display: -webkit-box;
   display: -webkit-flex;

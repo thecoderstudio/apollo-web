@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`user list item render correctly with role 1`] = `
+exports[`user list item correctly closes modal 1`] = `
 .c0 {
   min-height: 60px;
   padding: 0px 16px;
   margin: 0px;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1fr 25px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -24,6 +24,251 @@ exports[`user list item render correctly with role 1`] = `
   font-weight: bold;
   text-align: center;
   border-radius: 6px;
+  background-color: #4D02EE;
+}
+
+.c3 {
+  cursor: pointer;
+  color: #ED3E2A;
+  float: right;
+  margin-right: 10px;
+  grid-column: 3;
+}
+
+<div
+  className="c0"
+>
+  <p
+    className="c1"
+  />
+  <p
+    className="c2"
+  >
+    not admin
+  </p>
+  <i
+    className="c3 far fa-trash-alt"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`user list item correctly opens modal 1`] = `
+.c4 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(37,37,37,0.6);
+}
+
+.c8 {
+  display: grid;
+  grid-template-columns: [cancel] 1fr [confirm] 1fr;
+}
+
+.c9 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  background-color: #4D02EE;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #4D02EE;
+  margin: 20px;
+  grid-column: cancel;
+}
+
+.c9:hover {
+  opacity: 0.90;
+}
+
+.c9:focus {
+  outline: none;
+}
+
+.c9:active {
+  opacity: 0.80;
+}
+
+.c10 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  background-color: #4D02EE;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  grid-column: confirm;
+  margin: 20px;
+  background-color: #ED3E2A;
+}
+
+.c10:hover {
+  opacity: 0.90;
+}
+
+.c10:focus {
+  outline: none;
+}
+
+.c10:active {
+  opacity: 0.80;
+}
+
+.c5 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+  display: grid;
+  grid-template-rows: [title] 1fr [content] 1.5fr;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 100%;
+  max-width: 400px;
+  background-color: #181818;
+}
+
+.c6 {
+  grid-row: title;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c7 {
+  grid-row: content;
+  padding-top: 20px;
+}
+
+.c0 {
+  min-height: 60px;
+  padding: 0px 16px;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: 3fr 1fr 25px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  margin: 0px;
+}
+
+.c2 {
+  float: right;
+  width: 80px;
+  padding: 4px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #4D02EE;
+}
+
+.c3 {
+  cursor: pointer;
+  color: #ED3E2A;
+  float: right;
+  margin-right: 10px;
+  grid-column: 3;
+}
+
+<div
+  className="c0"
+>
+  <p
+    className="c1"
+  />
+  <p
+    className="c2"
+  >
+    not admin
+  </p>
+  <i
+    className="c3 far fa-trash-alt"
+    onClick={[Function]}
+  />
+  <div
+    className="c4"
+    onClick={[Function]}
+  >
+    <div
+      className="c5"
+    >
+      <h2
+        className="c6"
+      >
+        Are you sure you want to delete undefined
+      </h2>
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
+        >
+          <button
+            className="c9"
+            onClick={[Function]}
+          >
+            Cancel
+          </button>
+          <button
+            className="c10"
+            color="#ED3E2A"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`user list item render correctly with role 1`] = `
+.c0 {
+  min-height: 60px;
+  padding: 0px 16px;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: 3fr 1fr 25px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  margin: 0px;
+}
+
+.c2 {
+  float: right;
+  width: 80px;
+  padding: 4px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #4D02EE;
 }
 
 <div
@@ -48,7 +293,7 @@ exports[`user list item render correctly without role 1`] = `
   padding: 0px 16px;
   margin: 0px;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1fr 25px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -59,6 +304,14 @@ exports[`user list item render correctly without role 1`] = `
   margin: 0px;
 }
 
+.c2 {
+  cursor: pointer;
+  color: #ED3E2A;
+  float: right;
+  margin-right: 10px;
+  grid-column: 3;
+}
+
 <div
   className="c0"
 >
@@ -67,5 +320,9 @@ exports[`user list item render correctly without role 1`] = `
   >
     test
   </p>
+  <i
+    className="c2 far fa-trash-alt"
+    onClick={[Function]}
+  />
 </div>
 `;

@@ -15,11 +15,11 @@ const Button = styled.button`
   &:hover {
     opacity: 0.90;
   }
-  
+
   &:focus{
     outline: none;
   }
-  
+
   &:active {
     opacity: 0.80;
   }

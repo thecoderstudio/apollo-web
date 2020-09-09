@@ -13,6 +13,7 @@ exports[`ModalOverlay renders correctly 1`] = `
 
 <div
   className="c0"
+  onClick={[Function]}
 >
   <div />
 </div>

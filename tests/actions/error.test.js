@@ -36,6 +36,19 @@ describe("handleHTTPResponse", () => {
     expect(spy).toHaveBeenCalledWith(expectedAction);
   });
 
+  it("notifies of unsuccessful response with error detail", () => {
+    const spy = jest.spyOn(store, 'dispatch');
+    const expectedAction = {
+      type: 'NOTIFY',
+      id: 2,
+      message: "error",
+      severity: severity.ERROR
+    };
+    const response = { status: 400, data: { detail: "error" }, statusText: "bad request" };
+    expect(handleHTTPResponse(response)).toEqual(false);
+    expect(spy).toHaveBeenCalledWith(expectedAction);
+  });
+
   it("doesn't notify of unsuccessful response if not required", () => {
     const spy = jest.spyOn(store, 'dispatch');
     const response = { status: 400, statusText: "bad request" };

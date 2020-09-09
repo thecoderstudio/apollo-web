@@ -17,8 +17,11 @@ function handleHTTPResponse(response, notify=true, allowBadRequests=false) {
     // The bad request won't be treated as an error but it isn't a successful response either.
     return false;
   }
-
-  handleError(response.statusText, notify);
+  let message = response.statusText;
+  if (response.data && response.data.detail) {
+    message = response.data.detail;
+  }
+  handleError(message, notify);
   return false;
 }
 

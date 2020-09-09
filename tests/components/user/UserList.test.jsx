@@ -4,21 +4,39 @@ import axios from 'axios';
 import waitForExpect from 'wait-for-expect';
 import { StatusCodes } from 'http-status-codes';
 import UserList from '../../../src/components/user/UserList';
+import { Provider } from 'react-redux';
+import configureStore from 'redux-mock-store';
 
 jest.mock('axios');
+const mockStore = configureStore([]);
 
-function getComponent() {
-  return renderer.create(<UserList />);
+function getComponent(store) {
+  return renderer.create(
+    <Provider store={store}>
+      <UserList />
+    </Provider>
+  );
 }
 
 describe("user list", () => {
+  const store = mockStore({
+    currentUser: {
+      id: 'id',
+      role: {
+        name: 'admin'
+      }
+    }
+  });
+
   it("renders correctly", async () => {
     const users = [
       {
+        id: 'id',
         username: 'test',
         role: null
       },
       {
+        id: 'id2',
         username: 'admin',
         role: {
           name: 'admin'
@@ -30,7 +48,7 @@ describe("user list", () => {
       data: users
     });
 
-    const component = getComponent();
+    const component = getComponent(store);
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 
@@ -50,7 +68,7 @@ describe("user list", () => {
       }
     }));
 
-    const component = getComponent();
+    const component = getComponent(store);
     let tree = component.toJSON();
 
     await waitForExpect(() => {
@@ -61,21 +79,21 @@ describe("user list", () => {
   });
 
   it("correctly toggles create user", () => {
-    const component = getComponent();
+    const component = getComponent(store);
     const root = component.root;
     root.findByType('button').props.onClick();
 
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 
-    root.instance.closeCreateUser(false);
+    root.children[0].instance.closeCreateUser(false);
 
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it("refreshes on create user success", async () => {
-    const component = getComponent();
+    const component = getComponent(store);
     const root = component.root;
 
     let tree = component.toJSON();
@@ -84,7 +102,7 @@ describe("user list", () => {
       status: 200,
       data: users
     });
-    root.instance.closeCreateUser(true);
+    root.children[0].instance.closeCreateUser(true);
 
     await waitForExpect(() => {
       expect(axios.get).toHaveBeenCalled();

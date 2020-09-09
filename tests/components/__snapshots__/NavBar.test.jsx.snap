@@ -184,6 +184,7 @@ exports[`navbar handles add agent modal 1`] = `
   opacity: 0.90;
 }
 
+<<<<<<< HEAD
 .c5:focus {
   outline: none;
 }
@@ -216,6 +217,16 @@ exports[`navbar handles add agent modal 1`] = `
   }
 }
 
+=======
+.c3:focus {
+  outline: none;
+}
+
+.c3:active {
+  opacity: 0.80;
+}
+
+>>>>>>> 373e4a3580f755e02608a84c59d0255707991f22
 <div
   className="c0"
 >
@@ -585,6 +596,7 @@ exports[`navbar render admin link for admins 1`] = `
   opacity: 0.90;
 }
 
+<<<<<<< HEAD
 .c0 {
   height: 50px;
   padding: 16px;
@@ -662,6 +674,13 @@ exports[`navbar render admin link for admins 1`] = `
 }
 
 .c5:active {
+=======
+.c3:focus {
+  outline: none;
+}
+
+.c3:active {
+>>>>>>> 373e4a3580f755e02608a84c59d0255707991f22
   opacity: 0.80;
 }
 
@@ -790,11 +809,19 @@ exports[`navbar renders correctly 1`] = `
   opacity: 0.90;
 }
 
+<<<<<<< HEAD
 .c5:focus {
   outline: none;
 }
 
 .c5:active {
+=======
+.c3:focus {
+  outline: none;
+}
+
+.c3:active {
+>>>>>>> 373e4a3580f755e02608a84c59d0255707991f22
   opacity: 0.80;
 }
 

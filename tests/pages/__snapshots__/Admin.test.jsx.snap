@@ -135,7 +135,7 @@ exports[`user list renders correctly 2`] = `
   padding: 0px 16px;
   margin: 0px;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1fr 25px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -146,13 +146,20 @@ exports[`user list renders correctly 2`] = `
   margin: 0px;
 }
 
-.c8 {
+.c9 {
   float: right;
   width: 80px;
   padding: 4px;
   font-weight: bold;
   text-align: center;
   border-radius: 6px;
+}
+
+.c8 {
+  cursor: pointer;
+  float: right;
+  margin-right: 10px;
+  grid-column: 3;
 }
 
 .c2 {
@@ -234,6 +241,10 @@ exports[`user list renders correctly 2`] = `
           >
             test
           </p>
+          <i
+            className="c8 far fa-trash-alt"
+            onClick={[Function]}
+          />
         </div>
         <div
           className="c6"
@@ -244,7 +255,7 @@ exports[`user list renders correctly 2`] = `
             admin
           </p>
           <p
-            className="c8"
+            className="c9"
           >
             admin
           </p>

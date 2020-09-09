@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { logout as logoutAction } from '../actions/auth';
 import Button from './buttons/Button';
+import { removeCurrentUser } from '../actions/current-user';
+import checkIfAdmin from '../util/admin';
 import OutlinedButton from './buttons/OutlinedButton';
 import AddAgentModal from './modals/AddAgentModal';
 import { removeCurrentUser } from '../actions/current-user';
@@ -14,7 +16,6 @@ const NavigationBar = styled.div`
   display: grid;
   grid-template-columns: [logo] 200px [menu] 1fr [new-agent] 250px [logout] 100px;
   align-items: center;
-
   background-color: ${props => props.theme.lightBlack};
 `;
 
@@ -66,14 +67,6 @@ class NavBar extends React.PureComponent {
 
   closeAddAgentModal() {
     this.setState({ showAddAgent: false });
-  }
-
-  checkIfAdmin() {
-    if (this.props.currentUser.role) {
-      return this.props.currentUser.role.name === 'admin';
-    }
-
-    return false;
   }
 
   render() {
