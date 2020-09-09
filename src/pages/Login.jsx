@@ -11,6 +11,7 @@ import { parseHTTPErrors } from '../util/parser';
 import { login as loginAction } from '../actions/auth';
 import { cacheCurrentUser } from '../actions/current-user';
 import { handleHTTPResponse } from '../actions/error';
+import { fetchCurrentUser } from '../util/user';
 import loginSchema from '../validation/login';
 import media from '../util/media';
 import moonImg from '../images/moon_rocket.svg';
@@ -98,7 +99,7 @@ class Login extends React.Component {
     )
       .then(res => {
         this.props.dispatch(loginAction());
-        this.fetchCurrentUser();
+        fetchCurrentUser(this.props.dispatch);
       })
       .catch(error => {
         handleHTTPResponse(error.response, true, true);
@@ -108,19 +109,7 @@ class Login extends React.Component {
       });
   }
 
-  fetchCurrentUser() {
-    axios.get(
-      `${process.env.APOLLO_HTTP_URL}user/me`,
-      { withCredentials: true }
-    )
-      .then(res => {
-        this.props.dispatch(cacheCurrentUser(res.data));
-      })
-      .catch(error => {
-        handleHTTPResponse(error.response);
-      });
-  }
-
+  
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.authenticated) {
       window.location.pathname = "/";

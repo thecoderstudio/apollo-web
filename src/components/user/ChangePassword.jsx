@@ -11,7 +11,6 @@ import { changePasswordSchema } from '../../validation/user.js'
 import { StatusCodes } from 'http-status-codes';
 import { handleHTTPResponse } from '../../actions/error';
 import { parseHTTPErrors } from '../../util/parser';
-import { cacheCurrentUser } from '../../actions/current-user.js';
 import Card from '../Card';
 import { promptedPasswordChange } from '../../actions/change-password';
 

@@ -5,6 +5,7 @@ import AgentList from '../components/agent-list/AgentList';
 import media from '../util/media';
 import NavBar from '../components/NavBar';
 import ChangePassword from '../components/user/ChangePassword';
+import { fetchCurrentUser } from '../util/user';
 
 const StyledAgentList = styled(AgentList)`
   grid-column: agent-listing;
@@ -39,6 +40,8 @@ const PasswordChange = styled(ChangePassword)`
 class Dashboard extends React.PureComponent {
   constructor(props) {
     super(props);
+    console.log("*&*&**&")
+    fetchCurrentUser(this.props.dispatch);
     this.state = { initial_passcode_changed : this.props.currentUser.has_changed_initial_password };
   }
 
