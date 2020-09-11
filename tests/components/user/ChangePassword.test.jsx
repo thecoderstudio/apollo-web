@@ -102,7 +102,7 @@ describe("change password", () => {
     await waitForExpect(() => {
       expect(axios.put).toHaveBeenCalled();
       expect(spy).toHaveBeenCalledWith(promptedPasswordChange());
-    })
+    });
   });
 
   it('handles unsuccessful put', async () => {

@@ -51,4 +51,4 @@ export default function Input(props) {
 }
 
 Input.propTypes = propTypes;
-Input.defaultProps = defaultProps;;
+Input.defaultProps = defaultProps;

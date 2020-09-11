@@ -1,4 +1,4 @@
-import { prompted_PASSWORD_CHANGE } from '../../src/actions/change-password';
+import { PROMPTED_PASSWORD_CHANGE } from '../../src/actions/change-password';
 import changePasswordReducer from '../../src/reducers/change-password';
 
 describe("change password reducer", () => {
@@ -7,6 +7,6 @@ describe("change password reducer", () => {
   });
 
   it("should correctly handle prompted passcode", () => {
-    expect(changePasswordReducer({}, { type: prompted_PASSWORD_CHANGE})).toEqual(true);
+    expect(changePasswordReducer({}, { type: PROMPTED_PASSWORD_CHANGE})).toEqual(true);
   })
 })

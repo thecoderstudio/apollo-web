@@ -16,7 +16,7 @@ const getComponent = (store) => {
       </BrowserRouter>
     </Provider >
   ).toJSON();
-}
+};
 
 
 describe('dashboard', () => {

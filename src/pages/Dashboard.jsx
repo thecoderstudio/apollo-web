@@ -42,7 +42,7 @@ class Dashboard extends React.PureComponent {
   constructor(props) {
     super(props);
     fetchCurrentUser(this.props.dispatch);
-    this.state = { initial_passcode_changed : this.props.currentUser.has_changed_initial_password };
+    this.state = { initialPasscodeChanged : this.props.currentUser.has_changed_initial_password };
   }
 
   render() {
@@ -51,7 +51,7 @@ class Dashboard extends React.PureComponent {
         <Content>
           <AgentList />
         </Content>
-        { (!this.state.initial_passcode_changed && checkIfAdmin(this.props.currentUser) && !this.props.promptedPasswordChange) &&
+        { (!this.state.initialPasscodeChanged && checkIfAdmin(this.props.currentUser) && !this.props.promptedPasswordChange) &&
           <PasswordChange />
         }
       </div>

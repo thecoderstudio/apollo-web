@@ -2,7 +2,7 @@ import axios from 'axios';
 import { handleHTTPResponse } from '../actions/error'; 
 import { cacheCurrentUser } from '../actions/current-user';
 
-function fetchCurrentUser(dispatch) {
+export function fetchCurrentUser(dispatch) {
   axios.get(
     `${process.env.APOLLO_HTTP_URL}user/me`,
     { withCredentials: true }
@@ -14,5 +14,3 @@ function fetchCurrentUser(dispatch) {
       handleHTTPResponse(error.response);
     });
 }
-
-export { fetchCurrentUser };

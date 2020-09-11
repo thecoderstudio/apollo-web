@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import Button from '../buttons/Button';
 import OutlinedButton from '../buttons/OutlinedButton';
 import Input from '../../components/Input';
-import { changePasswordSchema } from '../../validation/user.js'
+import { changePasswordSchema } from '../../validation/user.js';
 import { StatusCodes } from 'http-status-codes';
 import { handleHTTPResponse } from '../../actions/error';
 import { parseHTTPErrors } from '../../util/parser';
@@ -47,7 +47,7 @@ class ChangePassword extends React.PureComponent {
   changePassword(values, { setErrors }) {
     const currentUser = this.props.currentUser;
 		axios.put(
-		  `${process.env.APOLLO_HTTP_URL}user/${this.props.currentUser.id}`,
+      `${process.env.APOLLO_HTTP_URL}user/${this.props.currentUser.id}`,
       {
         'old_password': values['oldPassword'],
         'password': values['password'],
@@ -63,7 +63,7 @@ class ChangePassword extends React.PureComponent {
         if (error.response.status === StatusCodes.BAD_REQUEST) {
           setErrors(parseHTTPErrors(error.response.data));
         }
-      })
+      });
 	}
 
   getButton(errors, values) {
