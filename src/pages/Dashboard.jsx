@@ -51,7 +51,7 @@ class Dashboard extends React.PureComponent {
         <Content>
           <AgentList />
         </Content>
-        { (!this.state.initial_passcode_changed && checkIfAdmin(currentUser) && !this.props.promptedPasswordChange) &&
+        { (!this.state.initial_passcode_changed && checkIfAdmin(this.props.currentUser) && !this.props.promptedPasswordChange) &&
           <PasswordChange />
         }
       </div>
