@@ -49,7 +49,7 @@ describe('agent list item', () => {
   });
 
   it('opens and closes the terminal', () => {
-    wrapper.find('i').simulate('click');
+    wrapper.find({ className: "fas fa-terminal" }).simulate('click')
     expect(wrapper).toMatchSnapshot();
 
     // Close is supposed to call a callback given by the list item.
@@ -62,7 +62,7 @@ describe('agent list item', () => {
     let tree = component.toJSON();
     component.update(getComponentTags('disconnected'));
     tree = component.toJSON();
-    component.root.findByType('i').props.onClick();
+    component.root.findByProps({ className: "fas fa-terminal" }).props.onClick();
     expect(tree).toMatchSnapshot();
   });
 
@@ -74,7 +74,7 @@ describe('agent list item', () => {
     const mock = jest.fn();
     mock.mockReturnValueOnce(true);
     new MobileChecker().isMobile = mock;
-    wrapper.find('i').simulate('click');
+    wrapper.find({ className: "fas fa-terminal" }).simulate('click');
 
     expect(global.open).toHaveBeenCalledWith(expectedHref);
   });
