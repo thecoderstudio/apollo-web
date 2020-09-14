@@ -174,26 +174,26 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
       />
     </div>
     <div
-      className="__react_component_tooltip t13589e39-7796-42e9-9d34-b85d139a799e place-top type-dark"
+      className="__react_component_tooltip t04eb2157-d058-462d-8f9f-2ed68059c322 place-top type-dark"
       data-id="tooltip"
     >
       <style
         dangerouslySetInnerHTML={
           Object {
             "__html": "
-  	.t13589e39-7796-42e9-9d34-b85d139a799e {
+  	.t04eb2157-d058-462d-8f9f-2ed68059c322 {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.t13589e39-7796-42e9-9d34-b85d139a799e.place-top {
+  	.t04eb2157-d058-462d-8f9f-2ed68059c322.place-top {
         margin-top: -10px;
     }
-    .t13589e39-7796-42e9-9d34-b85d139a799e.place-top::before {
+    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-top::before {
         border-top: 8px solid transparent;
     }
-    .t13589e39-7796-42e9-9d34-b85d139a799e.place-top::after {
+    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -204,13 +204,13 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
         border-top-width: 6px;
     }
 
-    .t13589e39-7796-42e9-9d34-b85d139a799e.place-bottom {
+    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-bottom {
         margin-top: 10px;
     }
-    .t13589e39-7796-42e9-9d34-b85d139a799e.place-bottom::before {
+    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .t13589e39-7796-42e9-9d34-b85d139a799e.place-bottom::after {
+    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -221,13 +221,13 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
         border-bottom-width: 6px;
     }
 
-    .t13589e39-7796-42e9-9d34-b85d139a799e.place-left {
+    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-left {
         margin-left: -10px;
     }
-    .t13589e39-7796-42e9-9d34-b85d139a799e.place-left::before {
+    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-left::before {
         border-left: 8px solid transparent;
     }
-    .t13589e39-7796-42e9-9d34-b85d139a799e.place-left::after {
+    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -238,13 +238,13 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
         border-left-width: 6px;
     }
 
-    .t13589e39-7796-42e9-9d34-b85d139a799e.place-right {
+    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-right {
         margin-left: 10px;
     }
-    .t13589e39-7796-42e9-9d34-b85d139a799e.place-right::before {
+    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-right::before {
         border-right: 8px solid transparent;
     }
-    .t13589e39-7796-42e9-9d34-b85d139a799e.place-right::after {
+    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
@@ -620,26 +620,26 @@ exports[`agent list item opens and closes the terminal 1`] = `
             wrapper="div"
           >
             <div
-              className="__react_component_tooltip t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79 place-top type-dark"
+              className="__react_component_tooltip t24ebc074-523b-430c-b285-60451311560b place-top type-dark"
               data-id="tooltip"
             >
               <style
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": "
-  	.t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79 {
+  	.t24ebc074-523b-430c-b285-60451311560b {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-top {
+  	.t24ebc074-523b-430c-b285-60451311560b.place-top {
         margin-top: -10px;
     }
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-top::before {
+    .t24ebc074-523b-430c-b285-60451311560b.place-top::before {
         border-top: 8px solid transparent;
     }
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-top::after {
+    .t24ebc074-523b-430c-b285-60451311560b.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -650,13 +650,13 @@ exports[`agent list item opens and closes the terminal 1`] = `
         border-top-width: 6px;
     }
 
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-bottom {
+    .t24ebc074-523b-430c-b285-60451311560b.place-bottom {
         margin-top: 10px;
     }
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-bottom::before {
+    .t24ebc074-523b-430c-b285-60451311560b.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-bottom::after {
+    .t24ebc074-523b-430c-b285-60451311560b.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -667,13 +667,13 @@ exports[`agent list item opens and closes the terminal 1`] = `
         border-bottom-width: 6px;
     }
 
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-left {
+    .t24ebc074-523b-430c-b285-60451311560b.place-left {
         margin-left: -10px;
     }
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-left::before {
+    .t24ebc074-523b-430c-b285-60451311560b.place-left::before {
         border-left: 8px solid transparent;
     }
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-left::after {
+    .t24ebc074-523b-430c-b285-60451311560b.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -684,13 +684,13 @@ exports[`agent list item opens and closes the terminal 1`] = `
         border-left-width: 6px;
     }
 
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-right {
+    .t24ebc074-523b-430c-b285-60451311560b.place-right {
         margin-left: 10px;
     }
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-right::before {
+    .t24ebc074-523b-430c-b285-60451311560b.place-right::before {
         border-right: 8px solid transparent;
     }
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-right::after {
+    .t24ebc074-523b-430c-b285-60451311560b.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
@@ -1866,26 +1866,26 @@ exports[`agent list item opens and closes the terminal 2`] = `
             wrapper="div"
           >
             <div
-              className="__react_component_tooltip t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79 place-top type-dark"
+              className="__react_component_tooltip t24ebc074-523b-430c-b285-60451311560b place-top type-dark"
               data-id="tooltip"
             >
               <style
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": "
-  	.t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79 {
+  	.t24ebc074-523b-430c-b285-60451311560b {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-top {
+  	.t24ebc074-523b-430c-b285-60451311560b.place-top {
         margin-top: -10px;
     }
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-top::before {
+    .t24ebc074-523b-430c-b285-60451311560b.place-top::before {
         border-top: 8px solid transparent;
     }
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-top::after {
+    .t24ebc074-523b-430c-b285-60451311560b.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -1896,13 +1896,13 @@ exports[`agent list item opens and closes the terminal 2`] = `
         border-top-width: 6px;
     }
 
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-bottom {
+    .t24ebc074-523b-430c-b285-60451311560b.place-bottom {
         margin-top: 10px;
     }
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-bottom::before {
+    .t24ebc074-523b-430c-b285-60451311560b.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-bottom::after {
+    .t24ebc074-523b-430c-b285-60451311560b.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -1913,13 +1913,13 @@ exports[`agent list item opens and closes the terminal 2`] = `
         border-bottom-width: 6px;
     }
 
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-left {
+    .t24ebc074-523b-430c-b285-60451311560b.place-left {
         margin-left: -10px;
     }
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-left::before {
+    .t24ebc074-523b-430c-b285-60451311560b.place-left::before {
         border-left: 8px solid transparent;
     }
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-left::after {
+    .t24ebc074-523b-430c-b285-60451311560b.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -1930,13 +1930,13 @@ exports[`agent list item opens and closes the terminal 2`] = `
         border-left-width: 6px;
     }
 
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-right {
+    .t24ebc074-523b-430c-b285-60451311560b.place-right {
         margin-left: 10px;
     }
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-right::before {
+    .t24ebc074-523b-430c-b285-60451311560b.place-right::before {
         border-right: 8px solid transparent;
     }
-    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-right::after {
+    .t24ebc074-523b-430c-b285-60451311560b.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
@@ -2133,26 +2133,26 @@ exports[`agent list item renders connected correctly 1`] = `
       />
     </div>
     <div
-      className="__react_component_tooltip tacb09279-e470-45aa-9180-e88134a397f6 place-top type-dark"
+      className="__react_component_tooltip tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0 place-top type-dark"
       data-id="tooltip"
     >
       <style
         dangerouslySetInnerHTML={
           Object {
             "__html": "
-  	.tacb09279-e470-45aa-9180-e88134a397f6 {
+  	.tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0 {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.tacb09279-e470-45aa-9180-e88134a397f6.place-top {
+  	.tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-top {
         margin-top: -10px;
     }
-    .tacb09279-e470-45aa-9180-e88134a397f6.place-top::before {
+    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-top::before {
         border-top: 8px solid transparent;
     }
-    .tacb09279-e470-45aa-9180-e88134a397f6.place-top::after {
+    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -2163,13 +2163,13 @@ exports[`agent list item renders connected correctly 1`] = `
         border-top-width: 6px;
     }
 
-    .tacb09279-e470-45aa-9180-e88134a397f6.place-bottom {
+    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-bottom {
         margin-top: 10px;
     }
-    .tacb09279-e470-45aa-9180-e88134a397f6.place-bottom::before {
+    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .tacb09279-e470-45aa-9180-e88134a397f6.place-bottom::after {
+    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -2180,13 +2180,13 @@ exports[`agent list item renders connected correctly 1`] = `
         border-bottom-width: 6px;
     }
 
-    .tacb09279-e470-45aa-9180-e88134a397f6.place-left {
+    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-left {
         margin-left: -10px;
     }
-    .tacb09279-e470-45aa-9180-e88134a397f6.place-left::before {
+    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-left::before {
         border-left: 8px solid transparent;
     }
-    .tacb09279-e470-45aa-9180-e88134a397f6.place-left::after {
+    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -2197,13 +2197,13 @@ exports[`agent list item renders connected correctly 1`] = `
         border-left-width: 6px;
     }
 
-    .tacb09279-e470-45aa-9180-e88134a397f6.place-right {
+    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-right {
         margin-left: 10px;
     }
-    .tacb09279-e470-45aa-9180-e88134a397f6.place-right::before {
+    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-right::before {
         border-right: 8px solid transparent;
     }
-    .tacb09279-e470-45aa-9180-e88134a397f6.place-right::after {
+    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
@@ -2396,26 +2396,26 @@ exports[`agent list item renders disconnected correctly 1`] = `
       />
     </div>
     <div
-      className="__react_component_tooltip t10880014-eacc-4c9d-b15d-5c40af2919cc place-top type-dark"
+      className="__react_component_tooltip t4099fedc-dd1d-4721-b870-cee67e9651a2 place-top type-dark"
       data-id="tooltip"
     >
       <style
         dangerouslySetInnerHTML={
           Object {
             "__html": "
-  	.t10880014-eacc-4c9d-b15d-5c40af2919cc {
+  	.t4099fedc-dd1d-4721-b870-cee67e9651a2 {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.t10880014-eacc-4c9d-b15d-5c40af2919cc.place-top {
+  	.t4099fedc-dd1d-4721-b870-cee67e9651a2.place-top {
         margin-top: -10px;
     }
-    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-top::before {
+    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-top::before {
         border-top: 8px solid transparent;
     }
-    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-top::after {
+    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -2426,13 +2426,13 @@ exports[`agent list item renders disconnected correctly 1`] = `
         border-top-width: 6px;
     }
 
-    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-bottom {
+    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-bottom {
         margin-top: 10px;
     }
-    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-bottom::before {
+    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-bottom::after {
+    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -2443,13 +2443,13 @@ exports[`agent list item renders disconnected correctly 1`] = `
         border-bottom-width: 6px;
     }
 
-    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-left {
+    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-left {
         margin-left: -10px;
     }
-    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-left::before {
+    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-left::before {
         border-left: 8px solid transparent;
     }
-    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-left::after {
+    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -2460,13 +2460,13 @@ exports[`agent list item renders disconnected correctly 1`] = `
         border-left-width: 6px;
     }
 
-    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-right {
+    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-right {
         margin-left: 10px;
     }
-    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-right::before {
+    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-right::before {
         border-right: 8px solid transparent;
     }
-    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-right::after {
+    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
@@ -2659,26 +2659,26 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
       />
     </div>
     <div
-      className="__react_component_tooltip t06b415e4-2779-4cf8-909e-29d96ad3f72b place-top type-dark"
+      className="__react_component_tooltip tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235 place-top type-dark"
       data-id="tooltip"
     >
       <style
         dangerouslySetInnerHTML={
           Object {
             "__html": "
-  	.t06b415e4-2779-4cf8-909e-29d96ad3f72b {
+  	.tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235 {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-top {
+  	.tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-top {
         margin-top: -10px;
     }
-    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-top::before {
+    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-top::before {
         border-top: 8px solid transparent;
     }
-    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-top::after {
+    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -2689,13 +2689,13 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
         border-top-width: 6px;
     }
 
-    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-bottom {
+    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-bottom {
         margin-top: 10px;
     }
-    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-bottom::before {
+    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-bottom::after {
+    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -2706,13 +2706,13 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
         border-bottom-width: 6px;
     }
 
-    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-left {
+    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-left {
         margin-left: -10px;
     }
-    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-left::before {
+    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-left::before {
         border-left: 8px solid transparent;
     }
-    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-left::after {
+    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -2723,13 +2723,13 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
         border-left-width: 6px;
     }
 
-    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-right {
+    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-right {
         margin-left: 10px;
     }
-    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-right::before {
+    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-right::before {
         border-right: 8px solid transparent;
     }
-    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-right::after {
+    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
@@ -2922,26 +2922,26 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
       />
     </div>
     <div
-      className="__react_component_tooltip t60eebbcd-19af-4952-ab42-7ffa2f551547 place-top type-dark"
+      className="__react_component_tooltip t71264809-ae81-4f34-9d01-6fb39101004c place-top type-dark"
       data-id="tooltip"
     >
       <style
         dangerouslySetInnerHTML={
           Object {
             "__html": "
-  	.t60eebbcd-19af-4952-ab42-7ffa2f551547 {
+  	.t71264809-ae81-4f34-9d01-6fb39101004c {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.t60eebbcd-19af-4952-ab42-7ffa2f551547.place-top {
+  	.t71264809-ae81-4f34-9d01-6fb39101004c.place-top {
         margin-top: -10px;
     }
-    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-top::before {
+    .t71264809-ae81-4f34-9d01-6fb39101004c.place-top::before {
         border-top: 8px solid transparent;
     }
-    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-top::after {
+    .t71264809-ae81-4f34-9d01-6fb39101004c.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -2952,13 +2952,13 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
         border-top-width: 6px;
     }
 
-    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-bottom {
+    .t71264809-ae81-4f34-9d01-6fb39101004c.place-bottom {
         margin-top: 10px;
     }
-    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-bottom::before {
+    .t71264809-ae81-4f34-9d01-6fb39101004c.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-bottom::after {
+    .t71264809-ae81-4f34-9d01-6fb39101004c.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -2969,13 +2969,13 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
         border-bottom-width: 6px;
     }
 
-    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-left {
+    .t71264809-ae81-4f34-9d01-6fb39101004c.place-left {
         margin-left: -10px;
     }
-    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-left::before {
+    .t71264809-ae81-4f34-9d01-6fb39101004c.place-left::before {
         border-left: 8px solid transparent;
     }
-    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-left::after {
+    .t71264809-ae81-4f34-9d01-6fb39101004c.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -2986,13 +2986,13 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
         border-left-width: 6px;
     }
 
-    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-right {
+    .t71264809-ae81-4f34-9d01-6fb39101004c.place-right {
         margin-left: 10px;
     }
-    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-right::before {
+    .t71264809-ae81-4f34-9d01-6fb39101004c.place-right::before {
         border-right: 8px solid transparent;
     }
-    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-right::after {
+    .t71264809-ae81-4f34-9d01-6fb39101004c.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
@@ -3185,26 +3185,26 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
       />
     </div>
     <div
-      className="__react_component_tooltip t37641ae8-dee2-4aee-98bb-279bf7eb48e2 place-top type-dark"
+      className="__react_component_tooltip tf87c0bd2-164c-4195-b45a-8f169f15e571 place-top type-dark"
       data-id="tooltip"
     >
       <style
         dangerouslySetInnerHTML={
           Object {
             "__html": "
-  	.t37641ae8-dee2-4aee-98bb-279bf7eb48e2 {
+  	.tf87c0bd2-164c-4195-b45a-8f169f15e571 {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-top {
+  	.tf87c0bd2-164c-4195-b45a-8f169f15e571.place-top {
         margin-top: -10px;
     }
-    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-top::before {
+    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-top::before {
         border-top: 8px solid transparent;
     }
-    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-top::after {
+    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -3215,13 +3215,13 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
         border-top-width: 6px;
     }
 
-    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-bottom {
+    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-bottom {
         margin-top: 10px;
     }
-    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-bottom::before {
+    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-bottom::after {
+    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -3232,13 +3232,13 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
         border-bottom-width: 6px;
     }
 
-    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-left {
+    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-left {
         margin-left: -10px;
     }
-    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-left::before {
+    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-left::before {
         border-left: 8px solid transparent;
     }
-    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-left::after {
+    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -3249,13 +3249,13 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
         border-left-width: 6px;
     }
 
-    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-right {
+    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-right {
         margin-left: 10px;
     }
-    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-right::before {
+    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-right::before {
         border-right: 8px solid transparent;
     }
-    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-right::after {
+    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
@@ -3448,26 +3448,26 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
       />
     </div>
     <div
-      className="__react_component_tooltip t598d6652-7fd5-4b3d-837e-4768a15fb2eb place-top type-dark"
+      className="__react_component_tooltip tf72e1af4-33c4-42ab-a21b-d9c5934d3963 place-top type-dark"
       data-id="tooltip"
     >
       <style
         dangerouslySetInnerHTML={
           Object {
             "__html": "
-  	.t598d6652-7fd5-4b3d-837e-4768a15fb2eb {
+  	.tf72e1af4-33c4-42ab-a21b-d9c5934d3963 {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-top {
+  	.tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-top {
         margin-top: -10px;
     }
-    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-top::before {
+    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-top::before {
         border-top: 8px solid transparent;
     }
-    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-top::after {
+    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -3478,13 +3478,13 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
         border-top-width: 6px;
     }
 
-    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-bottom {
+    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-bottom {
         margin-top: 10px;
     }
-    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-bottom::before {
+    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-bottom::after {
+    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -3495,13 +3495,13 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
         border-bottom-width: 6px;
     }
 
-    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-left {
+    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-left {
         margin-left: -10px;
     }
-    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-left::before {
+    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-left::before {
         border-left: 8px solid transparent;
     }
-    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-left::after {
+    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -3512,13 +3512,13 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
         border-left-width: 6px;
     }
 
-    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-right {
+    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-right {
         margin-left: 10px;
     }
-    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-right::before {
+    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-right::before {
         border-right: 8px solid transparent;
     }
-    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-right::after {
+    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
@@ -3711,26 +3711,26 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
       />
     </div>
     <div
-      className="__react_component_tooltip tcfae7b14-7705-41da-8416-caa2096061a6 place-top type-dark"
+      className="__react_component_tooltip ta01ba8dc-2f30-4e58-acff-aadf6e6022f5 place-top type-dark"
       data-id="tooltip"
     >
       <style
         dangerouslySetInnerHTML={
           Object {
             "__html": "
-  	.tcfae7b14-7705-41da-8416-caa2096061a6 {
+  	.ta01ba8dc-2f30-4e58-acff-aadf6e6022f5 {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.tcfae7b14-7705-41da-8416-caa2096061a6.place-top {
+  	.ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-top {
         margin-top: -10px;
     }
-    .tcfae7b14-7705-41da-8416-caa2096061a6.place-top::before {
+    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-top::before {
         border-top: 8px solid transparent;
     }
-    .tcfae7b14-7705-41da-8416-caa2096061a6.place-top::after {
+    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -3741,13 +3741,13 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
         border-top-width: 6px;
     }
 
-    .tcfae7b14-7705-41da-8416-caa2096061a6.place-bottom {
+    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-bottom {
         margin-top: 10px;
     }
-    .tcfae7b14-7705-41da-8416-caa2096061a6.place-bottom::before {
+    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .tcfae7b14-7705-41da-8416-caa2096061a6.place-bottom::after {
+    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -3758,13 +3758,13 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
         border-bottom-width: 6px;
     }
 
-    .tcfae7b14-7705-41da-8416-caa2096061a6.place-left {
+    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-left {
         margin-left: -10px;
     }
-    .tcfae7b14-7705-41da-8416-caa2096061a6.place-left::before {
+    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-left::before {
         border-left: 8px solid transparent;
     }
-    .tcfae7b14-7705-41da-8416-caa2096061a6.place-left::after {
+    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -3775,13 +3775,13 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
         border-left-width: 6px;
     }
 
-    .tcfae7b14-7705-41da-8416-caa2096061a6.place-right {
+    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-right {
         margin-left: 10px;
     }
-    .tcfae7b14-7705-41da-8416-caa2096061a6.place-right::before {
+    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-right::before {
         border-right: 8px solid transparent;
     }
-    .tcfae7b14-7705-41da-8416-caa2096061a6.place-right::after {
+    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
