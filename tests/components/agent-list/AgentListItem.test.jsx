@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import { ThemeProvider } from 'styled-components';
 import WS from 'jest-websocket-mock';
@@ -7,6 +8,7 @@ import AgentListItem from '../../../src/components/agent-list/AgentListItem';
 import TerminalWindow from '../../../src/components/terminal/TerminalWindow';
 import { darkTheme } from '../../../src/theme';
 import MobileChecker from '../../../src/util/MobileChecker';
+
 
 function getComponentTags(connectionState, operatingSystem) {
   return (
@@ -25,6 +27,7 @@ function getComponentTags(connectionState, operatingSystem) {
 }
 
 function getComponent(connectionState, operatingSystem) {
+  ReactDOM.createPortal = node => node
   return renderer.create(getComponentTags(connectionState, operatingSystem));
 }
 
@@ -83,9 +86,10 @@ describe('agent list item', () => {
 
   it('renders the various operating systems correctly', () => {
     let tree;
+    const component = getComponent('connected');
     let operatingSystems = ['darwin', 'openbsd', 'freebsd', 'linux', null];
     for (const os of operatingSystems) {
-      const component = getComponent('connected', os);
+      component.update(getComponentTags('connected', os));
       tree = component.toJSON();
       expect(tree).toMatchSnapshot();
     }

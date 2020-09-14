@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import ReactTooltip from 'react-tooltip';
+import Tippy from '@tippyjs/react';
 import Icon from '../Icon';
 import ConnectionState from './ConnectionState';
 import { openTerminal } from '../terminal/Terminal';
@@ -148,7 +148,7 @@ export default class AgentListItem extends React.PureComponent {
         osClass = "fas fa-question-circle";
     }
 
-    return <OSIcon data-tip={this.getOSTooltip(os, arch)} className={osClass} />
+    return <Tippy content={this.getOSTooltip(os, arch)}><OSIcon className={osClass} /></Tippy>
   }
 
   getOSTooltip(os, arch) {
@@ -174,12 +174,13 @@ export default class AgentListItem extends React.PureComponent {
           {this.getOSIcon(os, arch)}
           <p>{this.props.agent.name}</p>
         </Name>
-        <IPAddress data-tip="External IP Address">{this.props.agent.externalIpAddress}</IPAddress>
+        <Tippy content="External IP address">
+          <IPAddress>{this.props.agent.externalIpAddress}</IPAddress>
+        </Tippy>
         <Controls>
           <ConnectionState connectionState={this.props.agent.connectionState} />
           <TerminalIcon active={this.state.connected} onClick={this.openTerminal} className="fas fa-terminal" />
         </Controls>
-        <ReactTooltip />
         {terminal}
     </Container>
     );

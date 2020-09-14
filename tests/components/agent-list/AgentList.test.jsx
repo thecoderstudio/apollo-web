@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import configureStore from 'redux-mock-store';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
@@ -11,7 +12,7 @@ import { severity, notify } from '../../../src/actions/notification';
 import waitForExpect from 'wait-for-expect';
 import { darkTheme } from '../../../src/theme';
 
-
+ReactDOM.createPortal = node => node
 const mockStore = configureStore([]);
 
 function getComponent(store) {

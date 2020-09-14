@@ -143,16 +143,16 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
     >
       <i
         className="c2 fas fa-question-circle"
-        data-tip="Operating system unkown"
       />
+      Operating system unkown
       <p>
         agentName
       </p>
     </div>
     <p
       className="c3"
-      data-tip="External IP Address"
     />
+    External IP address
     <div
       className="c4"
     >
@@ -171,92 +171,6 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
       <i
         className="c8 fas fa-terminal"
         onClick={[Function]}
-      />
-    </div>
-    <div
-      className="__react_component_tooltip t04eb2157-d058-462d-8f9f-2ed68059c322 place-top type-dark"
-      data-id="tooltip"
-    >
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "
-  	.t04eb2157-d058-462d-8f9f-2ed68059c322 {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.t04eb2157-d058-462d-8f9f-2ed68059c322.place-top {
-        margin-top: -10px;
-    }
-    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-bottom {
-        margin-top: 10px;
-    }
-    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-left {
-        margin-left: -10px;
-    }
-    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-right {
-        margin-left: 10px;
-    }
-    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .t04eb2157-d058-462d-8f9f-2ed68059c322.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-          }
-        }
       />
     </div>
   </li>
@@ -523,29 +437,42 @@ exports[`agent list item opens and closes the terminal 1`] = `
             <div
               className="c1"
             >
-              <Styled(styled.i)
-                active={true}
-                className="fas fa-question-circle"
-                data-tip="Operating system unkown"
+              <ForwardRef(TippyWrapper)
+                content="Operating system unkown"
               >
-                <i
-                  className="c2 fas fa-question-circle"
-                  data-tip="Operating system unkown"
-                />
-              </Styled(styled.i)>
+                <Tippy
+                  content="Operating system unkown"
+                >
+                  <Styled(styled.i)
+                    active={true}
+                    className="fas fa-question-circle"
+                  >
+                    <i
+                      className="c2 fas fa-question-circle"
+                    />
+                  </Styled(styled.i)>
+                  Operating system unkown
+                </Tippy>
+              </ForwardRef(TippyWrapper)>
               <p>
                 agentName
               </p>
             </div>
           </styled.div>
-          <styled.p
-            data-tip="External IP Address"
+          <ForwardRef(TippyWrapper)
+            content="External IP address"
           >
-            <p
-              className="c3"
-              data-tip="External IP Address"
-            />
-          </styled.p>
+            <Tippy
+              content="External IP address"
+            >
+              <styled.p>
+                <p
+                  className="c3"
+                />
+              </styled.p>
+              External IP address
+            </Tippy>
+          </ForwardRef(TippyWrapper)>
           <styled.div>
             <div
               className="c4"
@@ -613,99 +540,6 @@ exports[`agent list item opens and closes the terminal 1`] = `
               </Styled(styled.i)>
             </div>
           </styled.div>
-          <ReactTooltip
-            clickable={false}
-            insecure={true}
-            resizeHide={true}
-            wrapper="div"
-          >
-            <div
-              className="__react_component_tooltip t24ebc074-523b-430c-b285-60451311560b place-top type-dark"
-              data-id="tooltip"
-            >
-              <style
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "
-  	.t24ebc074-523b-430c-b285-60451311560b {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.t24ebc074-523b-430c-b285-60451311560b.place-top {
-        margin-top: -10px;
-    }
-    .t24ebc074-523b-430c-b285-60451311560b.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .t24ebc074-523b-430c-b285-60451311560b.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .t24ebc074-523b-430c-b285-60451311560b.place-bottom {
-        margin-top: 10px;
-    }
-    .t24ebc074-523b-430c-b285-60451311560b.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .t24ebc074-523b-430c-b285-60451311560b.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .t24ebc074-523b-430c-b285-60451311560b.place-left {
-        margin-left: -10px;
-    }
-    .t24ebc074-523b-430c-b285-60451311560b.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .t24ebc074-523b-430c-b285-60451311560b.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .t24ebc074-523b-430c-b285-60451311560b.place-right {
-        margin-left: 10px;
-    }
-    .t24ebc074-523b-430c-b285-60451311560b.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .t24ebc074-523b-430c-b285-60451311560b.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-                  }
-                }
-              />
-            </div>
-          </ReactTooltip>
           <WithTheme(TerminalWindow)
             agent={
               Object {
@@ -1769,29 +1603,42 @@ exports[`agent list item opens and closes the terminal 2`] = `
             <div
               className="c1"
             >
-              <Styled(styled.i)
-                active={true}
-                className="fas fa-question-circle"
-                data-tip="Operating system unkown"
+              <ForwardRef(TippyWrapper)
+                content="Operating system unkown"
               >
-                <i
-                  className="c2 fas fa-question-circle"
-                  data-tip="Operating system unkown"
-                />
-              </Styled(styled.i)>
+                <Tippy
+                  content="Operating system unkown"
+                >
+                  <Styled(styled.i)
+                    active={true}
+                    className="fas fa-question-circle"
+                  >
+                    <i
+                      className="c2 fas fa-question-circle"
+                    />
+                  </Styled(styled.i)>
+                  Operating system unkown
+                </Tippy>
+              </ForwardRef(TippyWrapper)>
               <p>
                 agentName
               </p>
             </div>
           </styled.div>
-          <styled.p
-            data-tip="External IP Address"
+          <ForwardRef(TippyWrapper)
+            content="External IP address"
           >
-            <p
-              className="c3"
-              data-tip="External IP Address"
-            />
-          </styled.p>
+            <Tippy
+              content="External IP address"
+            >
+              <styled.p>
+                <p
+                  className="c3"
+                />
+              </styled.p>
+              External IP address
+            </Tippy>
+          </ForwardRef(TippyWrapper)>
           <styled.div>
             <div
               className="c4"
@@ -1859,99 +1706,6 @@ exports[`agent list item opens and closes the terminal 2`] = `
               </Styled(styled.i)>
             </div>
           </styled.div>
-          <ReactTooltip
-            clickable={false}
-            insecure={true}
-            resizeHide={true}
-            wrapper="div"
-          >
-            <div
-              className="__react_component_tooltip t24ebc074-523b-430c-b285-60451311560b place-top type-dark"
-              data-id="tooltip"
-            >
-              <style
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "
-  	.t24ebc074-523b-430c-b285-60451311560b {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.t24ebc074-523b-430c-b285-60451311560b.place-top {
-        margin-top: -10px;
-    }
-    .t24ebc074-523b-430c-b285-60451311560b.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .t24ebc074-523b-430c-b285-60451311560b.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .t24ebc074-523b-430c-b285-60451311560b.place-bottom {
-        margin-top: 10px;
-    }
-    .t24ebc074-523b-430c-b285-60451311560b.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .t24ebc074-523b-430c-b285-60451311560b.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .t24ebc074-523b-430c-b285-60451311560b.place-left {
-        margin-left: -10px;
-    }
-    .t24ebc074-523b-430c-b285-60451311560b.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .t24ebc074-523b-430c-b285-60451311560b.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .t24ebc074-523b-430c-b285-60451311560b.place-right {
-        margin-left: 10px;
-    }
-    .t24ebc074-523b-430c-b285-60451311560b.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .t24ebc074-523b-430c-b285-60451311560b.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-                  }
-                }
-              />
-            </div>
-          </ReactTooltip>
         </li>
       </styled.li>
     </AgentListItem>
@@ -2102,16 +1856,16 @@ exports[`agent list item renders connected correctly 1`] = `
     >
       <i
         className="c2 fas fa-question-circle"
-        data-tip="Operating system unkown"
       />
+      Operating system unkown
       <p>
         agentName
       </p>
     </div>
     <p
       className="c3"
-      data-tip="External IP Address"
     />
+    External IP address
     <div
       className="c4"
     >
@@ -2130,92 +1884,6 @@ exports[`agent list item renders connected correctly 1`] = `
       <i
         className="c8 fas fa-terminal"
         onClick={[Function]}
-      />
-    </div>
-    <div
-      className="__react_component_tooltip tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0 place-top type-dark"
-      data-id="tooltip"
-    >
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "
-  	.tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0 {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-top {
-        margin-top: -10px;
-    }
-    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-bottom {
-        margin-top: 10px;
-    }
-    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-left {
-        margin-left: -10px;
-    }
-    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-right {
-        margin-left: 10px;
-    }
-    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .tca7c620c-fc74-4f3c-99bc-2b2f5ec95ed0.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-          }
-        }
       />
     </div>
   </li>
@@ -2365,16 +2033,16 @@ exports[`agent list item renders disconnected correctly 1`] = `
     >
       <i
         className="c2 fas fa-question-circle"
-        data-tip="Operating system unkown"
       />
+      Operating system unkown
       <p>
         agentName
       </p>
     </div>
     <p
       className="c3"
-      data-tip="External IP Address"
     />
+    External IP address
     <div
       className="c4"
     >
@@ -2393,92 +2061,6 @@ exports[`agent list item renders disconnected correctly 1`] = `
       <i
         className="c8 fas fa-terminal"
         onClick={[Function]}
-      />
-    </div>
-    <div
-      className="__react_component_tooltip t4099fedc-dd1d-4721-b870-cee67e9651a2 place-top type-dark"
-      data-id="tooltip"
-    >
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "
-  	.t4099fedc-dd1d-4721-b870-cee67e9651a2 {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.t4099fedc-dd1d-4721-b870-cee67e9651a2.place-top {
-        margin-top: -10px;
-    }
-    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-bottom {
-        margin-top: 10px;
-    }
-    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-left {
-        margin-left: -10px;
-    }
-    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-right {
-        margin-left: 10px;
-    }
-    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .t4099fedc-dd1d-4721-b870-cee67e9651a2.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-          }
-        }
       />
     </div>
   </li>
@@ -2628,16 +2210,16 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
     >
       <i
         className="c2 fab fa-apple"
-        data-tip="darwin amd64"
       />
+      darwin amd64
       <p>
         agentName
       </p>
     </div>
     <p
       className="c3"
-      data-tip="External IP Address"
     />
+    External IP address
     <div
       className="c4"
     >
@@ -2656,92 +2238,6 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
       <i
         className="c8 fas fa-terminal"
         onClick={[Function]}
-      />
-    </div>
-    <div
-      className="__react_component_tooltip tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235 place-top type-dark"
-      data-id="tooltip"
-    >
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "
-  	.tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235 {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-top {
-        margin-top: -10px;
-    }
-    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-bottom {
-        margin-top: 10px;
-    }
-    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-left {
-        margin-left: -10px;
-    }
-    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-right {
-        margin-left: 10px;
-    }
-    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .tb6bf1bdd-e85a-4667-b3d5-148a0a2bc235.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-          }
-        }
       />
     </div>
   </li>
@@ -2891,16 +2387,16 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
     >
       <i
         className="c2 fas fa-question-circle"
-        data-tip="openbsd amd64"
       />
+      openbsd amd64
       <p>
         agentName
       </p>
     </div>
     <p
       className="c3"
-      data-tip="External IP Address"
     />
+    External IP address
     <div
       className="c4"
     >
@@ -2919,92 +2415,6 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
       <i
         className="c8 fas fa-terminal"
         onClick={[Function]}
-      />
-    </div>
-    <div
-      className="__react_component_tooltip t71264809-ae81-4f34-9d01-6fb39101004c place-top type-dark"
-      data-id="tooltip"
-    >
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "
-  	.t71264809-ae81-4f34-9d01-6fb39101004c {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.t71264809-ae81-4f34-9d01-6fb39101004c.place-top {
-        margin-top: -10px;
-    }
-    .t71264809-ae81-4f34-9d01-6fb39101004c.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .t71264809-ae81-4f34-9d01-6fb39101004c.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .t71264809-ae81-4f34-9d01-6fb39101004c.place-bottom {
-        margin-top: 10px;
-    }
-    .t71264809-ae81-4f34-9d01-6fb39101004c.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .t71264809-ae81-4f34-9d01-6fb39101004c.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .t71264809-ae81-4f34-9d01-6fb39101004c.place-left {
-        margin-left: -10px;
-    }
-    .t71264809-ae81-4f34-9d01-6fb39101004c.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .t71264809-ae81-4f34-9d01-6fb39101004c.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .t71264809-ae81-4f34-9d01-6fb39101004c.place-right {
-        margin-left: 10px;
-    }
-    .t71264809-ae81-4f34-9d01-6fb39101004c.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .t71264809-ae81-4f34-9d01-6fb39101004c.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-          }
-        }
       />
     </div>
   </li>
@@ -3154,16 +2564,16 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
     >
       <i
         className="c2 fab fa-freebsd"
-        data-tip="freebsd amd64"
       />
+      freebsd amd64
       <p>
         agentName
       </p>
     </div>
     <p
       className="c3"
-      data-tip="External IP Address"
     />
+    External IP address
     <div
       className="c4"
     >
@@ -3182,92 +2592,6 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
       <i
         className="c8 fas fa-terminal"
         onClick={[Function]}
-      />
-    </div>
-    <div
-      className="__react_component_tooltip tf87c0bd2-164c-4195-b45a-8f169f15e571 place-top type-dark"
-      data-id="tooltip"
-    >
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "
-  	.tf87c0bd2-164c-4195-b45a-8f169f15e571 {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.tf87c0bd2-164c-4195-b45a-8f169f15e571.place-top {
-        margin-top: -10px;
-    }
-    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-bottom {
-        margin-top: 10px;
-    }
-    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-left {
-        margin-left: -10px;
-    }
-    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-right {
-        margin-left: 10px;
-    }
-    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .tf87c0bd2-164c-4195-b45a-8f169f15e571.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-          }
-        }
       />
     </div>
   </li>
@@ -3417,16 +2741,16 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
     >
       <i
         className="c2 fab fa-linux"
-        data-tip="linux amd64"
       />
+      linux amd64
       <p>
         agentName
       </p>
     </div>
     <p
       className="c3"
-      data-tip="External IP Address"
     />
+    External IP address
     <div
       className="c4"
     >
@@ -3445,92 +2769,6 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
       <i
         className="c8 fas fa-terminal"
         onClick={[Function]}
-      />
-    </div>
-    <div
-      className="__react_component_tooltip tf72e1af4-33c4-42ab-a21b-d9c5934d3963 place-top type-dark"
-      data-id="tooltip"
-    >
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "
-  	.tf72e1af4-33c4-42ab-a21b-d9c5934d3963 {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-top {
-        margin-top: -10px;
-    }
-    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-bottom {
-        margin-top: 10px;
-    }
-    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-left {
-        margin-left: -10px;
-    }
-    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-right {
-        margin-left: 10px;
-    }
-    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .tf72e1af4-33c4-42ab-a21b-d9c5934d3963.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-          }
-        }
       />
     </div>
   </li>
@@ -3680,16 +2918,16 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
     >
       <i
         className="c2 fas fa-question-circle"
-        data-tip="Operating system unkown"
       />
+      Operating system unkown
       <p>
         agentName
       </p>
     </div>
     <p
       className="c3"
-      data-tip="External IP Address"
     />
+    External IP address
     <div
       className="c4"
     >
@@ -3708,92 +2946,6 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
       <i
         className="c8 fas fa-terminal"
         onClick={[Function]}
-      />
-    </div>
-    <div
-      className="__react_component_tooltip ta01ba8dc-2f30-4e58-acff-aadf6e6022f5 place-top type-dark"
-      data-id="tooltip"
-    >
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "
-  	.ta01ba8dc-2f30-4e58-acff-aadf6e6022f5 {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-top {
-        margin-top: -10px;
-    }
-    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-bottom {
-        margin-top: 10px;
-    }
-    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-left {
-        margin-left: -10px;
-    }
-    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-right {
-        margin-left: 10px;
-    }
-    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .ta01ba8dc-2f30-4e58-acff-aadf6e6022f5.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-          }
-        }
       />
     </div>
   </li>

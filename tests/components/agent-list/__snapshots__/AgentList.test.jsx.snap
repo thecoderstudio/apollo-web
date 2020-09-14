@@ -171,16 +171,16 @@ exports[`agentList correctly lists multiple agents 1`] = `
       >
         <i
           className="c5 fas fa-question-circle"
-          data-tip="Operating system unkown"
         />
+        Operating system unkown
         <p>
           name
         </p>
       </div>
       <p
         className="c6"
-        data-tip="External IP Address"
       />
+      External IP address
       <div
         className="c7"
       >
@@ -199,92 +199,6 @@ exports[`agentList correctly lists multiple agents 1`] = `
         <i
           className="c11 fas fa-terminal"
           onClick={[Function]}
-        />
-      </div>
-      <div
-        className="__react_component_tooltip t38f6d3da-da3f-4038-90f7-fd00174d2a77 place-top type-dark"
-        data-id="tooltip"
-      >
-        <style
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "
-  	.t38f6d3da-da3f-4038-90f7-fd00174d2a77 {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.t38f6d3da-da3f-4038-90f7-fd00174d2a77.place-top {
-        margin-top: -10px;
-    }
-    .t38f6d3da-da3f-4038-90f7-fd00174d2a77.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .t38f6d3da-da3f-4038-90f7-fd00174d2a77.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .t38f6d3da-da3f-4038-90f7-fd00174d2a77.place-bottom {
-        margin-top: 10px;
-    }
-    .t38f6d3da-da3f-4038-90f7-fd00174d2a77.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .t38f6d3da-da3f-4038-90f7-fd00174d2a77.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .t38f6d3da-da3f-4038-90f7-fd00174d2a77.place-left {
-        margin-left: -10px;
-    }
-    .t38f6d3da-da3f-4038-90f7-fd00174d2a77.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .t38f6d3da-da3f-4038-90f7-fd00174d2a77.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .t38f6d3da-da3f-4038-90f7-fd00174d2a77.place-right {
-        margin-left: 10px;
-    }
-    .t38f6d3da-da3f-4038-90f7-fd00174d2a77.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .t38f6d3da-da3f-4038-90f7-fd00174d2a77.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-            }
-          }
         />
       </div>
     </li>
@@ -296,16 +210,16 @@ exports[`agentList correctly lists multiple agents 1`] = `
       >
         <i
           className="c5 fas fa-question-circle"
-          data-tip="Operating system unkown"
         />
+        Operating system unkown
         <p>
           name2
         </p>
       </div>
       <p
         className="c6"
-        data-tip="External IP Address"
       />
+      External IP address
       <div
         className="c7"
       >
@@ -324,92 +238,6 @@ exports[`agentList correctly lists multiple agents 1`] = `
         <i
           className="c11 fas fa-terminal"
           onClick={[Function]}
-        />
-      </div>
-      <div
-        className="__react_component_tooltip te3cafe56-dd5a-4dfd-ae6a-2ea84282c425 place-top type-dark"
-        data-id="tooltip"
-      >
-        <style
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "
-  	.te3cafe56-dd5a-4dfd-ae6a-2ea84282c425 {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.te3cafe56-dd5a-4dfd-ae6a-2ea84282c425.place-top {
-        margin-top: -10px;
-    }
-    .te3cafe56-dd5a-4dfd-ae6a-2ea84282c425.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .te3cafe56-dd5a-4dfd-ae6a-2ea84282c425.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .te3cafe56-dd5a-4dfd-ae6a-2ea84282c425.place-bottom {
-        margin-top: 10px;
-    }
-    .te3cafe56-dd5a-4dfd-ae6a-2ea84282c425.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .te3cafe56-dd5a-4dfd-ae6a-2ea84282c425.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .te3cafe56-dd5a-4dfd-ae6a-2ea84282c425.place-left {
-        margin-left: -10px;
-    }
-    .te3cafe56-dd5a-4dfd-ae6a-2ea84282c425.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .te3cafe56-dd5a-4dfd-ae6a-2ea84282c425.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .te3cafe56-dd5a-4dfd-ae6a-2ea84282c425.place-right {
-        margin-left: 10px;
-    }
-    .te3cafe56-dd5a-4dfd-ae6a-2ea84282c425.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .te3cafe56-dd5a-4dfd-ae6a-2ea84282c425.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-            }
-          }
         />
       </div>
     </li>
