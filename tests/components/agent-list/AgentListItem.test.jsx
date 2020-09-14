@@ -27,6 +27,7 @@ function getComponentTags(connectionState, operatingSystem) {
 }
 
 function getComponent(connectionState, operatingSystem) {
+  // Mocks createPortal due to react-test-renderer incompatibility.
   ReactDOM.createPortal = node => node
   return renderer.create(getComponentTags(connectionState, operatingSystem));
 }

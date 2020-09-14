@@ -12,6 +12,7 @@ import { severity, notify } from '../../../src/actions/notification';
 import waitForExpect from 'wait-for-expect';
 import { darkTheme } from '../../../src/theme';
 
+// Mocks createPortal due to react-test-renderer incompatibility.
 ReactDOM.createPortal = node => node
 const mockStore = configureStore([]);
 
