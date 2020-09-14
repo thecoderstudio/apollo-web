@@ -13,9 +13,9 @@ const propTypes = {
 };
 
 const Container = styled.li`
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 175px;
+  align-content: center;
 
   border-radius: 8px;
   border: 1px solid white;
@@ -27,6 +27,7 @@ const Container = styled.li`
 
   ${
     media.phone`
+      display: flex;
       flex-direction: column;
       height: auto;
     `
@@ -37,7 +38,6 @@ const Controls = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 300px;
 
   ${
     media.phone`
@@ -45,7 +45,7 @@ const Controls = styled.div`
     `
   }
 `;
-  
+
 const StyledText = styled.p`
   width: 50%;
   text-overflow: ellipsis;
@@ -62,6 +62,13 @@ const StyledText = styled.p`
 
 const IPAddress = styled.p`
   width: 50%;
+
+  ${
+    media.phone`
+      width: 100%;
+      text-align: center;
+    `
+  }
 `;
 
 const TerminalIcon = styled(Icon)`
