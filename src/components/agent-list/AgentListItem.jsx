@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import ReactTooltip from 'react-tooltip';
 import Icon from '../Icon';
 import ConnectionState from './ConnectionState';
 import { openTerminal } from '../terminal/Terminal';
@@ -14,15 +15,17 @@ const propTypes = {
 
 const Container = styled.li`
   display: grid;
-  grid-template-columns: 1fr 1fr 175px;
+  grid-template-columns: 20px 1fr 1fr 175px;
+  grid-column-gap: 10px;
   align-content: center;
+  align-items: center;
 
   border-radius: 8px;
   border: 1px solid white;
 
   height: 30px;
   line-height: 30px;
-  padding: 15px 30px;
+  padding: 15px 20px;
   margin-top: 25px;
 
   ${
@@ -75,12 +78,19 @@ const TerminalIcon = styled(Icon)`
   color: ${props => props.active ? props.theme.white : props.theme.inactive};
 `;
 
+const OSIcon = styled(Icon)`
+  color: ${props => props.theme.white};
+  width: 100%;
+  cursor: inherit;
+`;
+
 export default class AgentListItem extends React.PureComponent {
   constructor(props) {
     super(props);
     this.openTerminal = this.openTerminal.bind(this);
     this.createTerminal = this.createTerminal.bind(this);
     this.closeTerminal = this.closeTerminal.bind(this);
+    this.getOSIcon = this.getOSIcon.bind(this);
     this.state = {
       connected: props.agent.connectionState === 'connected',
       terminalOpen: false
@@ -117,17 +127,50 @@ export default class AgentListItem extends React.PureComponent {
     this.setState({terminalOpen: false});
   }
 
+  getOSIcon(os, arch) {
+    let osClass;
+    switch (os) {
+      case 'darwin':
+        osClass = "fab fa-apple";
+        break;
+      case 'linux':
+        osClass = "fab fa-linux";
+        break;
+      case 'freebsd':
+        osClass = "fab fa-freebsd";
+        break;
+      default:
+        osClass = "fas fa-question-circle";
+    }
+
+    return <OSIcon data-tip={this.getOSTooltip(os, arch)} className={osClass} />
+  }
+
+  getOSTooltip(os, arch) {
+    let tooltip = "Operating system unkown";
+    if (os && arch) {
+      tooltip = `${os} ${arch}`;
+    }
+    return tooltip;
+  }
+
   render() {
-    console.log(this.props.agent)
     let terminal;
     if (this.state.terminalOpen) {
       terminal = this.createTerminal();
     }
 
+    let os = "unknown";
+    if (this.props.agent.operatingSystem) {
+      os = this.props.agent.operatingSystem;
+    }
+
     return (
       <Container>
+        {this.getOSIcon(os, this.props.agent.architecture)}
+        <ReactTooltip />
         <StyledText>{this.props.agent.name}</StyledText>
-        <IPAddress>{this.props.agent.externalIpAddress}</IPAddress>
+        <IPAddress data-tip="External IP Address">{this.props.agent.externalIpAddress}</IPAddress>
         <Controls>
           <ConnectionState connectionState={this.props.agent.connectionState} />
           <TerminalIcon active={this.state.connected} onClick={this.openTerminal} className="fas fa-terminal" />
