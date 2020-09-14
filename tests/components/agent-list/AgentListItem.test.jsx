@@ -8,22 +8,24 @@ import TerminalWindow from '../../../src/components/terminal/TerminalWindow';
 import { darkTheme } from '../../../src/theme';
 import MobileChecker from '../../../src/util/MobileChecker';
 
-function getComponentTags(connectionState) {
+function getComponentTags(connectionState, operatingSystem) {
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
         <AgentListItem agent={{
           id: "fakeid",
           name: "agentName",
-          connectionState
+          architecture: "amd64",
+          connectionState,
+          operatingSystem
         }} />
       </ThemeProvider>
     </div>
   );
 }
 
-function getComponent(connectionState) {
-  return renderer.create(getComponentTags(connectionState));
+function getComponent(connectionState, operatingSystem) {
+  return renderer.create(getComponentTags(connectionState, operatingSystem));
 }
 
 describe('agent list item', () => {
@@ -77,5 +79,15 @@ describe('agent list item', () => {
     wrapper.find({ className: "fas fa-terminal" }).simulate('click');
 
     expect(global.open).toHaveBeenCalledWith(expectedHref);
+  });
+
+  it('renders the various operating systems correctly', () => {
+    let tree;
+    let operatingSystems = ['darwin', 'openbsd', 'freebsd', 'linux', null];
+    for (const os of operatingSystems) {
+      const component = getComponent('connected', os);
+      tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    }
   });
 });

@@ -165,15 +165,13 @@ export default class AgentListItem extends React.PureComponent {
       terminal = this.createTerminal();
     }
 
-    let os = "unknown";
-    if (this.props.agent.operatingSystem) {
-      os = this.props.agent.operatingSystem;
-    }
+    let os = this.props.agent.operatingSystem;
+    let arch = this.props.agent.architecture;
 
     return (
       <Container>
         <Name>
-          {this.getOSIcon(os, this.props.agent.architecture)}
+          {this.getOSIcon(os, arch)}
           <p>{this.props.agent.name}</p>
         </Name>
         <IPAddress data-tip="External IP Address">{this.props.agent.externalIpAddress}</IPAddress>

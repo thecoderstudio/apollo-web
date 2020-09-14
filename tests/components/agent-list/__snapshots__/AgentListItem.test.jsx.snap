@@ -174,26 +174,26 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
       />
     </div>
     <div
-      className="__react_component_tooltip t71392dc1-0c64-43f9-b953-1fc4e419c2ac place-top type-dark"
+      className="__react_component_tooltip t13589e39-7796-42e9-9d34-b85d139a799e place-top type-dark"
       data-id="tooltip"
     >
       <style
         dangerouslySetInnerHTML={
           Object {
             "__html": "
-  	.t71392dc1-0c64-43f9-b953-1fc4e419c2ac {
+  	.t13589e39-7796-42e9-9d34-b85d139a799e {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.t71392dc1-0c64-43f9-b953-1fc4e419c2ac.place-top {
+  	.t13589e39-7796-42e9-9d34-b85d139a799e.place-top {
         margin-top: -10px;
     }
-    .t71392dc1-0c64-43f9-b953-1fc4e419c2ac.place-top::before {
+    .t13589e39-7796-42e9-9d34-b85d139a799e.place-top::before {
         border-top: 8px solid transparent;
     }
-    .t71392dc1-0c64-43f9-b953-1fc4e419c2ac.place-top::after {
+    .t13589e39-7796-42e9-9d34-b85d139a799e.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -204,13 +204,13 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
         border-top-width: 6px;
     }
 
-    .t71392dc1-0c64-43f9-b953-1fc4e419c2ac.place-bottom {
+    .t13589e39-7796-42e9-9d34-b85d139a799e.place-bottom {
         margin-top: 10px;
     }
-    .t71392dc1-0c64-43f9-b953-1fc4e419c2ac.place-bottom::before {
+    .t13589e39-7796-42e9-9d34-b85d139a799e.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .t71392dc1-0c64-43f9-b953-1fc4e419c2ac.place-bottom::after {
+    .t13589e39-7796-42e9-9d34-b85d139a799e.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -221,13 +221,13 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
         border-bottom-width: 6px;
     }
 
-    .t71392dc1-0c64-43f9-b953-1fc4e419c2ac.place-left {
+    .t13589e39-7796-42e9-9d34-b85d139a799e.place-left {
         margin-left: -10px;
     }
-    .t71392dc1-0c64-43f9-b953-1fc4e419c2ac.place-left::before {
+    .t13589e39-7796-42e9-9d34-b85d139a799e.place-left::before {
         border-left: 8px solid transparent;
     }
-    .t71392dc1-0c64-43f9-b953-1fc4e419c2ac.place-left::after {
+    .t13589e39-7796-42e9-9d34-b85d139a799e.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -238,13 +238,13 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
         border-left-width: 6px;
     }
 
-    .t71392dc1-0c64-43f9-b953-1fc4e419c2ac.place-right {
+    .t13589e39-7796-42e9-9d34-b85d139a799e.place-right {
         margin-left: 10px;
     }
-    .t71392dc1-0c64-43f9-b953-1fc4e419c2ac.place-right::before {
+    .t13589e39-7796-42e9-9d34-b85d139a799e.place-right::before {
         border-right: 8px solid transparent;
     }
-    .t71392dc1-0c64-43f9-b953-1fc4e419c2ac.place-right::after {
+    .t13589e39-7796-42e9-9d34-b85d139a799e.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
@@ -507,9 +507,11 @@ exports[`agent list item opens and closes the terminal 1`] = `
     <AgentListItem
       agent={
         Object {
+          "architecture": "amd64",
           "connectionState": "connected",
           "id": "fakeid",
           "name": "agentName",
+          "operatingSystem": undefined,
         }
       }
     >
@@ -618,26 +620,26 @@ exports[`agent list item opens and closes the terminal 1`] = `
             wrapper="div"
           >
             <div
-              className="__react_component_tooltip tf63fa063-259d-48b9-a029-a759f0f29159 place-top type-dark"
+              className="__react_component_tooltip t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79 place-top type-dark"
               data-id="tooltip"
             >
               <style
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": "
-  	.tf63fa063-259d-48b9-a029-a759f0f29159 {
+  	.t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79 {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.tf63fa063-259d-48b9-a029-a759f0f29159.place-top {
+  	.t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-top {
         margin-top: -10px;
     }
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-top::before {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-top::before {
         border-top: 8px solid transparent;
     }
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-top::after {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -648,13 +650,13 @@ exports[`agent list item opens and closes the terminal 1`] = `
         border-top-width: 6px;
     }
 
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-bottom {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-bottom {
         margin-top: 10px;
     }
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-bottom::before {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-bottom::after {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -665,13 +667,13 @@ exports[`agent list item opens and closes the terminal 1`] = `
         border-bottom-width: 6px;
     }
 
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-left {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-left {
         margin-left: -10px;
     }
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-left::before {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-left::before {
         border-left: 8px solid transparent;
     }
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-left::after {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -682,13 +684,13 @@ exports[`agent list item opens and closes the terminal 1`] = `
         border-left-width: 6px;
     }
 
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-right {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-right {
         margin-left: 10px;
     }
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-right::before {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-right::before {
         border-right: 8px solid transparent;
     }
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-right::after {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
@@ -707,9 +709,11 @@ exports[`agent list item opens and closes the terminal 1`] = `
           <WithTheme(TerminalWindow)
             agent={
               Object {
+                "architecture": "amd64",
                 "connectionState": "connected",
                 "id": "fakeid",
                 "name": "agentName",
+                "operatingSystem": undefined,
               }
             }
             onClose={[Function]}
@@ -717,9 +721,11 @@ exports[`agent list item opens and closes the terminal 1`] = `
             <TerminalWindow
               agent={
                 Object {
+                  "architecture": "amd64",
                   "connectionState": "connected",
                   "id": "fakeid",
                   "name": "agentName",
+                  "operatingSystem": undefined,
                 }
               }
               onClose={[Function]}
@@ -1336,18 +1342,22 @@ exports[`agent list item opens and closes the terminal 1`] = `
                             <WithTheme(Terminal)
                               agent={
                                 Object {
+                                  "architecture": "amd64",
                                   "connectionState": "connected",
                                   "id": "fakeid",
                                   "name": "agentName",
+                                  "operatingSystem": undefined,
                                 }
                               }
                             >
                               <Terminal
                                 agent={
                                   Object {
+                                    "architecture": "amd64",
                                     "connectionState": "connected",
                                     "id": "fakeid",
                                     "name": "agentName",
+                                    "operatingSystem": undefined,
                                   }
                                 }
                                 theme={
@@ -1743,9 +1753,11 @@ exports[`agent list item opens and closes the terminal 2`] = `
     <AgentListItem
       agent={
         Object {
+          "architecture": "amd64",
           "connectionState": "connected",
           "id": "fakeid",
           "name": "agentName",
+          "operatingSystem": undefined,
         }
       }
     >
@@ -1854,26 +1866,26 @@ exports[`agent list item opens and closes the terminal 2`] = `
             wrapper="div"
           >
             <div
-              className="__react_component_tooltip tf63fa063-259d-48b9-a029-a759f0f29159 place-top type-dark"
+              className="__react_component_tooltip t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79 place-top type-dark"
               data-id="tooltip"
             >
               <style
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": "
-  	.tf63fa063-259d-48b9-a029-a759f0f29159 {
+  	.t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79 {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.tf63fa063-259d-48b9-a029-a759f0f29159.place-top {
+  	.t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-top {
         margin-top: -10px;
     }
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-top::before {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-top::before {
         border-top: 8px solid transparent;
     }
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-top::after {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -1884,13 +1896,13 @@ exports[`agent list item opens and closes the terminal 2`] = `
         border-top-width: 6px;
     }
 
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-bottom {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-bottom {
         margin-top: 10px;
     }
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-bottom::before {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-bottom::after {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -1901,13 +1913,13 @@ exports[`agent list item opens and closes the terminal 2`] = `
         border-bottom-width: 6px;
     }
 
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-left {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-left {
         margin-left: -10px;
     }
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-left::before {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-left::before {
         border-left: 8px solid transparent;
     }
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-left::after {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -1918,13 +1930,13 @@ exports[`agent list item opens and closes the terminal 2`] = `
         border-left-width: 6px;
     }
 
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-right {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-right {
         margin-left: 10px;
     }
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-right::before {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-right::before {
         border-right: 8px solid transparent;
     }
-    .tf63fa063-259d-48b9-a029-a759f0f29159.place-right::after {
+    .t71f8cc8e-8d3f-46a1-8ed5-63ff0e395c79.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
@@ -2121,26 +2133,26 @@ exports[`agent list item renders connected correctly 1`] = `
       />
     </div>
     <div
-      className="__react_component_tooltip t5b905e71-8a63-442d-b714-2abf6c3b833b place-top type-dark"
+      className="__react_component_tooltip tacb09279-e470-45aa-9180-e88134a397f6 place-top type-dark"
       data-id="tooltip"
     >
       <style
         dangerouslySetInnerHTML={
           Object {
             "__html": "
-  	.t5b905e71-8a63-442d-b714-2abf6c3b833b {
+  	.tacb09279-e470-45aa-9180-e88134a397f6 {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.t5b905e71-8a63-442d-b714-2abf6c3b833b.place-top {
+  	.tacb09279-e470-45aa-9180-e88134a397f6.place-top {
         margin-top: -10px;
     }
-    .t5b905e71-8a63-442d-b714-2abf6c3b833b.place-top::before {
+    .tacb09279-e470-45aa-9180-e88134a397f6.place-top::before {
         border-top: 8px solid transparent;
     }
-    .t5b905e71-8a63-442d-b714-2abf6c3b833b.place-top::after {
+    .tacb09279-e470-45aa-9180-e88134a397f6.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -2151,13 +2163,13 @@ exports[`agent list item renders connected correctly 1`] = `
         border-top-width: 6px;
     }
 
-    .t5b905e71-8a63-442d-b714-2abf6c3b833b.place-bottom {
+    .tacb09279-e470-45aa-9180-e88134a397f6.place-bottom {
         margin-top: 10px;
     }
-    .t5b905e71-8a63-442d-b714-2abf6c3b833b.place-bottom::before {
+    .tacb09279-e470-45aa-9180-e88134a397f6.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .t5b905e71-8a63-442d-b714-2abf6c3b833b.place-bottom::after {
+    .tacb09279-e470-45aa-9180-e88134a397f6.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -2168,13 +2180,13 @@ exports[`agent list item renders connected correctly 1`] = `
         border-bottom-width: 6px;
     }
 
-    .t5b905e71-8a63-442d-b714-2abf6c3b833b.place-left {
+    .tacb09279-e470-45aa-9180-e88134a397f6.place-left {
         margin-left: -10px;
     }
-    .t5b905e71-8a63-442d-b714-2abf6c3b833b.place-left::before {
+    .tacb09279-e470-45aa-9180-e88134a397f6.place-left::before {
         border-left: 8px solid transparent;
     }
-    .t5b905e71-8a63-442d-b714-2abf6c3b833b.place-left::after {
+    .tacb09279-e470-45aa-9180-e88134a397f6.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -2185,13 +2197,13 @@ exports[`agent list item renders connected correctly 1`] = `
         border-left-width: 6px;
     }
 
-    .t5b905e71-8a63-442d-b714-2abf6c3b833b.place-right {
+    .tacb09279-e470-45aa-9180-e88134a397f6.place-right {
         margin-left: 10px;
     }
-    .t5b905e71-8a63-442d-b714-2abf6c3b833b.place-right::before {
+    .tacb09279-e470-45aa-9180-e88134a397f6.place-right::before {
         border-right: 8px solid transparent;
     }
-    .t5b905e71-8a63-442d-b714-2abf6c3b833b.place-right::after {
+    .tacb09279-e470-45aa-9180-e88134a397f6.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
@@ -2384,26 +2396,26 @@ exports[`agent list item renders disconnected correctly 1`] = `
       />
     </div>
     <div
-      className="__react_component_tooltip tb4527b03-9761-4848-86fe-77442fea1483 place-top type-dark"
+      className="__react_component_tooltip t10880014-eacc-4c9d-b15d-5c40af2919cc place-top type-dark"
       data-id="tooltip"
     >
       <style
         dangerouslySetInnerHTML={
           Object {
             "__html": "
-  	.tb4527b03-9761-4848-86fe-77442fea1483 {
+  	.t10880014-eacc-4c9d-b15d-5c40af2919cc {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.tb4527b03-9761-4848-86fe-77442fea1483.place-top {
+  	.t10880014-eacc-4c9d-b15d-5c40af2919cc.place-top {
         margin-top: -10px;
     }
-    .tb4527b03-9761-4848-86fe-77442fea1483.place-top::before {
+    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-top::before {
         border-top: 8px solid transparent;
     }
-    .tb4527b03-9761-4848-86fe-77442fea1483.place-top::after {
+    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -2414,13 +2426,13 @@ exports[`agent list item renders disconnected correctly 1`] = `
         border-top-width: 6px;
     }
 
-    .tb4527b03-9761-4848-86fe-77442fea1483.place-bottom {
+    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-bottom {
         margin-top: 10px;
     }
-    .tb4527b03-9761-4848-86fe-77442fea1483.place-bottom::before {
+    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .tb4527b03-9761-4848-86fe-77442fea1483.place-bottom::after {
+    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -2431,13 +2443,13 @@ exports[`agent list item renders disconnected correctly 1`] = `
         border-bottom-width: 6px;
     }
 
-    .tb4527b03-9761-4848-86fe-77442fea1483.place-left {
+    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-left {
         margin-left: -10px;
     }
-    .tb4527b03-9761-4848-86fe-77442fea1483.place-left::before {
+    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-left::before {
         border-left: 8px solid transparent;
     }
-    .tb4527b03-9761-4848-86fe-77442fea1483.place-left::after {
+    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -2448,13 +2460,1328 @@ exports[`agent list item renders disconnected correctly 1`] = `
         border-left-width: 6px;
     }
 
-    .tb4527b03-9761-4848-86fe-77442fea1483.place-right {
+    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-right {
         margin-left: 10px;
     }
-    .tb4527b03-9761-4848-86fe-77442fea1483.place-right::before {
+    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-right::before {
         border-right: 8px solid transparent;
     }
-    .tb4527b03-9761-4848-86fe-77442fea1483.place-right::after {
+    .t10880014-eacc-4c9d-b15d-5c40af2919cc.place-right::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        left: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-right-color: #222;
+        border-right-style: solid;
+        border-right-width: 6px;
+    }
+  ",
+          }
+        }
+      />
+    </div>
+  </li>
+</div>
+`;
+
+exports[`agent list item renders the various operating systems correctly 1`] = `
+.c5 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c6 {
+  grid-column: status-indicator;
+  height: 12px;
+  width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  float: right;
+  text-align: left;
+  color: #27AE60;
+  background-color: #27AE60;
+}
+
+.c7 {
+  grid-column: status-text;
+  position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 15px;
+  text-align: left;
+  color: #27AE60;
+}
+
+.c0 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 175px;
+  grid-column-gap: 10px;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid white;
+  height: 30px;
+  line-height: 30px;
+  padding: 15px 20px;
+  margin-top: 25px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: 50%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c3 {
+  width: 50%;
+}
+
+.c8 {
+  cursor: pointer;
+  color: #F8F8F8;
+}
+
+.c2 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c4 {
+    width: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c1 {
+    width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+<div>
+  <li
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <i
+        className="c2 fab fa-apple"
+        data-tip="darwin amd64"
+      />
+      <p>
+        agentName
+      </p>
+    </div>
+    <p
+      className="c3"
+      data-tip="External IP Address"
+    />
+    <div
+      className="c4"
+    >
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        />
+        <p
+          className="c7"
+        >
+          Connected
+        </p>
+      </div>
+      <i
+        className="c8 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="__react_component_tooltip t06b415e4-2779-4cf8-909e-29d96ad3f72b place-top type-dark"
+      data-id="tooltip"
+    >
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "
+  	.t06b415e4-2779-4cf8-909e-29d96ad3f72b {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+  	}
+
+  	.t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-top {
+        margin-top: -10px;
+    }
+    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-top::before {
+        border-top: 8px solid transparent;
+    }
+    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-top::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-top-color: #222;
+        border-top-style: solid;
+        border-top-width: 6px;
+    }
+
+    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-bottom {
+        margin-top: 10px;
+    }
+    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-bottom::before {
+        border-bottom: 8px solid transparent;
+    }
+    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-bottom::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        top: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-bottom-color: #222;
+        border-bottom-style: solid;
+        border-bottom-width: 6px;
+    }
+
+    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-left {
+        margin-left: -10px;
+    }
+    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-left::before {
+        border-left: 8px solid transparent;
+    }
+    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-left::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        right: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-left-color: #222;
+        border-left-style: solid;
+        border-left-width: 6px;
+    }
+
+    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-right {
+        margin-left: 10px;
+    }
+    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-right::before {
+        border-right: 8px solid transparent;
+    }
+    .t06b415e4-2779-4cf8-909e-29d96ad3f72b.place-right::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        left: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-right-color: #222;
+        border-right-style: solid;
+        border-right-width: 6px;
+    }
+  ",
+          }
+        }
+      />
+    </div>
+  </li>
+</div>
+`;
+
+exports[`agent list item renders the various operating systems correctly 2`] = `
+.c5 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c6 {
+  grid-column: status-indicator;
+  height: 12px;
+  width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  float: right;
+  text-align: left;
+  color: #27AE60;
+  background-color: #27AE60;
+}
+
+.c7 {
+  grid-column: status-text;
+  position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 15px;
+  text-align: left;
+  color: #27AE60;
+}
+
+.c0 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 175px;
+  grid-column-gap: 10px;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid white;
+  height: 30px;
+  line-height: 30px;
+  padding: 15px 20px;
+  margin-top: 25px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: 50%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c3 {
+  width: 50%;
+}
+
+.c8 {
+  cursor: pointer;
+  color: #F8F8F8;
+}
+
+.c2 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c4 {
+    width: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c1 {
+    width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+<div>
+  <li
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <i
+        className="c2 fas fa-question-circle"
+        data-tip="openbsd amd64"
+      />
+      <p>
+        agentName
+      </p>
+    </div>
+    <p
+      className="c3"
+      data-tip="External IP Address"
+    />
+    <div
+      className="c4"
+    >
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        />
+        <p
+          className="c7"
+        >
+          Connected
+        </p>
+      </div>
+      <i
+        className="c8 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="__react_component_tooltip t60eebbcd-19af-4952-ab42-7ffa2f551547 place-top type-dark"
+      data-id="tooltip"
+    >
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "
+  	.t60eebbcd-19af-4952-ab42-7ffa2f551547 {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+  	}
+
+  	.t60eebbcd-19af-4952-ab42-7ffa2f551547.place-top {
+        margin-top: -10px;
+    }
+    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-top::before {
+        border-top: 8px solid transparent;
+    }
+    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-top::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-top-color: #222;
+        border-top-style: solid;
+        border-top-width: 6px;
+    }
+
+    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-bottom {
+        margin-top: 10px;
+    }
+    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-bottom::before {
+        border-bottom: 8px solid transparent;
+    }
+    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-bottom::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        top: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-bottom-color: #222;
+        border-bottom-style: solid;
+        border-bottom-width: 6px;
+    }
+
+    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-left {
+        margin-left: -10px;
+    }
+    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-left::before {
+        border-left: 8px solid transparent;
+    }
+    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-left::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        right: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-left-color: #222;
+        border-left-style: solid;
+        border-left-width: 6px;
+    }
+
+    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-right {
+        margin-left: 10px;
+    }
+    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-right::before {
+        border-right: 8px solid transparent;
+    }
+    .t60eebbcd-19af-4952-ab42-7ffa2f551547.place-right::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        left: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-right-color: #222;
+        border-right-style: solid;
+        border-right-width: 6px;
+    }
+  ",
+          }
+        }
+      />
+    </div>
+  </li>
+</div>
+`;
+
+exports[`agent list item renders the various operating systems correctly 3`] = `
+.c5 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c6 {
+  grid-column: status-indicator;
+  height: 12px;
+  width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  float: right;
+  text-align: left;
+  color: #27AE60;
+  background-color: #27AE60;
+}
+
+.c7 {
+  grid-column: status-text;
+  position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 15px;
+  text-align: left;
+  color: #27AE60;
+}
+
+.c0 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 175px;
+  grid-column-gap: 10px;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid white;
+  height: 30px;
+  line-height: 30px;
+  padding: 15px 20px;
+  margin-top: 25px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: 50%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c3 {
+  width: 50%;
+}
+
+.c8 {
+  cursor: pointer;
+  color: #F8F8F8;
+}
+
+.c2 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c4 {
+    width: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c1 {
+    width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+<div>
+  <li
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <i
+        className="c2 fab fa-freebsd"
+        data-tip="freebsd amd64"
+      />
+      <p>
+        agentName
+      </p>
+    </div>
+    <p
+      className="c3"
+      data-tip="External IP Address"
+    />
+    <div
+      className="c4"
+    >
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        />
+        <p
+          className="c7"
+        >
+          Connected
+        </p>
+      </div>
+      <i
+        className="c8 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="__react_component_tooltip t37641ae8-dee2-4aee-98bb-279bf7eb48e2 place-top type-dark"
+      data-id="tooltip"
+    >
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "
+  	.t37641ae8-dee2-4aee-98bb-279bf7eb48e2 {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+  	}
+
+  	.t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-top {
+        margin-top: -10px;
+    }
+    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-top::before {
+        border-top: 8px solid transparent;
+    }
+    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-top::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-top-color: #222;
+        border-top-style: solid;
+        border-top-width: 6px;
+    }
+
+    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-bottom {
+        margin-top: 10px;
+    }
+    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-bottom::before {
+        border-bottom: 8px solid transparent;
+    }
+    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-bottom::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        top: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-bottom-color: #222;
+        border-bottom-style: solid;
+        border-bottom-width: 6px;
+    }
+
+    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-left {
+        margin-left: -10px;
+    }
+    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-left::before {
+        border-left: 8px solid transparent;
+    }
+    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-left::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        right: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-left-color: #222;
+        border-left-style: solid;
+        border-left-width: 6px;
+    }
+
+    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-right {
+        margin-left: 10px;
+    }
+    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-right::before {
+        border-right: 8px solid transparent;
+    }
+    .t37641ae8-dee2-4aee-98bb-279bf7eb48e2.place-right::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        left: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-right-color: #222;
+        border-right-style: solid;
+        border-right-width: 6px;
+    }
+  ",
+          }
+        }
+      />
+    </div>
+  </li>
+</div>
+`;
+
+exports[`agent list item renders the various operating systems correctly 4`] = `
+.c5 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c6 {
+  grid-column: status-indicator;
+  height: 12px;
+  width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  float: right;
+  text-align: left;
+  color: #27AE60;
+  background-color: #27AE60;
+}
+
+.c7 {
+  grid-column: status-text;
+  position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 15px;
+  text-align: left;
+  color: #27AE60;
+}
+
+.c0 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 175px;
+  grid-column-gap: 10px;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid white;
+  height: 30px;
+  line-height: 30px;
+  padding: 15px 20px;
+  margin-top: 25px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: 50%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c3 {
+  width: 50%;
+}
+
+.c8 {
+  cursor: pointer;
+  color: #F8F8F8;
+}
+
+.c2 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c4 {
+    width: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c1 {
+    width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+<div>
+  <li
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <i
+        className="c2 fab fa-linux"
+        data-tip="linux amd64"
+      />
+      <p>
+        agentName
+      </p>
+    </div>
+    <p
+      className="c3"
+      data-tip="External IP Address"
+    />
+    <div
+      className="c4"
+    >
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        />
+        <p
+          className="c7"
+        >
+          Connected
+        </p>
+      </div>
+      <i
+        className="c8 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="__react_component_tooltip t598d6652-7fd5-4b3d-837e-4768a15fb2eb place-top type-dark"
+      data-id="tooltip"
+    >
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "
+  	.t598d6652-7fd5-4b3d-837e-4768a15fb2eb {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+  	}
+
+  	.t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-top {
+        margin-top: -10px;
+    }
+    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-top::before {
+        border-top: 8px solid transparent;
+    }
+    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-top::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-top-color: #222;
+        border-top-style: solid;
+        border-top-width: 6px;
+    }
+
+    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-bottom {
+        margin-top: 10px;
+    }
+    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-bottom::before {
+        border-bottom: 8px solid transparent;
+    }
+    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-bottom::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        top: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-bottom-color: #222;
+        border-bottom-style: solid;
+        border-bottom-width: 6px;
+    }
+
+    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-left {
+        margin-left: -10px;
+    }
+    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-left::before {
+        border-left: 8px solid transparent;
+    }
+    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-left::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        right: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-left-color: #222;
+        border-left-style: solid;
+        border-left-width: 6px;
+    }
+
+    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-right {
+        margin-left: 10px;
+    }
+    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-right::before {
+        border-right: 8px solid transparent;
+    }
+    .t598d6652-7fd5-4b3d-837e-4768a15fb2eb.place-right::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        left: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-right-color: #222;
+        border-right-style: solid;
+        border-right-width: 6px;
+    }
+  ",
+          }
+        }
+      />
+    </div>
+  </li>
+</div>
+`;
+
+exports[`agent list item renders the various operating systems correctly 5`] = `
+.c5 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c6 {
+  grid-column: status-indicator;
+  height: 12px;
+  width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  float: right;
+  text-align: left;
+  color: #27AE60;
+  background-color: #27AE60;
+}
+
+.c7 {
+  grid-column: status-text;
+  position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 15px;
+  text-align: left;
+  color: #27AE60;
+}
+
+.c0 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 175px;
+  grid-column-gap: 10px;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid white;
+  height: 30px;
+  line-height: 30px;
+  padding: 15px 20px;
+  margin-top: 25px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: 50%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c3 {
+  width: 50%;
+}
+
+.c8 {
+  cursor: pointer;
+  color: #F8F8F8;
+}
+
+.c2 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c4 {
+    width: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c1 {
+    width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+<div>
+  <li
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <i
+        className="c2 fas fa-question-circle"
+        data-tip="Operating system unkown"
+      />
+      <p>
+        agentName
+      </p>
+    </div>
+    <p
+      className="c3"
+      data-tip="External IP Address"
+    />
+    <div
+      className="c4"
+    >
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        />
+        <p
+          className="c7"
+        >
+          Connected
+        </p>
+      </div>
+      <i
+        className="c8 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="__react_component_tooltip tcfae7b14-7705-41da-8416-caa2096061a6 place-top type-dark"
+      data-id="tooltip"
+    >
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "
+  	.tcfae7b14-7705-41da-8416-caa2096061a6 {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+  	}
+
+  	.tcfae7b14-7705-41da-8416-caa2096061a6.place-top {
+        margin-top: -10px;
+    }
+    .tcfae7b14-7705-41da-8416-caa2096061a6.place-top::before {
+        border-top: 8px solid transparent;
+    }
+    .tcfae7b14-7705-41da-8416-caa2096061a6.place-top::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-top-color: #222;
+        border-top-style: solid;
+        border-top-width: 6px;
+    }
+
+    .tcfae7b14-7705-41da-8416-caa2096061a6.place-bottom {
+        margin-top: 10px;
+    }
+    .tcfae7b14-7705-41da-8416-caa2096061a6.place-bottom::before {
+        border-bottom: 8px solid transparent;
+    }
+    .tcfae7b14-7705-41da-8416-caa2096061a6.place-bottom::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        top: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-bottom-color: #222;
+        border-bottom-style: solid;
+        border-bottom-width: 6px;
+    }
+
+    .tcfae7b14-7705-41da-8416-caa2096061a6.place-left {
+        margin-left: -10px;
+    }
+    .tcfae7b14-7705-41da-8416-caa2096061a6.place-left::before {
+        border-left: 8px solid transparent;
+    }
+    .tcfae7b14-7705-41da-8416-caa2096061a6.place-left::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        right: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-left-color: #222;
+        border-left-style: solid;
+        border-left-width: 6px;
+    }
+
+    .tcfae7b14-7705-41da-8416-caa2096061a6.place-right {
+        margin-left: 10px;
+    }
+    .tcfae7b14-7705-41da-8416-caa2096061a6.place-right::before {
+        border-right: 8px solid transparent;
+    }
+    .tcfae7b14-7705-41da-8416-caa2096061a6.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;
