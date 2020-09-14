@@ -47,7 +47,7 @@ const Controls = styled.div`
 `;
   
 const StyledText = styled.p`
-  width: 100%;
+  width: 50%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -58,6 +58,10 @@ const StyledText = styled.p`
       width: 100%;
     `
   }
+`;
+
+const IPAddress = styled.p`
+  width: 50%;
 `;
 
 const TerminalIcon = styled(Icon)`
@@ -107,6 +111,7 @@ export default class AgentListItem extends React.PureComponent {
   }
 
   render() {
+    console.log(this.props.agent)
     let terminal;
     if (this.state.terminalOpen) {
       terminal = this.createTerminal();
@@ -115,12 +120,13 @@ export default class AgentListItem extends React.PureComponent {
     return (
       <Container>
         <StyledText>{this.props.agent.name}</StyledText>
-          <Controls>
-            <ConnectionState connectionState={this.props.agent.connectionState} />
-            <TerminalIcon active={this.state.connected} onClick={this.openTerminal} className="fas fa-terminal" />
-          </Controls>
-          {terminal}
-      </Container>
+        <IPAddress>{this.props.agent.externalIpAddress}</IPAddress>
+        <Controls>
+          <ConnectionState connectionState={this.props.agent.connectionState} />
+          <TerminalIcon active={this.state.connected} onClick={this.openTerminal} className="fas fa-terminal" />
+        </Controls>
+        {terminal}
+    </Container>
     );
   }
 }
