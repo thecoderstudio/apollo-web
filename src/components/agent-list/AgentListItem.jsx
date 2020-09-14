@@ -15,7 +15,7 @@ const propTypes = {
 
 const Container = styled.li`
   display: grid;
-  grid-template-columns: 20px 1fr 1fr 175px;
+  grid-template-columns: 1fr 1fr 175px;
   grid-column-gap: 10px;
   align-content: center;
   align-items: center;
@@ -49,16 +49,21 @@ const Controls = styled.div`
   }
 `;
 
-const StyledText = styled.p`
+const Name = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: start;
   width: 50%;
+
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 
   ${
     media.phone`
-      text-align: center;
       width: 100%;
+      justify-content: center;
+      text-align: center;
     `
   }
 `;
@@ -79,8 +84,8 @@ const TerminalIcon = styled(Icon)`
 `;
 
 const OSIcon = styled(Icon)`
+  margin-right: 10px;
   color: ${props => props.theme.white};
-  width: 100%;
   cursor: inherit;
 `;
 
@@ -167,14 +172,16 @@ export default class AgentListItem extends React.PureComponent {
 
     return (
       <Container>
-        {this.getOSIcon(os, this.props.agent.architecture)}
-        <ReactTooltip />
-        <StyledText>{this.props.agent.name}</StyledText>
+        <Name>
+          {this.getOSIcon(os, this.props.agent.architecture)}
+          <p>{this.props.agent.name}</p>
+        </Name>
         <IPAddress data-tip="External IP Address">{this.props.agent.externalIpAddress}</IPAddress>
         <Controls>
           <ConnectionState connectionState={this.props.agent.connectionState} />
           <TerminalIcon active={this.state.connected} onClick={this.openTerminal} className="fas fa-terminal" />
         </Controls>
+        <ReactTooltip />
         {terminal}
     </Container>
     );
