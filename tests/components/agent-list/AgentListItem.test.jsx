@@ -9,7 +9,6 @@ import TerminalWindow from '../../../src/components/terminal/TerminalWindow';
 import { darkTheme } from '../../../src/theme';
 import MobileChecker from '../../../src/util/MobileChecker';
 
-
 function getComponentTags(connectionState, operatingSystem) {
   return (
     <div>
@@ -28,7 +27,7 @@ function getComponentTags(connectionState, operatingSystem) {
 
 function getComponent(connectionState, operatingSystem) {
   // Mocks createPortal due to react-test-renderer incompatibility.
-  ReactDOM.createPortal = node => node
+  ReactDOM.createPortal = node => node;
   return renderer.create(getComponentTags(connectionState, operatingSystem));
 }
 
@@ -55,7 +54,7 @@ describe('agent list item', () => {
   });
 
   it('opens and closes the terminal', () => {
-    wrapper.find({ className: "fas fa-terminal" }).simulate('click')
+    wrapper.find({ className: "fas fa-terminal" }).simulate('click');
     expect(wrapper).toMatchSnapshot();
 
     // Close is supposed to call a callback given by the list item.

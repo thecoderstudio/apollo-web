@@ -148,7 +148,7 @@ export default class AgentListItem extends React.PureComponent {
         osClass = "fas fa-question-circle";
     }
 
-    return <Tippy content={this.getOSTooltip(os, arch)}><OSIcon className={osClass} /></Tippy>
+    return <Tippy content={this.getOSTooltip(os, arch)}><OSIcon className={osClass} /></Tippy>;
   }
 
   getOSTooltip(os, arch) {

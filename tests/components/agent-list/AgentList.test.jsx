@@ -13,7 +13,7 @@ import waitForExpect from 'wait-for-expect';
 import { darkTheme } from '../../../src/theme';
 
 // Mocks createPortal due to react-test-renderer incompatibility.
-ReactDOM.createPortal = node => node
+ReactDOM.createPortal = node => node;
 const mockStore = configureStore([]);
 
 function getComponent(store) {
