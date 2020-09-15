@@ -8,5 +8,5 @@ describe("change password reducer", () => {
 
   it("should correctly handle prompted passcode", () => {
     expect(changePasswordReducer({}, { type: PROMPTED_PASSWORD_CHANGE})).toEqual(true);
-  })
-})
+  });
+});
