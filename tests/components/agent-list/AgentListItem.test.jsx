@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import { ThemeProvider } from 'styled-components';
 import WS from 'jest-websocket-mock';
@@ -8,22 +9,26 @@ import TerminalWindow from '../../../src/components/terminal/TerminalWindow';
 import { darkTheme } from '../../../src/theme';
 import MobileChecker from '../../../src/util/MobileChecker';
 
-function getComponentTags(connectionState) {
+function getComponentTags(connectionState, operatingSystem) {
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
         <AgentListItem agent={{
           id: "fakeid",
           name: "agentName",
-          connectionState
+          architecture: "amd64",
+          connectionState,
+          operatingSystem
         }} />
       </ThemeProvider>
     </div>
   );
 }
 
-function getComponent(connectionState) {
-  return renderer.create(getComponentTags(connectionState));
+function getComponent(connectionState, operatingSystem) {
+  // Mocks createPortal due to react-test-renderer incompatibility.
+  ReactDOM.createPortal = node => node;
+  return renderer.create(getComponentTags(connectionState, operatingSystem));
 }
 
 describe('agent list item', () => {
@@ -49,7 +54,7 @@ describe('agent list item', () => {
   });
 
   it('opens and closes the terminal', () => {
-    wrapper.find('i').simulate('click');
+    wrapper.find({ className: "fas fa-terminal" }).simulate('click');
     expect(wrapper).toMatchSnapshot();
 
     // Close is supposed to call a callback given by the list item.
@@ -62,7 +67,7 @@ describe('agent list item', () => {
     let tree = component.toJSON();
     component.update(getComponentTags('disconnected'));
     tree = component.toJSON();
-    component.root.findByType('i').props.onClick();
+    component.root.findByProps({ className: "fas fa-terminal" }).props.onClick();
     expect(tree).toMatchSnapshot();
   });
 
@@ -74,8 +79,19 @@ describe('agent list item', () => {
     const mock = jest.fn();
     mock.mockReturnValueOnce(true);
     new MobileChecker().isMobile = mock;
-    wrapper.find('i').simulate('click');
+    wrapper.find({ className: "fas fa-terminal" }).simulate('click');
 
     expect(global.open).toHaveBeenCalledWith(expectedHref);
+  });
+
+  it('renders the various operating systems correctly', () => {
+    let tree;
+    const component = getComponent('connected');
+    let operatingSystems = ['darwin', 'openbsd', 'freebsd', 'linux', null];
+    for (const os of operatingSystems) {
+      component.update(getComponentTags('connected', os));
+      tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    }
   });
 });
