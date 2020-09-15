@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`agent list item doesn't open the terminal if not connected 1`] = `
-.c3 {
+.c5 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
 
-.c4 {
+.c6 {
   grid-column: status-indicator;
   height: 12px;
   width: 12px;
@@ -18,7 +18,7 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
   background-color: #C0392B;
 }
 
-.c5 {
+.c7 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -29,14 +29,12 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr 175px;
+  grid-column-gap: 10px;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -45,11 +43,11 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
   border: 1px solid white;
   height: 30px;
   line-height: 30px;
-  padding: 15px 30px;
+  padding: 15px 20px;
   margin-top: 25px;
 }
 
-.c2 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -62,23 +60,49 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 300px;
 }
 
 .c1 {
-  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: 50%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.c6 {
+.c3 {
+  width: 50%;
+}
+
+.c8 {
   cursor: inherit;
   color: #363636;
 }
 
+.c2 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
 @media (max-width:47.9375em) {
   .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -87,15 +111,26 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c4 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
   .c1 {
-    text-align: center;
     width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -103,28 +138,38 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
   <li
     className="c0"
   >
-    <p
+    <div
       className="c1"
     >
-      agentName
-    </p>
+      <i
+        className="c2 fas fa-question-circle"
+      />
+      Operating system unkown
+      <p>
+        agentName
+      </p>
+    </div>
+    <p
+      className="c3"
+    />
+    External IP address
     <div
-      className="c2"
+      className="c4"
     >
       <div
-        className="c3"
+        className="c5"
       >
         <div
-          className="c4"
+          className="c6"
         />
         <p
-          className="c5"
+          className="c7"
         >
           Disconnected
         </p>
       </div>
       <i
-        className="c6 fas fa-terminal"
+        className="c8 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
@@ -133,12 +178,12 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
 `;
 
 exports[`agent list item opens and closes the terminal 1`] = `
-.c3 {
+.c5 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
 
-.c4 {
+.c6 {
   grid-column: status-indicator;
   height: 12px;
   width: 12px;
@@ -150,7 +195,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   background-color: #27AE60;
 }
 
-.c5 {
+.c7 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -160,22 +205,22 @@ exports[`agent list item opens and closes the terminal 1`] = `
   color: #27AE60;
 }
 
-.c14 {
+.c16 {
   height: 100%;
   width: 100%;
   padding: 20px;
 }
 
-.c15 {
+.c17 {
   height: 100%;
   width: 100%;
 }
 
-.c15 .xterm-viewport {
+.c17 .xterm-viewport {
   overflow: hidden !important;
 }
 
-.c7 {
+.c9 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
@@ -185,7 +230,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   border-style: none none solid none;
 }
 
-.c8 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -197,7 +242,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   align-items: center;
 }
 
-.c11 {
+.c13 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -211,7 +256,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   justify-content: flex-end;
 }
 
-.c12 {
+.c14 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -220,7 +265,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   cursor: pointer;
 }
 
-.c13 {
+.c15 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -229,13 +274,13 @@ exports[`agent list item opens and closes the terminal 1`] = `
   cursor: pointer;
 }
 
-.c9 {
+.c11 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c10 {
+.c12 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -244,14 +289,12 @@ exports[`agent list item opens and closes the terminal 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr 175px;
+  grid-column-gap: 10px;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -260,11 +303,11 @@ exports[`agent list item opens and closes the terminal 1`] = `
   border: 1px solid white;
   height: 30px;
   line-height: 30px;
-  padding: 15px 30px;
+  padding: 15px 20px;
   margin-top: 25px;
 }
 
-.c2 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -277,23 +320,49 @@ exports[`agent list item opens and closes the terminal 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 300px;
 }
 
 .c1 {
-  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: 50%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.c6 {
+.c3 {
+  width: 50%;
+}
+
+.c8 {
   cursor: pointer;
   color: #F8F8F8;
 }
 
+.c2 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
 @media (max-width:47.9375em) {
   .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -302,15 +371,26 @@ exports[`agent list item opens and closes the terminal 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c4 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
   .c1 {
-    text-align: center;
     width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -341,9 +421,11 @@ exports[`agent list item opens and closes the terminal 1`] = `
     <AgentListItem
       agent={
         Object {
+          "architecture": "amd64",
           "connectionState": "connected",
           "id": "fakeid",
           "name": "agentName",
+          "operatingSystem": undefined,
         }
       }
     >
@@ -351,16 +433,49 @@ exports[`agent list item opens and closes the terminal 1`] = `
         <li
           className="c0"
         >
-          <styled.p>
-            <p
-              className="c1"
-            >
-              agentName
-            </p>
-          </styled.p>
           <styled.div>
             <div
-              className="c2"
+              className="c1"
+            >
+              <ForwardRef(TippyWrapper)
+                content="Operating system unkown"
+              >
+                <Tippy
+                  content="Operating system unkown"
+                >
+                  <Styled(styled.i)
+                    active={true}
+                    className="fas fa-question-circle"
+                  >
+                    <i
+                      className="c2 fas fa-question-circle"
+                    />
+                  </Styled(styled.i)>
+                  Operating system unkown
+                </Tippy>
+              </ForwardRef(TippyWrapper)>
+              <p>
+                agentName
+              </p>
+            </div>
+          </styled.div>
+          <ForwardRef(TippyWrapper)
+            content="External IP address"
+          >
+            <Tippy
+              content="External IP address"
+            >
+              <styled.p>
+                <p
+                  className="c3"
+                />
+              </styled.p>
+              External IP address
+            </Tippy>
+          </ForwardRef(TippyWrapper)>
+          <styled.div>
+            <div
+              className="c4"
             >
               <WithTheme(ConnectionState)
                 connectionState="connected"
@@ -391,20 +506,20 @@ exports[`agent list item opens and closes the terminal 1`] = `
                 >
                   <styled.div>
                     <div
-                      className="c3"
+                      className="c5"
                     >
                       <styled.div
                         connectionStateColor="#27AE60"
                       >
                         <div
-                          className="c4"
+                          className="c6"
                         />
                       </styled.div>
                       <styled.p
                         connectionStateColor="#27AE60"
                       >
                         <p
-                          className="c5"
+                          className="c7"
                         >
                           Connected
                         </p>
@@ -419,7 +534,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                 onClick={[Function]}
               >
                 <i
-                  className="c6 fas fa-terminal"
+                  className="c8 fas fa-terminal"
                   onClick={[Function]}
                 />
               </Styled(styled.i)>
@@ -428,9 +543,11 @@ exports[`agent list item opens and closes the terminal 1`] = `
           <WithTheme(TerminalWindow)
             agent={
               Object {
+                "architecture": "amd64",
                 "connectionState": "connected",
                 "id": "fakeid",
                 "name": "agentName",
+                "operatingSystem": undefined,
               }
             }
             onClose={[Function]}
@@ -438,9 +555,11 @@ exports[`agent list item opens and closes the terminal 1`] = `
             <TerminalWindow
               agent={
                 Object {
+                  "architecture": "amd64",
                   "connectionState": "connected",
                   "id": "fakeid",
                   "name": "agentName",
+                  "operatingSystem": undefined,
                 }
               }
               onClose={[Function]}
@@ -598,6 +717,10 @@ exports[`agent list item opens and closes the terminal 1`] = `
   flex: 1;
   width: 100%;
   text-align: center;
+}
+
+@media (max-width:47.9375em) {
+
 }
 
 @media (max-width:47.9375em) {
@@ -772,39 +895,39 @@ exports[`agent list item opens and closes the terminal 1`] = `
                           style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
                         >
                           <div
-                            class="c7"
+                            class="c9"
                           >
                             <div
-                              class="c8"
+                              class="c10"
                             >
                               <div
-                                class="c9"
+                                class="c11"
                               />
                               <h4
-                                class="c10"
+                                class="c12"
                               >
                                 agentName
                               </h4>
                               <div
-                                class="c11"
+                                class="c13"
                               >
                                 <div
-                                  class="c12"
+                                  class="c14"
                                   color="#32E67E"
                                   id="expand-button"
                                 />
                                 <div
-                                  class="c13"
+                                  class="c15"
                                   color="#ED3E2A"
                                   id="close-button"
                                 />
                               </div>
                             </div>
                             <div
-                              class="c14"
+                              class="c16"
                             >
                               <div
-                                class="c15"
+                                class="c17"
                                 data-testid="terminal"
                               >
                                 <div
@@ -1000,27 +1123,27 @@ exports[`agent list item opens and closes the terminal 1`] = `
                           statusColor="#32E67E"
                         >
                           <div
-                            className="c7"
+                            className="c9"
                           >
                             <styled.div>
                               <div
-                                className="c8"
+                                className="c10"
                               >
                                 <styled.div>
                                   <div
-                                    className="c9"
+                                    className="c11"
                                   />
                                 </styled.div>
                                 <styled.h4>
                                   <h4
-                                    className="c10"
+                                    className="c12"
                                   >
                                     agentName
                                   </h4>
                                 </styled.h4>
                                 <styled.div>
                                   <div
-                                    className="c11"
+                                    className="c13"
                                   >
                                     <styled.div
                                       color="#32E67E"
@@ -1028,7 +1151,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                                       onClick={[Function]}
                                     >
                                       <div
-                                        className="c12"
+                                        className="c14"
                                         color="#32E67E"
                                         id="expand-button"
                                         onClick={[Function]}
@@ -1040,7 +1163,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                                       onClick={[Function]}
                                     >
                                       <div
-                                        className="c13"
+                                        className="c15"
                                         color="#ED3E2A"
                                         id="close-button"
                                         onClick={[Function]}
@@ -1053,18 +1176,22 @@ exports[`agent list item opens and closes the terminal 1`] = `
                             <WithTheme(Terminal)
                               agent={
                                 Object {
+                                  "architecture": "amd64",
                                   "connectionState": "connected",
                                   "id": "fakeid",
                                   "name": "agentName",
+                                  "operatingSystem": undefined,
                                 }
                               }
                             >
                               <Terminal
                                 agent={
                                   Object {
+                                    "architecture": "amd64",
                                     "connectionState": "connected",
                                     "id": "fakeid",
                                     "name": "agentName",
+                                    "operatingSystem": undefined,
                                   }
                                 }
                                 theme={
@@ -1091,13 +1218,13 @@ exports[`agent list item opens and closes the terminal 1`] = `
                               >
                                 <styled.div>
                                   <div
-                                    className="c14"
+                                    className="c16"
                                   >
                                     <styled.div
                                       data-testid="terminal"
                                     >
                                       <div
-                                        className="c15"
+                                        className="c17"
                                         data-testid="terminal"
                                       />
                                     </styled.div>
@@ -1300,12 +1427,12 @@ exports[`agent list item opens and closes the terminal 1`] = `
 `;
 
 exports[`agent list item opens and closes the terminal 2`] = `
-.c3 {
+.c5 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
 
-.c4 {
+.c6 {
   grid-column: status-indicator;
   height: 12px;
   width: 12px;
@@ -1317,7 +1444,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
   background-color: #27AE60;
 }
 
-.c5 {
+.c7 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -1328,14 +1455,12 @@ exports[`agent list item opens and closes the terminal 2`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr 175px;
+  grid-column-gap: 10px;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1344,11 +1469,11 @@ exports[`agent list item opens and closes the terminal 2`] = `
   border: 1px solid white;
   height: 30px;
   line-height: 30px;
-  padding: 15px 30px;
+  padding: 15px 20px;
   margin-top: 25px;
 }
 
-.c2 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1361,23 +1486,49 @@ exports[`agent list item opens and closes the terminal 2`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 300px;
 }
 
 .c1 {
-  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: 50%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.c6 {
+.c3 {
+  width: 50%;
+}
+
+.c8 {
   cursor: pointer;
   color: #F8F8F8;
 }
 
+.c2 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
 @media (max-width:47.9375em) {
   .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1386,15 +1537,26 @@ exports[`agent list item opens and closes the terminal 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c4 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
   .c1 {
-    text-align: center;
     width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -1425,9 +1587,11 @@ exports[`agent list item opens and closes the terminal 2`] = `
     <AgentListItem
       agent={
         Object {
+          "architecture": "amd64",
           "connectionState": "connected",
           "id": "fakeid",
           "name": "agentName",
+          "operatingSystem": undefined,
         }
       }
     >
@@ -1435,16 +1599,49 @@ exports[`agent list item opens and closes the terminal 2`] = `
         <li
           className="c0"
         >
-          <styled.p>
-            <p
-              className="c1"
-            >
-              agentName
-            </p>
-          </styled.p>
           <styled.div>
             <div
-              className="c2"
+              className="c1"
+            >
+              <ForwardRef(TippyWrapper)
+                content="Operating system unkown"
+              >
+                <Tippy
+                  content="Operating system unkown"
+                >
+                  <Styled(styled.i)
+                    active={true}
+                    className="fas fa-question-circle"
+                  >
+                    <i
+                      className="c2 fas fa-question-circle"
+                    />
+                  </Styled(styled.i)>
+                  Operating system unkown
+                </Tippy>
+              </ForwardRef(TippyWrapper)>
+              <p>
+                agentName
+              </p>
+            </div>
+          </styled.div>
+          <ForwardRef(TippyWrapper)
+            content="External IP address"
+          >
+            <Tippy
+              content="External IP address"
+            >
+              <styled.p>
+                <p
+                  className="c3"
+                />
+              </styled.p>
+              External IP address
+            </Tippy>
+          </ForwardRef(TippyWrapper)>
+          <styled.div>
+            <div
+              className="c4"
             >
               <WithTheme(ConnectionState)
                 connectionState="connected"
@@ -1475,20 +1672,20 @@ exports[`agent list item opens and closes the terminal 2`] = `
                 >
                   <styled.div>
                     <div
-                      className="c3"
+                      className="c5"
                     >
                       <styled.div
                         connectionStateColor="#27AE60"
                       >
                         <div
-                          className="c4"
+                          className="c6"
                         />
                       </styled.div>
                       <styled.p
                         connectionStateColor="#27AE60"
                       >
                         <p
-                          className="c5"
+                          className="c7"
                         >
                           Connected
                         </p>
@@ -1503,7 +1700,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
                 onClick={[Function]}
               >
                 <i
-                  className="c6 fas fa-terminal"
+                  className="c8 fas fa-terminal"
                   onClick={[Function]}
                 />
               </Styled(styled.i)>
@@ -1517,12 +1714,12 @@ exports[`agent list item opens and closes the terminal 2`] = `
 `;
 
 exports[`agent list item renders connected correctly 1`] = `
-.c3 {
+.c5 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
 
-.c4 {
+.c6 {
   grid-column: status-indicator;
   height: 12px;
   width: 12px;
@@ -1534,7 +1731,7 @@ exports[`agent list item renders connected correctly 1`] = `
   background-color: #27AE60;
 }
 
-.c5 {
+.c7 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -1545,14 +1742,12 @@ exports[`agent list item renders connected correctly 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr 175px;
+  grid-column-gap: 10px;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1561,11 +1756,11 @@ exports[`agent list item renders connected correctly 1`] = `
   border: 1px solid white;
   height: 30px;
   line-height: 30px;
-  padding: 15px 30px;
+  padding: 15px 20px;
   margin-top: 25px;
 }
 
-.c2 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1578,23 +1773,49 @@ exports[`agent list item renders connected correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 300px;
 }
 
 .c1 {
-  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: 50%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.c6 {
+.c3 {
+  width: 50%;
+}
+
+.c8 {
   cursor: pointer;
   color: #F8F8F8;
 }
 
+.c2 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
 @media (max-width:47.9375em) {
   .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1603,15 +1824,26 @@ exports[`agent list item renders connected correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c4 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
   .c1 {
-    text-align: center;
     width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -1619,28 +1851,38 @@ exports[`agent list item renders connected correctly 1`] = `
   <li
     className="c0"
   >
-    <p
+    <div
       className="c1"
     >
-      agentName
-    </p>
+      <i
+        className="c2 fas fa-question-circle"
+      />
+      Operating system unkown
+      <p>
+        agentName
+      </p>
+    </div>
+    <p
+      className="c3"
+    />
+    External IP address
     <div
-      className="c2"
+      className="c4"
     >
       <div
-        className="c3"
+        className="c5"
       >
         <div
-          className="c4"
+          className="c6"
         />
         <p
-          className="c5"
+          className="c7"
         >
           Connected
         </p>
       </div>
       <i
-        className="c6 fas fa-terminal"
+        className="c8 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
@@ -1649,12 +1891,12 @@ exports[`agent list item renders connected correctly 1`] = `
 `;
 
 exports[`agent list item renders disconnected correctly 1`] = `
-.c3 {
+.c5 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
 
-.c4 {
+.c6 {
   grid-column: status-indicator;
   height: 12px;
   width: 12px;
@@ -1666,7 +1908,7 @@ exports[`agent list item renders disconnected correctly 1`] = `
   background-color: #C0392B;
 }
 
-.c5 {
+.c7 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -1677,14 +1919,12 @@ exports[`agent list item renders disconnected correctly 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr 175px;
+  grid-column-gap: 10px;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1693,11 +1933,11 @@ exports[`agent list item renders disconnected correctly 1`] = `
   border: 1px solid white;
   height: 30px;
   line-height: 30px;
-  padding: 15px 30px;
+  padding: 15px 20px;
   margin-top: 25px;
 }
 
-.c2 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1710,23 +1950,49 @@ exports[`agent list item renders disconnected correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 300px;
 }
 
 .c1 {
-  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: 50%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.c6 {
+.c3 {
+  width: 50%;
+}
+
+.c8 {
   cursor: inherit;
   color: #363636;
 }
 
+.c2 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
 @media (max-width:47.9375em) {
   .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1735,15 +2001,26 @@ exports[`agent list item renders disconnected correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c4 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
   .c1 {
-    text-align: center;
     width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -1751,28 +2028,923 @@ exports[`agent list item renders disconnected correctly 1`] = `
   <li
     className="c0"
   >
-    <p
+    <div
       className="c1"
     >
-      agentName
-    </p>
+      <i
+        className="c2 fas fa-question-circle"
+      />
+      Operating system unkown
+      <p>
+        agentName
+      </p>
+    </div>
+    <p
+      className="c3"
+    />
+    External IP address
     <div
-      className="c2"
+      className="c4"
     >
       <div
-        className="c3"
+        className="c5"
       >
         <div
-          className="c4"
+          className="c6"
         />
         <p
-          className="c5"
+          className="c7"
         >
           Disconnected
         </p>
       </div>
       <i
-        className="c6 fas fa-terminal"
+        className="c8 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+  </li>
+</div>
+`;
+
+exports[`agent list item renders the various operating systems correctly 1`] = `
+.c5 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c6 {
+  grid-column: status-indicator;
+  height: 12px;
+  width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  float: right;
+  text-align: left;
+  color: #27AE60;
+  background-color: #27AE60;
+}
+
+.c7 {
+  grid-column: status-text;
+  position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 15px;
+  text-align: left;
+  color: #27AE60;
+}
+
+.c0 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 175px;
+  grid-column-gap: 10px;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid white;
+  height: 30px;
+  line-height: 30px;
+  padding: 15px 20px;
+  margin-top: 25px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: 50%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c3 {
+  width: 50%;
+}
+
+.c8 {
+  cursor: pointer;
+  color: #F8F8F8;
+}
+
+.c2 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c4 {
+    width: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c1 {
+    width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+<div>
+  <li
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <i
+        className="c2 fab fa-apple"
+      />
+      darwin amd64
+      <p>
+        agentName
+      </p>
+    </div>
+    <p
+      className="c3"
+    />
+    External IP address
+    <div
+      className="c4"
+    >
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        />
+        <p
+          className="c7"
+        >
+          Connected
+        </p>
+      </div>
+      <i
+        className="c8 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+  </li>
+</div>
+`;
+
+exports[`agent list item renders the various operating systems correctly 2`] = `
+.c5 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c6 {
+  grid-column: status-indicator;
+  height: 12px;
+  width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  float: right;
+  text-align: left;
+  color: #27AE60;
+  background-color: #27AE60;
+}
+
+.c7 {
+  grid-column: status-text;
+  position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 15px;
+  text-align: left;
+  color: #27AE60;
+}
+
+.c0 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 175px;
+  grid-column-gap: 10px;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid white;
+  height: 30px;
+  line-height: 30px;
+  padding: 15px 20px;
+  margin-top: 25px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: 50%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c3 {
+  width: 50%;
+}
+
+.c8 {
+  cursor: pointer;
+  color: #F8F8F8;
+}
+
+.c2 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c4 {
+    width: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c1 {
+    width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+<div>
+  <li
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <i
+        className="c2 fas fa-question-circle"
+      />
+      openbsd amd64
+      <p>
+        agentName
+      </p>
+    </div>
+    <p
+      className="c3"
+    />
+    External IP address
+    <div
+      className="c4"
+    >
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        />
+        <p
+          className="c7"
+        >
+          Connected
+        </p>
+      </div>
+      <i
+        className="c8 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+  </li>
+</div>
+`;
+
+exports[`agent list item renders the various operating systems correctly 3`] = `
+.c5 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c6 {
+  grid-column: status-indicator;
+  height: 12px;
+  width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  float: right;
+  text-align: left;
+  color: #27AE60;
+  background-color: #27AE60;
+}
+
+.c7 {
+  grid-column: status-text;
+  position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 15px;
+  text-align: left;
+  color: #27AE60;
+}
+
+.c0 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 175px;
+  grid-column-gap: 10px;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid white;
+  height: 30px;
+  line-height: 30px;
+  padding: 15px 20px;
+  margin-top: 25px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: 50%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c3 {
+  width: 50%;
+}
+
+.c8 {
+  cursor: pointer;
+  color: #F8F8F8;
+}
+
+.c2 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c4 {
+    width: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c1 {
+    width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+<div>
+  <li
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <i
+        className="c2 fab fa-freebsd"
+      />
+      freebsd amd64
+      <p>
+        agentName
+      </p>
+    </div>
+    <p
+      className="c3"
+    />
+    External IP address
+    <div
+      className="c4"
+    >
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        />
+        <p
+          className="c7"
+        >
+          Connected
+        </p>
+      </div>
+      <i
+        className="c8 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+  </li>
+</div>
+`;
+
+exports[`agent list item renders the various operating systems correctly 4`] = `
+.c5 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c6 {
+  grid-column: status-indicator;
+  height: 12px;
+  width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  float: right;
+  text-align: left;
+  color: #27AE60;
+  background-color: #27AE60;
+}
+
+.c7 {
+  grid-column: status-text;
+  position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 15px;
+  text-align: left;
+  color: #27AE60;
+}
+
+.c0 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 175px;
+  grid-column-gap: 10px;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid white;
+  height: 30px;
+  line-height: 30px;
+  padding: 15px 20px;
+  margin-top: 25px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: 50%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c3 {
+  width: 50%;
+}
+
+.c8 {
+  cursor: pointer;
+  color: #F8F8F8;
+}
+
+.c2 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c4 {
+    width: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c1 {
+    width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+<div>
+  <li
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <i
+        className="c2 fab fa-linux"
+      />
+      linux amd64
+      <p>
+        agentName
+      </p>
+    </div>
+    <p
+      className="c3"
+    />
+    External IP address
+    <div
+      className="c4"
+    >
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        />
+        <p
+          className="c7"
+        >
+          Connected
+        </p>
+      </div>
+      <i
+        className="c8 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+  </li>
+</div>
+`;
+
+exports[`agent list item renders the various operating systems correctly 5`] = `
+.c5 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c6 {
+  grid-column: status-indicator;
+  height: 12px;
+  width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  float: right;
+  text-align: left;
+  color: #27AE60;
+  background-color: #27AE60;
+}
+
+.c7 {
+  grid-column: status-text;
+  position: relative;
+  margin: 0;
+  padding-top: 0;
+  margin-left: 15px;
+  text-align: left;
+  color: #27AE60;
+}
+
+.c0 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 175px;
+  grid-column-gap: 10px;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid white;
+  height: 30px;
+  line-height: 30px;
+  padding: 15px 20px;
+  margin-top: 25px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: 50%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c3 {
+  width: 50%;
+}
+
+.c8 {
+  cursor: pointer;
+  color: #F8F8F8;
+}
+
+.c2 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c4 {
+    width: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c1 {
+    width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+<div>
+  <li
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <i
+        className="c2 fas fa-question-circle"
+      />
+      Operating system unkown
+      <p>
+        agentName
+      </p>
+    </div>
+    <p
+      className="c3"
+    />
+    External IP address
+    <div
+      className="c4"
+    >
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        />
+        <p
+          className="c7"
+        >
+          Connected
+        </p>
+      </div>
+      <i
+        className="c8 fas fa-terminal"
         onClick={[Function]}
       />
     </div>

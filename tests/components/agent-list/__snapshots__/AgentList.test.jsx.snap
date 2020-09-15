@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`agentList correctly lists multiple agents 1`] = `
-.c6 {
+.c8 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
 
-.c7 {
+.c9 {
   grid-column: status-indicator;
   height: 12px;
   width: 12px;
@@ -18,7 +18,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
   background-color: #27AE60;
 }
 
-.c8 {
+.c10 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -29,14 +29,12 @@ exports[`agentList correctly lists multiple agents 1`] = `
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr 175px;
+  grid-column-gap: 10px;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -45,11 +43,11 @@ exports[`agentList correctly lists multiple agents 1`] = `
   border: 1px solid white;
   height: 30px;
   line-height: 30px;
-  padding: 15px 30px;
+  padding: 15px 20px;
   margin-top: 25px;
 }
 
-.c5 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -62,19 +60,41 @@ exports[`agentList correctly lists multiple agents 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 300px;
 }
 
 .c4 {
-  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: 50%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.c9 {
+.c6 {
+  width: 50%;
+}
+
+.c11 {
   cursor: pointer;
   color: #F8F8F8;
+}
+
+.c5 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
 }
 
 .c0 {
@@ -97,6 +117,10 @@ exports[`agentList correctly lists multiple agents 1`] = `
 
 @media (max-width:47.9375em) {
   .c3 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -105,15 +129,26 @@ exports[`agentList correctly lists multiple agents 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c7 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
   .c4 {
-    text-align: center;
     width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c6 {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -131,28 +166,38 @@ exports[`agentList correctly lists multiple agents 1`] = `
     <li
       className="c3"
     >
-      <p
+      <div
         className="c4"
       >
-        name
-      </p>
+        <i
+          className="c5 fas fa-question-circle"
+        />
+        Operating system unkown
+        <p>
+          name
+        </p>
+      </div>
+      <p
+        className="c6"
+      />
+      External IP address
       <div
-        className="c5"
+        className="c7"
       >
         <div
-          className="c6"
+          className="c8"
         >
           <div
-            className="c7"
+            className="c9"
           />
           <p
-            className="c8"
+            className="c10"
           >
             Connected
           </p>
         </div>
         <i
-          className="c9 fas fa-terminal"
+          className="c11 fas fa-terminal"
           onClick={[Function]}
         />
       </div>
@@ -160,28 +205,38 @@ exports[`agentList correctly lists multiple agents 1`] = `
     <li
       className="c3"
     >
-      <p
+      <div
         className="c4"
       >
-        name2
-      </p>
+        <i
+          className="c5 fas fa-question-circle"
+        />
+        Operating system unkown
+        <p>
+          name2
+        </p>
+      </div>
+      <p
+        className="c6"
+      />
+      External IP address
       <div
-        className="c5"
+        className="c7"
       >
         <div
-          className="c6"
+          className="c8"
         >
           <div
-            className="c7"
+            className="c9"
           />
           <p
-            className="c8"
+            className="c10"
           >
             Connected
           </p>
         </div>
         <i
-          className="c9 fas fa-terminal"
+          className="c11 fas fa-terminal"
           onClick={[Function]}
         />
       </div>
