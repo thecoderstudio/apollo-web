@@ -56,7 +56,7 @@ describe('navbar', () => {
     root.findByProps({ id: 'newAgentButton' }).props.onClick();
     expect(component.toJSON()).toMatchSnapshot();
 
-    root.findByType(PlainNavBar).instance.closeAddAgentModal()
+    root.findByType(PlainNavBar).instance.closeAddAgentModal();
     expect(component.toJSON()).toMatchSnapshot();
   });
 
