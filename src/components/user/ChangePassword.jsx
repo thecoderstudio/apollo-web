@@ -38,7 +38,6 @@ class ChangePassword extends React.PureComponent {
       { withCredentials: true }
 		)
 			.then(res => {
-        console.log(res);
         fetchCurrentUser(this.props.dispatch);
       })
       .catch(error => {
