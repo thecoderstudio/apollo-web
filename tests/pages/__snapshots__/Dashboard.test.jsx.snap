@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dashboard Does not render change password 1`] = `
+.c1 {
+  display: grid;
+  grid-template-rows: [title] 50px [list] 1fr;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.c2 {
+  grid-row: title;
+}
+
+.c3 {
+  grid-row: list;
+  list-style: none;
+  padding-left: 0;
+}
+
+.c0 {
+  grid-template-columns: [agent-listing] 1fr 1fr;
+  grid-template-rows: 1fr;
+  display: grid;
+  grid-row: 2;
+  margin: 25px;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    grid-template-columns: [agent-listing] 1fr;
+  }
+}
+
+<div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <h2
+        className="c2"
+      >
+        Agents
+      </h2>
+      <ul
+        className="c3"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`dashboard renders correctly 1`] = `
+.c1 {
+  display: grid;
+  grid-template-rows: [title] 50px [list] 1fr;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.c2 {
+  grid-row: title;
+}
+
+.c3 {
+  grid-row: list;
+  list-style: none;
+  padding-left: 0;
+}
+
+.c0 {
+  grid-template-columns: [agent-listing] 1fr 1fr;
+  grid-template-rows: 1fr;
+  display: grid;
+  grid-row: 2;
+  margin: 25px;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    grid-template-columns: [agent-listing] 1fr;
+  }
+}
+
+<div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <h2
+        className="c2"
+      >
+        Agents
+      </h2>
+      <ul
+        className="c3"
+      />
+    </div>
+  </div>
+</div>
+`;
