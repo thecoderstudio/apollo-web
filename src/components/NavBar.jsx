@@ -73,7 +73,7 @@ class NavBar extends React.PureComponent {
         <Logo>Apollo</Logo>
         <Menu>
           <StyledLink to='/'>Dashboard</StyledLink>
-          {this.checkIfAdmin() && <StyledLink to='/admin'>Admin</StyledLink>}
+          {checkIfAdmin() && <StyledLink to='/admin'>Admin</StyledLink>}
         </Menu>
         <NewAgentButton id='newAgentButton' onClick={this.openAddAgentModal}>Add new agent</NewAgentButton>
         <Logout id='logoutButton' onClick={this.logout}>Logout</Logout>

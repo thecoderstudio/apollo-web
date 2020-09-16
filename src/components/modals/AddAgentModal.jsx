@@ -452,7 +452,7 @@ class AddAgentModal extends React.PureComponent {
 
   render() {
     return (
-      <ModalOverlay>
+      <ModalOverlay closeModalFunction={this.props.onClose}>
         <StyledCard>
           <Title>Add new agent</Title>
           <Content>{this.state.renderFunction()}</Content>
