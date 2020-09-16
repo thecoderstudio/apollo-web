@@ -6,7 +6,7 @@ import rootReducer from './reducers/root';
 
 const persistConfig = {
   key: 'root',
-  whitelist: ['auth', 'agent', 'currentUser', 'promptedPasswordChange'],
+  whitelist: ['auth', 'agent', 'currentUser'],
   transforms: [mapTransformer({ whitelist: 'agent' })],
   storage
 };

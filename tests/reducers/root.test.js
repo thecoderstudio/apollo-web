@@ -9,6 +9,5 @@ test("root reducer should contain all reducers", () => {
     currentUser: {},
     notifications: new ImmutableMap({}),
     theme: darkTheme,
-    promptedPasswordChange: false
   });
 });

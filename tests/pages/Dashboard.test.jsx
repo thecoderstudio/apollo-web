@@ -31,7 +31,6 @@ describe('dashboard', () => {
         has_changed_initial_password: false
       },
       authenticated: true,
-      promptedPasswordChange: false
     });
     expect(getComponent(store)).toMatchSnapshot();
   });
@@ -47,7 +46,6 @@ describe('dashboard', () => {
         has_changed_initial_password: true
       },
       authenticated: true,
-      promptedPasswordChange: true
     });
     expect(getComponent(store)).toMatchSnapshot();
   });

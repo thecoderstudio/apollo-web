@@ -4,7 +4,6 @@ import authReducer from './auth';
 import currentUserReducer from './current-user';
 import notificationReducer from './notification';
 import themeReducer from './theme';
-import changePasswordReducer from './change-password';
 
 export default combineReducers({
   agent: agentReducer,
@@ -12,5 +11,4 @@ export default combineReducers({
   currentUser: currentUserReducer,
   notifications: notificationReducer,
   theme: themeReducer,
-  promptedPasswordChange: changePasswordReducer
 });

@@ -3,13 +3,8 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import AgentList from '../components/agent-list/AgentList';
 import media from '../util/media';
-import NavBar from '../components/NavBar';
 import ChangePassword from '../components/user/ChangePassword';
 import { fetchCurrentUser } from '../util/user';
-
-const StyledAgentList = styled(AgentList)`
-  grid-column: agent-listing;
-`;
 
 const Content = styled.div`
   grid-template-columns: [agent-listing] 1fr 1fr;
@@ -50,9 +45,6 @@ class Dashboard extends React.PureComponent {
         <Content>
           <AgentList />
         </Content>
-        { (!this.state.initialPasscodeChanged && !this.props.promptedPasswordChange) &&
-          <PasswordChange />
-        }
       </div>
     );
   }
@@ -60,7 +52,6 @@ class Dashboard extends React.PureComponent {
 
 export default connect(
   state => ({
-    currentUser: state.currentUser,
-    promptedPasswordChange: state.promptedPasswordChange
+    currentUser: state.currentUser
   })
 )(Dashboard);

@@ -10,7 +10,7 @@ export function fetchCurrentUser(dispatch, callback=undefined) {
     .then(res => {
       dispatch(cacheCurrentUser(res.data));
       if (callback) {
-        callback()
+        callback();
       }
     })
     .catch(error => {

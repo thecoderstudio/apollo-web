@@ -30,9 +30,23 @@ describe('app', () => {
     const store = mockStore({
       agent: [],
       authenticated: true,
-      currentUser: {},
+      currentUser: {
+        has_changed_initial_password: false
+      },
       notifications: new Map({}),
-      promptedPasswordChange: true
+    });
+    const tree = getComponent(store).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it("renders correctly authenticated and password changed", () => {
+    const store = mockStore({
+      agent: [],
+      authenticated: true,
+      currentUser: {
+        has_changed_initial_password: true
+      },
+      notifications: new Map({}),
     });
     const tree = getComponent(store).toJSON();
     expect(tree).toMatchSnapshot();

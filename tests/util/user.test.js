@@ -13,9 +13,11 @@ describe('user util', () => {
       data: {}
     });
     const spy = jest.fn();
-    fetchCurrentUser(spy); 
+    const callbackSpy = jest.fn();
+    fetchCurrentUser(spy, callbackSpy);
     await waitForExpect(() => {
       expect(axios.get).toHaveBeenCalled();
+      expect(callbackSpy).toHaveBeenCalled();
       expect(spy).toHaveBeenCalledWith(cacheCurrentUser({}));
     });
   });
@@ -29,7 +31,7 @@ describe('user util', () => {
       }
     });
     const spy = jest.fn();
-    fetchCurrentUser(spy); 
+    fetchCurrentUser(spy);
     await waitForExpect(() => {
       expect(axios.get).toHaveBeenCalled();
       expect(spy).not.toHaveBeenCalled();

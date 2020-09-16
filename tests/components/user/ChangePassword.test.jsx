@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import waitForExpect from 'wait-for-expect';
 import axios from 'axios';
 import { StatusCodes } from 'http-status-codes';
-import { promptedPasswordChange } from '../../../src/actions/change-password.js';
 import ChangePassword from '../../../src/components/user/ChangePassword';
 
 const mockStore = configureStore([]);
@@ -64,18 +63,6 @@ describe("change password", () => {
     expect(getComponent(store).toJSON()).toMatchSnapshot();
   });
 
-  it("skips changing password", async () => {
-    const component = getComponent(store);
-    const root = component.root;
-
-    root.findAllByType('button')[1].props.onClick();
-    await waitForExpect(() => {
-      expect(spy).toHaveBeenCalledTimes(1);
-      expect(spy).toHaveBeenCalledWith(promptedPasswordChange());
-      expect(axios.put).not.toHaveBeenCalled();
-    });
-  });
-
   it("validates input", async () => {
     const component = getComponent(store);
     const root = component.root;
@@ -85,31 +72,35 @@ describe("change password", () => {
     submitForm(root, 'oldpassword', 'password1', 'password2');
 
     await waitForExpect(() => {
-      expect(axios.put).not.toHaveBeenCalled();
+      expect(axios.patch).not.toHaveBeenCalled();
     });
   });
 
-  it('put successfully', async () => {
+  it('patch successfully', async () => {
     const component = getComponent(store);
     const root = component.root;
 
-    axios.put.mockResolvedValue({
+    axios.get.mockResolvedValue({
+      status: StatusCodes.OK,
+      data: {}
+    });
+
+    axios.patch.mockResolvedValue({
       status: StatusCodes.OK
     });
 
     submitForm(root, 'oldpassword', 'password', 'password');
 
     await waitForExpect(() => {
-      expect(axios.put).toHaveBeenCalled();
-      expect(spy).toHaveBeenCalledWith(promptedPasswordChange());
+      expect(axios.patch).toHaveBeenCalled();
     });
   });
 
-  it('handles unsuccessful put', async () => {
+  it('handles unsuccessful patch', async () => {
     const component = getComponent(store);
     const root = component.root;
 
-    axios.put.mockImplementationOnce(() => Promise.reject({
+    axios.patch.mockImplementationOnce(() => Promise.reject({
       response: {
         status: StatusCodes.BAD_REQUEST,
         statusText: "Bad request",
@@ -120,7 +111,7 @@ describe("change password", () => {
     submitForm(root, 'oldpassword', 'password', 'password');
 
 
-    axios.put.mockImplementationOnce(() => Promise.reject({
+    axios.patch.mockImplementationOnce(() => Promise.reject({
       response: {
         status: StatusCodes.INTERNAL_SERVER_ERROR,
         statusText: "Something went wrong",
@@ -131,7 +122,7 @@ describe("change password", () => {
     submitForm(root, 'oldpassword', 'password', 'password');
 
     await waitForExpect(() => {
-      expect(axios.put).toHaveBeenCalledTimes(2);
+      expect(axios.patch).toHaveBeenCalledTimes(2);
       expect(spy).not.toHaveBeenCalled();
     });
   });

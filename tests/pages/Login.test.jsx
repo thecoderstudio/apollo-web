@@ -39,10 +39,10 @@ describe('login', () => {
     const instance = root.instance;
 
     axios.post.mockResolvedValue({
-      status: StatusCodes.OK 
+      status: StatusCodes.OK
     });
     axios.get.mockResolvedValue({
-      status: StatusCodes.OK 
+      status: StatusCodes.OK
     });
 
     root.findByProps({ type: 'username' }).props.onChange({
@@ -106,41 +106,6 @@ describe('login', () => {
     });
   });
 
-  it("handler get current user failure", async () => {
-    const component = getComponent(store);
-    const root = component.root.findByProps({authenticated: false});
-    const instance = root.instance;
-
-    axios.post.mockResolvedValue({
-      status: StatusCodes.OK 
-    });
-    axios.get.mockImplementationOnce(() => Promise.reject({
-      response: {
-        status: StatusCodes.INTERNAL_SERVER_ERROR,
-        statusText: "Something went wrong",
-        data: {}
-      }
-    }));
-
-
-    root.findByProps({type: 'username'}).props.onChange({ 
-      currentTarget: {
-        name: 'username',
-        value: 'test'
-      }
-    });
-    root.findByProps({type: 'password'}).props.onChange({
-      currentTarget: {
-        name: 'password',
-        value: 'password'
-      }
-    });
-    root.findByType('form').props.onSubmit();
-
-    await waitForExpect(() => {
-      expect(instance.props.dispatch).toHaveBeenCalledTimes(1);
-    });
-  });
 
   it("correctly sets pathname on authentication", () => {
     const component = getComponent(store);
