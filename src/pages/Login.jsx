@@ -9,12 +9,12 @@ import Input from '../components/Input';
 import Card from '../components/Card';
 import { parseHTTPErrors } from '../util/parser';
 import { login as loginAction } from '../actions/auth';
-import { cacheCurrentUser } from '../actions/current-user';
 import { handleHTTPResponse } from '../actions/error';
 import { fetchCurrentUser } from '../util/user';
 import loginSchema from '../validation/login';
 import media from '../util/media';
 import moonImg from '../images/moon_rocket.svg';
+import ChangePassword from '../components/user/ChangePassword';
 
 const OuterContainer = styled.div`
   height: 100%;
@@ -88,6 +88,7 @@ class Login extends React.Component {
   constructor(props) {
     super(props);
     this.login = this.login.bind(this);
+    this.loginSuccessCallback = this.loginSuccessCallback.bind(this);
   }
 
   login(credentials, { setErrors }) {
@@ -97,8 +98,7 @@ class Login extends React.Component {
       { withCredentials: true }
     )
       .then(res => {
-        this.props.dispatch(loginAction());
-        fetchCurrentUser(this.props.dispatch);
+        fetchCurrentUser(this.props.dispatch, this.loginSuccessCallback);
       })
       .catch(error => {
         handleHTTPResponse(error.response, true, true);
@@ -108,7 +108,10 @@ class Login extends React.Component {
       });
   }
 
-  
+  loginSuccessCallback() {
+    this.props.dispatch(loginAction());
+  }
+
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.authenticated) {
       window.location.pathname = "/";
@@ -120,32 +123,37 @@ class Login extends React.Component {
       <OuterContainer>
         <InnerContainer>
           <SupportingImg src={moonImg} />
-          <Title>Log in to Apollo</Title>
+          <Title>
+            {!this.props.authenticated ? <div>Log in to Apollo</div> : <div>Change your password</div>}
+           </Title>
           <StyledCard>
-            <Formik
-              initialValues={{ username: '', password: '' }}
-              validationSchema={loginSchema}
-              onSubmit={this.login}>
-              {({ values, errors, handleChange, handleSubmit }) => (
-                <Form onSubmit={handleSubmit}>
-                  <Input
-                    name="username"
-                    type="username"
-                    placeholder="Username"
-                    value={values.username}
-                    error={errors.username}
-                    onChange={handleChange} />
-                  <Input
-                    name="password"
-                    type="password"
-                    placeholder="Password"
-                    value={values.password}
-                    error={errors.password}
-                    onChange={handleChange} />
-                  <Button>Log in</Button>
-                </Form>
-              )}
-            </Formik>
+            { !this.props.authenticated ?
+              <Formik
+                initialValues={{ username: '', password: '' }}
+                validationSchema={loginSchema}
+                onSubmit={this.login}>
+                {({ values, errors, handleChange, handleSubmit }) => (
+                  <Form onSubmit={handleSubmit}>
+                    <Input
+                      name="username"
+                      type="username"
+                      placeholder="Username"
+                      value={values.username}
+                      error={errors.username}
+                      onChange={handleChange} />
+                    <Input
+                      name="password"
+                      type="password"
+                      placeholder="Password"
+                      value={values.password}
+                      error={errors.password}
+                      onChange={handleChange} />
+                    <Button>Log in</Button>
+                  </Form>
+                )}
+              </Formik>
+              : <ChangePassword />
+            }
           </StyledCard>
         </InnerContainer>
       </OuterContainer>

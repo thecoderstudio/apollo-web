@@ -3,37 +3,21 @@ import { connect } from 'react-redux';
 import { Formik } from 'formik';
 import axios from 'axios';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import Button from '../buttons/Button';
-import OutlinedButton from '../buttons/OutlinedButton';
 import Input from '../../components/Input';
 import { changePasswordSchema } from '../../validation/user.js';
+import { fetchCurrentUser } from '../../util/user';
 import { StatusCodes } from 'http-status-codes';
 import { handleHTTPResponse } from '../../actions/error';
 import { parseHTTPErrors } from '../../util/parser';
-import Card from '../Card';
-import { promptedPasswordChange } from '../../actions/change-password';
-
 
 const Form = styled.form`
   width: 100%;
-  padding: 16px;
 `;
 
 const StyledButton = styled(Button)`
   width: 100%;
   margin-top: 15px;
-`;
-
-const StyledCard = styled(Card)`
-  width: 100%;
-  max-width: 350px;
-  position: relative;
-`;
-
-const Title = styled.h3`
-  width: 100%;
-  text-align: center;
 `;
 
 class ChangePassword extends React.PureComponent {
@@ -44,8 +28,8 @@ class ChangePassword extends React.PureComponent {
 	}
 
   changePassword(values, { setErrors }) {
-		axios.put(
-      `${process.env.APOLLO_HTTP_URL}user/${this.props.currentUser.id}`,
+		axios.patch(
+      `${process.env.APOLLO_HTTP_URL}user/me`,
       {
         'old_password': values['oldPassword'],
         'password': values['password'],
@@ -54,12 +38,12 @@ class ChangePassword extends React.PureComponent {
       { withCredentials: true }
 		)
 			.then(res => {
-        this.props.dispatch(promptedPasswordChange());
+        fetchCurrentUser(this.props.dispatch);
       })
       .catch(error => {
         handleHTTPResponse(error.response, true, true);
         if (error.response.status === StatusCodes.BAD_REQUEST) {
-          setErrors(parseHTTPErrors(error.response.data));
+          setErrors(parseHTTPErrors(error.response.data, { detail: 'oldPassword' }));
         }
       });
 	}
@@ -73,46 +57,43 @@ class ChangePassword extends React.PureComponent {
 
   render() {
     return (
-      <StyledCard className={this.props.className}>
-        <Title>Change password</Title>
-        <Formik
-          initialValues={{ password: '', passwordConfirm: '', oldPassword: ''}}
-          validationSchema={changePasswordSchema}
-          onSubmit={this.changePassword}>
-          {({ values, errors, handleChange, handleSubmit }) => (
-            <Form onSubmit={handleSubmit}>
-              <Input
-                inverted
-                name='oldPassword'
-                placeholder='Current password'
-                type='password'
-                value={values.oldPssword}
-                error={errors.oldPassword}
-                onChange={handleChange}
-              />
-              <Input
-                inverted
-                name='password'
-                type='password'
-                placeholder='New password'
-                value={values.password}
-                error={errors.password}
-                onChange={handleChange}
-              />
-              <Input
-                inverted
-                name='passwordConfirm'
-                type='password'
-                placeholder='Confirm new password'
-                value={values.passwordConfirm}
-                error={errors.passwordConfirm}
-                onChange={handleChange}
-              />
-              { this.getButton(errors, values) }
-            </Form>
-          )}
-        </Formik>
-      </StyledCard>
+      <Formik
+        initialValues={{ password: '', passwordConfirm: '', oldPassword: ''}}
+        validationSchema={changePasswordSchema}
+        onSubmit={this.changePassword}>
+        {({ values, errors, handleChange, handleSubmit }) => (
+          <Form onSubmit={handleSubmit}>
+            <Input
+              inverted
+              name='oldPassword'
+              placeholder='Current password'
+              type='password'
+              value={values.oldPssword}
+              error={errors.oldPassword}
+              onChange={handleChange}
+            />
+            <Input
+              inverted
+              name='password'
+              type='password'
+              placeholder='New password'
+              value={values.password}
+              error={errors.password}
+              onChange={handleChange}
+            />
+            <Input
+              inverted
+              name='passwordConfirm'
+              type='password'
+              placeholder='Confirm new password'
+              value={values.passwordConfirm}
+              error={errors.passwordConfirm}
+              onChange={handleChange}
+            />
+            { this.getButton(errors, values) }
+          </Form>
+        )}
+      </Formik>
     );
   }
 }
