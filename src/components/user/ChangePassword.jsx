@@ -14,22 +14,21 @@ import { parseHTTPErrors } from '../../util/parser';
 import Card from '../Card';
 import { promptedPasswordChange } from '../../actions/change-password';
 
-const StyledOutlinedButton = styled(OutlinedButton)`
-  margin-top: 15px;
-  width: 100%;
-`;
 
-const StyledInput = styled(Input)`
-  display: none;
+const Form = styled.form`
+  width: 100%;
+  padding: 16px;
 `;
 
 const StyledButton = styled(Button)`
   width: 100%;
+  margin-top: 15px;
 `;
 
 const StyledCard = styled(Card)`
   width: 100%;
   max-width: 350px;
+  position: relative;
 `;
 
 const Title = styled.h3`
@@ -45,7 +44,6 @@ class ChangePassword extends React.PureComponent {
 	}
 
   changePassword(values, { setErrors }) {
-    const currentUser = this.props.currentUser;
 		axios.put(
       `${process.env.APOLLO_HTTP_URL}user/${this.props.currentUser.id}`,
       {
@@ -82,7 +80,7 @@ class ChangePassword extends React.PureComponent {
           validationSchema={changePasswordSchema}
           onSubmit={this.changePassword}>
           {({ values, errors, handleChange, handleSubmit }) => (
-            <form onSubmit={handleSubmit}>
+            <Form onSubmit={handleSubmit}>
               <Input
                 inverted
                 name='oldPassword'
@@ -111,8 +109,7 @@ class ChangePassword extends React.PureComponent {
                 onChange={handleChange}
               />
               { this.getButton(errors, values) }
-              <StyledOutlinedButton onClick={() => this.props.dispatch(promptedPasswordChange())}>Don't change password</StyledOutlinedButton>
-            </form>
+            </Form>
           )}
         </Formik>
       </StyledCard>
