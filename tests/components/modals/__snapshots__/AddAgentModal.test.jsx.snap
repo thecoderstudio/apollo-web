@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`addAgentModal closes modal correctly 1`] = `
-.c7 {
+.c8 {
   height: 80px;
 }
 
-.c9 {
+.c10 {
   min-height: 50px;
   width: 100%;
   border: none;
@@ -17,7 +17,7 @@ exports[`addAgentModal closes modal correctly 1`] = `
   border: 1px solid transparent;
 }
 
-.c9:focus {
+.c10:focus {
   outline: none;
   border: 1px solid;
 }
@@ -32,7 +32,42 @@ exports[`addAgentModal closes modal correctly 1`] = `
   z-index: 1;
 }
 
-.c11 {
+.c17 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c17:hover {
+  opacity: 0.90;
+}
+
+.c17:focus {
+  outline: none;
+}
+
+.c17:active {
+  opacity: 0.80;
+}
+
+.c18 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.c12 {
   border: none;
   border-radius: 5px;
   font-family: 'B612',sans-serif;
@@ -45,7 +80,7 @@ exports[`addAgentModal closes modal correctly 1`] = `
   overflow: hidden;
 }
 
-.c13 {
+.c14 {
   display: none;
   list-style: none;
   margin: 0;
@@ -58,16 +93,16 @@ exports[`addAgentModal closes modal correctly 1`] = `
   position: fixed;
 }
 
-.c14 {
+.c15 {
   padding: 15px;
 }
 
-.c14:hover {
+.c15:hover {
   cursor: pointer;
   opacity: 0.6;
 }
 
-.c12 {
+.c13 {
   border-color: white transparent;
   border-style: solid;
   float: right;
@@ -84,38 +119,14 @@ exports[`addAgentModal closes modal correctly 1`] = `
   transition: transform 0.3s;
 }
 
-.c17 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
+.c20 {
   width: 100%;
   height: 50px;
   margin: auto;
   display: block;
 }
 
-.c17:hover {
-  opacity: 0.90;
-}
-
-.c17:focus {
-  outline: none;
-}
-
-.c17:active {
-  opacity: 0.80;
-}
-
-.c1 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
+.c2 {
   display: grid;
   grid-template-rows: [title] 50px [content] 1fr;
   position: fixed;
@@ -129,92 +140,69 @@ exports[`addAgentModal closes modal correctly 1`] = `
   height: auto;
 }
 
-.c2 {
+.c3 {
   grid-row: title;
   width: 75%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c3 {
+.c4 {
   grid-row: content;
   padding: 20px;
 }
 
-.c15 {
+.c16 {
   display: grid;
   grid-template-columns: [column-one] 50% [column-two] 50%;
   margin: 20px 0px 20px 0px;
 }
 
-.c4 {
+.c5 {
   display: grid;
   width: 100%;
   grid-template-columns: [text] 50% [dropdown] 50%;
 }
 
-.c6 {
+.c7 {
   grid-column: dropdown;
 }
 
-.c10 {
+.c11 {
   width: 200px;
   float: right;
 }
 
-.c5 {
+.c6 {
   grid-column: text;
   line-height: 75px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-.c18 {
+.c21 {
   width: 200px;
   height: 50px;
   margin: auto;
   display: block;
 }
 
-.c8 {
+.c9 {
   font-family: 'B612',sans-serif;
   font-weight: 600;
   width: 200px;
   float: right;
 }
 
-.c16 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
+.c19 {
   width: 200px;
   height: 50px;
   margin: auto;
   display: block;
 }
 
-.c16:hover {
-  opacity: 0.90;
-}
-
-.c16:focus {
-  outline: none;
-}
-
-.c16:active {
-  opacity: 0.80;
-}
-
 @media (max-width:47.9375em) {
-  .c15 {
+  .c16 {
     grid-template-columns: [column-one] 100%;
     grid-template-rows: [row-one] 1fr [row-two] 1fr;
   }
@@ -229,14 +217,14 @@ exports[`addAgentModal closes modal correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     grid-template-columns: [column-one] 100%;
     grid-template-rows: [text] 30px [dropdown] 85px;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c7 {
     grid-column: column-one;
     grid-row: dropdown;
     width: 100%;
@@ -244,13 +232,13 @@ exports[`addAgentModal closes modal correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c10 {
+  .c11 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
     line-height: 100%;
     grid-column: column-one;
@@ -259,21 +247,21 @@ exports[`addAgentModal closes modal correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c18 {
+  .c21 {
     width: 100%;
     margin-top: 15px;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c8 {
+  .c9 {
     width: 100%;
     grid-row: row-two;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c16 {
+  .c19 {
     width: 100%;
     grid-row: row-two;
   }
@@ -284,36 +272,36 @@ exports[`addAgentModal closes modal correctly 1`] = `
   onClick={[Function]}
 >
   <div
-    className="c1"
+    className="c1 c2"
   >
     <h2
-      className="c2"
+      className="c3"
     >
       Add new agent
     </h2>
     <div
-      className="c3"
+      className="c4"
     >
       <div>
         <form
           onSubmit={[Function]}
         >
           <div
-            className="c4"
+            className="c5"
           >
             <p
-              className="c5"
+              className="c6"
             >
               Agent name
             </p>
             <div
-              className="c6"
+              className="c7"
             >
               <div
-                className="c7 c8"
+                className="c8 c9"
               >
                 <input
-                  className="c9"
+                  className="c10"
                   name="name"
                   onChange={[Function]}
                   placeholder="007"
@@ -324,46 +312,46 @@ exports[`addAgentModal closes modal correctly 1`] = `
             </div>
           </div>
           <div
-            className="c4"
+            className="c5"
           >
             <p
-              className="c5"
+              className="c6"
             >
               Operating system
             </p>
             <div
-              className="c6"
+              className="c7"
             >
               <div
-                className="c10"
+                className="c11"
               >
                 <div
-                  className="c11"
+                  className="c12"
                   id="dropdown"
                   onClick={[Function]}
                 >
                   linux
                   <div
-                    className="c12"
+                    className="c13"
                   />
                 </div>
                 <ul
-                  className="c13"
+                  className="c14"
                 >
                   <li
-                    className="c14"
+                    className="c15"
                     onClick={[Function]}
                   >
                     darwin
                   </li>
                   <li
-                    className="c14"
+                    className="c15"
                     onClick={[Function]}
                   >
                     freebsd
                   </li>
                   <li
-                    className="c14"
+                    className="c15"
                     onClick={[Function]}
                   >
                     openbsd
@@ -373,40 +361,40 @@ exports[`addAgentModal closes modal correctly 1`] = `
             </div>
           </div>
           <div
-            className="c4"
+            className="c5"
           >
             <p
-              className="c5"
+              className="c6"
             >
               Architecture
             </p>
             <div
-              className="c6"
+              className="c7"
             >
               <div
-                className="c10"
+                className="c11"
               >
                 <div
-                  className="c11"
+                  className="c12"
                   id="dropdown"
                   onClick={[Function]}
                 >
                   amd64
                   <div
-                    className="c12"
+                    className="c13"
                   />
                 </div>
                 <ul
-                  className="c13"
+                  className="c14"
                 >
                   <li
-                    className="c14"
+                    className="c15"
                     onClick={[Function]}
                   >
                     arm64
                   </li>
                   <li
-                    className="c14"
+                    className="c15"
                     onClick={[Function]}
                   >
                     arm
@@ -416,10 +404,10 @@ exports[`addAgentModal closes modal correctly 1`] = `
             </div>
           </div>
           <div
-            className="c15"
+            className="c16"
           >
             <button
-              className="c16"
+              className="c17 c18 c19"
               id="closeButton"
               onClick={
                 [MockFunction] {
@@ -439,7 +427,7 @@ exports[`addAgentModal closes modal correctly 1`] = `
               Cancel
             </button>
             <button
-              className="c17 c18"
+              className="c17 c20 c21"
               onClick={null}
             >
               Create agent
@@ -463,13 +451,48 @@ exports[`addAgentModal creates agent 1`] = `
   z-index: 1;
 }
 
-.c6 {
+.c9 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c9:hover {
+  opacity: 0.90;
+}
+
+.c9:focus {
+  outline: none;
+}
+
+.c9:active {
+  opacity: 0.80;
+}
+
+.c12 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.c7 {
   grid-template-columns: [textfield] 1fr [copy] 50px;
   display: grid;
   height: 50px;
 }
 
-.c7 {
+.c8 {
   grid-column: textfield;
   border: none;
   border-radius: 5px;
@@ -485,33 +508,12 @@ exports[`addAgentModal creates agent 1`] = `
   overflow: hidden;
 }
 
-.c8 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
+.c10 {
   grid-column: copy;
   height: 100%;
 }
 
-.c8:hover {
-  opacity: 0.90;
-}
-
-.c8:focus {
-  outline: none;
-}
-
-.c8:active {
-  opacity: 0.80;
-}
-
-.c9 {
+.c11 {
   text-align: center;
   display: block;
   width: 60%;
@@ -519,10 +521,7 @@ exports[`addAgentModal creates agent 1`] = `
   height: 60%;
 }
 
-.c1 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
+.c2 {
   display: grid;
   grid-template-rows: [title] 50px [content] 1fr;
   position: fixed;
@@ -536,56 +535,36 @@ exports[`addAgentModal creates agent 1`] = `
   height: auto;
 }
 
-.c2 {
+.c3 {
   grid-row: title;
   width: 75%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c3 {
+.c4 {
   grid-row: content;
   padding: 20px;
 }
 
-.c4 {
-  display: grid;
-  grid-template-rows: [description] 1fr [commands] 1fr [button] 1fr;
-}
-
-.c10 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
+.c13 {
   width: 200px;
   height: 50px;
   margin: auto;
   display: block;
+}
+
+.c5 {
+  display: grid;
+  grid-template-rows: [description] 1fr [commands] 1fr [button] 1fr;
+}
+
+.c14 {
   grid-row: button;
   margin-top: 20px;
 }
 
-.c10:hover {
-  opacity: 0.90;
-}
-
-.c10:focus {
-  outline: none;
-}
-
-.c10:active {
-  opacity: 0.80;
-}
-
-.c5 {
+.c6 {
   grid-row: description;
   margin: 20px 0px 20px 0px;
 }
@@ -635,45 +614,45 @@ exports[`addAgentModal creates agent 1`] = `
   onClick={[Function]}
 >
   <div
-    className="c1"
+    className="c1 c2"
   >
     <h2
-      className="c2"
+      className="c3"
     >
       Add new agent
     </h2>
     <div
-      className="c3"
+      className="c4"
     >
       <div
-        className="c4"
+        className="c5"
       >
         <p
-          className="c5"
+          className="c6"
         >
           Copy and run the command on the target machine to download run the client.
         </p>
         <div
-          className="c6"
+          className="c7"
         >
           <div
-            className="c7"
+            className="c8"
           >
             curl http://localhost:1970/agent/download?target_os=linux&target_arch=amd64 && chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=test --secret=test --host=localhost:1970
           </div>
           <button
-            className="c8"
+            className="c9 c10"
             id="copyToClipboardButton"
             onClick={[Function]}
           >
             <img
-              className="c9"
+              className="c11"
               src={[Function]}
             />
           </button>
         </div>
         <button
-          className="c10"
+          className="c9 c12 c13 c14"
           id="closeButton"
           onClick={[MockFunction]}
         >
@@ -696,7 +675,7 @@ exports[`addAgentModal renders correctly 1`] = `
   z-index: 1;
 }
 
-.c6 {
+.c7 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -706,34 +685,40 @@ exports[`addAgentModal renders correctly 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
+}
+
+.c7:hover {
+  opacity: 0.90;
+}
+
+.c7:focus {
+  outline: none;
+}
+
+.c7:active {
+  opacity: 0.80;
+}
+
+.c8 {
   background-color: transparent;
   border: 1px solid;
+}
+
+.c9 {
   display: grid;
   grid-template-rows: [title] 50px [description] 1fr;
   padding: 20px;
   min-height: 180px;
 }
 
-.c6:hover {
-  opacity: 0.90;
-}
-
-.c6:focus {
-  outline: none;
-}
-
-.c6:active {
-  opacity: 0.80;
-}
-
-.c8 {
+.c11 {
   grid-row: title;
   width: 80%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c9 {
+.c12 {
   grid-row: description;
   padding: 10px;
   font-size: 0.85rem;
@@ -743,6 +728,9 @@ exports[`addAgentModal renders correctly 1`] = `
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
+}
+
+.c2 {
   display: grid;
   grid-template-rows: [title] 50px [content] 1fr;
   position: fixed;
@@ -756,47 +744,47 @@ exports[`addAgentModal renders correctly 1`] = `
   height: auto;
 }
 
-.c2 {
+.c3 {
   grid-row: title;
   width: 75%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c3 {
+.c4 {
   grid-row: content;
   padding: 20px;
 }
 
-.c4 {
+.c5 {
   display: grid;
   grid-template-columns: [column-one] 50% [column-two] 50%;
   margin: 20px 0px 20px 0px;
 }
 
-.c5 {
+.c6 {
   grid-column: column-one;
   margin-right: 10px;
 }
 
-.c10 {
+.c13 {
   grid-column: column-two;
   margin-left: 10px;
 }
 
-.c7 {
+.c10 {
   width: 100%;
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     grid-template-columns: [column-one] 100%;
     grid-template-rows: [row-one] 1fr [row-two] 1fr;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     grid-row: row-one;
     margin-right: 0px;
     margin: 15px;
@@ -804,7 +792,7 @@ exports[`addAgentModal renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c10 {
+  .c13 {
     grid-column: column-one;
     grid-row: row-two;
     margin-left: 0px;
@@ -817,52 +805,52 @@ exports[`addAgentModal renders correctly 1`] = `
   onClick={[Function]}
 >
   <div
-    className="c1"
+    className="c1 c2"
   >
     <h2
-      className="c2"
+      className="c3"
     >
       Add new agent
     </h2>
     <div
-      className="c3"
+      className="c4"
     >
       <div
-        className="c4"
+        className="c5"
       >
         <div
-          className="c5"
+          className="c6"
         >
           <button
-            className="c6 c7"
+            className="c7 c8 c9 c10"
             onClick={[Function]}
           >
             <h3
-              className="c8"
+              className="c11"
             >
               Directly on target machine.
             </h3>
             <p
-              className="c9"
+              className="c12"
             >
               You have the correct permissions to download the binary directly on the target machine.
             </p>
           </button>
         </div>
         <div
-          className="c10"
+          className="c13"
         >
           <button
-            className="c6 c7"
+            className="c7 c8 c9 c10"
             onClick={[Function]}
           >
             <h3
-              className="c8"
+              className="c11"
             >
               Manual upload
             </h3>
             <p
-              className="c9"
+              className="c12"
             >
               You download and upload the binary yourself.
             </p>
@@ -875,11 +863,11 @@ exports[`addAgentModal renders correctly 1`] = `
 `;
 
 exports[`addAgentModal selects directly correctly 1`] = `
-.c7 {
+.c8 {
   height: 80px;
 }
 
-.c9 {
+.c10 {
   min-height: 50px;
   width: 100%;
   border: none;
@@ -891,7 +879,7 @@ exports[`addAgentModal selects directly correctly 1`] = `
   border: 1px solid transparent;
 }
 
-.c9:focus {
+.c10:focus {
   outline: none;
   border: 1px solid;
 }
@@ -906,7 +894,42 @@ exports[`addAgentModal selects directly correctly 1`] = `
   z-index: 1;
 }
 
-.c11 {
+.c17 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c17:hover {
+  opacity: 0.90;
+}
+
+.c17:focus {
+  outline: none;
+}
+
+.c17:active {
+  opacity: 0.80;
+}
+
+.c18 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.c12 {
   border: none;
   border-radius: 5px;
   font-family: 'B612',sans-serif;
@@ -919,7 +942,7 @@ exports[`addAgentModal selects directly correctly 1`] = `
   overflow: hidden;
 }
 
-.c13 {
+.c14 {
   display: none;
   list-style: none;
   margin: 0;
@@ -932,16 +955,16 @@ exports[`addAgentModal selects directly correctly 1`] = `
   position: fixed;
 }
 
-.c14 {
+.c15 {
   padding: 15px;
 }
 
-.c14:hover {
+.c15:hover {
   cursor: pointer;
   opacity: 0.6;
 }
 
-.c12 {
+.c13 {
   border-color: white transparent;
   border-style: solid;
   float: right;
@@ -958,38 +981,14 @@ exports[`addAgentModal selects directly correctly 1`] = `
   transition: transform 0.3s;
 }
 
-.c17 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
+.c20 {
   width: 100%;
   height: 50px;
   margin: auto;
   display: block;
 }
 
-.c17:hover {
-  opacity: 0.90;
-}
-
-.c17:focus {
-  outline: none;
-}
-
-.c17:active {
-  opacity: 0.80;
-}
-
-.c1 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
+.c2 {
   display: grid;
   grid-template-rows: [title] 50px [content] 1fr;
   position: fixed;
@@ -1003,92 +1002,69 @@ exports[`addAgentModal selects directly correctly 1`] = `
   height: auto;
 }
 
-.c2 {
+.c3 {
   grid-row: title;
   width: 75%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c3 {
+.c4 {
   grid-row: content;
   padding: 20px;
 }
 
-.c15 {
+.c16 {
   display: grid;
   grid-template-columns: [column-one] 50% [column-two] 50%;
   margin: 20px 0px 20px 0px;
 }
 
-.c4 {
+.c5 {
   display: grid;
   width: 100%;
   grid-template-columns: [text] 50% [dropdown] 50%;
 }
 
-.c6 {
+.c7 {
   grid-column: dropdown;
 }
 
-.c10 {
+.c11 {
   width: 200px;
   float: right;
 }
 
-.c5 {
+.c6 {
   grid-column: text;
   line-height: 75px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-.c18 {
+.c21 {
   width: 200px;
   height: 50px;
   margin: auto;
   display: block;
 }
 
-.c8 {
+.c9 {
   font-family: 'B612',sans-serif;
   font-weight: 600;
   width: 200px;
   float: right;
 }
 
-.c16 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
+.c19 {
   width: 200px;
   height: 50px;
   margin: auto;
   display: block;
 }
 
-.c16:hover {
-  opacity: 0.90;
-}
-
-.c16:focus {
-  outline: none;
-}
-
-.c16:active {
-  opacity: 0.80;
-}
-
 @media (max-width:47.9375em) {
-  .c15 {
+  .c16 {
     grid-template-columns: [column-one] 100%;
     grid-template-rows: [row-one] 1fr [row-two] 1fr;
   }
@@ -1103,14 +1079,14 @@ exports[`addAgentModal selects directly correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     grid-template-columns: [column-one] 100%;
     grid-template-rows: [text] 30px [dropdown] 85px;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c7 {
     grid-column: column-one;
     grid-row: dropdown;
     width: 100%;
@@ -1118,13 +1094,13 @@ exports[`addAgentModal selects directly correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c10 {
+  .c11 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
     line-height: 100%;
     grid-column: column-one;
@@ -1133,21 +1109,21 @@ exports[`addAgentModal selects directly correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c18 {
+  .c21 {
     width: 100%;
     margin-top: 15px;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c8 {
+  .c9 {
     width: 100%;
     grid-row: row-two;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c16 {
+  .c19 {
     width: 100%;
     grid-row: row-two;
   }
@@ -1158,36 +1134,36 @@ exports[`addAgentModal selects directly correctly 1`] = `
   onClick={[Function]}
 >
   <div
-    className="c1"
+    className="c1 c2"
   >
     <h2
-      className="c2"
+      className="c3"
     >
       Add new agent
     </h2>
     <div
-      className="c3"
+      className="c4"
     >
       <div>
         <form
           onSubmit={[Function]}
         >
           <div
-            className="c4"
+            className="c5"
           >
             <p
-              className="c5"
+              className="c6"
             >
               Agent name
             </p>
             <div
-              className="c6"
+              className="c7"
             >
               <div
-                className="c7 c8"
+                className="c8 c9"
               >
                 <input
-                  className="c9"
+                  className="c10"
                   name="name"
                   onChange={[Function]}
                   placeholder="007"
@@ -1198,46 +1174,46 @@ exports[`addAgentModal selects directly correctly 1`] = `
             </div>
           </div>
           <div
-            className="c4"
+            className="c5"
           >
             <p
-              className="c5"
+              className="c6"
             >
               Operating system
             </p>
             <div
-              className="c6"
+              className="c7"
             >
               <div
-                className="c10"
+                className="c11"
               >
                 <div
-                  className="c11"
+                  className="c12"
                   id="dropdown"
                   onClick={[Function]}
                 >
                   linux
                   <div
-                    className="c12"
+                    className="c13"
                   />
                 </div>
                 <ul
-                  className="c13"
+                  className="c14"
                 >
                   <li
-                    className="c14"
+                    className="c15"
                     onClick={[Function]}
                   >
                     darwin
                   </li>
                   <li
-                    className="c14"
+                    className="c15"
                     onClick={[Function]}
                   >
                     freebsd
                   </li>
                   <li
-                    className="c14"
+                    className="c15"
                     onClick={[Function]}
                   >
                     openbsd
@@ -1247,40 +1223,40 @@ exports[`addAgentModal selects directly correctly 1`] = `
             </div>
           </div>
           <div
-            className="c4"
+            className="c5"
           >
             <p
-              className="c5"
+              className="c6"
             >
               Architecture
             </p>
             <div
-              className="c6"
+              className="c7"
             >
               <div
-                className="c10"
+                className="c11"
               >
                 <div
-                  className="c11"
+                  className="c12"
                   id="dropdown"
                   onClick={[Function]}
                 >
                   amd64
                   <div
-                    className="c12"
+                    className="c13"
                   />
                 </div>
                 <ul
-                  className="c13"
+                  className="c14"
                 >
                   <li
-                    className="c14"
+                    className="c15"
                     onClick={[Function]}
                   >
                     arm64
                   </li>
                   <li
-                    className="c14"
+                    className="c15"
                     onClick={[Function]}
                   >
                     arm
@@ -1290,10 +1266,10 @@ exports[`addAgentModal selects directly correctly 1`] = `
             </div>
           </div>
           <div
-            className="c15"
+            className="c16"
           >
             <button
-              className="c16"
+              className="c17 c18 c19"
               id="closeButton"
               onClick={[MockFunction]}
               type="button"
@@ -1301,7 +1277,7 @@ exports[`addAgentModal selects directly correctly 1`] = `
               Cancel
             </button>
             <button
-              className="c17 c18"
+              className="c17 c20 c21"
               onClick={null}
             >
               Create agent
@@ -1315,11 +1291,11 @@ exports[`addAgentModal selects directly correctly 1`] = `
 `;
 
 exports[`addAgentModal selects manual correctly 1`] = `
-.c7 {
+.c8 {
   height: 80px;
 }
 
-.c9 {
+.c10 {
   min-height: 50px;
   width: 100%;
   border: none;
@@ -1331,7 +1307,7 @@ exports[`addAgentModal selects manual correctly 1`] = `
   border: 1px solid transparent;
 }
 
-.c9:focus {
+.c10:focus {
   outline: none;
   border: 1px solid;
 }
@@ -1346,7 +1322,42 @@ exports[`addAgentModal selects manual correctly 1`] = `
   z-index: 1;
 }
 
-.c11 {
+.c17 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c17:hover {
+  opacity: 0.90;
+}
+
+.c17:focus {
+  outline: none;
+}
+
+.c17:active {
+  opacity: 0.80;
+}
+
+.c18 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.c12 {
   border: none;
   border-radius: 5px;
   font-family: 'B612',sans-serif;
@@ -1359,7 +1370,7 @@ exports[`addAgentModal selects manual correctly 1`] = `
   overflow: hidden;
 }
 
-.c13 {
+.c14 {
   display: none;
   list-style: none;
   margin: 0;
@@ -1372,16 +1383,16 @@ exports[`addAgentModal selects manual correctly 1`] = `
   position: fixed;
 }
 
-.c14 {
+.c15 {
   padding: 15px;
 }
 
-.c14:hover {
+.c15:hover {
   cursor: pointer;
   opacity: 0.6;
 }
 
-.c12 {
+.c13 {
   border-color: white transparent;
   border-style: solid;
   float: right;
@@ -1398,38 +1409,14 @@ exports[`addAgentModal selects manual correctly 1`] = `
   transition: transform 0.3s;
 }
 
-.c17 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
+.c20 {
   width: 100%;
   height: 50px;
   margin: auto;
   display: block;
 }
 
-.c17:hover {
-  opacity: 0.90;
-}
-
-.c17:focus {
-  outline: none;
-}
-
-.c17:active {
-  opacity: 0.80;
-}
-
-.c1 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
+.c2 {
   display: grid;
   grid-template-rows: [title] 50px [content] 1fr;
   position: fixed;
@@ -1443,92 +1430,69 @@ exports[`addAgentModal selects manual correctly 1`] = `
   height: auto;
 }
 
-.c2 {
+.c3 {
   grid-row: title;
   width: 75%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c3 {
+.c4 {
   grid-row: content;
   padding: 20px;
 }
 
-.c15 {
+.c16 {
   display: grid;
   grid-template-columns: [column-one] 50% [column-two] 50%;
   margin: 20px 0px 20px 0px;
 }
 
-.c4 {
+.c5 {
   display: grid;
   width: 100%;
   grid-template-columns: [text] 50% [dropdown] 50%;
 }
 
-.c6 {
+.c7 {
   grid-column: dropdown;
 }
 
-.c10 {
+.c11 {
   width: 200px;
   float: right;
 }
 
-.c5 {
+.c6 {
   grid-column: text;
   line-height: 75px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-.c18 {
+.c21 {
   width: 200px;
   height: 50px;
   margin: auto;
   display: block;
 }
 
-.c8 {
+.c9 {
   font-family: 'B612',sans-serif;
   font-weight: 600;
   width: 200px;
   float: right;
 }
 
-.c16 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
+.c19 {
   width: 200px;
   height: 50px;
   margin: auto;
   display: block;
 }
 
-.c16:hover {
-  opacity: 0.90;
-}
-
-.c16:focus {
-  outline: none;
-}
-
-.c16:active {
-  opacity: 0.80;
-}
-
 @media (max-width:47.9375em) {
-  .c15 {
+  .c16 {
     grid-template-columns: [column-one] 100%;
     grid-template-rows: [row-one] 1fr [row-two] 1fr;
   }
@@ -1543,14 +1507,14 @@ exports[`addAgentModal selects manual correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     grid-template-columns: [column-one] 100%;
     grid-template-rows: [text] 30px [dropdown] 85px;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c7 {
     grid-column: column-one;
     grid-row: dropdown;
     width: 100%;
@@ -1558,13 +1522,13 @@ exports[`addAgentModal selects manual correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c10 {
+  .c11 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
     line-height: 100%;
     grid-column: column-one;
@@ -1573,21 +1537,21 @@ exports[`addAgentModal selects manual correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c18 {
+  .c21 {
     width: 100%;
     margin-top: 15px;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c8 {
+  .c9 {
     width: 100%;
     grid-row: row-two;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c16 {
+  .c19 {
     width: 100%;
     grid-row: row-two;
   }
@@ -1598,36 +1562,36 @@ exports[`addAgentModal selects manual correctly 1`] = `
   onClick={[Function]}
 >
   <div
-    className="c1"
+    className="c1 c2"
   >
     <h2
-      className="c2"
+      className="c3"
     >
       Add new agent
     </h2>
     <div
-      className="c3"
+      className="c4"
     >
       <div>
         <form
           onSubmit={[Function]}
         >
           <div
-            className="c4"
+            className="c5"
           >
             <p
-              className="c5"
+              className="c6"
             >
               Agent name
             </p>
             <div
-              className="c6"
+              className="c7"
             >
               <div
-                className="c7 c8"
+                className="c8 c9"
               >
                 <input
-                  className="c9"
+                  className="c10"
                   name="name"
                   onChange={[Function]}
                   placeholder="007"
@@ -1638,46 +1602,46 @@ exports[`addAgentModal selects manual correctly 1`] = `
             </div>
           </div>
           <div
-            className="c4"
+            className="c5"
           >
             <p
-              className="c5"
+              className="c6"
             >
               Operating system
             </p>
             <div
-              className="c6"
+              className="c7"
             >
               <div
-                className="c10"
+                className="c11"
               >
                 <div
-                  className="c11"
+                  className="c12"
                   id="dropdown"
                   onClick={[Function]}
                 >
                   linux
                   <div
-                    className="c12"
+                    className="c13"
                   />
                 </div>
                 <ul
-                  className="c13"
+                  className="c14"
                 >
                   <li
-                    className="c14"
+                    className="c15"
                     onClick={[Function]}
                   >
                     darwin
                   </li>
                   <li
-                    className="c14"
+                    className="c15"
                     onClick={[Function]}
                   >
                     freebsd
                   </li>
                   <li
-                    className="c14"
+                    className="c15"
                     onClick={[Function]}
                   >
                     openbsd
@@ -1687,40 +1651,40 @@ exports[`addAgentModal selects manual correctly 1`] = `
             </div>
           </div>
           <div
-            className="c4"
+            className="c5"
           >
             <p
-              className="c5"
+              className="c6"
             >
               Architecture
             </p>
             <div
-              className="c6"
+              className="c7"
             >
               <div
-                className="c10"
+                className="c11"
               >
                 <div
-                  className="c11"
+                  className="c12"
                   id="dropdown"
                   onClick={[Function]}
                 >
                   amd64
                   <div
-                    className="c12"
+                    className="c13"
                   />
                 </div>
                 <ul
-                  className="c13"
+                  className="c14"
                 >
                   <li
-                    className="c14"
+                    className="c15"
                     onClick={[Function]}
                   >
                     arm64
                   </li>
                   <li
-                    className="c14"
+                    className="c15"
                     onClick={[Function]}
                   >
                     arm
@@ -1730,10 +1694,10 @@ exports[`addAgentModal selects manual correctly 1`] = `
             </div>
           </div>
           <div
-            className="c15"
+            className="c16"
           >
             <button
-              className="c16"
+              className="c17 c18 c19"
               id="closeButton"
               onClick={[MockFunction]}
               type="button"
@@ -1741,7 +1705,7 @@ exports[`addAgentModal selects manual correctly 1`] = `
               Cancel
             </button>
             <button
-              className="c17 c18"
+              className="c17 c20 c21"
               onClick={null}
             >
               Create agent

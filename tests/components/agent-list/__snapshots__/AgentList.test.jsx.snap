@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`agentList correctly lists multiple agents 1`] = `
+.c9 {
+  cursor: pointer;
+}
+
 .c6 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
@@ -72,8 +76,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
   overflow: hidden;
 }
 
-.c9 {
-  cursor: pointer;
+.c10 {
   color: #F8F8F8;
 }
 
@@ -152,7 +155,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
           </p>
         </div>
         <i
-          className="c9 fas fa-terminal"
+          className="c9 c10 fas fa-terminal"
           onClick={[Function]}
         />
       </div>
@@ -181,7 +184,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
           </p>
         </div>
         <i
-          className="c9 fas fa-terminal"
+          className="c9 c10 fas fa-terminal"
           onClick={[Function]}
         />
       </div>

@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`agent list item doesn't open the terminal if not connected 1`] = `
+.c6 {
+  cursor: inherit;
+}
+
 .c3 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
@@ -72,8 +76,7 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
   overflow: hidden;
 }
 
-.c6 {
-  cursor: inherit;
+.c7 {
   color: #363636;
 }
 
@@ -124,7 +127,7 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
         </p>
       </div>
       <i
-        className="c6 fas fa-terminal"
+        className="c6 c7 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
@@ -133,6 +136,10 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
 `;
 
 exports[`agent list item opens and closes the terminal 1`] = `
+.c6 {
+  cursor: pointer;
+}
+
 .c3 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
@@ -160,32 +167,35 @@ exports[`agent list item opens and closes the terminal 1`] = `
   color: #27AE60;
 }
 
-.c14 {
+.c16 {
   height: 100%;
   width: 100%;
   padding: 20px;
 }
 
-.c15 {
+.c17 {
   height: 100%;
   width: 100%;
 }
 
-.c15 .xterm-viewport {
+.c17 .xterm-viewport {
   overflow: hidden !important;
 }
 
-.c7 {
+.c8 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
+}
+
+.c9 {
   padding: 0px;
   border: 1px solid #32E67E;
   border-style: none none solid none;
 }
 
-.c8 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -197,7 +207,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   align-items: center;
 }
 
-.c11 {
+.c13 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -211,7 +221,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   justify-content: flex-end;
 }
 
-.c12 {
+.c14 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -220,7 +230,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   cursor: pointer;
 }
 
-.c13 {
+.c15 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -229,13 +239,13 @@ exports[`agent list item opens and closes the terminal 1`] = `
   cursor: pointer;
 }
 
-.c9 {
+.c11 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c10 {
+.c12 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -287,8 +297,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   overflow: hidden;
 }
 
-.c6 {
-  cursor: pointer;
+.c7 {
   color: #F8F8F8;
 }
 
@@ -315,7 +324,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
 }
 
 <div>
-  <ThemeProvider
+  <Component
     theme={
       Object {
         "accent": "#4D02EE",
@@ -419,7 +428,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                 onClick={[Function]}
               >
                 <i
-                  className="c6 fas fa-terminal"
+                  className="c6 c7 fas fa-terminal"
                   onClick={[Function]}
                 />
               </Styled(styled.i)>
@@ -517,18 +526,18 @@ exports[`agent list item opens and closes the terminal 1`] = `
                   handle={null}
                   nodeRef={
                     Object {
-                      "current": .c7 {
+                      "current": .c8 {
   height: 100%;
   width: 100%;
   padding: 20px;
 }
 
-.c8 {
+.c9 {
   height: 100%;
   width: 100%;
 }
 
-.c8 .xterm-viewport {
+.c9 .xterm-viewport {
   overflow: hidden !important;
 }
 
@@ -537,12 +546,15 @@ exports[`agent list item opens and closes the terminal 1`] = `
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
+}
+
+.c1 {
   padding: 0px;
   border: 1px solid #32E67E;
   border-style: none none solid none;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -554,7 +566,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c5 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -568,7 +580,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   justify-content: flex-end;
 }
 
-.c5 {
+.c6 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -577,7 +589,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   cursor: pointer;
 }
 
-.c6 {
+.c7 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -586,13 +598,13 @@ exports[`agent list item opens and closes the terminal 1`] = `
   cursor: pointer;
 }
 
-.c2 {
+.c3 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c3 {
+.c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -617,39 +629,39 @@ exports[`agent list item opens and closes the terminal 1`] = `
                         style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
                       >
                         <div
-                          class="c0"
+                          class="c0 c1"
                         >
                           <div
-                            class="c1"
+                            class="c2"
                           >
                             <div
-                              class="c2"
+                              class="c3"
                             />
                             <h4
-                              class="c3"
+                              class="c4"
                             >
                               agentName
                             </h4>
                             <div
-                              class="c4"
+                              class="c5"
                             >
                               <div
-                                class="c5"
+                                class="c6"
                                 color="#32E67E"
                                 id="expand-button"
                               />
                               <div
-                                class="c6"
+                                class="c7"
                                 color="#ED3E2A"
                                 id="close-button"
                               />
                             </div>
                           </div>
                           <div
-                            class="c7"
+                            class="c8"
                           >
                             <div
-                              class="c8"
+                              class="c9"
                               data-testid="terminal"
                             >
                               <div
@@ -772,39 +784,39 @@ exports[`agent list item opens and closes the terminal 1`] = `
                           style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
                         >
                           <div
-                            class="c7"
+                            class="c8 c9"
                           >
                             <div
-                              class="c8"
+                              class="c10"
                             >
                               <div
-                                class="c9"
+                                class="c11"
                               />
                               <h4
-                                class="c10"
+                                class="c12"
                               >
                                 agentName
                               </h4>
                               <div
-                                class="c11"
+                                class="c13"
                               >
                                 <div
-                                  class="c12"
+                                  class="c14"
                                   color="#32E67E"
                                   id="expand-button"
                                 />
                                 <div
-                                  class="c13"
+                                  class="c15"
                                   color="#ED3E2A"
                                   id="close-button"
                                 />
                               </div>
                             </div>
                             <div
-                              class="c14"
+                              class="c16"
                             >
                               <div
-                                class="c15"
+                                class="c17"
                                 data-testid="terminal"
                               >
                                 <div
@@ -1000,27 +1012,27 @@ exports[`agent list item opens and closes the terminal 1`] = `
                           statusColor="#32E67E"
                         >
                           <div
-                            className="c7"
+                            className="c8 c9"
                           >
                             <styled.div>
                               <div
-                                className="c8"
+                                className="c10"
                               >
                                 <styled.div>
                                   <div
-                                    className="c9"
+                                    className="c11"
                                   />
                                 </styled.div>
                                 <styled.h4>
                                   <h4
-                                    className="c10"
+                                    className="c12"
                                   >
                                     agentName
                                   </h4>
                                 </styled.h4>
                                 <styled.div>
                                   <div
-                                    className="c11"
+                                    className="c13"
                                   >
                                     <styled.div
                                       color="#32E67E"
@@ -1028,7 +1040,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                                       onClick={[Function]}
                                     >
                                       <div
-                                        className="c12"
+                                        className="c14"
                                         color="#32E67E"
                                         id="expand-button"
                                         onClick={[Function]}
@@ -1040,7 +1052,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                                       onClick={[Function]}
                                     >
                                       <div
-                                        className="c13"
+                                        className="c15"
                                         color="#ED3E2A"
                                         id="close-button"
                                         onClick={[Function]}
@@ -1091,13 +1103,13 @@ exports[`agent list item opens and closes the terminal 1`] = `
                               >
                                 <styled.div>
                                   <div
-                                    className="c14"
+                                    className="c16"
                                   >
                                     <styled.div
                                       data-testid="terminal"
                                     >
                                       <div
-                                        className="c15"
+                                        className="c17"
                                         data-testid="terminal"
                                       />
                                     </styled.div>
@@ -1295,11 +1307,15 @@ exports[`agent list item opens and closes the terminal 1`] = `
         </li>
       </styled.li>
     </AgentListItem>
-  </ThemeProvider>
+  </Component>
 </div>
 `;
 
 exports[`agent list item opens and closes the terminal 2`] = `
+.c6 {
+  cursor: pointer;
+}
+
 .c3 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
@@ -1371,8 +1387,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
   overflow: hidden;
 }
 
-.c6 {
-  cursor: pointer;
+.c7 {
   color: #F8F8F8;
 }
 
@@ -1399,7 +1414,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
 }
 
 <div>
-  <ThemeProvider
+  <Component
     theme={
       Object {
         "accent": "#4D02EE",
@@ -1503,7 +1518,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
                 onClick={[Function]}
               >
                 <i
-                  className="c6 fas fa-terminal"
+                  className="c6 c7 fas fa-terminal"
                   onClick={[Function]}
                 />
               </Styled(styled.i)>
@@ -1512,11 +1527,15 @@ exports[`agent list item opens and closes the terminal 2`] = `
         </li>
       </styled.li>
     </AgentListItem>
-  </ThemeProvider>
+  </Component>
 </div>
 `;
 
 exports[`agent list item renders connected correctly 1`] = `
+.c6 {
+  cursor: pointer;
+}
+
 .c3 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
@@ -1588,8 +1607,7 @@ exports[`agent list item renders connected correctly 1`] = `
   overflow: hidden;
 }
 
-.c6 {
-  cursor: pointer;
+.c7 {
   color: #F8F8F8;
 }
 
@@ -1640,7 +1658,7 @@ exports[`agent list item renders connected correctly 1`] = `
         </p>
       </div>
       <i
-        className="c6 fas fa-terminal"
+        className="c6 c7 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
@@ -1649,6 +1667,10 @@ exports[`agent list item renders connected correctly 1`] = `
 `;
 
 exports[`agent list item renders disconnected correctly 1`] = `
+.c6 {
+  cursor: inherit;
+}
+
 .c3 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
@@ -1720,8 +1742,7 @@ exports[`agent list item renders disconnected correctly 1`] = `
   overflow: hidden;
 }
 
-.c6 {
-  cursor: inherit;
+.c7 {
   color: #363636;
 }
 
@@ -1772,7 +1793,7 @@ exports[`agent list item renders disconnected correctly 1`] = `
         </p>
       </div>
       <i
-        className="c6 fas fa-terminal"
+        className="c6 c7 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
