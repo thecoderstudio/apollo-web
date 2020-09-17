@@ -57,11 +57,12 @@ const MenuToggleIcon = styled.i`
   grid-column: toggle;
   display: none;
   position: relative;
-  /* Need to set to match size given by font awesome, so rotation is around center.  */
-  width: 15px;
-  transform: ${props => props.collapsed ? 'rotate(0deg)' : 'rotate(180deg)'};
-  transition-property: transform;
-  transition: all .5s ease-in-out;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  transform: ${props => props.collapsed ? 'rotate(0deg)' : 'rotate(90deg)'};
+  transition: transform .5s ease-out;
 
   ${
     media.phone`
@@ -167,7 +168,7 @@ class NavBar extends React.PureComponent {
     return (
       <NavigationBar collapsed={this.state.collapsed}>
         <Logo>Apollo</Logo>
-        <MenuToggleIcon collapsed={this.state.collapsed} onClick={this.toggleCollapsed} className='fas fa-caret-down fa-lg'/>
+        <MenuToggleIcon collapsed={this.state.collapsed} onClick={this.toggleCollapsed} className={this.state.collapsed ? 'fa fa-bars fa-lg' : 'fas fa-times fa-lg'}/>
         <NavBarContent collapsed={this.state.collapsed}>
           <Menu>
             <StyledIcon className='fas fa-home' /><StyledLink to='/'>Dashboard</StyledLink>
