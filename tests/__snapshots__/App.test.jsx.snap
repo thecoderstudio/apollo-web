@@ -94,7 +94,7 @@ exports[`app renders correctly authenticated 1`] = `
 
 .c1 {
   height: 100%;
-  display: rid;
+  display: grid;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -514,7 +514,7 @@ exports[`app renders correctly unauthenticated 1`] = `
 
 .c1 {
   height: 100%;
-  display: rid;
+  display: grid;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
