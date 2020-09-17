@@ -57,13 +57,13 @@ const DropDownItem = styled.li`
 
 const DropDownIcon = styled.div`
   border-color: white transparent;
-	border-style: solid;
-	float: right;
-	margin-top: 5px;
-	border-width: 7px 7px 0px 7px;
-	height: 0px;
-	width: 0px;
-	margin-left: 10px;
+  border-style: solid;
+  float: right;
+  margin-top: 5px;
+  border-width: 7px 7px 0px 7px;
+  height: 0px;
+  width: 0px;
+  margin-left: 10px;
   transform: ${props => props.collapsed ? 'rotate(0)' : 'rotate(180deg)'};
   transition: transform 0.3s;
 `;
