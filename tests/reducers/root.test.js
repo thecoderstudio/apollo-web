@@ -8,6 +8,6 @@ test("root reducer should contain all reducers", () => {
     authenticated: false,
     currentUser: {},
     notifications: new ImmutableMap({}),
-    theme: darkTheme,
+    theme: darkTheme
   });
 });

@@ -18,7 +18,7 @@ import ChangePassword from '../components/user/ChangePassword';
 
 const OuterContainer = styled.div`
   height: 100%;
-  display: rid;
+  display: grid;
   align-items: center;
 `;
 
