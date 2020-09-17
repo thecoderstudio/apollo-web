@@ -1,40 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`nav bar handles successful logout 1`] = `
-.c3 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.c3:hover {
-  opacity: 0.90;
-}
-
-.c3:focus {
-  outline: none;
-}
-
-.c3:active {
-  opacity: 0.80;
-}
-
-.c3:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c4 {
-  background-color: transparent;
-  border: 1px solid;
-}
-
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -59,11 +25,39 @@ exports[`nav bar handles successful logout 1`] = `
   margin-right: 16px;
 }
 
-.c5 {
+.c3 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
   grid-column: logout;
   float: right;
   width: 100px;
   height: 75%;
+}
+
+.c3:hover {
+  opacity: 0.90;
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:active {
+  opacity: 0.80;
+}
+
+.c3:disabled:hover {
+  opacity: 1;
+  cursor: auto;
 }
 
 <div
@@ -82,7 +76,7 @@ exports[`nav bar handles successful logout 1`] = `
     </a>
   </div>
   <button
-    className="c3 c4 c5"
+    className="c3"
     onClick={[Function]}
   >
     Log out
@@ -91,40 +85,6 @@ exports[`nav bar handles successful logout 1`] = `
 `;
 
 exports[`nav bar render admin link for admins 1`] = `
-.c3 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.c3:hover {
-  opacity: 0.90;
-}
-
-.c3:focus {
-  outline: none;
-}
-
-.c3:active {
-  opacity: 0.80;
-}
-
-.c3:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c4 {
-  background-color: transparent;
-  border: 1px solid;
-}
-
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -149,11 +109,39 @@ exports[`nav bar render admin link for admins 1`] = `
   margin-right: 16px;
 }
 
-.c5 {
+.c3 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
   grid-column: logout;
   float: right;
   width: 100px;
   height: 75%;
+}
+
+.c3:hover {
+  opacity: 0.90;
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:active {
+  opacity: 0.80;
+}
+
+.c3:disabled:hover {
+  opacity: 1;
+  cursor: auto;
 }
 
 <div
@@ -179,7 +167,7 @@ exports[`nav bar render admin link for admins 1`] = `
     </a>
   </div>
   <button
-    className="c3 c4 c5"
+    className="c3"
     onClick={[Function]}
   >
     Log out
@@ -188,40 +176,6 @@ exports[`nav bar render admin link for admins 1`] = `
 `;
 
 exports[`nav bar renders correctly 1`] = `
-.c3 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.c3:hover {
-  opacity: 0.90;
-}
-
-.c3:focus {
-  outline: none;
-}
-
-.c3:active {
-  opacity: 0.80;
-}
-
-.c3:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c4 {
-  background-color: transparent;
-  border: 1px solid;
-}
-
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -246,11 +200,39 @@ exports[`nav bar renders correctly 1`] = `
   margin-right: 16px;
 }
 
-.c5 {
+.c3 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
   grid-column: logout;
   float: right;
   width: 100px;
   height: 75%;
+}
+
+.c3:hover {
+  opacity: 0.90;
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:active {
+  opacity: 0.80;
+}
+
+.c3:disabled:hover {
+  opacity: 1;
+  cursor: auto;
 }
 
 <div
@@ -269,7 +251,7 @@ exports[`nav bar renders correctly 1`] = `
     </a>
   </div>
   <button
-    className="c3 c4 c5"
+    className="c3"
     onClick={[Function]}
   >
     Log out

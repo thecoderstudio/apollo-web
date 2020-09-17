@@ -30,16 +30,42 @@ exports[`create user renders correctly 1`] = `
   cursor: auto;
 }
 
-.c10 {
+.c8 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
   background-color: transparent;
   border: 1px solid;
 }
 
-.c6 {
+.c8:hover {
+  opacity: 0.90;
+}
+
+.c8:focus {
+  outline: none;
+}
+
+.c8:active {
+  opacity: 0.80;
+}
+
+.c8:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c5 {
   height: 80px;
 }
 
-.c7 {
+.c6 {
   min-height: 50px;
   width: 100%;
   border: none;
@@ -51,14 +77,8 @@ exports[`create user renders correctly 1`] = `
   border: 1px solid transparent;
 }
 
-.c7:focus {
+.c6:focus {
   outline: none border:1px solid;
-}
-
-.c1 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
 }
 
 .c0 {
@@ -70,7 +90,10 @@ exports[`create user renders correctly 1`] = `
   height: 100%;
 }
 
-.c2 {
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
   position: absolute;
   left: 0;
   right: 0;
@@ -97,7 +120,7 @@ exports[`create user renders correctly 1`] = `
   box-sizing: border-box;
 }
 
-.c3 {
+.c2 {
   height: 100%;
   max-height: 450px;
   display: grid;
@@ -108,12 +131,12 @@ exports[`create user renders correctly 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c3 {
   grid-row: title;
   text-align: center;
 }
 
-.c5 {
+.c4 {
   height: 95%;
   grid-row: form;
   display: grid;
@@ -121,7 +144,7 @@ exports[`create user renders correctly 1`] = `
   grid-row-gap: 40px;
 }
 
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -132,19 +155,19 @@ exports[`create user renders correctly 1`] = `
   justify-content: space-around;
 }
 
-.c8> button {
+.c7> button {
   min-width: 150px;
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c1 {
     padding: 16px;
     height: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c8 {
+  .c7 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -160,25 +183,25 @@ exports[`create user renders correctly 1`] = `
   onClick={[Function]}
 >
   <div
-    className="c1 c2"
+    className="c1"
   >
     <div
-      className="c3"
+      className="c2"
     >
       <h2
-        className="c4"
+        className="c3"
       >
         Create new user
       </h2>
       <form
-        className="c5"
+        className="c4"
         onSubmit={[Function]}
       >
         <div
-          className="c6"
+          className="c5"
         >
           <input
-            className="c7"
+            className="c6"
             name="username"
             onChange={[Function]}
             placeholder="Username"
@@ -187,10 +210,10 @@ exports[`create user renders correctly 1`] = `
           />
         </div>
         <div
-          className="c6"
+          className="c5"
         >
           <input
-            className="c7"
+            className="c6"
             name="password"
             onChange={[Function]}
             placeholder="Password"
@@ -199,10 +222,10 @@ exports[`create user renders correctly 1`] = `
           />
         </div>
         <div
-          className="c6"
+          className="c5"
         >
           <input
-            className="c7"
+            className="c6"
             name="confirmPassword"
             onChange={[Function]}
             placeholder="Confirm password"
@@ -211,10 +234,10 @@ exports[`create user renders correctly 1`] = `
           />
         </div>
         <div
-          className="c8"
+          className="c7"
         >
           <button
-            className="c9 c10"
+            className="c8"
             onClick={[Function]}
           >
             Cancel
