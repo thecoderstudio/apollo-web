@@ -1,36 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`navbar handles add agent modal 1`] = `
-.c5 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.c5:hover {
-  opacity: 0.90;
-}
-
-.c5:focus {
-  outline: none;
-}
-
-.c5:active {
-  opacity: 0.80;
-}
-
 .c7 {
-  background-color: transparent;
-  border: 1px solid;
-}
-
-.c9 {
   display: inline;
   position: fixed;
   top: 0;
@@ -40,33 +11,53 @@ exports[`navbar handles add agent modal 1`] = `
   z-index: 1;
 }
 
-.c16 {
+.c13 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
   display: grid;
   grid-template-rows: [title] 50px [description] 1fr;
   padding: 20px;
   min-height: 180px;
 }
 
-.c18 {
+.c13:hover {
+  opacity: 0.90;
+}
+
+.c13:focus {
+  outline: none;
+}
+
+.c13:active {
+  opacity: 0.80;
+}
+
+.c15 {
   grid-row: title;
   width: 80%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c19 {
+.c16 {
   grid-row: description;
   padding: 10px;
   font-size: 0.85rem;
 }
 
-.c10 {
+.c8 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
-}
-
-.c11 {
   display: grid;
   grid-template-rows: [title] 50px [content] 1fr;
   position: fixed;
@@ -80,35 +71,35 @@ exports[`navbar handles add agent modal 1`] = `
   height: auto;
 }
 
-.c12 {
+.c9 {
   grid-row: title;
   width: 75%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c13 {
+.c10 {
   grid-row: content;
   padding: 20px;
 }
 
-.c14 {
+.c11 {
   display: grid;
   grid-template-columns: [column-one] 50% [column-two] 50%;
   margin: 20px 0px 20px 0px;
 }
 
-.c15 {
+.c12 {
   grid-column: column-one;
   margin-right: 10px;
 }
 
-.c20 {
+.c17 {
   grid-column: column-two;
   margin-left: 10px;
 }
 
-.c17 {
+.c14 {
   width: 100%;
 }
 
@@ -144,28 +135,72 @@ exports[`navbar handles add agent modal 1`] = `
   grid-column: logo;
 }
 
-.c8 {
+.c6 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
   grid-column: logout;
   float: right;
   width: 100px;
 }
 
-.c6 {
+.c6:hover {
+  opacity: 0.90;
+}
+
+.c6:focus {
+  outline: none;
+}
+
+.c6:active {
+  opacity: 0.80;
+}
+
+.c5 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
   grid-column: new-agent;
   margin-left: 25px;
   margin-right: 25px;
   max-width: 250px;
 }
 
+.c5:hover {
+  opacity: 0.90;
+}
+
+.c5:focus {
+  outline: none;
+}
+
+.c5:active {
+  opacity: 0.80;
+}
+
 @media (max-width:47.9375em) {
-  .c14 {
+  .c11 {
     grid-template-columns: [column-one] 100%;
     grid-template-rows: [row-one] 1fr [row-two] 1fr;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c15 {
+  .c12 {
     grid-row: row-one;
     margin-right: 0px;
     margin: 15px;
@@ -173,7 +208,7 @@ exports[`navbar handles add agent modal 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c20 {
+  .c17 {
     grid-column: column-one;
     grid-row: row-two;
     margin-left: 0px;
@@ -201,70 +236,70 @@ exports[`navbar handles add agent modal 1`] = `
     </a>
   </div>
   <button
-    className="c5 c6"
+    className="c5"
     id="newAgentButton"
     onClick={[Function]}
   >
     Add new agent
   </button>
   <button
-    className="c5 c7 c8"
+    className="c6"
     id="logoutButton"
     onClick={[Function]}
   >
     Logout
   </button>
   <div
-    className="c9"
+    className="c7"
     onClick={[Function]}
   >
     <div
-      className="c10 c11"
+      className="c8"
     >
       <h2
-        className="c12"
+        className="c9"
       >
         Add new agent
       </h2>
       <div
-        className="c13"
+        className="c10"
       >
         <div
-          className="c14"
+          className="c11"
         >
           <div
-            className="c15"
+            className="c12"
           >
             <button
-              className="c5 c7 c16 c17"
+              className="c13 c14"
               onClick={[Function]}
             >
               <h3
-                className="c18"
+                className="c15"
               >
                 Directly on target machine.
               </h3>
               <p
-                className="c19"
+                className="c16"
               >
                 You have the correct permissions to download the binary directly on the target machine.
               </p>
             </button>
           </div>
           <div
-            className="c20"
+            className="c17"
           >
             <button
-              className="c5 c7 c16 c17"
+              className="c13 c14"
               onClick={[Function]}
             >
               <h3
-                className="c18"
+                className="c15"
               >
                 Manual upload
               </h3>
               <p
-                className="c19"
+                className="c16"
               >
                 You download and upload the binary yourself.
               </p>
@@ -278,35 +313,6 @@ exports[`navbar handles add agent modal 1`] = `
 `;
 
 exports[`navbar handles add agent modal 2`] = `
-.c5 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.c5:hover {
-  opacity: 0.90;
-}
-
-.c5:focus {
-  outline: none;
-}
-
-.c5:active {
-  opacity: 0.80;
-}
-
-.c7 {
-  background-color: transparent;
-  border: 1px solid;
-}
-
 .c3 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -339,17 +345,61 @@ exports[`navbar handles add agent modal 2`] = `
   grid-column: logo;
 }
 
-.c8 {
+.c6 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
   grid-column: logout;
   float: right;
   width: 100px;
 }
 
-.c6 {
+.c6:hover {
+  opacity: 0.90;
+}
+
+.c6:focus {
+  outline: none;
+}
+
+.c6:active {
+  opacity: 0.80;
+}
+
+.c5 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
   grid-column: new-agent;
   margin-left: 25px;
   margin-right: 25px;
   max-width: 250px;
+}
+
+.c5:hover {
+  opacity: 0.90;
+}
+
+.c5:focus {
+  outline: none;
+}
+
+.c5:active {
+  opacity: 0.80;
 }
 
 @media (max-width:47.9375em) {
@@ -384,14 +434,14 @@ exports[`navbar handles add agent modal 2`] = `
     </a>
   </div>
   <button
-    className="c5 c6"
+    className="c5"
     id="newAgentButton"
     onClick={[Function]}
   >
     Add new agent
   </button>
   <button
-    className="c5 c7 c8"
+    className="c6"
     id="logoutButton"
     onClick={[Function]}
   >
@@ -401,35 +451,6 @@ exports[`navbar handles add agent modal 2`] = `
 `;
 
 exports[`navbar handles successful logout 1`] = `
-.c5 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.c5:hover {
-  opacity: 0.90;
-}
-
-.c5:focus {
-  outline: none;
-}
-
-.c5:active {
-  opacity: 0.80;
-}
-
-.c7 {
-  background-color: transparent;
-  border: 1px solid;
-}
-
 .c3 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -462,17 +483,61 @@ exports[`navbar handles successful logout 1`] = `
   grid-column: logo;
 }
 
-.c8 {
+.c6 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
   grid-column: logout;
   float: right;
   width: 100px;
 }
 
-.c6 {
+.c6:hover {
+  opacity: 0.90;
+}
+
+.c6:focus {
+  outline: none;
+}
+
+.c6:active {
+  opacity: 0.80;
+}
+
+.c5 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
   grid-column: new-agent;
   margin-left: 25px;
   margin-right: 25px;
   max-width: 250px;
+}
+
+.c5:hover {
+  opacity: 0.90;
+}
+
+.c5:focus {
+  outline: none;
+}
+
+.c5:active {
+  opacity: 0.80;
 }
 
 <div
@@ -495,14 +560,14 @@ exports[`navbar handles successful logout 1`] = `
     </a>
   </div>
   <button
-    className="c5 c6"
+    className="c5"
     id="newAgentButton"
     onClick={[Function]}
   >
     Add new agent
   </button>
   <button
-    className="c5 c7 c8"
+    className="c6"
     id="logoutButton"
     onClick={[Function]}
   >
@@ -512,35 +577,6 @@ exports[`navbar handles successful logout 1`] = `
 `;
 
 exports[`navbar render admin link for admins 1`] = `
-.c5 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.c5:hover {
-  opacity: 0.90;
-}
-
-.c5:focus {
-  outline: none;
-}
-
-.c5:active {
-  opacity: 0.80;
-}
-
-.c7 {
-  background-color: transparent;
-  border: 1px solid;
-}
-
 .c3 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -573,17 +609,61 @@ exports[`navbar render admin link for admins 1`] = `
   grid-column: logo;
 }
 
-.c8 {
+.c6 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
   grid-column: logout;
   float: right;
   width: 100px;
 }
 
-.c6 {
+.c6:hover {
+  opacity: 0.90;
+}
+
+.c6:focus {
+  outline: none;
+}
+
+.c6:active {
+  opacity: 0.80;
+}
+
+.c5 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
   grid-column: new-agent;
   margin-left: 25px;
   margin-right: 25px;
   max-width: 250px;
+}
+
+.c5:hover {
+  opacity: 0.90;
+}
+
+.c5:focus {
+  outline: none;
+}
+
+.c5:active {
+  opacity: 0.80;
 }
 
 <div
@@ -606,14 +686,14 @@ exports[`navbar render admin link for admins 1`] = `
     </a>
   </div>
   <button
-    className="c5 c6"
+    className="c5"
     id="newAgentButton"
     onClick={[Function]}
   >
     Add new agent
   </button>
   <button
-    className="c5 c7 c8"
+    className="c6"
     id="logoutButton"
     onClick={[Function]}
   >
@@ -623,35 +703,6 @@ exports[`navbar render admin link for admins 1`] = `
 `;
 
 exports[`navbar renders correctly 1`] = `
-.c5 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.c5:hover {
-  opacity: 0.90;
-}
-
-.c5:focus {
-  outline: none;
-}
-
-.c5:active {
-  opacity: 0.80;
-}
-
-.c7 {
-  background-color: transparent;
-  border: 1px solid;
-}
-
 .c3 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -684,17 +735,61 @@ exports[`navbar renders correctly 1`] = `
   grid-column: logo;
 }
 
-.c8 {
+.c6 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
   grid-column: logout;
   float: right;
   width: 100px;
 }
 
-.c6 {
+.c6:hover {
+  opacity: 0.90;
+}
+
+.c6:focus {
+  outline: none;
+}
+
+.c6:active {
+  opacity: 0.80;
+}
+
+.c5 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
   grid-column: new-agent;
   margin-left: 25px;
   margin-right: 25px;
   max-width: 250px;
+}
+
+.c5:hover {
+  opacity: 0.90;
+}
+
+.c5:focus {
+  outline: none;
+}
+
+.c5:active {
+  opacity: 0.80;
 }
 
 <div
@@ -717,14 +812,14 @@ exports[`navbar renders correctly 1`] = `
     </a>
   </div>
   <button
-    className="c5 c6"
+    className="c5"
     id="newAgentButton"
     onClick={[Function]}
   >
     Add new agent
   </button>
   <button
-    className="c5 c7 c8"
+    className="c6"
     id="logoutButton"
     onClick={[Function]}
   >

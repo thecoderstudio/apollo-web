@@ -1,35 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`agent list item correctly renders connected 1`] = `
-.c0 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
-  background-color: #1B1B1B;
-}
-
-.c8 {
+.c7 {
   height: 100%;
   width: 100%;
   padding: 20px;
 }
 
-.c9 {
+.c8 {
   height: 100%;
   width: 100%;
 }
 
-.c9 .xterm-viewport {
+.c8 .xterm-viewport {
   overflow: hidden !important;
 }
 
-.c1 {
+.c0 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
   padding: 0px;
   border: 1px solid #32E67E;
   border-style: none none solid none;
 }
 
-.c2 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -41,7 +38,7 @@ exports[`agent list item correctly renders connected 1`] = `
   align-items: center;
 }
 
-.c5 {
+.c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -55,7 +52,7 @@ exports[`agent list item correctly renders connected 1`] = `
   justify-content: flex-end;
 }
 
-.c6 {
+.c5 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -64,7 +61,7 @@ exports[`agent list item correctly renders connected 1`] = `
   cursor: pointer;
 }
 
-.c7 {
+.c6 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -73,13 +70,13 @@ exports[`agent list item correctly renders connected 1`] = `
   cursor: pointer;
 }
 
-.c3 {
+.c2 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c4 {
+.c3 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -88,7 +85,7 @@ exports[`agent list item correctly renders connected 1`] = `
 }
 
 <div>
-  <Component
+  <ThemeProvider
     theme={
       Object {
         "accent": "#4D02EE",
@@ -203,35 +200,32 @@ exports[`agent list item correctly renders connected 1`] = `
             handle={null}
             nodeRef={
               Object {
-                "current": .c0 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
-  background-color: #1B1B1B;
-}
-
-.c8 {
+                "current": .c7 {
   height: 100%;
   width: 100%;
   padding: 20px;
 }
 
-.c9 {
+.c8 {
   height: 100%;
   width: 100%;
 }
 
-.c9 .xterm-viewport {
+.c8 .xterm-viewport {
   overflow: hidden !important;
 }
 
-.c1 {
+.c0 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
   padding: 0px;
   border: 1px solid #32E67E;
   border-style: none none solid none;
 }
 
-.c2 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -243,7 +237,7 @@ exports[`agent list item correctly renders connected 1`] = `
   align-items: center;
 }
 
-.c5 {
+.c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -257,7 +251,7 @@ exports[`agent list item correctly renders connected 1`] = `
   justify-content: flex-end;
 }
 
-.c6 {
+.c5 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -266,7 +260,7 @@ exports[`agent list item correctly renders connected 1`] = `
   cursor: pointer;
 }
 
-.c7 {
+.c6 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -275,13 +269,13 @@ exports[`agent list item correctly renders connected 1`] = `
   cursor: pointer;
 }
 
-.c3 {
+.c2 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c4 {
+.c3 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -294,39 +288,39 @@ exports[`agent list item correctly renders connected 1`] = `
                   style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
                 >
                   <div
-                    class="c0 c1"
+                    class="c0"
                   >
                     <div
-                      class="c2"
+                      class="c1"
                     >
                       <div
-                        class="c3"
+                        class="c2"
                       />
                       <h4
-                        class="c4"
+                        class="c3"
                       >
                         agentName
                       </h4>
                       <div
-                        class="c5"
+                        class="c4"
                       >
                         <div
-                          class="c6"
+                          class="c5"
                           color="#32E67E"
                           id="expand-button"
                         />
                         <div
-                          class="c7"
+                          class="c6"
                           color="#ED3E2A"
                           id="close-button"
                         />
                       </div>
                     </div>
                     <div
-                      class="c8"
+                      class="c7"
                     >
                       <div
-                        class="c9"
+                        class="c8"
                         data-testid="terminal"
                       >
                         <div
@@ -449,39 +443,39 @@ exports[`agent list item correctly renders connected 1`] = `
                     style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
                   >
                     <div
-                      class="c0 c1"
+                      class="c0"
                     >
                       <div
-                        class="c2"
+                        class="c1"
                       >
                         <div
-                          class="c3"
+                          class="c2"
                         />
                         <h4
-                          class="c4"
+                          class="c3"
                         >
                           agentName
                         </h4>
                         <div
-                          class="c5"
+                          class="c4"
                         >
                           <div
-                            class="c6"
+                            class="c5"
                             color="#32E67E"
                             id="expand-button"
                           />
                           <div
-                            class="c7"
+                            class="c6"
                             color="#ED3E2A"
                             id="close-button"
                           />
                         </div>
                       </div>
                       <div
-                        class="c8"
+                        class="c7"
                       >
                         <div
-                          class="c9"
+                          class="c8"
                           data-testid="terminal"
                         >
                           <div
@@ -677,27 +671,27 @@ exports[`agent list item correctly renders connected 1`] = `
                     statusColor="#32E67E"
                   >
                     <div
-                      className="c0 c1"
+                      className="c0"
                     >
                       <styled.div>
                         <div
-                          className="c2"
+                          className="c1"
                         >
                           <styled.div>
                             <div
-                              className="c3"
+                              className="c2"
                             />
                           </styled.div>
                           <styled.h4>
                             <h4
-                              className="c4"
+                              className="c3"
                             >
                               agentName
                             </h4>
                           </styled.h4>
                           <styled.div>
                             <div
-                              className="c5"
+                              className="c4"
                             >
                               <styled.div
                                 color="#32E67E"
@@ -705,7 +699,7 @@ exports[`agent list item correctly renders connected 1`] = `
                                 onClick={[Function]}
                               >
                                 <div
-                                  className="c6"
+                                  className="c5"
                                   color="#32E67E"
                                   id="expand-button"
                                   onClick={[Function]}
@@ -717,7 +711,7 @@ exports[`agent list item correctly renders connected 1`] = `
                                 onClick={[Function]}
                               >
                                 <div
-                                  className="c7"
+                                  className="c6"
                                   color="#ED3E2A"
                                   id="close-button"
                                   onClick={[Function]}
@@ -768,13 +762,13 @@ exports[`agent list item correctly renders connected 1`] = `
                         >
                           <styled.div>
                             <div
-                              className="c8"
+                              className="c7"
                             >
                               <styled.div
                                 data-testid="terminal"
                               >
                                 <div
-                                  className="c9"
+                                  className="c8"
                                   data-testid="terminal"
                                 />
                               </styled.div>
@@ -969,40 +963,37 @@ exports[`agent list item correctly renders connected 1`] = `
         </Rnd>
       </TerminalWindow>
     </WithTheme(TerminalWindow)>
-  </Component>
+  </ThemeProvider>
 </div>
 `;
 
 exports[`agent list item correctly renders disconnected 1`] = `
-.c0 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
-  background-color: #1B1B1B;
-}
-
-.c8 {
+.c7 {
   height: 100%;
   width: 100%;
   padding: 20px;
 }
 
-.c9 {
+.c8 {
   height: 100%;
   width: 100%;
 }
 
-.c9 .xterm-viewport {
+.c8 .xterm-viewport {
   overflow: hidden !important;
 }
 
-.c1 {
+.c0 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
   padding: 0px;
   border: 1px solid #ED3E2A;
   border-style: none none solid none;
 }
 
-.c2 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1014,7 +1005,7 @@ exports[`agent list item correctly renders disconnected 1`] = `
   align-items: center;
 }
 
-.c5 {
+.c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1028,7 +1019,7 @@ exports[`agent list item correctly renders disconnected 1`] = `
   justify-content: flex-end;
 }
 
-.c6 {
+.c5 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -1037,7 +1028,7 @@ exports[`agent list item correctly renders disconnected 1`] = `
   cursor: pointer;
 }
 
-.c7 {
+.c6 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -1046,13 +1037,13 @@ exports[`agent list item correctly renders disconnected 1`] = `
   cursor: pointer;
 }
 
-.c3 {
+.c2 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c4 {
+.c3 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1061,7 +1052,7 @@ exports[`agent list item correctly renders disconnected 1`] = `
 }
 
 <div>
-  <Component
+  <ThemeProvider
     theme={
       Object {
         "accent": "#4D02EE",
@@ -1176,35 +1167,32 @@ exports[`agent list item correctly renders disconnected 1`] = `
             handle={null}
             nodeRef={
               Object {
-                "current": .c0 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
-  background-color: #1B1B1B;
-}
-
-.c8 {
+                "current": .c7 {
   height: 100%;
   width: 100%;
   padding: 20px;
 }
 
-.c9 {
+.c8 {
   height: 100%;
   width: 100%;
 }
 
-.c9 .xterm-viewport {
+.c8 .xterm-viewport {
   overflow: hidden !important;
 }
 
-.c1 {
+.c0 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
   padding: 0px;
   border: 1px solid #ED3E2A;
   border-style: none none solid none;
 }
 
-.c2 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1216,7 +1204,7 @@ exports[`agent list item correctly renders disconnected 1`] = `
   align-items: center;
 }
 
-.c5 {
+.c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1230,7 +1218,7 @@ exports[`agent list item correctly renders disconnected 1`] = `
   justify-content: flex-end;
 }
 
-.c6 {
+.c5 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -1239,7 +1227,7 @@ exports[`agent list item correctly renders disconnected 1`] = `
   cursor: pointer;
 }
 
-.c7 {
+.c6 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -1248,13 +1236,13 @@ exports[`agent list item correctly renders disconnected 1`] = `
   cursor: pointer;
 }
 
-.c3 {
+.c2 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c4 {
+.c3 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1267,39 +1255,39 @@ exports[`agent list item correctly renders disconnected 1`] = `
                   style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
                 >
                   <div
-                    class="c0 c1"
+                    class="c0"
                   >
                     <div
-                      class="c2"
+                      class="c1"
                     >
                       <div
-                        class="c3"
+                        class="c2"
                       />
                       <h4
-                        class="c4"
+                        class="c3"
                       >
                         agentName
                       </h4>
                       <div
-                        class="c5"
+                        class="c4"
                       >
                         <div
-                          class="c6"
+                          class="c5"
                           color="#32E67E"
                           id="expand-button"
                         />
                         <div
-                          class="c7"
+                          class="c6"
                           color="#ED3E2A"
                           id="close-button"
                         />
                       </div>
                     </div>
                     <div
-                      class="c8"
+                      class="c7"
                     >
                       <div
-                        class="c9"
+                        class="c8"
                         data-testid="terminal"
                       >
                         <div
@@ -1422,39 +1410,39 @@ exports[`agent list item correctly renders disconnected 1`] = `
                     style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
                   >
                     <div
-                      class="c0 c1"
+                      class="c0"
                     >
                       <div
-                        class="c2"
+                        class="c1"
                       >
                         <div
-                          class="c3"
+                          class="c2"
                         />
                         <h4
-                          class="c4"
+                          class="c3"
                         >
                           agentName
                         </h4>
                         <div
-                          class="c5"
+                          class="c4"
                         >
                           <div
-                            class="c6"
+                            class="c5"
                             color="#32E67E"
                             id="expand-button"
                           />
                           <div
-                            class="c7"
+                            class="c6"
                             color="#ED3E2A"
                             id="close-button"
                           />
                         </div>
                       </div>
                       <div
-                        class="c8"
+                        class="c7"
                       >
                         <div
-                          class="c9"
+                          class="c8"
                           data-testid="terminal"
                         >
                           <div
@@ -1650,27 +1638,27 @@ exports[`agent list item correctly renders disconnected 1`] = `
                     statusColor="#ED3E2A"
                   >
                     <div
-                      className="c0 c1"
+                      className="c0"
                     >
                       <styled.div>
                         <div
-                          className="c2"
+                          className="c1"
                         >
                           <styled.div>
                             <div
-                              className="c3"
+                              className="c2"
                             />
                           </styled.div>
                           <styled.h4>
                             <h4
-                              className="c4"
+                              className="c3"
                             >
                               agentName
                             </h4>
                           </styled.h4>
                           <styled.div>
                             <div
-                              className="c5"
+                              className="c4"
                             >
                               <styled.div
                                 color="#32E67E"
@@ -1678,7 +1666,7 @@ exports[`agent list item correctly renders disconnected 1`] = `
                                 onClick={[Function]}
                               >
                                 <div
-                                  className="c6"
+                                  className="c5"
                                   color="#32E67E"
                                   id="expand-button"
                                   onClick={[Function]}
@@ -1690,7 +1678,7 @@ exports[`agent list item correctly renders disconnected 1`] = `
                                 onClick={[Function]}
                               >
                                 <div
-                                  className="c7"
+                                  className="c6"
                                   color="#ED3E2A"
                                   id="close-button"
                                   onClick={[Function]}
@@ -1741,13 +1729,13 @@ exports[`agent list item correctly renders disconnected 1`] = `
                         >
                           <styled.div>
                             <div
-                              className="c8"
+                              className="c7"
                             >
                               <styled.div
                                 data-testid="terminal"
                               >
                                 <div
-                                  className="c9"
+                                  className="c8"
                                   data-testid="terminal"
                                 />
                               </styled.div>
@@ -1942,40 +1930,37 @@ exports[`agent list item correctly renders disconnected 1`] = `
         </Rnd>
       </TerminalWindow>
     </WithTheme(TerminalWindow)>
-  </Component>
+  </ThemeProvider>
 </div>
 `;
 
 exports[`agent list item resizes 1`] = `
-.c0 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
-  background-color: #1B1B1B;
-}
-
-.c8 {
+.c7 {
   height: 100%;
   width: 100%;
   padding: 20px;
 }
 
-.c9 {
+.c8 {
   height: 100%;
   width: 100%;
 }
 
-.c9 .xterm-viewport {
+.c8 .xterm-viewport {
   overflow: hidden !important;
 }
 
-.c1 {
+.c0 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
   padding: 0px;
   border: 1px solid #32E67E;
   border-style: none none solid none;
 }
 
-.c2 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1987,7 +1972,7 @@ exports[`agent list item resizes 1`] = `
   align-items: center;
 }
 
-.c5 {
+.c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2001,7 +1986,7 @@ exports[`agent list item resizes 1`] = `
   justify-content: flex-end;
 }
 
-.c6 {
+.c5 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -2010,7 +1995,7 @@ exports[`agent list item resizes 1`] = `
   cursor: pointer;
 }
 
-.c7 {
+.c6 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -2019,13 +2004,13 @@ exports[`agent list item resizes 1`] = `
   cursor: pointer;
 }
 
-.c3 {
+.c2 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c4 {
+.c3 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2034,7 +2019,7 @@ exports[`agent list item resizes 1`] = `
 }
 
 <div>
-  <Component
+  <ThemeProvider
     theme={
       Object {
         "accent": "#4D02EE",
@@ -2149,35 +2134,32 @@ exports[`agent list item resizes 1`] = `
             handle={null}
             nodeRef={
               Object {
-                "current": .c0 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
-  background-color: #1B1B1B;
-}
-
-.c8 {
+                "current": .c7 {
   height: 100%;
   width: 100%;
   padding: 20px;
 }
 
-.c9 {
+.c8 {
   height: 100%;
   width: 100%;
 }
 
-.c9 .xterm-viewport {
+.c8 .xterm-viewport {
   overflow: hidden !important;
 }
 
-.c1 {
+.c0 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
   padding: 0px;
   border: 1px solid #32E67E;
   border-style: none none solid none;
 }
 
-.c2 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2189,7 +2171,7 @@ exports[`agent list item resizes 1`] = `
   align-items: center;
 }
 
-.c5 {
+.c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2203,7 +2185,7 @@ exports[`agent list item resizes 1`] = `
   justify-content: flex-end;
 }
 
-.c6 {
+.c5 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -2212,7 +2194,7 @@ exports[`agent list item resizes 1`] = `
   cursor: pointer;
 }
 
-.c7 {
+.c6 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -2221,13 +2203,13 @@ exports[`agent list item resizes 1`] = `
   cursor: pointer;
 }
 
-.c3 {
+.c2 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c4 {
+.c3 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2240,39 +2222,39 @@ exports[`agent list item resizes 1`] = `
                   style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
                 >
                   <div
-                    class="c0 c1"
+                    class="c0"
                   >
                     <div
-                      class="c2"
+                      class="c1"
                     >
                       <div
-                        class="c3"
+                        class="c2"
                       />
                       <h4
-                        class="c4"
+                        class="c3"
                       >
                         agentName
                       </h4>
                       <div
-                        class="c5"
+                        class="c4"
                       >
                         <div
-                          class="c6"
+                          class="c5"
                           color="#32E67E"
                           id="expand-button"
                         />
                         <div
-                          class="c7"
+                          class="c6"
                           color="#ED3E2A"
                           id="close-button"
                         />
                       </div>
                     </div>
                     <div
-                      class="c8"
+                      class="c7"
                     >
                       <div
-                        class="c9"
+                        class="c8"
                         data-testid="terminal"
                       >
                         <div
@@ -2395,39 +2377,39 @@ exports[`agent list item resizes 1`] = `
                     style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
                   >
                     <div
-                      class="c0 c1"
+                      class="c0"
                     >
                       <div
-                        class="c2"
+                        class="c1"
                       >
                         <div
-                          class="c3"
+                          class="c2"
                         />
                         <h4
-                          class="c4"
+                          class="c3"
                         >
                           agentName
                         </h4>
                         <div
-                          class="c5"
+                          class="c4"
                         >
                           <div
-                            class="c6"
+                            class="c5"
                             color="#32E67E"
                             id="expand-button"
                           />
                           <div
-                            class="c7"
+                            class="c6"
                             color="#ED3E2A"
                             id="close-button"
                           />
                         </div>
                       </div>
                       <div
-                        class="c8"
+                        class="c7"
                       >
                         <div
-                          class="c9"
+                          class="c8"
                           data-testid="terminal"
                         >
                           <div
@@ -2623,27 +2605,27 @@ exports[`agent list item resizes 1`] = `
                     statusColor="#32E67E"
                   >
                     <div
-                      className="c0 c1"
+                      className="c0"
                     >
                       <styled.div>
                         <div
-                          className="c2"
+                          className="c1"
                         >
                           <styled.div>
                             <div
-                              className="c3"
+                              className="c2"
                             />
                           </styled.div>
                           <styled.h4>
                             <h4
-                              className="c4"
+                              className="c3"
                             >
                               agentName
                             </h4>
                           </styled.h4>
                           <styled.div>
                             <div
-                              className="c5"
+                              className="c4"
                             >
                               <styled.div
                                 color="#32E67E"
@@ -2651,7 +2633,7 @@ exports[`agent list item resizes 1`] = `
                                 onClick={[Function]}
                               >
                                 <div
-                                  className="c6"
+                                  className="c5"
                                   color="#32E67E"
                                   id="expand-button"
                                   onClick={[Function]}
@@ -2663,7 +2645,7 @@ exports[`agent list item resizes 1`] = `
                                 onClick={[Function]}
                               >
                                 <div
-                                  className="c7"
+                                  className="c6"
                                   color="#ED3E2A"
                                   id="close-button"
                                   onClick={[Function]}
@@ -2714,13 +2696,13 @@ exports[`agent list item resizes 1`] = `
                         >
                           <styled.div>
                             <div
-                              className="c8"
+                              className="c7"
                             >
                               <styled.div
                                 data-testid="terminal"
                               >
                                 <div
-                                  className="c9"
+                                  className="c8"
                                   data-testid="terminal"
                                 />
                               </styled.div>
@@ -2915,6 +2897,6 @@ exports[`agent list item resizes 1`] = `
         </Rnd>
       </TerminalWindow>
     </WithTheme(TerminalWindow)>
-  </Component>
+  </ThemeProvider>
 </div>
 `;
