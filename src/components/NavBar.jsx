@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
+import media from '../util/media';
 import { logout as logoutAction } from '../actions/auth';
 import Button from './buttons/Button';
 import { removeCurrentUser } from '../actions/current-user';
@@ -10,38 +11,123 @@ import AddAgentModal from './modals/AddAgentModal';
 import Link from './Link';
 
 const NavigationBar = styled.div`
-  height: 50px;
   padding: 16px;
-  display: grid;
-  grid-template-columns: [logo] 200px [menu] 1fr [new-agent] 250px [logout] 100px;
-  align-items: center;
   background-color: ${props => props.theme.lightBlack};
+  display: grid;
+  grid-template-columns: [logo] 200px [content] 1fr;
+  grid-gap: 16px;
+  align-items: center;
+
+  ${
+    media.phone`
+      grid-template-columns: [main] 1fr [toggle] 32px;
+      grid-template-rows: [logo] 50px [content] 1fr;
+
+      position: fixed;
+
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+    `
+  }
+`;
+
+const NavBarContent = styled.div`
+  grid-column: content;
+  display: grid;
+  grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px;
+  grid-gap: 12px;
+
+  ${
+    media.phone`
+      grid-column: main / -1;
+      grid-row: content;
+      height: 100%;
+      grid-template-columns: [main] 1fr;
+      grid-template-rows: [menu] 1fr [new-agent] 50px [logout] 50px;
+      maring-bottom: 32px;
+    `
+  }
+`;
+
+const MenuToggleIcon = styled.i`
+  grid-row: logo;
+  grid-column: toggle;
+  display: none;
+  position: relative;
+  width: 32px;
+
+  ${
+    media.phone`
+      display: inline;
+    `
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const StyledLink = styled(Link)`
+  maring-left: 16px;
   margin-right: 16px;
+`;
+
+const StyledIcon = styled.i`
+  width: 32px;
 `;
 
 const Menu = styled.div`
   grid-column: menu;
+  align-self: center;
+
+  ${
+    media.phone`
+      align-self: start;
+      grid-column: main;
+      grid-row: menu;
+      margin-top: 32px;
+    `
+  }
 `;
 
 const Logo = styled.div`
   grid-column: logo;
+
+  ${
+    media.phone`
+      grid-column: main;
+      grid-row: logo;
+    `
+  }
 `;
 
 const Logout = styled(OutlinedButton)`
   grid-column: logout;
   float: right;
-  width: 100px;
+  max-width: 100px;
+
+  ${
+    media.phone`
+      grid-column: main;
+      grid-row: logout;
+      max-width: 100%;
+    `
+  }
 `;
 
 const NewAgentButton = styled(Button)`
   grid-column: new-agent;
-
-  margin-left: 25px;
-  margin-right: 25px;
   max-width: 250px;
+
+  ${
+    media.phone`
+      grid-column: main;
+      grid-row: new-agent;
+      max-width: 100%;
+    `
+  }
 `;
 
 class NavBar extends React.PureComponent {
@@ -71,13 +157,16 @@ class NavBar extends React.PureComponent {
     return (
       <NavigationBar>
         <Logo>Apollo</Logo>
-        <Menu>
-          <StyledLink to='/'>Dashboard</StyledLink>
-          {checkIfAdmin() && <StyledLink to='/admin'>Admin</StyledLink>}
-        </Menu>
-        <NewAgentButton id='newAgentButton' onClick={this.openAddAgentModal}>Add new agent</NewAgentButton>
-        <Logout id='logoutButton' onClick={this.logout}>Logout</Logout>
-        {this.state.showAddAgent && <AddAgentModal onClose={this.closeAddAgentModal} />}
+        <MenuToggleIcon className='fas fa-times fa-lg'/>
+        <NavBarContent>
+          <Menu>
+            <StyledIcon className='fas fa-home' /><StyledLink to='/'>Dashboard</StyledLink>
+            {checkIfAdmin() && <StyledLink to='/admin'>Admin</StyledLink>}
+          </Menu>
+          <NewAgentButton id='newAgentButton' onClick={this.openAddAgentModal}>Add new agent</NewAgentButton>
+          <Logout id='logoutButton' onClick={this.logout}>Logout</Logout>
+          {this.state.showAddAgent && <AddAgentModal onClose={this.closeAddAgentModal} />}
+        </NavBarContent>
       </NavigationBar>
     );
   }
