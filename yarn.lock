@@ -2490,13 +2490,6 @@ formik@^2.1.5:
     tiny-warning "^1.0.2"
     tslib "^1.10.0"
 
-formin@^0.11.1:
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/formin/-/formin-0.11.1.tgz#1db01695ea62033de4a500cf11ce4952c1b713a0"
-  integrity sha512-cMvF6MmWPEVoh1EqjJwhXKmDgqKAy6mSck1ggydfvutycWsoyWs+qBeR4KvrHzl5JJAnomWqxKyvIEuxW7JO6w==
-  dependencies:
-    prop-types "^15.6.2"
-
 fragment-cache@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/fragment-cache/-/fragment-cache-0.2.1.tgz#4290fad27f13e89be7f33799c6bc5a0abfff0d19"
