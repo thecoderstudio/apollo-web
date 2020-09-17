@@ -20,24 +20,25 @@ const NavigationBar = styled.div`
 
   ${
     media.phone`
-      grid-template-columns: [main] 1fr [toggle] 32px;
+      grid-template-columns: [main] 1fr [toggle] 24px;
       grid-template-rows: [logo] 50px [content] 1fr;
 
-      position: fixed;
+      position: ${props => props.collapsed ? 'static' : 'fixed'};
 
       top: 0px;
       left: 0px;
       right: 0px;
-      bottom: 0px;
+      bottom: ${props => props.collapsed ? 'static' : '0px'};
     `
   }
 `;
 
 const NavBarContent = styled.div`
   grid-column: content;
-  display: grid;
+  display: ${props => props.collapsed ? 'none' : 'grid'};
   grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px;
   grid-gap: 12px;
+
 
   ${
     media.phone`
@@ -56,7 +57,11 @@ const MenuToggleIcon = styled.i`
   grid-column: toggle;
   display: none;
   position: relative;
-  width: 32px;
+  /* Need to set to match size given by font awesome, so rotation is around center.  */
+  width: 15px;
+  transform: ${props => props.collapsed ? 'rotate(0deg)' : 'rotate(180deg)'};
+  transition-property: transform;
+  transition: all .5s ease-in-out;
 
   ${
     media.phone`
@@ -136,7 +141,8 @@ class NavBar extends React.PureComponent {
     this.logout = this.logout.bind(this);
     this.openAddAgentModal = this.openAddAgentModal.bind(this);
     this.closeAddAgentModal = this.closeAddAgentModal.bind(this);
-    this.state = { showAddAgent: false };
+    this.toggleCollapsed = this.toggleCollapsed.bind(this);
+    this.state = { showAddAgent: false, collapsed: false };
   }
 
   openAddAgentModal() {
@@ -153,12 +159,16 @@ class NavBar extends React.PureComponent {
     this.setState({ showAddAgent: false });
   }
 
+  toggleCollapsed() {
+    this.setState({ collapsed: !this.state.collapsed });
+  }
+
   render() {
     return (
-      <NavigationBar>
+      <NavigationBar collapsed={this.state.collapsed}>
         <Logo>Apollo</Logo>
-        <MenuToggleIcon className='fas fa-times fa-lg'/>
-        <NavBarContent>
+        <MenuToggleIcon collapsed={this.state.collapsed} onClick={this.toggleCollapsed} className='fas fa-caret-down fa-lg'/>
+        <NavBarContent collapsed={this.state.collapsed}>
           <Menu>
             <StyledIcon className='fas fa-home' /><StyledLink to='/'>Dashboard</StyledLink>
             {checkIfAdmin() && <StyledLink to='/admin'>Admin</StyledLink>}
