@@ -35,13 +35,14 @@ const NavigationBar = styled.div`
 
 const NavBarContent = styled.div`
   grid-column: content;
-  display: ${props => props.collapsed ? 'none' : 'grid'};
+  display: grid;
   grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px;
   grid-gap: 12px;
 
 
   ${
     media.phone`
+      display: ${props => props.collapsed ? 'none' : 'grid'};
       grid-column: main / -1;
       grid-row: content;
       height: 100%;
@@ -62,7 +63,7 @@ const MenuToggleIcon = styled.i`
   line-height: 32px;
   text-align: center;
   transform: ${props => props.collapsed ? 'rotate(0deg)' : 'rotate(90deg)'};
-  transition: transform .5s ease-out;
+  transition: transform .3s ease-out;
 
   ${
     media.phone`
