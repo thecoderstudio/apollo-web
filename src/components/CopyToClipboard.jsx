@@ -40,9 +40,6 @@ const StyledButton = styled(Button)`
 const Icon = styled.i`
   text-align: center;
   display: block;
-  width: 60%;
-  margin-left: 20%;
-  height: 60%;
 `;
 
 class CopyToClipboard extends React.PureComponent {
@@ -59,7 +56,7 @@ class CopyToClipboard extends React.PureComponent {
     return(
       <Wrapper>
         <TextField>{this.props.text}</TextField>
-        <StyledButton id='copyToClipboardButton' onClick={this.copyToClipboard}><Icon class="fas fa-copy" /></StyledButton>
+        <StyledButton id='copyToClipboardButton' onClick={this.copyToClipboard}><Icon className="fas fa-copy" /></StyledButton>
       </Wrapper>
     );
   }

@@ -23,7 +23,6 @@ const rotate = keyframes`
 `;
 
 const Icon = styled.i`
-  height: 25px;
   animation: ${rotate} 1.5s infinite linear;
 `;
 
@@ -38,7 +37,7 @@ class LoadingButton extends React.PureComponent {
   render() {
     return(
       <StyledButton className={this.props.className} onClick={this.props.onClick }>
-        {this.props.loading ? <Icon class='fas fa-spinner' /> : this.props.children}
+        {this.props.loading ? <Icon className='fas fa-spinner' /> : this.props.children}
       </StyledButton>
     );
   }
