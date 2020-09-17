@@ -2,7 +2,6 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
 import Button from "./Button";
-import spinnerImg from '../../images/spinner.svg';
 
 const propTypes = {
   loading: PropTypes.bool,
@@ -23,7 +22,7 @@ const rotate = keyframes`
   }
 `;
 
-const Icon = styled.img`
+const Icon = styled.i`
   height: 25px;
   animation: ${rotate} 1.5s infinite linear;
 `;
@@ -39,7 +38,7 @@ class LoadingButton extends React.PureComponent {
   render() {
     return(
       <StyledButton className={this.props.className} onClick={this.props.onClick }>
-        {this.props.loading ? <Icon src={spinnerImg} /> : this.props.children}
+        {this.props.loading ? <Icon class='fas fa-spinner' /> : this.props.children}
       </StyledButton>
     );
   }

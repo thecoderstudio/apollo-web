@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Button from './buttons/Button';
-import copyImg from '../images/copy.svg';
 
 const propTypes = {
   text: PropTypes.string.isRequired
@@ -38,7 +37,7 @@ const StyledButton = styled(Button)`
   height: 100%;
 `;
 
-const Icon = styled.img`
+const Icon = styled.i`
   text-align: center;
   display: block;
   width: 60%;
@@ -60,7 +59,7 @@ class CopyToClipboard extends React.PureComponent {
     return(
       <Wrapper>
         <TextField>{this.props.text}</TextField>
-        <StyledButton id='copyToClipboardButton' onClick={this.copyToClipboard}><Icon src={copyImg} /></StyledButton>
+        <StyledButton id='copyToClipboardButton' onClick={this.copyToClipboard}><Icon class="fas fa-copy" /></StyledButton>
       </Wrapper>
     );
   }
