@@ -64,7 +64,6 @@ exports[`LoadingButton shows loading indicator 1`] = `
 }
 
 .c2 {
-  height: 25px;
   -webkit-animation: fvtopB 1.5s infinite linear;
   animation: fvtopB 1.5s infinite linear;
 }
@@ -80,9 +79,8 @@ exports[`LoadingButton shows loading indicator 1`] = `
   className="c0 c1"
   onClick={[MockFunction]}
 >
-  <img
-    className="c2"
-    src={[Function]}
+  <i
+    className="c2 fas fa-spinner"
   />
 </button>
 `;

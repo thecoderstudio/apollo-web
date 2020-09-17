@@ -326,14 +326,14 @@ class AddAgentModal extends React.PureComponent {
   }
 
   renderDirectlyOnMachineStepOne() {
-    return this.getStepOneComponents(this.renderDirectlyOnMachineStepTwo);
+    return this.getStepOneComponents();
   }
 
   renderManualUploadStepOne() {
-    return this.getStepOneComponents(this.renderManualUploadStepTwo);
+    return this.getStepOneComponents();
   }
 
-  getStepOneComponents(onclick) {
+  getStepOneComponents() {
     return(
       <div>
         <Formik

@@ -516,9 +516,6 @@ exports[`addAgentModal creates agent 1`] = `
 .c11 {
   text-align: center;
   display: block;
-  width: 60%;
-  margin-left: 20%;
-  height: 60%;
 }
 
 .c2 {
@@ -645,9 +642,8 @@ exports[`addAgentModal creates agent 1`] = `
             id="copyToClipboardButton"
             onClick={[Function]}
           >
-            <img
-              className="c11"
-              src={[Function]}
+            <i
+              className="c11 fas fa-copy"
             />
           </button>
         </div>

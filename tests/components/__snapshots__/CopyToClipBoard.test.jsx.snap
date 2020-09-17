@@ -55,9 +55,6 @@ exports[`copy to clipboard renders correctly 1`] = `
 .c4 {
   text-align: center;
   display: block;
-  width: 60%;
-  margin-left: 20%;
-  height: 60%;
 }
 
 <div
@@ -73,9 +70,8 @@ exports[`copy to clipboard renders correctly 1`] = `
     id="copyToClipboardButton"
     onClick={[Function]}
   >
-    <img
-      className="c4"
-      src={[Function]}
+    <i
+      className="c4 fas fa-copy"
     />
   </button>
 </div>
