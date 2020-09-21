@@ -7,6 +7,7 @@ import ConnectionState from './ConnectionState';
 import { openTerminal } from '../terminal/Terminal';
 import TerminalWindow from '../terminal/TerminalWindow';
 import MobileChecker from '../../util/MobileChecker';
+import { getFontAwesomeClass } from '../../util/agent';
 import media from '../../util/media';
 
 const propTypes = {
@@ -133,20 +134,7 @@ export default class AgentListItem extends React.PureComponent {
   }
 
   getOSIcon(os, arch) {
-    let osClass;
-    switch (os) {
-      case 'darwin':
-        osClass = "fab fa-apple";
-        break;
-      case 'linux':
-        osClass = "fab fa-linux";
-        break;
-      case 'freebsd':
-        osClass = "fab fa-freebsd";
-        break;
-      default:
-        osClass = "fas fa-question-circle";
-    }
+    let osClass = getFontAwesomeClass(os)
 
     return <Tippy content={this.getOSTooltip(os, arch)}><OSIcon className={osClass} /></Tippy>;
   }
