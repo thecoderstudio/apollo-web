@@ -9,11 +9,21 @@ const Title = styled.h1`
   text-align: center;
 `;
 
+const Category = styled.div`
+
+`;
+
+const Subtitle = styled.h3`
+`;
+
 class AgentActions extends React.PureComponent {
   render() {
     return (
       <Container className={this.props.className}>
         <Title>Start hacking</Title>
+        <Category>
+          <Subtitle>Enumeration</Subtitle>
+        </Category>
       </Container>
     );
   }
