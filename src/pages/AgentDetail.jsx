@@ -9,8 +9,9 @@ const UNKNOWN = "unknown";
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: [detail] 2fr [controls] 1fr;
-  margin: 75px;
+  grid-template-columns: [detail] 1fr [controls] 1fr;
+  max-width: 100%;
+  margin: 32px;
 `;
 
 const Details = styled.div`
@@ -23,11 +24,12 @@ const Detail = styled.td`
 
 const Controls = styled.div`
   grid-column: controls;
+  width: 100%;
 `;
 
 const Terminal = styled(InlineTerminal)`
-  width: 550px;
-  height: 300px;
+  width: 100%;
+  height: 400px;
 `;
 
 const OSIcon = styled(Icon)`
