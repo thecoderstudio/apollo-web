@@ -116,6 +116,7 @@ export default class CreateUser extends React.PureComponent {
             <Formik
               initialValues={{ username: '', password: '', confirmPassword: '' }}
               validationSchema={createUserSchema}
+              validateOnChange={false}
               onSubmit={this.createUser}>
               {({ values, errors, handleChange, handleSubmit }) => (
                 <Form onSubmit={handleSubmit}>
