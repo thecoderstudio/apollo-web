@@ -14,8 +14,12 @@ const Container = styled.div`
   margin: 75px;
 `;
 
-const Detail = styled.div`
+const Details = styled.div`
   grid-column: detail;
+`;
+
+const Detail = styled.td`
+  padding-right: 40px;
 `;
 
 const Controls = styled.div`
@@ -23,7 +27,7 @@ const Controls = styled.div`
 `;
 
 const StyledCard = styled(Card)`
-  width: 100%;
+  width: 550px;
   height: 300px;
 `;
 
@@ -59,23 +63,23 @@ class AgentDetail extends React.PureComponent {
     let agent = this.state.agent;
     return (
       <Container>
-        <Detail>
+        <Details>
           <h1>{agent.name}</h1>
           <table>
             <tr>
-              <td><b>External IP address</b></td>
-              <td>{agent.externalIpAddress || UNKNOWN}</td>
+              <Detail><b>External IP address</b></Detail>
+              <Detail>{agent.externalIpAddress || UNKNOWN}</Detail>
             </tr>
             <tr>
-              <td><b>Operating system</b></td>
-              <td>{this.getOSIcon(agent.operatingSystem)}{agent.operatingSystem || UNKNOWN}</td>
+              <Detail><b>Operating system</b></Detail>
+              <Detail>{this.getOSIcon(agent.operatingSystem)}{agent.operatingSystem || UNKNOWN}</Detail>
             </tr>
             <tr>
-              <td><b>Architecture</b></td>
-              <td>{agent.architecture || UNKNOWN}</td>
+              <Detail><b>Architecture</b></Detail>
+              <Detail>{agent.architecture || UNKNOWN}</Detail>
             </tr>
           </table>
-        </Detail>
+        </Details>
         <Controls>
           <StyledCard>
             <Terminal agent={agent} />
