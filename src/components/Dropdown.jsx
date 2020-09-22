@@ -71,15 +71,11 @@ const DropDownIcon = styled.div`
 class DropDown extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.toggleCollapse = this.toggleCollapse.bind(this);
-    this.renderItems = this.renderItems.bind(this);
-    this.selectItem = this.selectItem.bind(this);
     this.state = { collapsed: true };
-    this.closeDropdown = this.closeDropdown.bind(this);
     this.node = React.createRef();
   }
 
-  closeDropdown(e) {
+  closeDropdown = (e) => {
     if (!this.state.collapsed && !this.node.current.contains(e.target)) {
       this.setState({ collapsed: true });
     }
@@ -89,17 +85,16 @@ class DropDown extends React.PureComponent {
     document.addEventListener('mousedown', this.closeDropdown , false);
   }
 
-  toggleCollapse() {
+  toggleCollapse = () => {
     this.setState({ collapsed : !this.state.collapsed });
   }
 
-  selectItem(option) {
+  selectItem = (option) => {
     this.toggleCollapse();
-    const { dispatch } = this.props;
-    dispatch(this.props.optionSelectedAction(option));
+    this.props.optionSelectedAction(option);
   }
 
-  renderItems() {
+  renderItems = () => {
     return this.props.options.map(option => {
       if (option === this.props.selected) { return; }
       return <DropDownItem key={option} onClick={() => this.selectItem(option)} >{option}</DropDownItem>;
@@ -123,6 +118,6 @@ class DropDown extends React.PureComponent {
 
 DropDown.propTypes = propTypes;
 
-export default connect(state => ({state: state}))(DropDown);
+export default connect()(DropDown);
 
 export { DropDown };

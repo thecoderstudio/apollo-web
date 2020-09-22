@@ -233,7 +233,7 @@ const CloseOutlinedButton = styled(OutlinedButton)`
 class AddAgentModal extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.bindMethods();
+
     this.newAgentHandler = new NewAgentHandler();
     this.state = {
       renderFunction : this.renderQuestion,
@@ -242,30 +242,9 @@ class AddAgentModal extends React.PureComponent {
       selectedOperatingSystem: this.newAgentHandler.supportedOS[0],
       selectedArchitecture: this.newAgentHandler.supportedArch[0]
     };
-
-    this.selectOperatingSystem = (value) => {
-      console.log(this);
-      this.setState({ selectedOperatingSystem: value })
-    }
   }
 
-  bindMethods() {
-    this.renderQuestion = this.renderQuestion.bind(this);
-    this.getStepOneComponents = this.getStepOneComponents.bind(this);
-    this.selectStepOneDirectly = this.selectStepOneDirectly.bind(this);
-    this.selectStepOneManual = this.selectStepOneManual.bind(this);
-    this.renderDirectlyOnMachineStepOne = this.renderDirectlyOnMachineStepOne.bind(this);
-    this.renderDirectlyOnMachineStepTwo = this.renderDirectlyOnMachineStepTwo.bind(this);
-    this.renderManualUploadStepOne = this.renderManualUploadStepOne.bind(this);
-    this.setFinalRenderFunction = this.setFinalRenderFunction.bind(this);
-    this.renderManualUploadStepTwo = this.renderManualUploadStepTwo.bind(this);
-    this.createAgent = this.createAgent.bind(this);
-    this.downloadBinary = this.downloadBinary.bind(this);
-    this.selectArchitecture = this.selectArchitecture.bind(this);
-    // this.selectedOperatingSystem = this.selectOperatingSystem.bind(this);
-  }
-
-  createAgent(values, { setErrors }) {
+  createAgent = (values, { setErrors }) => {
     this.setState({ loading: true });
     axios.post(
       `${process.env.APOLLO_HTTP_URL}agent`,
@@ -288,9 +267,9 @@ class AddAgentModal extends React.PureComponent {
       .finally(_ => {
         this.setState({ loading: false });
       });
-  }
+  };
 
-  downloadBinary() {
+  downloadBinary = () => {
     this.setState({ loading: true });
     axios.get(
       `${process.env.APOLLO_HTTP_URL}agent/download`,
@@ -309,45 +288,51 @@ class AddAgentModal extends React.PureComponent {
       .finally(_ => {
         this.setState({loading: false});
       });
-  }
+  };
 
-  setFinalRenderFunction() {
+  setFinalRenderFunction = () => {
     if (this.state.renderFunction === this.renderDirectlyOnMachineStepOne) {
       this.setState({ renderFunction: this.renderDirectlyOnMachineStepTwo });
     } else {
       this.setState({ renderFunction: this.renderManualUploadStepTwo });
     }
-  }
+  };
 
-  selectStepOneDirectly(title) {
+  selectStepOneDirectly =(title) => {
     this.setState({
       renderFunction: this.renderDirectlyOnMachineStepOne,
       title
     });
-  }
+  };
 
-  selectStepOneManual(title) {
+  selectStepOneManual = (title) => {
     this.setState({
       renderFunction: this.renderManualUploadStepOne,
       title
     });
-  }
+  };
 
-  renderDirectlyOnMachineStepOne() {
+  renderDirectlyOnMachineStepOne = () => {
     return this.getStepOneComponents();
-  }
+  };
 
-  renderManualUploadStepOne() {
+  renderManualUploadStepOne = () => {
     return this.getStepOneComponents();
-  }
+  };
 
-  selectArchitecture(value) {
+  selectArchitecture = (value) => {
     this.setState({ selectedArchitecture: value })
-  }
+  };
 
+  selectOperatingSystem = (value) => {
+    console.log(value);
+    console.log(this.props.selectedOperatingSystem);
+    this.setState({ selectedOperatingSystem: value });
+    console.log(this.props.selectedOperatingSystem);
+  };
 
-
-  getStepOneComponents() {
+  getStepOneComponents = () => {
+    console.log(this.props)
     return(
       <div>
         <Formik
@@ -373,7 +358,7 @@ class AddAgentModal extends React.PureComponent {
               <TextWrapper>Operating system</TextWrapper>
               <InputFieldWrapper>
                 <StyledDropDown
-                  selected={this.props.selectedOperatingSystem}
+                  selected={this.state.selectedOperatingSystem}
                   options={this.newAgentHandler.supportedOS}
                   optionSelectedAction={this.selectOperatingSystem}
                 />
@@ -383,7 +368,7 @@ class AddAgentModal extends React.PureComponent {
               <TextWrapper>Architecture</TextWrapper>
               <InputFieldWrapper>
                 <StyledDropDown
-                  selected={this.props.selectedArchitecture}
+                  selected={this.state.selectedArchitecture}
                   options={this.newAgentHandler.supportedArch}
                   optionSelectedAction={this.selectArchitecture}
                 />
@@ -404,7 +389,7 @@ class AddAgentModal extends React.PureComponent {
     );
   }
 
-  getStepTwoComponents(command) {
+  getStepTwoComponents =(command) => {
    return(
       <ThreeRowDisplay>
         <Description>
@@ -416,7 +401,7 @@ class AddAgentModal extends React.PureComponent {
     );
   }
 
-  renderDirectlyOnMachineStepTwo() {
+  renderDirectlyOnMachineStepTwo = () => {
     return this.getStepTwoComponents(
       this.newAgentHandler.getDirectlyOnMachineCommand(
         this.props.selectedOperatingSystem, this.props.selectedArchitecture, this.state.agentId, this.state.secret,
@@ -425,7 +410,7 @@ class AddAgentModal extends React.PureComponent {
     );
   }
 
-  renderManualUploadStepTwo() {
+  renderManualUploadStepTwo = () => {
     return(
       <div>
         <TwoColumnGrid>
@@ -445,7 +430,7 @@ class AddAgentModal extends React.PureComponent {
     );
   }
 
-  renderQuestion() {
+  renderQuestion = () => {
     const directly = "Directly on target machine.";
     const manual = "Manual upload";
     return (
@@ -464,7 +449,7 @@ class AddAgentModal extends React.PureComponent {
     );
   }
 
-  render() {
+  render = () => {
     return (
       <ModalOverlay closeModalFunction={this.props.onClose}>
         <StyledCard>
