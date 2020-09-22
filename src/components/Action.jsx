@@ -13,6 +13,7 @@ const Container = styled.div`
   grid-template-rows: [title] 1fr [body] 1fr;
   grid-column-gap: 30px;
   align-items: center;
+  margin: 16px;
 `;
 
 const Image = styled.i`
