@@ -127,10 +127,12 @@ class Login extends React.Component {
             {!this.props.authenticated ? <div>Log in to Apollo</div> : <div>Change your password</div>}
            </Title>
           <StyledCard>
+<<<<<<< HEAD
             { !this.props.authenticated ?
               <Formik
                 initialValues={{ username: '', password: '' }}
                 validationSchema={loginSchema}
+                validateOnChange={false}
                 onSubmit={this.login}>
                 {({ values, errors, handleChange, handleSubmit }) => (
                   <Form onSubmit={handleSubmit}>
@@ -154,6 +156,33 @@ class Login extends React.Component {
               </Formik>
               : <ChangePassword />
             }
+=======
+            <Formik
+              initialValues={{ username: '', password: '' }}
+              validationSchema={loginSchema}
+              validateOnChange={false}
+              onSubmit={this.login}>
+              {({ values, errors, handleChange, handleSubmit }) => (
+                <Form onSubmit={handleSubmit}>
+                  <Input
+                    name="username"
+                    type="username"
+                    placeholder="Username"
+                    value={values.username}
+                    error={errors.username}
+                    onChange={handleChange} />
+                  <Input
+                    name="password"
+                    type="password"
+                    placeholder="Password"
+                    value={values.password}
+                    error={errors.password}
+                    onChange={handleChange} />
+                  <Button>Log in</Button>
+                </Form>
+              )}
+            </Formik>
+>>>>>>> f8680f97e611509008d2fd114dffd15fefef8d73
           </StyledCard>
         </InnerContainer>
       </OuterContainer>
