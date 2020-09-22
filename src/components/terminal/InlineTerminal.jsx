@@ -5,6 +5,7 @@ import Card from '../Card';
 import Terminal from './Terminal';
 import Button from '../buttons/Button';
 import OutlinedButton from '../buttons/OutlinedButton';
+import Icon from '../Icon';
 
 const propTypes = {
   agent: PropTypes.object.isRequired
@@ -19,7 +20,7 @@ const Container = styled(Card)`
 
 const ControlBar = styled.div`
   display: flex;
-  margin: 16px 0px;
+  margin: 16px;
   flex-direction: row-reverse;
 `;
 
@@ -77,7 +78,7 @@ class InlineTerminal extends React.PureComponent {
           {this.renderContents()}
         </Container>
         <ControlBar>
-          <OutlinedButton onClick={this.closeShell}>Close shell</OutlinedButton>
+          <Icon onClick={this.closeShell} className="material-icons">wifi_off</Icon>
         </ControlBar>
       </div>
     );
