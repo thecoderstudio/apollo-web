@@ -234,13 +234,19 @@ class AddAgentModal extends React.PureComponent {
   constructor(props) {
     super(props);
     this.bindMethods();
-
+    this.newAgentHandler = new NewAgentHandler();
     this.state = {
       renderFunction : this.renderQuestion,
       title: "Choose installation",
       loading: false,
+      selectedOperatingSystem: this.newAgentHandler.supportedOS[0],
+      selectedArchitecture: this.newAgentHandler.supportedArch[0]
     };
-    this.newAgentHandler = new NewAgentHandler();
+
+    this.selectOperatingSystem = (value) => {
+      console.log(this);
+      this.setState({ selectedOperatingSystem: value })
+    }
   }
 
   bindMethods() {
@@ -255,6 +261,8 @@ class AddAgentModal extends React.PureComponent {
     this.renderManualUploadStepTwo = this.renderManualUploadStepTwo.bind(this);
     this.createAgent = this.createAgent.bind(this);
     this.downloadBinary = this.downloadBinary.bind(this);
+    this.selectArchitecture = this.selectArchitecture.bind(this);
+    // this.selectedOperatingSystem = this.selectOperatingSystem.bind(this);
   }
 
   createAgent(values, { setErrors }) {
@@ -333,8 +341,13 @@ class AddAgentModal extends React.PureComponent {
     return this.getStepOneComponents();
   }
 
+  selectArchitecture(value) {
+    this.setState({ selectedArchitecture: value })
+  }
+
+
+
   getStepOneComponents() {
-    console.log(this.props)
     return(
       <div>
         <Formik
@@ -362,7 +375,7 @@ class AddAgentModal extends React.PureComponent {
                 <StyledDropDown
                   selected={this.props.selectedOperatingSystem}
                   options={this.newAgentHandler.supportedOS}
-                  optionSelectedAction={selectOperatingSystem}
+                  optionSelectedAction={this.selectOperatingSystem}
                 />
               </InputFieldWrapper>
             </TextAndInputFieldWrapper>
@@ -372,7 +385,7 @@ class AddAgentModal extends React.PureComponent {
                 <StyledDropDown
                   selected={this.props.selectedArchitecture}
                   options={this.newAgentHandler.supportedArch}
-                  optionSelectedAction={selectArchitecture}
+                  optionSelectedAction={this.selectArchitecture}
                 />
               </InputFieldWrapper>
             </TextAndInputFieldWrapper>
