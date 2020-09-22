@@ -325,14 +325,10 @@ class AddAgentModal extends React.PureComponent {
   };
 
   selectOperatingSystem = (value) => {
-    console.log(value);
-    console.log(this.props.selectedOperatingSystem);
     this.setState({ selectedOperatingSystem: value });
-    console.log(this.props.selectedOperatingSystem);
   };
 
   getStepOneComponents = () => {
-    console.log(this.props)
     return(
       <div>
         <Formik
@@ -463,9 +459,4 @@ class AddAgentModal extends React.PureComponent {
 
 AddAgentModal.propTypes = propTypes;
 
-export default connect(
-  state => ({
-    selectedOperatingSystem: state.addAgent.selectedOperatingSystem,
-    selectedArchitecture: state.addAgent.selectedArchitecture
-  })
-)(AddAgentModal);
+export default AddAgentModal;

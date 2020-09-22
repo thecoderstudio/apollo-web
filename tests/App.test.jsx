@@ -29,10 +29,6 @@ describe('app', () => {
   it("renders correctly authenticated", () => {
     const store = mockStore({
       authenticated: true,
-      addAgent: {
-        selectedArchitecture: "amd64",
-        selectedOperatingSystem: "linux"
-      },
       agent: [],
       currentUser: {},
       notifications: new Map({})

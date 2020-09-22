@@ -47,10 +47,6 @@ describe('addAgentModal', () => {
 
   beforeEach(() => {
     store = mockStore({
-      addAgent: {
-        selectedArchitecture: 'amd64',
-        selectedOperatingSystem: 'linux'
-      },
     });
     spy = jest.fn();
   });

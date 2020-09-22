@@ -10,10 +10,6 @@ describe('dashboard', () => {
     let mockStore = configureStore([]);
     const store = mockStore({
       authenticated: true,
-      addAgent: {
-        selectedArchitecture: "amd64",
-        selectedOperatingSystem: "linux"
-      },
       agent: [],
       currentUser: {
         id: 'id',

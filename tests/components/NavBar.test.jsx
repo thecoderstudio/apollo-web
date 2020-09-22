@@ -25,10 +25,6 @@ describe('navbar', () => {
 
   beforeEach(() => {
     store = mockStore({
-      addAgent: {
-        selectedArchitecture: 'amd64',
-        selectedOperatingSystem: 'linux'
-      },
       currentUser: {}
     });
     spy = jest.spyOn(store, 'dispatch');
