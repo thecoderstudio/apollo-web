@@ -31,6 +31,7 @@ const InnerContainer = styled.div`
   margin: 100px;
   grid-template-rows: [heading] 1fr [title] 1fr [content] 4fr;
   grid-template-columns: [img] 1fr [content] 1fr;
+
   ${
     media.phone`
       grid-template-columns: [content] 1fr;
@@ -54,6 +55,7 @@ const StyledCard = styled(Card)`
   grid-column: content;
   display: grid;
   align-items: center;
+
   ${
     media.phone`
       box-shadow: none;
@@ -75,6 +77,7 @@ const SupportingImg = styled.img`
   width: 75%;
   max-width: 800px;
   align-self: center;
+
   ${
     media.phone`
       grid-column: 1;
@@ -127,7 +130,6 @@ class Login extends React.Component {
             {!this.props.authenticated ? <div>Log in to Apollo</div> : <div>Change your password</div>}
            </Title>
           <StyledCard>
-<<<<<<< HEAD
             { !this.props.authenticated ?
               <Formik
                 initialValues={{ username: '', password: '' }}
@@ -156,33 +158,6 @@ class Login extends React.Component {
               </Formik>
               : <ChangePassword />
             }
-=======
-            <Formik
-              initialValues={{ username: '', password: '' }}
-              validationSchema={loginSchema}
-              validateOnChange={false}
-              onSubmit={this.login}>
-              {({ values, errors, handleChange, handleSubmit }) => (
-                <Form onSubmit={handleSubmit}>
-                  <Input
-                    name="username"
-                    type="username"
-                    placeholder="Username"
-                    value={values.username}
-                    error={errors.username}
-                    onChange={handleChange} />
-                  <Input
-                    name="password"
-                    type="password"
-                    placeholder="Password"
-                    value={values.password}
-                    error={errors.password}
-                    onChange={handleChange} />
-                  <Button>Log in</Button>
-                </Form>
-              )}
-            </Formik>
->>>>>>> f8680f97e611509008d2fd114dffd15fefef8d73
           </StyledCard>
         </InnerContainer>
       </OuterContainer>

@@ -1,6 +1,7 @@
 import * as Yup from 'yup';
 
 const requiredError = "Required";
+const minimalEightCharacters = "Min 8 characters";
 
 const createUserSchema = Yup.object().shape({
   username: Yup.string()
@@ -8,7 +9,7 @@ const createUserSchema = Yup.object().shape({
     .trim()
     .required(requiredError),
   password: Yup.string()
-    .min(8, "Min 8 characters")
+    .min(8, minimalEightCharacters)
     .trim()
     .required(requiredError),
   confirmPassword: Yup.string()
@@ -19,16 +20,15 @@ const createUserSchema = Yup.object().shape({
 
 const changePasswordSchema = Yup.object().shape({
 	oldPassword: Yup.string()
-    .min(8, "Min 8 characters")
     .trim()
     .required(requiredError),
   password: Yup.string()
-    .min(8, "Min 8 characters")
+    .min(8, minimalEightCharacters)
     .trim()
     .required(requiredError),
   passwordConfirm: Yup.string()
 		.oneOf([Yup.ref('password'), null], "Passwords don't match")
-    .min(8, "Min 8 characters")
+    .min(8, minimalEightCharacters)
     .trim()
     .required(requiredError)
 });
