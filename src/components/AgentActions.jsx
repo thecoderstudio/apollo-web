@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Action from './Action';
 
 const Container = styled.div`
-
+  width: 100%;
 `;
 
 const Title = styled.h1`
@@ -11,10 +11,7 @@ const Title = styled.h1`
 `;
 
 const Category = styled.div`
-
-`;
-
-const Subtitle = styled.h4`
+  width: 100%;
 `;
 
 class AgentActions extends React.PureComponent {
@@ -23,7 +20,7 @@ class AgentActions extends React.PureComponent {
       <Container className={this.props.className}>
         <Title>Start hacking</Title>
         <Category>
-          <Subtitle>Enumeration</Subtitle>
+          <h2>Enumeration</h2>
           <Action title="Run LinEnum">Local Linux enumeration and privilege escalation script</Action>
         </Category>
       </Container>

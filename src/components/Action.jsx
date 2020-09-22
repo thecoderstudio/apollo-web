@@ -1,11 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
+const propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
+};
 
 const Container = styled.div`
   display: grid;
   grid-template-columns: [image] 50px [content] 1fr;
   grid-template-rows: [title] 1fr [body] 1fr;
-  grid-column-gap: 40px;
+  grid-column-gap: 30px;
   align-items: center;
 `;
 
@@ -36,13 +42,16 @@ const Body = styled.p`
 `;
 
 function Action(props) {
+  const {title, children, ...rest} = props;
   return (
-    <Container>
+    <Container {...rest}>
       <Image className="material-icons">assessment</Image>
-      <Title>{props.title}</Title>
-      <Body>{props.children}</Body>
+      <Title>{title}</Title>
+      <Body>{children}</Body>
     </Container>
   );
 }
+
+Action.propTypes = propTypes;
 
 export default Action;

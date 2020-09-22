@@ -5,6 +5,7 @@ import Icon from '../components/Icon';
 import InlineTerminal from '../components/terminal/InlineTerminal';
 import AgentActions from '../components/AgentActions';
 import { getFontAwesomeClass } from '../util/agent';
+import media from '../util/media';
 
 const UNKNOWN = "unknown";
 
@@ -34,6 +35,12 @@ const Controls = styled.div`
 const Terminal = styled(InlineTerminal)`
   width: 100%;
   height: 400px;
+
+  ${
+    media.phone`
+      display: none;
+    `
+  }
 `;
 
 const OSIcon = styled(Icon)`
