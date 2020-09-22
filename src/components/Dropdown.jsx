@@ -100,6 +100,8 @@ class DropDown extends React.PureComponent {
   }
 
   renderItems() {
+    console.log(this.props.state)
+    console.log(this.props.selected)
     return this.props.options.map(option => {
       if (option === this.props.selected) { return; }
       return <DropDownItem key={option} onClick={() => this.selectItem(option)} >{option}</DropDownItem>;
@@ -123,6 +125,6 @@ class DropDown extends React.PureComponent {
 
 DropDown.propTypes = propTypes;
 
-export default connect()(DropDown);
+export default connect(state => ({state: state}))(DropDown);
 
 export { DropDown };

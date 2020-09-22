@@ -11,11 +11,16 @@ const initialState = {
 export default function addAgentReducer(state = initialState, action) {
   switch (action.type) {
     case SELECT_ARCHITECTURE:
-      state['selectedArchitecture'] = action.selectedArchitecture;
-      break;
+      return {
+        ...state,
+        selectedArchitecture: action.selectedArchitecture
+      }
     case SELECT_OPERATING_SYSTEM:
-      state['selectedOperatingSystem'] = action.selectedOperatingSystem;
-      break;
+      return {
+        ...state,
+        selectedOperatingSystem: action.selectedOperatingSystem
+      }
+    default:
+      return state;
   }
-  return state;
 }

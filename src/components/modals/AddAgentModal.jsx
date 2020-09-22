@@ -334,6 +334,7 @@ class AddAgentModal extends React.PureComponent {
   }
 
   getStepOneComponents() {
+    console.log(this.props)
     return(
       <div>
         <Formik
