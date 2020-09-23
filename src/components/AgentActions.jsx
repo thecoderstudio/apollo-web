@@ -34,7 +34,6 @@ class AgentActions extends React.PureComponent {
   render() {
     return (
       <Container className={this.props.className}>
-        <Title>Start hacking</Title>
         <Category>
           <h2>Enumeration</h2>
           <div>

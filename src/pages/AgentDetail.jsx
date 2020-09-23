@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import axios from 'axios';
 import Icon from '../components/Icon';
 import InlineTerminal from '../components/terminal/InlineTerminal';
+import { openTerminal } from '../components/terminal/Terminal';
 import AgentActions from '../components/AgentActions';
 import { getFontAwesomeClass } from '../util/agent';
 import { parseSnakeCaseObj } from '../util/parser';
@@ -37,7 +38,6 @@ const Controls = styled.div`
 
 const Terminal = styled(InlineTerminal)`
   width: 100%;
-  height: 400px;
 
   ${
     media.phone`
@@ -52,6 +52,20 @@ const OSIcon = styled(Icon)`
   cursor: inherit;
 `;
 
+const TerminalIcon = styled(Icon)`
+  margin-top: 16px;
+  width: 24px;
+  height: 24px;
+  color: ${props => props.active ? props.theme.primary: props.theme.inactive};
+  display: none;
+
+  ${
+    media.phone`
+      display: block;
+    `
+  }
+`;
+
 const Actions = styled(AgentActions)`
   margin-top: 150px;
 `;
@@ -60,6 +74,7 @@ class AgentDetail extends React.PureComponent {
   constructor(props) {
     super(props);
     this.getAgent = this.getAgent.bind(this);
+    this.openTerminal = this.openTerminal.bind(this);
 
     const { match: { params } } = this.props;
     this.state = {
@@ -92,13 +107,20 @@ class AgentDetail extends React.PureComponent {
     });
   }
 
-
   getOSIcon(os) {
     return os ? <OSIcon className={getFontAwesomeClass(os)} /> : null;
   }
 
+  openTerminal() {
+    if (this.state.agent.connectionState !== 'connected') {
+      return;
+    }
+    openTerminal(this.state.agent.id);
+  }
+
   render() {
     let agent = this.state.agent;
+    const connected = agent.connectionState == 'connected';
     return (
       <Wrapper>
         <Agent>
@@ -120,6 +142,7 @@ class AgentDetail extends React.PureComponent {
                 </tr>
               </tbody>
             </table>
+            <TerminalIcon active={connected} onClick={this.openTerminal} className="fas fa-terminal" />
           </Details>
           <Controls>
             <Terminal agent={this.state.agent} />

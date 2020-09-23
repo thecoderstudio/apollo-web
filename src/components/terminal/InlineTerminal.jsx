@@ -15,17 +15,23 @@ const Container = styled(Card)`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 300px;
+  height: 400px;
+`;
+
+const StyledTerminal = styled(Terminal)`
+  padding: 0px;
+  height: 400px;
 `;
 
 const ControlBar = styled.div`
   display: flex;
   margin: 16px;
+  height: 24px;
   flex-direction: row-reverse;
 `;
 
 const Disconnect = styled(Icon)`
-  color: ${props => props.theme.primary};
+  color: ${props => props.theme.error};
 `;
 
 class InlineTerminal extends React.PureComponent {
@@ -35,6 +41,7 @@ class InlineTerminal extends React.PureComponent {
     this.renderUnopenedTerminalState = this.renderUnopenedTerminalState.bind(this);
     this.openShell = this.openShell.bind(this);
     this.closeShell = this.closeShell.bind(this);
+    this.terminalRef = React.createRef();
     this.state = {
       openedShell: props.openedShell
     };
@@ -46,12 +53,16 @@ class InlineTerminal extends React.PureComponent {
         openedShell: this.props.openedShell
       });
     }
+
+    if(this.terminalRef.current) {
+      this.terminalRef.current.fit();
+    }
   }
 
   renderContents() {
     const connected = this.props.agent.connectionState == 'connected';
     if (connected && this.state.openedShell) {
-      return <Terminal agent={this.props.agent} />;
+      return <StyledTerminal ref={this.terminalRef} agent={this.props.agent} />;
     } else {
       return this.renderUnopenedTerminalState(connected);
     }
