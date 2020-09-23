@@ -1,13 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Welcome renders change password correctly 1`] = `
-.c4 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
-}
-
-.c9 {
+.c8 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -19,28 +13,28 @@ exports[`Welcome renders change password correctly 1`] = `
   cursor: pointer;
 }
 
-.c9:hover {
+.c8:hover {
   opacity: 0.90;
 }
 
-.c9:focus {
+.c8:focus {
   outline: none;
 }
 
-.c9:active {
+.c8:active {
   opacity: 0.80;
 }
 
-.c9:disabled:hover {
+.c8:disabled:hover {
   opacity: 1;
   cursor: auto;
 }
 
-.c7 {
+.c6 {
   height: 80px;
 }
 
-.c8 {
+.c7 {
   min-height: 50px;
   width: 100%;
   border: none;
@@ -52,11 +46,11 @@ exports[`Welcome renders change password correctly 1`] = `
   border: 1px solid transparent;
 }
 
-.c8:focus {
+.c7:focus {
   outline: none border:1px solid;
 }
 
-.c6 {
+.c5 {
   height: 75%;
   display: grid;
   grid-template-rows: auto;
@@ -89,7 +83,10 @@ exports[`Welcome renders change password correctly 1`] = `
   grid-column: content;
 }
 
-.c5 {
+.c4 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
   width: 100%;
   max-width: 400px;
   height: 350px;
@@ -121,7 +118,7 @@ exports[`Welcome renders change password correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c4 {
     box-shadow: none;
   }
 }
@@ -152,17 +149,17 @@ exports[`Welcome renders change password correctly 1`] = `
       </div>
     </h1>
     <div
-      className="c4 c5"
+      className="c4"
     >
       <form
-        className="c6"
+        className="c5"
         onSubmit={[Function]}
       >
         <div
-          className="c7"
+          className="c6"
         >
           <input
-            className="c8"
+            className="c7"
             name="username"
             onChange={[Function]}
             placeholder="Username"
@@ -171,10 +168,10 @@ exports[`Welcome renders change password correctly 1`] = `
           />
         </div>
         <div
-          className="c7"
+          className="c6"
         >
           <input
-            className="c8"
+            className="c7"
             name="password"
             onChange={[Function]}
             placeholder="Password"
@@ -183,7 +180,7 @@ exports[`Welcome renders change password correctly 1`] = `
           />
         </div>
         <button
-          className="c9"
+          className="c8"
         >
           Log in
         </button>
@@ -194,13 +191,7 @@ exports[`Welcome renders change password correctly 1`] = `
 `;
 
 exports[`Welcome renders login correctly 1`] = `
-.c4 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
-}
-
-.c9 {
+.c8 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -212,28 +203,28 @@ exports[`Welcome renders login correctly 1`] = `
   cursor: pointer;
 }
 
-.c9:hover {
+.c8:hover {
   opacity: 0.90;
 }
 
-.c9:focus {
+.c8:focus {
   outline: none;
 }
 
-.c9:active {
+.c8:active {
   opacity: 0.80;
 }
 
-.c9:disabled:hover {
+.c8:disabled:hover {
   opacity: 1;
   cursor: auto;
 }
 
-.c7 {
+.c6 {
   height: 80px;
 }
 
-.c8 {
+.c7 {
   min-height: 50px;
   width: 100%;
   border: none;
@@ -245,11 +236,11 @@ exports[`Welcome renders login correctly 1`] = `
   border: 1px solid transparent;
 }
 
-.c8:focus {
+.c7:focus {
   outline: none border:1px solid;
 }
 
-.c6 {
+.c5 {
   height: 75%;
   display: grid;
   grid-template-rows: auto;
@@ -282,7 +273,10 @@ exports[`Welcome renders login correctly 1`] = `
   grid-column: content;
 }
 
-.c5 {
+.c4 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
   width: 100%;
   max-width: 400px;
   height: 350px;
@@ -314,7 +308,7 @@ exports[`Welcome renders login correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c4 {
     box-shadow: none;
   }
 }
@@ -345,17 +339,17 @@ exports[`Welcome renders login correctly 1`] = `
       </div>
     </h1>
     <div
-      className="c4 c5"
+      className="c4"
     >
       <form
-        className="c6"
+        className="c5"
         onSubmit={[Function]}
       >
         <div
-          className="c7"
+          className="c6"
         >
           <input
-            className="c8"
+            className="c7"
             name="username"
             onChange={[Function]}
             placeholder="Username"
@@ -364,10 +358,10 @@ exports[`Welcome renders login correctly 1`] = `
           />
         </div>
         <div
-          className="c7"
+          className="c6"
         >
           <input
-            className="c8"
+            className="c7"
             name="password"
             onChange={[Function]}
             placeholder="Password"
@@ -376,7 +370,7 @@ exports[`Welcome renders login correctly 1`] = `
           />
         </div>
         <button
-          className="c9"
+          className="c8"
         >
           Log in
         </button>

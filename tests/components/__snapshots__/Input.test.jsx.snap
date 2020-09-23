@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+.c0 {
+  height: 80px;
+}
+
+.c1 {
+  min-height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+  border: 1px solid transparent;
+}
+
+.c1:focus {
+  outline: none border:1px solid;
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    placeholder="username"
+    type="username"
+  />
+</div>
+`;
