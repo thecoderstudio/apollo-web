@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import axios from 'axios';
 import waitForExpect from 'wait-for-expect';
 import { StatusCodes } from 'http-status-codes';
-import Login from '../../src/pages/Login';
+import Login, { Login as PlainLogin } from '../../src/components/authentication/Login';
 
 const mockStore = configureStore([]);
 jest.mock('axios');
@@ -35,14 +35,16 @@ describe('login', () => {
 
   it("handles successful login", async () => {
     const component = getComponent(store);
-    const root = component.root.findByProps({ authenticated: false });
+    const root = component.root.findByType(PlainLogin);
     const instance = root.instance;
 
     axios.post.mockResolvedValue({
       status: StatusCodes.OK
     });
+
     axios.get.mockResolvedValue({
-      status: StatusCodes.OK
+      status: StatusCodes.OK,
+      data: {}
     });
 
     root.findByProps({ type: 'username' }).props.onChange({
@@ -66,7 +68,7 @@ describe('login', () => {
 
   it("handles unsuccessful login", async () => {
     const component = getComponent(store);
-    const root = component.root.findByProps({ authenticated: false });
+    const root = component.root.findByType(PlainLogin);
     const instance = root.instance;
 
     axios.post.mockImplementationOnce(() => Promise.reject({
@@ -104,17 +106,5 @@ describe('login', () => {
     await waitForExpect(() => {
       expect(instance.props.dispatch).not.toHaveBeenCalled();
     });
-  });
-
-
-  it("correctly sets pathname on authentication", () => {
-    const component = getComponent(store);
-    const root = component.root.findByProps({ authenticated: false });
-    const instance = root.instance;
-    instance.componentDidUpdate();
-
-    instance.props = ({ authenticated: true });
-    instance.componentDidUpdate();
-    expect(window.location.pathname).toEqual("/");
   });
 });

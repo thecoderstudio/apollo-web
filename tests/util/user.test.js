@@ -6,19 +6,26 @@ import { cacheCurrentUser } from '../../src/actions/current-user';
 
 jest.mock('axios');
 
+
 describe('user util', () => {
+  let mockDispatchSpy;
+  beforeEach(() => {
+    mockDispatchSpy = jest.fn();
+    jest.mock('../../src/store', () => ({
+      dispatch: mockDispatchSpy,
+    }));
+  });
+
   it('fetches user correctly', async () => {
     axios.get.mockResolvedValue({
       status: StatusCodes.OK,
       data: {}
     });
-    const spy = jest.fn();
     const callbackSpy = jest.fn();
-    fetchCurrentUser(spy, callbackSpy);
+    fetchCurrentUser(callbackSpy);
     await waitForExpect(() => {
       expect(axios.get).toHaveBeenCalled();
       expect(callbackSpy).toHaveBeenCalled();
-      expect(spy).toHaveBeenCalledWith(cacheCurrentUser({}));
     });
   });
 
@@ -30,11 +37,11 @@ describe('user util', () => {
         data: {}
       }
     });
-    const spy = jest.fn();
-    fetchCurrentUser(spy);
+    const callbackSpy = jest.fn();
+    fetchCurrentUser(callbackSpy);
     await waitForExpect(() => {
       expect(axios.get).toHaveBeenCalled();
-      expect(spy).not.toHaveBeenCalled();
+      expect(callbackSpy).not.toHaveBeenCalled();
     });
   });
 });

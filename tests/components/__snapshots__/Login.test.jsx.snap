@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`change password renders correctly 1`] = `
+exports[`login renders correctly 1`] = `
 .c3 {
   max-height: 50px;
   padding: 12px;
@@ -51,12 +51,10 @@ exports[`change password renders correctly 1`] = `
 }
 
 .c0 {
-  width: 100%;
-}
-
-.c4 {
-  width: 100%;
-  margin-top: 15px;
+  height: 75%;
+  display: grid;
+  grid-template-rows: auto;
+  grid-row-gap: 40px;
 }
 
 <form
@@ -68,10 +66,10 @@ exports[`change password renders correctly 1`] = `
   >
     <input
       className="c2"
-      name="oldPassword"
+      name="username"
       onChange={[Function]}
-      placeholder="Current password"
-      type="password"
+      placeholder="Username"
+      type="username"
       value=""
     />
   </div>
@@ -82,28 +80,15 @@ exports[`change password renders correctly 1`] = `
       className="c2"
       name="password"
       onChange={[Function]}
-      placeholder="New password"
-      type="password"
-      value=""
-    />
-  </div>
-  <div
-    className="c1"
-  >
-    <input
-      className="c2"
-      name="passwordConfirm"
-      onChange={[Function]}
-      placeholder="Confirm new password"
+      placeholder="Password"
       type="password"
       value=""
     />
   </div>
   <button
-    className="c3 c4"
-    disabled={true}
+    className="c3"
   >
-    Change password
+    Log in
   </button>
 </form>
 `;

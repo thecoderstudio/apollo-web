@@ -31,13 +31,15 @@ class ChangePassword extends React.PureComponent {
       },
       { withCredentials: true }
 		)
-			.then(res => {
-        fetchCurrentUser(this.props.dispatch);
+			.then(_ => {
+        fetchCurrentUser();
       })
       .catch(error => {
         handleHTTPResponse(error.response, true, true);
         if (error.response.status === StatusCodes.BAD_REQUEST) {
-          setErrors(parseHTTPErrors(error.response.data, { detail: 'oldPassword' }));
+          setErrors(parseHTTPErrors(error.response.data, {
+            old_password: 'oldPassword', password_confirm: 'passwordConfirm'
+          }));
         }
       });
 	}

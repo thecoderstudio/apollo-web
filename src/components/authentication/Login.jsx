@@ -10,6 +10,7 @@ import loginSchema from '../../validation/login';
 import { login as loginAction } from '../../actions/auth';
 import { parseHTTPErrors } from '../../util/parser';
 import { handleHTTPResponse } from '../../actions/error';
+import { fetchCurrentUser } from '../../util/user';
 
 const Form = styled.form`
   height: 75%;
@@ -25,8 +26,8 @@ class Login extends React.PureComponent {
       credentials,
       { withCredentials: true }
     )
-      .then(res => {
-        fetchCurrentUser(this.props.dispatch, this.loginSuccessCallback);
+      .then(_ => {
+        fetchCurrentUser(this.loginSuccessCallback);
       })
       .catch(error => {
         handleHTTPResponse(error.response, true, true);
@@ -71,4 +72,6 @@ class Login extends React.PureComponent {
   }
 }
 
-export default connect()(Login)
+export default connect()(Login);
+
+export { Login };
