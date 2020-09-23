@@ -25,7 +25,7 @@ const StyledTerminal = styled(Terminal)`
 
 const ControlBar = styled.div`
   display: flex;
-  margin: 16px;
+  margin: 16px 0px 16px 16px;
   height: 24px;
   flex-direction: row-reverse;
 `;
@@ -93,7 +93,7 @@ class InlineTerminal extends React.PureComponent {
           {this.renderContents()}
         </Container>
         <ControlBar>
-          {this.state.openedShell && <Disconnect onClick={this.closeShell} className="material-icons">wifi_off</Disconnect>}
+          {this.state.openedShell && <Disconnect onClick={this.closeShell} className="material-icons">clear</Disconnect>}
         </ControlBar>
       </div>
     );
