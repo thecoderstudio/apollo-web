@@ -15,7 +15,7 @@ const propTypes = {
   agent: PropTypes.object.isRequired
 };
 
-const Container = styled(Link)`
+const Container = styled.li`
   display: grid;
   grid-template-columns: 1fr 1fr 175px;
   grid-column-gap: 10px;
@@ -51,7 +51,7 @@ const Controls = styled.div`
   }
 `;
 
-const Name = styled.div`
+const Name = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: start;
@@ -60,6 +60,10 @@ const Name = styled.div`
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+
+  :hover {
+    color: ${props => props.theme.primary};
+  }
 
   ${
     media.phone`
@@ -87,7 +91,6 @@ const TerminalIcon = styled(Icon)`
 
 const OSIcon = styled(Icon)`
   margin-right: 10px;
-  color: ${props => props.theme.white};
   cursor: inherit;
 `;
 
@@ -158,8 +161,8 @@ export default class AgentListItem extends React.PureComponent {
     let arch = this.props.agent.architecture;
 
     return (
-      <Container to={`/agent/${this.props.agent.id}`}>
-        <Name>
+      <Container>
+        <Name to={`/agent/${this.props.agent.id}`}>
           {this.getOSIcon(os, arch)}
           <p>{this.props.agent.name}</p>
         </Name>
