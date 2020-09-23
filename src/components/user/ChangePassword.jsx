@@ -45,7 +45,6 @@ class ChangePassword extends React.PureComponent {
   getButtonState = (values) => {
     if (values['password'] === '' || values['passwordConfirm'] === '' ||
         values['passwordConfirm'] === '') {
-      console.log("***")
       return true;
     }
     return false
@@ -61,7 +60,6 @@ class ChangePassword extends React.PureComponent {
         {({ values, errors, handleChange, handleSubmit }) => (
           <Form onSubmit={handleSubmit}>
             <Input
-              inverted
               name='oldPassword'
               placeholder='Current password'
               type='password'
@@ -70,7 +68,6 @@ class ChangePassword extends React.PureComponent {
               onChange={handleChange}
             />
             <Input
-              inverted
               name='password'
               type='password'
               placeholder='New password'
@@ -79,7 +76,6 @@ class ChangePassword extends React.PureComponent {
               onChange={handleChange}
             />
             <Input
-              inverted
               name='passwordConfirm'
               type='password'
               placeholder='Confirm new password'

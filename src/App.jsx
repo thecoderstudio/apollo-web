@@ -6,7 +6,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import NavBar from './components/NavBar';
 import Notifications from './components/notifications/Notifications';
 import Dashboard from './pages/Dashboard';
-import Login from './pages/Login';
+import Login from './pages/Welcome';
 import TerminalPage from './pages/TerminalPage';
 import Admin from './pages/Admin';
 import NotFound from './pages/NotFound';
