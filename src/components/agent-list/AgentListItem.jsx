@@ -15,9 +15,9 @@ const propTypes = {
   agent: PropTypes.object.isRequired
 };
 
-const Container = styled.li`
+const Container = styled(Link)`
   display: grid;
-  grid-template-columns: auto 100px 150px;
+  grid-template-columns: auto 100px 175px;
   grid-column-gap: 8px;
   align-items: center;
   justify-content: space-between;
@@ -53,7 +53,7 @@ const Controls = styled.div`
   }
 `;
 
-const Name = styled(Link)`
+const Name = styled.div`
   display: flex;
   align-items: center;
   justify-content: start;
@@ -167,8 +167,8 @@ export default class AgentListItem extends React.PureComponent {
     let arch = this.props.agent.architecture;
 
     return (
-      <Container>
-        <Name to={`/agent/${this.props.agent.id}`}>
+      <Container to={`/agent/${this.props.agent.id}`}>
+        <Name>
           {this.getOSIcon(os, arch)}
           <p>{this.props.agent.name}</p>
         </Name>
