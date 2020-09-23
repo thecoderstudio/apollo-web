@@ -7,8 +7,8 @@ const propTypes = {
 };
 
 const Indicator = styled.div`
-  height: 12px;
-  width: 12px;
+  min-height: 12px;
+  min-width: 12px;
   margin: 10px;
   border-radius: 50%;
 
