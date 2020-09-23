@@ -49,7 +49,8 @@ class ChangePassword extends React.PureComponent {
 	}
 
   getButton(errors, values) {
-    if ((values['password'] === '' && values['passwordConfirm'] === '') || Object.keys(errors).length !== 0) {
+    if (values['password'] === '' || values['passwordConfirm'] === '' ||
+        values['passwordConfirm'] === '') {
       return <StyledButton disabled>Change password</StyledButton>;
     }
     return <StyledButton type="submit">Change password</StyledButton>;
@@ -60,6 +61,7 @@ class ChangePassword extends React.PureComponent {
       <Formik
         initialValues={{ password: '', passwordConfirm: '', oldPassword: ''}}
         validationSchema={changePasswordSchema}
+        validateOnChange={false}
         onSubmit={this.changePassword}>
         {({ values, errors, handleChange, handleSubmit }) => (
           <Form onSubmit={handleSubmit}>
