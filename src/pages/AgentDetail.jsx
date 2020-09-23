@@ -40,6 +40,7 @@ const Detail = styled.td`
 const Controls = styled.div`
   grid-column: controls;
   width: 100%;
+  min-width: 0;
 `;
 
 const Terminal = styled(InlineTerminal)`
