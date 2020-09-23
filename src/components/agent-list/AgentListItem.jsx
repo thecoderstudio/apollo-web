@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Tippy from '@tippyjs/react';
+import Link from '../Link';
 import Icon from '../Icon';
 import ConnectionState from './ConnectionState';
 import { openTerminal } from '../terminal/Terminal';
@@ -14,7 +15,7 @@ const propTypes = {
   agent: PropTypes.object.isRequired
 };
 
-const Container = styled.li`
+const Container = styled(Link)`
   display: grid;
   grid-template-columns: 1fr 1fr 175px;
   grid-column-gap: 10px;
@@ -157,7 +158,7 @@ export default class AgentListItem extends React.PureComponent {
     let arch = this.props.agent.architecture;
 
     return (
-      <Container>
+      <Container to={`/agent/${this.props.agent.id}`}>
         <Name>
           {this.getOSIcon(os, arch)}
           <p>{this.props.agent.name}</p>

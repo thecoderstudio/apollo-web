@@ -1,10 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
+import axios from 'axios';
 import Icon from '../components/Icon';
 import InlineTerminal from '../components/terminal/InlineTerminal';
 import AgentActions from '../components/AgentActions';
 import { getFontAwesomeClass } from '../util/agent';
+import { parseSnakeCaseObj } from '../util/parser';
+import { handleHTTPResponse } from '../actions/error';
 import media from '../util/media';
 
 const UNKNOWN = "unknown";
@@ -56,10 +59,13 @@ const Actions = styled(AgentActions)`
 class AgentDetail extends React.PureComponent {
   constructor(props) {
     super(props);
+    this.getAgent = this.getAgent.bind(this);
+
     const { match: { params } } = this.props;
     this.state = {
       agent: this.props.agents.get(params.agentId)
     };
+    this.getAgent(params.agentId);
   }
 
   componentDidUpdate(prevProps) {
@@ -70,6 +76,22 @@ class AgentDetail extends React.PureComponent {
       });
     }
   }
+
+  getAgent(agentID) {
+    axios.get(
+      `${process.env.APOLLO_HTTP_URL}agent/${agentID}`,
+      { withCredentials: true }
+    )
+    .then(res => {
+      this.setState({
+        agent: parseSnakeCaseObj(res.data)
+      });
+    })
+    .catch(error => {
+      handleHTTPResponse(error.response);
+    });
+  }
+
 
   getOSIcon(os) {
     return os ? <OSIcon className={getFontAwesomeClass(os)} /> : null;
