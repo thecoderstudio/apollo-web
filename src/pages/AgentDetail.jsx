@@ -5,6 +5,7 @@ import axios from 'axios';
 import Icon from '../components/Icon';
 import InlineTerminal from '../components/terminal/InlineTerminal';
 import { openTerminal } from '../components/terminal/Terminal';
+import ConnectionIndicator from '../components/ConnectionIndicator';
 import AgentActions from '../components/AgentActions';
 import { getFontAwesomeClass } from '../util/agent';
 import { parseSnakeCaseObj } from '../util/parser';
@@ -21,6 +22,11 @@ const Agent = styled.div`
   display: grid;
   grid-template-columns: [detail] 1fr [controls] 1fr;
   max-width: 100%;
+`;
+
+const Name = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 const Details = styled.div`
@@ -125,7 +131,10 @@ class AgentDetail extends React.PureComponent {
       <Wrapper>
         <Agent>
           <Details>
-            <h1>{agent.name}</h1>
+            <Name>
+              <ConnectionIndicator connectionState={agent.connectionState} />
+              <h1>{agent.name}</h1>
+            </Name>
             <table>
               <tbody>
                 <tr>

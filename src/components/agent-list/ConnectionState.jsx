@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
+import ConnectionIndicator, { getColor } from '../ConnectionIndicator';
 
 const propTypes = {
   connectionState: PropTypes.string.isRequired
@@ -24,18 +25,10 @@ const Container = styled.div`
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 `;
 
-const Indicator = styled.div`
+const Indicator = styled(ConnectionIndicator)`
   grid-column: status-indicator;
-
-  height: 12px;
-  width: 12px;
-  margin: 10px;
-  border-radius: 50%;
-
   float: right;
   text-align: left;
-  color: ${props => props.connectionStateColor};
-  background-color: ${props => props.connectionStateColor};
 `;
 
 const StyledText = styled.p`
@@ -46,16 +39,14 @@ const StyledText = styled.p`
   margin-left: 15px;
   text-align: left;
 
-  color: ${props => props.connectionStateColor};
+  color: ${props => props.color};
 `;
 
 function ConnectionState(props) {
-  const connectionStateColor = getConnectionStateColor(props.connectionState, props.theme);
-
   return (
     <Container className={props.className}>
-      <Indicator connectionStateColor={connectionStateColor} />
-      <StyledText connectionStateColor={connectionStateColor}>
+      <Indicator connectionState={props.connectionState} />
+      <StyledText color={getColor(props.connectionState, props.theme)}>
         {props.connectionState.replace(/^\w/, (c) => c.toUpperCase())}
       </StyledText>
     </Container >
