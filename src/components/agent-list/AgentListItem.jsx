@@ -16,9 +16,7 @@ const propTypes = {
 };
 
 const Container = styled.li`
-  display: grid;
-  grid-template-columns: 1fr 1fr 175px;
-  grid-column-gap: 10px;
+  display: flex;
   align-content: center;
   align-items: center;
 
@@ -43,6 +41,7 @@ const Controls = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 250px;
 
   ${
     media.phone`
