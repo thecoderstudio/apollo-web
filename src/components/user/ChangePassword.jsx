@@ -49,7 +49,7 @@ class ChangePassword extends React.PureComponent {
         values['passwordConfirm'] === '') {
       return true;
     }
-    return false
+    return false;
   }
 
   render() {
