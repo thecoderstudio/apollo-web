@@ -24,6 +24,10 @@ const ControlBar = styled.div`
   flex-direction: row-reverse;
 `;
 
+const Disconnect = styled(Icon)`
+  color: ${props => props.theme.primary};
+`;
+
 class InlineTerminal extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -78,7 +82,7 @@ class InlineTerminal extends React.PureComponent {
           {this.renderContents()}
         </Container>
         <ControlBar>
-          <Icon onClick={this.closeShell} className="material-icons">wifi_off</Icon>
+          {this.state.openedShell && <Disconnect onClick={this.closeShell} className="material-icons">wifi_off</Disconnect>}
         </ControlBar>
       </div>
     );
