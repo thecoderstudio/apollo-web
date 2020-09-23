@@ -1,0 +1,232 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`create user renders correctly 1`] = `
+.c9 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c9:hover {
+  opacity: 0.90;
+}
+
+.c9:focus {
+  outline: none;
+}
+
+.c9:active {
+  opacity: 0.80;
+}
+
+.c9:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c10 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c6 {
+  height: 80px;
+}
+
+.c7 {
+  min-height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+  border: 1px solid transparent;
+}
+
+.c7:focus {
+  outline: none border:1px solid;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 450px;
+  width: 100%;
+  max-width: 400px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.c3 {
+  height: 100%;
+  max-height: 450px;
+  display: grid;
+  grid-template-rows: [title] 1fr [form ]4fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  grid-row: title;
+  text-align: center;
+}
+
+.c5 {
+  height: 95%;
+  grid-row: form;
+  display: grid;
+  grid-template-rows: auto;
+  grid-row-gap: 40px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.c8> button {
+  min-width: 150px;
+}
+
+@media (max-width:47.9375em) {
+  .c2 {
+    padding: 16px;
+    height: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c8 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+}
+
+<div
+  className="c0"
+  onClick={[Function]}
+>
+  <div
+    className="c1 c2"
+  >
+    <div
+      className="c3"
+    >
+      <h2
+        className="c4"
+      >
+        Create new user
+      </h2>
+      <form
+        className="c5"
+        onSubmit={[Function]}
+      >
+        <div
+          className="c6"
+        >
+          <input
+            className="c7"
+            name="username"
+            onChange={[Function]}
+            placeholder="Username"
+            type="username"
+            value=""
+          />
+        </div>
+        <div
+          className="c6"
+        >
+          <input
+            className="c7"
+            name="password"
+            onChange={[Function]}
+            placeholder="Password"
+            type="password"
+            value=""
+          />
+        </div>
+        <div
+          className="c6"
+        >
+          <input
+            className="c7"
+            name="confirmPassword"
+            onChange={[Function]}
+            placeholder="Confirm password"
+            type="password"
+            value=""
+          />
+        </div>
+        <div
+          className="c8"
+        >
+          <button
+            className="c9 c10"
+            onClick={[Function]}
+          >
+            Cancel
+          </button>
+          <button
+            className="c9"
+          >
+            Create user
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
