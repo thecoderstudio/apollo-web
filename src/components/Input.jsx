@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   error: PropTypes.string,
-  inverted: PropTypes.bool
 };
 
 const defaultProps = {
@@ -19,8 +18,6 @@ const Container = styled.div`
 const StyledInput = styled.input`
   min-height: 50px;
   width: 100%;
-  background: ${props => props.inverted ? props.theme.black: props.theme.white};
-  color: ${props => props.inverted ? props.theme.white : props.theme.black };
   border: none;
   border-radius: 5px;
   font-family: 'Libre Franklin', sans-serif;

@@ -31,7 +31,7 @@ describe('app', () => {
       agent: [],
       authenticated: true,
       currentUser: {
-        has_changed_initial_password: false
+        hasChangedInitialPassword: false
       },
       notifications: new Map({}),
     });
@@ -44,7 +44,7 @@ describe('app', () => {
       agent: [],
       authenticated: true,
       currentUser: {
-        has_changed_initial_password: true
+        hasChangedInitialPassword: true
       },
       notifications: new Map({}),
     });

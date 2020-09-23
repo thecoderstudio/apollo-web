@@ -50,7 +50,7 @@ describe("change password", () => {
     store = mockStore({
       currentUser: {
         id: '1',
-        has_changed_initial_password: false
+        hasChangedInitialPassword: false
       }
     });
     process.env = {

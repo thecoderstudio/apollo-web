@@ -21,13 +21,7 @@ const StyledButton = styled(Button)`
 `;
 
 class ChangePassword extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.getButton = this.getButton.bind(this);
-    this.changePassword = this.changePassword.bind(this);
-	}
-
-  changePassword(values, { setErrors }) {
+  changePassword = (values, { setErrors }) => {
 		axios.patch(
       `${process.env.APOLLO_HTTP_URL}user/me`,
       {
@@ -48,12 +42,13 @@ class ChangePassword extends React.PureComponent {
       });
 	}
 
-  getButton(errors, values) {
+  getButtonState = (values) => {
     if (values['password'] === '' || values['passwordConfirm'] === '' ||
         values['passwordConfirm'] === '') {
-      return <StyledButton disabled>Change password</StyledButton>;
+      console.log("***")
+      return true;
     }
-    return <StyledButton type="submit">Change password</StyledButton>;
+    return false
   }
 
   render() {
@@ -70,7 +65,7 @@ class ChangePassword extends React.PureComponent {
               name='oldPassword'
               placeholder='Current password'
               type='password'
-              value={values.oldPssword}
+              value={values.oldPassword}
               error={errors.oldPassword}
               onChange={handleChange}
             />
@@ -92,7 +87,7 @@ class ChangePassword extends React.PureComponent {
               error={errors.passwordConfirm}
               onChange={handleChange}
             />
-            { this.getButton(errors, values) }
+            <StyledButton disabled={this.getButtonState(values) }>Change password</StyledButton>
           </Form>
         )}
       </Formik>

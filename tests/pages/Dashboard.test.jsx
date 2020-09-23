@@ -28,7 +28,7 @@ describe('dashboard', () => {
         role: {
           name: 'admin'
         },
-        has_changed_initial_password: false
+        hasChangedInitialPassword: false
       },
       authenticated: true,
     });
@@ -43,7 +43,7 @@ describe('dashboard', () => {
         role: {
           name: 'admin'
         },
-        has_changed_initial_password: true
+        hasChangedInitialPassword: true
       },
       authenticated: true,
     });

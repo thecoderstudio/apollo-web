@@ -63,6 +63,6 @@ function App(props) {
 export default connect(
   state => ({
     authenticated: state.authenticated,
-    hasChangedPassword: state.currentUser.has_changed_initial_password,
+    hasChangedPassword: state.currentUser.hasChangedInitialPassword,
   })
 )(App);

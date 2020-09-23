@@ -27,7 +27,7 @@ describe('ProtectedRoute', () => {
     store = mockStore({
       authenticated: false,
       currentUser: {
-        has_changed_initial_password: true
+        hasChangedInitialPassword: true
       }
     });
   });
@@ -44,7 +44,7 @@ describe('ProtectedRoute', () => {
     store = mockStore({
       authenticated: true,
       currentUser: {
-        has_changed_initial_password: true
+        hasChangedInitialPassword: true
       }
     });
 
@@ -59,7 +59,7 @@ describe('ProtectedRoute', () => {
     store = mockStore({
       authenticated: true,
       currentUser: {
-        has_changed_initial_password: false
+        hasChangedInitialPassword: false
       }
     });
 
@@ -75,7 +75,7 @@ describe('ProtectedRoute', () => {
         role: {
           name: 'admin'
         },
-        has_changed_initial_password: true
+        hasChangedInitialPassword: true
       }
     });
 
@@ -91,7 +91,7 @@ describe('ProtectedRoute', () => {
         username: 'admin',
         role: null
       },
-      has_changed_initial_password: true
+      hasChangedInitialPassword: true
     });
 
     const tree = getComponent(store, 'admin').toJSON();
