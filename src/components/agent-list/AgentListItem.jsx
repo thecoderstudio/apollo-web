@@ -16,16 +16,19 @@ const propTypes = {
 };
 
 const Container = styled.li`
-  display: flex;
-  align-content: center;
+  display: grid;
+  grid-template-columns: auto 100px 150px;
+  grid-column-gap: 8px;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 
+  box-sizing: border-box;
   border-radius: 8px;
   border: 1px solid white;
 
-  height: 30px;
   line-height: 30px;
-  padding: 15px 20px;
+  padding: 5px 20px;
   margin-top: 25px;
 
   ${
@@ -41,7 +44,7 @@ const Controls = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 250px;
+  min-width: 0;
 
   ${
     media.phone`
@@ -54,11 +57,14 @@ const Name = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: start;
-  width: 50%;
+  width: 100%;
+  min-width: 0;
 
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+  p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
 
   :hover {
     color: ${props => props.theme.primary};
@@ -74,7 +80,7 @@ const Name = styled(Link)`
 `;
 
 const IPAddress = styled.p`
-  width: 50%;
+  min-width: 0;
 
   ${
     media.phone`
@@ -86,6 +92,7 @@ const IPAddress = styled.p`
 
 const TerminalIcon = styled(Icon)`
   color: ${props => props.active ? props.theme.white : props.theme.inactive};
+  margin-left: 16px;
 `;
 
 const OSIcon = styled(Icon)`

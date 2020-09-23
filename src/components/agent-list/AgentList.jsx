@@ -8,6 +8,8 @@ import { handleError } from '../../actions/error';
 const Content = styled.div`
   display: grid;
   grid-template-rows: [title] 50px [list] 1fr;
+  width: 100%;
+  min-width: 0;
 
   background-color: ${props => props.theme.lightBlack};
   border-radius: 8px;
@@ -16,12 +18,17 @@ const Content = styled.div`
 
 const ListTitle = styled.h2`
   grid-row: title;
+  width: 100%;
+  min-width: 0;
 `;
 
 const List = styled.ul`
+  width: 100%;
+  min-width: 0;
   grid-row: list;
   list-style: none;
   padding-left: 0;
+
 `;
 
 class AgentList extends React.Component {
