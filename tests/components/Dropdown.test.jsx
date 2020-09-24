@@ -1,17 +1,15 @@
 import React from 'react';
 import configureStore from 'redux-mock-store';
-import { Provider } from 'react-redux';
 import waitForExpect from 'wait-for-expect';
 import renderer from 'react-test-renderer';
-import DropDown, { DropDown as PlainDropDown } from "../../src/components/Dropdown";
+import Dropdown from "../../src/components/Dropdown";
 
 const mockStore = configureStore([]);
 
 function getComponent(store, props, mockReturnValue=false) {
   return renderer.create(
-    <Provider  store={store}>
-      <DropDown {...props} />
-    </Provider>, {
+      <Dropdown {...props} />
+    , {
       createNodeMock: (_) => {
         return {
           contains: (_) => {
@@ -55,7 +53,7 @@ describe('Dropdown', () => {
     const root = component.root;
     root.findByProps({ id: 'dropdown' }).props.onClick();
     component.toJSON();
-    root.findByType(PlainDropDown).instance.closeDropdown({ target: "test" });
+    root.findByType(Dropdown).instance.closeDropdown({ target: "test" });
     component.toJSON();
     expect(root.findAllByProps({ collapsed: true }).length).toBe(2);
   });
@@ -65,7 +63,7 @@ describe('Dropdown', () => {
     const root = component.root;
     root.findByProps({ id: 'dropdown' }).props.onClick();
     component.toJSON();
-    root.findByType(PlainDropDown).instance.closeDropdown({ target: "test" });
+    root.findByType(Dropdown).instance.closeDropdown({ target: "test" });
     component.toJSON();
     expect(root.findAllByProps({ collapsed: true }).length).toBe(0);
   });
@@ -76,7 +74,7 @@ describe('Dropdown', () => {
     const dropDown = root.findByProps({ id: 'dropdown' })
     dropDown.props.onClick();
     component.toJSON();
-    root.findByType(PlainDropDown).instance.closeDropdown({ target: "test" });
+    root.findByType(Dropdown).instance.closeDropdown({ target: "test" });
 
     component.toJSON();
     expect(root.findAllByProps({ collapsed: true }).length).toBe(0);
@@ -88,7 +86,7 @@ describe('Dropdown', () => {
     component.root.findByType('ul').children[0].props.onClick();
 
     await waitForExpect(() => {
-      expect(spy).toHaveBeenCalled('2');
+      expect(spy).toHaveBeenCalledWith('2');
     });
   });
 

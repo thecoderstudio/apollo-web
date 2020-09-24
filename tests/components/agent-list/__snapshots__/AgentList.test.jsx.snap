@@ -1,12 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`agentList correctly lists multiple agents 1`] = `
-.c8 {
+.c5 {
+  cursor: pointer;
+}
+
+.c9 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
 
-.c9 {
+.c10 {
   grid-column: status-indicator;
   height: 12px;
   width: 12px;
@@ -18,7 +22,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
   background-color: #27AE60;
 }
 
-.c10 {
+.c11 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -47,7 +51,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
   margin-top: 25px;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -81,17 +85,15 @@ exports[`agentList correctly lists multiple agents 1`] = `
   overflow: hidden;
 }
 
-.c6 {
+.c7 {
   width: 50%;
 }
 
-.c11 {
-  cursor: pointer;
+.c12 {
   color: #F8F8F8;
 }
 
-.c5 {
-  cursor: pointer;
+.c6 {
   margin-right: 10px;
   color: #F8F8F8;
   cursor: inherit;
@@ -129,7 +131,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c8 {
     width: 100%;
   }
 }
@@ -146,7 +148,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c7 {
     width: 100%;
     text-align: center;
   }
@@ -170,7 +172,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
         className="c4"
       >
         <i
-          className="c5 fas fa-question-circle"
+          className="c5 c6 fas fa-question-circle"
         />
         Operating system unkown
         <p>
@@ -178,26 +180,26 @@ exports[`agentList correctly lists multiple agents 1`] = `
         </p>
       </div>
       <p
-        className="c6"
+        className="c7"
       />
       External IP address
       <div
-        className="c7"
+        className="c8"
       >
         <div
-          className="c8"
+          className="c9"
         >
           <div
-            className="c9"
+            className="c10"
           />
           <p
-            className="c10"
+            className="c11"
           >
             Connected
           </p>
         </div>
         <i
-          className="c11 fas fa-terminal"
+          className="c5 c12 fas fa-terminal"
           onClick={[Function]}
         />
       </div>
@@ -209,7 +211,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
         className="c4"
       >
         <i
-          className="c5 fas fa-question-circle"
+          className="c5 c6 fas fa-question-circle"
         />
         Operating system unkown
         <p>
@@ -217,26 +219,26 @@ exports[`agentList correctly lists multiple agents 1`] = `
         </p>
       </div>
       <p
-        className="c6"
+        className="c7"
       />
       External IP address
       <div
-        className="c7"
+        className="c8"
       >
         <div
-          className="c8"
+          className="c9"
         >
           <div
-            className="c9"
+            className="c10"
           />
           <p
-            className="c10"
+            className="c11"
           >
             Connected
           </p>
         </div>
         <i
-          className="c11 fas fa-terminal"
+          className="c5 c12 fas fa-terminal"
           onClick={[Function]}
         />
       </div>

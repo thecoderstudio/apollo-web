@@ -68,7 +68,7 @@ const DropDownIcon = styled.div`
   transition: transform 0.3s;
 `;
 
-class DropDown extends React.PureComponent {
+class Dropdown extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = { collapsed: true };
@@ -116,8 +116,6 @@ class DropDown extends React.PureComponent {
   }
 }
 
-DropDown.propTypes = propTypes;
+Dropdown.propTypes = propTypes;
 
-export default connect()(DropDown);
-
-export { DropDown };
+export default Dropdown;

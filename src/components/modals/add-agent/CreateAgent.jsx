@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Formik } from 'formik';
 import { StatusCodes } from 'http-status-codes';
 import PropTypes from 'prop-types';
-import DropDown from '../../Dropdown';
+import Dropdown from '../../Dropdown';
 import LoadingButton from '../../buttons/LoadingButton';
 import Input from '../../Input';
 import OutlinedButton from '../../buttons/OutlinedButton';
@@ -13,7 +13,6 @@ import { parseHTTPErrors } from '../../../util/parser';
 import { handleHTTPResponse } from '../../../actions/error';
 import media from '../../../util/media';
 import NewAgentHandler from "../../../lib/NewAgentHandler";
-
 
 const propTypes = {
   createAgentSuccessCallback: PropTypes.func.isRequired,
@@ -58,7 +57,7 @@ const InputFieldWrapper = styled.div`
   }
 `;
 
-const StyledDropDown = styled(DropDown)`
+const StyledDropDown = styled(Dropdown)`
   width: 200px;
   float: right;
 

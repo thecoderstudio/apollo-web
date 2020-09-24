@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import ModalOverlay from '../modals/ModalOverlay';
-import DescriptionButton from '../buttons/DescriptionButton';
-import Card from '../Card';
-import NewAgentHandler from "../../lib/NewAgentHandler";
+import ModalOverlay from '../ModalOverlay';
+import DescriptionButton from '../../buttons/DescriptionButton';
+import Card from '../../Card';
+import NewAgentHandler from "../../../lib/NewAgentHandler";
 import PropTypes from 'prop-types';
-import media from '../../util/media';
+import media from '../../../util/media';
 import AddAgent from '../add-agent/AddAgent';
 import CreateAgent from '../add-agent/CreateAgent';
 

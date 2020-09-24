@@ -4,15 +4,14 @@ import waitForExpect from 'wait-for-expect';
 import axios from 'axios';
 import { StatusCodes } from 'http-status-codes';
 import renderer from 'react-test-renderer';
-import CreateAgent from '../../../src/components/modals/agg-agent/CreateAgent';
+import CreateAgent from '../../../../src/components/modals/add-agent/CreateAgent';
 import NewAgentHandler from '../../../../src/lib/NewAgentHandler';
 
-const mockStore = configureStore([]);
 jest.mock('axios');
 
-function getComponent(store, spy=jest.fn()) {
+function getComponent(spy, callbackSpy) {
   return renderer.create(
-    <CreateAgent onClose={spy}/>
+    <CreateAgent onClose={spy} createAgentSuccessCallback={callbackSpy}/>
   );
 }
 
@@ -30,17 +29,21 @@ function submitForm(root, name) {
 
 describe('create Agent', () => {
   let spy;
+  let callbackSpy;
+
+  beforeEach(() => {
+    spy = jest.fn();
+    callbackSpy = jest.fn();
+  });
 
   it('renders correctly', () => {
-    const tree = getComponent(store).toJSON();
+    const tree = getComponent(spy, callbackSpy).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('closes modal correctly', async () => {
-    const component = getComponent(store, spy);
+    const component = getComponent(spy, callbackSpy)
     const instance = component.root;
-    instance.findByProps({ id: 'directlyButton' }).props.onClick();
-    component.toJSON();
     instance.findByProps({ id: 'closeButton' }).props.onClick();
     expect(component.toJSON()).toMatchSnapshot();
 
@@ -50,13 +53,11 @@ describe('create Agent', () => {
   });
 
   it('validates input', async () => {
-    const component = getComponent(store);
+    const component= getComponent(spy, callbackSpy);
     const instance = component.root;
-    instance.findByProps({ id: 'directlyButton' }).props.onClick();
-    component.toJSON();
 
     submitForm(instance, '');
-    submitForm(instance, new Array(102).join( 'x' ));
+    submitForm(instance, new Array(102).join('x'));
 
     await waitForExpect(() => {
       expect(axios.post).not.toHaveBeenCalled();
@@ -69,9 +70,14 @@ describe('create Agent', () => {
       data: { id: 'test', oauth_client: { secret: 'test' } }
     });
 
-    const component = getFinalPageComponent(store, 'directlyButton');
+    const component = getComponent(spy, callbackSpy);
+    const instance = component.root;
+
+    submitForm(instance, 'newAgent');
+
     await waitForExpect(() => {
-      expect(component.toJSON()).toMatchSnapshot();
+      expect(axios.post).toHaveBeenCalled();
+      expect(callbackSpy).toHaveBeenCalled();
     });
   });
 
@@ -84,7 +90,15 @@ describe('create Agent', () => {
       }
     }));
 
-    getFinalPageComponent(store, 'directlyButton');
+    axios.post.mockResolvedValue({
+      status: 200,
+      data: { id: 'test', oauth_client: { secret: 'test' } }
+    });
+
+    const component = getComponent(spy, callbackSpy);
+    const instance = component.root;
+
+    submitForm(instance, 'newAgent');
 
     axios.post.mockImplementationOnce(() => Promise.reject({
       response: {
@@ -94,32 +108,11 @@ describe('create Agent', () => {
       }
     }));
 
-    getFinalPageComponent(store, 'directlyButton');
+    submitForm(instance, 'newAgent');
 
     await waitForExpect(() => {
       expect(axios.post).toHaveBeenCalledTimes(2);
-    });
-  });
-
-  it('calls download file correctly', async () => {
-    axios.post.mockResolvedValue({
-      status: 200,
-      data: { id: 'test', oauth_client: { secret: 'test' } }
-    });
-
-    const spy = jest.spyOn(NewAgentHandler.prototype, 'downloadFile').mockImplementation(() => { return; });
-    const component = getFinalPageComponent(store, 'manualButton');
-    const instance = component.root;
-    component.toJSON();
-
-    axios.get.mockResolvedValue({
-      status: 200,
-      data: ''
-    });
-
-    await waitForExpect(() => {
-      instance.findByProps({ id: 'downloadBinaryButton' }).props.onClick();
-      expect(spy).toHaveBeenCalled();
+      expect(callbackSpy).not.toHaveBeenCalled()
     });
   });
 });
