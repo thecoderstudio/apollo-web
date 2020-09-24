@@ -48,12 +48,6 @@ class InlineTerminal extends React.PureComponent {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.openedShell !== this.props.openedShell) {
-      this.setState({
-        openedShell: this.props.openedShell
-      });
-    }
-
     if(this.terminalRef.current) {
       this.terminalRef.current.fit();
     }
