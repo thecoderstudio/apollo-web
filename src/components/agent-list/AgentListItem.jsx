@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Tippy from '@tippyjs/react';
 import Link from '../Link';
 import Icon from '../Icon';
-import ConnectionState from './ConnectionState';
+import ConnectionState from '../connection-state/ConnectionState';
 import { openTerminal } from '../terminal/Terminal';
 import TerminalWindow from '../terminal/TerminalWindow';
 import MobileChecker from '../../util/MobileChecker';

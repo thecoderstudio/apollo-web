@@ -5,7 +5,7 @@ import axios from 'axios';
 import Icon from '../components/Icon';
 import InlineTerminal from '../components/terminal/InlineTerminal';
 import { openTerminal } from '../components/terminal/Terminal';
-import ConnectionIndicator from '../components/ConnectionIndicator';
+import ConnectionIndicator from '../components/connection-state/ConnectionIndicator';
 import AgentActions from '../components/AgentActions';
 import { getFontAwesomeClass } from '../util/agent';
 import { parseSnakeCaseObj } from '../util/parser';
