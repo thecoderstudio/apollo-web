@@ -12,6 +12,7 @@ exports[`connectionState Gets correct color 1`] = `
 
 <p
   className="c0"
+  color={null}
 >
   Blanko
 </p>

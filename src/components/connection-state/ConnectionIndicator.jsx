@@ -25,7 +25,7 @@ export function getColor(connectionState, theme) {
     case 'disconnected':
       return theme.disconnectedColor;
     default:
-      return;
+      return null;
   }
 }
 

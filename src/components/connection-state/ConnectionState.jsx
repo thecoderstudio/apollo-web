@@ -7,19 +7,6 @@ const propTypes = {
   connectionState: PropTypes.string.isRequired
 };
 
-const getConnectionStateColor = (connectionState, theme) => {
-  switch (connectionState) {
-    case 'connecting':
-      return theme.connectingColor;
-    case 'connected':
-      return theme.connectedColor;
-    case 'disconnected':
-      return theme.disconnectedColor;
-    default:
-      return;
-  }
-};
-
 const Container = styled.div`
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
