@@ -127,6 +127,7 @@ class AddAgentModal extends React.PureComponent {
 
   render = () => {
     let content;
+    console.log(this.state);
     if (this.state.manualUpload == null) {
      content = this.renderQuestion();
     } else if (!this.state.agentCreated) {
@@ -139,6 +140,7 @@ class AddAgentModal extends React.PureComponent {
           selectedOperatingSystem={this.state.selectedOperatingSystem}
           selectedArchitecture={this.state.selectedArchitecture} />
       );
+      console.log(content)
     }
     return (
       <ModalOverlay closeModalFunction={this.props.onClose}>

@@ -1,5 +1,203 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`add Agent Modal renders add agent correctly 1`] = `
+.c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.c7 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c7:hover {
+  opacity: 0.90;
+}
+
+.c7:focus {
+  outline: none;
+}
+
+.c7:active {
+  opacity: 0.80;
+}
+
+.c8 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c9 {
+  display: grid;
+  grid-template-rows: [title] 50px [description] 1fr;
+  padding: 20px;
+  min-height: 180px;
+}
+
+.c11 {
+  grid-row: title;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c12 {
+  grid-row: description;
+  padding: 10px;
+  font-size: 0.85rem;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.c2 {
+  display: grid;
+  grid-template-rows: [title] 50px [content] 1fr;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+}
+
+.c3 {
+  grid-row: title;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c4 {
+  grid-row: content;
+  padding: 20px;
+}
+
+.c5 {
+  display: grid;
+  grid-template-columns: [column-one] 50% [column-two] 50%;
+  margin: 20px 0px 20px 0px;
+}
+
+.c6 {
+  grid-column: column-one;
+  margin-right: 10px;
+}
+
+.c13 {
+  grid-column: column-two;
+  margin-left: 10px;
+}
+
+.c10 {
+  width: 100%;
+}
+
+@media (max-width:47.9375em) {
+  .c5 {
+    grid-template-columns: [column-one] 100%;
+    grid-template-rows: [row-one] 1fr [row-two] 1fr;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c6 {
+    grid-row: row-one;
+    margin-right: 0px;
+    margin: 15px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c13 {
+    grid-column: column-one;
+    grid-row: row-two;
+    margin-left: 0px;
+    margin: 15px;
+  }
+}
+
+<div
+  className="c0"
+  onClick={[Function]}
+>
+  <div
+    className="c1 c2"
+  >
+    <h2
+      className="c3"
+    >
+      Add new agent
+    </h2>
+    <div
+      className="c4"
+    >
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        >
+          <button
+            className="c7 c8 c9 c10"
+            onClick={[Function]}
+          >
+            <h3
+              className="c11"
+            >
+              Directly on target machine.
+            </h3>
+            <p
+              className="c12"
+            >
+              You have the correct permissions to download the binary directly on the target machine.
+            </p>
+          </button>
+        </div>
+        <div
+          className="c13"
+        >
+          <button
+            className="c7 c8 c9 c10"
+            onClick={[Function]}
+          >
+            <h3
+              className="c11"
+            >
+              Manual upload
+            </h3>
+            <p
+              className="c12"
+            >
+              You download and upload the binary yourself.
+            </p>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`add Agent Modal renders correctly 1`] = `
 .c0 {
   display: inline;

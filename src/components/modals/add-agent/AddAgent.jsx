@@ -122,7 +122,6 @@ class AddAgent extends React.PureComponent {
       },
     )
       .then(response => {
-        console.log("**********")
         this.newAgentHandler.downloadFile(response.data);
       })
       .catch(error => {

@@ -39,7 +39,14 @@ describe('add Agent Modal', () => {
   it('selects manual correctly', () => {
     const component = getComponent();
     const instance = component.root;
+
     instance.findByProps({ id: 'manualButton' }).props.onClick();
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+
+  it('renders add agent correctly', () => {
+    const component = getComponent();
+    component.root.findByType(AddAgentModal).instance.setState({manualUpload: true, agentCreated: true});
     expect(component.toJSON()).toMatchSnapshot();
   });
 });
