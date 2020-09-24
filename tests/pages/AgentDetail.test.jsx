@@ -34,7 +34,11 @@ function getComponent(agent) {
 
 describe("agent detail", () => {
   const defaultAgent = {
-    'id': 'fakeid'
+    'id': 'fakeid',
+    'name': 'agentName',
+    'architecture': 'amd64',
+    'connectionState': 'disconnected',
+    'operatingSystem': 'darwin'
   }
 
   it("renders correctly", () => {
