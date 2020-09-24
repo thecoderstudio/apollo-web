@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Action from './Action';
-import media from '../util/media';
+import media from '../../util/media';
 
 const Container = styled.div`
   width: 100%;
