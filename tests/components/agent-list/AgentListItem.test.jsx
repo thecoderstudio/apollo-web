@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import { ThemeProvider } from 'styled-components';
 import WS from 'jest-websocket-mock';
@@ -13,13 +14,15 @@ function getComponentTags(connectionState, operatingSystem) {
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
-        <AgentListItem agent={{
-          id: "fakeid",
-          name: "agentName",
-          architecture: "amd64",
-          connectionState,
-          operatingSystem
-        }} />
+        <BrowserRouter>
+          <AgentListItem agent={{
+            id: "fakeid",
+            name: "agentName",
+            architecture: "amd64",
+            connectionState,
+            operatingSystem
+          }} />
+        </BrowserRouter>
       </ThemeProvider>
     </div>
   );
