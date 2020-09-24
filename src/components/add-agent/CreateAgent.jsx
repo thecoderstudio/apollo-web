@@ -165,7 +165,6 @@ class CreateAgent extends React.PureComponent {
 
   selectOperatingSystem = (value) => {
     this.setState({ selectedOperatingSystem: value });
-    this.props
   };
 
   render() {

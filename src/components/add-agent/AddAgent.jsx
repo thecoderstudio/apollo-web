@@ -2,15 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import PropTypes from 'prop-types';
-import CreateAgent from './CreateAgent';
 import media from '../../util/media';
 import OutlinedButton from '../buttons/OutlinedButton';
 import LoadingButton from '../buttons/LoadingButton';
 import CopyToClipboard from '../CopyToClipboard';
 import NewAgentHandler from "../../lib/NewAgentHandler";
+import { handleHTTPResponse } from '../../actions/error';
 
 const propTypes = {
   manualUpload: PropTypes.bool.isRequired,
+  selectedArchitecture: PropTypes.string.isRequired,
+  selectedOperatingSystem: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired
 };
 
@@ -101,23 +103,20 @@ class AddAgent extends React.PureComponent {
 	constructor(props) {
     super(props);
     this.newAgentHandler = new NewAgentHandler();
-		this.state = {
-      agentCreated: false,
-      selectedArchitecture: null,
-      selectedOperatingSystem: null
-		};
+    this.state = {
+      loading: false
+    }
 	}
 
 	downloadBinary = () => {
     this.setState({ loading: true });
-    console.log(this.state);
     axios.get(
       `${process.env.APOLLO_HTTP_URL}agent/download`,
       {
         withCredentials: true,
         params: {
-          target_os: this.state.selectedOperatingSystem,
-          target_arch: this.state.selectedArchitecture
+          target_os: this.props.selectedOperatingSystem,
+          target_arch: this.props.selectedArchitecture
         },
         responseType: 'arraybuffer'
       },
@@ -126,20 +125,11 @@ class AddAgent extends React.PureComponent {
         this.newAgentHandler.downloadFile(response.data);
       })
       .catch(error => {
-        console.log(error);
-        console.log(error.response)
+        handleHTTPResponse(error.response, true, false);
       })
       .finally(_ => {
         this.setState({loading: false});
       });
-  };
-
-  selectArchitecture = (value) => {
-    this.setState({ selectedArchitecture: value })
-  };
-
-  selectOperatingSystem = (value) => {
-    this.setState({ selectedOperatingSystem: value });
   };
 
   getCopyToClipboardComponents = (command) => {
@@ -153,16 +143,6 @@ class AddAgent extends React.PureComponent {
 			 </ThreeRowDisplay>
 		 );
 	 }
-
-	createAgentSuccessCallback = (response, architecure, operatingSystem) => {
-		this.setState({
-      agentCreated: true,
-			agentId: response.data['id'],
-      secret: response.data['oauth_client']['secret'],
-      selectedOperatingSystem: operatingSystem,
-      selectedArchitecture: architecure
-    });
-	};
 
 	getCommand = () => {
 		let command;
@@ -180,33 +160,26 @@ class AddAgent extends React.PureComponent {
   render() {
     return (
 			<div>
-				{this.state.agentCreated ?
-					<div>
-						{this.props.manualUpload &&
-							<TwoColumnGrid>
-								<ColumnOne>
-									Download the binary and upload it to the target machine.
-								</ColumnOne>
-								<ColumnTwo>
-									<DownloadBinaryButton id='downloadBinaryButton' loading={this.state.loading} onClick={this.downloadBinary}>
-										Download binary
-									</DownloadBinaryButton>
-								</ColumnTwo>
-							</TwoColumnGrid>
-						}
+        {this.props.manualUpload &&
+          <TwoColumnGrid>
+            <ColumnOne>
+              Download the binary and upload it to the target machine.
+            </ColumnOne>
+            <ColumnTwo>
+              <DownloadBinaryButton id='downloadBinaryButton' loading={this.state.loading} onClick={this.downloadBinary}>
+                Download binary
+              </DownloadBinaryButton>
+            </ColumnTwo>
+          </TwoColumnGrid>
+        }
 
-						<ThreeRowDisplay>
-							<Description>
-								Copy and run the command on the target machine to download run the client.
-							</Description>
-							<StyledCopyToClipboard id='copytoclip' text={this.getCommand()} />
-							<CloseButton id='closeButton' onClick={this.props.onClose}>Close</CloseButton>
-						</ThreeRowDisplay>
-
-					</div>
-          :
-          <CreateAgent createAgentSuccessCallback={this.createAgentSuccessCallback} />
-				}
+        <ThreeRowDisplay>
+          <Description>
+            Copy and run the command on the target machine to download run the client.
+          </Description>
+          <StyledCopyToClipboard id='copytoclip' text={this.getCommand()} />
+          <CloseButton id='closeButton' onClick={this.props.onClose}>Close</CloseButton>
+        </ThreeRowDisplay>
 			</div>
     );
   }

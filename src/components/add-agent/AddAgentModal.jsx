@@ -7,6 +7,7 @@ import NewAgentHandler from "../../lib/NewAgentHandler";
 import PropTypes from 'prop-types';
 import media from '../../util/media';
 import AddAgent from '../add-agent/AddAgent';
+import CreateAgent from '../add-agent/CreateAgent';
 
 const propTypes = {
   onClose: PropTypes.func.isRequired
@@ -87,6 +88,7 @@ class AddAgentModal extends React.PureComponent {
     this.newAgentHandler = new NewAgentHandler();
     this.state = {
       manual: null,
+      agentCreated: false,
     };
   }
 
@@ -113,12 +115,30 @@ class AddAgentModal extends React.PureComponent {
     );
   }
 
+	createAgentSuccessCallback = (response, architecure, operatingSystem) => {
+		this.setState({
+      agentCreated: true,
+			agentId: response.data['id'],
+      secret: response.data['oauth_client']['secret'],
+      selectedOperatingSystem: operatingSystem,
+      selectedArchitecture: architecure
+    });
+	};
+
   render = () => {
     let content;
     if (this.state.manual == null) {
      content = this.renderQuestion();
+    } else if (!this.state.agentCreated) {
+      content = <CreateAgent createAgentSuccessCallback={this.createAgentSuccessCallback} />;
     } else {
-      content = <AddAgent onClose={this.props.onClose} manualUpload={this.state.manual == true} />
+      content = (
+        <AddAgent
+          onClose={this.props.onClose}
+          manualUpload={this.state.manual == true}
+          selectedOperatingSystem={this.state.selectedOperatingSystem}
+          selectedArchitecture={this.state.selectedArchitecture} />
+      );
     }
     return (
       <ModalOverlay closeModalFunction={this.props.onClose}>
