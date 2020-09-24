@@ -133,18 +133,6 @@ class AddAgent extends React.PureComponent {
       });
   };
 
-  getCopyToClipboardComponents = (command) => {
-		return(
-			 <ThreeRowDisplay>
-				 <Description>
-					 Copy and run the command on the target machine to download run the client.
-				 </Description>
-				 <StyledCopyToClipboard id='copytoclip' text={command} />
-				 <CloseButton id='closeButton' onClick={this.props.onClose}>Close</CloseButton>
-			 </ThreeRowDisplay>
-		 );
-	 }
-
 	getCommand = () => {
 		let command;
 		if (this.props.manualUpload) {
