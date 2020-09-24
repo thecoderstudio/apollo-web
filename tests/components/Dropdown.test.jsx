@@ -2,7 +2,6 @@ import React from 'react';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
 import waitForExpect from 'wait-for-expect';
-import { selectArchitecture } from "../../src/actions/add-agent";
 import renderer from 'react-test-renderer';
 import DropDown, { DropDown as PlainDropDown } from "../../src/components/Dropdown";
 
@@ -30,13 +29,13 @@ describe('Dropdown', () => {
   let props;
 
   beforeEach(() => {
+    spy = jest.fn()
     store = mockStore({});
     props = {
       options: ['1', '2'],
-      optionSelectedAction: selectArchitecture,
+      optionSelectedAction: spy,
       selected: '1'
     };
-    spy = jest.spyOn(store, 'dispatch');
   });
 
   it("renders correctly", () => {
@@ -71,13 +70,25 @@ describe('Dropdown', () => {
     expect(root.findAllByProps({ collapsed: true }).length).toBe(0);
   });
 
+  it("does set correct value when item is selected", () => {
+    const component = getComponent(store, props, true);
+    const root = component.root;
+    const dropDown = root.findByProps({ id: 'dropdown' })
+    dropDown.props.onClick();
+    component.toJSON();
+    root.findByType(PlainDropDown).instance.closeDropdown({ target: "test" });
+
+    component.toJSON();
+    expect(root.findAllByProps({ collapsed: true }).length).toBe(0);
+  });
+
   it("correctly calls optionSelectedAction on option click", async () => {
     const component = getComponent(store, props);
 
     component.root.findByType('ul').children[0].props.onClick();
 
     await waitForExpect(() => {
-      expect(spy).toHaveBeenCalledWith(selectArchitecture('2'));
+      expect(spy).toHaveBeenCalled('2');
     });
   });
 

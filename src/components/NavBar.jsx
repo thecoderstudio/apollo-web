@@ -6,7 +6,7 @@ import Button from './buttons/Button';
 import { removeCurrentUser } from '../actions/current-user';
 import checkIfAdmin from '../util/admin';
 import OutlinedButton from './buttons/OutlinedButton';
-import AddAgentModal from './modals/AddAgentModal';
+import AddAgentModal from './add-agent/AddAgentModal';
 import Link from './Link';
 
 const NavigationBar = styled.div`

@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import axios from 'axios';
 import { StatusCodes } from 'http-status-codes';
 import renderer from 'react-test-renderer';
-import AddAgentModal from '../../../src/components/modals/AddAgentModal';
+import AddAgentModal from '../../../src/components/agg-agent/AddAgentModal';
 import NewAgentHandler from '../../../src/lib/NewAgentHandler';
 
 const mockStore = configureStore([]);
