@@ -6,7 +6,6 @@ import Icon from '../components/Icon';
 import InlineTerminal from '../components/terminal/InlineTerminal';
 import { openTerminal } from '../components/terminal/Terminal';
 import ConnectionIndicator from '../components/connection-state/ConnectionIndicator';
-import AgentActions from '../components/action/AgentActions';
 import { getFontAwesomeClass } from '../util/agent';
 import { parseSnakeCaseObj } from '../util/parser';
 import { handleHTTPResponse } from '../actions/error';
@@ -71,10 +70,6 @@ const TerminalIcon = styled(Icon)`
       display: block;
     `
   }
-`;
-
-const Actions = styled(AgentActions)`
-  margin-top: 150px;
 `;
 
 class AgentDetail extends React.PureComponent {
@@ -158,7 +153,6 @@ class AgentDetail extends React.PureComponent {
             <Terminal agent={this.state.agent} />
           </Controls>
         </Agent>
-        <Actions agent={this.state.agent} />
       </Wrapper>
     );
   }
