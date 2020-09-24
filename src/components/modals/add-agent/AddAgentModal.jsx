@@ -140,7 +140,6 @@ class AddAgentModal extends React.PureComponent {
           selectedOperatingSystem={this.state.selectedOperatingSystem}
           selectedArchitecture={this.state.selectedArchitecture} />
       );
-      console.log(content)
     }
     return (
       <ModalOverlay closeModalFunction={this.props.onClose}>

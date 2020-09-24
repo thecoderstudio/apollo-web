@@ -11,7 +11,7 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
   z-index: 1;
 }
 
-.c7 {
+.c8 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -23,47 +23,117 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
   cursor: pointer;
 }
 
-.c7:hover {
+.c8:hover {
   opacity: 0.90;
 }
 
-.c7:focus {
+.c8:focus {
   outline: none;
 }
 
-.c7:active {
+.c8:active {
   opacity: 0.80;
 }
 
-.c8 {
+.c17 {
   background-color: transparent;
   border: 1px solid;
-}
-
-.c9 {
-  display: grid;
-  grid-template-rows: [title] 50px [description] 1fr;
-  padding: 20px;
-  min-height: 180px;
-}
-
-.c11 {
-  grid-row: title;
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.c12 {
-  grid-row: description;
-  padding: 10px;
-  font-size: 0.85rem;
 }
 
 .c1 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
+}
+
+.c9 {
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c13 {
+  grid-template-columns: [textfield] 1fr [copy] 50px;
+  display: grid;
+  height: 50px;
+}
+
+.c14 {
+  grid-column: textfield;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  padding: 15px;
+  overflow: auto;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.c14::-webkit-scrollbar {
+  background: transparent;
+}
+
+.c15 {
+  grid-column: copy;
+  height: 100%;
+}
+
+.c16 {
+  text-align: center;
+  display: block;
+}
+
+.c5 {
+  display: grid;
+  grid-template-columns: [column-one] 50% [column-two] 50%;
+  margin: 20px 0px 20px 0px;
+}
+
+.c6 {
+  grid-column: column-one;
+  margin-right: 10px;
+}
+
+.c7 {
+  grid-column: column-two;
+  margin-left: 10px;
+}
+
+.c18 {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c10 {
+  float: right;
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c11 {
+  display: grid;
+  grid-template-rows: [description] 1fr [commands] 1fr [button] 1fr;
+}
+
+.c19 {
+  grid-row: button;
+  margin-top: 20px;
+}
+
+.c12 {
+  grid-row: description;
+  margin: 20px 0px 20px 0px;
 }
 
 .c2 {
@@ -92,26 +162,6 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
   padding: 20px;
 }
 
-.c5 {
-  display: grid;
-  grid-template-columns: [column-one] 50% [column-two] 50%;
-  margin: 20px 0px 20px 0px;
-}
-
-.c6 {
-  grid-column: column-one;
-  margin-right: 10px;
-}
-
-.c13 {
-  grid-column: column-two;
-  margin-left: 10px;
-}
-
-.c10 {
-  width: 100%;
-}
-
 @media (max-width:47.9375em) {
   .c5 {
     grid-template-columns: [column-one] 100%;
@@ -128,12 +178,32 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c13 {
+  .c7 {
     grid-column: column-one;
     grid-row: row-two;
     margin-left: 0px;
     margin: 15px;
   }
+}
+
+@media (max-width:47.9375em) {
+  .c10 {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
 }
 
 <div
@@ -151,45 +221,58 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
     <div
       className="c4"
     >
-      <div
-        className="c5"
-      >
+      <div>
         <div
-          className="c6"
+          className="c5"
         >
-          <button
-            className="c7 c8 c9 c10"
-            onClick={[Function]}
+          <div
+            className="c6"
           >
-            <h3
-              className="c11"
+            Download the binary and upload it to the target machine.
+          </div>
+          <div
+            className="c7"
+          >
+            <button
+              className="c8 c9 c10"
+              onClick={[Function]}
             >
-              Directly on target machine.
-            </h3>
-            <p
-              className="c12"
-            >
-              You have the correct permissions to download the binary directly on the target machine.
-            </p>
-          </button>
+              Download binary
+            </button>
+          </div>
         </div>
         <div
-          className="c13"
+          className="c11"
         >
-          <button
-            className="c7 c8 c9 c10"
-            onClick={[Function]}
+          <p
+            className="c12"
           >
-            <h3
-              className="c11"
+            Copy and run the command on the target machine to download run the client.
+          </p>
+          <div
+            className="c13"
+          >
+            <div
+              className="c14"
             >
-              Manual upload
-            </h3>
-            <p
-              className="c12"
+              chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=undefined --secret=undefined --host=localhost:1970
+            </div>
+            <button
+              className="c8 c15"
+              id="copyToClipboardButton"
+              onClick={[Function]}
             >
-              You download and upload the binary yourself.
-            </p>
+              <i
+                className="c16 fas fa-copy"
+              />
+            </button>
+          </div>
+          <button
+            className="c8 c17 c18 c19"
+            id="closeButton"
+            onClick={[MockFunction]}
+          >
+            Close
           </button>
         </div>
       </div>

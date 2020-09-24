@@ -49,4 +49,28 @@ describe('add Agent Modal', () => {
     component.root.findByType(AddAgentModal).instance.setState({manualUpload: true, agentCreated: true});
     expect(component.toJSON()).toMatchSnapshot();
   });
+
+  it('create agent success callback sets state', () => {
+    const component = getComponent();
+    const addAgentModalInstance = component.root.findByType(AddAgentModal).instance
+
+    addAgentModalInstance.createAgentSuccessCallback(
+      {
+        data: {
+          id: 'id',
+          'oauth_client': {secret: 'secret'}
+        }
+      },
+      'test',
+      'test'
+    );
+    console.log(addAgentModalInstance.state)
+    expect(addAgentModalInstance.state == {
+      agentCreated: true,
+			agentId: 'id',
+      secret: 'secret',
+      selectedOperatingSystem: 'test',
+      selectedArchitecture: 'test'
+    }).toBe(true);
+  });
 });
