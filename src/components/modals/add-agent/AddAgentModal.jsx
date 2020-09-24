@@ -130,7 +130,7 @@ class AddAgentModal extends React.PureComponent {
     if (this.state.manual == null) {
      content = this.renderQuestion();
     } else if (!this.state.agentCreated) {
-      content = <CreateAgent createAgentSuccessCallback={this.createAgentSuccessCallback} />;
+      content = <CreateAgent onClose={this.props.onClose} createAgentSuccessCallback={this.createAgentSuccessCallback} />;
     } else {
       content = (
         <AddAgent

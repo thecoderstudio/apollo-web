@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import PropTypes from 'prop-types';
-import media from '../../util/media';
-import OutlinedButton from '../buttons/OutlinedButton';
-import LoadingButton from '../buttons/LoadingButton';
-import CopyToClipboard from '../CopyToClipboard';
-import NewAgentHandler from "../../lib/NewAgentHandler";
-import { handleHTTPResponse } from '../../actions/error';
+import media from '../../../util/media';
+import OutlinedButton from '../../buttons/OutlinedButton';
+import LoadingButton from '../../buttons/LoadingButton';
+import CopyToClipboard from '../../CopyToClipboard';
+import NewAgentHandler from "../../../lib/NewAgentHandler";
+import { handleHTTPResponse } from '../../../actions/error';
 
 const propTypes = {
   manualUpload: PropTypes.bool.isRequired,

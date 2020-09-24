@@ -4,24 +4,25 @@ import axios from 'axios';
 import { Formik } from 'formik';
 import { StatusCodes } from 'http-status-codes';
 import PropTypes from 'prop-types';
-import DropDown from '../Dropdown';
-import LoadingButton from '../buttons/LoadingButton';
-import Input from '../Input';
-import OutlinedButton from '../buttons/OutlinedButton';
-import { createAgentSchema } from '../../validation/agent';
-import { parseHTTPErrors } from '../../util/parser';
-import { handleHTTPResponse } from '../../actions/error';
-import media from '../../util/media';
-import NewAgentHandler from "../../lib/NewAgentHandler";
+import DropDown from '../../Dropdown';
+import LoadingButton from '../../buttons/LoadingButton';
+import Input from '../../Input';
+import OutlinedButton from '../../buttons/OutlinedButton';
+import { createAgentSchema } from '../../../validation/agent';
+import { parseHTTPErrors } from '../../../util/parser';
+import { handleHTTPResponse } from '../../../actions/error';
+import media from '../../../util/media';
+import NewAgentHandler from "../../../lib/NewAgentHandler";
 
 
 const propTypes = {
-  createAgentSuccessCallback: PropTypes.func.isRequired
+  createAgentSuccessCallback: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired
 };
 
 const TwoColumnGrid = styled.div`
   display: grid;
-  grid-template-columns: [column-one] 50% [column-two] 50%;
+  grid-template-columns: 50% 50%;
   margin: 20px 0px 20px 0px;
 
   ${
