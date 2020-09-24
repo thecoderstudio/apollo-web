@@ -10,7 +10,8 @@ import CopyToClipboard from '../CopyToClipboard';
 import NewAgentHandler from "../../lib/NewAgentHandler";
 
 const propTypes = {
-	manualUpload: PropTypes.bool.isRequired
+  manualUpload: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired
 };
 
 const TwoColumnGrid = styled.div`
@@ -101,7 +102,9 @@ class AddAgent extends React.PureComponent {
     super(props);
     this.newAgentHandler = new NewAgentHandler();
 		this.state = {
-			agentCreated: false
+      agentCreated: false,
+      selectedArchitecture: null,
+      selectedOperatingSystem: null
 		};
 	}
 
@@ -157,8 +160,8 @@ class AddAgent extends React.PureComponent {
 			agentId: response.data['id'],
       secret: response.data['oauth_client']['secret'],
       selectedOperatingSystem: operatingSystem,
-      selectedArchitecture, architecure
-		});
+      selectedArchitecture: architecure
+    });
 	};
 
 	getCommand = () => {

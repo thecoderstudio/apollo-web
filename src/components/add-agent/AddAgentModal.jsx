@@ -86,8 +86,6 @@ class AddAgentModal extends React.PureComponent {
     super(props);
     this.newAgentHandler = new NewAgentHandler();
     this.state = {
-      title: "Choose installation",
-      loading: false,
       manual: null,
     };
   }
@@ -120,7 +118,7 @@ class AddAgentModal extends React.PureComponent {
     if (this.state.manual == null) {
      content = this.renderQuestion();
     } else {
-      content = <AddAgent manualUpload={this.state.manual == true} />
+      content = <AddAgent onClose={this.props.onClose} manualUpload={this.state.manual == true} />
     }
     return (
       <ModalOverlay closeModalFunction={this.props.onClose}>

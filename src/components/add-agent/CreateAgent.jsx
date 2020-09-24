@@ -151,15 +151,12 @@ class CreateAgent extends React.PureComponent {
         );
       })
       .catch(error => {
-        console.log(error)
         handleHTTPResponse(error.response, true, true);
         if (error.response.status === StatusCodes.BAD_REQUEST) {
           setErrors(parseHTTPErrors(error.response.data, { name: 'name' }));
         }
-      })
-      .finally(_ => {
         this.setState({ loading: false });
-      });
+      })
   };
 
   selectArchitecture = (value) => {
