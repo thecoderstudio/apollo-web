@@ -98,7 +98,7 @@ describe("agent detail", () => {
       );
       expect(tree).toMatchSnapshot();
     });
-  })
+  });
 
   it("deals with property updates correctly", () => {
     const component = getComponent(defaultAgent);
