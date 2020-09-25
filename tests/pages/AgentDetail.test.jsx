@@ -110,4 +110,25 @@ describe("agent detail", () => {
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it("renders unkown platform info correctly", () => {
+    const newAgent = Object.assign({}, defaultAgent);
+    newAgent['operatingSystem'] = null;
+    newAgent['architecture'] = null;
+    const component = getComponent(newAgent);
+  });
+
+  it("opens terminal", () => {
+    const component = getComponent(defaultAgent);
+    let tree = component.toJSON();
+    component.root.findAllByType('i')[1].props.onClick();
+    tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+
+    const connectedAgent = Object.assign({}, defaultAgent);
+    connectedAgent['connectionState'] = 'connected';
+    component.update(getComponentTags(connectedAgent));
+    component.root.findAllByType('i')[1].props.onClick();
+    expect(tree).toMatchSnapshot();
+  });
 });

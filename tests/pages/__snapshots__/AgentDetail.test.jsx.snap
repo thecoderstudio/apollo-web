@@ -621,6 +621,312 @@ exports[`agent detail handles sync failure 1`] = `
 </div>
 `;
 
+exports[`agent detail opens terminal 1`] = `
+.c10 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 16px 0px 16px 16px;
+  height: 24px;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.c4 {
+  min-height: 12px;
+  min-width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  color: #C0392B;
+  background-color: #C0392B;
+}
+
+.c0 {
+  margin: 32px;
+}
+
+.c1 {
+  display: grid;
+  grid-template-columns: [detail] 1fr [controls] 1fr;
+  max-width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  grid-column: detail;
+}
+
+.c5 {
+  padding-right: 40px;
+}
+
+.c8 {
+  grid-column: controls;
+  width: 100%;
+  min-width: 0;
+}
+
+.c9 {
+  width: 100%;
+}
+
+.c6 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+.c7 {
+  cursor: inherit;
+  margin-top: 16px;
+  width: 24px;
+  height: 24px;
+  color: #363636;
+  display: none;
+}
+
+@media (max-width:47.9375em) {
+  .c9 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c7 {
+    display: block;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+          color="#C0392B"
+        />
+        <h1>
+          agentName
+        </h1>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                External IP address
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              unknown
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Operating system
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              <i
+                className="c6 fab fa-apple"
+              />
+              darwin
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Architecture
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              amd64
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <i
+        className="c7 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="c8"
+    >
+      <div
+        className="c9"
+      >
+        <div
+          className="c10"
+        >
+          <div>
+            <h2>
+              disconnected
+            </h2>
+          </div>
+        </div>
+        <div
+          className="c11"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`agent detail opens terminal 2`] = `
+<div
+  className="sc-fzpans iUTXbQ"
+>
+  <div
+    className="sc-fzplWN iNFhxv"
+  >
+    <div
+      className="sc-fznKkj fGLnqt"
+    >
+      <div
+        className="sc-fznyAO jTttdB"
+      >
+        <div
+          className="sc-fzoLsD jZMuGW"
+          color="#C0392B"
+        />
+        <h1>
+          agentName
+        </h1>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="sc-fznZeY laCqWn"
+            >
+              <b>
+                External IP address
+              </b>
+            </td>
+            <td
+              className="sc-fznZeY laCqWn"
+            >
+              unknown
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="sc-fznZeY laCqWn"
+            >
+              <b>
+                Operating system
+              </b>
+            </td>
+            <td
+              className="sc-fznZeY laCqWn"
+            >
+              <i
+                className="sc-AxjAm sc-fzqNJr kZnxIU fab fa-apple"
+              />
+              darwin
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="sc-fznZeY laCqWn"
+            >
+              <b>
+                Architecture
+              </b>
+            </td>
+            <td
+              className="sc-fznZeY laCqWn"
+            >
+              amd64
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <i
+        className="sc-AxjAm sc-fzoyAV xJmzI fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="sc-fzokOt jxsbCE"
+    >
+      <div
+        className="sc-fzqBZW hxCrGu"
+      >
+        <div
+          className="sc-AxirZ sc-AxheI chvKGe"
+        >
+          <div>
+            <h2>
+              disconnected
+            </h2>
+          </div>
+        </div>
+        <div
+          className="sc-AxmLO lcomMa"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`agent detail renders correctly 1`] = `
 .c10 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
