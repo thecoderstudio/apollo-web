@@ -17,7 +17,7 @@ function getComponentTags(agent) {
   agents.set(agent.id, agent);
   let store = mockStore({
     agent: agents
-  })
+  });
 
   return (
     <Provider store={store}>
@@ -46,7 +46,7 @@ describe("agent detail", () => {
     'architecture': 'amd64',
     'connectionState': 'disconnected',
     'operatingSystem': 'darwin'
-  }
+  };
 
   it("renders correctly", () => {
     axios.get.mockResolvedValue({

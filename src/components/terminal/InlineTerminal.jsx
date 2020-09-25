@@ -54,7 +54,7 @@ class InlineTerminal extends React.PureComponent {
   }
 
   renderContents() {
-    const connected = this.props.agent.connectionState == 'connected';
+    const connected = this.props.agent.connectionState === 'connected';
     if (connected && this.state.openedShell) {
       return <StyledTerminal ref={this.terminalRef} agent={this.props.agent} />;
     } else {

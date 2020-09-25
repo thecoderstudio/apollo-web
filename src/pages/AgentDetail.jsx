@@ -122,7 +122,7 @@ class AgentDetail extends React.PureComponent {
 
   render() {
     let agent = this.state.agent;
-    const connected = agent.connectionState == 'connected';
+    const connected = agent.connectionState === 'connected';
     return (
       <Wrapper>
         <Agent>

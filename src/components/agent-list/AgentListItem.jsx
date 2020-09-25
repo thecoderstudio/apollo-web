@@ -144,7 +144,7 @@ export default class AgentListItem extends React.PureComponent {
   }
 
   getOSIcon(os, arch) {
-    let osClass = getFontAwesomeClass(os)
+    let osClass = getFontAwesomeClass(os);
 
     return <Tippy content={this.getOSTooltip(os, arch)}><OSIcon className={osClass} /></Tippy>;
   }
