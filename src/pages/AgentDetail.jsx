@@ -6,6 +6,7 @@ import Icon from '../components/Icon';
 import InlineTerminal from '../components/terminal/InlineTerminal';
 import { openTerminal } from '../components/terminal/Terminal';
 import ConnectionIndicator from '../components/connection-state/ConnectionIndicator';
+import withNetworkBoundResource from '../hoc/networkBoundResource';
 import { getFontAwesomeClass } from '../util/agent';
 import { parseSnakeCaseObj } from '../util/parser';
 import { handleHTTPResponse } from '../actions/error';
@@ -160,4 +161,7 @@ class AgentDetail extends React.PureComponent {
 
 export default connect(
   state => ({agents: state.agent})
-)(AgentDetail);
+)(withNetworkBoundResource(
+  AgentDetail,
+  () => null
+));
