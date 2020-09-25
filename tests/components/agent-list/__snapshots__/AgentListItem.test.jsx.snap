@@ -1050,6 +1050,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                     transform={null}
                   >
                     <Resizable
+                      as="div"
                       className="react-draggable"
                       defaultSize={
                         Object {

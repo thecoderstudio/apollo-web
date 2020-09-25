@@ -590,6 +590,7 @@ exports[`agent list item correctly renders connected 1`] = `
               transform={null}
             >
               <Resizable
+                as="div"
                 className="react-draggable"
                 defaultSize={
                   Object {
@@ -1563,6 +1564,7 @@ exports[`agent list item correctly renders disconnected 1`] = `
               transform={null}
             >
               <Resizable
+                as="div"
                 className="react-draggable"
                 defaultSize={
                   Object {
@@ -2536,6 +2538,7 @@ exports[`agent list item resizes 1`] = `
               transform={null}
             >
               <Resizable
+                as="div"
                 className="react-draggable"
                 defaultSize={
                   Object {
