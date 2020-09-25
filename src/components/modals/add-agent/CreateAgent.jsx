@@ -194,7 +194,7 @@ class CreateAgent extends React.PureComponent {
                   <StyledDropDown
                     selected={this.state.selectedOperatingSystem}
                     options={this.newAgentHandler.supportedOS}
-                    optionSelectedAction={this.selectOperatingSystem}
+                    optionSelectedCallback={this.selectOperatingSystem}
                   />
                 </InputFieldWrapper>
               </TextAndInputFieldWrapper>
@@ -204,7 +204,7 @@ class CreateAgent extends React.PureComponent {
                   <StyledDropDown
                     selected={this.state.selectedArchitecture}
                     options={this.newAgentHandler.supportedArch}
-                    optionSelectedAction={this.selectArchitecture}
+                    optionSelectedCallback={this.selectArchitecture}
                   />
                 </InputFieldWrapper>
               </TextAndInputFieldWrapper>

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   options: PropTypes.array.isRequired,
-  optionSelectedAction: PropTypes.func.isRequired,
+  optionSelectedCallback: PropTypes.func.isRequired,
   selected: PropTypes.string.isRequired
 };
 
@@ -91,13 +91,13 @@ class Dropdown extends React.PureComponent {
 
   selectItem = (option) => {
     this.toggleCollapse();
-    this.props.optionSelectedAction(option);
+    this.props.optionSelectedCallback(option);
   }
 
   renderItems = () => {
     return this.props.options.map(option => {
       if (option === this.props.selected) { return; }
-      return <DropDownItem key={option} onClick={() => this.selectItem(option)} >{option}</DropDownItem>;
+      return <DropDownItem key={option} onClick={() => this.selectItem(option)}>{option}</DropDownItem>;
     });
   }
 

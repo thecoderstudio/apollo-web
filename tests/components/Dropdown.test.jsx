@@ -31,7 +31,7 @@ describe('Dropdown', () => {
     store = mockStore({});
     props = {
       options: ['1', '2'],
-      optionSelectedAction: spy,
+      optionSelectedCallback: spy,
       selected: '1'
     };
   });
@@ -80,7 +80,7 @@ describe('Dropdown', () => {
     expect(root.findAllByProps({ collapsed: true }).length).toBe(0);
   });
 
-  it("correctly calls optionSelectedAction on option click", async () => {
+  it("correctly calls optionSelectedCallback on option click", async () => {
     const component = getComponent(store, props);
 
     component.root.findByType('ul').children[0].props.onClick();
