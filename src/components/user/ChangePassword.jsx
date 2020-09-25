@@ -4,6 +4,7 @@ import { Formik } from 'formik';
 import axios from 'axios';
 import styled from 'styled-components';
 import Button from '../buttons/Button';
+import OutlinedButton from '../buttons/OutlinedButton';
 import Input from '../../components/Input';
 import { changePasswordSchema } from '../../validation/user.js';
 import { fetchCurrentUser } from '../../util/user';
@@ -17,7 +18,11 @@ const Form = styled.form`
 
 const StyledButton = styled(Button)`
   width: 100%;
-  margin-top: 15px;
+`;
+
+const StyledOutlinedButton = styled(OutlinedButton)`
+  margin-top: 16px;
+  width: 100%;
 `;
 
 class ChangePassword extends React.PureComponent {
@@ -86,6 +91,7 @@ class ChangePassword extends React.PureComponent {
               onChange={handleChange}
             />
             <StyledButton disabled={this.getButtonState(values) }>Change password</StyledButton>
+            <StyledOutlinedButton nonClick={this.logout}>Cancel and logout</StyledOutlinedButton>
           </Form>
         )}
       </Formik>
