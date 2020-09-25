@@ -20,7 +20,13 @@ const Form = styled.form`
 `;
 
 class Login extends React.PureComponent {
-  login = (credentials, { setErrors }) => {
+  constructor(props) {
+    super(props);
+    this.login = this.login.bind(this);
+    this.loginSuccessCallback = this.loginSuccessCallback.bind(this);
+  }
+
+  login(credentials, { setErrors }) {
     axios.post(
       `${process.env.APOLLO_HTTP_URL}auth/login`,
       credentials,
@@ -37,7 +43,7 @@ class Login extends React.PureComponent {
       });
   };
 
-  loginSuccessCallback = () => {
+  loginSuccessCallback() {
     this.props.dispatch(loginAction());
   };
 

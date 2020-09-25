@@ -28,7 +28,12 @@ const Logout = styled(OutlinedButton)`
 `;
 
 class NavBar extends React.PureComponent {
-  logout = () => {
+  constructor(props) {
+    super(props);
+    this.logout = this.props.logout(this);
+  }
+
+  logout() {
     let { dispatch } = this.props;
     dispatch(logoutAction());
     dispatch(removeCurrentUser());

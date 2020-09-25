@@ -28,7 +28,14 @@ const StyledOutlinedButton = styled(OutlinedButton)`
 `;
 
 class ChangePassword extends React.PureComponent {
-  changePassword = (values, { setErrors }) => {
+  constructor(props) {
+    super(props);
+    this.changePassword = this.changePassword.bind(this);
+    this.getDisabledButtonState = this.getDisabledButtonState.bind(this);
+    this.logout = this.logout.bind(this);
+  }
+
+  changePassword(values, { setErrors }) {
 		axios.patch(
       `${process.env.APOLLO_HTTP_URL}user/me`,
       {
@@ -51,11 +58,11 @@ class ChangePassword extends React.PureComponent {
       });
 	}
 
-  getDisabledButtonState = (values) => {
+  getDisabledButtonState(values){
     return Object.values(values).some((value) => value === '');
   }
 
-  logout = () => {
+  logout() {
     let { dispatch } = this.props;
     dispatch(logoutAction());
     dispatch(removeCurrentUser());
