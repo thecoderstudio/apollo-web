@@ -10,7 +10,9 @@ import withNetworkBoundResource from '../hoc/networkBoundResource';
 import { getFontAwesomeClass } from '../util/agent';
 import { parseSnakeCaseObj } from '../util/parser';
 import { handleHTTPResponse } from '../actions/error';
+import { putAgent } from '../actions/agent';
 import media from '../util/media';
+import { store } from '../store';
 
 const UNKNOWN = "unknown";
 
@@ -105,15 +107,15 @@ class AgentDetail extends React.PureComponent {
               <tbody>
                 <tr>
                   <Detail><b>External IP address</b></Detail>
-                  <Detail>{agent.externalIpAddress || UNKNOWN}</Detail>
+                  <Detail>{agent.externalIpAddress}</Detail>
                 </tr>
                 <tr>
                   <Detail><b>Operating system</b></Detail>
-                  <Detail>{this.getOSIcon(agent.operatingSystem)}{agent.operatingSystem || UNKNOWN}</Detail>
+                  <Detail>{this.getOSIcon(agent.operatingSystem)}{agent.operatingSystem}</Detail>
                 </tr>
                 <tr>
                   <Detail><b>Architecture</b></Detail>
-                  <Detail>{agent.architecture || UNKNOWN}</Detail>
+                  <Detail>{agent.architecture}</Detail>
                 </tr>
               </tbody>
             </table>
@@ -134,5 +136,5 @@ export default connect(
   AgentDetail,
   (localData, params) => localData.get(params.agentId),
   (params) => `${process.env.APOLLO_HTTP_URL}agent/${params.agentId}`,
-  (data) => null
+  (data) => store.dispatch(putAgent(data))
 ));

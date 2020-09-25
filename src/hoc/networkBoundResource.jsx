@@ -4,7 +4,7 @@ import NotFound from '../pages/NotFound';
 import { handleHTTPResponse } from '../actions/error';
 import { parseSnakeCaseObj } from '../util/parser';
 
-function withNetworkBoundResource(WrappedComponent, getLocalData, getEndpoint, updateCache) {
+function withNetworkBoundResource(WrappedComponent, getFromCache, getEndpoint, updateCache) {
   return class extends React.Component {
     constructor(props) {
       super(props);
@@ -12,7 +12,7 @@ function withNetworkBoundResource(WrappedComponent, getLocalData, getEndpoint, u
       this.sync = this.sync.bind(this);
       this.state = {
         loading: true,
-        data: getLocalData(this.props.localData, params)
+        data: getFromCache(this.props.localData, params)
       }
       this.sync(params);
     }
@@ -23,7 +23,7 @@ function withNetworkBoundResource(WrappedComponent, getLocalData, getEndpoint, u
         { withCredentials: true }
       )
       .then(res => {
-        updateCache(response.data)
+        updateCache(res.data);
       })
       .catch(error => {
         handleHTTPResponse(error.response);
@@ -31,6 +31,7 @@ function withNetworkBoundResource(WrappedComponent, getLocalData, getEndpoint, u
     }
 
     componentDidUpdate(prevProps) {
+      console.log(this.props.localData);
       if (prevProps.localData !== this.props.localData) {
         this.updateFromCache();
       }
@@ -39,7 +40,7 @@ function withNetworkBoundResource(WrappedComponent, getLocalData, getEndpoint, u
     updateFromCache() {
       const { match: { params } } = this.props;
       this.setState({
-        data: getLocalData(this.props.localData, params)
+        data: getFromCache(this.props.localData, params)
       });
     }
 
