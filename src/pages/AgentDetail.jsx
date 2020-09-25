@@ -76,38 +76,7 @@ const TerminalIcon = styled(Icon)`
 class AgentDetail extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.getAgent = this.getAgent.bind(this);
     this.openTerminal = this.openTerminal.bind(this);
-
-    const { match: { params } } = this.props;
-    this.state = {
-      agent: this.props.agents.get(params.agentId)
-    };
-    this.getAgent(params.agentId);
-  }
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.agents !== this.props.agents) {
-      const { match: { params } } = this.props;
-      this.setState({
-        agent: this.props.agents.get(params.agentId)
-      });
-    }
-  }
-
-  getAgent(agentID) {
-    axios.get(
-      `${process.env.APOLLO_HTTP_URL}agent/${agentID}`,
-      { withCredentials: true }
-    )
-    .then(res => {
-      this.setState({
-        agent: parseSnakeCaseObj(res.data)
-      });
-    })
-    .catch(error => {
-      handleHTTPResponse(error.response);
-    });
   }
 
   getOSIcon(os) {
@@ -115,14 +84,14 @@ class AgentDetail extends React.PureComponent {
   }
 
   openTerminal() {
-    if (this.state.agent.connectionState !== 'connected') {
+    if (this.props.data.connectionState !== 'connected') {
       return;
     }
-    openTerminal(this.state.agent.id);
+    openTerminal(this.props.data.id);
   }
 
   render() {
-    let agent = this.state.agent;
+    let agent = this.props.data;
     const connected = agent.connectionState === 'connected';
     return (
       <Wrapper>
@@ -151,7 +120,7 @@ class AgentDetail extends React.PureComponent {
             <TerminalIcon active={connected} onClick={this.openTerminal} className="fas fa-terminal" />
           </Details>
           <Controls>
-            <Terminal agent={this.state.agent} />
+            <Terminal agent={this.props.data} />
           </Controls>
         </Agent>
       </Wrapper>
@@ -160,8 +129,10 @@ class AgentDetail extends React.PureComponent {
 }
 
 export default connect(
-  state => ({agents: state.agent})
+  state => ({localData: state.agent})
 )(withNetworkBoundResource(
   AgentDetail,
+  (localData, params) => localData.get(params.agentId),
+  (params) => `${process.env.APOLLO_HTTP_URL}agent/${params.agentId}`,
   () => null
 ));
