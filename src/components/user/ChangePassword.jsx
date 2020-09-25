@@ -6,6 +6,8 @@ import styled from 'styled-components';
 import Button from '../buttons/Button';
 import OutlinedButton from '../buttons/OutlinedButton';
 import Input from '../../components/Input';
+import { logout as logoutAction } from '../../actions/auth';
+import { removeCurrentUser } from '../../actions/current-user';
 import { changePasswordSchema } from '../../validation/user.js';
 import { fetchCurrentUser } from '../../util/user';
 import { StatusCodes } from 'http-status-codes';
@@ -57,6 +59,12 @@ class ChangePassword extends React.PureComponent {
     return false;
   }
 
+  logout = () => {
+    let { dispatch } = this.props;
+    dispatch(logoutAction());
+    dispatch(removeCurrentUser());
+  };
+
   render() {
     return (
       <Formik
@@ -91,7 +99,7 @@ class ChangePassword extends React.PureComponent {
               onChange={handleChange}
             />
             <StyledButton disabled={this.getButtonState(values) }>Change password</StyledButton>
-            <StyledOutlinedButton nonClick={this.logout}>Cancel and logout</StyledOutlinedButton>
+            <StyledOutlinedButton onClick={this.logout}>Cancel and logout</StyledOutlinedButton>
           </Form>
         )}
       </Formik>
