@@ -50,7 +50,7 @@ describe('add Agent Modal', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it('create agent success callback sets state', () => {
+  it('create agent success callback set state correctly', () => {
     const component = getComponent();
     const addAgentModalInstance = component.root.findByType(AddAgentModal).instance
 
@@ -60,17 +60,16 @@ describe('add Agent Modal', () => {
           id: 'id',
           'oauth_client': {secret: 'secret'}
         }
-      },
-      'test',
-      'test'
+      },'test', 'test'
     );
-    console.log(addAgentModalInstance.state)
-    expect(addAgentModalInstance.state == {
+
+    expect(JSON.stringify(addAgentModalInstance.state) ===  JSON.stringify({
+      manualUpload: null,
       agentCreated: true,
 			agentId: 'id',
       secret: 'secret',
       selectedOperatingSystem: 'test',
       selectedArchitecture: 'test'
-    }).toBe(true);
+    })).toBe(true);
   });
 });

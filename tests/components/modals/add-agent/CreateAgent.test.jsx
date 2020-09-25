@@ -115,4 +115,20 @@ describe('create Agent', () => {
       expect(callbackSpy).not.toHaveBeenCalled()
     });
   });
+
+  it('Correctly sets architecure state', () => {
+    const component = getComponent();
+    const createAgentInstance = component.root.findByType(CreateAgent).instance
+
+    createAgentInstance.selectArchitecture('test')
+    expect(createAgentInstance.state['selectedArchitecture']).toBe('test')
+  });
+
+  it('Correctly sets operating system state', () => {
+    const component = getComponent();
+    const createAgentInstance = component.root.findByType(CreateAgent).instance
+
+    createAgentInstance.selectOperatingSystem('test')
+    expect(createAgentInstance.state['selectedOperatingSystem']).toBe('test')
+  });
 });

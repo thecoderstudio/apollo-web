@@ -127,7 +127,6 @@ class AddAgentModal extends React.PureComponent {
 
   render = () => {
     let content;
-    console.log(this.state);
     if (this.state.manualUpload == null) {
      content = this.renderQuestion();
     } else if (!this.state.agentCreated) {
