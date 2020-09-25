@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Spinner from '../components/Spinner';
 import NotFound from '../pages/NotFound';
 import { handleHTTPResponse } from '../actions/error';
 import { parseSnakeCaseObj } from '../util/parser';
@@ -24,9 +25,11 @@ function withNetworkBoundResource(WrappedComponent, getFromCache, getEndpoint, u
       )
       .then(res => {
         updateCache(res.data);
+        this.setState({ loading: false });
       })
       .catch(error => {
         handleHTTPResponse(error.response);
+        this.setState({ loading: false });
       });
     }
 
@@ -48,9 +51,11 @@ function withNetworkBoundResource(WrappedComponent, getFromCache, getEndpoint, u
       const notFound = !this.state.loading && this.state.data === null;
       if (notFound) {
         return <NotFound />
+      } else if (this.state.loading) {
+        return <Spinner />
+      } else {
+        return <WrappedComponent data={this.state.data} {...this.props} />;
       }
-
-      return <WrappedComponent data={this.state.data} {...this.props} />;
     }
   }
 }
