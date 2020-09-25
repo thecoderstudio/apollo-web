@@ -42,7 +42,7 @@ describe('create Agent', () => {
   });
 
   it('closes modal correctly', async () => {
-    const component = getComponent(spy, callbackSpy)
+    const component = getComponent(spy, callbackSpy);
     const instance = component.root;
     instance.findByProps({ id: 'closeButton' }).props.onClick();
     expect(component.toJSON()).toMatchSnapshot();
@@ -112,23 +112,23 @@ describe('create Agent', () => {
 
     await waitForExpect(() => {
       expect(axios.post).toHaveBeenCalledTimes(2);
-      expect(callbackSpy).not.toHaveBeenCalled()
+      expect(callbackSpy).not.toHaveBeenCalled();
     });
   });
 
   it('Correctly sets architecure state', () => {
     const component = getComponent();
-    const createAgentInstance = component.root.findByType(CreateAgent).instance
+    const createAgentInstance = component.root.findByType(CreateAgent).instance;
 
-    createAgentInstance.selectArchitecture('test')
-    expect(createAgentInstance.state['selectedArchitecture']).toBe('test')
+    createAgentInstance.selectArchitecture('test');
+    expect(createAgentInstance.state['selectedArchitecture']).toBe('test');
   });
 
   it('Correctly sets operating system state', () => {
     const component = getComponent();
-    const createAgentInstance = component.root.findByType(CreateAgent).instance
+    const createAgentInstance = component.root.findByType(CreateAgent).instance;
 
-    createAgentInstance.selectOperatingSystem('test')
-    expect(createAgentInstance.state['selectedOperatingSystem']).toBe('test')
+    createAgentInstance.selectOperatingSystem('test');
+    expect(createAgentInstance.state['selectedOperatingSystem']).toBe('test');
   });
 });

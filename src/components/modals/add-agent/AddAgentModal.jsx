@@ -93,7 +93,7 @@ class AddAgentModal extends React.PureComponent {
   }
 
   setManualUpload = (value) => {
-    this.setState({ manualUpload: value })
+    this.setState({ manualUpload: value });
   }
 
   renderQuestion = () => {
@@ -127,7 +127,7 @@ class AddAgentModal extends React.PureComponent {
 
   render = () => {
     let content;
-    if (this.state.manualUpload == null) {
+    if (this.state.manualUpload === null) {
      content = this.renderQuestion();
     } else if (!this.state.agentCreated) {
       content = <CreateAgent onClose={this.props.onClose} createAgentSuccessCallback={this.createAgentSuccessCallback} />;
@@ -135,7 +135,7 @@ class AddAgentModal extends React.PureComponent {
       content = (
         <AddAgent
           onClose={this.props.onClose}
-          manualUpload={this.state.manualUpload == true}
+          manualUpload={this.state.manualUpload === true}
           selectedOperatingSystem={this.state.selectedOperatingSystem}
           selectedArchitecture={this.state.selectedArchitecture} />
       );

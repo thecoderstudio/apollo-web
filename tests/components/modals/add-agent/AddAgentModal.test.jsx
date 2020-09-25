@@ -52,7 +52,7 @@ describe('add Agent Modal', () => {
 
   it('create agent success callback set state correctly', () => {
     const component = getComponent();
-    const addAgentModalInstance = component.root.findByType(AddAgentModal).instance
+    const addAgentModalInstance = component.root.findByType(AddAgentModal).instance;
 
     addAgentModalInstance.createAgentSuccessCallback(
       {

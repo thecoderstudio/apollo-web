@@ -105,7 +105,7 @@ class AddAgent extends React.PureComponent {
     this.newAgentHandler = new NewAgentHandler();
     this.state = {
       loading: false
-    }
+    };
 	}
 
 	downloadBinary = () => {
@@ -135,12 +135,12 @@ class AddAgent extends React.PureComponent {
 	getCommand = () => {
 		let command;
 		if (this.props.manualUpload) {
-			command = this.newAgentHandler.getExecuteCommand(this.state.agentId, this.state.secret, "localhost:1970")
+			command = this.newAgentHandler.getExecuteCommand(this.state.agentId, this.state.secret, "localhost:1970");
 		} else {
 			command = this.newAgentHandler.getDirectlyOnMachineCommand(
         this.props.selectedOperatingSystem, this.props.selectedArchitecture, this.state.agentId, this.state.secret,
         "localhost:1970"
-      )
+      );
     }
     return command;
 	};

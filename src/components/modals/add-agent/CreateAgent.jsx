@@ -156,11 +156,11 @@ class CreateAgent extends React.PureComponent {
           setErrors(parseHTTPErrors(error.response.data, { name: 'name' }));
         }
         this.setState({ loading: false });
-      })
+      });
   };
 
   selectArchitecture = (value) => {
-    this.setState({ selectedArchitecture: value })
+    this.setState({ selectedArchitecture: value });
   };
 
   selectOperatingSystem = (value) => {

@@ -27,7 +27,7 @@ describe('Dropdown', () => {
   let props;
 
   beforeEach(() => {
-    spy = jest.fn()
+    spy = jest.fn();
     store = mockStore({});
     props = {
       options: ['1', '2'],
@@ -71,7 +71,7 @@ describe('Dropdown', () => {
   it("does set correct value when item is selected", () => {
     const component = getComponent(store, props, true);
     const root = component.root;
-    const dropDown = root.findByProps({ id: 'dropdown' })
+    const dropDown = root.findByProps({ id: 'dropdown' });
     dropDown.props.onClick();
     component.toJSON();
     root.findByType(Dropdown).instance.closeDropdown({ target: "test" });
