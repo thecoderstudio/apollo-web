@@ -38,7 +38,7 @@ class ProtectedRoute extends React.PureComponent {
       ...rest
     } = this.props;
     const { correctRole } = this.state;
-    const AuthenticatedAndInitialised = authenticated && correctRole && this.props.currentUser.hasChangedInitialPassword;
+    const authenticatedAndInitialised = authenticated && correctRole && this.props.currentUser.hasChangedInitialPassword;
     return (
       <Route
         {...rest}
