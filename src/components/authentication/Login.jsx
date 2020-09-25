@@ -74,4 +74,4 @@ class Login extends React.PureComponent {
 
 export default connect()(Login);
 
-export { Login };
+export { Login as UnconnectedLogin };
