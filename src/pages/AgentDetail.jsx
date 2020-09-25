@@ -134,5 +134,5 @@ export default connect(
   AgentDetail,
   (localData, params) => localData.get(params.agentId),
   (params) => `${process.env.APOLLO_HTTP_URL}agent/${params.agentId}`,
-  () => null
+  (data) => null
 ));
