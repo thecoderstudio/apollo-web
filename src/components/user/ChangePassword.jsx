@@ -51,12 +51,8 @@ class ChangePassword extends React.PureComponent {
       });
 	}
 
-  getButtonState = (values) => {
-    if (values['password'] === '' || values['passwordConfirm'] === '' ||
-        values['passwordConfirm'] === '') {
-      return true;
-    }
-    return false;
+  getDisabledButtonState = (values) => {
+    return Object.values(values).some((value) => value === '');
   }
 
   logout = () => {
@@ -98,7 +94,7 @@ class ChangePassword extends React.PureComponent {
               error={errors.passwordConfirm}
               onChange={handleChange}
             />
-            <StyledButton disabled={this.getButtonState(values) }>Change password</StyledButton>
+            <StyledButton disabled={this.getDisabledButtonState(values) }>Change password</StyledButton>
             <StyledOutlinedButton onClick={this.logout}>Cancel and logout</StyledOutlinedButton>
           </Form>
         )}

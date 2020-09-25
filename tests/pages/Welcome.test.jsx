@@ -34,7 +34,7 @@ describe('Welcome', () => {
 
   it("renders change password correctly", () => {
     const tree = getComponent(mockStore({
-      authenticated: false,
+      authenticated: true,
       currentUser: {
         hasChangedInitialPassword: false
       }

@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import axios from 'axios';
 import waitForExpect from 'wait-for-expect';
 import { StatusCodes } from 'http-status-codes';
-import Login, { Login as PlainLogin } from '../../src/components/authentication/Login';
+import Login, { UnconnectedLogin } from '../../src/components/authentication/Login';
 
 const mockStore = configureStore([]);
 jest.mock('axios');
@@ -35,7 +35,7 @@ describe('login', () => {
 
   it("handles successful login", async () => {
     const component = getComponent(store);
-    const root = component.root.findByType(PlainLogin);
+    const root = component.root.findByType(UnconnectedLogin);
     const instance = root.instance;
 
     axios.post.mockResolvedValue({
@@ -68,7 +68,7 @@ describe('login', () => {
 
   it("handles unsuccessful login", async () => {
     const component = getComponent(store);
-    const root = component.root.findByType(PlainLogin);
+    const root = component.root.findByType(UnconnectedLogin);
     const instance = root.instance;
 
     axios.post.mockImplementationOnce(() => Promise.reject({

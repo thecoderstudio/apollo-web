@@ -53,9 +53,6 @@ describe("change password", () => {
         hasChangedInitialPassword: false
       }
     });
-    process.env = {
-      APOLLO_HTTP_URL: 'http://localhost:1234/'
-    };
     spy = jest.spyOn(store, 'dispatch');
   });
 
@@ -109,7 +106,6 @@ describe("change password", () => {
     }));
 
     submitForm(root, 'oldpassword', 'password', 'password');
-
 
     axios.patch.mockImplementationOnce(() => Promise.reject({
       response: {
