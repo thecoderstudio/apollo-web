@@ -1,291 +1,617 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`agent detail correctly syncs with remote 1`] = `
+.c10 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 16px 0px 16px 16px;
+  height: 24px;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.c4 {
+  min-height: 12px;
+  min-width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  color: #C0392B;
+  background-color: #C0392B;
+}
+
 .c0 {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  height: 100px;
-  width: 100px;
+  margin: 32px;
+}
+
+.c1 {
+  display: grid;
+  grid-template-columns: [detail] 1fr [controls] 1fr;
+  max-width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  grid-column: detail;
+}
+
+.c5 {
+  padding-right: 40px;
+}
+
+.c8 {
+  grid-column: controls;
+  width: 100%;
+  min-width: 0;
+}
+
+.c9 {
+  width: 100%;
+}
+
+.c6 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+.c7 {
+  cursor: inherit;
+  margin-top: 16px;
+  width: 24px;
+  height: 24px;
+  color: #363636;
+  display: none;
 }
 
 @media (max-width:47.9375em) {
-
+  .c9 {
+    display: none;
+  }
 }
 
 @media (max-width:47.9375em) {
-
+  .c7 {
+    display: block;
+  }
 }
 
 <div
-  aria-busy="true"
   className="c0"
-  style={Object {}}
 >
-  <svg
-    aria-label="audio-loading"
-    height={80}
-    viewBox="0 0 38 38"
-    width={80}
-    xmlns="http://www.w3.org/2000/svg"
+  <div
+    className="c1"
   >
-    <defs>
-      <linearGradient
-        id="a"
-        x1="8.042%"
-        x2="65.682%"
-        y1="0%"
-        y2="23.865%"
-      >
-        <stop
-          offset="0%"
-          stopColor="#02A3EE"
-          stopOpacity="0"
-        />
-        <stop
-          offset="63.146%"
-          stopColor="#02A3EE"
-          stopOpacity=".631"
-        />
-        <stop
-          offset="100%"
-          stopColor="#02A3EE"
-        />
-      </linearGradient>
-    </defs>
-    <g
-      fill="none"
-      fillRule="evenodd"
+    <div
+      className="c2"
     >
-      <g
-        transform="translate(1 1)"
+      <div
+        className="c3"
       >
-        <path
-          d="M36 18c0-9.94-8.06-18-18-18"
-          id="Oval-2"
-          stroke="#02A3EE"
-          strokeWidth="2"
+        <div
+          className="c4"
+          color="#C0392B"
+        />
+        <h1>
+          agentName
+        </h1>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                External IP address
+              </b>
+            </td>
+            <td
+              className="c5"
+            />
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Operating system
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              <i
+                className="c6 fab fa-apple"
+              />
+              darwin
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Architecture
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              amd64
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <i
+        className="c7 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="c8"
+    >
+      <div
+        className="c9"
+      >
+        <div
+          className="c10"
         >
-          <animateTransform
-            attributeName="transform"
-            dur="0.9s"
-            from="0 18 18"
-            repeatCount="indefinite"
-            to="360 18 18"
-            type="rotate"
-          />
-        </path>
-        <circle
-          cx="36"
-          cy="18"
-          fill="#fff"
-          r={1}
-        >
-          <animateTransform
-            attributeName="transform"
-            dur="0.9s"
-            from="0 18 18"
-            repeatCount="indefinite"
-            to="360 18 18"
-            type="rotate"
-          />
-        </circle>
-      </g>
-    </g>
-  </svg>
+          <div>
+            <h2>
+              disconnected
+            </h2>
+          </div>
+        </div>
+        <div
+          className="c11"
+        />
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`agent detail deals with property updates correctly 1`] = `
+.c10 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 16px 0px 16px 16px;
+  height: 24px;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.c4 {
+  min-height: 12px;
+  min-width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  color: #C0392B;
+  background-color: #C0392B;
+}
+
 .c0 {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  height: 100px;
-  width: 100px;
+  margin: 32px;
+}
+
+.c1 {
+  display: grid;
+  grid-template-columns: [detail] 1fr [controls] 1fr;
+  max-width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  grid-column: detail;
+}
+
+.c5 {
+  padding-right: 40px;
+}
+
+.c8 {
+  grid-column: controls;
+  width: 100%;
+  min-width: 0;
+}
+
+.c9 {
+  width: 100%;
+}
+
+.c6 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+.c7 {
+  cursor: inherit;
+  margin-top: 16px;
+  width: 24px;
+  height: 24px;
+  color: #363636;
+  display: none;
+}
+
+@media (max-width:47.9375em) {
+  .c9 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c7 {
+    display: block;
+  }
 }
 
 <div
-  aria-busy="true"
   className="c0"
-  style={Object {}}
 >
-  <svg
-    aria-label="audio-loading"
-    height={80}
-    viewBox="0 0 38 38"
-    width={80}
-    xmlns="http://www.w3.org/2000/svg"
+  <div
+    className="c1"
   >
-    <defs>
-      <linearGradient
-        id="a"
-        x1="8.042%"
-        x2="65.682%"
-        y1="0%"
-        y2="23.865%"
-      >
-        <stop
-          offset="0%"
-          stopColor="#02A3EE"
-          stopOpacity="0"
-        />
-        <stop
-          offset="63.146%"
-          stopColor="#02A3EE"
-          stopOpacity=".631"
-        />
-        <stop
-          offset="100%"
-          stopColor="#02A3EE"
-        />
-      </linearGradient>
-    </defs>
-    <g
-      fill="none"
-      fillRule="evenodd"
+    <div
+      className="c2"
     >
-      <g
-        transform="translate(1 1)"
+      <div
+        className="c3"
       >
-        <path
-          d="M36 18c0-9.94-8.06-18-18-18"
-          id="Oval-2"
-          stroke="#02A3EE"
-          strokeWidth="2"
+        <div
+          className="c4"
+          color="#C0392B"
+        />
+        <h1>
+          newname
+        </h1>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                External IP address
+              </b>
+            </td>
+            <td
+              className="c5"
+            />
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Operating system
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              <i
+                className="c6 fab fa-apple"
+              />
+              darwin
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Architecture
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              amd64
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <i
+        className="c7 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="c8"
+    >
+      <div
+        className="c9"
+      >
+        <div
+          className="c10"
         >
-          <animateTransform
-            attributeName="transform"
-            dur="0.9s"
-            from="0 18 18"
-            repeatCount="indefinite"
-            to="360 18 18"
-            type="rotate"
-          />
-        </path>
-        <circle
-          cx="36"
-          cy="18"
-          fill="#fff"
-          r={1}
-        >
-          <animateTransform
-            attributeName="transform"
-            dur="0.9s"
-            from="0 18 18"
-            repeatCount="indefinite"
-            to="360 18 18"
-            type="rotate"
-          />
-        </circle>
-      </g>
-    </g>
-  </svg>
+          <div>
+            <h2>
+              disconnected
+            </h2>
+          </div>
+        </div>
+        <div
+          className="c11"
+        />
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`agent detail handles sync failure 1`] = `
+.c10 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 16px 0px 16px 16px;
+  height: 24px;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.c4 {
+  min-height: 12px;
+  min-width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  color: #C0392B;
+  background-color: #C0392B;
+}
+
 .c0 {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  height: 100px;
-  width: 100px;
+  margin: 32px;
+}
+
+.c1 {
+  display: grid;
+  grid-template-columns: [detail] 1fr [controls] 1fr;
+  max-width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  grid-column: detail;
+}
+
+.c5 {
+  padding-right: 40px;
+}
+
+.c8 {
+  grid-column: controls;
+  width: 100%;
+  min-width: 0;
+}
+
+.c9 {
+  width: 100%;
+}
+
+.c6 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+.c7 {
+  cursor: inherit;
+  margin-top: 16px;
+  width: 24px;
+  height: 24px;
+  color: #363636;
+  display: none;
 }
 
 @media (max-width:47.9375em) {
-
+  .c9 {
+    display: none;
+  }
 }
 
 @media (max-width:47.9375em) {
-
+  .c7 {
+    display: block;
+  }
 }
 
 <div
-  aria-busy="true"
   className="c0"
-  style={Object {}}
 >
-  <svg
-    aria-label="audio-loading"
-    height={80}
-    viewBox="0 0 38 38"
-    width={80}
-    xmlns="http://www.w3.org/2000/svg"
+  <div
+    className="c1"
   >
-    <defs>
-      <linearGradient
-        id="a"
-        x1="8.042%"
-        x2="65.682%"
-        y1="0%"
-        y2="23.865%"
-      >
-        <stop
-          offset="0%"
-          stopColor="#02A3EE"
-          stopOpacity="0"
-        />
-        <stop
-          offset="63.146%"
-          stopColor="#02A3EE"
-          stopOpacity=".631"
-        />
-        <stop
-          offset="100%"
-          stopColor="#02A3EE"
-        />
-      </linearGradient>
-    </defs>
-    <g
-      fill="none"
-      fillRule="evenodd"
+    <div
+      className="c2"
     >
-      <g
-        transform="translate(1 1)"
+      <div
+        className="c3"
       >
-        <path
-          d="M36 18c0-9.94-8.06-18-18-18"
-          id="Oval-2"
-          stroke="#02A3EE"
-          strokeWidth="2"
+        <div
+          className="c4"
+          color="#C0392B"
+        />
+        <h1>
+          agentName
+        </h1>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                External IP address
+              </b>
+            </td>
+            <td
+              className="c5"
+            />
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Operating system
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              <i
+                className="c6 fab fa-apple"
+              />
+              darwin
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Architecture
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              amd64
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <i
+        className="c7 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="c8"
+    >
+      <div
+        className="c9"
+      >
+        <div
+          className="c10"
         >
-          <animateTransform
-            attributeName="transform"
-            dur="0.9s"
-            from="0 18 18"
-            repeatCount="indefinite"
-            to="360 18 18"
-            type="rotate"
-          />
-        </path>
-        <circle
-          cx="36"
-          cy="18"
-          fill="#fff"
-          r={1}
-        >
-          <animateTransform
-            attributeName="transform"
-            dur="0.9s"
-            from="0 18 18"
-            repeatCount="indefinite"
-            to="360 18 18"
-            type="rotate"
-          />
-        </circle>
-      </g>
-    </g>
-  </svg>
+          <div>
+            <h2>
+              disconnected
+            </h2>
+          </div>
+        </div>
+        <div
+          className="c11"
+        />
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
@@ -430,9 +756,7 @@ exports[`agent detail opens terminal 1`] = `
             </td>
             <td
               className="c5"
-            >
-              unknown
-            </td>
+            />
           </tr>
           <tr>
             <td
@@ -497,17 +821,222 @@ exports[`agent detail opens terminal 1`] = `
 `;
 
 exports[`agent detail opens terminal 2`] = `
+.c10 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 16px 0px 16px 16px;
+  height: 24px;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.c4 {
+  min-height: 12px;
+  min-width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  color: #C0392B;
+  background-color: #C0392B;
+}
+
+.c0 {
+  margin: 32px;
+}
+
+.c1 {
+  display: grid;
+  grid-template-columns: [detail] 1fr [controls] 1fr;
+  max-width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  grid-column: detail;
+}
+
+.c5 {
+  padding-right: 40px;
+}
+
+.c8 {
+  grid-column: controls;
+  width: 100%;
+  min-width: 0;
+}
+
+.c9 {
+  width: 100%;
+}
+
+.c6 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+.c7 {
+  cursor: inherit;
+  margin-top: 16px;
+  width: 24px;
+  height: 24px;
+  color: #363636;
+  display: none;
+}
+
+@media (max-width:47.9375em) {
+  .c9 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c7 {
+    display: block;
+  }
+}
+
 <div
-  className="sc-fzpans iUTXbQ"
+  className="c0"
 >
   <div
-    className="sc-fzplWN iNFhxv"
+    className="c1"
   >
     <div
-      className="sc-fznKkj fGLnqt"
+      className="c2"
     >
       <div
-        className="sc-fznyAO jTttdB"
+        className="c3"
+      >
+        <div
+          className="c4"
+          color="#C0392B"
+        />
+        <h1>
+          agentName
+        </h1>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                External IP address
+              </b>
+            </td>
+            <td
+              className="c5"
+            />
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Operating system
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              <i
+                className="c6 fab fa-apple"
+              />
+              darwin
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Architecture
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              amd64
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <i
+        className="c7 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="c8"
+    >
+      <div
+        className="c9"
+      >
+        <div
+          className="c10"
+        >
+          <div>
+            <h2>
+              disconnected
+            </h2>
+          </div>
+        </div>
+        <div
+          className="c11"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`agent detail opens terminal 3`] = `
+<div
+  className="sc-fzoyAV faFNuJ"
+>
+  <div
+    className="sc-fzoLag dKaLSX"
+  >
+    <div
+      className="sc-fzpjYC bERkfJ"
+    >
+      <div
+        className="sc-fzoXzr cDTEvD"
       >
         <div
           className="sc-fzoLsD jZMuGW"
@@ -521,45 +1050,43 @@ exports[`agent detail opens terminal 2`] = `
         <tbody>
           <tr>
             <td
-              className="sc-fznZeY laCqWn"
+              className="sc-fznxsB fiiqHo"
             >
               <b>
                 External IP address
               </b>
             </td>
             <td
-              className="sc-fznZeY laCqWn"
-            >
-              unknown
-            </td>
+              className="sc-fznxsB fiiqHo"
+            />
           </tr>
           <tr>
             <td
-              className="sc-fznZeY laCqWn"
+              className="sc-fznxsB fiiqHo"
             >
               <b>
                 Operating system
               </b>
             </td>
             <td
-              className="sc-fznZeY laCqWn"
+              className="sc-fznxsB fiiqHo"
             >
               <i
-                className="sc-AxjAm sc-fzqNJr kZnxIU fab fa-apple"
+                className="sc-AxjAm sc-fzoiQi cRRUVZ fab fa-apple"
               />
               darwin
             </td>
           </tr>
           <tr>
             <td
-              className="sc-fznZeY laCqWn"
+              className="sc-fznxsB fiiqHo"
             >
               <b>
                 Architecture
               </b>
             </td>
             <td
-              className="sc-fznZeY laCqWn"
+              className="sc-fznxsB fiiqHo"
             >
               amd64
             </td>
@@ -567,15 +1094,15 @@ exports[`agent detail opens terminal 2`] = `
         </tbody>
       </table>
       <i
-        className="sc-AxjAm sc-fzoyAV xJmzI fas fa-terminal"
+        className="sc-AxjAm sc-fzqARJ izbLyp fas fa-terminal"
         onClick={[Function]}
       />
     </div>
     <div
-      className="sc-fzokOt jxsbCE"
+      className="sc-fznJRM dVTkwc"
     >
       <div
-        className="sc-fzqBZW hxCrGu"
+        className="sc-fznWqX lnpakc"
       >
         <div
           className="sc-AxirZ sc-AxheI chvKGe"
@@ -596,92 +1123,206 @@ exports[`agent detail opens terminal 2`] = `
 `;
 
 exports[`agent detail renders correctly 1`] = `
+.c10 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 16px 0px 16px 16px;
+  height: 24px;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.c4 {
+  min-height: 12px;
+  min-width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  color: #C0392B;
+  background-color: #C0392B;
+}
+
 .c0 {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  height: 100px;
-  width: 100px;
+  margin: 32px;
+}
+
+.c1 {
+  display: grid;
+  grid-template-columns: [detail] 1fr [controls] 1fr;
+  max-width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  grid-column: detail;
+}
+
+.c5 {
+  padding-right: 40px;
+}
+
+.c8 {
+  grid-column: controls;
+  width: 100%;
+  min-width: 0;
+}
+
+.c9 {
+  width: 100%;
+}
+
+.c6 {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+.c7 {
+  cursor: inherit;
+  margin-top: 16px;
+  width: 24px;
+  height: 24px;
+  color: #363636;
+  display: none;
+}
+
+@media (max-width:47.9375em) {
+  .c9 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c7 {
+    display: block;
+  }
 }
 
 <div
-  aria-busy="true"
   className="c0"
-  style={Object {}}
 >
-  <svg
-    aria-label="audio-loading"
-    height={80}
-    viewBox="0 0 38 38"
-    width={80}
-    xmlns="http://www.w3.org/2000/svg"
+  <div
+    className="c1"
   >
-    <defs>
-      <linearGradient
-        id="a"
-        x1="8.042%"
-        x2="65.682%"
-        y1="0%"
-        y2="23.865%"
-      >
-        <stop
-          offset="0%"
-          stopColor="#02A3EE"
-          stopOpacity="0"
-        />
-        <stop
-          offset="63.146%"
-          stopColor="#02A3EE"
-          stopOpacity=".631"
-        />
-        <stop
-          offset="100%"
-          stopColor="#02A3EE"
-        />
-      </linearGradient>
-    </defs>
-    <g
-      fill="none"
-      fillRule="evenodd"
+    <div
+      className="c2"
     >
-      <g
-        transform="translate(1 1)"
+      <div
+        className="c3"
       >
-        <path
-          d="M36 18c0-9.94-8.06-18-18-18"
-          id="Oval-2"
-          stroke="#02A3EE"
-          strokeWidth="2"
+        <div
+          className="c4"
+          color="#C0392B"
+        />
+        <h1>
+          agentName
+        </h1>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                External IP address
+              </b>
+            </td>
+            <td
+              className="c5"
+            />
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Operating system
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              <i
+                className="c6 fab fa-apple"
+              />
+              darwin
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Architecture
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              amd64
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <i
+        className="c7 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="c8"
+    >
+      <div
+        className="c9"
+      >
+        <div
+          className="c10"
         >
-          <animateTransform
-            attributeName="transform"
-            dur="0.9s"
-            from="0 18 18"
-            repeatCount="indefinite"
-            to="360 18 18"
-            type="rotate"
-          />
-        </path>
-        <circle
-          cx="36"
-          cy="18"
-          fill="#fff"
-          r={1}
-        >
-          <animateTransform
-            attributeName="transform"
-            dur="0.9s"
-            from="0 18 18"
-            repeatCount="indefinite"
-            to="360 18 18"
-            type="rotate"
-          />
-        </circle>
-      </g>
-    </g>
-  </svg>
+          <div>
+            <h2>
+              disconnected
+            </h2>
+          </div>
+        </div>
+        <div
+          className="c11"
+        />
+      </div>
+    </div>
+  </div>
 </div>
 `;

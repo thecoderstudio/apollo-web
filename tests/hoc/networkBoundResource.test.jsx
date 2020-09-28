@@ -16,7 +16,7 @@ import { darkTheme } from '../../src/theme';
 const mockStore = configureStore([]);
 jest.mock('axios');
 
-function getComponent(store, dataId = 2, spy = jest.fn()) {
+function getComponent(store, dataId = null, spy = jest.fn()) {
   const Component = connect(
     state => ({
       localData: ImmutableMap(state.localData),
@@ -46,7 +46,7 @@ describe("network bound resource", () => {
 
   beforeEach(() => {
     store = mockStore({
-      localData: { 1: 'test' },
+      localData: { name: 'test' },
       params: {}
     });
     store.dispatch = jest.fn();
@@ -87,7 +87,7 @@ describe("network bound resource", () => {
     });
 
     const spy = jest.fn();
-    const component = getComponent(store, 2, spy)
+    const component = getComponent(store, null, spy)
     let tree = component.toJSON();
 
     await waitForExpect(() => {
@@ -103,7 +103,7 @@ describe("network bound resource", () => {
       data: {}
     });
 
-    const component = getComponent(store, 1)
+    const component = getComponent(store, "name")
     let tree = component.toJSON();
 
     await waitForExpect(() => {

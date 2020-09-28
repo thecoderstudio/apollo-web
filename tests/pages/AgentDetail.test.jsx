@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import axios from 'axios';
 import waitForExpect from 'wait-for-expect';
 import { StatusCodes } from 'http-status-codes';
+import { Map as ImmutableMap } from 'immutable';
 import { darkTheme } from '../../src/theme';
 import AgentDetail from '../../src/pages/AgentDetail';
 
@@ -13,8 +14,8 @@ const mockStore = configureStore([]);
 jest.mock('axios');
 
 function getComponentTags(agent) {
-  let agents = new Map();
-  agents.set(agent.id, agent);
+  let agents = new ImmutableMap({});
+  agents = agents.set(agent.id, agent);
   let store = mockStore({
     agent: agents
   });
@@ -25,7 +26,7 @@ function getComponentTags(agent) {
         <AgentDetail 
           match={{
             params: {
-              agentId: "fakeid"
+              agentId: "fakeid" 
             }
           }}
         />
@@ -121,6 +122,7 @@ describe("agent detail", () => {
   it("opens terminal", () => {
     const component = getComponent(defaultAgent);
     let tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
     component.root.findAllByType('i')[1].props.onClick();
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();

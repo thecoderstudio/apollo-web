@@ -47,14 +47,16 @@ function withNetworkBoundResource(WrappedComponent, getFromCache, getEndpoint, u
     }
 
     render() {
-      const notFound = !this.state.loading && this.state.data === null;
-      if (notFound) {
-        return <NotFound />
-      } else if (this.state.loading) {
-        return <Spinner />
-      } else {
-        return <WrappedComponent data={this.state.data} {...this.props} />;
+      const notFound = !this.state.loading && !this.state.data;
+      if (!this.state.data) {
+        if(this.state.loading) {
+          return <Spinner />
+        } else {
+          return <NotFound />
+        }
       }
+
+      return <WrappedComponent data={this.state.data} {...this.props} />;
     }
   }
 }
