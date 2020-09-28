@@ -164,7 +164,7 @@ exports[`inline terminal correctly renders connected 2`] = `
 
 .c1 {
   padding: 0px;
-  height: 400px;
+  height: 100%;
 }
 
 .c4 {

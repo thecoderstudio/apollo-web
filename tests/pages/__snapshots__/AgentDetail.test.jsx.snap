@@ -141,7 +141,9 @@ exports[`agent detail correctly syncs with remote 1`] = `
             </td>
             <td
               className="c5"
-            />
+            >
+              unknown
+            </td>
           </tr>
           <tr>
             <td
@@ -346,7 +348,9 @@ exports[`agent detail deals with property updates correctly 1`] = `
             </td>
             <td
               className="c5"
-            />
+            >
+              unknown
+            </td>
           </tr>
           <tr>
             <td
@@ -551,7 +555,9 @@ exports[`agent detail handles sync failure 1`] = `
             </td>
             <td
               className="c5"
-            />
+            >
+              unknown
+            </td>
           </tr>
           <tr>
             <td
@@ -756,7 +762,9 @@ exports[`agent detail opens terminal 1`] = `
             </td>
             <td
               className="c5"
-            />
+            >
+              unknown
+            </td>
           </tr>
           <tr>
             <td
@@ -961,7 +969,9 @@ exports[`agent detail opens terminal 2`] = `
             </td>
             <td
               className="c5"
-            />
+            >
+              unknown
+            </td>
           </tr>
           <tr>
             <td
@@ -1058,7 +1068,9 @@ exports[`agent detail opens terminal 3`] = `
             </td>
             <td
               className="sc-fznxsB fiiqHo"
-            />
+            >
+              unknown
+            </td>
           </tr>
           <tr>
             <td
@@ -1263,7 +1275,9 @@ exports[`agent detail renders correctly 1`] = `
             </td>
             <td
               className="c5"
-            />
+            >
+              unknown
+            </td>
           </tr>
           <tr>
             <td
