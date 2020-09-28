@@ -3,7 +3,7 @@ import { LIST_AGENTS, PUT_AGENT } from '../actions/agent';
 
 export default function agentReducer(state = new ImmutableMap(), action) {
   if (!ImmutableMap.isMap(state)) {
-    state = ImmutableMap(state);
+    state = new ImmutableMap(state);
   }
 
   switch (action.type) {

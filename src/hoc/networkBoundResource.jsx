@@ -58,7 +58,7 @@ function withNetworkBoundResource(WrappedComponent, getFromCache, getEndpoint, u
 
       return <WrappedComponent data={this.state.data} {...this.props} />;
     }
-  }
+  };
 }
 
 export default withNetworkBoundResource;

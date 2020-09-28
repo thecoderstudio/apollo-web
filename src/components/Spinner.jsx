@@ -9,7 +9,7 @@ const propTypes = {
 
 const defaultProps = {
   type: 'TailSpin'
-}
+};
 
 const StyledLoader = styled(Loader)`
   position: fixed;
