@@ -34,7 +34,6 @@ function withNetworkBoundResource(WrappedComponent, getFromCache, getEndpoint, u
     }
 
     componentDidUpdate(prevProps) {
-      console.log(this.props.localData);
       if (prevProps.localData !== this.props.localData) {
         this.updateFromCache();
       }
