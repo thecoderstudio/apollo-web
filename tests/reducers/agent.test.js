@@ -10,7 +10,7 @@ describe("agent reducer", () => {
 
   it("should correctly handle agent listing", () => {
     const agents = ImmutableMap({ id: Agent({ id: "id" })});
-    
+
     expect(agentReducer(undefined, {
       type: LIST_AGENTS,
       agents

@@ -1,5 +1,5 @@
 import { Map as ImmutableMap } from 'immutable';
-import { LIST_AGENTS, listAgents } from '../../src/actions/agent';
+import { PUT_AGENT, LIST_AGENTS, listAgents, putAgent } from '../../src/actions/agent';
 import Agent from '../../src/records/Agent';
 
 test("list agents creates lists agents action", () => {
@@ -12,4 +12,13 @@ test("list agents creates lists agents action", () => {
     agents: expectedAgents
   };
   expect(listAgents([agent])).toEqual(expectedAction);
+});
+
+test("put agent creates put agent action", () => {
+  const agent = { id: '1', username: 'test' };
+  const expectedAction = {
+    type: PUT_AGENT,
+    agent: Agent(agent)
+  };
+  expect(putAgent(agent)).toEqual(expectedAction);
 });
