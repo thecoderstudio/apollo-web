@@ -9,7 +9,7 @@ describe("agent reducer", () => {
   });
 
   it("should correctly handle agent listing", () => {
-    const agents = ImmutableMap({ id: Agent({ id: "id" })});
+    const agents = new ImmutableMap({ id: new Agent({ id: "id" })});
 
     expect(agentReducer(undefined, {
       type: LIST_AGENTS,
@@ -18,13 +18,13 @@ describe("agent reducer", () => {
   });
 
   it("should correctly handle agent PUT", () => {
-    const initialState = ImmutableMap({ "test": { id: "test", name:'old' }}) ;
-    const newAgent = Agent({ id: "test", name:'new' });
+    const initialState = new ImmutableMap({ "test": { id: "test", name:'old' }}) ;
+    const newAgent = new Agent({ id: "test", name:'new' });
 
     expect(agentReducer(undefined, {
       type: PUT_AGENT,
       agent: newAgent
-    })).toEqual(ImmutableMap({ "test": newAgent}));
+    })).toEqual(new ImmutableMap({ "test": newAgent}));
   });
 
   it("converts state to immutable", () => {

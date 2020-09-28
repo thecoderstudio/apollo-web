@@ -8,6 +8,6 @@ const Agent = Record({
   operatingSystem: UNKNOWN,
   architecture: UNKNOWN,
   externalIpAddress: UNKNOWN,
-})
+});
 
 export default Agent;

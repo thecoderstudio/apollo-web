@@ -14,7 +14,7 @@ function withNetworkBoundResource(WrappedComponent, getFromCache, getEndpoint, u
       this.state = {
         loading: true,
         data: getFromCache(this.props.localData, params)
-      }
+      };
       this.sync(params);
     }
 
@@ -50,9 +50,9 @@ function withNetworkBoundResource(WrappedComponent, getFromCache, getEndpoint, u
       const notFound = !this.state.loading && !this.state.data;
       if (!this.state.data) {
         if(this.state.loading) {
-          return <Spinner />
+          return <Spinner />;
         } else {
-          return <NotFound />
+          return <NotFound />;
         }
       }
 

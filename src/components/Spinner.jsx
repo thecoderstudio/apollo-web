@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   type: PropTypes.string
-}
+};
 
 const defaultProps = {
   type: 'TailSpin'

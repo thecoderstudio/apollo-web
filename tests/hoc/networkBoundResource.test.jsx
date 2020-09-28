@@ -19,7 +19,7 @@ jest.mock('axios');
 function getComponent(store, dataId = null, spy = jest.fn()) {
   const Component = connect(
     state => ({
-      localData: ImmutableMap(state.localData),
+      localData: new ImmutableMap(state.localData),
       match: { params: state.params }
     })
   )(withNetworkBoundResource(
@@ -70,7 +70,7 @@ describe("network bound resource", () => {
         data: {}
       }
     }));
-    const component = getComponent(store)
+    const component = getComponent(store);
     let tree = component.toJSON();
 
     await waitForExpect(() => {
@@ -87,7 +87,7 @@ describe("network bound resource", () => {
     });
 
     const spy = jest.fn();
-    const component = getComponent(store, null, spy)
+    const component = getComponent(store, null, spy);
     let tree = component.toJSON();
 
     await waitForExpect(() => {
@@ -103,7 +103,7 @@ describe("network bound resource", () => {
       data: {}
     });
 
-    const component = getComponent(store, "name")
+    const component = getComponent(store, "name");
     let tree = component.toJSON();
 
     await waitForExpect(() => {
