@@ -26,4 +26,9 @@ describe("agent reducer", () => {
       agent: newAgent
     })).toEqual(ImmutableMap({ "test": newAgent}));
   });
+
+  it("converts state to immutable", () => {
+    const state = agentReducer({}, { type: "test" });
+    expect(ImmutableMap.isMap(state)).toBe(true);
+  });
 });
