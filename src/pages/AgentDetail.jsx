@@ -12,9 +12,8 @@ import { parseSnakeCaseObj } from '../util/parser';
 import { handleHTTPResponse } from '../actions/error';
 import { putAgent } from '../actions/agent';
 import media from '../util/media';
+import { UNKNOWN } from '../util/constants';
 import { store } from '../store';
-
-const UNKNOWN = "unknown";
 
 const Wrapper = styled.div`
   margin: 32px;
@@ -94,6 +93,7 @@ class AgentDetail extends React.PureComponent {
 
   render() {
     let agent = this.props.data;
+    console.log(agent);
     const connected = agent.connectionState === 'connected';
     return (
       <Wrapper>
@@ -107,15 +107,15 @@ class AgentDetail extends React.PureComponent {
               <tbody>
                 <tr>
                   <Detail><b>External IP address</b></Detail>
-                  <Detail>{agent.externalIpAddress}</Detail>
+                  <Detail>{agent.externalIpAddress || UNKNOWN}</Detail>
                 </tr>
                 <tr>
                   <Detail><b>Operating system</b></Detail>
-                  <Detail>{this.getOSIcon(agent.operatingSystem)}{agent.operatingSystem}</Detail>
+                  <Detail>{this.getOSIcon(agent.operatingSystem)}{agent.operatingSystem || UNKNOWN}</Detail>
                 </tr>
                 <tr>
                   <Detail><b>Architecture</b></Detail>
-                  <Detail>{agent.architecture}</Detail>
+                  <Detail>{agent.architecture || UNKNOWN}</Detail>
                 </tr>
               </tbody>
             </table>

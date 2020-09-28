@@ -25,6 +25,7 @@ function Spinner(props) {
     <StyledLoader
       type={props.type}
       color={props.theme.primary}
+      className={props.className}
     />
   );
 }

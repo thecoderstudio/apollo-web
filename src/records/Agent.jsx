@@ -1,5 +1,5 @@
 import { Record } from 'immutable';
-const UNKNOWN = 'unknown';
+import { UNKNOWN } from '../util/constants';
 
 const Agent = Record({
   id: null,

@@ -20,7 +20,7 @@ const Container = styled(Card)`
 
 const StyledTerminal = styled(Terminal)`
   padding: 0px;
-  height: 400px;
+  height: 100%;
 `;
 
 const ControlBar = styled.div`

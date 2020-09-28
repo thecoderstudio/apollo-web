@@ -28,7 +28,6 @@ const List = styled.ul`
   grid-row: list;
   list-style: none;
   padding-left: 0;
-
 `;
 
 class AgentList extends React.Component {
