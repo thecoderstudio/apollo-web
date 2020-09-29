@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`app renders correctly authenticated 1`] = `
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -56,7 +56,6 @@ exports[`app renders correctly authenticated 1`] = `
   font-weight: 700;
   cursor: pointer;
   width: 100%;
-  margin-top: 15px;
 }
 
 .c9:hover {
@@ -76,6 +75,44 @@ exports[`app renders correctly authenticated 1`] = `
 }
 
 .c9:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c10 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  background-color: #4D02EE;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #4D02EE;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.c10:hover {
+  opacity: 0.90;
+}
+
+.c10:focus {
+  outline: none;
+}
+
+.c10:active {
+  opacity: 0.80;
+}
+
+.c10:disabled {
+  background-color: #3E3E3E;
+}
+
+.c10:disabled:hover {
   opacity: 1;
   cursor: auto;
 }
@@ -232,12 +269,18 @@ exports[`app renders correctly authenticated 1`] = `
             >
               Change password
             </button>
+            <button
+              className="c10"
+              onClick={[Function]}
+            >
+              Cancel and logout
+            </button>
           </form>
         </div>
       </div>
     </div>
     <span
-      className="c10"
+      className="c11"
     />
   </div>
 </div>

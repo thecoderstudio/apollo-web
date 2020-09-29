@@ -1,35 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Welcome renders change password correctly 1`] = `
-.c8 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.c8:hover {
-  opacity: 0.90;
-}
-
-.c8:focus {
-  outline: none;
-}
-
-.c8:active {
-  opacity: 0.80;
-}
-
-.c8:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
 .c6 {
   height: 80px;
 }
@@ -51,10 +22,70 @@ exports[`Welcome renders change password correctly 1`] = `
 }
 
 .c5 {
-  height: 75%;
-  display: grid;
-  grid-template-rows: auto;
-  grid-row-gap: 40px;
+  width: 100%;
+}
+
+.c8 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+}
+
+.c8:hover {
+  opacity: 0.90;
+}
+
+.c8:focus {
+  outline: none;
+}
+
+.c8:active {
+  opacity: 0.80;
+}
+
+.c8:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c9 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.c9:hover {
+  opacity: 0.90;
+}
+
+.c9:focus {
+  outline: none;
+}
+
+.c9:active {
+  opacity: 0.80;
+}
+
+.c9:disabled:hover {
+  opacity: 1;
+  cursor: auto;
 }
 
 .c0 {
@@ -145,7 +176,7 @@ exports[`Welcome renders change password correctly 1`] = `
       className="c3"
     >
       <div>
-        Log in to Apollo
+        Change your password
       </div>
     </h1>
     <div
@@ -160,10 +191,10 @@ exports[`Welcome renders change password correctly 1`] = `
         >
           <input
             className="c7"
-            name="username"
+            name="oldPassword"
             onChange={[Function]}
-            placeholder="Username"
-            type="username"
+            placeholder="Current password"
+            type="password"
             value=""
           />
         </div>
@@ -174,15 +205,34 @@ exports[`Welcome renders change password correctly 1`] = `
             className="c7"
             name="password"
             onChange={[Function]}
-            placeholder="Password"
+            placeholder="New password"
+            type="password"
+            value=""
+          />
+        </div>
+        <div
+          className="c6"
+        >
+          <input
+            className="c7"
+            name="passwordConfirm"
+            onChange={[Function]}
+            placeholder="Confirm new password"
             type="password"
             value=""
           />
         </div>
         <button
           className="c8"
+          disabled={true}
         >
-          Log in
+          Change password
+        </button>
+        <button
+          className="c9"
+          onClick={[Function]}
+        >
+          Cancel and logout
         </button>
       </form>
     </div>

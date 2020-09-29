@@ -41,11 +41,11 @@ class Login extends React.PureComponent {
           setErrors(parseHTTPErrors(error.response.data, { detail: 'password' }));
         }
       });
-  };
+  }
 
   loginSuccessCallback() {
     this.props.dispatch(loginAction());
-  };
+  }
 
   render() {
     return (
