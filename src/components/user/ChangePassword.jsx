@@ -102,7 +102,7 @@ class ChangePassword extends React.PureComponent {
               onChange={handleChange}
             />
             <StyledButton disabled={this.getDisabledButtonState(values) }>Change password</StyledButton>
-            <StyledOutlinedButton onClick={this.logout}>Cancel and logout</StyledOutlinedButton>
+            <StyledOutlinedButton id='logoutButton' onClick={this.logout}>Cancel and logout</StyledOutlinedButton>
           </Form>
         )}
       </Formik>

@@ -6,6 +6,7 @@ import waitForExpect from 'wait-for-expect';
 import axios from 'axios';
 import { StatusCodes } from 'http-status-codes';
 import ChangePassword from '../../../src/components/user/ChangePassword';
+import { logout as logoutAction } from '../../../src/actions/auth';
 
 const mockStore = configureStore([]);
 jest.mock('axios');
@@ -93,6 +94,26 @@ describe("change password", () => {
     });
   });
 
+  it('patch successfully', async () => {
+    const component = getComponent(store);
+    const root = component.root;
+
+    axios.get.mockResolvedValue({
+      status: StatusCodes.OK,
+      data: {}
+    });
+
+    axios.patch.mockResolvedValue({
+      status: StatusCodes.OK
+    });
+
+    submitForm(root, 'oldpassword', 'password', 'password');
+
+    await waitForExpect(() => {
+      expect(axios.patch).toHaveBeenCalled();
+    });
+  });
+
   it('handles unsuccessful patch', async () => {
     const component = getComponent(store);
     const root = component.root;
@@ -120,6 +141,17 @@ describe("change password", () => {
     await waitForExpect(() => {
       expect(axios.patch).toHaveBeenCalledTimes(2);
       expect(spy).not.toHaveBeenCalled();
+    });
+  });
+
+  it("handles successful logout", async () => {
+    let tree = getComponent(store);
+    const instance = tree.root;
+    instance.findByProps({id: 'logoutButton'}).props.onClick();
+    expect(tree).toMatchSnapshot();
+
+    await waitForExpect(() => {
+      expect(spy).toHaveBeenCalledWith(logoutAction());
     });
   });
 });

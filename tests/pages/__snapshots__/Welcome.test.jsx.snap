@@ -230,6 +230,7 @@ exports[`Welcome renders change password correctly 1`] = `
         </button>
         <button
           className="c9"
+          id="logoutButton"
           onClick={[Function]}
         >
           Cancel and logout
