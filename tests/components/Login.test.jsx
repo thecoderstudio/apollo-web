@@ -33,11 +33,11 @@ describe('login', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("handles successful login", () => {
+  it("handles successful login", async () => {
     const component = getComponent(store);
     const root = component.root.findByType(UnconnectedLogin);
     const instance = root.instance;
-    jest.spyOn(instance, 'loginSuccessCallback');
+    const spy = jest.spyOn(instance, 'loginSuccessCallback');
 
     axios.post.mockResolvedValue({
       status: StatusCodes.OK
@@ -62,18 +62,16 @@ describe('login', () => {
     });
     root.findByType('form').props.onSubmit();
 
-    waitForExpect(() => {
-      expect(instance.props.dispatch).toHaveBeenCalled();
-      expect(instance).toHaveBeenCalled();
+    await waitForExpect(() => {
+      expect(spy).toHaveBeenCalled();
     });
   });
 
-  it("handles unsuccessful login", () => {
+  it("handles unsuccessful login", async () => {
     const component = getComponent(store);
     const root = component.root.findByType(UnconnectedLogin);
     const instance = root.instance;
-
-    jest.spyOn(instance, 'loginSuccessCallback');
+    const spy = jest.spyOn(instance, 'loginSuccessCallback');
 
     axios.post.mockImplementationOnce(() => Promise.reject({
       response: {
@@ -107,9 +105,8 @@ describe('login', () => {
 
     root.findByType('form').props.onSubmit();
 
-    waitForExpect(() => {
-      expect(instance.props.dispatch).not.toHaveBeenCalled();
-      expect(instance).not.toHaveBeenCalled();
+    await waitForExpect(() => {
+      expect(spy).not.toHaveBeenCalled();
     });
   });
 });

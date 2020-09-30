@@ -27,12 +27,14 @@ class Login extends React.PureComponent {
   }
 
   login(credentials, { setErrors }) {
+    console.log("login")
     axios.post(
       `${process.env.APOLLO_HTTP_URL}auth/login`,
       credentials,
       { withCredentials: true }
     )
       .then(_ => {
+        console.log("SUCCES")
         fetchCurrentUser(this.loginSuccessCallback);
       })
       .catch(error => {
