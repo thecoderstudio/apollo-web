@@ -13,7 +13,9 @@ const propTypes = {
   manualUpload: PropTypes.bool.isRequired,
   selectedArchitecture: PropTypes.string.isRequired,
   selectedOperatingSystem: PropTypes.string.isRequired,
-  onClose: PropTypes.func.isRequired
+  onClose: PropTypes.func.isRequired,
+  agentId: PropTypes.string.isRequired,
+  secret: PropTypes.string.isRequired
 };
 
 const TwoColumnGrid = styled.div`
@@ -135,11 +137,10 @@ class AddAgent extends React.PureComponent {
 	getCommand = () => {
 		let command;
 		if (this.props.manualUpload) {
-			command = this.newAgentHandler.getExecuteCommand(this.state.agentId, this.state.secret, "localhost:1970");
+			command = this.newAgentHandler.getExecuteCommand(this.props.agentId, this.props.secret);
 		} else {
 			command = this.newAgentHandler.getDirectlyOnMachineCommand(
-        this.props.selectedOperatingSystem, this.props.selectedArchitecture, this.state.agentId, this.state.secret,
-        "localhost:1970"
+        this.props.selectedOperatingSystem, this.props.selectedArchitecture, this.props.agentId, this.props.secret
       );
     }
     return command;

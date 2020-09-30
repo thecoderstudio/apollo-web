@@ -36,9 +36,11 @@ const TextAndInputFieldWrapper = styled.div`
   display: grid;
   width: 100%;
   grid-template-columns: [text] 50% [dropdown] 50%;
+  height: 100px;
 
   ${
     media.phone`
+    height: 120px;
       grid-template-columns: [column-one] 100%;
       grid-template-rows: [text] 30px [dropdown] 85px;
     `

@@ -26,6 +26,10 @@ const StyledCard = styled(Card)`
   background-color: ${props => props.theme.black}
 `;
 
+const ScrollableContent = styled.div`
+
+`;
+
 const Title = styled.h2`
   grid-row: title;
   width: 75%;
@@ -132,21 +136,26 @@ class AddAgentModal extends React.PureComponent {
     } else if (!this.state.agentCreated) {
       content = <CreateAgent onClose={this.props.onClose} createAgentSuccessCallback={this.createAgentSuccessCallback} />;
     } else {
+
       content = (
         <AddAgent
           onClose={this.props.onClose}
           manualUpload={this.state.manualUpload === true}
           selectedOperatingSystem={this.state.selectedOperatingSystem}
-          selectedArchitecture={this.state.selectedArchitecture} />
+          selectedArchitecture={this.state.selectedArchitecture}
+          secret={this.state.secret}
+          agentId={this.state.agentId} />
       );
     }
     return (
       <ModalOverlay closeModalFunction={this.props.onClose}>
         <StyledCard>
-          <Title>Add new agent</Title>
-          <Content>
-            {content}
-          </Content>
+
+            <Title>Add new agent</Title>
+            <Content>
+              {content}
+            </Content>
+
         </StyledCard>
       </ModalOverlay>
     );

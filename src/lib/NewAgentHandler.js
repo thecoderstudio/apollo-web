@@ -4,13 +4,14 @@ export default class NewAgentHandler {
     this.supportedOS = ['linux', 'darwin', 'freebsd', 'openbsd'];
   }
 
-  getDirectlyOnMachineCommand(os, arch, agentId, secret, host) {
-    let command = `curl http://localhost:1970/agent/download?target_os=${os}&target_arch=${arch}`;
-    return command += ` && ${this.getExecuteCommand(agentId, secret, host)}`;
+  getDirectlyOnMachineCommand(os, arch, agentId, secret) {
+    let command = `curl ${process.env.APOLLO_HTTP_URL}agent/download?target_os=${os}&target_arch=${arch}`;
+    return command += ` > apollo-agent.bin && ${this.getExecuteCommand(agentId, secret)}`;
   }
 
-  getExecuteCommand(agentId, secret, host) {
-    return `chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=${agentId} --secret=${secret} --host=${host}`;
+  getExecuteCommand(agentId, secret) {
+    let command = `chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=${agentId} --secret=${secret}`
+    return command += ` --host=${process.env.APOLLO_BASE_HTTP_URL}${process.env.APOLLO_PORT}`;
   }
 
   downloadFile(data) {
