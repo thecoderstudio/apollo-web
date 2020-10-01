@@ -109,4 +109,41 @@ describe('login', () => {
       expect(spy).not.toHaveBeenCalled();
     });
   });
+
+  it("not calling callback on login success, fetch user fail.", () => {
+    const component = getComponent(store);
+    const root = component.root.findByProps({authenticated: false});
+    const instance = root.instance;
+    const spy = jest.spyOn(instance, 'loginSuccessCallback');
+
+    axios.post.mockResolvedValue({
+      status: StatusCodes.OK
+    });
+
+    axios.get.mockImplementationOnce(() => Promise.reject({
+      response: {
+        status: StatusCodes.INTERNAL_SERVER_ERROR,
+        statusText: "Something went wrong",
+        data: {}
+      }
+    }));
+
+    root.findByProps({type: 'username'}).props.onChange({
+      currentTarget: {
+        name: 'username',
+        value: 'test'
+      }
+    });
+    root.findByProps({type: 'password'}).props.onChange({
+      currentTarget: {
+        name: 'password',
+        value: 'password'
+      }
+    });
+    root.findByType('form').props.onSubmit();
+
+    await waitForExpect(() => {
+      expect(spy).not.toHaveBeenCalled();
+    });
+  });
 });
