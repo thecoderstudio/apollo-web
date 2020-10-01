@@ -8,13 +8,13 @@ export function fetchCurrentUser(callback) {
     `${process.env.APOLLO_HTTP_URL}user/me`,
     { withCredentials: true }
   )
-    .then(res => {
-      store.dispatch(cacheCurrentUser(res.data));
-      if (callback) {
-        callback();
-      }
-    })
-    .catch(error => {
-      handleHTTPResponse(error.response);
-    });
+  .then(res => {
+    store.dispatch(cacheCurrentUser(res.data));
+    if (callback) {
+      callback();
+    }
+  })
+  .catch(error => {
+    handleHTTPResponse(error.response);
+  });
 }
