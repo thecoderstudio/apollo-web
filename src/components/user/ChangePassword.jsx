@@ -6,8 +6,7 @@ import styled from 'styled-components';
 import Button from '../buttons/Button';
 import OutlinedButton from '../buttons/OutlinedButton';
 import Input from '../../components/Input';
-import { logout as logoutAction } from '../../actions/auth';
-import { removeCurrentUser } from '../../actions/current-user';
+import { logout } from '../../util/auth';
 import { changePasswordSchema } from '../../validation/user.js';
 import { fetchCurrentUser } from '../../util/user';
 import { StatusCodes } from 'http-status-codes';
@@ -32,7 +31,6 @@ class ChangePassword extends React.PureComponent {
     super(props);
     this.changePassword = this.changePassword.bind(this);
     this.getDisabledButtonState = this.getDisabledButtonState.bind(this);
-    this.logout = this.logout.bind(this);
   }
 
   changePassword(values, { setErrors }) {
@@ -44,72 +42,66 @@ class ChangePassword extends React.PureComponent {
         'password_confirm': values['passwordConfirm']
       },
       { withCredentials: true }
-		)
-			.then(_ => {
+    )
+      .then(_ => {
         fetchCurrentUser();
       })
       .catch(error => {
         handleHTTPResponse(error.response, true, true);
-        if (error.response.status === StatusCodes.BAD_REQUEST) {
-          setErrors(parseHTTPErrors(error.response.data, {
-            old_password: 'oldPassword', password_confirm: 'passwordConfirm'
-          }));
-        }
-      });
-	}
+      if (error.response.status === StatusCodes.BAD_REQUEST) {
+        setErrors(parseHTTPErrors(error.response.data, {
+          old_password: 'oldPassword', password_confirm: 'passwordConfirm'
+        }));
+      }
+    });
+  }
 
   getDisabledButtonState(values){
     return Object.values(values).some((value) => value === '');
   }
 
-  logout() {
-    let { dispatch } = this.props;
-    dispatch(logoutAction());
-    dispatch(removeCurrentUser());
-  }
-
   render() {
     return (
       <Formik
-        initialValues={{ password: '', passwordConfirm: '', oldPassword: ''}}
-        validationSchema={changePasswordSchema}
-        validateOnChange={false}
-        onSubmit={this.changePassword}>
-        {({ values, errors, handleChange, handleSubmit }) => (
-          <Form onSubmit={handleSubmit}>
-            <Input
-              name='oldPassword'
-              placeholder='Current password'
-              type='password'
-              value={values.oldPassword}
-              error={errors.oldPassword}
-              onChange={handleChange}
-            />
-            <Input
-              name='password'
-              type='password'
-              placeholder='New password'
-              value={values.password}
-              error={errors.password}
-              onChange={handleChange}
-            />
-            <Input
-              name='passwordConfirm'
-              type='password'
-              placeholder='Confirm new password'
-              value={values.passwordConfirm}
-              error={errors.passwordConfirm}
-              onChange={handleChange}
-            />
-            <StyledButton disabled={this.getDisabledButtonState(values) }>Change password</StyledButton>
-            <StyledOutlinedButton id='logoutButton' onClick={this.logout}>Cancel and logout</StyledOutlinedButton>
-          </Form>
-        )}
+      initialValues={{ password: '', passwordConfirm: '', oldPassword: ''}}
+      validationSchema={changePasswordSchema}
+      validateOnChange={false}
+      onSubmit={this.changePassword}>
+      {({ values, errors, handleChange, handleSubmit }) => (
+        <Form onSubmit={handleSubmit}>
+          <Input
+            name='oldPassword'
+            placeholder='Current password'
+            type='password'
+            value={values.oldPassword}
+            error={errors.oldPassword}
+            onChange={handleChange}
+          />
+          <Input
+            name='password'
+            type='password'
+            placeholder='New password'
+            value={values.password}
+            error={errors.password}
+            onChange={handleChange}
+          />
+          <Input
+            name='passwordConfirm'
+            type='password'
+            placeholder='Confirm new password'
+            value={values.passwordConfirm}
+            error={errors.passwordConfirm}
+            onChange={handleChange}
+          />
+          <StyledButton disabled={this.getDisabledButtonState(values) }>Change password</StyledButton>
+          <StyledOutlinedButton id='logoutButton' onClick={logout}>Cancel and logout</StyledOutlinedButton>
+        </Form>
+      )}
       </Formik>
     );
   }
 }
 
 export default connect(
-	state => ({ currentUser: state.currentUser })
+  state => ({ currentUser: state.currentUser })
 )(ChangePassword);

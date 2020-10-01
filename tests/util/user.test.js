@@ -2,7 +2,6 @@ import axios from 'axios';
 import waitForExpect from 'wait-for-expect';
 import { StatusCodes } from 'http-status-codes';
 import { fetchCurrentUser } from '../../src/util/user';
-import { cacheCurrentUser } from '../../src/actions/current-user';
 
 jest.mock('axios');
 

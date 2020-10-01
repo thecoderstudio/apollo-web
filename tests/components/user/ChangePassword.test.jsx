@@ -54,7 +54,10 @@ describe("change password", () => {
         hasChangedInitialPassword: false
       }
     });
-    spy = jest.spyOn(store, 'dispatch');
+    spy = jest.fn();
+    jest.mock('../../src/store', () => ({
+      dispatch: mockDispatchSpy,
+    }));
   });
 
   it("renders correctly", () => {
@@ -71,26 +74,6 @@ describe("change password", () => {
 
     await waitForExpect(() => {
       expect(axios.patch).not.toHaveBeenCalled();
-    });
-  });
-
-  it('patch successfully', async () => {
-    const component = getComponent(store);
-    const root = component.root;
-
-    axios.get.mockResolvedValue({
-      status: StatusCodes.OK,
-      data: {}
-    });
-
-    axios.patch.mockResolvedValue({
-      status: StatusCodes.OK
-    });
-
-    submitForm(root, 'oldpassword', 'password', 'password');
-
-    await waitForExpect(() => {
-      expect(axios.patch).toHaveBeenCalled();
     });
   });
 
@@ -148,7 +131,6 @@ describe("change password", () => {
     let tree = getComponent(store);
     const instance = tree.root;
     instance.findByProps({id: 'logoutButton'}).props.onClick();
-    expect(tree).toMatchSnapshot();
 
     await waitForExpect(() => {
       expect(spy).toHaveBeenCalledWith(logoutAction());

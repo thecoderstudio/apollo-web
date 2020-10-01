@@ -84,7 +84,7 @@ class Welcome extends React.Component {
         <InnerContainer>
           <SupportingImg src={moonImg} />
           <Title>
-            {!this.props.authenticated ? <div>Log in to Apollo</div> : <div>Change your password</div>}
+            {!this.props.authenticated ? "Log in to Apollo" : "Change your password"}
            </Title>
           <StyledCard>
             { !this.props.authenticated ? <Login /> : <ChangePassword /> }

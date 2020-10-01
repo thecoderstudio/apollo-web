@@ -1,8 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import { logout as logoutAction } from '../actions/auth';
-import { removeCurrentUser } from '../actions/current-user';
 import checkIfAdmin from '../util/admin';
 import OutlinedButton from './buttons/OutlinedButton';
 import Link from './Link';
@@ -27,31 +25,18 @@ const Logout = styled(OutlinedButton)`
   height: 75%;
 `;
 
-class NavBar extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.logout = this.logout.bind(this);
-  }
-
-  logout() {
-    let { dispatch } = this.props;
-    dispatch(logoutAction());
-    dispatch(removeCurrentUser());
-  }
-
-  render() {
-    return (
-      <NavigationBar>
-        <h3>Apollo</h3>
-        <div>
-          <StyledLink to='/'>Dashboard</StyledLink>
-          {checkIfAdmin(this.props.currentUser) &&
-          <StyledLink to='/admin'>Admin</StyledLink>}
-        </div>
-        <Logout onClick={this.logout}>Log out</Logout>
-      </NavigationBar>
-    );
-  }
+function NavBar() {
+  return(
+    <NavigationBar>
+      <h3>Apollo</h3>
+      <div>
+        <StyledLink to='/'>Dashboard</StyledLink>
+        {checkIfAdmin(this.props.currentUser) &&
+        <StyledLink to='/admin'>Admin</StyledLink>}
+      </div>
+      <Logout onClick={this.logout}>Log out</Logout>
+    </NavigationBar>
+  )
 }
 
 export default connect(
