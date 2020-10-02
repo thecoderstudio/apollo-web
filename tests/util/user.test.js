@@ -24,7 +24,7 @@ describe('user util', () => {
     await waitForExpect(() => {
       expect(axios.get).toHaveBeenCalled();
       expect(callbackSpy).toHaveBeenCalled();
-      expect(dispatchSpy).toHaveBeenCalledWith(cacheCurrentUser())
+      expect(dispatchSpy).toHaveBeenCalledWith(cacheCurrentUser({}))
     });
   });
 
@@ -41,7 +41,7 @@ describe('user util', () => {
     await waitForExpect(() => {
       expect(axios.get).toHaveBeenCalled();
       expect(callbackSpy).not.toHaveBeenCalled();
-      expect(dispatchSpy).not.toHaveBeenCalled();
+      expect(dispatchSpy).not.toHaveBeenCalledWith(cacheCurrentUser({}));
     });
   });
 });
