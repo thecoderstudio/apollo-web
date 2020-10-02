@@ -37,7 +37,7 @@ function NavBar(props) {
       </div>
       <Logout id='logoutButton' onClick={logout}>Log out</Logout>
     </NavigationBar>
-  )
+  );
 }
 
 export default connect(

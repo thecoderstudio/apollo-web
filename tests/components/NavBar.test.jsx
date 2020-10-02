@@ -28,7 +28,7 @@ describe('nav bar', () => {
     store = mockStore({
       currentUser: {}
     });
-    dispatchSpy = jest.spyOn(globalStore, 'dispatch')
+    dispatchSpy = jest.spyOn(globalStore, 'dispatch');
   });
 
   it("renders correctly", () => {

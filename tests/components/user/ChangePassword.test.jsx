@@ -57,7 +57,7 @@ describe("change password", () => {
       }
     });
     spy = jest.fn();
-    dispatchSpy = jest.spyOn(globalStore, 'dispatch')
+    dispatchSpy = jest.spyOn(globalStore, 'dispatch');
   });
 
   it("renders correctly", () => {

@@ -11,7 +11,7 @@ jest.mock('axios');
 describe('user util', () => {
   let dispatchSpy;
   beforeEach(() => {
-    dispatchSpy = jest.spyOn(store, 'dispatch')
+    dispatchSpy = jest.spyOn(store, 'dispatch');
   });
 
   it('fetches user correctly', async () => {
@@ -24,7 +24,7 @@ describe('user util', () => {
     await waitForExpect(() => {
       expect(axios.get).toHaveBeenCalled();
       expect(callbackSpy).toHaveBeenCalled();
-      expect(dispatchSpy).toHaveBeenCalledWith(cacheCurrentUser({}))
+      expect(dispatchSpy).toHaveBeenCalledWith(cacheCurrentUser({}));
     });
   });
 
