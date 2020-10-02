@@ -69,7 +69,6 @@ describe('agentList', () => {
     });
   });
 
-
   it("correctly lists multiple agents", () => {
     const data = new Map();
     data.set('id', { id: "id", name: "name", connectionState: "connected" });
@@ -90,7 +89,7 @@ describe('agentList', () => {
 
     expect(spy).toHaveBeenCalledWith(
       {
-        id: 0,
+        id: 0
         type: 'NOTIFY',
         message: "Something went wrong fetching the agent list",
         severity: severity.ERROR
