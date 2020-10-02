@@ -14,13 +14,26 @@ const propTypes = {
 };
 
 const StyledCard = styled(Card)`
-  background-color: ${props => props.theme.black}
+  background-color: ${props => props.theme.black};
   position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  padding: 15px 0px 15px 0px;
+
+  top: 50%;
+  left: 50%;
+  max-width: 600px;
+  transform:translate(-50%, -50%);
+  width: 100%;
+
+  ${
+    media.phone`
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      padding: 15px 0px 15px 0px;
+      width: auto;
+      transform: none;
+    `
+  }
 `;
 
 const ScrollableContent = styled.div`
@@ -155,7 +168,7 @@ class AddAgentModal extends React.PureComponent {
             <Content>
               {content}
             </Content>
-            </ScrollableContent>
+          </ScrollableContent>
         </StyledCard>
       </ModalOverlay>
     );
