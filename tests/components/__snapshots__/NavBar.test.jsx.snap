@@ -40,21 +40,21 @@ exports[`navbar handles add agent modal 1`] = `
   z-index: 1;
 }
 
-.c16 {
+.c17 {
   display: grid;
   grid-template-rows: [title] 50px [description] 1fr;
   padding: 20px;
   min-height: 180px;
 }
 
-.c18 {
+.c19 {
   grid-row: title;
   width: 80%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c19 {
+.c20 {
   grid-row: description;
   padding: 10px;
   font-size: 0.85rem;
@@ -67,48 +67,52 @@ exports[`navbar handles add agent modal 1`] = `
 }
 
 .c11 {
-  display: grid;
-  grid-template-rows: [title] 50px [content] 1fr;
   position: fixed;
   top: 50%;
   left: 50%;
+  max-width: 600px;
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  max-width: 600px;
   width: 100%;
-  height: auto;
 }
 
 .c12 {
+  display: grid;
+  grid-template-rows: [title] 50px [content] 1fr;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.c13 {
   grid-row: title;
   width: 75%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c13 {
+.c14 {
   grid-row: content;
   padding: 20px;
 }
 
-.c14 {
+.c15 {
   display: grid;
   grid-template-columns: [column-one] 50% [column-two] 50%;
   margin: 20px 0px 20px 0px;
 }
 
-.c15 {
+.c16 {
   grid-column: column-one;
   margin-right: 10px;
 }
 
-.c20 {
+.c21 {
   grid-column: column-two;
   margin-left: 10px;
 }
 
-.c17 {
+.c18 {
   width: 100%;
 }
 
@@ -158,14 +162,28 @@ exports[`navbar handles add agent modal 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c14 {
+  .c11 {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 15px 0px 15px 0px;
+    width: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c15 {
     grid-template-columns: [column-one] 100%;
     grid-template-rows: [row-one] 1fr [row-two] 1fr;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c15 {
+  .c16 {
     grid-row: row-one;
     margin-right: 0px;
     margin: 15px;
@@ -173,7 +191,7 @@ exports[`navbar handles add agent modal 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c20 {
+  .c21 {
     grid-column: column-one;
     grid-row: row-two;
     margin-left: 0px;
@@ -221,54 +239,58 @@ exports[`navbar handles add agent modal 1`] = `
     <div
       className="c10 c11"
     >
-      <h2
+      <div
         className="c12"
       >
-        Add new agent
-      </h2>
-      <div
-        className="c13"
-      >
+        <h2
+          className="c13"
+        >
+          Add new agent
+        </h2>
         <div
           className="c14"
         >
           <div
             className="c15"
           >
-            <button
-              className="c5 c7 c16 c17"
-              onClick={[Function]}
+            <div
+              className="c16"
             >
-              <h3
-                className="c18"
+              <button
+                className="c5 c7 c17 c18"
+                onClick={[Function]}
               >
-                Directly on target machine.
-              </h3>
-              <p
-                className="c19"
-              >
-                You have the correct permissions to download the binary directly on the target machine.
-              </p>
-            </button>
-          </div>
-          <div
-            className="c20"
-          >
-            <button
-              className="c5 c7 c16 c17"
-              onClick={[Function]}
+                <h3
+                  className="c19"
+                >
+                  Directly on target machine.
+                </h3>
+                <p
+                  className="c20"
+                >
+                  You have the correct permissions to download the binary directly on the target machine.
+                </p>
+              </button>
+            </div>
+            <div
+              className="c21"
             >
-              <h3
-                className="c18"
+              <button
+                className="c5 c7 c17 c18"
+                onClick={[Function]}
               >
-                Manual upload
-              </h3>
-              <p
-                className="c19"
-              >
-                You download and upload the binary yourself.
-              </p>
-            </button>
+                <h3
+                  className="c19"
+                >
+                  Manual upload
+                </h3>
+                <p
+                  className="c20"
+                >
+                  You download and upload the binary yourself.
+                </p>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -350,6 +372,10 @@ exports[`navbar handles add agent modal 2`] = `
   margin-left: 25px;
   margin-right: 25px;
   max-width: 250px;
+}
+
+@media (max-width:47.9375em) {
+
 }
 
 @media (max-width:47.9375em) {

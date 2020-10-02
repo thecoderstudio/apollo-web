@@ -1,32 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`agent list item doesn't open the terminal if not connected 1`] = `
-.c2 {
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #F8F8F8;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
+.c3 {
   cursor: pointer;
 }
 
-.c9 {
+.c11 {
   cursor: inherit;
 }
 
-.c6 {
-  display: grid;
-  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
-}
-
-.c7 {
-  grid-column: status-indicator;
-  height: 12px;
-  width: 12px;
+.c8 {
+  min-height: 12px;
+  min-width: 12px;
   margin: 10px;
   border-radius: 50%;
-  float: right;
-  text-align: left;
   color: #C0392B;
   background-color: #C0392B;
 }
 
-.c8 {
+.c7 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c9 {
+  grid-column: status-indicator;
+  float: right;
+  text-align: left;
+}
+
+.c10 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -38,24 +51,26 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
 
 .c0 {
   display: grid;
-  grid-template-columns: 1fr 1fr 175px;
-  grid-column-gap: 10px;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
+  grid-template-columns: auto 100px 175px;
+  grid-column-gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
   border-radius: 8px;
   border: 1px solid white;
-  height: 30px;
   line-height: 30px;
-  padding: 15px 20px;
+  padding: 5px 20px;
   margin-top: 25px;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -68,9 +83,10 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  min-width: 0;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -83,23 +99,31 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
   -webkit-justify-content: start;
   -ms-flex-pack: start;
   justify-content: start;
-  width: 50%;
+  width: 100%;
+  min-width: 0;
+}
+
+.c2 p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.c4 {
-  width: 50%;
+.c2:hover {
+  color: #02A3EE;
 }
 
-.c10 {
+.c5 {
+  min-width: 0;
+}
+
+.c12 {
   color: #363636;
+  margin-left: 16px;
 }
 
-.c3 {
+.c4 {
   margin-right: 10px;
-  color: #F8F8F8;
   cursor: inherit;
 }
 
@@ -117,13 +141,13 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c1 {
+  .c2 {
     width: 100%;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -134,7 +158,7 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     width: 100%;
     text-align: center;
   }
@@ -144,38 +168,42 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
   <li
     className="c0"
   >
-    <div
-      className="c1"
+    <a
+      className="c1 c2"
+      href="/agent/fakeid"
+      onClick={[Function]}
     >
       <i
-        className="c2 c3 fas fa-question-circle"
+        className="c3 c4 fas fa-question-circle"
       />
       Operating system unkown
       <p>
         agentName
       </p>
-    </div>
+    </a>
     <p
-      className="c4"
+      className="c5"
     />
     External IP address
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7"
+          className="c8 c9"
+          color="#C0392B"
         />
         <p
-          className="c8"
+          className="c10"
+          color="#C0392B"
         >
           Disconnected
         </p>
       </div>
       <i
-        className="c9 c10 fas fa-terminal"
+        className="c11 c12 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
@@ -185,27 +213,40 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
 
 exports[`agent list item opens and closes the terminal 1`] = `
 .c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #F8F8F8;
+}
+
+.c2:hover {
+  opacity: 0.90;
+}
+
+.c3 {
   cursor: pointer;
 }
 
-.c6 {
-  display: grid;
-  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
-}
-
-.c7 {
-  grid-column: status-indicator;
-  height: 12px;
-  width: 12px;
+.c9 {
+  min-height: 12px;
+  min-width: 12px;
   margin: 10px;
   border-radius: 50%;
-  float: right;
-  text-align: left;
   color: #27AE60;
   background-color: #27AE60;
 }
 
+.c7 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
 .c8 {
+  grid-column: status-indicator;
+  float: right;
+  text-align: left;
+}
+
+.c10 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -215,35 +256,35 @@ exports[`agent list item opens and closes the terminal 1`] = `
   color: #27AE60;
 }
 
-.c18 {
+.c20 {
   height: 100%;
   width: 100%;
   padding: 20px;
 }
 
-.c19 {
+.c21 {
   height: 100%;
   width: 100%;
 }
 
-.c19 .xterm-viewport {
+.c21 .xterm-viewport {
   overflow: hidden !important;
 }
 
-.c10 {
+.c12 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
 }
 
-.c11 {
+.c13 {
   padding: 0px;
   border: 1px solid #32E67E;
   border-style: none none solid none;
 }
 
-.c12 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -255,7 +296,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   align-items: center;
 }
 
-.c15 {
+.c17 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -269,7 +310,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   justify-content: flex-end;
 }
 
-.c16 {
+.c18 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -278,7 +319,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   cursor: pointer;
 }
 
-.c17 {
+.c19 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -287,13 +328,13 @@ exports[`agent list item opens and closes the terminal 1`] = `
   cursor: pointer;
 }
 
-.c13 {
+.c15 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c14 {
+.c16 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -303,24 +344,26 @@ exports[`agent list item opens and closes the terminal 1`] = `
 
 .c0 {
   display: grid;
-  grid-template-columns: 1fr 1fr 175px;
-  grid-column-gap: 10px;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
+  grid-template-columns: auto 100px 175px;
+  grid-column-gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
   border-radius: 8px;
   border: 1px solid white;
-  height: 30px;
   line-height: 30px;
-  padding: 15px 20px;
+  padding: 5px 20px;
   margin-top: 25px;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -333,6 +376,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  min-width: 0;
 }
 
 .c1 {
@@ -348,23 +392,31 @@ exports[`agent list item opens and closes the terminal 1`] = `
   -webkit-justify-content: start;
   -ms-flex-pack: start;
   justify-content: start;
-  width: 50%;
+  width: 100%;
+  min-width: 0;
+}
+
+.c1 p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
+.c1:hover {
+  color: #02A3EE;
+}
+
+.c5 {
+  min-width: 0;
+}
+
+.c11 {
+  color: #F8F8F8;
+  margin-left: 16px;
+}
+
 .c4 {
-  width: 50%;
-}
-
-.c9 {
-  color: #F8F8F8;
-}
-
-.c3 {
   margin-right: 10px;
-  color: #F8F8F8;
   cursor: inherit;
 }
 
@@ -382,7 +434,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 }
@@ -399,7 +451,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     width: 100%;
     text-align: center;
   }
@@ -429,70 +481,237 @@ exports[`agent list item opens and closes the terminal 1`] = `
       }
     }
   >
-    <AgentListItem
-      agent={
-        Object {
-          "architecture": "amd64",
-          "connectionState": "connected",
-          "id": "fakeid",
-          "name": "agentName",
-          "operatingSystem": undefined,
+    <BrowserRouter>
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "createHref": [Function],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
         }
-      }
-    >
-      <styled.li>
-        <li
-          className="c0"
+      >
+        <AgentListItem
+          agent={
+            Object {
+              "architecture": "amd64",
+              "connectionState": "connected",
+              "id": "fakeid",
+              "name": "agentName",
+              "operatingSystem": undefined,
+            }
+          }
         >
-          <styled.div>
-            <div
-              className="c1"
+          <styled.li>
+            <li
+              className="c0"
             >
+              <Styled(Link)
+                to="/agent/fakeid"
+              >
+                <Link
+                  className="c1"
+                  to="/agent/fakeid"
+                >
+                  <Styled(Link)
+                    className="c1"
+                    to="/agent/fakeid"
+                  >
+                    <Link
+                      className="c2 c1"
+                      to="/agent/fakeid"
+                    >
+                      <LinkAnchor
+                        className="c2 c1"
+                        href="/agent/fakeid"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="c2 c1"
+                          href="/agent/fakeid"
+                          onClick={[Function]}
+                        >
+                          <ForwardRef(TippyWrapper)
+                            content="Operating system unkown"
+                          >
+                            <Tippy
+                              content="Operating system unkown"
+                            >
+                              <Styled(styled.i)
+                                active={true}
+                                className="fas fa-question-circle"
+                              >
+                                <i
+                                  className="c3 c4 fas fa-question-circle"
+                                />
+                              </Styled(styled.i)>
+                              Operating system unkown
+                            </Tippy>
+                          </ForwardRef(TippyWrapper)>
+                          <p>
+                            agentName
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </Styled(Link)>
+                </Link>
+              </Styled(Link)>
               <ForwardRef(TippyWrapper)
-                content="Operating system unkown"
+                content="External IP address"
               >
                 <Tippy
-                  content="Operating system unkown"
+                  content="External IP address"
                 >
-                  <Styled(styled.i)
-                    active={true}
-                    className="fas fa-question-circle"
-                  >
-                    <i
-                      className="c2 c3 fas fa-question-circle"
+                  <styled.p>
+                    <p
+                      className="c5"
                     />
-                  </Styled(styled.i)>
-                  Operating system unkown
+                  </styled.p>
+                  External IP address
                 </Tippy>
               </ForwardRef(TippyWrapper)>
-              <p>
-                agentName
-              </p>
-            </div>
-          </styled.div>
-          <ForwardRef(TippyWrapper)
-            content="External IP address"
-          >
-            <Tippy
-              content="External IP address"
-            >
-              <styled.p>
-                <p
-                  className="c4"
-                />
-              </styled.p>
-              External IP address
-            </Tippy>
-          </ForwardRef(TippyWrapper)>
-          <styled.div>
-            <div
-              className="c5"
-            >
-              <WithTheme(ConnectionState)
-                connectionState="connected"
+              <styled.div>
+                <div
+                  className="c6"
+                >
+                  <WithTheme(ConnectionState)
+                    connectionState="connected"
+                  >
+                    <ConnectionState
+                      connectionState="connected"
+                      theme={
+                        Object {
+                          "accent": "#4D02EE",
+                          "black": "#181818",
+                          "connectedColor": "#27AE60",
+                          "connectingColor": "#F39C12",
+                          "darkGrey": "#3E3E3E",
+                          "darkWhite": "#F1F1F1",
+                          "disconnectedColor": "#C0392B",
+                          "error": "#ED3E2A",
+                          "green": "#32E67E",
+                          "inactive": "#363636",
+                          "lightBlack": "#1B1B1B",
+                          "name": "dark",
+                          "overlay": "rgba(37, 37, 37, 0.6)",
+                          "primary": "#02A3EE",
+                          "red": "#ED3E2A",
+                          "warning": "#ED852A",
+                          "white": "#F8F8F8",
+                        }
+                      }
+                    >
+                      <styled.div>
+                        <div
+                          className="c7"
+                        >
+                          <Styled(WithTheme(ConnectionIndicator))
+                            connectionState="connected"
+                          >
+                            <WithTheme(ConnectionIndicator)
+                              className="c8"
+                              connectionState="connected"
+                            >
+                              <ConnectionIndicator
+                                className="c8"
+                                connectionState="connected"
+                                theme={
+                                  Object {
+                                    "accent": "#4D02EE",
+                                    "black": "#181818",
+                                    "connectedColor": "#27AE60",
+                                    "connectingColor": "#F39C12",
+                                    "darkGrey": "#3E3E3E",
+                                    "darkWhite": "#F1F1F1",
+                                    "disconnectedColor": "#C0392B",
+                                    "error": "#ED3E2A",
+                                    "green": "#32E67E",
+                                    "inactive": "#363636",
+                                    "lightBlack": "#1B1B1B",
+                                    "name": "dark",
+                                    "overlay": "rgba(37, 37, 37, 0.6)",
+                                    "primary": "#02A3EE",
+                                    "red": "#ED3E2A",
+                                    "warning": "#ED852A",
+                                    "white": "#F8F8F8",
+                                  }
+                                }
+                              >
+                                <styled.div
+                                  className="c8"
+                                  color="#27AE60"
+                                >
+                                  <div
+                                    className="c9 c8"
+                                    color="#27AE60"
+                                  />
+                                </styled.div>
+                              </ConnectionIndicator>
+                            </WithTheme(ConnectionIndicator)>
+                          </Styled(WithTheme(ConnectionIndicator))>
+                          <styled.p
+                            color="#27AE60"
+                          >
+                            <p
+                              className="c10"
+                              color="#27AE60"
+                            >
+                              Connected
+                            </p>
+                          </styled.p>
+                        </div>
+                      </styled.div>
+                    </ConnectionState>
+                  </WithTheme(ConnectionState)>
+                  <Styled(styled.i)
+                    active={true}
+                    className="fas fa-terminal"
+                    onClick={[Function]}
+                  >
+                    <i
+                      className="c3 c11 fas fa-terminal"
+                      onClick={[Function]}
+                    />
+                  </Styled(styled.i)>
+                </div>
+              </styled.div>
+              <WithTheme(TerminalWindow)
+                agent={
+                  Object {
+                    "architecture": "amd64",
+                    "connectionState": "connected",
+                    "id": "fakeid",
+                    "name": "agentName",
+                    "operatingSystem": undefined,
+                  }
+                }
+                onClose={[Function]}
               >
-                <ConnectionState
-                  connectionState="connected"
+                <TerminalWindow
+                  agent={
+                    Object {
+                      "architecture": "amd64",
+                      "connectionState": "connected",
+                      "id": "fakeid",
+                      "name": "agentName",
+                      "operatingSystem": undefined,
+                    }
+                  }
+                  onClose={[Function]}
                   theme={
                     Object {
                       "accent": "#4D02EE",
@@ -515,139 +734,58 @@ exports[`agent list item opens and closes the terminal 1`] = `
                     }
                   }
                 >
-                  <styled.div>
-                    <div
-                      className="c6"
-                    >
-                      <styled.div
-                        connectionStateColor="#27AE60"
-                      >
-                        <div
-                          className="c7"
-                        />
-                      </styled.div>
-                      <styled.p
-                        connectionStateColor="#27AE60"
-                      >
-                        <p
-                          className="c8"
-                        >
-                          Connected
-                        </p>
-                      </styled.p>
-                    </div>
-                  </styled.div>
-                </ConnectionState>
-              </WithTheme(ConnectionState)>
-              <Styled(styled.i)
-                active={true}
-                className="fas fa-terminal"
-                onClick={[Function]}
-              >
-                <i
-                  className="c2 c9 fas fa-terminal"
-                  onClick={[Function]}
-                />
-              </Styled(styled.i)>
-            </div>
-          </styled.div>
-          <WithTheme(TerminalWindow)
-            agent={
-              Object {
-                "architecture": "amd64",
-                "connectionState": "connected",
-                "id": "fakeid",
-                "name": "agentName",
-                "operatingSystem": undefined,
-              }
-            }
-            onClose={[Function]}
-          >
-            <TerminalWindow
-              agent={
-                Object {
-                  "architecture": "amd64",
-                  "connectionState": "connected",
-                  "id": "fakeid",
-                  "name": "agentName",
-                  "operatingSystem": undefined,
-                }
-              }
-              onClose={[Function]}
-              theme={
-                Object {
-                  "accent": "#4D02EE",
-                  "black": "#181818",
-                  "connectedColor": "#27AE60",
-                  "connectingColor": "#F39C12",
-                  "darkGrey": "#3E3E3E",
-                  "darkWhite": "#F1F1F1",
-                  "disconnectedColor": "#C0392B",
-                  "error": "#ED3E2A",
-                  "green": "#32E67E",
-                  "inactive": "#363636",
-                  "lightBlack": "#1B1B1B",
-                  "name": "dark",
-                  "overlay": "rgba(37, 37, 37, 0.6)",
-                  "primary": "#02A3EE",
-                  "red": "#ED3E2A",
-                  "warning": "#ED852A",
-                  "white": "#F8F8F8",
-                }
-              }
-            >
-              <Rnd
-                bounds="window"
-                default={
-                  Object {
-                    "height": 400,
-                    "width": 700,
-                    "x": 0,
-                    "y": 0,
-                  }
-                }
-                maxHeight={9007199254740991}
-                maxWidth={9007199254740991}
-                minHeight={300}
-                minWidth={700}
-                onDrag={[Function]}
-                onDragStart={[Function]}
-                onDragStop={[Function]}
-                onResize={[Function]}
-                onResizeStart={[Function]}
-                onResizeStop={[Function]}
-                scale={1}
-              >
-                <Draggable
-                  allowAnyClick={false}
-                  axis="both"
-                  bounds={
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "right": 0,
-                      "top": 0,
+                  <Rnd
+                    bounds="window"
+                    default={
+                      Object {
+                        "height": 400,
+                        "width": 700,
+                        "x": 0,
+                        "y": 0,
+                      }
                     }
-                  }
-                  cancel={null}
-                  defaultClassName="react-draggable"
-                  defaultClassNameDragged="react-draggable-dragged"
-                  defaultClassNameDragging="react-draggable-dragging"
-                  defaultPosition={
-                    Object {
-                      "height": 400,
-                      "width": 700,
-                      "x": 0,
-                      "y": 0,
-                    }
-                  }
-                  disabled={false}
-                  enableUserSelectHack={true}
-                  grid={null}
-                  handle={null}
-                  nodeRef={
-                    Object {
-                      "current": .c8 {
+                    maxHeight={9007199254740991}
+                    maxWidth={9007199254740991}
+                    minHeight={300}
+                    minWidth={700}
+                    onDrag={[Function]}
+                    onDragStart={[Function]}
+                    onDragStop={[Function]}
+                    onResize={[Function]}
+                    onResizeStart={[Function]}
+                    onResizeStop={[Function]}
+                    scale={1}
+                  >
+                    <Draggable
+                      allowAnyClick={false}
+                      axis="both"
+                      bounds={
+                        Object {
+                          "bottom": 0,
+                          "left": 0,
+                          "right": 0,
+                          "top": 0,
+                        }
+                      }
+                      cancel={null}
+                      defaultClassName="react-draggable"
+                      defaultClassNameDragged="react-draggable-dragged"
+                      defaultClassNameDragging="react-draggable-dragging"
+                      defaultPosition={
+                        Object {
+                          "height": 400,
+                          "width": 700,
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      disabled={false}
+                      enableUserSelectHack={true}
+                      grid={null}
+                      handle={null}
+                      nodeRef={
+                        Object {
+                          "current": .c8 {
   height: 100%;
   width: 100%;
   padding: 20px;
@@ -750,720 +888,735 @@ exports[`agent list item opens and closes the terminal 1`] = `
 }
 
 <div
-                        class="react-draggable"
-                        style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
-                      >
-                        <div
-                          class="c0 c1"
-                        >
-                          <div
-                            class="c2"
+                            class="react-draggable"
+                            style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
                           >
                             <div
-                              class="c3"
-                            />
-                            <h4
-                              class="c4"
-                            >
-                              agentName
-                            </h4>
-                            <div
-                              class="c5"
+                              class="c0 c1"
                             >
                               <div
-                                class="c6"
-                                color="#32E67E"
-                                id="expand-button"
-                              />
-                              <div
-                                class="c7"
-                                color="#ED3E2A"
-                                id="close-button"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="c8"
-                          >
-                            <div
-                              class="c9"
-                              data-testid="terminal"
-                            >
-                              <div
-                                class="terminal xterm"
-                                dir="ltr"
-                                tabindex="0"
+                                class="c2"
                               >
                                 <div
-                                  class="xterm-viewport"
-                                  style="background-color: rgba(255, 255, 255, 0);"
+                                  class="c3"
+                                />
+                                <h4
+                                  class="c4"
                                 >
-                                  <div
-                                    class="xterm-scroll-area"
-                                  />
-                                </div>
+                                  agentName
+                                </h4>
                                 <div
-                                  class="xterm-screen"
+                                  class="c5"
                                 >
                                   <div
-                                    class="xterm-helpers"
-                                  >
-                                    <textarea
-                                      aria-label="Terminal input"
-                                      aria-multiline="false"
-                                      autocapitalize="off"
-                                      autocorrect="off"
-                                      class="xterm-helper-textarea"
-                                      spellcheck="false"
-                                      tabindex="0"
-                                    />
-                                    <span
-                                      aria-hidden="true"
-                                      class="xterm-char-measure-element"
-                                      style="font-family: courier-new, courier, monospace; font-size: 15px;"
-                                    >
-                                      W
-                                    </span>
-                                    <div
-                                      class="composition-view"
-                                    />
-                                  </div>
-                                  <canvas
-                                    class="xterm-text-layer"
-                                    style="z-index: 0;"
+                                    class="c6"
+                                    color="#32E67E"
+                                    id="expand-button"
                                   />
-                                  <canvas
-                                    class="xterm-selection-layer"
-                                    style="z-index: 1;"
-                                  />
-                                  <canvas
-                                    class="xterm-link-layer"
-                                    style="z-index: 2;"
-                                  />
-                                  <canvas
-                                    class="xterm-cursor-layer"
-                                    style="z-index: 3;"
+                                  <div
+                                    class="c7"
+                                    color="#ED3E2A"
+                                    id="close-button"
                                   />
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                        </div>
-                        <span>
-                          <div
-                            class=""
-                            style="position: absolute; user-select: none; width: 100%; height: 10px; top: -5px; left: 0px; cursor: row-resize;"
-                          />
-                          <div
-                            class=""
-                            style="position: absolute; user-select: none; width: 10px; height: 100%; top: 0px; right: -5px; cursor: col-resize;"
-                          />
-                          <div
-                            class=""
-                            style="position: absolute; user-select: none; width: 100%; height: 10px; bottom: -5px; left: 0px; cursor: row-resize;"
-                          />
-                          <div
-                            class=""
-                            style="position: absolute; user-select: none; width: 10px; height: 100%; top: 0px; left: -5px; cursor: col-resize;"
-                          />
-                          <div
-                            class=""
-                            style="position: absolute; user-select: none; width: 20px; height: 20px; right: -10px; top: -10px; cursor: ne-resize;"
-                          />
-                          <div
-                            class=""
-                            style="position: absolute; user-select: none; width: 20px; height: 20px; right: -10px; bottom: -10px; cursor: se-resize;"
-                          />
-                          <div
-                            class=""
-                            style="position: absolute; user-select: none; width: 20px; height: 20px; left: -10px; bottom: -10px; cursor: sw-resize;"
-                          />
-                          <div
-                            class=""
-                            style="position: absolute; user-select: none; width: 20px; height: 20px; left: -10px; top: -10px; cursor: nw-resize;"
-                          />
-                        </span>
-                      </div>,
-                    }
-                  }
-                  offsetParent={null}
-                  onDrag={[Function]}
-                  onMouseDown={[Function]}
-                  onStart={[Function]}
-                  onStop={[Function]}
-                  position={null}
-                  scale={1}
-                  transform={null}
-                >
-                  <DraggableCore
-                    allowAnyClick={false}
-                    cancel={null}
-                    disabled={false}
-                    enableUserSelectHack={true}
-                    grid={null}
-                    handle={null}
-                    nodeRef={
-                      Object {
-                        "current": <div
-                          class="react-draggable"
-                          style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
-                        >
-                          <div
-                            class="c10 c11"
-                          >
-                            <div
-                              class="c12"
-                            >
                               <div
-                                class="c13"
-                              />
-                              <h4
-                                class="c14"
-                              >
-                                agentName
-                              </h4>
-                              <div
-                                class="c15"
+                                class="c8"
                               >
                                 <div
-                                  class="c16"
-                                  color="#32E67E"
-                                  id="expand-button"
-                                />
-                                <div
-                                  class="c17"
-                                  color="#ED3E2A"
-                                  id="close-button"
-                                />
-                              </div>
-                            </div>
-                            <div
-                              class="c18"
-                            >
-                              <div
-                                class="c19"
-                                data-testid="terminal"
-                              >
-                                <div
-                                  class="terminal xterm"
-                                  dir="ltr"
-                                  tabindex="0"
+                                  class="c9"
+                                  data-testid="terminal"
                                 >
                                   <div
-                                    class="xterm-viewport"
-                                    style="background-color: rgba(255, 255, 255, 0);"
+                                    class="terminal xterm"
+                                    dir="ltr"
+                                    tabindex="0"
                                   >
                                     <div
-                                      class="xterm-scroll-area"
-                                    />
-                                  </div>
-                                  <div
-                                    class="xterm-screen"
-                                  >
-                                    <div
-                                      class="xterm-helpers"
+                                      class="xterm-viewport"
+                                      style="background-color: rgba(255, 255, 255, 0);"
                                     >
-                                      <textarea
-                                        aria-label="Terminal input"
-                                        aria-multiline="false"
-                                        autocapitalize="off"
-                                        autocorrect="off"
-                                        class="xterm-helper-textarea"
-                                        spellcheck="false"
-                                        tabindex="0"
-                                      />
-                                      <span
-                                        aria-hidden="true"
-                                        class="xterm-char-measure-element"
-                                        style="font-family: courier-new, courier, monospace; font-size: 15px;"
-                                      >
-                                        W
-                                      </span>
                                       <div
-                                        class="composition-view"
+                                        class="xterm-scroll-area"
                                       />
                                     </div>
-                                    <canvas
-                                      class="xterm-text-layer"
-                                      style="z-index: 0;"
-                                    />
-                                    <canvas
-                                      class="xterm-selection-layer"
-                                      style="z-index: 1;"
-                                    />
-                                    <canvas
-                                      class="xterm-link-layer"
-                                      style="z-index: 2;"
-                                    />
-                                    <canvas
-                                      class="xterm-cursor-layer"
-                                      style="z-index: 3;"
-                                    />
+                                    <div
+                                      class="xterm-screen"
+                                    >
+                                      <div
+                                        class="xterm-helpers"
+                                      >
+                                        <textarea
+                                          aria-label="Terminal input"
+                                          aria-multiline="false"
+                                          autocapitalize="off"
+                                          autocorrect="off"
+                                          class="xterm-helper-textarea"
+                                          spellcheck="false"
+                                          tabindex="0"
+                                        />
+                                        <span
+                                          aria-hidden="true"
+                                          class="xterm-char-measure-element"
+                                          style="font-family: courier-new, courier, monospace; font-size: 15px;"
+                                        >
+                                          W
+                                        </span>
+                                        <div
+                                          class="composition-view"
+                                        />
+                                      </div>
+                                      <canvas
+                                        class="xterm-text-layer"
+                                        style="z-index: 0;"
+                                      />
+                                      <canvas
+                                        class="xterm-selection-layer"
+                                        style="z-index: 1;"
+                                      />
+                                      <canvas
+                                        class="xterm-link-layer"
+                                        style="z-index: 2;"
+                                      />
+                                      <canvas
+                                        class="xterm-cursor-layer"
+                                        style="z-index: 3;"
+                                      />
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                          <span>
-                            <div
-                              class=""
-                              style="position: absolute; user-select: none; width: 100%; height: 10px; top: -5px; left: 0px; cursor: row-resize;"
-                            />
-                            <div
-                              class=""
-                              style="position: absolute; user-select: none; width: 10px; height: 100%; top: 0px; right: -5px; cursor: col-resize;"
-                            />
-                            <div
-                              class=""
-                              style="position: absolute; user-select: none; width: 100%; height: 10px; bottom: -5px; left: 0px; cursor: row-resize;"
-                            />
-                            <div
-                              class=""
-                              style="position: absolute; user-select: none; width: 10px; height: 100%; top: 0px; left: -5px; cursor: col-resize;"
-                            />
-                            <div
-                              class=""
-                              style="position: absolute; user-select: none; width: 20px; height: 20px; right: -10px; top: -10px; cursor: ne-resize;"
-                            />
-                            <div
-                              class=""
-                              style="position: absolute; user-select: none; width: 20px; height: 20px; right: -10px; bottom: -10px; cursor: se-resize;"
-                            />
-                            <div
-                              class=""
-                              style="position: absolute; user-select: none; width: 20px; height: 20px; left: -10px; bottom: -10px; cursor: sw-resize;"
-                            />
-                            <div
-                              class=""
-                              style="position: absolute; user-select: none; width: 20px; height: 20px; left: -10px; top: -10px; cursor: nw-resize;"
-                            />
-                          </span>
-                        </div>,
-                      }
-                    }
-                    offsetParent={null}
-                    onDrag={[Function]}
-                    onMouseDown={[Function]}
-                    onStart={[Function]}
-                    onStop={[Function]}
-                    scale={1}
-                    transform={null}
-                  >
-                    <Resizable
-                      as="div"
-                      className="react-draggable"
-                      defaultSize={
-                        Object {
-                          "height": 400,
-                          "width": 700,
-                          "x": 0,
-                          "y": 0,
+                            <span>
+                              <div
+                                class=""
+                                style="position: absolute; user-select: none; width: 100%; height: 10px; top: -5px; left: 0px; cursor: row-resize;"
+                              />
+                              <div
+                                class=""
+                                style="position: absolute; user-select: none; width: 10px; height: 100%; top: 0px; right: -5px; cursor: col-resize;"
+                              />
+                              <div
+                                class=""
+                                style="position: absolute; user-select: none; width: 100%; height: 10px; bottom: -5px; left: 0px; cursor: row-resize;"
+                              />
+                              <div
+                                class=""
+                                style="position: absolute; user-select: none; width: 10px; height: 100%; top: 0px; left: -5px; cursor: col-resize;"
+                              />
+                              <div
+                                class=""
+                                style="position: absolute; user-select: none; width: 20px; height: 20px; right: -10px; top: -10px; cursor: ne-resize;"
+                              />
+                              <div
+                                class=""
+                                style="position: absolute; user-select: none; width: 20px; height: 20px; right: -10px; bottom: -10px; cursor: se-resize;"
+                              />
+                              <div
+                                class=""
+                                style="position: absolute; user-select: none; width: 20px; height: 20px; left: -10px; bottom: -10px; cursor: sw-resize;"
+                              />
+                              <div
+                                class=""
+                                style="position: absolute; user-select: none; width: 20px; height: 20px; left: -10px; top: -10px; cursor: nw-resize;"
+                              />
+                            </span>
+                          </div>,
                         }
                       }
-                      enable={
-                        Object {
-                          "bottom": true,
-                          "bottomLeft": true,
-                          "bottomRight": true,
-                          "left": true,
-                          "right": true,
-                          "top": true,
-                          "topLeft": true,
-                          "topRight": true,
-                        }
-                      }
-                      grid={
-                        Array [
-                          1,
-                          1,
-                        ]
-                      }
-                      lockAspectRatio={false}
-                      lockAspectRatioExtraHeight={0}
-                      lockAspectRatioExtraWidth={0}
-                      maxHeight={9007199254740991}
-                      maxWidth={9007199254740991}
-                      minHeight={300}
-                      minWidth={700}
+                      offsetParent={null}
+                      onDrag={[Function]}
                       onMouseDown={[Function]}
-                      onMouseUp={[Function]}
-                      onResize={[Function]}
-                      onResizeStart={[Function]}
-                      onResizeStop={[Function]}
-                      onTouchEnd={[Function]}
-                      resizeRatio={1}
+                      onStart={[Function]}
+                      onStop={[Function]}
+                      position={null}
                       scale={1}
-                      snapGap={0}
-                      style={
-                        Object {
-                          "cursor": "move",
-                          "display": "inline-block",
-                          "height": "auto",
-                          "left": 0,
-                          "position": "absolute",
-                          "top": 0,
-                          "transform": "translate(0px,0px)",
-                          "width": "auto",
-                        }
-                      }
                       transform={null}
                     >
-                      <div
-                        className="react-draggable"
-                        onMouseDown={[Function]}
-                        onMouseUp={[Function]}
-                        onTouchEnd={[Function]}
-                        style={
+                      <DraggableCore
+                        allowAnyClick={false}
+                        cancel={null}
+                        disabled={false}
+                        enableUserSelectHack={true}
+                        grid={null}
+                        handle={null}
+                        nodeRef={
                           Object {
-                            "boxSizing": "border-box",
-                            "cursor": "move",
-                            "display": "inline-block",
-                            "flexShrink": 0,
-                            "height": "400px",
-                            "left": 0,
-                            "maxHeight": 9007199254740991,
-                            "maxWidth": 9007199254740991,
-                            "minHeight": 300,
-                            "minWidth": 700,
-                            "position": "absolute",
-                            "top": 0,
-                            "transform": "translate(0px,0px)",
-                            "userSelect": "auto",
-                            "width": "700px",
-                          }
-                        }
-                        transform={null}
-                      >
-                        <Styled(styled.div)
-                          statusColor="#32E67E"
-                        >
-                          <div
-                            className="c10 c11"
-                          >
-                            <styled.div>
+                            "current": <div
+                              class="react-draggable"
+                              style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
+                            >
                               <div
-                                className="c12"
+                                class="c12 c13"
                               >
-                                <styled.div>
+                                <div
+                                  class="c14"
+                                >
                                   <div
-                                    className="c13"
+                                    class="c15"
                                   />
-                                </styled.div>
-                                <styled.h4>
                                   <h4
-                                    className="c14"
+                                    class="c16"
                                   >
                                     agentName
                                   </h4>
-                                </styled.h4>
-                                <styled.div>
                                   <div
-                                    className="c15"
+                                    class="c17"
                                   >
-                                    <styled.div
+                                    <div
+                                      class="c18"
                                       color="#32E67E"
                                       id="expand-button"
-                                      onClick={[Function]}
-                                    >
-                                      <div
-                                        className="c16"
-                                        color="#32E67E"
-                                        id="expand-button"
-                                        onClick={[Function]}
-                                      />
-                                    </styled.div>
-                                    <styled.div
+                                    />
+                                    <div
+                                      class="c19"
                                       color="#ED3E2A"
                                       id="close-button"
-                                      onClick={[Function]}
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  class="c20"
+                                >
+                                  <div
+                                    class="c21"
+                                    data-testid="terminal"
+                                  >
+                                    <div
+                                      class="terminal xterm"
+                                      dir="ltr"
+                                      tabindex="0"
                                     >
                                       <div
-                                        className="c17"
-                                        color="#ED3E2A"
-                                        id="close-button"
-                                        onClick={[Function]}
-                                      />
-                                    </styled.div>
+                                        class="xterm-viewport"
+                                        style="background-color: rgba(255, 255, 255, 0);"
+                                      >
+                                        <div
+                                          class="xterm-scroll-area"
+                                        />
+                                      </div>
+                                      <div
+                                        class="xterm-screen"
+                                      >
+                                        <div
+                                          class="xterm-helpers"
+                                        >
+                                          <textarea
+                                            aria-label="Terminal input"
+                                            aria-multiline="false"
+                                            autocapitalize="off"
+                                            autocorrect="off"
+                                            class="xterm-helper-textarea"
+                                            spellcheck="false"
+                                            tabindex="0"
+                                          />
+                                          <span
+                                            aria-hidden="true"
+                                            class="xterm-char-measure-element"
+                                            style="font-family: courier-new, courier, monospace; font-size: 15px;"
+                                          >
+                                            W
+                                          </span>
+                                          <div
+                                            class="composition-view"
+                                          />
+                                        </div>
+                                        <canvas
+                                          class="xterm-text-layer"
+                                          style="z-index: 0;"
+                                        />
+                                        <canvas
+                                          class="xterm-selection-layer"
+                                          style="z-index: 1;"
+                                        />
+                                        <canvas
+                                          class="xterm-link-layer"
+                                          style="z-index: 2;"
+                                        />
+                                        <canvas
+                                          class="xterm-cursor-layer"
+                                          style="z-index: 3;"
+                                        />
+                                      </div>
+                                    </div>
                                   </div>
-                                </styled.div>
+                                </div>
                               </div>
-                            </styled.div>
-                            <WithTheme(Terminal)
-                              agent={
-                                Object {
-                                  "architecture": "amd64",
-                                  "connectionState": "connected",
-                                  "id": "fakeid",
-                                  "name": "agentName",
-                                  "operatingSystem": undefined,
-                                }
+                              <span>
+                                <div
+                                  class=""
+                                  style="position: absolute; user-select: none; width: 100%; height: 10px; top: -5px; left: 0px; cursor: row-resize;"
+                                />
+                                <div
+                                  class=""
+                                  style="position: absolute; user-select: none; width: 10px; height: 100%; top: 0px; right: -5px; cursor: col-resize;"
+                                />
+                                <div
+                                  class=""
+                                  style="position: absolute; user-select: none; width: 100%; height: 10px; bottom: -5px; left: 0px; cursor: row-resize;"
+                                />
+                                <div
+                                  class=""
+                                  style="position: absolute; user-select: none; width: 10px; height: 100%; top: 0px; left: -5px; cursor: col-resize;"
+                                />
+                                <div
+                                  class=""
+                                  style="position: absolute; user-select: none; width: 20px; height: 20px; right: -10px; top: -10px; cursor: ne-resize;"
+                                />
+                                <div
+                                  class=""
+                                  style="position: absolute; user-select: none; width: 20px; height: 20px; right: -10px; bottom: -10px; cursor: se-resize;"
+                                />
+                                <div
+                                  class=""
+                                  style="position: absolute; user-select: none; width: 20px; height: 20px; left: -10px; bottom: -10px; cursor: sw-resize;"
+                                />
+                                <div
+                                  class=""
+                                  style="position: absolute; user-select: none; width: 20px; height: 20px; left: -10px; top: -10px; cursor: nw-resize;"
+                                />
+                              </span>
+                            </div>,
+                          }
+                        }
+                        offsetParent={null}
+                        onDrag={[Function]}
+                        onMouseDown={[Function]}
+                        onStart={[Function]}
+                        onStop={[Function]}
+                        scale={1}
+                        transform={null}
+                      >
+                        <Resizable
+                          as="div"
+                          className="react-draggable"
+                          defaultSize={
+                            Object {
+                              "height": 400,
+                              "width": 700,
+                              "x": 0,
+                              "y": 0,
+                            }
+                          }
+                          enable={
+                            Object {
+                              "bottom": true,
+                              "bottomLeft": true,
+                              "bottomRight": true,
+                              "left": true,
+                              "right": true,
+                              "top": true,
+                              "topLeft": true,
+                              "topRight": true,
+                            }
+                          }
+                          grid={
+                            Array [
+                              1,
+                              1,
+                            ]
+                          }
+                          lockAspectRatio={false}
+                          lockAspectRatioExtraHeight={0}
+                          lockAspectRatioExtraWidth={0}
+                          maxHeight={9007199254740991}
+                          maxWidth={9007199254740991}
+                          minHeight={300}
+                          minWidth={700}
+                          onMouseDown={[Function]}
+                          onMouseUp={[Function]}
+                          onResize={[Function]}
+                          onResizeStart={[Function]}
+                          onResizeStop={[Function]}
+                          onTouchEnd={[Function]}
+                          resizeRatio={1}
+                          scale={1}
+                          snapGap={0}
+                          style={
+                            Object {
+                              "cursor": "move",
+                              "display": "inline-block",
+                              "height": "auto",
+                              "left": 0,
+                              "position": "absolute",
+                              "top": 0,
+                              "transform": "translate(0px,0px)",
+                              "width": "auto",
+                            }
+                          }
+                          transform={null}
+                        >
+                          <div
+                            className="react-draggable"
+                            onMouseDown={[Function]}
+                            onMouseUp={[Function]}
+                            onTouchEnd={[Function]}
+                            style={
+                              Object {
+                                "boxSizing": "border-box",
+                                "cursor": "move",
+                                "display": "inline-block",
+                                "flexShrink": 0,
+                                "height": "400px",
+                                "left": 0,
+                                "maxHeight": 9007199254740991,
+                                "maxWidth": 9007199254740991,
+                                "minHeight": 300,
+                                "minWidth": 700,
+                                "position": "absolute",
+                                "top": 0,
+                                "transform": "translate(0px,0px)",
+                                "userSelect": "auto",
+                                "width": "700px",
                               }
+                            }
+                            transform={null}
+                          >
+                            <Styled(styled.div)
+                              statusColor="#32E67E"
                             >
-                              <Terminal
-                                agent={
-                                  Object {
-                                    "architecture": "amd64",
-                                    "connectionState": "connected",
-                                    "id": "fakeid",
-                                    "name": "agentName",
-                                    "operatingSystem": undefined,
-                                  }
-                                }
-                                theme={
-                                  Object {
-                                    "accent": "#4D02EE",
-                                    "black": "#181818",
-                                    "connectedColor": "#27AE60",
-                                    "connectingColor": "#F39C12",
-                                    "darkGrey": "#3E3E3E",
-                                    "darkWhite": "#F1F1F1",
-                                    "disconnectedColor": "#C0392B",
-                                    "error": "#ED3E2A",
-                                    "green": "#32E67E",
-                                    "inactive": "#363636",
-                                    "lightBlack": "#1B1B1B",
-                                    "name": "dark",
-                                    "overlay": "rgba(37, 37, 37, 0.6)",
-                                    "primary": "#02A3EE",
-                                    "red": "#ED3E2A",
-                                    "warning": "#ED852A",
-                                    "white": "#F8F8F8",
-                                  }
-                                }
+                              <div
+                                className="c12 c13"
                               >
                                 <styled.div>
                                   <div
-                                    className="c18"
+                                    className="c14"
                                   >
-                                    <styled.div
-                                      data-testid="terminal"
-                                    >
+                                    <styled.div>
                                       <div
-                                        className="c19"
-                                        data-testid="terminal"
+                                        className="c15"
                                       />
+                                    </styled.div>
+                                    <styled.h4>
+                                      <h4
+                                        className="c16"
+                                      >
+                                        agentName
+                                      </h4>
+                                    </styled.h4>
+                                    <styled.div>
+                                      <div
+                                        className="c17"
+                                      >
+                                        <styled.div
+                                          color="#32E67E"
+                                          id="expand-button"
+                                          onClick={[Function]}
+                                        >
+                                          <div
+                                            className="c18"
+                                            color="#32E67E"
+                                            id="expand-button"
+                                            onClick={[Function]}
+                                          />
+                                        </styled.div>
+                                        <styled.div
+                                          color="#ED3E2A"
+                                          id="close-button"
+                                          onClick={[Function]}
+                                        >
+                                          <div
+                                            className="c19"
+                                            color="#ED3E2A"
+                                            id="close-button"
+                                            onClick={[Function]}
+                                          />
+                                        </styled.div>
+                                      </div>
                                     </styled.div>
                                   </div>
                                 </styled.div>
-                              </Terminal>
-                            </WithTheme(Terminal)>
+                                <WithTheme(Terminal)
+                                  agent={
+                                    Object {
+                                      "architecture": "amd64",
+                                      "connectionState": "connected",
+                                      "id": "fakeid",
+                                      "name": "agentName",
+                                      "operatingSystem": undefined,
+                                    }
+                                  }
+                                >
+                                  <Terminal
+                                    agent={
+                                      Object {
+                                        "architecture": "amd64",
+                                        "connectionState": "connected",
+                                        "id": "fakeid",
+                                        "name": "agentName",
+                                        "operatingSystem": undefined,
+                                      }
+                                    }
+                                    theme={
+                                      Object {
+                                        "accent": "#4D02EE",
+                                        "black": "#181818",
+                                        "connectedColor": "#27AE60",
+                                        "connectingColor": "#F39C12",
+                                        "darkGrey": "#3E3E3E",
+                                        "darkWhite": "#F1F1F1",
+                                        "disconnectedColor": "#C0392B",
+                                        "error": "#ED3E2A",
+                                        "green": "#32E67E",
+                                        "inactive": "#363636",
+                                        "lightBlack": "#1B1B1B",
+                                        "name": "dark",
+                                        "overlay": "rgba(37, 37, 37, 0.6)",
+                                        "primary": "#02A3EE",
+                                        "red": "#ED3E2A",
+                                        "warning": "#ED852A",
+                                        "white": "#F8F8F8",
+                                      }
+                                    }
+                                  >
+                                    <styled.div>
+                                      <div
+                                        className="c20"
+                                      >
+                                        <styled.div
+                                          data-testid="terminal"
+                                        >
+                                          <div
+                                            className="c21"
+                                            data-testid="terminal"
+                                          />
+                                        </styled.div>
+                                      </div>
+                                    </styled.div>
+                                  </Terminal>
+                                </WithTheme(Terminal)>
+                              </div>
+                            </Styled(styled.div)>
+                            <span>
+                              <Resizer
+                                direction="top"
+                                key="top"
+                                onResizeStart={[Function]}
+                              >
+                                <div
+                                  className=""
+                                  onMouseDown={[Function]}
+                                  onTouchStart={[Function]}
+                                  style={
+                                    Object {
+                                      "cursor": "row-resize",
+                                      "height": "10px",
+                                      "left": "0px",
+                                      "position": "absolute",
+                                      "top": "-5px",
+                                      "userSelect": "none",
+                                      "width": "100%",
+                                    }
+                                  }
+                                />
+                              </Resizer>
+                              <Resizer
+                                direction="right"
+                                key="right"
+                                onResizeStart={[Function]}
+                              >
+                                <div
+                                  className=""
+                                  onMouseDown={[Function]}
+                                  onTouchStart={[Function]}
+                                  style={
+                                    Object {
+                                      "cursor": "col-resize",
+                                      "height": "100%",
+                                      "position": "absolute",
+                                      "right": "-5px",
+                                      "top": "0px",
+                                      "userSelect": "none",
+                                      "width": "10px",
+                                    }
+                                  }
+                                />
+                              </Resizer>
+                              <Resizer
+                                direction="bottom"
+                                key="bottom"
+                                onResizeStart={[Function]}
+                              >
+                                <div
+                                  className=""
+                                  onMouseDown={[Function]}
+                                  onTouchStart={[Function]}
+                                  style={
+                                    Object {
+                                      "bottom": "-5px",
+                                      "cursor": "row-resize",
+                                      "height": "10px",
+                                      "left": "0px",
+                                      "position": "absolute",
+                                      "userSelect": "none",
+                                      "width": "100%",
+                                    }
+                                  }
+                                />
+                              </Resizer>
+                              <Resizer
+                                direction="left"
+                                key="left"
+                                onResizeStart={[Function]}
+                              >
+                                <div
+                                  className=""
+                                  onMouseDown={[Function]}
+                                  onTouchStart={[Function]}
+                                  style={
+                                    Object {
+                                      "cursor": "col-resize",
+                                      "height": "100%",
+                                      "left": "-5px",
+                                      "position": "absolute",
+                                      "top": "0px",
+                                      "userSelect": "none",
+                                      "width": "10px",
+                                    }
+                                  }
+                                />
+                              </Resizer>
+                              <Resizer
+                                direction="topRight"
+                                key="topRight"
+                                onResizeStart={[Function]}
+                              >
+                                <div
+                                  className=""
+                                  onMouseDown={[Function]}
+                                  onTouchStart={[Function]}
+                                  style={
+                                    Object {
+                                      "cursor": "ne-resize",
+                                      "height": "20px",
+                                      "position": "absolute",
+                                      "right": "-10px",
+                                      "top": "-10px",
+                                      "userSelect": "none",
+                                      "width": "20px",
+                                    }
+                                  }
+                                />
+                              </Resizer>
+                              <Resizer
+                                direction="bottomRight"
+                                key="bottomRight"
+                                onResizeStart={[Function]}
+                              >
+                                <div
+                                  className=""
+                                  onMouseDown={[Function]}
+                                  onTouchStart={[Function]}
+                                  style={
+                                    Object {
+                                      "bottom": "-10px",
+                                      "cursor": "se-resize",
+                                      "height": "20px",
+                                      "position": "absolute",
+                                      "right": "-10px",
+                                      "userSelect": "none",
+                                      "width": "20px",
+                                    }
+                                  }
+                                />
+                              </Resizer>
+                              <Resizer
+                                direction="bottomLeft"
+                                key="bottomLeft"
+                                onResizeStart={[Function]}
+                              >
+                                <div
+                                  className=""
+                                  onMouseDown={[Function]}
+                                  onTouchStart={[Function]}
+                                  style={
+                                    Object {
+                                      "bottom": "-10px",
+                                      "cursor": "sw-resize",
+                                      "height": "20px",
+                                      "left": "-10px",
+                                      "position": "absolute",
+                                      "userSelect": "none",
+                                      "width": "20px",
+                                    }
+                                  }
+                                />
+                              </Resizer>
+                              <Resizer
+                                direction="topLeft"
+                                key="topLeft"
+                                onResizeStart={[Function]}
+                              >
+                                <div
+                                  className=""
+                                  onMouseDown={[Function]}
+                                  onTouchStart={[Function]}
+                                  style={
+                                    Object {
+                                      "cursor": "nw-resize",
+                                      "height": "20px",
+                                      "left": "-10px",
+                                      "position": "absolute",
+                                      "top": "-10px",
+                                      "userSelect": "none",
+                                      "width": "20px",
+                                    }
+                                  }
+                                />
+                              </Resizer>
+                            </span>
                           </div>
-                        </Styled(styled.div)>
-                        <span>
-                          <Resizer
-                            direction="top"
-                            key="top"
-                            onResizeStart={[Function]}
-                          >
-                            <div
-                              className=""
-                              onMouseDown={[Function]}
-                              onTouchStart={[Function]}
-                              style={
-                                Object {
-                                  "cursor": "row-resize",
-                                  "height": "10px",
-                                  "left": "0px",
-                                  "position": "absolute",
-                                  "top": "-5px",
-                                  "userSelect": "none",
-                                  "width": "100%",
-                                }
-                              }
-                            />
-                          </Resizer>
-                          <Resizer
-                            direction="right"
-                            key="right"
-                            onResizeStart={[Function]}
-                          >
-                            <div
-                              className=""
-                              onMouseDown={[Function]}
-                              onTouchStart={[Function]}
-                              style={
-                                Object {
-                                  "cursor": "col-resize",
-                                  "height": "100%",
-                                  "position": "absolute",
-                                  "right": "-5px",
-                                  "top": "0px",
-                                  "userSelect": "none",
-                                  "width": "10px",
-                                }
-                              }
-                            />
-                          </Resizer>
-                          <Resizer
-                            direction="bottom"
-                            key="bottom"
-                            onResizeStart={[Function]}
-                          >
-                            <div
-                              className=""
-                              onMouseDown={[Function]}
-                              onTouchStart={[Function]}
-                              style={
-                                Object {
-                                  "bottom": "-5px",
-                                  "cursor": "row-resize",
-                                  "height": "10px",
-                                  "left": "0px",
-                                  "position": "absolute",
-                                  "userSelect": "none",
-                                  "width": "100%",
-                                }
-                              }
-                            />
-                          </Resizer>
-                          <Resizer
-                            direction="left"
-                            key="left"
-                            onResizeStart={[Function]}
-                          >
-                            <div
-                              className=""
-                              onMouseDown={[Function]}
-                              onTouchStart={[Function]}
-                              style={
-                                Object {
-                                  "cursor": "col-resize",
-                                  "height": "100%",
-                                  "left": "-5px",
-                                  "position": "absolute",
-                                  "top": "0px",
-                                  "userSelect": "none",
-                                  "width": "10px",
-                                }
-                              }
-                            />
-                          </Resizer>
-                          <Resizer
-                            direction="topRight"
-                            key="topRight"
-                            onResizeStart={[Function]}
-                          >
-                            <div
-                              className=""
-                              onMouseDown={[Function]}
-                              onTouchStart={[Function]}
-                              style={
-                                Object {
-                                  "cursor": "ne-resize",
-                                  "height": "20px",
-                                  "position": "absolute",
-                                  "right": "-10px",
-                                  "top": "-10px",
-                                  "userSelect": "none",
-                                  "width": "20px",
-                                }
-                              }
-                            />
-                          </Resizer>
-                          <Resizer
-                            direction="bottomRight"
-                            key="bottomRight"
-                            onResizeStart={[Function]}
-                          >
-                            <div
-                              className=""
-                              onMouseDown={[Function]}
-                              onTouchStart={[Function]}
-                              style={
-                                Object {
-                                  "bottom": "-10px",
-                                  "cursor": "se-resize",
-                                  "height": "20px",
-                                  "position": "absolute",
-                                  "right": "-10px",
-                                  "userSelect": "none",
-                                  "width": "20px",
-                                }
-                              }
-                            />
-                          </Resizer>
-                          <Resizer
-                            direction="bottomLeft"
-                            key="bottomLeft"
-                            onResizeStart={[Function]}
-                          >
-                            <div
-                              className=""
-                              onMouseDown={[Function]}
-                              onTouchStart={[Function]}
-                              style={
-                                Object {
-                                  "bottom": "-10px",
-                                  "cursor": "sw-resize",
-                                  "height": "20px",
-                                  "left": "-10px",
-                                  "position": "absolute",
-                                  "userSelect": "none",
-                                  "width": "20px",
-                                }
-                              }
-                            />
-                          </Resizer>
-                          <Resizer
-                            direction="topLeft"
-                            key="topLeft"
-                            onResizeStart={[Function]}
-                          >
-                            <div
-                              className=""
-                              onMouseDown={[Function]}
-                              onTouchStart={[Function]}
-                              style={
-                                Object {
-                                  "cursor": "nw-resize",
-                                  "height": "20px",
-                                  "left": "-10px",
-                                  "position": "absolute",
-                                  "top": "-10px",
-                                  "userSelect": "none",
-                                  "width": "20px",
-                                }
-                              }
-                            />
-                          </Resizer>
-                        </span>
-                      </div>
-                    </Resizable>
-                  </DraggableCore>
-                </Draggable>
-              </Rnd>
-            </TerminalWindow>
-          </WithTheme(TerminalWindow)>
-        </li>
-      </styled.li>
-    </AgentListItem>
+                        </Resizable>
+                      </DraggableCore>
+                    </Draggable>
+                  </Rnd>
+                </TerminalWindow>
+              </WithTheme(TerminalWindow)>
+            </li>
+          </styled.li>
+        </AgentListItem>
+      </Router>
+    </BrowserRouter>
   </Component>
 </div>
 `;
 
 exports[`agent list item opens and closes the terminal 2`] = `
 .c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #F8F8F8;
+}
+
+.c2:hover {
+  opacity: 0.90;
+}
+
+.c3 {
   cursor: pointer;
 }
 
-.c6 {
-  display: grid;
-  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
-}
-
-.c7 {
-  grid-column: status-indicator;
-  height: 12px;
-  width: 12px;
+.c9 {
+  min-height: 12px;
+  min-width: 12px;
   margin: 10px;
   border-radius: 50%;
-  float: right;
-  text-align: left;
   color: #27AE60;
   background-color: #27AE60;
 }
 
+.c7 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
 .c8 {
+  grid-column: status-indicator;
+  float: right;
+  text-align: left;
+}
+
+.c10 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -1475,24 +1628,26 @@ exports[`agent list item opens and closes the terminal 2`] = `
 
 .c0 {
   display: grid;
-  grid-template-columns: 1fr 1fr 175px;
-  grid-column-gap: 10px;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
+  grid-template-columns: auto 100px 175px;
+  grid-column-gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
   border-radius: 8px;
   border: 1px solid white;
-  height: 30px;
   line-height: 30px;
-  padding: 15px 20px;
+  padding: 5px 20px;
   margin-top: 25px;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1505,6 +1660,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  min-width: 0;
 }
 
 .c1 {
@@ -1520,23 +1676,31 @@ exports[`agent list item opens and closes the terminal 2`] = `
   -webkit-justify-content: start;
   -ms-flex-pack: start;
   justify-content: start;
-  width: 50%;
+  width: 100%;
+  min-width: 0;
+}
+
+.c1 p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
+.c1:hover {
+  color: #02A3EE;
+}
+
+.c5 {
+  min-width: 0;
+}
+
+.c11 {
+  color: #F8F8F8;
+  margin-left: 16px;
+}
+
 .c4 {
-  width: 50%;
-}
-
-.c9 {
-  color: #F8F8F8;
-}
-
-.c3 {
   margin-right: 10px;
-  color: #F8F8F8;
   cursor: inherit;
 }
 
@@ -1554,7 +1718,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 }
@@ -1571,7 +1735,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     width: 100%;
     text-align: center;
   }
@@ -1601,158 +1765,259 @@ exports[`agent list item opens and closes the terminal 2`] = `
       }
     }
   >
-    <AgentListItem
-      agent={
-        Object {
-          "architecture": "amd64",
-          "connectionState": "connected",
-          "id": "fakeid",
-          "name": "agentName",
-          "operatingSystem": undefined,
+    <BrowserRouter>
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "createHref": [Function],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
         }
-      }
-    >
-      <styled.li>
-        <li
-          className="c0"
+      >
+        <AgentListItem
+          agent={
+            Object {
+              "architecture": "amd64",
+              "connectionState": "connected",
+              "id": "fakeid",
+              "name": "agentName",
+              "operatingSystem": undefined,
+            }
+          }
         >
-          <styled.div>
-            <div
-              className="c1"
+          <styled.li>
+            <li
+              className="c0"
             >
+              <Styled(Link)
+                to="/agent/fakeid"
+              >
+                <Link
+                  className="c1"
+                  to="/agent/fakeid"
+                >
+                  <Styled(Link)
+                    className="c1"
+                    to="/agent/fakeid"
+                  >
+                    <Link
+                      className="c2 c1"
+                      to="/agent/fakeid"
+                    >
+                      <LinkAnchor
+                        className="c2 c1"
+                        href="/agent/fakeid"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="c2 c1"
+                          href="/agent/fakeid"
+                          onClick={[Function]}
+                        >
+                          <ForwardRef(TippyWrapper)
+                            content="Operating system unkown"
+                          >
+                            <Tippy
+                              content="Operating system unkown"
+                            >
+                              <Styled(styled.i)
+                                active={true}
+                                className="fas fa-question-circle"
+                              >
+                                <i
+                                  className="c3 c4 fas fa-question-circle"
+                                />
+                              </Styled(styled.i)>
+                              Operating system unkown
+                            </Tippy>
+                          </ForwardRef(TippyWrapper)>
+                          <p>
+                            agentName
+                          </p>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </Styled(Link)>
+                </Link>
+              </Styled(Link)>
               <ForwardRef(TippyWrapper)
-                content="Operating system unkown"
+                content="External IP address"
               >
                 <Tippy
-                  content="Operating system unkown"
+                  content="External IP address"
                 >
-                  <Styled(styled.i)
-                    active={true}
-                    className="fas fa-question-circle"
-                  >
-                    <i
-                      className="c2 c3 fas fa-question-circle"
+                  <styled.p>
+                    <p
+                      className="c5"
                     />
-                  </Styled(styled.i)>
-                  Operating system unkown
+                  </styled.p>
+                  External IP address
                 </Tippy>
               </ForwardRef(TippyWrapper)>
-              <p>
-                agentName
-              </p>
-            </div>
-          </styled.div>
-          <ForwardRef(TippyWrapper)
-            content="External IP address"
-          >
-            <Tippy
-              content="External IP address"
-            >
-              <styled.p>
-                <p
-                  className="c4"
-                />
-              </styled.p>
-              External IP address
-            </Tippy>
-          </ForwardRef(TippyWrapper)>
-          <styled.div>
-            <div
-              className="c5"
-            >
-              <WithTheme(ConnectionState)
-                connectionState="connected"
-              >
-                <ConnectionState
-                  connectionState="connected"
-                  theme={
-                    Object {
-                      "accent": "#4D02EE",
-                      "black": "#181818",
-                      "connectedColor": "#27AE60",
-                      "connectingColor": "#F39C12",
-                      "darkGrey": "#3E3E3E",
-                      "darkWhite": "#F1F1F1",
-                      "disconnectedColor": "#C0392B",
-                      "error": "#ED3E2A",
-                      "green": "#32E67E",
-                      "inactive": "#363636",
-                      "lightBlack": "#1B1B1B",
-                      "name": "dark",
-                      "overlay": "rgba(37, 37, 37, 0.6)",
-                      "primary": "#02A3EE",
-                      "red": "#ED3E2A",
-                      "warning": "#ED852A",
-                      "white": "#F8F8F8",
-                    }
-                  }
+              <styled.div>
+                <div
+                  className="c6"
                 >
-                  <styled.div>
-                    <div
-                      className="c6"
+                  <WithTheme(ConnectionState)
+                    connectionState="connected"
+                  >
+                    <ConnectionState
+                      connectionState="connected"
+                      theme={
+                        Object {
+                          "accent": "#4D02EE",
+                          "black": "#181818",
+                          "connectedColor": "#27AE60",
+                          "connectingColor": "#F39C12",
+                          "darkGrey": "#3E3E3E",
+                          "darkWhite": "#F1F1F1",
+                          "disconnectedColor": "#C0392B",
+                          "error": "#ED3E2A",
+                          "green": "#32E67E",
+                          "inactive": "#363636",
+                          "lightBlack": "#1B1B1B",
+                          "name": "dark",
+                          "overlay": "rgba(37, 37, 37, 0.6)",
+                          "primary": "#02A3EE",
+                          "red": "#ED3E2A",
+                          "warning": "#ED852A",
+                          "white": "#F8F8F8",
+                        }
+                      }
                     >
-                      <styled.div
-                        connectionStateColor="#27AE60"
-                      >
+                      <styled.div>
                         <div
                           className="c7"
-                        />
-                      </styled.div>
-                      <styled.p
-                        connectionStateColor="#27AE60"
-                      >
-                        <p
-                          className="c8"
                         >
-                          Connected
-                        </p>
-                      </styled.p>
-                    </div>
-                  </styled.div>
-                </ConnectionState>
-              </WithTheme(ConnectionState)>
-              <Styled(styled.i)
-                active={true}
-                className="fas fa-terminal"
-                onClick={[Function]}
-              >
-                <i
-                  className="c2 c9 fas fa-terminal"
-                  onClick={[Function]}
-                />
-              </Styled(styled.i)>
-            </div>
-          </styled.div>
-        </li>
-      </styled.li>
-    </AgentListItem>
+                          <Styled(WithTheme(ConnectionIndicator))
+                            connectionState="connected"
+                          >
+                            <WithTheme(ConnectionIndicator)
+                              className="c8"
+                              connectionState="connected"
+                            >
+                              <ConnectionIndicator
+                                className="c8"
+                                connectionState="connected"
+                                theme={
+                                  Object {
+                                    "accent": "#4D02EE",
+                                    "black": "#181818",
+                                    "connectedColor": "#27AE60",
+                                    "connectingColor": "#F39C12",
+                                    "darkGrey": "#3E3E3E",
+                                    "darkWhite": "#F1F1F1",
+                                    "disconnectedColor": "#C0392B",
+                                    "error": "#ED3E2A",
+                                    "green": "#32E67E",
+                                    "inactive": "#363636",
+                                    "lightBlack": "#1B1B1B",
+                                    "name": "dark",
+                                    "overlay": "rgba(37, 37, 37, 0.6)",
+                                    "primary": "#02A3EE",
+                                    "red": "#ED3E2A",
+                                    "warning": "#ED852A",
+                                    "white": "#F8F8F8",
+                                  }
+                                }
+                              >
+                                <styled.div
+                                  className="c8"
+                                  color="#27AE60"
+                                >
+                                  <div
+                                    className="c9 c8"
+                                    color="#27AE60"
+                                  />
+                                </styled.div>
+                              </ConnectionIndicator>
+                            </WithTheme(ConnectionIndicator)>
+                          </Styled(WithTheme(ConnectionIndicator))>
+                          <styled.p
+                            color="#27AE60"
+                          >
+                            <p
+                              className="c10"
+                              color="#27AE60"
+                            >
+                              Connected
+                            </p>
+                          </styled.p>
+                        </div>
+                      </styled.div>
+                    </ConnectionState>
+                  </WithTheme(ConnectionState)>
+                  <Styled(styled.i)
+                    active={true}
+                    className="fas fa-terminal"
+                    onClick={[Function]}
+                  >
+                    <i
+                      className="c3 c11 fas fa-terminal"
+                      onClick={[Function]}
+                    />
+                  </Styled(styled.i)>
+                </div>
+              </styled.div>
+            </li>
+          </styled.li>
+        </AgentListItem>
+      </Router>
+    </BrowserRouter>
   </Component>
 </div>
 `;
 
 exports[`agent list item renders connected correctly 1`] = `
-.c2 {
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #F8F8F8;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
+.c3 {
   cursor: pointer;
 }
 
-.c6 {
-  display: grid;
-  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
-}
-
-.c7 {
-  grid-column: status-indicator;
-  height: 12px;
-  width: 12px;
+.c8 {
+  min-height: 12px;
+  min-width: 12px;
   margin: 10px;
   border-radius: 50%;
-  float: right;
-  text-align: left;
   color: #27AE60;
   background-color: #27AE60;
 }
 
-.c8 {
+.c7 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c9 {
+  grid-column: status-indicator;
+  float: right;
+  text-align: left;
+}
+
+.c10 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -1764,24 +2029,26 @@ exports[`agent list item renders connected correctly 1`] = `
 
 .c0 {
   display: grid;
-  grid-template-columns: 1fr 1fr 175px;
-  grid-column-gap: 10px;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
+  grid-template-columns: auto 100px 175px;
+  grid-column-gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
   border-radius: 8px;
   border: 1px solid white;
-  height: 30px;
   line-height: 30px;
-  padding: 15px 20px;
+  padding: 5px 20px;
   margin-top: 25px;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1794,9 +2061,10 @@ exports[`agent list item renders connected correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  min-width: 0;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1809,23 +2077,31 @@ exports[`agent list item renders connected correctly 1`] = `
   -webkit-justify-content: start;
   -ms-flex-pack: start;
   justify-content: start;
-  width: 50%;
+  width: 100%;
+  min-width: 0;
+}
+
+.c2 p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
+.c2:hover {
+  color: #02A3EE;
+}
+
+.c5 {
+  min-width: 0;
+}
+
+.c11 {
+  color: #F8F8F8;
+  margin-left: 16px;
+}
+
 .c4 {
-  width: 50%;
-}
-
-.c9 {
-  color: #F8F8F8;
-}
-
-.c3 {
   margin-right: 10px;
-  color: #F8F8F8;
   cursor: inherit;
 }
 
@@ -1843,13 +2119,13 @@ exports[`agent list item renders connected correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c1 {
+  .c2 {
     width: 100%;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -1860,7 +2136,7 @@ exports[`agent list item renders connected correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     width: 100%;
     text-align: center;
   }
@@ -1870,38 +2146,42 @@ exports[`agent list item renders connected correctly 1`] = `
   <li
     className="c0"
   >
-    <div
-      className="c1"
+    <a
+      className="c1 c2"
+      href="/agent/fakeid"
+      onClick={[Function]}
     >
       <i
-        className="c2 c3 fas fa-question-circle"
+        className="c3 c4 fas fa-question-circle"
       />
       Operating system unkown
       <p>
         agentName
       </p>
-    </div>
+    </a>
     <p
-      className="c4"
+      className="c5"
     />
     External IP address
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7"
+          className="c8 c9"
+          color="#27AE60"
         />
         <p
-          className="c8"
+          className="c10"
+          color="#27AE60"
         >
           Connected
         </p>
       </div>
       <i
-        className="c2 c9 fas fa-terminal"
+        className="c3 c11 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
@@ -1910,32 +2190,45 @@ exports[`agent list item renders connected correctly 1`] = `
 `;
 
 exports[`agent list item renders disconnected correctly 1`] = `
-.c2 {
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #F8F8F8;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
+.c3 {
   cursor: pointer;
 }
 
-.c9 {
+.c11 {
   cursor: inherit;
 }
 
-.c6 {
-  display: grid;
-  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
-}
-
-.c7 {
-  grid-column: status-indicator;
-  height: 12px;
-  width: 12px;
+.c8 {
+  min-height: 12px;
+  min-width: 12px;
   margin: 10px;
   border-radius: 50%;
-  float: right;
-  text-align: left;
   color: #C0392B;
   background-color: #C0392B;
 }
 
-.c8 {
+.c7 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c9 {
+  grid-column: status-indicator;
+  float: right;
+  text-align: left;
+}
+
+.c10 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -1947,24 +2240,26 @@ exports[`agent list item renders disconnected correctly 1`] = `
 
 .c0 {
   display: grid;
-  grid-template-columns: 1fr 1fr 175px;
-  grid-column-gap: 10px;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
+  grid-template-columns: auto 100px 175px;
+  grid-column-gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
   border-radius: 8px;
   border: 1px solid white;
-  height: 30px;
   line-height: 30px;
-  padding: 15px 20px;
+  padding: 5px 20px;
   margin-top: 25px;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1977,9 +2272,10 @@ exports[`agent list item renders disconnected correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  min-width: 0;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1992,23 +2288,31 @@ exports[`agent list item renders disconnected correctly 1`] = `
   -webkit-justify-content: start;
   -ms-flex-pack: start;
   justify-content: start;
-  width: 50%;
+  width: 100%;
+  min-width: 0;
+}
+
+.c2 p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.c4 {
-  width: 50%;
+.c2:hover {
+  color: #02A3EE;
 }
 
-.c10 {
+.c5 {
+  min-width: 0;
+}
+
+.c12 {
   color: #363636;
+  margin-left: 16px;
 }
 
-.c3 {
+.c4 {
   margin-right: 10px;
-  color: #F8F8F8;
   cursor: inherit;
 }
 
@@ -2026,13 +2330,13 @@ exports[`agent list item renders disconnected correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c1 {
+  .c2 {
     width: 100%;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -2043,7 +2347,7 @@ exports[`agent list item renders disconnected correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     width: 100%;
     text-align: center;
   }
@@ -2053,38 +2357,42 @@ exports[`agent list item renders disconnected correctly 1`] = `
   <li
     className="c0"
   >
-    <div
-      className="c1"
+    <a
+      className="c1 c2"
+      href="/agent/fakeid"
+      onClick={[Function]}
     >
       <i
-        className="c2 c3 fas fa-question-circle"
+        className="c3 c4 fas fa-question-circle"
       />
       Operating system unkown
       <p>
         agentName
       </p>
-    </div>
+    </a>
     <p
-      className="c4"
+      className="c5"
     />
     External IP address
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7"
+          className="c8 c9"
+          color="#C0392B"
         />
         <p
-          className="c8"
+          className="c10"
+          color="#C0392B"
         >
           Disconnected
         </p>
       </div>
       <i
-        className="c9 c10 fas fa-terminal"
+        className="c11 c12 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
@@ -2093,28 +2401,41 @@ exports[`agent list item renders disconnected correctly 1`] = `
 `;
 
 exports[`agent list item renders the various operating systems correctly 1`] = `
-.c2 {
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #F8F8F8;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
+.c3 {
   cursor: pointer;
 }
 
-.c6 {
-  display: grid;
-  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
-}
-
-.c7 {
-  grid-column: status-indicator;
-  height: 12px;
-  width: 12px;
+.c8 {
+  min-height: 12px;
+  min-width: 12px;
   margin: 10px;
   border-radius: 50%;
-  float: right;
-  text-align: left;
   color: #27AE60;
   background-color: #27AE60;
 }
 
-.c8 {
+.c7 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c9 {
+  grid-column: status-indicator;
+  float: right;
+  text-align: left;
+}
+
+.c10 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -2126,24 +2447,26 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
 
 .c0 {
   display: grid;
-  grid-template-columns: 1fr 1fr 175px;
-  grid-column-gap: 10px;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
+  grid-template-columns: auto 100px 175px;
+  grid-column-gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
   border-radius: 8px;
   border: 1px solid white;
-  height: 30px;
   line-height: 30px;
-  padding: 15px 20px;
+  padding: 5px 20px;
   margin-top: 25px;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2156,9 +2479,10 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  min-width: 0;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2171,23 +2495,31 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
   -webkit-justify-content: start;
   -ms-flex-pack: start;
   justify-content: start;
-  width: 50%;
+  width: 100%;
+  min-width: 0;
+}
+
+.c2 p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
+.c2:hover {
+  color: #02A3EE;
+}
+
+.c5 {
+  min-width: 0;
+}
+
+.c11 {
+  color: #F8F8F8;
+  margin-left: 16px;
+}
+
 .c4 {
-  width: 50%;
-}
-
-.c9 {
-  color: #F8F8F8;
-}
-
-.c3 {
   margin-right: 10px;
-  color: #F8F8F8;
   cursor: inherit;
 }
 
@@ -2205,13 +2537,13 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c1 {
+  .c2 {
     width: 100%;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -2222,7 +2554,7 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     width: 100%;
     text-align: center;
   }
@@ -2232,38 +2564,42 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
   <li
     className="c0"
   >
-    <div
-      className="c1"
+    <a
+      className="c1 c2"
+      href="/agent/fakeid"
+      onClick={[Function]}
     >
       <i
-        className="c2 c3 fab fa-apple"
+        className="c3 c4 fab fa-apple"
       />
       darwin amd64
       <p>
         agentName
       </p>
-    </div>
+    </a>
     <p
-      className="c4"
+      className="c5"
     />
     External IP address
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7"
+          className="c8 c9"
+          color="#27AE60"
         />
         <p
-          className="c8"
+          className="c10"
+          color="#27AE60"
         >
           Connected
         </p>
       </div>
       <i
-        className="c2 c9 fas fa-terminal"
+        className="c3 c11 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
@@ -2272,28 +2608,41 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
 `;
 
 exports[`agent list item renders the various operating systems correctly 2`] = `
-.c2 {
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #F8F8F8;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
+.c3 {
   cursor: pointer;
 }
 
-.c6 {
-  display: grid;
-  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
-}
-
-.c7 {
-  grid-column: status-indicator;
-  height: 12px;
-  width: 12px;
+.c8 {
+  min-height: 12px;
+  min-width: 12px;
   margin: 10px;
   border-radius: 50%;
-  float: right;
-  text-align: left;
   color: #27AE60;
   background-color: #27AE60;
 }
 
-.c8 {
+.c7 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c9 {
+  grid-column: status-indicator;
+  float: right;
+  text-align: left;
+}
+
+.c10 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -2305,24 +2654,26 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
 
 .c0 {
   display: grid;
-  grid-template-columns: 1fr 1fr 175px;
-  grid-column-gap: 10px;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
+  grid-template-columns: auto 100px 175px;
+  grid-column-gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
   border-radius: 8px;
   border: 1px solid white;
-  height: 30px;
   line-height: 30px;
-  padding: 15px 20px;
+  padding: 5px 20px;
   margin-top: 25px;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2335,9 +2686,10 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  min-width: 0;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2350,23 +2702,31 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
   -webkit-justify-content: start;
   -ms-flex-pack: start;
   justify-content: start;
-  width: 50%;
+  width: 100%;
+  min-width: 0;
+}
+
+.c2 p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
+.c2:hover {
+  color: #02A3EE;
+}
+
+.c5 {
+  min-width: 0;
+}
+
+.c11 {
+  color: #F8F8F8;
+  margin-left: 16px;
+}
+
 .c4 {
-  width: 50%;
-}
-
-.c9 {
-  color: #F8F8F8;
-}
-
-.c3 {
   margin-right: 10px;
-  color: #F8F8F8;
   cursor: inherit;
 }
 
@@ -2384,13 +2744,13 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c1 {
+  .c2 {
     width: 100%;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -2401,7 +2761,7 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     width: 100%;
     text-align: center;
   }
@@ -2411,38 +2771,42 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
   <li
     className="c0"
   >
-    <div
-      className="c1"
+    <a
+      className="c1 c2"
+      href="/agent/fakeid"
+      onClick={[Function]}
     >
       <i
-        className="c2 c3 fas fa-question-circle"
+        className="c3 c4 fas fa-question-circle"
       />
       openbsd amd64
       <p>
         agentName
       </p>
-    </div>
+    </a>
     <p
-      className="c4"
+      className="c5"
     />
     External IP address
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7"
+          className="c8 c9"
+          color="#27AE60"
         />
         <p
-          className="c8"
+          className="c10"
+          color="#27AE60"
         >
           Connected
         </p>
       </div>
       <i
-        className="c2 c9 fas fa-terminal"
+        className="c3 c11 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
@@ -2451,28 +2815,41 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
 `;
 
 exports[`agent list item renders the various operating systems correctly 3`] = `
-.c2 {
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #F8F8F8;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
+.c3 {
   cursor: pointer;
 }
 
-.c6 {
-  display: grid;
-  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
-}
-
-.c7 {
-  grid-column: status-indicator;
-  height: 12px;
-  width: 12px;
+.c8 {
+  min-height: 12px;
+  min-width: 12px;
   margin: 10px;
   border-radius: 50%;
-  float: right;
-  text-align: left;
   color: #27AE60;
   background-color: #27AE60;
 }
 
-.c8 {
+.c7 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c9 {
+  grid-column: status-indicator;
+  float: right;
+  text-align: left;
+}
+
+.c10 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -2484,24 +2861,26 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
 
 .c0 {
   display: grid;
-  grid-template-columns: 1fr 1fr 175px;
-  grid-column-gap: 10px;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
+  grid-template-columns: auto 100px 175px;
+  grid-column-gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
   border-radius: 8px;
   border: 1px solid white;
-  height: 30px;
   line-height: 30px;
-  padding: 15px 20px;
+  padding: 5px 20px;
   margin-top: 25px;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2514,9 +2893,10 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  min-width: 0;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2529,23 +2909,31 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
   -webkit-justify-content: start;
   -ms-flex-pack: start;
   justify-content: start;
-  width: 50%;
+  width: 100%;
+  min-width: 0;
+}
+
+.c2 p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
+.c2:hover {
+  color: #02A3EE;
+}
+
+.c5 {
+  min-width: 0;
+}
+
+.c11 {
+  color: #F8F8F8;
+  margin-left: 16px;
+}
+
 .c4 {
-  width: 50%;
-}
-
-.c9 {
-  color: #F8F8F8;
-}
-
-.c3 {
   margin-right: 10px;
-  color: #F8F8F8;
   cursor: inherit;
 }
 
@@ -2563,13 +2951,13 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c1 {
+  .c2 {
     width: 100%;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -2580,7 +2968,7 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     width: 100%;
     text-align: center;
   }
@@ -2590,38 +2978,42 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
   <li
     className="c0"
   >
-    <div
-      className="c1"
+    <a
+      className="c1 c2"
+      href="/agent/fakeid"
+      onClick={[Function]}
     >
       <i
-        className="c2 c3 fab fa-freebsd"
+        className="c3 c4 fab fa-freebsd"
       />
       freebsd amd64
       <p>
         agentName
       </p>
-    </div>
+    </a>
     <p
-      className="c4"
+      className="c5"
     />
     External IP address
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7"
+          className="c8 c9"
+          color="#27AE60"
         />
         <p
-          className="c8"
+          className="c10"
+          color="#27AE60"
         >
           Connected
         </p>
       </div>
       <i
-        className="c2 c9 fas fa-terminal"
+        className="c3 c11 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
@@ -2630,28 +3022,41 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
 `;
 
 exports[`agent list item renders the various operating systems correctly 4`] = `
-.c2 {
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #F8F8F8;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
+.c3 {
   cursor: pointer;
 }
 
-.c6 {
-  display: grid;
-  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
-}
-
-.c7 {
-  grid-column: status-indicator;
-  height: 12px;
-  width: 12px;
+.c8 {
+  min-height: 12px;
+  min-width: 12px;
   margin: 10px;
   border-radius: 50%;
-  float: right;
-  text-align: left;
   color: #27AE60;
   background-color: #27AE60;
 }
 
-.c8 {
+.c7 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c9 {
+  grid-column: status-indicator;
+  float: right;
+  text-align: left;
+}
+
+.c10 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -2663,24 +3068,26 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
 
 .c0 {
   display: grid;
-  grid-template-columns: 1fr 1fr 175px;
-  grid-column-gap: 10px;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
+  grid-template-columns: auto 100px 175px;
+  grid-column-gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
   border-radius: 8px;
   border: 1px solid white;
-  height: 30px;
   line-height: 30px;
-  padding: 15px 20px;
+  padding: 5px 20px;
   margin-top: 25px;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2693,9 +3100,10 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  min-width: 0;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2708,23 +3116,31 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
   -webkit-justify-content: start;
   -ms-flex-pack: start;
   justify-content: start;
-  width: 50%;
+  width: 100%;
+  min-width: 0;
+}
+
+.c2 p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
+.c2:hover {
+  color: #02A3EE;
+}
+
+.c5 {
+  min-width: 0;
+}
+
+.c11 {
+  color: #F8F8F8;
+  margin-left: 16px;
+}
+
 .c4 {
-  width: 50%;
-}
-
-.c9 {
-  color: #F8F8F8;
-}
-
-.c3 {
   margin-right: 10px;
-  color: #F8F8F8;
   cursor: inherit;
 }
 
@@ -2742,13 +3158,13 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c1 {
+  .c2 {
     width: 100%;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -2759,7 +3175,7 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     width: 100%;
     text-align: center;
   }
@@ -2769,38 +3185,42 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
   <li
     className="c0"
   >
-    <div
-      className="c1"
+    <a
+      className="c1 c2"
+      href="/agent/fakeid"
+      onClick={[Function]}
     >
       <i
-        className="c2 c3 fab fa-linux"
+        className="c3 c4 fab fa-linux"
       />
       linux amd64
       <p>
         agentName
       </p>
-    </div>
+    </a>
     <p
-      className="c4"
+      className="c5"
     />
     External IP address
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7"
+          className="c8 c9"
+          color="#27AE60"
         />
         <p
-          className="c8"
+          className="c10"
+          color="#27AE60"
         >
           Connected
         </p>
       </div>
       <i
-        className="c2 c9 fas fa-terminal"
+        className="c3 c11 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
@@ -2809,28 +3229,41 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
 `;
 
 exports[`agent list item renders the various operating systems correctly 5`] = `
-.c2 {
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #F8F8F8;
+}
+
+.c1:hover {
+  opacity: 0.90;
+}
+
+.c3 {
   cursor: pointer;
 }
 
-.c6 {
-  display: grid;
-  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
-}
-
-.c7 {
-  grid-column: status-indicator;
-  height: 12px;
-  width: 12px;
+.c8 {
+  min-height: 12px;
+  min-width: 12px;
   margin: 10px;
   border-radius: 50%;
-  float: right;
-  text-align: left;
   color: #27AE60;
   background-color: #27AE60;
 }
 
-.c8 {
+.c7 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c9 {
+  grid-column: status-indicator;
+  float: right;
+  text-align: left;
+}
+
+.c10 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -2842,24 +3275,26 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
 
 .c0 {
   display: grid;
-  grid-template-columns: 1fr 1fr 175px;
-  grid-column-gap: 10px;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
+  grid-template-columns: auto 100px 175px;
+  grid-column-gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
   border-radius: 8px;
   border: 1px solid white;
-  height: 30px;
   line-height: 30px;
-  padding: 15px 20px;
+  padding: 5px 20px;
   margin-top: 25px;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2872,9 +3307,10 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  min-width: 0;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2887,23 +3323,31 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
   -webkit-justify-content: start;
   -ms-flex-pack: start;
   justify-content: start;
-  width: 50%;
+  width: 100%;
+  min-width: 0;
+}
+
+.c2 p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
+.c2:hover {
+  color: #02A3EE;
+}
+
+.c5 {
+  min-width: 0;
+}
+
+.c11 {
+  color: #F8F8F8;
+  margin-left: 16px;
+}
+
 .c4 {
-  width: 50%;
-}
-
-.c9 {
-  color: #F8F8F8;
-}
-
-.c3 {
   margin-right: 10px;
-  color: #F8F8F8;
   cursor: inherit;
 }
 
@@ -2921,13 +3365,13 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c1 {
+  .c2 {
     width: 100%;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -2938,7 +3382,7 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     width: 100%;
     text-align: center;
   }
@@ -2948,38 +3392,42 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
   <li
     className="c0"
   >
-    <div
-      className="c1"
+    <a
+      className="c1 c2"
+      href="/agent/fakeid"
+      onClick={[Function]}
     >
       <i
-        className="c2 c3 fas fa-question-circle"
+        className="c3 c4 fas fa-question-circle"
       />
       Operating system unkown
       <p>
         agentName
       </p>
-    </div>
+    </a>
     <p
-      className="c4"
+      className="c5"
     />
     External IP address
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7"
+          className="c8 c9"
+          color="#27AE60"
         />
         <p
-          className="c8"
+          className="c10"
+          color="#27AE60"
         >
           Connected
         </p>
       </div>
       <i
-        className="c2 c9 fas fa-terminal"
+        className="c3 c11 fas fa-terminal"
         onClick={[Function]}
       />
     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import configureStore from 'redux-mock-store';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
@@ -20,7 +21,9 @@ function getComponent(store) {
   return renderer.create(
     <Provider store={store}>
       <ThemeProvider theme={darkTheme}>
-        <AgentList />
+        <BrowserRouter>
+          <AgentList />
+        </BrowserRouter>
       </ThemeProvider>
     </Provider>
   );

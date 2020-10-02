@@ -55,7 +55,7 @@ describe('Dropdown', () => {
     component.toJSON();
     root.findByType(Dropdown).instance.closeDropdown({ target: "test" });
     component.toJSON();
-    expect(root.findAllByProps({ collapsed: true }).length).toBe(2);
+    expect(root.findAllByProps({ collapsed: true }).length).toBe(1);
   });
 
   it("does set collapsed to true when node contains target", () => {
@@ -82,7 +82,9 @@ describe('Dropdown', () => {
 
   it("correctly calls optionSelectedCallback on option click", async () => {
     const component = getComponent(store, props);
-
+    const root = component.root;
+    root.findByProps({ id: 'dropdown' }).props.onClick();
+    component.toJSON();
     component.root.findByType('ul').children[0].props.onClick();
 
     await waitForExpect(() => {
@@ -96,6 +98,9 @@ describe('Dropdown', () => {
       options: ['1', '2', '3']
     };
     const component = getComponent(store, newProps);
+    const root = component.root;
+    root.findByProps({ id: 'dropdown' }).props.onClick();
+    component.toJSON();
     expect(component.root.findByType('ul').children).toHaveLength(2);
   });
 });

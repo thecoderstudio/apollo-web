@@ -1,28 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`agentList correctly lists multiple agents 1`] = `
-.c5 {
+.c4 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #F8F8F8;
+}
+
+.c4:hover {
+  opacity: 0.90;
+}
+
+.c6 {
   cursor: pointer;
 }
 
-.c9 {
-  display: grid;
-  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
-}
-
-.c10 {
-  grid-column: status-indicator;
-  height: 12px;
-  width: 12px;
+.c11 {
+  min-height: 12px;
+  min-width: 12px;
   margin: 10px;
   border-radius: 50%;
-  float: right;
-  text-align: left;
   color: #27AE60;
   background-color: #27AE60;
 }
 
-.c11 {
+.c10 {
+  display: grid;
+  grid-template-columns: [status-indicator] 20px [status-text] 1fr;
+}
+
+.c12 {
+  grid-column: status-indicator;
+  float: right;
+  text-align: left;
+}
+
+.c13 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -34,24 +47,26 @@ exports[`agentList correctly lists multiple agents 1`] = `
 
 .c3 {
   display: grid;
-  grid-template-columns: 1fr 1fr 175px;
-  grid-column-gap: 10px;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
+  grid-template-columns: auto 100px 175px;
+  grid-column-gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
   border-radius: 8px;
   border: 1px solid white;
-  height: 30px;
   line-height: 30px;
-  padding: 15px 20px;
+  padding: 5px 20px;
   margin-top: 25px;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -64,9 +79,10 @@ exports[`agentList correctly lists multiple agents 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  min-width: 0;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -79,29 +95,39 @@ exports[`agentList correctly lists multiple agents 1`] = `
   -webkit-justify-content: start;
   -ms-flex-pack: start;
   justify-content: start;
-  width: 50%;
+  width: 100%;
+  min-width: 0;
+}
+
+.c5 p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
+.c5:hover {
+  color: #02A3EE;
+}
+
+.c8 {
+  min-width: 0;
+}
+
+.c14 {
+  color: #F8F8F8;
+  margin-left: 16px;
+}
+
 .c7 {
-  width: 50%;
-}
-
-.c12 {
-  color: #F8F8F8;
-}
-
-.c6 {
   margin-right: 10px;
-  color: #F8F8F8;
   cursor: inherit;
 }
 
 .c0 {
   display: grid;
   grid-template-rows: [title] 50px [list] 1fr;
+  width: 100%;
+  min-width: 0;
   background-color: #1B1B1B;
   border-radius: 8px;
   padding: 20px;
@@ -109,9 +135,13 @@ exports[`agentList correctly lists multiple agents 1`] = `
 
 .c1 {
   grid-row: title;
+  width: 100%;
+  min-width: 0;
 }
 
 .c2 {
+  width: 100%;
+  min-width: 0;
   grid-row: list;
   list-style: none;
   padding-left: 0;
@@ -131,13 +161,13 @@ exports[`agentList correctly lists multiple agents 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c8 {
+  .c9 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     width: 100%;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -148,7 +178,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c8 {
     width: 100%;
     text-align: center;
   }
@@ -168,38 +198,42 @@ exports[`agentList correctly lists multiple agents 1`] = `
     <li
       className="c3"
     >
-      <div
-        className="c4"
+      <a
+        className="c4 c5"
+        href="/agent/id"
+        onClick={[Function]}
       >
         <i
-          className="c5 c6 fas fa-question-circle"
+          className="c6 c7 fas fa-question-circle"
         />
         Operating system unkown
         <p>
           name
         </p>
-      </div>
+      </a>
       <p
-        className="c7"
+        className="c8"
       />
       External IP address
       <div
-        className="c8"
+        className="c9"
       >
         <div
-          className="c9"
+          className="c10"
         >
           <div
-            className="c10"
+            className="c11 c12"
+            color="#27AE60"
           />
           <p
-            className="c11"
+            className="c13"
+            color="#27AE60"
           >
             Connected
           </p>
         </div>
         <i
-          className="c5 c12 fas fa-terminal"
+          className="c6 c14 fas fa-terminal"
           onClick={[Function]}
         />
       </div>
@@ -207,38 +241,42 @@ exports[`agentList correctly lists multiple agents 1`] = `
     <li
       className="c3"
     >
-      <div
-        className="c4"
+      <a
+        className="c4 c5"
+        href="/agent/id2"
+        onClick={[Function]}
       >
         <i
-          className="c5 c6 fas fa-question-circle"
+          className="c6 c7 fas fa-question-circle"
         />
         Operating system unkown
         <p>
           name2
         </p>
-      </div>
+      </a>
       <p
-        className="c7"
+        className="c8"
       />
       External IP address
       <div
-        className="c8"
+        className="c9"
       >
         <div
-          className="c9"
+          className="c10"
         >
           <div
-            className="c10"
+            className="c11 c12"
+            color="#27AE60"
           />
           <p
-            className="c11"
+            className="c13"
+            color="#27AE60"
           >
             Connected
           </p>
         </div>
         <i
-          className="c5 c12 fas fa-terminal"
+          className="c6 c14 fas fa-terminal"
           onClick={[Function]}
         />
       </div>
@@ -251,6 +289,8 @@ exports[`agentList renders correctly 1`] = `
 .c0 {
   display: grid;
   grid-template-rows: [title] 50px [list] 1fr;
+  width: 100%;
+  min-width: 0;
   background-color: #1B1B1B;
   border-radius: 8px;
   padding: 20px;
@@ -258,9 +298,13 @@ exports[`agentList renders correctly 1`] = `
 
 .c1 {
   grid-row: title;
+  width: 100%;
+  min-width: 0;
 }
 
 .c2 {
+  width: 100%;
+  min-width: 0;
   grid-row: list;
   list-style: none;
   padding-left: 0;

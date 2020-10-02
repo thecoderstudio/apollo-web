@@ -2,6 +2,10 @@
 
 exports[`Dropdown opens dropdown correctly 1`] = `
 .c0 {
+  position: relative;
+}
+
+.c1 {
   border: none;
   border-radius: 5px;
   font-family: 'B612',sans-serif;
@@ -14,8 +18,7 @@ exports[`Dropdown opens dropdown correctly 1`] = `
   overflow: hidden;
 }
 
-.c2 {
-  display: block;
+.c3 {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -24,19 +27,19 @@ exports[`Dropdown opens dropdown correctly 1`] = `
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   z-index: 1;
   border-radius: 4px;
-  position: fixed;
+  position: absolute;
 }
 
-.c3 {
+.c4 {
   padding: 15px;
 }
 
-.c3:hover {
+.c4:hover {
   cursor: pointer;
   opacity: 0.6;
 }
 
-.c1 {
+.c2 {
   border-color: white transparent;
   border-style: solid;
   float: right;
@@ -53,22 +56,24 @@ exports[`Dropdown opens dropdown correctly 1`] = `
   transition: transform 0.3s;
 }
 
-<div>
+<div
+  className="c0"
+>
   <div
-    className="c0"
+    className="c1"
     id="dropdown"
     onClick={[Function]}
   >
     1
     <div
-      className="c1"
+      className="c2"
     />
   </div>
   <ul
-    className="c2"
+    className="c3"
   >
     <li
-      className="c3"
+      className="c4"
       onClick={[Function]}
     >
       2
@@ -79,6 +84,10 @@ exports[`Dropdown opens dropdown correctly 1`] = `
 
 exports[`Dropdown renders correctly 1`] = `
 .c0 {
+  position: relative;
+}
+
+.c1 {
   border: none;
   border-radius: 5px;
   font-family: 'B612',sans-serif;
@@ -92,28 +101,6 @@ exports[`Dropdown renders correctly 1`] = `
 }
 
 .c2 {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin-top: 10px;
-  width: 230px;
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  z-index: 1;
-  border-radius: 4px;
-  position: fixed;
-}
-
-.c3 {
-  padding: 15px;
-}
-
-.c3:hover {
-  cursor: pointer;
-  opacity: 0.6;
-}
-
-.c1 {
   border-color: white transparent;
   border-style: solid;
   float: right;
@@ -130,26 +117,18 @@ exports[`Dropdown renders correctly 1`] = `
   transition: transform 0.3s;
 }
 
-<div>
+<div
+  className="c0"
+>
   <div
-    className="c0"
+    className="c1"
     id="dropdown"
     onClick={[Function]}
   >
     1
     <div
-      className="c1"
+      className="c2"
     />
   </div>
-  <ul
-    className="c2"
-  >
-    <li
-      className="c3"
-      onClick={[Function]}
-    >
-      2
-    </li>
-  </ul>
 </div>
 `;

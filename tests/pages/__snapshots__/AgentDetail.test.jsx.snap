@@ -1,0 +1,1396 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`agent detail correctly syncs with remote 1`] = `
+.c6 {
+  cursor: pointer;
+}
+
+.c8 {
+  cursor: inherit;
+}
+
+.c12 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 16px 0px 16px 16px;
+  height: 24px;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.c4 {
+  min-height: 12px;
+  min-width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  color: #C0392B;
+  background-color: #C0392B;
+}
+
+.c0 {
+  margin: 32px;
+}
+
+.c1 {
+  display: grid;
+  grid-template-columns: [detail] 1fr [controls] 1fr;
+  max-width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  grid-column: detail;
+}
+
+.c5 {
+  padding-right: 40px;
+}
+
+.c10 {
+  grid-column: controls;
+  width: 100%;
+  min-width: 0;
+}
+
+.c11 {
+  width: 100%;
+}
+
+.c7 {
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+.c9 {
+  margin-top: 16px;
+  width: 24px;
+  height: 24px;
+  color: #363636;
+  display: none;
+}
+
+@media (max-width:47.9375em) {
+  .c11 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c9 {
+    display: block;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+          color="#C0392B"
+        />
+        <h1>
+          agentName
+        </h1>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                External IP address
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              unknown
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Operating system
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              <i
+                className="c6 c7 fab fa-apple"
+              />
+              darwin
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Architecture
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              amd64
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <i
+        className="c8 c9 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="c10"
+    >
+      <div
+        className="c11"
+      >
+        <div
+          className="c12 c13"
+        >
+          <div>
+            <h2>
+              disconnected
+            </h2>
+          </div>
+        </div>
+        <div
+          className="c14"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`agent detail deals with property updates correctly 1`] = `
+.c6 {
+  cursor: pointer;
+}
+
+.c8 {
+  cursor: inherit;
+}
+
+.c12 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 16px 0px 16px 16px;
+  height: 24px;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.c4 {
+  min-height: 12px;
+  min-width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  color: #C0392B;
+  background-color: #C0392B;
+}
+
+.c0 {
+  margin: 32px;
+}
+
+.c1 {
+  display: grid;
+  grid-template-columns: [detail] 1fr [controls] 1fr;
+  max-width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  grid-column: detail;
+}
+
+.c5 {
+  padding-right: 40px;
+}
+
+.c10 {
+  grid-column: controls;
+  width: 100%;
+  min-width: 0;
+}
+
+.c11 {
+  width: 100%;
+}
+
+.c7 {
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+.c9 {
+  margin-top: 16px;
+  width: 24px;
+  height: 24px;
+  color: #363636;
+  display: none;
+}
+
+@media (max-width:47.9375em) {
+  .c11 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c9 {
+    display: block;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+          color="#C0392B"
+        />
+        <h1>
+          newname
+        </h1>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                External IP address
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              unknown
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Operating system
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              <i
+                className="c6 c7 fab fa-apple"
+              />
+              darwin
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Architecture
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              amd64
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <i
+        className="c8 c9 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="c10"
+    >
+      <div
+        className="c11"
+      >
+        <div
+          className="c12 c13"
+        >
+          <div>
+            <h2>
+              disconnected
+            </h2>
+          </div>
+        </div>
+        <div
+          className="c14"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`agent detail handles sync failure 1`] = `
+.c6 {
+  cursor: pointer;
+}
+
+.c8 {
+  cursor: inherit;
+}
+
+.c12 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 16px 0px 16px 16px;
+  height: 24px;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.c4 {
+  min-height: 12px;
+  min-width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  color: #C0392B;
+  background-color: #C0392B;
+}
+
+.c0 {
+  margin: 32px;
+}
+
+.c1 {
+  display: grid;
+  grid-template-columns: [detail] 1fr [controls] 1fr;
+  max-width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  grid-column: detail;
+}
+
+.c5 {
+  padding-right: 40px;
+}
+
+.c10 {
+  grid-column: controls;
+  width: 100%;
+  min-width: 0;
+}
+
+.c11 {
+  width: 100%;
+}
+
+.c7 {
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+.c9 {
+  margin-top: 16px;
+  width: 24px;
+  height: 24px;
+  color: #363636;
+  display: none;
+}
+
+@media (max-width:47.9375em) {
+  .c11 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c9 {
+    display: block;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+          color="#C0392B"
+        />
+        <h1>
+          agentName
+        </h1>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                External IP address
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              unknown
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Operating system
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              <i
+                className="c6 c7 fab fa-apple"
+              />
+              darwin
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Architecture
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              amd64
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <i
+        className="c8 c9 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="c10"
+    >
+      <div
+        className="c11"
+      >
+        <div
+          className="c12 c13"
+        >
+          <div>
+            <h2>
+              disconnected
+            </h2>
+          </div>
+        </div>
+        <div
+          className="c14"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`agent detail opens terminal 1`] = `
+.c6 {
+  cursor: pointer;
+}
+
+.c8 {
+  cursor: inherit;
+}
+
+.c12 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 16px 0px 16px 16px;
+  height: 24px;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.c4 {
+  min-height: 12px;
+  min-width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  color: #C0392B;
+  background-color: #C0392B;
+}
+
+.c0 {
+  margin: 32px;
+}
+
+.c1 {
+  display: grid;
+  grid-template-columns: [detail] 1fr [controls] 1fr;
+  max-width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  grid-column: detail;
+}
+
+.c5 {
+  padding-right: 40px;
+}
+
+.c10 {
+  grid-column: controls;
+  width: 100%;
+  min-width: 0;
+}
+
+.c11 {
+  width: 100%;
+}
+
+.c7 {
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+.c9 {
+  margin-top: 16px;
+  width: 24px;
+  height: 24px;
+  color: #363636;
+  display: none;
+}
+
+@media (max-width:47.9375em) {
+  .c11 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c9 {
+    display: block;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+          color="#C0392B"
+        />
+        <h1>
+          agentName
+        </h1>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                External IP address
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              unknown
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Operating system
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              <i
+                className="c6 c7 fab fa-apple"
+              />
+              darwin
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Architecture
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              amd64
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <i
+        className="c8 c9 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="c10"
+    >
+      <div
+        className="c11"
+      >
+        <div
+          className="c12 c13"
+        >
+          <div>
+            <h2>
+              disconnected
+            </h2>
+          </div>
+        </div>
+        <div
+          className="c14"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`agent detail opens terminal 2`] = `
+.c6 {
+  cursor: pointer;
+}
+
+.c8 {
+  cursor: inherit;
+}
+
+.c12 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 16px 0px 16px 16px;
+  height: 24px;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.c4 {
+  min-height: 12px;
+  min-width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  color: #C0392B;
+  background-color: #C0392B;
+}
+
+.c0 {
+  margin: 32px;
+}
+
+.c1 {
+  display: grid;
+  grid-template-columns: [detail] 1fr [controls] 1fr;
+  max-width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  grid-column: detail;
+}
+
+.c5 {
+  padding-right: 40px;
+}
+
+.c10 {
+  grid-column: controls;
+  width: 100%;
+  min-width: 0;
+}
+
+.c11 {
+  width: 100%;
+}
+
+.c7 {
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+.c9 {
+  margin-top: 16px;
+  width: 24px;
+  height: 24px;
+  color: #363636;
+  display: none;
+}
+
+@media (max-width:47.9375em) {
+  .c11 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c9 {
+    display: block;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+          color="#C0392B"
+        />
+        <h1>
+          agentName
+        </h1>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                External IP address
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              unknown
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Operating system
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              <i
+                className="c6 c7 fab fa-apple"
+              />
+              darwin
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Architecture
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              amd64
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <i
+        className="c8 c9 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="c10"
+    >
+      <div
+        className="c11"
+      >
+        <div
+          className="c12 c13"
+        >
+          <div>
+            <h2>
+              disconnected
+            </h2>
+          </div>
+        </div>
+        <div
+          className="c14"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`agent detail opens terminal 3`] = `
+<div
+  className="sc-fFSRdu fJuSmP"
+>
+  <div
+    className="sc-bkbjAj kdvJj"
+  >
+    <div
+      className="sc-dIvqjp kdsKS"
+    >
+      <div
+        className="sc-iemXMA gMFpiq"
+      >
+        <div
+          className="sc-jrsJCI bmKhFO"
+          color="#C0392B"
+        />
+        <h1>
+          agentName
+        </h1>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="sc-hHEjAm cAPAWn"
+            >
+              <b>
+                External IP address
+              </b>
+            </td>
+            <td
+              className="sc-hHEjAm cAPAWn"
+            >
+              unknown
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="sc-hHEjAm cAPAWn"
+            >
+              <b>
+                Operating system
+              </b>
+            </td>
+            <td
+              className="sc-hHEjAm cAPAWn"
+            >
+              <i
+                className="sc-bdnylx sc-fKgIGh kAOcqP fxulcm fab fa-apple"
+              />
+              darwin
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="sc-hHEjAm cAPAWn"
+            >
+              <b>
+                Architecture
+              </b>
+            </td>
+            <td
+              className="sc-hHEjAm cAPAWn"
+            >
+              amd64
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <i
+        className="sc-bdnylx sc-bCwgka iEWuNR hBmAar fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="sc-dlMBXb iyBSXJ"
+    >
+      <div
+        className="sc-kfYqjs eCjTHj"
+      >
+        <div
+          className="sc-gtssRu sc-gKAblj gANPar bNgdcg"
+        >
+          <div>
+            <h2>
+              disconnected
+            </h2>
+          </div>
+        </div>
+        <div
+          className="sc-fujyUd dWblrL"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`agent detail renders correctly 1`] = `
+.c6 {
+  cursor: pointer;
+}
+
+.c8 {
+  cursor: inherit;
+}
+
+.c12 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 16px 0px 16px 16px;
+  height: 24px;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.c4 {
+  min-height: 12px;
+  min-width: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  color: #C0392B;
+  background-color: #C0392B;
+}
+
+.c0 {
+  margin: 32px;
+}
+
+.c1 {
+  display: grid;
+  grid-template-columns: [detail] 1fr [controls] 1fr;
+  max-width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  grid-column: detail;
+}
+
+.c5 {
+  padding-right: 40px;
+}
+
+.c10 {
+  grid-column: controls;
+  width: 100%;
+  min-width: 0;
+}
+
+.c11 {
+  width: 100%;
+}
+
+.c7 {
+  margin-right: 10px;
+  color: #F8F8F8;
+  cursor: inherit;
+}
+
+.c9 {
+  margin-top: 16px;
+  width: 24px;
+  height: 24px;
+  color: #363636;
+  display: none;
+}
+
+@media (max-width:47.9375em) {
+  .c11 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c9 {
+    display: block;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+          color="#C0392B"
+        />
+        <h1>
+          agentName
+        </h1>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                External IP address
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              unknown
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Operating system
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              <i
+                className="c6 c7 fab fa-apple"
+              />
+              darwin
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="c5"
+            >
+              <b>
+                Architecture
+              </b>
+            </td>
+            <td
+              className="c5"
+            >
+              amd64
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <i
+        className="c8 c9 fas fa-terminal"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="c10"
+    >
+      <div
+        className="c11"
+      >
+        <div
+          className="c12 c13"
+        >
+          <div>
+            <h2>
+              disconnected
+            </h2>
+          </div>
+        </div>
+        <div
+          className="c14"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

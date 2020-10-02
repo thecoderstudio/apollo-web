@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`create Agent closes modal correctly 1`] = `
-.c7 {
+.c6 {
+  position: relative;
+}
+
+.c8 {
   border: none;
   border-radius: 5px;
   font-family: 'B612',sans-serif;
@@ -15,28 +19,6 @@ exports[`create Agent closes modal correctly 1`] = `
 }
 
 .c9 {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin-top: 10px;
-  width: 230px;
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  z-index: 1;
-  border-radius: 4px;
-  position: fixed;
-}
-
-.c10 {
-  padding: 15px;
-}
-
-.c10:hover {
-  cursor: pointer;
-  opacity: 0.6;
-}
-
-.c8 {
   border-color: white transparent;
   border-style: solid;
   float: right;
@@ -53,7 +35,7 @@ exports[`create Agent closes modal correctly 1`] = `
   transition: transform 0.3s;
 }
 
-.c12 {
+.c11 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -65,19 +47,19 @@ exports[`create Agent closes modal correctly 1`] = `
   cursor: pointer;
 }
 
-.c12:hover {
+.c11:hover {
   opacity: 0.90;
 }
 
-.c12:focus {
+.c11:focus {
   outline: none;
 }
 
-.c12:active {
+.c11:active {
   opacity: 0.80;
 }
 
-.c15 {
+.c14 {
   width: 100%;
   height: 50px;
   margin: auto;
@@ -105,12 +87,12 @@ exports[`create Agent closes modal correctly 1`] = `
   border: 1px solid;
 }
 
-.c13 {
+.c12 {
   background-color: transparent;
   border: 1px solid;
 }
 
-.c11 {
+.c10 {
   display: grid;
   grid-template-columns: 50% 50%;
   margin: 20px 0px 20px 0px;
@@ -120,13 +102,14 @@ exports[`create Agent closes modal correctly 1`] = `
   display: grid;
   width: 100%;
   grid-template-columns: [text] 50% [dropdown] 50%;
+  height: 100px;
 }
 
 .c2 {
   grid-column: dropdown;
 }
 
-.c6 {
+.c7 {
   width: 200px;
   float: right;
 }
@@ -138,7 +121,7 @@ exports[`create Agent closes modal correctly 1`] = `
   margin-bottom: 0px;
 }
 
-.c16 {
+.c15 {
   width: 200px;
   height: 50px;
   margin: auto;
@@ -152,7 +135,7 @@ exports[`create Agent closes modal correctly 1`] = `
   float: right;
 }
 
-.c14 {
+.c13 {
   width: 200px;
   height: 50px;
   margin: auto;
@@ -160,7 +143,7 @@ exports[`create Agent closes modal correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c11 {
+  .c10 {
     grid-template-columns: [column-one] 100%;
     grid-template-rows: [row-one] 1fr [row-two] 1fr;
   }
@@ -168,6 +151,7 @@ exports[`create Agent closes modal correctly 1`] = `
 
 @media (max-width:47.9375em) {
   .c0 {
+    height: 120px;
     grid-template-columns: [column-one] 100%;
     grid-template-rows: [text] 30px [dropdown] 85px;
   }
@@ -182,7 +166,7 @@ exports[`create Agent closes modal correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c7 {
     width: 100%;
   }
 }
@@ -197,7 +181,7 @@ exports[`create Agent closes modal correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c16 {
+  .c15 {
     width: 100%;
     margin-top: 15px;
   }
@@ -211,7 +195,7 @@ exports[`create Agent closes modal correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c14 {
+  .c13 {
     width: 100%;
     grid-row: row-two;
   }
@@ -257,40 +241,18 @@ exports[`create Agent closes modal correctly 1`] = `
       className="c2"
     >
       <div
-        className="c6"
+        className="c6 c7"
       >
         <div
-          className="c7"
+          className="c8"
           id="dropdown"
           onClick={[Function]}
         >
           linux
           <div
-            className="c8"
+            className="c9"
           />
         </div>
-        <ul
-          className="c9"
-        >
-          <li
-            className="c10"
-            onClick={[Function]}
-          >
-            darwin
-          </li>
-          <li
-            className="c10"
-            onClick={[Function]}
-          >
-            freebsd
-          </li>
-          <li
-            className="c10"
-            onClick={[Function]}
-          >
-            openbsd
-          </li>
-        </ul>
       </div>
     </div>
   </div>
@@ -306,42 +268,26 @@ exports[`create Agent closes modal correctly 1`] = `
       className="c2"
     >
       <div
-        className="c6"
+        className="c6 c7"
       >
         <div
-          className="c7"
+          className="c8"
           id="dropdown"
           onClick={[Function]}
         >
           amd64
           <div
-            className="c8"
+            className="c9"
           />
         </div>
-        <ul
-          className="c9"
-        >
-          <li
-            className="c10"
-            onClick={[Function]}
-          >
-            arm64
-          </li>
-          <li
-            className="c10"
-            onClick={[Function]}
-          >
-            arm
-          </li>
-        </ul>
       </div>
     </div>
   </div>
   <div
-    className="c11"
+    className="c10"
   >
     <button
-      className="c12 c13 c14"
+      className="c11 c12 c13"
       id="closeButton"
       onClick={
         [MockFunction] {
@@ -361,7 +307,7 @@ exports[`create Agent closes modal correctly 1`] = `
       Cancel
     </button>
     <button
-      className="c12 c15 c16"
+      className="c11 c14 c15"
       onClick={null}
     >
       Create agent
@@ -371,7 +317,11 @@ exports[`create Agent closes modal correctly 1`] = `
 `;
 
 exports[`create Agent renders correctly 1`] = `
-.c7 {
+.c6 {
+  position: relative;
+}
+
+.c8 {
   border: none;
   border-radius: 5px;
   font-family: 'B612',sans-serif;
@@ -385,28 +335,6 @@ exports[`create Agent renders correctly 1`] = `
 }
 
 .c9 {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin-top: 10px;
-  width: 230px;
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  z-index: 1;
-  border-radius: 4px;
-  position: fixed;
-}
-
-.c10 {
-  padding: 15px;
-}
-
-.c10:hover {
-  cursor: pointer;
-  opacity: 0.6;
-}
-
-.c8 {
   border-color: white transparent;
   border-style: solid;
   float: right;
@@ -423,7 +351,7 @@ exports[`create Agent renders correctly 1`] = `
   transition: transform 0.3s;
 }
 
-.c12 {
+.c11 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -435,19 +363,19 @@ exports[`create Agent renders correctly 1`] = `
   cursor: pointer;
 }
 
-.c12:hover {
+.c11:hover {
   opacity: 0.90;
 }
 
-.c12:focus {
+.c11:focus {
   outline: none;
 }
 
-.c12:active {
+.c11:active {
   opacity: 0.80;
 }
 
-.c15 {
+.c14 {
   width: 100%;
   height: 50px;
   margin: auto;
@@ -475,12 +403,12 @@ exports[`create Agent renders correctly 1`] = `
   border: 1px solid;
 }
 
-.c13 {
+.c12 {
   background-color: transparent;
   border: 1px solid;
 }
 
-.c11 {
+.c10 {
   display: grid;
   grid-template-columns: 50% 50%;
   margin: 20px 0px 20px 0px;
@@ -490,13 +418,14 @@ exports[`create Agent renders correctly 1`] = `
   display: grid;
   width: 100%;
   grid-template-columns: [text] 50% [dropdown] 50%;
+  height: 100px;
 }
 
 .c2 {
   grid-column: dropdown;
 }
 
-.c6 {
+.c7 {
   width: 200px;
   float: right;
 }
@@ -508,7 +437,7 @@ exports[`create Agent renders correctly 1`] = `
   margin-bottom: 0px;
 }
 
-.c16 {
+.c15 {
   width: 200px;
   height: 50px;
   margin: auto;
@@ -522,7 +451,7 @@ exports[`create Agent renders correctly 1`] = `
   float: right;
 }
 
-.c14 {
+.c13 {
   width: 200px;
   height: 50px;
   margin: auto;
@@ -530,7 +459,7 @@ exports[`create Agent renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c11 {
+  .c10 {
     grid-template-columns: [column-one] 100%;
     grid-template-rows: [row-one] 1fr [row-two] 1fr;
   }
@@ -538,6 +467,7 @@ exports[`create Agent renders correctly 1`] = `
 
 @media (max-width:47.9375em) {
   .c0 {
+    height: 120px;
     grid-template-columns: [column-one] 100%;
     grid-template-rows: [text] 30px [dropdown] 85px;
   }
@@ -552,7 +482,7 @@ exports[`create Agent renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c7 {
     width: 100%;
   }
 }
@@ -567,7 +497,7 @@ exports[`create Agent renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c16 {
+  .c15 {
     width: 100%;
     margin-top: 15px;
   }
@@ -581,7 +511,7 @@ exports[`create Agent renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c14 {
+  .c13 {
     width: 100%;
     grid-row: row-two;
   }
@@ -627,40 +557,18 @@ exports[`create Agent renders correctly 1`] = `
       className="c2"
     >
       <div
-        className="c6"
+        className="c6 c7"
       >
         <div
-          className="c7"
+          className="c8"
           id="dropdown"
           onClick={[Function]}
         >
           linux
           <div
-            className="c8"
+            className="c9"
           />
         </div>
-        <ul
-          className="c9"
-        >
-          <li
-            className="c10"
-            onClick={[Function]}
-          >
-            darwin
-          </li>
-          <li
-            className="c10"
-            onClick={[Function]}
-          >
-            freebsd
-          </li>
-          <li
-            className="c10"
-            onClick={[Function]}
-          >
-            openbsd
-          </li>
-        </ul>
       </div>
     </div>
   </div>
@@ -676,42 +584,26 @@ exports[`create Agent renders correctly 1`] = `
       className="c2"
     >
       <div
-        className="c6"
+        className="c6 c7"
       >
         <div
-          className="c7"
+          className="c8"
           id="dropdown"
           onClick={[Function]}
         >
           amd64
           <div
-            className="c8"
+            className="c9"
           />
         </div>
-        <ul
-          className="c9"
-        >
-          <li
-            className="c10"
-            onClick={[Function]}
-          >
-            arm64
-          </li>
-          <li
-            className="c10"
-            onClick={[Function]}
-          >
-            arm
-          </li>
-        </ul>
       </div>
     </div>
   </div>
   <div
-    className="c11"
+    className="c10"
   >
     <button
-      className="c12 c13 c14"
+      className="c11 c12 c13"
       id="closeButton"
       onClick={[MockFunction]}
       type="button"
@@ -719,7 +611,7 @@ exports[`create Agent renders correctly 1`] = `
       Cancel
     </button>
     <button
-      className="c12 c15 c16"
+      className="c11 c14 c15"
       onClick={null}
     >
       Create agent

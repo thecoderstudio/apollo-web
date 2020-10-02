@@ -104,7 +104,7 @@ exports[`Add Agent closes modal correctly 1`] = `
       <div
         className="c3"
       >
-        curl http://localhost:1970/agent/download?target_os=test&target_arch=test && chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=undefined --secret=undefined --host=localhost:1970
+        curl http://localhost:1234/agent/download?target_os=test&target_arch=test &gt; apollo-agent.bin && chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=undefined --secret=undefined --host=http://localhost:1234
       </div>
       <button
         className="c4 c5"
@@ -243,7 +243,7 @@ exports[`Add Agent renders correctly 1`] = `
       <div
         className="c3"
       >
-        curl http://localhost:1970/agent/download?target_os=test&target_arch=test && chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=undefined --secret=undefined --host=localhost:1970
+        curl http://localhost:1234/agent/download?target_os=test&target_arch=test &gt; apollo-agent.bin && chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=undefined --secret=undefined --host=http://localhost:1234
       </div>
       <button
         className="c4 c5"
@@ -452,7 +452,7 @@ exports[`Add Agent renders correctly 2`] = `
       <div
         className="c9"
       >
-        chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=undefined --secret=undefined --host=localhost:1970
+        chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=undefined --secret=undefined --host=http://localhost:1234
       </div>
       <button
         className="c3 c10"

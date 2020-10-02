@@ -100,6 +100,8 @@ exports[`app renders correctly authenticated 1`] = `
 .c11 {
   display: grid;
   grid-template-rows: [title] 50px [list] 1fr;
+  width: 100%;
+  min-width: 0;
   background-color: #1B1B1B;
   border-radius: 8px;
   padding: 20px;
@@ -107,19 +109,22 @@ exports[`app renders correctly authenticated 1`] = `
 
 .c12 {
   grid-row: title;
+  width: 100%;
+  min-width: 0;
 }
 
 .c13 {
+  width: 100%;
+  min-width: 0;
   grid-row: list;
   list-style: none;
   padding-left: 0;
 }
 
 .c10 {
+  display: grid;
   grid-template-columns: [agent-listing] 1fr 1fr;
   grid-template-rows: 1fr;
-  display: grid;
-  grid-row: 2;
   margin: 25px;
 }
 

@@ -140,6 +140,7 @@ class Login extends React.Component {
             <Formik
               initialValues={{ username: '', password: '' }}
               validationSchema={loginSchema}
+              validateOnChange={false}
               onSubmit={this.login}>
               {({ values, errors, handleChange, handleSubmit }) => (
                 <Form onSubmit={handleSubmit}>
