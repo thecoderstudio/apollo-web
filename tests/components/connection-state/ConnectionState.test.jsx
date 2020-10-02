@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { ThemeProvider } from 'styled-components';
-import ConnectionState from '../../../src/components/agent-list/ConnectionState';
+import ConnectionState from '../../../src/components/connection-state/ConnectionState';
 import { darkTheme } from '../../../src/theme';
 
 function getComponent(state) {
