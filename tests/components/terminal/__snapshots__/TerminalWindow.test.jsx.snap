@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`agent list item correctly renders connected 1`] = `
+exports[`terminal window correctly renders connected 1`] = `
 .c7 {
   height: 100%;
   width: 100%;
@@ -967,7 +967,7 @@ exports[`agent list item correctly renders connected 1`] = `
 </div>
 `;
 
-exports[`agent list item correctly renders disconnected 1`] = `
+exports[`terminal window correctly renders disconnected 1`] = `
 .c7 {
   height: 100%;
   width: 100%;
@@ -1934,7 +1934,7 @@ exports[`agent list item correctly renders disconnected 1`] = `
 </div>
 `;
 
-exports[`agent list item resizes 1`] = `
+exports[`terminal window resizes 1`] = `
 .c7 {
   height: 100%;
   width: 100%;

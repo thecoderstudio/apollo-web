@@ -2,11 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Tippy from '@tippyjs/react';
+import Link from '../Link';
 import Icon from '../Icon';
-import ConnectionState from './ConnectionState';
+import ConnectionState from '../connection-state/ConnectionState';
 import { openTerminal } from '../terminal/Terminal';
 import TerminalWindow from '../terminal/TerminalWindow';
 import MobileChecker from '../../util/MobileChecker';
+import { getFontAwesomeClass } from '../../util/agent';
 import media from '../../util/media';
 
 const propTypes = {
@@ -15,17 +17,18 @@ const propTypes = {
 
 const Container = styled.li`
   display: grid;
-  grid-template-columns: 1fr 1fr 175px;
-  grid-column-gap: 10px;
-  align-content: center;
+  grid-template-columns: auto 100px 175px;
+  grid-column-gap: 8px;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 
+  box-sizing: border-box;
   border-radius: 8px;
   border: 1px solid white;
 
-  height: 30px;
   line-height: 30px;
-  padding: 15px 20px;
+  padding: 5px 20px;
   margin-top: 25px;
 
   ${
@@ -41,6 +44,7 @@ const Controls = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-width: 0;
 
   ${
     media.phone`
@@ -49,15 +53,22 @@ const Controls = styled.div`
   }
 `;
 
-const Name = styled.div`
+const Name = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: start;
-  width: 50%;
+  width: 100%;
+  min-width: 0;
 
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+  p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  :hover {
+    color: ${props => props.theme.primary};
+  }
 
   ${
     media.phone`
@@ -69,7 +80,7 @@ const Name = styled.div`
 `;
 
 const IPAddress = styled.p`
-  width: 50%;
+  min-width: 0;
 
   ${
     media.phone`
@@ -81,11 +92,11 @@ const IPAddress = styled.p`
 
 const TerminalIcon = styled(Icon)`
   color: ${props => props.active ? props.theme.white : props.theme.inactive};
+  margin-left: 16px;
 `;
 
 const OSIcon = styled(Icon)`
   margin-right: 10px;
-  color: ${props => props.theme.white};
   cursor: inherit;
 `;
 
@@ -133,20 +144,7 @@ export default class AgentListItem extends React.PureComponent {
   }
 
   getOSIcon(os, arch) {
-    let osClass;
-    switch (os) {
-      case 'darwin':
-        osClass = "fab fa-apple";
-        break;
-      case 'linux':
-        osClass = "fab fa-linux";
-        break;
-      case 'freebsd':
-        osClass = "fab fa-freebsd";
-        break;
-      default:
-        osClass = "fas fa-question-circle";
-    }
+    let osClass = getFontAwesomeClass(os);
 
     return <Tippy content={this.getOSTooltip(os, arch)}><OSIcon className={osClass} /></Tippy>;
   }
@@ -170,7 +168,7 @@ export default class AgentListItem extends React.PureComponent {
 
     return (
       <Container>
-        <Name>
+        <Name to={`/agent/${this.props.agent.id}`}>
           {this.getOSIcon(os, arch)}
           <p>{this.props.agent.name}</p>
         </Name>

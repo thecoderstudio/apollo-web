@@ -9,11 +9,9 @@ const StyledAgentList = styled(AgentList)`
 `;
 
 const Content = styled.div`
+  display: grid;
   grid-template-columns: [agent-listing] 1fr 1fr;
   grid-template-rows: 1fr;
-
-  display: grid;
-  grid-row: 2;
   margin: 25px;
 
   ${

@@ -7,6 +7,7 @@ import NavBar from './components/NavBar';
 import Notifications from './components/notifications/Notifications';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
+import AgentDetail from './pages/AgentDetail';
 import TerminalPage from './pages/TerminalPage';
 import Admin from './pages/Admin';
 import NotFound from './pages/NotFound';
@@ -48,6 +49,7 @@ function App(props) {
             <Switch>
               <ProtectedRoute exact path='/' component={Dashboard} fallbackComponent={Login} />
               <ProtectedRoute exact path='/agent/:agentId/shell' component={TerminalPage} fallbackComponent={NotFound} />
+              <ProtectedRoute exact path='/agent/:agentId' component={AgentDetail} fallbackComponent={NotFound} />
               <ProtectedRoute exact path='/admin' component={Admin} fallbackComponent={NotFound} role='admin' />
               <Route component={NotFound} />
             </Switch>
