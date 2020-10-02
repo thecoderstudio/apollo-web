@@ -27,7 +27,7 @@ const Logout = styled(OutlinedButton)`
 `;
 
 function NavBar(props) {
-  return(
+  return (
     <NavigationBar>
       <h3>Apollo</h3>
       <div>
