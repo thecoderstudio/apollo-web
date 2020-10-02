@@ -110,9 +110,9 @@ describe('login', () => {
     });
   });
 
-  it("not calling callback on login success, fetch user fail.", () => {
+  it("not calling callback on login success, fetch user fail.", async () => {
     const component = getComponent(store);
-    const root = component.root.findByProps({authenticated: false});
+    const root = component.root.findByType(UnconnectedLogin);
     const instance = root.instance;
     const spy = jest.spyOn(instance, 'loginSuccessCallback');
 

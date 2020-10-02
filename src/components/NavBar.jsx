@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import checkIfAdmin from '../util/admin';
 import OutlinedButton from './buttons/OutlinedButton';
+import { logout } from '../util/auth';
 import Link from './Link';
 
 const NavigationBar = styled.div`
@@ -25,16 +26,16 @@ const Logout = styled(OutlinedButton)`
   height: 75%;
 `;
 
-function NavBar() {
+function NavBar(props) {
   return(
     <NavigationBar>
       <h3>Apollo</h3>
       <div>
         <StyledLink to='/'>Dashboard</StyledLink>
-        {checkIfAdmin(this.props.currentUser) &&
+        {checkIfAdmin(props.currentUser) &&
         <StyledLink to='/admin'>Admin</StyledLink>}
       </div>
-      <Logout onClick={this.logout}>Log out</Logout>
+      <Logout id='logoutButton' onClick={logout}>Log out</Logout>
     </NavigationBar>
   )
 }

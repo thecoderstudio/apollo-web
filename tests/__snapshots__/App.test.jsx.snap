@@ -216,9 +216,7 @@ exports[`app renders correctly authenticated 1`] = `
         <h1
           className="c4"
         >
-          <div>
-            Change your password
-          </div>
+          Change your password
         </h1>
         <div
           className="c5"
@@ -431,6 +429,7 @@ exports[`app renders correctly authenticated and password changed 1`] = `
       </div>
       <button
         className="c4"
+        id="logoutButton"
         onClick={[Function]}
       >
         Log out
@@ -641,9 +640,7 @@ exports[`app renders correctly unauthenticated 1`] = `
         <h1
           className="c4"
         >
-          <div>
-            Log in to Apollo
-          </div>
+          Log in to Apollo
         </h1>
         <div
           className="c5"

@@ -3,9 +3,10 @@ import { BrowserRouter } from 'react-router-dom';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
-import waitForExpect from 'wait-for-expect';
 import NavBar from '../../src/components/NavBar';
+import { store as globalStore } from '../../src/store';
 import { logout as logoutAction } from '../../src/actions/auth';
+import { removeCurrentUser } from '../../src/actions/current-user';
 
 const mockStore = configureStore([]);
 
@@ -21,13 +22,13 @@ function getComponent(store) {
 
 describe('nav bar', () => {
   let store;
-  let spy;
+  let dispatchSpy;
 
   beforeEach(() => {
     store = mockStore({
       currentUser: {}
     });
-    spy = jest.spyOn(store, 'dispatch');
+    dispatchSpy = jest.spyOn(globalStore, 'dispatch')
   });
 
   it("renders correctly", () => {
@@ -35,15 +36,12 @@ describe('nav bar', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("handles successful logout", async () => {
+  it("handles successful logout", () => {
     let tree = getComponent(store);
     const instance = tree.root;
-    instance.findByType('button').props.onClick();
-    expect(tree).toMatchSnapshot();
-
-    await waitForExpect(() => {
-      expect(spy).toHaveBeenCalledWith(logoutAction());
-    });
+    instance.findByProps({id: 'logoutButton'}).props.onClick();
+    expect(dispatchSpy).toHaveBeenCalledWith(logoutAction());
+    expect(dispatchSpy).toHaveBeenCalledWith(removeCurrentUser());
   });
 
   it("render admin link for admins", () => {

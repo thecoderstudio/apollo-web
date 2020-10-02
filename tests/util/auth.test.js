@@ -1,14 +1,11 @@
-import { logout } from '../../src/actions/auth';
+import { logout as logoutAction } from '../../src/actions/auth';
 import { removeCurrentUser } from '../../src/actions/current-user';
+import { logout } from '../../src/util/auth'
+import { store } from '../../src/store';
 
-test('logout', async () => {
-  const spy = jest.fn();
-  mockDispatchSpy = jest.fn();
-  jest.mock('../../src/store', () => ({
-    dispatch: spy,
-  }));
-  await waitForExpect(() => {
-    expect(spy).toHaveBeenCalledWith(logout);
-    expect(spy).toHaveBeenCalledWith(removeCurrentUser);
-  });
+test('logout', () => {
+  const spy = jest.spyOn(store, 'dispatch');
+  logout()
+  expect(spy).toHaveBeenCalledWith(logoutAction());
+  expect(spy).toHaveBeenCalledWith(removeCurrentUser());
 });

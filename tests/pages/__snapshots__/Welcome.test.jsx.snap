@@ -175,9 +175,7 @@ exports[`Welcome renders change password correctly 1`] = `
     <h1
       className="c3"
     >
-      <div>
-        Change your password
-      </div>
+      Change your password
     </h1>
     <div
       className="c4"
@@ -385,9 +383,7 @@ exports[`Welcome renders login correctly 1`] = `
     <h1
       className="c3"
     >
-      <div>
-        Log in to Apollo
-      </div>
+      Log in to Apollo
     </h1>
     <div
       className="c4"

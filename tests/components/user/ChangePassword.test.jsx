@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
+import { store as globalStore } from '../../../src/store';
 import waitForExpect from 'wait-for-expect';
 import axios from 'axios';
 import { StatusCodes } from 'http-status-codes';
@@ -45,6 +46,7 @@ function submitForm(root, oldPassword, password, passwordConfirm) {
 
 describe("change password", () => {
   let store;
+  let dispatchSpy;
   let spy;
 
   beforeEach(() => {
@@ -55,9 +57,7 @@ describe("change password", () => {
       }
     });
     spy = jest.fn();
-    jest.mock('../../src/store', () => ({
-      dispatch: mockDispatchSpy,
-    }));
+    dispatchSpy = jest.spyOn(globalStore, 'dispatch')
   });
 
   it("renders correctly", () => {
@@ -133,7 +133,7 @@ describe("change password", () => {
     instance.findByProps({id: 'logoutButton'}).props.onClick();
 
     await waitForExpect(() => {
-      expect(spy).toHaveBeenCalledWith(logoutAction());
+      expect(dispatchSpy).toHaveBeenCalledWith(logoutAction());
     });
   });
 });
