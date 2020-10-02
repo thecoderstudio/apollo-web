@@ -79,10 +79,14 @@ const MenuToggleIcon = styled.i`
 const StyledLink = styled(Link)`
   maring-left: 16px;
   margin-right: 16px;
-`;
+  float: left;
 
-const StyledIcon = styled.i`
-  width: 32px;
+  ${
+    media.phone`
+      width: 100%;
+      margin-bottom: 32px;
+    `
+  }
 `;
 
 const Menu = styled.div`
@@ -172,8 +176,10 @@ class NavBar extends React.PureComponent {
         <MenuToggleIcon collapsed={this.state.collapsed} onClick={this.toggleCollapsed} className={this.state.collapsed ? 'fa fa-bars fa-lg' : 'fas fa-times fa-lg'}/>
         <NavBarContent collapsed={this.state.collapsed}>
           <Menu>
-            <StyledIcon className='fas fa-home' /><StyledLink to='/'>Dashboard</StyledLink>
-            {checkIfAdmin() && <StyledLink to='/admin'>Admin</StyledLink>}
+            <StyledLink onClick={this.toggleCollapsed} to='/'>Dashboard</StyledLink>
+            {checkIfAdmin(this.props.currentUser) &&
+              <StyledLink onClick={this.toggleCollapsed} to='/admin'>Admin</StyledLink>
+            }
           </Menu>
           <NewAgentButton id='newAgentButton' onClick={this.openAddAgentModal}>Add new agent</NewAgentButton>
           <Logout id='logoutButton' onClick={this.logout}>Logout</Logout>
