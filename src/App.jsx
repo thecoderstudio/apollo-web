@@ -24,7 +24,6 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 500;
     color: ${props => props.theme.white};
     background-color: ${props => props.theme.black};
-    overflow-y: hidden;
   }
 
   body {
