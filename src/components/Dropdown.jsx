@@ -45,6 +45,7 @@ const DropDownContent = styled.ul`
   border-radius: 4px;
 
   position: absolute;
+
 `;
 
 
@@ -112,7 +113,7 @@ class Dropdown extends React.PureComponent {
         </DropDownButton>
         {!this.state.collapsed &&
           <DropDownContent>
-            {this.renderItems()}
+           {this.renderItems()}
           </DropDownContent>
          }
       </Wrapper>

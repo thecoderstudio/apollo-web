@@ -84,6 +84,10 @@ exports[`navbar handles add agent modal 1`] = `
   overflow-y: scroll;
 }
 
+.c12::-webkit-scrollbar {
+  background: transparent;
+}
+
 .c13 {
   grid-row: title;
   width: 75%;

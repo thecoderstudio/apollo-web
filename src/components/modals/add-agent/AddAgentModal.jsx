@@ -41,6 +41,10 @@ const ScrollableContent = styled.div`
   grid-template-rows: [title] 50px [content] 1fr;
   height: 100%;
   overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    background: transparent;
+  }
 `;
 
 const Title = styled.h2`
