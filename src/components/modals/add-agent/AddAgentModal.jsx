@@ -43,8 +43,11 @@ const ScrollableContent = styled.div`
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
-    background: transparent;
+    display: none;
   }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 `;
 
 const Title = styled.h2`

@@ -31,7 +31,6 @@ const DropDownButton = styled.div`
 `;
 
 const DropDownContent = styled.ul`
-
   list-style: none;
   margin: 0;
   padding: 0;
@@ -45,7 +44,6 @@ const DropDownContent = styled.ul`
   border-radius: 4px;
 
   position: absolute;
-
 `;
 
 
