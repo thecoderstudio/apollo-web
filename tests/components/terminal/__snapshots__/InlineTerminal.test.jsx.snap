@@ -1,14 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`inline terminal correctly renders connected 1`] = `
-.c0 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
-  background-color: #1B1B1B;
-}
-
-.c2 {
+.c1 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -19,156 +12,36 @@ exports[`inline terminal correctly renders connected 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-}
-
-.c2:hover {
-  opacity: 0.90;
-}
-
-.c2:focus {
-  outline: none;
-}
-
-.c2:active {
-  opacity: 0.80;
-}
-
-.c2:disabled {
-  background-color: #3E3E3E;
-}
-
-.c2:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c3 {
   background-color: transparent;
   border: 1px solid #4D02EE;
 }
 
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 400px;
+.c1:hover {
+  opacity: 0.90;
 }
 
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 16px 0px 16px 16px;
-  height: 24px;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
+.c1:focus {
+  outline: none;
 }
 
-<div>
-  <Component
-    theme={
-      Object {
-        "accent": "#4D02EE",
-        "black": "#181818",
-        "connectedColor": "#27AE60",
-        "connectingColor": "#F39C12",
-        "darkGrey": "#3E3E3E",
-        "darkWhite": "#F1F1F1",
-        "disconnectedColor": "#C0392B",
-        "error": "#ED3E2A",
-        "green": "#32E67E",
-        "inactive": "#363636",
-        "lightBlack": "#1B1B1B",
-        "name": "dark",
-        "overlay": "rgba(37, 37, 37, 0.6)",
-        "primary": "#02A3EE",
-        "red": "#ED3E2A",
-        "warning": "#ED852A",
-        "white": "#F8F8F8",
-      }
-    }
-  >
-    <InlineTerminal
-      agent={
-        Object {
-          "connectionState": "connected",
-          "id": "fakeid",
-          "name": "agentName",
-        }
-      }
-    >
-      <div>
-        <Styled(styled.div)>
-          <div
-            className="c0 c1"
-          >
-            <div>
-              <h2>
-                connected
-              </h2>
-              <Styled(styled.button)
-                onClick={[Function]}
-              >
-                <button
-                  className="c2 c3"
-                  onClick={[Function]}
-                >
-                  Open shell
-                </button>
-              </Styled(styled.button)>
-            </div>
-          </div>
-        </Styled(styled.div)>
-        <styled.div>
-          <div
-            className="c4"
-          />
-        </styled.div>
-      </div>
-    </InlineTerminal>
-  </Component>
-</div>
-`;
+.c1:active {
+  opacity: 0.80;
+}
 
-exports[`inline terminal correctly renders connected 2`] = `
+.c1:disabled {
+  background-color: #3E3E3E;
+}
+
+.c1:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
 .c0 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
-}
-
-.c3 {
-  height: 100%;
-  width: 100%;
-  padding: 20px;
-}
-
-.c4 {
-  height: 100%;
-  width: 100%;
-}
-
-.c4 .xterm-viewport {
-  overflow: hidden !important;
-}
-
-.c6 {
-  cursor: pointer;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -185,11 +58,6 @@ exports[`inline terminal correctly renders connected 2`] = `
 }
 
 .c2 {
-  padding: 0px;
-  height: 100%;
-}
-
-.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -201,12 +69,8 @@ exports[`inline terminal correctly renders connected 2`] = `
   flex-direction: row-reverse;
 }
 
-.c7 {
-  color: #ED3E2A;
-}
-
 <div>
-  <Component
+  <ThemeProvider
     theme={
       Object {
         "accent": "#4D02EE",
@@ -241,7 +105,131 @@ exports[`inline terminal correctly renders connected 2`] = `
       <div>
         <Styled(styled.div)>
           <div
-            className="c0 c1"
+            className="c0"
+          >
+            <div>
+              <h2>
+                connected
+              </h2>
+              <Styled(styled.button)
+                onClick={[Function]}
+              >
+                <button
+                  className="c1"
+                  onClick={[Function]}
+                >
+                  Open shell
+                </button>
+              </Styled(styled.button)>
+            </div>
+          </div>
+        </Styled(styled.div)>
+        <styled.div>
+          <div
+            className="c2"
+          />
+        </styled.div>
+      </div>
+    </InlineTerminal>
+  </ThemeProvider>
+</div>
+`;
+
+exports[`inline terminal correctly renders connected 2`] = `
+.c2 {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+.c3 {
+  height: 100%;
+  width: 100%;
+}
+
+.c3 .xterm-viewport {
+  overflow: hidden !important;
+}
+
+.c0 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.c1 {
+  padding: 0px;
+  height: 100%;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 16px 0px 16px 16px;
+  height: 24px;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.c5 {
+  cursor: pointer;
+  color: #ED3E2A;
+}
+
+<div>
+  <ThemeProvider
+    theme={
+      Object {
+        "accent": "#4D02EE",
+        "black": "#181818",
+        "connectedColor": "#27AE60",
+        "connectingColor": "#F39C12",
+        "darkGrey": "#3E3E3E",
+        "darkWhite": "#F1F1F1",
+        "disconnectedColor": "#C0392B",
+        "error": "#ED3E2A",
+        "green": "#32E67E",
+        "inactive": "#363636",
+        "lightBlack": "#1B1B1B",
+        "name": "dark",
+        "overlay": "rgba(37, 37, 37, 0.6)",
+        "primary": "#02A3EE",
+        "red": "#ED3E2A",
+        "warning": "#ED852A",
+        "white": "#F8F8F8",
+      }
+    }
+  >
+    <InlineTerminal
+      agent={
+        Object {
+          "connectionState": "connected",
+          "id": "fakeid",
+          "name": "agentName",
+        }
+      }
+    >
+      <div>
+        <Styled(styled.div)>
+          <div
+            className="c0"
           >
             <Styled(WithTheme(Terminal))
               agent={
@@ -260,7 +248,7 @@ exports[`inline terminal correctly renders connected 2`] = `
                     "name": "agentName",
                   }
                 }
-                className="c2"
+                className="c1"
               >
                 <Terminal
                   agent={
@@ -270,7 +258,7 @@ exports[`inline terminal correctly renders connected 2`] = `
                       "name": "agentName",
                     }
                   }
-                  className="c2"
+                  className="c1"
                   theme={
                     Object {
                       "accent": "#4D02EE",
@@ -294,16 +282,16 @@ exports[`inline terminal correctly renders connected 2`] = `
                   }
                 >
                   <styled.div
-                    className="c2"
+                    className="c1"
                   >
                     <div
-                      className="c3 c2"
+                      className="c2 c1"
                     >
                       <styled.div
                         data-testid="terminal"
                       >
                         <div
-                          className="c4"
+                          className="c3"
                           data-testid="terminal"
                         />
                       </styled.div>
@@ -316,7 +304,7 @@ exports[`inline terminal correctly renders connected 2`] = `
         </Styled(styled.div)>
         <styled.div>
           <div
-            className="c5"
+            className="c4"
           >
             <Styled(styled.i)
               active={true}
@@ -324,7 +312,7 @@ exports[`inline terminal correctly renders connected 2`] = `
               onClick={[Function]}
             >
               <i
-                className="c6 c7 material-icons"
+                className="c5 material-icons"
                 onClick={[Function]}
               >
                 clear
@@ -334,7 +322,7 @@ exports[`inline terminal correctly renders connected 2`] = `
         </styled.div>
       </div>
     </InlineTerminal>
-  </Component>
+  </ThemeProvider>
 </div>
 `;
 
@@ -344,9 +332,6 @@ exports[`inline terminal correctly renders connecting 1`] = `
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -362,7 +347,7 @@ exports[`inline terminal correctly renders connecting 1`] = `
   height: 400px;
 }
 
-.c2 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -375,7 +360,7 @@ exports[`inline terminal correctly renders connecting 1`] = `
 }
 
 <div>
-  <Component
+  <ThemeProvider
     theme={
       Object {
         "accent": "#4D02EE",
@@ -410,7 +395,7 @@ exports[`inline terminal correctly renders connecting 1`] = `
       <div>
         <Styled(styled.div)>
           <div
-            className="c0 c1"
+            className="c0"
           >
             <div>
               <h2>
@@ -421,12 +406,12 @@ exports[`inline terminal correctly renders connecting 1`] = `
         </Styled(styled.div)>
         <styled.div>
           <div
-            className="c2"
+            className="c1"
           />
         </styled.div>
       </div>
     </InlineTerminal>
-  </Component>
+  </ThemeProvider>
 </div>
 `;
 
@@ -436,9 +421,6 @@ exports[`inline terminal correctly renders disconnected 1`] = `
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -454,7 +436,7 @@ exports[`inline terminal correctly renders disconnected 1`] = `
   height: 400px;
 }
 
-.c2 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -467,7 +449,7 @@ exports[`inline terminal correctly renders disconnected 1`] = `
 }
 
 <div>
-  <Component
+  <ThemeProvider
     theme={
       Object {
         "accent": "#4D02EE",
@@ -502,7 +484,7 @@ exports[`inline terminal correctly renders disconnected 1`] = `
       <div>
         <Styled(styled.div)>
           <div
-            className="c0 c1"
+            className="c0"
           >
             <div>
               <h2>
@@ -513,24 +495,17 @@ exports[`inline terminal correctly renders disconnected 1`] = `
         </Styled(styled.div)>
         <styled.div>
           <div
-            className="c2"
+            className="c1"
           />
         </styled.div>
       </div>
     </InlineTerminal>
-  </Component>
+  </ThemeProvider>
 </div>
 `;
 
 exports[`inline terminal disconnects 1`] = `
-.c0 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
-  background-color: #1B1B1B;
-}
-
-.c2 {
+.c1 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -541,35 +516,36 @@ exports[`inline terminal disconnects 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-}
-
-.c2:hover {
-  opacity: 0.90;
-}
-
-.c2:focus {
-  outline: none;
-}
-
-.c2:active {
-  opacity: 0.80;
-}
-
-.c2:disabled {
-  background-color: #3E3E3E;
-}
-
-.c2:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c3 {
   background-color: transparent;
   border: 1px solid #4D02EE;
 }
 
-.c1 {
+.c1:hover {
+  opacity: 0.90;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:active {
+  opacity: 0.80;
+}
+
+.c1:disabled {
+  background-color: #3E3E3E;
+}
+
+.c1:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c0 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -585,7 +561,7 @@ exports[`inline terminal disconnects 1`] = `
   height: 400px;
 }
 
-.c4 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -598,7 +574,7 @@ exports[`inline terminal disconnects 1`] = `
 }
 
 <div>
-  <Component
+  <ThemeProvider
     theme={
       Object {
         "accent": "#4D02EE",
@@ -633,7 +609,7 @@ exports[`inline terminal disconnects 1`] = `
       <div>
         <Styled(styled.div)>
           <div
-            className="c0 c1"
+            className="c0"
           >
             <div>
               <h2>
@@ -643,7 +619,7 @@ exports[`inline terminal disconnects 1`] = `
                 onClick={[Function]}
               >
                 <button
-                  className="c2 c3"
+                  className="c1"
                   onClick={[Function]}
                 >
                   Open shell
@@ -654,11 +630,11 @@ exports[`inline terminal disconnects 1`] = `
         </Styled(styled.div)>
         <styled.div>
           <div
-            className="c4"
+            className="c2"
           />
         </styled.div>
       </div>
     </InlineTerminal>
-  </Component>
+  </ThemeProvider>
 </div>
 `;

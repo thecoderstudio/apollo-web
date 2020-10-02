@@ -92,53 +92,14 @@ exports[`network bound resource renders loading 1`] = `
 `;
 
 exports[`network bound resource renders not found 1`] = `
-.c8 {
+.c6 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #F8F8F8;
 }
 
-.c8:hover {
+.c6:hover {
   opacity: 0.90;
-}
-
-.c5 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  background-color: #4D02EE;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.c5:hover {
-  opacity: 0.90;
-}
-
-.c5:focus {
-  outline: none;
-}
-
-.c5:active {
-  opacity: 0.80;
-}
-
-.c5:disabled {
-  background-color: #3E3E3E;
-}
-
-.c5:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c6 {
-  background-color: transparent;
-  border: 1px solid #4D02EE;
 }
 
 .c0 {
@@ -198,9 +159,42 @@ exports[`network bound resource renders not found 1`] = `
   color: #3E3E3E;
 }
 
-.c7 {
+.c5 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  background-color: #4D02EE;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #4D02EE;
   margin-top: 64px;
   border: 1px solid #02A3EE;
+}
+
+.c5:hover {
+  opacity: 0.90;
+}
+
+.c5:focus {
+  outline: none;
+}
+
+.c5:active {
+  opacity: 0.80;
+}
+
+.c5:disabled {
+  background-color: #3E3E3E;
+}
+
+.c5:disabled:hover {
+  opacity: 1;
+  cursor: auto;
 }
 
 @media (max-width:47.9375em) {
@@ -248,10 +242,10 @@ exports[`network bound resource renders not found 1`] = `
       Houston, we have a problem
     </h2>
     <button
-      className="c5 c6 c7"
+      className="c5"
     >
       <a
-        className="c8"
+        className="c6"
         href="/"
         onClick={[Function]}
       >
@@ -277,53 +271,14 @@ exports[`network bound resource renders success from cache 1`] = `
 `;
 
 exports[`network bound resource renders success from remote 1`] = `
-.c8 {
+.c6 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #F8F8F8;
 }
 
-.c8:hover {
+.c6:hover {
   opacity: 0.90;
-}
-
-.c5 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  background-color: #4D02EE;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.c5:hover {
-  opacity: 0.90;
-}
-
-.c5:focus {
-  outline: none;
-}
-
-.c5:active {
-  opacity: 0.80;
-}
-
-.c5:disabled {
-  background-color: #3E3E3E;
-}
-
-.c5:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c6 {
-  background-color: transparent;
-  border: 1px solid #4D02EE;
 }
 
 .c0 {
@@ -383,9 +338,42 @@ exports[`network bound resource renders success from remote 1`] = `
   color: #3E3E3E;
 }
 
-.c7 {
+.c5 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  background-color: #4D02EE;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #4D02EE;
   margin-top: 64px;
   border: 1px solid #02A3EE;
+}
+
+.c5:hover {
+  opacity: 0.90;
+}
+
+.c5:focus {
+  outline: none;
+}
+
+.c5:active {
+  opacity: 0.80;
+}
+
+.c5:disabled {
+  background-color: #3E3E3E;
+}
+
+.c5:disabled:hover {
+  opacity: 1;
+  cursor: auto;
 }
 
 @media (max-width:47.9375em) {
@@ -433,10 +421,10 @@ exports[`network bound resource renders success from remote 1`] = `
       Houston, we have a problem
     </h2>
     <button
-      className="c5 c6 c7"
+      className="c5"
     >
       <a
-        className="c8"
+        className="c6"
         href="/"
         onClick={[Function]}
       >
