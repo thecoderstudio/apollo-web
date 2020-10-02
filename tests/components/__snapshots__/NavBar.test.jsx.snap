@@ -82,10 +82,15 @@ exports[`navbar handles add agent modal 1`] = `
   grid-template-rows: [title] 50px [content] 1fr;
   height: 100%;
   overflow-y: scroll;
+  -ms-overflow-style: none;
+  -webkit-scrollbar-width: none;
+  -moz-scrollbar-width: none;
+  -ms-scrollbar-width: none;
+  scrollbar-width: none;
 }
 
 .c12::-webkit-scrollbar {
-  background: transparent;
+  display: none;
 }
 
 .c13 {

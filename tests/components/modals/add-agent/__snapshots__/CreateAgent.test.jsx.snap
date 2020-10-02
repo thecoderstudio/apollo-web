@@ -3,7 +3,6 @@
 exports[`create Agent closes modal correctly 1`] = `
 .c6 {
   position: relative;
-  background-color: green;
 }
 
 .c8 {
@@ -320,7 +319,6 @@ exports[`create Agent closes modal correctly 1`] = `
 exports[`create Agent renders correctly 1`] = `
 .c6 {
   position: relative;
-  background-color: green;
 }
 
 .c8 {

@@ -152,10 +152,15 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
   grid-template-rows: [title] 50px [content] 1fr;
   height: 100%;
   overflow-y: scroll;
+  -ms-overflow-style: none;
+  -webkit-scrollbar-width: none;
+  -moz-scrollbar-width: none;
+  -ms-scrollbar-width: none;
+  scrollbar-width: none;
 }
 
 .c3::-webkit-scrollbar {
-  background: transparent;
+  display: none;
 }
 
 .c4 {
@@ -389,10 +394,15 @@ exports[`add Agent Modal renders correctly 1`] = `
   grid-template-rows: [title] 50px [content] 1fr;
   height: 100%;
   overflow-y: scroll;
+  -ms-overflow-style: none;
+  -webkit-scrollbar-width: none;
+  -moz-scrollbar-width: none;
+  -ms-scrollbar-width: none;
+  scrollbar-width: none;
 }
 
 .c3::-webkit-scrollbar {
-  background: transparent;
+  display: none;
 }
 
 .c4 {
@@ -586,7 +596,6 @@ exports[`add Agent Modal selects directly correctly 1`] = `
 
 .c12 {
   position: relative;
-  background-color: green;
 }
 
 .c14 {
@@ -706,10 +715,15 @@ exports[`add Agent Modal selects directly correctly 1`] = `
   grid-template-rows: [title] 50px [content] 1fr;
   height: 100%;
   overflow-y: scroll;
+  -ms-overflow-style: none;
+  -webkit-scrollbar-width: none;
+  -moz-scrollbar-width: none;
+  -ms-scrollbar-width: none;
+  scrollbar-width: none;
 }
 
 .c3::-webkit-scrollbar {
-  background: transparent;
+  display: none;
 }
 
 .c4 {
@@ -989,7 +1003,6 @@ exports[`add Agent Modal selects manual correctly 1`] = `
 
 .c12 {
   position: relative;
-  background-color: green;
 }
 
 .c14 {
@@ -1109,10 +1122,15 @@ exports[`add Agent Modal selects manual correctly 1`] = `
   grid-template-rows: [title] 50px [content] 1fr;
   height: 100%;
   overflow-y: scroll;
+  -ms-overflow-style: none;
+  -webkit-scrollbar-width: none;
+  -moz-scrollbar-width: none;
+  -ms-scrollbar-width: none;
+  scrollbar-width: none;
 }
 
 .c3::-webkit-scrollbar {
-  background: transparent;
+  display: none;
 }
 
 .c4 {
