@@ -11,11 +11,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
   opacity: 0.90;
 }
 
-.c6 {
-  cursor: pointer;
-}
-
-.c11 {
+.c10 {
   min-height: 12px;
   min-width: 12px;
   margin: 10px;
@@ -24,18 +20,18 @@ exports[`agentList correctly lists multiple agents 1`] = `
   background-color: #27AE60;
 }
 
-.c10 {
+.c9 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
 
-.c12 {
+.c11 {
   grid-column: status-indicator;
   float: right;
   text-align: left;
 }
 
-.c13 {
+.c12 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -66,7 +62,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
   margin-top: 25px;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -109,16 +105,18 @@ exports[`agentList correctly lists multiple agents 1`] = `
   color: #02A3EE;
 }
 
-.c8 {
+.c7 {
   min-width: 0;
 }
 
-.c14 {
+.c13 {
+  cursor: pointer;
   color: #F8F8F8;
   margin-left: 16px;
 }
 
-.c7 {
+.c6 {
+  cursor: pointer;
   margin-right: 10px;
   cursor: inherit;
 }
@@ -161,7 +159,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c9 {
+  .c8 {
     width: 100%;
   }
 }
@@ -178,7 +176,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c8 {
+  .c7 {
     width: 100%;
     text-align: center;
   }
@@ -204,7 +202,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
         onClick={[Function]}
       >
         <i
-          className="c6 c7 fas fa-question-circle"
+          className="c6 fas fa-question-circle"
         />
         Operating system unkown
         <p>
@@ -212,28 +210,28 @@ exports[`agentList correctly lists multiple agents 1`] = `
         </p>
       </a>
       <p
-        className="c8"
+        className="c7"
       />
       External IP address
       <div
-        className="c9"
+        className="c8"
       >
         <div
-          className="c10"
+          className="c9"
         >
           <div
-            className="c11 c12"
+            className="c10 c11"
             color="#27AE60"
           />
           <p
-            className="c13"
+            className="c12"
             color="#27AE60"
           >
             Connected
           </p>
         </div>
         <i
-          className="c6 c14 fas fa-terminal"
+          className="c13 fas fa-terminal"
           onClick={[Function]}
         />
       </div>
@@ -247,7 +245,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
         onClick={[Function]}
       >
         <i
-          className="c6 c7 fas fa-question-circle"
+          className="c6 fas fa-question-circle"
         />
         Operating system unkown
         <p>
@@ -255,28 +253,28 @@ exports[`agentList correctly lists multiple agents 1`] = `
         </p>
       </a>
       <p
-        className="c8"
+        className="c7"
       />
       External IP address
       <div
-        className="c9"
+        className="c8"
       >
         <div
-          className="c10"
+          className="c9"
         >
           <div
-            className="c11 c12"
+            className="c10 c11"
             color="#27AE60"
           />
           <p
-            className="c13"
+            className="c12"
             color="#27AE60"
           >
             Connected
           </p>
         </div>
         <i
-          className="c6 c14 fas fa-terminal"
+          className="c13 fas fa-terminal"
           onClick={[Function]}
         />
       </div>

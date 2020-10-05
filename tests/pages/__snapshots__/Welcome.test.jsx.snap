@@ -1,10 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Welcome renders change password correctly 1`] = `
-.c4 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
+.c6 {
+  height: 80px;
+}
+
+.c7 {
+  min-height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+  border: 1px solid transparent;
+}
+
+.c7:focus {
+  outline: none border:1px solid;
+}
+
+.c5 {
+  width: 100%;
+}
+
+.c8 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+}
+
+.c8:hover {
+  opacity: 0.90;
+}
+
+.c8:focus {
+  outline: none;
+}
+
+.c8:active {
+  opacity: 0.80;
+}
+
+.c8:disabled:hover {
+  opacity: 1;
+  cursor: auto;
 }
 
 .c9 {
@@ -17,6 +65,10 @@ exports[`Welcome renders change password correctly 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  margin-top: 16px;
+  width: 100%;
 }
 
 .c9:hover {
@@ -34,44 +86,6 @@ exports[`Welcome renders change password correctly 1`] = `
 .c9:disabled:hover {
   opacity: 1;
   cursor: auto;
-}
-
-.c11 {
-  background-color: transparent;
-  border: 1px solid;
-}
-
-.c7 {
-  height: 80px;
-}
-
-.c8 {
-  min-height: 50px;
-  width: 100%;
-  border: none;
-  border-radius: 5px;
-  font-family: 'Libre Franklin',sans-serif;
-  font-size: 1rem;
-  padding-left: 10px;
-  opacity: 0.9;
-  border: 1px solid transparent;
-}
-
-.c8:focus {
-  outline: none border:1px solid;
-}
-
-.c6 {
-  width: 100%;
-}
-
-.c10 {
-  width: 100%;
-}
-
-.c12 {
-  margin-top: 16px;
-  width: 100%;
 }
 
 .c0 {
@@ -100,7 +114,10 @@ exports[`Welcome renders change password correctly 1`] = `
   grid-column: content;
 }
 
-.c5 {
+.c4 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
   width: 100%;
   max-width: 400px;
   height: 350px;
@@ -132,7 +149,7 @@ exports[`Welcome renders change password correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c4 {
     box-shadow: none;
   }
 }
@@ -161,17 +178,17 @@ exports[`Welcome renders change password correctly 1`] = `
       Change your password
     </h1>
     <div
-      className="c4 c5"
+      className="c4"
     >
       <form
-        className="c6"
+        className="c5"
         onSubmit={[Function]}
       >
         <div
-          className="c7"
+          className="c6"
         >
           <input
-            className="c8"
+            className="c7"
             name="oldPassword"
             onChange={[Function]}
             placeholder="Current password"
@@ -180,10 +197,10 @@ exports[`Welcome renders change password correctly 1`] = `
           />
         </div>
         <div
-          className="c7"
+          className="c6"
         >
           <input
-            className="c8"
+            className="c7"
             name="password"
             onChange={[Function]}
             placeholder="New password"
@@ -192,10 +209,10 @@ exports[`Welcome renders change password correctly 1`] = `
           />
         </div>
         <div
-          className="c7"
+          className="c6"
         >
           <input
-            className="c8"
+            className="c7"
             name="passwordConfirm"
             onChange={[Function]}
             placeholder="Confirm new password"
@@ -204,13 +221,13 @@ exports[`Welcome renders change password correctly 1`] = `
           />
         </div>
         <button
-          className="c9 c10"
+          className="c8"
           disabled={true}
         >
           Change password
         </button>
         <button
-          className="c9 c11 c12"
+          className="c9"
           id="logoutButton"
           onClick={[Function]}
         >
@@ -223,13 +240,7 @@ exports[`Welcome renders change password correctly 1`] = `
 `;
 
 exports[`Welcome renders login correctly 1`] = `
-.c4 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
-}
-
-.c9 {
+.c8 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -241,28 +252,28 @@ exports[`Welcome renders login correctly 1`] = `
   cursor: pointer;
 }
 
-.c9:hover {
+.c8:hover {
   opacity: 0.90;
 }
 
-.c9:focus {
+.c8:focus {
   outline: none;
 }
 
-.c9:active {
+.c8:active {
   opacity: 0.80;
 }
 
-.c9:disabled:hover {
+.c8:disabled:hover {
   opacity: 1;
   cursor: auto;
 }
 
-.c7 {
+.c6 {
   height: 80px;
 }
 
-.c8 {
+.c7 {
   min-height: 50px;
   width: 100%;
   border: none;
@@ -274,11 +285,11 @@ exports[`Welcome renders login correctly 1`] = `
   border: 1px solid transparent;
 }
 
-.c8:focus {
+.c7:focus {
   outline: none border:1px solid;
 }
 
-.c6 {
+.c5 {
   height: 75%;
   display: grid;
   grid-template-rows: auto;
@@ -311,7 +322,10 @@ exports[`Welcome renders login correctly 1`] = `
   grid-column: content;
 }
 
-.c5 {
+.c4 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
   width: 100%;
   max-width: 400px;
   height: 350px;
@@ -343,7 +357,7 @@ exports[`Welcome renders login correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c4 {
     box-shadow: none;
   }
 }
@@ -372,17 +386,17 @@ exports[`Welcome renders login correctly 1`] = `
       Log in to Apollo
     </h1>
     <div
-      className="c4 c5"
+      className="c4"
     >
       <form
-        className="c6"
+        className="c5"
         onSubmit={[Function]}
       >
         <div
-          className="c7"
+          className="c6"
         >
           <input
-            className="c8"
+            className="c7"
             name="username"
             onChange={[Function]}
             placeholder="Username"
@@ -391,10 +405,10 @@ exports[`Welcome renders login correctly 1`] = `
           />
         </div>
         <div
-          className="c7"
+          className="c6"
         >
           <input
-            className="c8"
+            className="c7"
             name="password"
             onChange={[Function]}
             placeholder="Password"
@@ -403,7 +417,7 @@ exports[`Welcome renders login correctly 1`] = `
           />
         </div>
         <button
-          className="c9"
+          className="c8"
         >
           Log in
         </button>
