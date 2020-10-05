@@ -4,10 +4,10 @@ exports[`dashboard renders correctly 1`] = `
 .c1 {
   display: grid;
   grid-template-rows: [title] 50px [list] 1fr;
-  width: 100%;
+  max-width: 100%;
   min-width: 0;
   border-radius: 8px;
-  padding: 20px;
+  padding: 0px 16px;
 }
 
 .c2 {
