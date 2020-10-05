@@ -1,35 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`user list correctly toggles create user 1`] = `
-.c12 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.c12:hover {
-  opacity: 0.90;
-}
-
-.c12:focus {
-  outline: none;
-}
-
-.c12:active {
-  opacity: 0.80;
-}
-
-.c12:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
 .c1 {
   max-height: 50px;
   padding: 12px;
@@ -40,8 +11,6 @@ exports[`user list correctly toggles create user 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
 }
 
 .c1:hover {
@@ -61,7 +30,18 @@ exports[`user list correctly toggles create user 1`] = `
   cursor: auto;
 }
 
-.c4 {
+.c2 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c6 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.c5 {
   display: inline;
   position: fixed;
   top: 0;
@@ -70,11 +50,11 @@ exports[`user list correctly toggles create user 1`] = `
   height: 100%;
 }
 
-.c9 {
+.c11 {
   height: 80px;
 }
 
-.c10 {
+.c12 {
   min-height: 50px;
   width: 100%;
   border: none;
@@ -86,14 +66,11 @@ exports[`user list correctly toggles create user 1`] = `
   border: 1px solid transparent;
 }
 
-.c10:focus {
+.c12:focus {
   outline: none border:1px solid;
 }
 
-.c5 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
+.c7 {
   position: absolute;
   left: 0;
   right: 0;
@@ -120,7 +97,7 @@ exports[`user list correctly toggles create user 1`] = `
   box-sizing: border-box;
 }
 
-.c6 {
+.c8 {
   height: 100%;
   max-height: 450px;
   display: grid;
@@ -131,12 +108,12 @@ exports[`user list correctly toggles create user 1`] = `
   align-items: center;
 }
 
-.c7 {
+.c9 {
   grid-row: title;
   text-align: center;
 }
 
-.c8 {
+.c10 {
   height: 95%;
   grid-row: form;
   display: grid;
@@ -144,7 +121,7 @@ exports[`user list correctly toggles create user 1`] = `
   grid-row-gap: 40px;
 }
 
-.c11 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -155,7 +132,7 @@ exports[`user list correctly toggles create user 1`] = `
   justify-content: space-around;
 }
 
-.c11> button {
+.c13> button {
   min-width: 150px;
 }
 
@@ -175,19 +152,19 @@ exports[`user list correctly toggles create user 1`] = `
   justify-content: space-between;
 }
 
-.c3 {
+.c4 {
   margin-top: 16px;
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c7 {
     padding: 16px;
     height: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c11 {
+  .c13 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -199,7 +176,7 @@ exports[`user list correctly toggles create user 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c3 {
     display: none;
   }
 }
@@ -212,7 +189,7 @@ exports[`user list correctly toggles create user 1`] = `
       Users
     </h2>
     <button
-      className="c1"
+      className="c1 c2"
       onClick={[Function]}
     >
       <i
@@ -220,39 +197,39 @@ exports[`user list correctly toggles create user 1`] = `
       />
        
       <span
-        className="c2"
+        className="c3"
       >
         Create User
       </span>
     </button>
   </div>
   <div
-    className="c3"
+    className="c4"
   />
   <div
-    className="c4"
+    className="c5"
     onClick={[Function]}
   >
     <div
-      className="c5"
+      className="c6 c7"
     >
       <div
-        className="c6"
+        className="c8"
       >
         <h2
-          className="c7"
+          className="c9"
         >
           Create new user
         </h2>
         <form
-          className="c8"
+          className="c10"
           onSubmit={[Function]}
         >
           <div
-            className="c9"
+            className="c11"
           >
             <input
-              className="c10"
+              className="c12"
               name="username"
               onChange={[Function]}
               placeholder="Username"
@@ -261,10 +238,10 @@ exports[`user list correctly toggles create user 1`] = `
             />
           </div>
           <div
-            className="c9"
+            className="c11"
           >
             <input
-              className="c10"
+              className="c12"
               name="password"
               onChange={[Function]}
               placeholder="Password"
@@ -273,10 +250,10 @@ exports[`user list correctly toggles create user 1`] = `
             />
           </div>
           <div
-            className="c9"
+            className="c11"
           >
             <input
-              className="c10"
+              className="c12"
               name="confirmPassword"
               onChange={[Function]}
               placeholder="Confirm password"
@@ -285,16 +262,16 @@ exports[`user list correctly toggles create user 1`] = `
             />
           </div>
           <div
-            className="c11"
+            className="c13"
           >
             <button
-              className="c1"
+              className="c1 c2"
               onClick={[Function]}
             >
               Cancel
             </button>
             <button
-              className="c12"
+              className="c1"
             >
               Create user
             </button>
@@ -317,8 +294,6 @@ exports[`user list correctly toggles create user 2`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
 }
 
 .c1:hover {
@@ -338,6 +313,11 @@ exports[`user list correctly toggles create user 2`] = `
   cursor: auto;
 }
 
+.c2 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
 .c0 {
   margin: 0px 16px;
   display: -webkit-box;
@@ -354,7 +334,7 @@ exports[`user list correctly toggles create user 2`] = `
   justify-content: space-between;
 }
 
-.c3 {
+.c4 {
   margin-top: 16px;
 }
 
@@ -367,7 +347,7 @@ exports[`user list correctly toggles create user 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c3 {
     display: none;
   }
 }
@@ -380,7 +360,7 @@ exports[`user list correctly toggles create user 2`] = `
       Users
     </h2>
     <button
-      className="c1"
+      className="c1 c2"
       onClick={[Function]}
     >
       <i
@@ -388,14 +368,14 @@ exports[`user list correctly toggles create user 2`] = `
       />
        
       <span
-        className="c2"
+        className="c3"
       >
         Create User
       </span>
     </button>
   </div>
   <div
-    className="c3"
+    className="c4"
   />
 </div>
 `;
@@ -411,8 +391,6 @@ exports[`user list doesn't try to render users on error 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
 }
 
 .c1:hover {
@@ -430,6 +408,11 @@ exports[`user list doesn't try to render users on error 1`] = `
 .c1:disabled:hover {
   opacity: 1;
   cursor: auto;
+}
+
+.c2 {
+  background-color: transparent;
+  border: 1px solid;
 }
 
 .c0 {
@@ -448,12 +431,12 @@ exports[`user list doesn't try to render users on error 1`] = `
   justify-content: space-between;
 }
 
-.c3 {
+.c4 {
   margin-top: 16px;
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c3 {
     display: none;
   }
 }
@@ -466,7 +449,7 @@ exports[`user list doesn't try to render users on error 1`] = `
       Users
     </h2>
     <button
-      className="c1"
+      className="c1 c2"
       onClick={[Function]}
     >
       <i
@@ -474,14 +457,14 @@ exports[`user list doesn't try to render users on error 1`] = `
       />
        
       <span
-        className="c2"
+        className="c3"
       >
         Create User
       </span>
     </button>
   </div>
   <div
-    className="c3"
+    className="c4"
   />
 </div>
 `;
@@ -497,8 +480,6 @@ exports[`user list refreshes on create user success 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
 }
 
 .c1:hover {
@@ -518,7 +499,16 @@ exports[`user list refreshes on create user success 1`] = `
   cursor: auto;
 }
 
-.c4 {
+.c2 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c7 {
+  cursor: pointer;
+}
+
+.c5 {
   min-height: 60px;
   padding: 0px 16px;
   margin: 0px;
@@ -530,12 +520,11 @@ exports[`user list refreshes on create user success 1`] = `
   align-items: center;
 }
 
-.c5 {
+.c6 {
   margin: 0px;
 }
 
-.c6 {
-  cursor: pointer;
+.c8 {
   float: right;
   margin-right: 10px;
   grid-column: 3;
@@ -557,12 +546,12 @@ exports[`user list refreshes on create user success 1`] = `
   justify-content: space-between;
 }
 
-.c3 {
+.c4 {
   margin-top: 16px;
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c3 {
     display: none;
   }
 }
@@ -575,7 +564,7 @@ exports[`user list refreshes on create user success 1`] = `
       Users
     </h2>
     <button
-      className="c1"
+      className="c1 c2"
       onClick={[Function]}
     >
       <i
@@ -583,25 +572,25 @@ exports[`user list refreshes on create user success 1`] = `
       />
        
       <span
-        className="c2"
+        className="c3"
       >
         Create User
       </span>
     </button>
   </div>
   <div
-    className="c3"
+    className="c4"
   >
     <div
-      className="c4"
+      className="c5"
     >
       <p
-        className="c5"
+        className="c6"
       >
         test
       </p>
       <i
-        className="c6 far fa-trash-alt"
+        className="c7 c8 far fa-trash-alt"
         onClick={[Function]}
       />
     </div>
@@ -620,8 +609,6 @@ exports[`user list renders correctly 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
 }
 
 .c1:hover {
@@ -639,6 +626,11 @@ exports[`user list renders correctly 1`] = `
 .c1:disabled:hover {
   opacity: 1;
   cursor: auto;
+}
+
+.c2 {
+  background-color: transparent;
+  border: 1px solid;
 }
 
 .c0 {
@@ -657,12 +649,12 @@ exports[`user list renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c3 {
+.c4 {
   margin-top: 16px;
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c3 {
     display: none;
   }
 }
@@ -675,7 +667,7 @@ exports[`user list renders correctly 1`] = `
       Users
     </h2>
     <button
-      className="c1"
+      className="c1 c2"
       onClick={[Function]}
     >
       <i
@@ -683,14 +675,14 @@ exports[`user list renders correctly 1`] = `
       />
        
       <span
-        className="c2"
+        className="c3"
       >
         Create User
       </span>
     </button>
   </div>
   <div
-    className="c3"
+    className="c4"
   />
 </div>
 `;
@@ -706,8 +698,6 @@ exports[`user list renders correctly 2`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
 }
 
 .c1:hover {
@@ -727,7 +717,12 @@ exports[`user list renders correctly 2`] = `
   cursor: auto;
 }
 
-.c4 {
+.c2 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c5 {
   min-height: 60px;
   padding: 0px 16px;
   margin: 0px;
@@ -739,11 +734,11 @@ exports[`user list renders correctly 2`] = `
   align-items: center;
 }
 
-.c5 {
+.c6 {
   margin: 0px;
 }
 
-.c6 {
+.c7 {
   float: right;
   width: 80px;
   padding: 4px;
@@ -768,12 +763,12 @@ exports[`user list renders correctly 2`] = `
   justify-content: space-between;
 }
 
-.c3 {
+.c4 {
   margin-top: 16px;
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c3 {
     display: none;
   }
 }
@@ -786,7 +781,7 @@ exports[`user list renders correctly 2`] = `
       Users
     </h2>
     <button
-      className="c1"
+      className="c1 c2"
       onClick={[Function]}
     >
       <i
@@ -794,34 +789,34 @@ exports[`user list renders correctly 2`] = `
       />
        
       <span
-        className="c2"
+        className="c3"
       >
         Create User
       </span>
     </button>
   </div>
   <div
-    className="c3"
+    className="c4"
   >
     <div
-      className="c4"
+      className="c5"
     >
       <p
-        className="c5"
+        className="c6"
       >
         test
       </p>
     </div>
     <div
-      className="c4"
+      className="c5"
     >
       <p
-        className="c5"
+        className="c6"
       >
         admin
       </p>
       <p
-        className="c6"
+        className="c7"
       >
         admin
       </p>

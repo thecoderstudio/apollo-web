@@ -1,32 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`terminal window correctly renders connected 1`] = `
-.c7 {
-  height: 100%;
-  width: 100%;
-  padding: 20px;
-}
-
-.c8 {
-  height: 100%;
-  width: 100%;
-}
-
-.c8 .xterm-viewport {
-  overflow: hidden !important;
-}
-
 .c0 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
+}
+
+.c8 {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+.c9 {
+  height: 100%;
+  width: 100%;
+}
+
+.c9 .xterm-viewport {
+  overflow: hidden !important;
+}
+
+.c1 {
   padding: 0px;
   border: 1px solid #32E67E;
   border-style: none none solid none;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -38,7 +41,7 @@ exports[`terminal window correctly renders connected 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c5 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -52,7 +55,7 @@ exports[`terminal window correctly renders connected 1`] = `
   justify-content: flex-end;
 }
 
-.c5 {
+.c6 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -61,7 +64,7 @@ exports[`terminal window correctly renders connected 1`] = `
   cursor: pointer;
 }
 
-.c6 {
+.c7 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -70,13 +73,13 @@ exports[`terminal window correctly renders connected 1`] = `
   cursor: pointer;
 }
 
-.c2 {
+.c3 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c3 {
+.c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -85,7 +88,7 @@ exports[`terminal window correctly renders connected 1`] = `
 }
 
 <div>
-  <ThemeProvider
+  <Component
     theme={
       Object {
         "accent": "#4D02EE",
@@ -200,32 +203,35 @@ exports[`terminal window correctly renders connected 1`] = `
             handle={null}
             nodeRef={
               Object {
-                "current": .c7 {
-  height: 100%;
-  width: 100%;
-  padding: 20px;
+                "current": .c0 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
 }
 
 .c8 {
   height: 100%;
   width: 100%;
+  padding: 20px;
 }
 
-.c8 .xterm-viewport {
+.c9 {
+  height: 100%;
+  width: 100%;
+}
+
+.c9 .xterm-viewport {
   overflow: hidden !important;
 }
 
-.c0 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
-  background-color: #1B1B1B;
+.c1 {
   padding: 0px;
   border: 1px solid #32E67E;
   border-style: none none solid none;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -237,7 +243,7 @@ exports[`terminal window correctly renders connected 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c5 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -251,7 +257,7 @@ exports[`terminal window correctly renders connected 1`] = `
   justify-content: flex-end;
 }
 
-.c5 {
+.c6 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -260,7 +266,7 @@ exports[`terminal window correctly renders connected 1`] = `
   cursor: pointer;
 }
 
-.c6 {
+.c7 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -269,13 +275,13 @@ exports[`terminal window correctly renders connected 1`] = `
   cursor: pointer;
 }
 
-.c2 {
+.c3 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c3 {
+.c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -288,39 +294,39 @@ exports[`terminal window correctly renders connected 1`] = `
                   style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
                 >
                   <div
-                    class="c0"
+                    class="c0 c1"
                   >
                     <div
-                      class="c1"
+                      class="c2"
                     >
                       <div
-                        class="c2"
+                        class="c3"
                       />
                       <h4
-                        class="c3"
+                        class="c4"
                       >
                         agentName
                       </h4>
                       <div
-                        class="c4"
+                        class="c5"
                       >
                         <div
-                          class="c5"
+                          class="c6"
                           color="#32E67E"
                           id="expand-button"
                         />
                         <div
-                          class="c6"
+                          class="c7"
                           color="#ED3E2A"
                           id="close-button"
                         />
                       </div>
                     </div>
                     <div
-                      class="c7"
+                      class="c8"
                     >
                       <div
-                        class="c8"
+                        class="c9"
                         data-testid="terminal"
                       >
                         <div
@@ -443,39 +449,39 @@ exports[`terminal window correctly renders connected 1`] = `
                     style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
                   >
                     <div
-                      class="c0"
+                      class="c0 c1"
                     >
                       <div
-                        class="c1"
+                        class="c2"
                       >
                         <div
-                          class="c2"
+                          class="c3"
                         />
                         <h4
-                          class="c3"
+                          class="c4"
                         >
                           agentName
                         </h4>
                         <div
-                          class="c4"
+                          class="c5"
                         >
                           <div
-                            class="c5"
+                            class="c6"
                             color="#32E67E"
                             id="expand-button"
                           />
                           <div
-                            class="c6"
+                            class="c7"
                             color="#ED3E2A"
                             id="close-button"
                           />
                         </div>
                       </div>
                       <div
-                        class="c7"
+                        class="c8"
                       >
                         <div
-                          class="c8"
+                          class="c9"
                           data-testid="terminal"
                         >
                           <div
@@ -584,6 +590,7 @@ exports[`terminal window correctly renders connected 1`] = `
               transform={null}
             >
               <Resizable
+                as="div"
                 className="react-draggable"
                 defaultSize={
                   Object {
@@ -671,27 +678,27 @@ exports[`terminal window correctly renders connected 1`] = `
                     statusColor="#32E67E"
                   >
                     <div
-                      className="c0"
+                      className="c0 c1"
                     >
                       <styled.div>
                         <div
-                          className="c1"
+                          className="c2"
                         >
                           <styled.div>
                             <div
-                              className="c2"
+                              className="c3"
                             />
                           </styled.div>
                           <styled.h4>
                             <h4
-                              className="c3"
+                              className="c4"
                             >
                               agentName
                             </h4>
                           </styled.h4>
                           <styled.div>
                             <div
-                              className="c4"
+                              className="c5"
                             >
                               <styled.div
                                 color="#32E67E"
@@ -699,7 +706,7 @@ exports[`terminal window correctly renders connected 1`] = `
                                 onClick={[Function]}
                               >
                                 <div
-                                  className="c5"
+                                  className="c6"
                                   color="#32E67E"
                                   id="expand-button"
                                   onClick={[Function]}
@@ -711,7 +718,7 @@ exports[`terminal window correctly renders connected 1`] = `
                                 onClick={[Function]}
                               >
                                 <div
-                                  className="c6"
+                                  className="c7"
                                   color="#ED3E2A"
                                   id="close-button"
                                   onClick={[Function]}
@@ -762,13 +769,13 @@ exports[`terminal window correctly renders connected 1`] = `
                         >
                           <styled.div>
                             <div
-                              className="c7"
+                              className="c8"
                             >
                               <styled.div
                                 data-testid="terminal"
                               >
                                 <div
-                                  className="c8"
+                                  className="c9"
                                   data-testid="terminal"
                                 />
                               </styled.div>
@@ -963,37 +970,40 @@ exports[`terminal window correctly renders connected 1`] = `
         </Rnd>
       </TerminalWindow>
     </WithTheme(TerminalWindow)>
-  </ThemeProvider>
+  </Component>
 </div>
 `;
 
 exports[`terminal window correctly renders disconnected 1`] = `
-.c7 {
-  height: 100%;
-  width: 100%;
-  padding: 20px;
-}
-
-.c8 {
-  height: 100%;
-  width: 100%;
-}
-
-.c8 .xterm-viewport {
-  overflow: hidden !important;
-}
-
 .c0 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
+}
+
+.c8 {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+.c9 {
+  height: 100%;
+  width: 100%;
+}
+
+.c9 .xterm-viewport {
+  overflow: hidden !important;
+}
+
+.c1 {
   padding: 0px;
   border: 1px solid #ED3E2A;
   border-style: none none solid none;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1005,7 +1015,7 @@ exports[`terminal window correctly renders disconnected 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c5 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1019,7 +1029,7 @@ exports[`terminal window correctly renders disconnected 1`] = `
   justify-content: flex-end;
 }
 
-.c5 {
+.c6 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -1028,7 +1038,7 @@ exports[`terminal window correctly renders disconnected 1`] = `
   cursor: pointer;
 }
 
-.c6 {
+.c7 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -1037,13 +1047,13 @@ exports[`terminal window correctly renders disconnected 1`] = `
   cursor: pointer;
 }
 
-.c2 {
+.c3 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c3 {
+.c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1052,7 +1062,7 @@ exports[`terminal window correctly renders disconnected 1`] = `
 }
 
 <div>
-  <ThemeProvider
+  <Component
     theme={
       Object {
         "accent": "#4D02EE",
@@ -1167,32 +1177,35 @@ exports[`terminal window correctly renders disconnected 1`] = `
             handle={null}
             nodeRef={
               Object {
-                "current": .c7 {
-  height: 100%;
-  width: 100%;
-  padding: 20px;
+                "current": .c0 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
 }
 
 .c8 {
   height: 100%;
   width: 100%;
+  padding: 20px;
 }
 
-.c8 .xterm-viewport {
+.c9 {
+  height: 100%;
+  width: 100%;
+}
+
+.c9 .xterm-viewport {
   overflow: hidden !important;
 }
 
-.c0 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
-  background-color: #1B1B1B;
+.c1 {
   padding: 0px;
   border: 1px solid #ED3E2A;
   border-style: none none solid none;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1204,7 +1217,7 @@ exports[`terminal window correctly renders disconnected 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c5 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1218,7 +1231,7 @@ exports[`terminal window correctly renders disconnected 1`] = `
   justify-content: flex-end;
 }
 
-.c5 {
+.c6 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -1227,7 +1240,7 @@ exports[`terminal window correctly renders disconnected 1`] = `
   cursor: pointer;
 }
 
-.c6 {
+.c7 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -1236,13 +1249,13 @@ exports[`terminal window correctly renders disconnected 1`] = `
   cursor: pointer;
 }
 
-.c2 {
+.c3 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c3 {
+.c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1255,39 +1268,39 @@ exports[`terminal window correctly renders disconnected 1`] = `
                   style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
                 >
                   <div
-                    class="c0"
+                    class="c0 c1"
                   >
                     <div
-                      class="c1"
+                      class="c2"
                     >
                       <div
-                        class="c2"
+                        class="c3"
                       />
                       <h4
-                        class="c3"
+                        class="c4"
                       >
                         agentName
                       </h4>
                       <div
-                        class="c4"
+                        class="c5"
                       >
                         <div
-                          class="c5"
+                          class="c6"
                           color="#32E67E"
                           id="expand-button"
                         />
                         <div
-                          class="c6"
+                          class="c7"
                           color="#ED3E2A"
                           id="close-button"
                         />
                       </div>
                     </div>
                     <div
-                      class="c7"
+                      class="c8"
                     >
                       <div
-                        class="c8"
+                        class="c9"
                         data-testid="terminal"
                       >
                         <div
@@ -1410,39 +1423,39 @@ exports[`terminal window correctly renders disconnected 1`] = `
                     style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
                   >
                     <div
-                      class="c0"
+                      class="c0 c1"
                     >
                       <div
-                        class="c1"
+                        class="c2"
                       >
                         <div
-                          class="c2"
+                          class="c3"
                         />
                         <h4
-                          class="c3"
+                          class="c4"
                         >
                           agentName
                         </h4>
                         <div
-                          class="c4"
+                          class="c5"
                         >
                           <div
-                            class="c5"
+                            class="c6"
                             color="#32E67E"
                             id="expand-button"
                           />
                           <div
-                            class="c6"
+                            class="c7"
                             color="#ED3E2A"
                             id="close-button"
                           />
                         </div>
                       </div>
                       <div
-                        class="c7"
+                        class="c8"
                       >
                         <div
-                          class="c8"
+                          class="c9"
                           data-testid="terminal"
                         >
                           <div
@@ -1551,6 +1564,7 @@ exports[`terminal window correctly renders disconnected 1`] = `
               transform={null}
             >
               <Resizable
+                as="div"
                 className="react-draggable"
                 defaultSize={
                   Object {
@@ -1638,27 +1652,27 @@ exports[`terminal window correctly renders disconnected 1`] = `
                     statusColor="#ED3E2A"
                   >
                     <div
-                      className="c0"
+                      className="c0 c1"
                     >
                       <styled.div>
                         <div
-                          className="c1"
+                          className="c2"
                         >
                           <styled.div>
                             <div
-                              className="c2"
+                              className="c3"
                             />
                           </styled.div>
                           <styled.h4>
                             <h4
-                              className="c3"
+                              className="c4"
                             >
                               agentName
                             </h4>
                           </styled.h4>
                           <styled.div>
                             <div
-                              className="c4"
+                              className="c5"
                             >
                               <styled.div
                                 color="#32E67E"
@@ -1666,7 +1680,7 @@ exports[`terminal window correctly renders disconnected 1`] = `
                                 onClick={[Function]}
                               >
                                 <div
-                                  className="c5"
+                                  className="c6"
                                   color="#32E67E"
                                   id="expand-button"
                                   onClick={[Function]}
@@ -1678,7 +1692,7 @@ exports[`terminal window correctly renders disconnected 1`] = `
                                 onClick={[Function]}
                               >
                                 <div
-                                  className="c6"
+                                  className="c7"
                                   color="#ED3E2A"
                                   id="close-button"
                                   onClick={[Function]}
@@ -1729,13 +1743,13 @@ exports[`terminal window correctly renders disconnected 1`] = `
                         >
                           <styled.div>
                             <div
-                              className="c7"
+                              className="c8"
                             >
                               <styled.div
                                 data-testid="terminal"
                               >
                                 <div
-                                  className="c8"
+                                  className="c9"
                                   data-testid="terminal"
                                 />
                               </styled.div>
@@ -1930,37 +1944,40 @@ exports[`terminal window correctly renders disconnected 1`] = `
         </Rnd>
       </TerminalWindow>
     </WithTheme(TerminalWindow)>
-  </ThemeProvider>
+  </Component>
 </div>
 `;
 
 exports[`terminal window resizes 1`] = `
-.c7 {
-  height: 100%;
-  width: 100%;
-  padding: 20px;
-}
-
-.c8 {
-  height: 100%;
-  width: 100%;
-}
-
-.c8 .xterm-viewport {
-  overflow: hidden !important;
-}
-
 .c0 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
+}
+
+.c8 {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+.c9 {
+  height: 100%;
+  width: 100%;
+}
+
+.c9 .xterm-viewport {
+  overflow: hidden !important;
+}
+
+.c1 {
   padding: 0px;
   border: 1px solid #32E67E;
   border-style: none none solid none;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1972,7 +1989,7 @@ exports[`terminal window resizes 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c5 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1986,7 +2003,7 @@ exports[`terminal window resizes 1`] = `
   justify-content: flex-end;
 }
 
-.c5 {
+.c6 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -1995,7 +2012,7 @@ exports[`terminal window resizes 1`] = `
   cursor: pointer;
 }
 
-.c6 {
+.c7 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -2004,13 +2021,13 @@ exports[`terminal window resizes 1`] = `
   cursor: pointer;
 }
 
-.c2 {
+.c3 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c3 {
+.c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2019,7 +2036,7 @@ exports[`terminal window resizes 1`] = `
 }
 
 <div>
-  <ThemeProvider
+  <Component
     theme={
       Object {
         "accent": "#4D02EE",
@@ -2134,32 +2151,35 @@ exports[`terminal window resizes 1`] = `
             handle={null}
             nodeRef={
               Object {
-                "current": .c7 {
-  height: 100%;
-  width: 100%;
-  padding: 20px;
+                "current": .c0 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
 }
 
 .c8 {
   height: 100%;
   width: 100%;
+  padding: 20px;
 }
 
-.c8 .xterm-viewport {
+.c9 {
+  height: 100%;
+  width: 100%;
+}
+
+.c9 .xterm-viewport {
   overflow: hidden !important;
 }
 
-.c0 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
-  background-color: #1B1B1B;
+.c1 {
   padding: 0px;
   border: 1px solid #32E67E;
   border-style: none none solid none;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2171,7 +2191,7 @@ exports[`terminal window resizes 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c5 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2185,7 +2205,7 @@ exports[`terminal window resizes 1`] = `
   justify-content: flex-end;
 }
 
-.c5 {
+.c6 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -2194,7 +2214,7 @@ exports[`terminal window resizes 1`] = `
   cursor: pointer;
 }
 
-.c6 {
+.c7 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -2203,13 +2223,13 @@ exports[`terminal window resizes 1`] = `
   cursor: pointer;
 }
 
-.c2 {
+.c3 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c3 {
+.c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2222,39 +2242,39 @@ exports[`terminal window resizes 1`] = `
                   style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
                 >
                   <div
-                    class="c0"
+                    class="c0 c1"
                   >
                     <div
-                      class="c1"
+                      class="c2"
                     >
                       <div
-                        class="c2"
+                        class="c3"
                       />
                       <h4
-                        class="c3"
+                        class="c4"
                       >
                         agentName
                       </h4>
                       <div
-                        class="c4"
+                        class="c5"
                       >
                         <div
-                          class="c5"
+                          class="c6"
                           color="#32E67E"
                           id="expand-button"
                         />
                         <div
-                          class="c6"
+                          class="c7"
                           color="#ED3E2A"
                           id="close-button"
                         />
                       </div>
                     </div>
                     <div
-                      class="c7"
+                      class="c8"
                     >
                       <div
-                        class="c8"
+                        class="c9"
                         data-testid="terminal"
                       >
                         <div
@@ -2377,39 +2397,39 @@ exports[`terminal window resizes 1`] = `
                     style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
                   >
                     <div
-                      class="c0"
+                      class="c0 c1"
                     >
                       <div
-                        class="c1"
+                        class="c2"
                       >
                         <div
-                          class="c2"
+                          class="c3"
                         />
                         <h4
-                          class="c3"
+                          class="c4"
                         >
                           agentName
                         </h4>
                         <div
-                          class="c4"
+                          class="c5"
                         >
                           <div
-                            class="c5"
+                            class="c6"
                             color="#32E67E"
                             id="expand-button"
                           />
                           <div
-                            class="c6"
+                            class="c7"
                             color="#ED3E2A"
                             id="close-button"
                           />
                         </div>
                       </div>
                       <div
-                        class="c7"
+                        class="c8"
                       >
                         <div
-                          class="c8"
+                          class="c9"
                           data-testid="terminal"
                         >
                           <div
@@ -2518,6 +2538,7 @@ exports[`terminal window resizes 1`] = `
               transform={null}
             >
               <Resizable
+                as="div"
                 className="react-draggable"
                 defaultSize={
                   Object {
@@ -2605,27 +2626,27 @@ exports[`terminal window resizes 1`] = `
                     statusColor="#32E67E"
                   >
                     <div
-                      className="c0"
+                      className="c0 c1"
                     >
                       <styled.div>
                         <div
-                          className="c1"
+                          className="c2"
                         >
                           <styled.div>
                             <div
-                              className="c2"
+                              className="c3"
                             />
                           </styled.div>
                           <styled.h4>
                             <h4
-                              className="c3"
+                              className="c4"
                             >
                               agentName
                             </h4>
                           </styled.h4>
                           <styled.div>
                             <div
-                              className="c4"
+                              className="c5"
                             >
                               <styled.div
                                 color="#32E67E"
@@ -2633,7 +2654,7 @@ exports[`terminal window resizes 1`] = `
                                 onClick={[Function]}
                               >
                                 <div
-                                  className="c5"
+                                  className="c6"
                                   color="#32E67E"
                                   id="expand-button"
                                   onClick={[Function]}
@@ -2645,7 +2666,7 @@ exports[`terminal window resizes 1`] = `
                                 onClick={[Function]}
                               >
                                 <div
-                                  className="c6"
+                                  className="c7"
                                   color="#ED3E2A"
                                   id="close-button"
                                   onClick={[Function]}
@@ -2696,13 +2717,13 @@ exports[`terminal window resizes 1`] = `
                         >
                           <styled.div>
                             <div
-                              className="c7"
+                              className="c8"
                             >
                               <styled.div
                                 data-testid="terminal"
                               >
                                 <div
-                                  className="c8"
+                                  className="c9"
                                   data-testid="terminal"
                                 />
                               </styled.div>
@@ -2897,6 +2918,6 @@ exports[`terminal window resizes 1`] = `
         </Rnd>
       </TerminalWindow>
     </WithTheme(TerminalWindow)>
-  </ThemeProvider>
+  </Component>
 </div>
 `;
