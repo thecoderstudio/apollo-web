@@ -8,7 +8,14 @@ import chalk from 'chalk';
 import { handleError } from '../../actions/error';
 
 const propTypes = {
-  agent: PropTypes.object.isRequired
+  agent: PropTypes.object.isRequired,
+  agentEndpoint: PropTypes.string,
+  readOnly: PropTypes.bool
+};
+
+const defaultProps = {
+  agentEndpoint: "shell",
+  readOnly: false
 };
 
 const Container = styled.div`
@@ -26,13 +33,6 @@ const StyledXTerm = styled.div`
   }
 `;
 
-const TERMINAL_SETTINGS = {
-  theme : {
-    background: "#ffffff00"
-  },
-  allowTransparency: true
-};
-
 const CHALK_SETTINGS = {
   enabled: true,
   level: 2
@@ -44,7 +44,7 @@ export class Terminal extends React.PureComponent {
   constructor(props) {
     super(props);
     this.terminalRef = React.createRef();
-    this.term = new XTerm(TERMINAL_SETTINGS);
+    this.term = new XTerm(this.getTerminalSettings(props.readOnly));
     this.chalk = new chalk.Instance(CHALK_SETTINGS);
     this.onSocketError = this.onSocketError.bind(this);
     this.onSocketClose = this.onSocketClose.bind(this);
@@ -54,10 +54,20 @@ export class Terminal extends React.PureComponent {
     this.connect();
   }
 
+  getTerminalSettings(readOnly) {
+    return {
+      theme : {
+        background: "#ffffff00"
+      },
+      allowTransparency: true,
+      disableStdin: !readOnly
+    };
+  }
+
   connect() {
-    const agent = this.props.agent;
+    const { agent, agentEndpoint } = this.props;
     const socket = new WebSocket(
-      `${process.env.APOLLO_WS_URL}agent/${agent.id}/shell`
+      `${process.env.APOLLO_WS_URL}agent/${agent.id}/${agentEndpoint}`
     );
     socket.onerror = this.onSocketError;
     socket.onclose = this.onSocketClose;
@@ -113,6 +123,7 @@ export class Terminal extends React.PureComponent {
 }
 
 Terminal.propTypes = propTypes;
+Terminal.defaultProps = defaultProps;
 
 export function openTerminal(agentId) {
   const location = window.location;
