@@ -35,7 +35,7 @@ exports[`create Agent closes modal correctly 1`] = `
   transition: transform 0.3s;
 }
 
-.c12 {
+.c11 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -45,27 +45,30 @@ exports[`create Agent closes modal correctly 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
+}
+
+.c11:hover {
+  opacity: 0.90;
+}
+
+.c11:focus {
+  outline: none;
+}
+
+.c11:active {
+  opacity: 0.80;
+}
+
+.c11:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c14 {
   width: 100%;
   height: 50px;
   margin: auto;
   display: block;
-}
-
-.c12:hover {
-  opacity: 0.90;
-}
-
-.c12:focus {
-  outline: none;
-}
-
-.c12:active {
-  opacity: 0.80;
-}
-
-.c12:disabled:hover {
-  opacity: 1;
-  cursor: auto;
 }
 
 .c3 {
@@ -86,6 +89,11 @@ exports[`create Agent closes modal correctly 1`] = `
 
 .c5:focus {
   outline: none;
+  border: 1px solid;
+}
+
+.c12 {
+  background-color: transparent;
   border: 1px solid;
 }
 
@@ -118,7 +126,7 @@ exports[`create Agent closes modal correctly 1`] = `
   margin-bottom: 0px;
 }
 
-.c13 {
+.c15 {
   width: 200px;
   height: 50px;
   margin: auto;
@@ -132,39 +140,11 @@ exports[`create Agent closes modal correctly 1`] = `
   float: right;
 }
 
-.c11 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
+.c13 {
   width: 200px;
   height: 50px;
   margin: auto;
   display: block;
-}
-
-.c11:hover {
-  opacity: 0.90;
-}
-
-.c11:focus {
-  outline: none;
-}
-
-.c11:active {
-  opacity: 0.80;
-}
-
-.c11:disabled:hover {
-  opacity: 1;
-  cursor: auto;
 }
 
 @media (max-width:47.9375em) {
@@ -206,7 +186,7 @@ exports[`create Agent closes modal correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c13 {
+  .c15 {
     width: 100%;
     margin-top: 15px;
   }
@@ -220,7 +200,7 @@ exports[`create Agent closes modal correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c11 {
+  .c13 {
     width: 100%;
     grid-row: row-two;
   }
@@ -312,7 +292,7 @@ exports[`create Agent closes modal correctly 1`] = `
     className="c10"
   >
     <button
-      className="c11"
+      className="c11 c12 c13"
       id="closeButton"
       onClick={
         [MockFunction] {
@@ -332,7 +312,7 @@ exports[`create Agent closes modal correctly 1`] = `
       Cancel
     </button>
     <button
-      className="c12 c13"
+      className="c11 c14 c15"
       onClick={null}
     >
       Create agent
@@ -376,7 +356,7 @@ exports[`create Agent renders correctly 1`] = `
   transition: transform 0.3s;
 }
 
-.c12 {
+.c11 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -386,27 +366,30 @@ exports[`create Agent renders correctly 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
+}
+
+.c11:hover {
+  opacity: 0.90;
+}
+
+.c11:focus {
+  outline: none;
+}
+
+.c11:active {
+  opacity: 0.80;
+}
+
+.c11:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c14 {
   width: 100%;
   height: 50px;
   margin: auto;
   display: block;
-}
-
-.c12:hover {
-  opacity: 0.90;
-}
-
-.c12:focus {
-  outline: none;
-}
-
-.c12:active {
-  opacity: 0.80;
-}
-
-.c12:disabled:hover {
-  opacity: 1;
-  cursor: auto;
 }
 
 .c3 {
@@ -427,6 +410,11 @@ exports[`create Agent renders correctly 1`] = `
 
 .c5:focus {
   outline: none;
+  border: 1px solid;
+}
+
+.c12 {
+  background-color: transparent;
   border: 1px solid;
 }
 
@@ -459,7 +447,7 @@ exports[`create Agent renders correctly 1`] = `
   margin-bottom: 0px;
 }
 
-.c13 {
+.c15 {
   width: 200px;
   height: 50px;
   margin: auto;
@@ -473,39 +461,11 @@ exports[`create Agent renders correctly 1`] = `
   float: right;
 }
 
-.c11 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
+.c13 {
   width: 200px;
   height: 50px;
   margin: auto;
   display: block;
-}
-
-.c11:hover {
-  opacity: 0.90;
-}
-
-.c11:focus {
-  outline: none;
-}
-
-.c11:active {
-  opacity: 0.80;
-}
-
-.c11:disabled:hover {
-  opacity: 1;
-  cursor: auto;
 }
 
 @media (max-width:47.9375em) {
@@ -547,7 +507,7 @@ exports[`create Agent renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c13 {
+  .c15 {
     width: 100%;
     margin-top: 15px;
   }
@@ -561,7 +521,7 @@ exports[`create Agent renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c11 {
+  .c13 {
     width: 100%;
     grid-row: row-two;
   }
@@ -653,7 +613,7 @@ exports[`create Agent renders correctly 1`] = `
     className="c10"
   >
     <button
-      className="c11"
+      className="c11 c12 c13"
       id="closeButton"
       onClick={[MockFunction]}
       type="button"
@@ -661,7 +621,7 @@ exports[`create Agent renders correctly 1`] = `
       Cancel
     </button>
     <button
-      className="c12 c13"
+      className="c11 c14 c15"
       onClick={null}
     >
       Create agent

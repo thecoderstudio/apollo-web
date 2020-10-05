@@ -11,8 +11,6 @@ exports[`renders correctly 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
 }
 
 .c0:hover {
@@ -32,8 +30,13 @@ exports[`renders correctly 1`] = `
   cursor: auto;
 }
 
+.c1 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
 <button
-  className="c0"
+  className="c0 c1"
 >
   Test
 </button>

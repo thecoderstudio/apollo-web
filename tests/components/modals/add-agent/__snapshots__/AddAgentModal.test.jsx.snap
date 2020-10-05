@@ -11,7 +11,7 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
   z-index: 1;
 }
 
-.c8 {
+.c9 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -21,36 +21,50 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
+}
+
+.c9:hover {
+  opacity: 0.90;
+}
+
+.c9:focus {
+  outline: none;
+}
+
+.c9:active {
+  opacity: 0.80;
+}
+
+.c9:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c18 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.c10 {
   width: 100%;
   height: 50px;
   margin: auto;
   display: block;
 }
 
-.c8:hover {
-  opacity: 0.90;
-}
-
-.c8:focus {
-  outline: none;
-}
-
-.c8:active {
-  opacity: 0.80;
-}
-
-.c8:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c12 {
+.c14 {
   grid-template-columns: [textfield] 1fr [copy] 50px;
   display: grid;
   height: 50px;
 }
 
-.c13 {
+.c15 {
   grid-column: textfield;
   border: none;
   border-radius: 5px;
@@ -67,63 +81,44 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
   overflow-x: scroll;
 }
 
-.c13::-webkit-scrollbar {
+.c15::-webkit-scrollbar {
   background: transparent;
 }
 
-.c14 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
+.c16 {
   grid-column: copy;
   height: 100%;
 }
 
-.c14:hover {
-  opacity: 0.90;
-}
-
-.c14:focus {
-  outline: none;
-}
-
-.c14:active {
-  opacity: 0.80;
-}
-
-.c14:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c15 {
+.c17 {
   text-align: center;
   display: block;
 }
 
-.c5 {
+.c6 {
   display: grid;
   grid-template-columns: [column-one] 50% [column-two] 50%;
   margin: 20px 0px 20px 0px;
 }
 
-.c6 {
+.c7 {
   grid-column: column-one;
   margin-right: 10px;
 }
 
-.c7 {
+.c8 {
   grid-column: column-two;
   margin-left: 10px;
 }
 
-.c9 {
+.c19 {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c11 {
   float: right;
   width: 200px;
   height: 50px;
@@ -131,57 +126,22 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
   display: block;
 }
 
-.c10 {
+.c12 {
   display: grid;
   grid-template-rows: [description] 1fr [commands] 1fr [button] 1fr;
 }
 
-.c16 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
-  width: 200px;
-  height: 50px;
-  margin: auto;
-  display: block;
+.c20 {
   grid-row: button;
   margin-top: 20px;
 }
 
-.c16:hover {
-  opacity: 0.90;
-}
-
-.c16:focus {
-  outline: none;
-}
-
-.c16:active {
-  opacity: 0.80;
-}
-
-.c16:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c11 {
+.c13 {
   grid-row: description;
   margin: 20px 0px 20px 0px;
 }
 
-.c1 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
+.c2 {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -192,7 +152,7 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
   width: 100%;
 }
 
-.c2 {
+.c3 {
   display: grid;
   grid-template-rows: [title] 50px [content] 1fr;
   height: 100%;
@@ -204,31 +164,31 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
   scrollbar-width: none;
 }
 
-.c2::-webkit-scrollbar {
+.c3::-webkit-scrollbar {
   display: none;
 }
 
-.c3 {
+.c4 {
   grid-row: title;
   width: 75%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c4 {
+.c5 {
   grid-row: content;
   padding: 20px;
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     grid-template-columns: [column-one] 100%;
     grid-template-rows: [row-one] 1fr [row-two] 1fr;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c7 {
     grid-row: row-one;
     margin-right: 0px;
     margin: 15px;
@@ -236,7 +196,7 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c8 {
     grid-column: column-one;
     grid-row: row-two;
     margin-left: 0px;
@@ -245,7 +205,7 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c9 {
+  .c11 {
     float: none;
     margin-left: auto;
     margin-right: auto;
@@ -253,7 +213,7 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c1 {
+  .c2 {
     top: 0px;
     left: 0px;
     right: 0px;
@@ -283,33 +243,33 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
   onClick={[Function]}
 >
   <div
-    className="c1"
+    className="c1 c2"
   >
     <div
-      className="c2"
+      className="c3"
     >
       <h2
-        className="c3"
+        className="c4"
       >
         Add new agent
       </h2>
       <div
-        className="c4"
+        className="c5"
       >
         <div>
           <div
-            className="c5"
+            className="c6"
           >
             <div
-              className="c6"
+              className="c7"
             >
               Download the binary and upload it to the target machine.
             </div>
             <div
-              className="c7"
+              className="c8"
             >
               <button
-                className="c8 c9"
+                className="c9 c10 c11"
                 onClick={[Function]}
               >
                 Download binary
@@ -317,33 +277,33 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
             </div>
           </div>
           <div
-            className="c10"
+            className="c12"
           >
             <p
-              className="c11"
+              className="c13"
             >
               Copy and run the command on the target machine to download run the client.
             </p>
             <div
-              className="c12"
+              className="c14"
             >
               <div
-                className="c13"
+                className="c15"
               >
                 chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=undefined --secret=undefined --host=http://localhost:1234
               </div>
               <button
-                className="c14"
+                className="c9 c16"
                 id="copyToClipboardButton"
                 onClick={[Function]}
               >
                 <i
-                  className="c15 fas fa-copy"
+                  className="c17 fas fa-copy"
                 />
               </button>
             </div>
             <button
-              className="c16"
+              className="c9 c18 c19 c20"
               id="closeButton"
               onClick={[MockFunction]}
             >
@@ -368,7 +328,7 @@ exports[`add Agent Modal renders correctly 1`] = `
   z-index: 1;
 }
 
-.c7 {
+.c8 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -378,39 +338,45 @@ exports[`add Agent Modal renders correctly 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
+}
+
+.c8:hover {
+  opacity: 0.90;
+}
+
+.c8:focus {
+  outline: none;
+}
+
+.c8:active {
+  opacity: 0.80;
+}
+
+.c8:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c9 {
   background-color: transparent;
   border: 1px solid;
+}
+
+.c10 {
   display: grid;
   grid-template-rows: [title] 50px [description] 1fr;
   padding: 20px;
   min-height: 180px;
 }
 
-.c7:hover {
-  opacity: 0.90;
-}
-
-.c7:focus {
-  outline: none;
-}
-
-.c7:active {
-  opacity: 0.80;
-}
-
-.c7:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c9 {
+.c12 {
   grid-row: title;
   width: 80%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c10 {
+.c13 {
   grid-row: description;
   padding: 10px;
   font-size: 0.85rem;
@@ -420,6 +386,9 @@ exports[`add Agent Modal renders correctly 1`] = `
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
+}
+
+.c2 {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -430,7 +399,7 @@ exports[`add Agent Modal renders correctly 1`] = `
   width: 100%;
 }
 
-.c2 {
+.c3 {
   display: grid;
   grid-template-rows: [title] 50px [content] 1fr;
   height: 100%;
@@ -442,44 +411,44 @@ exports[`add Agent Modal renders correctly 1`] = `
   scrollbar-width: none;
 }
 
-.c2::-webkit-scrollbar {
+.c3::-webkit-scrollbar {
   display: none;
 }
 
-.c3 {
+.c4 {
   grid-row: title;
   width: 75%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c4 {
+.c5 {
   grid-row: content;
   padding: 20px;
 }
 
-.c5 {
+.c6 {
   display: grid;
   grid-template-columns: [column-one] 50% [column-two] 50%;
   margin: 20px 0px 20px 0px;
 }
 
-.c6 {
+.c7 {
   grid-column: column-one;
   margin-right: 10px;
 }
 
-.c11 {
+.c14 {
   grid-column: column-two;
   margin-left: 10px;
 }
 
-.c8 {
+.c11 {
   width: 100%;
 }
 
 @media (max-width:47.9375em) {
-  .c1 {
+  .c2 {
     top: 0px;
     left: 0px;
     right: 0px;
@@ -493,14 +462,14 @@ exports[`add Agent Modal renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     grid-template-columns: [column-one] 100%;
     grid-template-rows: [row-one] 1fr [row-two] 1fr;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c7 {
     grid-row: row-one;
     margin-right: 0px;
     margin: 15px;
@@ -508,7 +477,7 @@ exports[`add Agent Modal renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c11 {
+  .c14 {
     grid-column: column-one;
     grid-row: row-two;
     margin-left: 0px;
@@ -521,55 +490,55 @@ exports[`add Agent Modal renders correctly 1`] = `
   onClick={[Function]}
 >
   <div
-    className="c1"
+    className="c1 c2"
   >
     <div
-      className="c2"
+      className="c3"
     >
       <h2
-        className="c3"
+        className="c4"
       >
         Add new agent
       </h2>
       <div
-        className="c4"
+        className="c5"
       >
         <div
-          className="c5"
+          className="c6"
         >
           <div
-            className="c6"
+            className="c7"
           >
             <button
-              className="c7 c8"
+              className="c8 c9 c10 c11"
               onClick={[Function]}
             >
               <h3
-                className="c9"
+                className="c12"
               >
                 Directly on target machine.
               </h3>
               <p
-                className="c10"
+                className="c13"
               >
                 You have the correct permissions to download the binary directly on the target machine.
               </p>
             </button>
           </div>
           <div
-            className="c11"
+            className="c14"
           >
             <button
-              className="c7 c8"
+              className="c8 c9 c10 c11"
               onClick={[Function]}
             >
               <h3
-                className="c9"
+                className="c12"
               >
                 Manual upload
               </h3>
               <p
-                className="c10"
+                className="c13"
               >
                 You download and upload the binary yourself.
               </p>
@@ -603,10 +572,6 @@ exports[`add Agent Modal selects directly correctly 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  width: 100%;
-  height: 50px;
-  margin: auto;
-  display: block;
 }
 
 .c17:hover {
@@ -626,11 +591,29 @@ exports[`add Agent Modal selects directly correctly 1`] = `
   cursor: auto;
 }
 
-.c11 {
+.c18 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.c20 {
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c12 {
   position: relative;
 }
 
-.c13 {
+.c14 {
   border: none;
   border-radius: 5px;
   font-family: 'B612',sans-serif;
@@ -643,7 +626,7 @@ exports[`add Agent Modal selects directly correctly 1`] = `
   overflow: hidden;
 }
 
-.c14 {
+.c15 {
   border-color: white transparent;
   border-style: solid;
   float: right;
@@ -660,11 +643,11 @@ exports[`add Agent Modal selects directly correctly 1`] = `
   transition: transform 0.3s;
 }
 
-.c8 {
+.c9 {
   height: 80px;
 }
 
-.c10 {
+.c11 {
   min-height: 50px;
   width: 100%;
   border: none;
@@ -676,93 +659,62 @@ exports[`add Agent Modal selects directly correctly 1`] = `
   border: 1px solid transparent;
 }
 
-.c10:focus {
+.c11:focus {
   outline: none;
   border: 1px solid;
 }
 
-.c15 {
+.c16 {
   display: grid;
   grid-template-columns: 50% 50%;
   margin: 20px 0px 20px 0px;
 }
 
-.c5 {
+.c6 {
   display: grid;
   width: 100%;
   grid-template-columns: [text] 50% [dropdown] 50%;
   height: 100px;
 }
 
-.c7 {
+.c8 {
   grid-column: dropdown;
 }
 
-.c12 {
+.c13 {
   width: 200px;
   float: right;
 }
 
-.c6 {
+.c7 {
   grid-column: text;
   line-height: 75px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-.c18 {
+.c21 {
   width: 200px;
   height: 50px;
   margin: auto;
   display: block;
 }
 
-.c9 {
+.c10 {
   font-family: 'B612',sans-serif;
   font-weight: 600;
   width: 200px;
   float: right;
 }
 
-.c16 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
+.c19 {
   width: 200px;
   height: 50px;
   margin: auto;
   display: block;
 }
 
-.c16:hover {
-  opacity: 0.90;
-}
-
-.c16:focus {
-  outline: none;
-}
-
-.c16:active {
-  opacity: 0.80;
-}
-
-.c16:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c1 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
+.c2 {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -773,7 +725,7 @@ exports[`add Agent Modal selects directly correctly 1`] = `
   width: 100%;
 }
 
-.c2 {
+.c3 {
   display: grid;
   grid-template-rows: [title] 50px [content] 1fr;
   height: 100%;
@@ -785,31 +737,31 @@ exports[`add Agent Modal selects directly correctly 1`] = `
   scrollbar-width: none;
 }
 
-.c2::-webkit-scrollbar {
+.c3::-webkit-scrollbar {
   display: none;
 }
 
-.c3 {
+.c4 {
   grid-row: title;
   width: 75%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c4 {
+.c5 {
   grid-row: content;
   padding: 20px;
 }
 
 @media (max-width:47.9375em) {
-  .c15 {
+  .c16 {
     grid-template-columns: [column-one] 100%;
     grid-template-rows: [row-one] 1fr [row-two] 1fr;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     height: 120px;
     grid-template-columns: [column-one] 100%;
     grid-template-rows: [text] 30px [dropdown] 85px;
@@ -817,7 +769,7 @@ exports[`add Agent Modal selects directly correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c8 {
     grid-column: column-one;
     grid-row: dropdown;
     width: 100%;
@@ -825,13 +777,13 @@ exports[`add Agent Modal selects directly correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c12 {
+  .c13 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c7 {
     width: 100%;
     line-height: 100%;
     grid-column: column-one;
@@ -840,28 +792,28 @@ exports[`add Agent Modal selects directly correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c18 {
+  .c21 {
     width: 100%;
     margin-top: 15px;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c9 {
+  .c10 {
     width: 100%;
     grid-row: row-two;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c16 {
+  .c19 {
     width: 100%;
     grid-row: row-two;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c1 {
+  .c2 {
     top: 0px;
     left: 0px;
     right: 0px;
@@ -891,38 +843,38 @@ exports[`add Agent Modal selects directly correctly 1`] = `
   onClick={[Function]}
 >
   <div
-    className="c1"
+    className="c1 c2"
   >
     <div
-      className="c2"
+      className="c3"
     >
       <h2
-        className="c3"
+        className="c4"
       >
         Add new agent
       </h2>
       <div
-        className="c4"
+        className="c5"
       >
         <form
           onSubmit={[Function]}
         >
           <div
-            className="c5"
+            className="c6"
           >
             <p
-              className="c6"
+              className="c7"
             >
               Agent name
             </p>
             <div
-              className="c7"
+              className="c8"
             >
               <div
-                className="c8 c9"
+                className="c9 c10"
               >
                 <input
-                  className="c10"
+                  className="c11"
                   name="name"
                   onChange={[Function]}
                   placeholder="007"
@@ -933,64 +885,64 @@ exports[`add Agent Modal selects directly correctly 1`] = `
             </div>
           </div>
           <div
-            className="c5"
+            className="c6"
           >
             <p
-              className="c6"
+              className="c7"
             >
               Operating system
             </p>
             <div
-              className="c7"
+              className="c8"
             >
               <div
-                className="c11 c12"
+                className="c12 c13"
               >
                 <div
-                  className="c13"
+                  className="c14"
                   id="dropdown"
                   onClick={[Function]}
                 >
                   linux
                   <div
-                    className="c14"
+                    className="c15"
                   />
                 </div>
               </div>
             </div>
           </div>
           <div
-            className="c5"
+            className="c6"
           >
             <p
-              className="c6"
+              className="c7"
             >
               Architecture
             </p>
             <div
-              className="c7"
+              className="c8"
             >
               <div
-                className="c11 c12"
+                className="c12 c13"
               >
                 <div
-                  className="c13"
+                  className="c14"
                   id="dropdown"
                   onClick={[Function]}
                 >
                   amd64
                   <div
-                    className="c14"
+                    className="c15"
                   />
                 </div>
               </div>
             </div>
           </div>
           <div
-            className="c15"
+            className="c16"
           >
             <button
-              className="c16"
+              className="c17 c18 c19"
               id="closeButton"
               onClick={[MockFunction]}
               type="button"
@@ -998,7 +950,7 @@ exports[`add Agent Modal selects directly correctly 1`] = `
               Cancel
             </button>
             <button
-              className="c17 c18"
+              className="c17 c20 c21"
               onClick={null}
             >
               Create agent
@@ -1032,10 +984,6 @@ exports[`add Agent Modal selects manual correctly 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  width: 100%;
-  height: 50px;
-  margin: auto;
-  display: block;
 }
 
 .c17:hover {
@@ -1055,11 +1003,29 @@ exports[`add Agent Modal selects manual correctly 1`] = `
   cursor: auto;
 }
 
-.c11 {
+.c18 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.c20 {
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c12 {
   position: relative;
 }
 
-.c13 {
+.c14 {
   border: none;
   border-radius: 5px;
   font-family: 'B612',sans-serif;
@@ -1072,7 +1038,7 @@ exports[`add Agent Modal selects manual correctly 1`] = `
   overflow: hidden;
 }
 
-.c14 {
+.c15 {
   border-color: white transparent;
   border-style: solid;
   float: right;
@@ -1089,11 +1055,11 @@ exports[`add Agent Modal selects manual correctly 1`] = `
   transition: transform 0.3s;
 }
 
-.c8 {
+.c9 {
   height: 80px;
 }
 
-.c10 {
+.c11 {
   min-height: 50px;
   width: 100%;
   border: none;
@@ -1105,93 +1071,62 @@ exports[`add Agent Modal selects manual correctly 1`] = `
   border: 1px solid transparent;
 }
 
-.c10:focus {
+.c11:focus {
   outline: none;
   border: 1px solid;
 }
 
-.c15 {
+.c16 {
   display: grid;
   grid-template-columns: 50% 50%;
   margin: 20px 0px 20px 0px;
 }
 
-.c5 {
+.c6 {
   display: grid;
   width: 100%;
   grid-template-columns: [text] 50% [dropdown] 50%;
   height: 100px;
 }
 
-.c7 {
+.c8 {
   grid-column: dropdown;
 }
 
-.c12 {
+.c13 {
   width: 200px;
   float: right;
 }
 
-.c6 {
+.c7 {
   grid-column: text;
   line-height: 75px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-.c18 {
+.c21 {
   width: 200px;
   height: 50px;
   margin: auto;
   display: block;
 }
 
-.c9 {
+.c10 {
   font-family: 'B612',sans-serif;
   font-weight: 600;
   width: 200px;
   float: right;
 }
 
-.c16 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
+.c19 {
   width: 200px;
   height: 50px;
   margin: auto;
   display: block;
 }
 
-.c16:hover {
-  opacity: 0.90;
-}
-
-.c16:focus {
-  outline: none;
-}
-
-.c16:active {
-  opacity: 0.80;
-}
-
-.c16:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c1 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
+.c2 {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1202,7 +1137,7 @@ exports[`add Agent Modal selects manual correctly 1`] = `
   width: 100%;
 }
 
-.c2 {
+.c3 {
   display: grid;
   grid-template-rows: [title] 50px [content] 1fr;
   height: 100%;
@@ -1214,31 +1149,31 @@ exports[`add Agent Modal selects manual correctly 1`] = `
   scrollbar-width: none;
 }
 
-.c2::-webkit-scrollbar {
+.c3::-webkit-scrollbar {
   display: none;
 }
 
-.c3 {
+.c4 {
   grid-row: title;
   width: 75%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c4 {
+.c5 {
   grid-row: content;
   padding: 20px;
 }
 
 @media (max-width:47.9375em) {
-  .c15 {
+  .c16 {
     grid-template-columns: [column-one] 100%;
     grid-template-rows: [row-one] 1fr [row-two] 1fr;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     height: 120px;
     grid-template-columns: [column-one] 100%;
     grid-template-rows: [text] 30px [dropdown] 85px;
@@ -1246,7 +1181,7 @@ exports[`add Agent Modal selects manual correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c8 {
     grid-column: column-one;
     grid-row: dropdown;
     width: 100%;
@@ -1254,13 +1189,13 @@ exports[`add Agent Modal selects manual correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c12 {
+  .c13 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c7 {
     width: 100%;
     line-height: 100%;
     grid-column: column-one;
@@ -1269,28 +1204,28 @@ exports[`add Agent Modal selects manual correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c18 {
+  .c21 {
     width: 100%;
     margin-top: 15px;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c9 {
+  .c10 {
     width: 100%;
     grid-row: row-two;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c16 {
+  .c19 {
     width: 100%;
     grid-row: row-two;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c1 {
+  .c2 {
     top: 0px;
     left: 0px;
     right: 0px;
@@ -1320,38 +1255,38 @@ exports[`add Agent Modal selects manual correctly 1`] = `
   onClick={[Function]}
 >
   <div
-    className="c1"
+    className="c1 c2"
   >
     <div
-      className="c2"
+      className="c3"
     >
       <h2
-        className="c3"
+        className="c4"
       >
         Add new agent
       </h2>
       <div
-        className="c4"
+        className="c5"
       >
         <form
           onSubmit={[Function]}
         >
           <div
-            className="c5"
+            className="c6"
           >
             <p
-              className="c6"
+              className="c7"
             >
               Agent name
             </p>
             <div
-              className="c7"
+              className="c8"
             >
               <div
-                className="c8 c9"
+                className="c9 c10"
               >
                 <input
-                  className="c10"
+                  className="c11"
                   name="name"
                   onChange={[Function]}
                   placeholder="007"
@@ -1362,64 +1297,64 @@ exports[`add Agent Modal selects manual correctly 1`] = `
             </div>
           </div>
           <div
-            className="c5"
+            className="c6"
           >
             <p
-              className="c6"
+              className="c7"
             >
               Operating system
             </p>
             <div
-              className="c7"
+              className="c8"
             >
               <div
-                className="c11 c12"
+                className="c12 c13"
               >
                 <div
-                  className="c13"
+                  className="c14"
                   id="dropdown"
                   onClick={[Function]}
                 >
                   linux
                   <div
-                    className="c14"
+                    className="c15"
                   />
                 </div>
               </div>
             </div>
           </div>
           <div
-            className="c5"
+            className="c6"
           >
             <p
-              className="c6"
+              className="c7"
             >
               Architecture
             </p>
             <div
-              className="c7"
+              className="c8"
             >
               <div
-                className="c11 c12"
+                className="c12 c13"
               >
                 <div
-                  className="c13"
+                  className="c14"
                   id="dropdown"
                   onClick={[Function]}
                 >
                   amd64
                   <div
-                    className="c14"
+                    className="c15"
                   />
                 </div>
               </div>
             </div>
           </div>
           <div
-            className="c15"
+            className="c16"
           >
             <button
-              className="c16"
+              className="c17 c18 c19"
               id="closeButton"
               onClick={[MockFunction]}
               type="button"
@@ -1427,7 +1362,7 @@ exports[`add Agent Modal selects manual correctly 1`] = `
               Cancel
             </button>
             <button
-              className="c17 c18"
+              className="c17 c20 c21"
               onClick={null}
             >
               Create agent

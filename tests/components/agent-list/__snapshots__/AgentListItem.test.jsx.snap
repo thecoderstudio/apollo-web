@@ -11,7 +11,15 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
   opacity: 0.90;
 }
 
-.c7 {
+.c3 {
+  cursor: pointer;
+}
+
+.c11 {
+  cursor: inherit;
+}
+
+.c8 {
   min-height: 12px;
   min-width: 12px;
   margin: 10px;
@@ -20,18 +28,18 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
   background-color: #C0392B;
 }
 
-.c6 {
+.c7 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
 
-.c8 {
+.c9 {
   grid-column: status-indicator;
   float: right;
   text-align: left;
 }
 
-.c9 {
+.c10 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -62,7 +70,7 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
   margin-top: 25px;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -105,18 +113,16 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
   color: #02A3EE;
 }
 
-.c4 {
+.c5 {
   min-width: 0;
 }
 
-.c10 {
-  cursor: inherit;
+.c12 {
   color: #363636;
   margin-left: 16px;
 }
 
-.c3 {
-  cursor: pointer;
+.c4 {
   margin-right: 10px;
   cursor: inherit;
 }
@@ -135,7 +141,7 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 }
@@ -152,7 +158,7 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     width: 100%;
     text-align: center;
   }
@@ -168,7 +174,7 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
       onClick={[Function]}
     >
       <i
-        className="c3 fas fa-question-circle"
+        className="c3 c4 fas fa-question-circle"
       />
       Operating system unkown
       <p>
@@ -176,28 +182,28 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
       </p>
     </a>
     <p
-      className="c4"
+      className="c5"
     />
     External IP address
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7 c8"
+          className="c8 c9"
           color="#C0392B"
         />
         <p
-          className="c9"
+          className="c10"
           color="#C0392B"
         >
           Disconnected
         </p>
       </div>
       <i
-        className="c10 fas fa-terminal"
+        className="c11 c12 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
@@ -216,7 +222,11 @@ exports[`agent list item opens and closes the terminal 1`] = `
   opacity: 0.90;
 }
 
-.c8 {
+.c3 {
+  cursor: pointer;
+}
+
+.c9 {
   min-height: 12px;
   min-width: 12px;
   margin: 10px;
@@ -225,18 +235,18 @@ exports[`agent list item opens and closes the terminal 1`] = `
   background-color: #27AE60;
 }
 
-.c6 {
+.c7 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
 
-.c7 {
+.c8 {
   grid-column: status-indicator;
   float: right;
   text-align: left;
 }
 
-.c9 {
+.c10 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -246,32 +256,35 @@ exports[`agent list item opens and closes the terminal 1`] = `
   color: #27AE60;
 }
 
-.c18 {
+.c20 {
   height: 100%;
   width: 100%;
   padding: 20px;
 }
 
-.c19 {
+.c21 {
   height: 100%;
   width: 100%;
 }
 
-.c19 .xterm-viewport {
+.c21 .xterm-viewport {
   overflow: hidden !important;
 }
 
-.c11 {
+.c12 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
+}
+
+.c13 {
   padding: 0px;
   border: 1px solid #32E67E;
   border-style: none none solid none;
 }
 
-.c12 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -283,7 +296,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   align-items: center;
 }
 
-.c15 {
+.c17 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -297,7 +310,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   justify-content: flex-end;
 }
 
-.c16 {
+.c18 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -306,7 +319,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   cursor: pointer;
 }
 
-.c17 {
+.c19 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -315,13 +328,13 @@ exports[`agent list item opens and closes the terminal 1`] = `
   cursor: pointer;
 }
 
-.c13 {
+.c15 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c14 {
+.c16 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -350,7 +363,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   margin-top: 25px;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -393,18 +406,16 @@ exports[`agent list item opens and closes the terminal 1`] = `
   color: #02A3EE;
 }
 
-.c4 {
+.c5 {
   min-width: 0;
 }
 
-.c10 {
-  cursor: pointer;
+.c11 {
   color: #F8F8F8;
   margin-left: 16px;
 }
 
-.c3 {
-  cursor: pointer;
+.c4 {
   margin-right: 10px;
   cursor: inherit;
 }
@@ -423,7 +434,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 }
@@ -440,14 +451,14 @@ exports[`agent list item opens and closes the terminal 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     width: 100%;
     text-align: center;
   }
 }
 
 <div>
-  <ThemeProvider
+  <Component
     theme={
       Object {
         "accent": "#4D02EE",
@@ -544,7 +555,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                                 className="fas fa-question-circle"
                               >
                                 <i
-                                  className="c3 fas fa-question-circle"
+                                  className="c3 c4 fas fa-question-circle"
                                 />
                               </Styled(styled.i)>
                               Operating system unkown
@@ -567,7 +578,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                 >
                   <styled.p>
                     <p
-                      className="c4"
+                      className="c5"
                     />
                   </styled.p>
                   External IP address
@@ -575,7 +586,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
               </ForwardRef(TippyWrapper)>
               <styled.div>
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <WithTheme(ConnectionState)
                     connectionState="connected"
@@ -606,17 +617,17 @@ exports[`agent list item opens and closes the terminal 1`] = `
                     >
                       <styled.div>
                         <div
-                          className="c6"
+                          className="c7"
                         >
                           <Styled(WithTheme(ConnectionIndicator))
                             connectionState="connected"
                           >
                             <WithTheme(ConnectionIndicator)
-                              className="c7"
+                              className="c8"
                               connectionState="connected"
                             >
                               <ConnectionIndicator
-                                className="c7"
+                                className="c8"
                                 connectionState="connected"
                                 theme={
                                   Object {
@@ -641,11 +652,11 @@ exports[`agent list item opens and closes the terminal 1`] = `
                                 }
                               >
                                 <styled.div
-                                  className="c7"
+                                  className="c8"
                                   color="#27AE60"
                                 >
                                   <div
-                                    className="c8 c7"
+                                    className="c9 c8"
                                     color="#27AE60"
                                   />
                                 </styled.div>
@@ -656,7 +667,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                             color="#27AE60"
                           >
                             <p
-                              className="c9"
+                              className="c10"
                               color="#27AE60"
                             >
                               Connected
@@ -672,7 +683,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                     onClick={[Function]}
                   >
                     <i
-                      className="c10 fas fa-terminal"
+                      className="c3 c11 fas fa-terminal"
                       onClick={[Function]}
                     />
                   </Styled(styled.i)>
@@ -774,18 +785,18 @@ exports[`agent list item opens and closes the terminal 1`] = `
                       handle={null}
                       nodeRef={
                         Object {
-                          "current": .c7 {
+                          "current": .c8 {
   height: 100%;
   width: 100%;
   padding: 20px;
 }
 
-.c8 {
+.c9 {
   height: 100%;
   width: 100%;
 }
 
-.c8 .xterm-viewport {
+.c9 .xterm-viewport {
   overflow: hidden !important;
 }
 
@@ -794,12 +805,15 @@ exports[`agent list item opens and closes the terminal 1`] = `
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
+}
+
+.c1 {
   padding: 0px;
   border: 1px solid #32E67E;
   border-style: none none solid none;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -811,7 +825,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c5 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -825,7 +839,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   justify-content: flex-end;
 }
 
-.c5 {
+.c6 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -834,7 +848,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   cursor: pointer;
 }
 
-.c6 {
+.c7 {
   height: 12px;
   width: 12px;
   margin-right: 15px;
@@ -843,13 +857,13 @@ exports[`agent list item opens and closes the terminal 1`] = `
   cursor: pointer;
 }
 
-.c2 {
+.c3 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c3 {
+.c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -878,39 +892,39 @@ exports[`agent list item opens and closes the terminal 1`] = `
                             style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
                           >
                             <div
-                              class="c0"
+                              class="c0 c1"
                             >
                               <div
-                                class="c1"
+                                class="c2"
                               >
                                 <div
-                                  class="c2"
+                                  class="c3"
                                 />
                                 <h4
-                                  class="c3"
+                                  class="c4"
                                 >
                                   agentName
                                 </h4>
                                 <div
-                                  class="c4"
+                                  class="c5"
                                 >
                                   <div
-                                    class="c5"
+                                    class="c6"
                                     color="#32E67E"
                                     id="expand-button"
                                   />
                                   <div
-                                    class="c6"
+                                    class="c7"
                                     color="#ED3E2A"
                                     id="close-button"
                                   />
                                 </div>
                               </div>
                               <div
-                                class="c7"
+                                class="c8"
                               >
                                 <div
-                                  class="c8"
+                                  class="c9"
                                   data-testid="terminal"
                                 >
                                   <div
@@ -1033,39 +1047,39 @@ exports[`agent list item opens and closes the terminal 1`] = `
                               style="position: absolute; user-select: auto; width: 700px; height: 400px; display: inline-block; top: 0px; left: 0px; cursor: move; transform: translate(0px,0px); max-width: 9007199254740991px; max-height: 9007199254740991px; min-width: 700px; min-height: 300px; box-sizing: border-box; flex-shrink: 0;"
                             >
                               <div
-                                class="c11"
+                                class="c12 c13"
                               >
                                 <div
-                                  class="c12"
+                                  class="c14"
                                 >
                                   <div
-                                    class="c13"
+                                    class="c15"
                                   />
                                   <h4
-                                    class="c14"
+                                    class="c16"
                                   >
                                     agentName
                                   </h4>
                                   <div
-                                    class="c15"
+                                    class="c17"
                                   >
                                     <div
-                                      class="c16"
+                                      class="c18"
                                       color="#32E67E"
                                       id="expand-button"
                                     />
                                     <div
-                                      class="c17"
+                                      class="c19"
                                       color="#ED3E2A"
                                       id="close-button"
                                     />
                                   </div>
                                 </div>
                                 <div
-                                  class="c18"
+                                  class="c20"
                                 >
                                   <div
-                                    class="c19"
+                                    class="c21"
                                     data-testid="terminal"
                                   >
                                     <div
@@ -1174,6 +1188,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                         transform={null}
                       >
                         <Resizable
+                          as="div"
                           className="react-draggable"
                           defaultSize={
                             Object {
@@ -1261,27 +1276,27 @@ exports[`agent list item opens and closes the terminal 1`] = `
                               statusColor="#32E67E"
                             >
                               <div
-                                className="c11"
+                                className="c12 c13"
                               >
                                 <styled.div>
                                   <div
-                                    className="c12"
+                                    className="c14"
                                   >
                                     <styled.div>
                                       <div
-                                        className="c13"
+                                        className="c15"
                                       />
                                     </styled.div>
                                     <styled.h4>
                                       <h4
-                                        className="c14"
+                                        className="c16"
                                       >
                                         agentName
                                       </h4>
                                     </styled.h4>
                                     <styled.div>
                                       <div
-                                        className="c15"
+                                        className="c17"
                                       >
                                         <styled.div
                                           color="#32E67E"
@@ -1289,7 +1304,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                                           onClick={[Function]}
                                         >
                                           <div
-                                            className="c16"
+                                            className="c18"
                                             color="#32E67E"
                                             id="expand-button"
                                             onClick={[Function]}
@@ -1301,7 +1316,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                                           onClick={[Function]}
                                         >
                                           <div
-                                            className="c17"
+                                            className="c19"
                                             color="#ED3E2A"
                                             id="close-button"
                                             onClick={[Function]}
@@ -1356,13 +1371,13 @@ exports[`agent list item opens and closes the terminal 1`] = `
                                   >
                                     <styled.div>
                                       <div
-                                        className="c18"
+                                        className="c20"
                                       >
                                         <styled.div
                                           data-testid="terminal"
                                         >
                                           <div
-                                            className="c19"
+                                            className="c21"
                                             data-testid="terminal"
                                           />
                                         </styled.div>
@@ -1562,7 +1577,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
         </AgentListItem>
       </Router>
     </BrowserRouter>
-  </ThemeProvider>
+  </Component>
 </div>
 `;
 
@@ -1577,7 +1592,11 @@ exports[`agent list item opens and closes the terminal 2`] = `
   opacity: 0.90;
 }
 
-.c8 {
+.c3 {
+  cursor: pointer;
+}
+
+.c9 {
   min-height: 12px;
   min-width: 12px;
   margin: 10px;
@@ -1586,18 +1605,18 @@ exports[`agent list item opens and closes the terminal 2`] = `
   background-color: #27AE60;
 }
 
-.c6 {
+.c7 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
 
-.c7 {
+.c8 {
   grid-column: status-indicator;
   float: right;
   text-align: left;
 }
 
-.c9 {
+.c10 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -1628,7 +1647,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
   margin-top: 25px;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1671,18 +1690,16 @@ exports[`agent list item opens and closes the terminal 2`] = `
   color: #02A3EE;
 }
 
-.c4 {
+.c5 {
   min-width: 0;
 }
 
-.c10 {
-  cursor: pointer;
+.c11 {
   color: #F8F8F8;
   margin-left: 16px;
 }
 
-.c3 {
-  cursor: pointer;
+.c4 {
   margin-right: 10px;
   cursor: inherit;
 }
@@ -1701,7 +1718,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 }
@@ -1718,14 +1735,14 @@ exports[`agent list item opens and closes the terminal 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     width: 100%;
     text-align: center;
   }
 }
 
 <div>
-  <ThemeProvider
+  <Component
     theme={
       Object {
         "accent": "#4D02EE",
@@ -1822,7 +1839,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
                                 className="fas fa-question-circle"
                               >
                                 <i
-                                  className="c3 fas fa-question-circle"
+                                  className="c3 c4 fas fa-question-circle"
                                 />
                               </Styled(styled.i)>
                               Operating system unkown
@@ -1845,7 +1862,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
                 >
                   <styled.p>
                     <p
-                      className="c4"
+                      className="c5"
                     />
                   </styled.p>
                   External IP address
@@ -1853,7 +1870,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
               </ForwardRef(TippyWrapper)>
               <styled.div>
                 <div
-                  className="c5"
+                  className="c6"
                 >
                   <WithTheme(ConnectionState)
                     connectionState="connected"
@@ -1884,17 +1901,17 @@ exports[`agent list item opens and closes the terminal 2`] = `
                     >
                       <styled.div>
                         <div
-                          className="c6"
+                          className="c7"
                         >
                           <Styled(WithTheme(ConnectionIndicator))
                             connectionState="connected"
                           >
                             <WithTheme(ConnectionIndicator)
-                              className="c7"
+                              className="c8"
                               connectionState="connected"
                             >
                               <ConnectionIndicator
-                                className="c7"
+                                className="c8"
                                 connectionState="connected"
                                 theme={
                                   Object {
@@ -1919,11 +1936,11 @@ exports[`agent list item opens and closes the terminal 2`] = `
                                 }
                               >
                                 <styled.div
-                                  className="c7"
+                                  className="c8"
                                   color="#27AE60"
                                 >
                                   <div
-                                    className="c8 c7"
+                                    className="c9 c8"
                                     color="#27AE60"
                                   />
                                 </styled.div>
@@ -1934,7 +1951,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
                             color="#27AE60"
                           >
                             <p
-                              className="c9"
+                              className="c10"
                               color="#27AE60"
                             >
                               Connected
@@ -1950,7 +1967,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
                     onClick={[Function]}
                   >
                     <i
-                      className="c10 fas fa-terminal"
+                      className="c3 c11 fas fa-terminal"
                       onClick={[Function]}
                     />
                   </Styled(styled.i)>
@@ -1961,7 +1978,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
         </AgentListItem>
       </Router>
     </BrowserRouter>
-  </ThemeProvider>
+  </Component>
 </div>
 `;
 
@@ -1976,7 +1993,11 @@ exports[`agent list item renders connected correctly 1`] = `
   opacity: 0.90;
 }
 
-.c7 {
+.c3 {
+  cursor: pointer;
+}
+
+.c8 {
   min-height: 12px;
   min-width: 12px;
   margin: 10px;
@@ -1985,18 +2006,18 @@ exports[`agent list item renders connected correctly 1`] = `
   background-color: #27AE60;
 }
 
-.c6 {
+.c7 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
 
-.c8 {
+.c9 {
   grid-column: status-indicator;
   float: right;
   text-align: left;
 }
 
-.c9 {
+.c10 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -2027,7 +2048,7 @@ exports[`agent list item renders connected correctly 1`] = `
   margin-top: 25px;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2070,18 +2091,16 @@ exports[`agent list item renders connected correctly 1`] = `
   color: #02A3EE;
 }
 
-.c4 {
+.c5 {
   min-width: 0;
 }
 
-.c10 {
-  cursor: pointer;
+.c11 {
   color: #F8F8F8;
   margin-left: 16px;
 }
 
-.c3 {
-  cursor: pointer;
+.c4 {
   margin-right: 10px;
   cursor: inherit;
 }
@@ -2100,7 +2119,7 @@ exports[`agent list item renders connected correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 }
@@ -2117,7 +2136,7 @@ exports[`agent list item renders connected correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     width: 100%;
     text-align: center;
   }
@@ -2133,7 +2152,7 @@ exports[`agent list item renders connected correctly 1`] = `
       onClick={[Function]}
     >
       <i
-        className="c3 fas fa-question-circle"
+        className="c3 c4 fas fa-question-circle"
       />
       Operating system unkown
       <p>
@@ -2141,28 +2160,28 @@ exports[`agent list item renders connected correctly 1`] = `
       </p>
     </a>
     <p
-      className="c4"
+      className="c5"
     />
     External IP address
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7 c8"
+          className="c8 c9"
           color="#27AE60"
         />
         <p
-          className="c9"
+          className="c10"
           color="#27AE60"
         >
           Connected
         </p>
       </div>
       <i
-        className="c10 fas fa-terminal"
+        className="c3 c11 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
@@ -2181,7 +2200,15 @@ exports[`agent list item renders disconnected correctly 1`] = `
   opacity: 0.90;
 }
 
-.c7 {
+.c3 {
+  cursor: pointer;
+}
+
+.c11 {
+  cursor: inherit;
+}
+
+.c8 {
   min-height: 12px;
   min-width: 12px;
   margin: 10px;
@@ -2190,18 +2217,18 @@ exports[`agent list item renders disconnected correctly 1`] = `
   background-color: #C0392B;
 }
 
-.c6 {
+.c7 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
 
-.c8 {
+.c9 {
   grid-column: status-indicator;
   float: right;
   text-align: left;
 }
 
-.c9 {
+.c10 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -2232,7 +2259,7 @@ exports[`agent list item renders disconnected correctly 1`] = `
   margin-top: 25px;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2275,18 +2302,16 @@ exports[`agent list item renders disconnected correctly 1`] = `
   color: #02A3EE;
 }
 
-.c4 {
+.c5 {
   min-width: 0;
 }
 
-.c10 {
-  cursor: inherit;
+.c12 {
   color: #363636;
   margin-left: 16px;
 }
 
-.c3 {
-  cursor: pointer;
+.c4 {
   margin-right: 10px;
   cursor: inherit;
 }
@@ -2305,7 +2330,7 @@ exports[`agent list item renders disconnected correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 }
@@ -2322,7 +2347,7 @@ exports[`agent list item renders disconnected correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     width: 100%;
     text-align: center;
   }
@@ -2338,7 +2363,7 @@ exports[`agent list item renders disconnected correctly 1`] = `
       onClick={[Function]}
     >
       <i
-        className="c3 fas fa-question-circle"
+        className="c3 c4 fas fa-question-circle"
       />
       Operating system unkown
       <p>
@@ -2346,28 +2371,28 @@ exports[`agent list item renders disconnected correctly 1`] = `
       </p>
     </a>
     <p
-      className="c4"
+      className="c5"
     />
     External IP address
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7 c8"
+          className="c8 c9"
           color="#C0392B"
         />
         <p
-          className="c9"
+          className="c10"
           color="#C0392B"
         >
           Disconnected
         </p>
       </div>
       <i
-        className="c10 fas fa-terminal"
+        className="c11 c12 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
@@ -2386,7 +2411,11 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
   opacity: 0.90;
 }
 
-.c7 {
+.c3 {
+  cursor: pointer;
+}
+
+.c8 {
   min-height: 12px;
   min-width: 12px;
   margin: 10px;
@@ -2395,18 +2424,18 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
   background-color: #27AE60;
 }
 
-.c6 {
+.c7 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
 
-.c8 {
+.c9 {
   grid-column: status-indicator;
   float: right;
   text-align: left;
 }
 
-.c9 {
+.c10 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -2437,7 +2466,7 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
   margin-top: 25px;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2480,18 +2509,16 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
   color: #02A3EE;
 }
 
-.c4 {
+.c5 {
   min-width: 0;
 }
 
-.c10 {
-  cursor: pointer;
+.c11 {
   color: #F8F8F8;
   margin-left: 16px;
 }
 
-.c3 {
-  cursor: pointer;
+.c4 {
   margin-right: 10px;
   cursor: inherit;
 }
@@ -2510,7 +2537,7 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 }
@@ -2527,7 +2554,7 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     width: 100%;
     text-align: center;
   }
@@ -2543,7 +2570,7 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
       onClick={[Function]}
     >
       <i
-        className="c3 fab fa-apple"
+        className="c3 c4 fab fa-apple"
       />
       darwin amd64
       <p>
@@ -2551,28 +2578,28 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
       </p>
     </a>
     <p
-      className="c4"
+      className="c5"
     />
     External IP address
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7 c8"
+          className="c8 c9"
           color="#27AE60"
         />
         <p
-          className="c9"
+          className="c10"
           color="#27AE60"
         >
           Connected
         </p>
       </div>
       <i
-        className="c10 fas fa-terminal"
+        className="c3 c11 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
@@ -2591,7 +2618,11 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
   opacity: 0.90;
 }
 
-.c7 {
+.c3 {
+  cursor: pointer;
+}
+
+.c8 {
   min-height: 12px;
   min-width: 12px;
   margin: 10px;
@@ -2600,18 +2631,18 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
   background-color: #27AE60;
 }
 
-.c6 {
+.c7 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
 
-.c8 {
+.c9 {
   grid-column: status-indicator;
   float: right;
   text-align: left;
 }
 
-.c9 {
+.c10 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -2642,7 +2673,7 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
   margin-top: 25px;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2685,18 +2716,16 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
   color: #02A3EE;
 }
 
-.c4 {
+.c5 {
   min-width: 0;
 }
 
-.c10 {
-  cursor: pointer;
+.c11 {
   color: #F8F8F8;
   margin-left: 16px;
 }
 
-.c3 {
-  cursor: pointer;
+.c4 {
   margin-right: 10px;
   cursor: inherit;
 }
@@ -2715,7 +2744,7 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 }
@@ -2732,7 +2761,7 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     width: 100%;
     text-align: center;
   }
@@ -2748,7 +2777,7 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
       onClick={[Function]}
     >
       <i
-        className="c3 fas fa-question-circle"
+        className="c3 c4 fas fa-question-circle"
       />
       openbsd amd64
       <p>
@@ -2756,28 +2785,28 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
       </p>
     </a>
     <p
-      className="c4"
+      className="c5"
     />
     External IP address
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7 c8"
+          className="c8 c9"
           color="#27AE60"
         />
         <p
-          className="c9"
+          className="c10"
           color="#27AE60"
         >
           Connected
         </p>
       </div>
       <i
-        className="c10 fas fa-terminal"
+        className="c3 c11 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
@@ -2796,7 +2825,11 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
   opacity: 0.90;
 }
 
-.c7 {
+.c3 {
+  cursor: pointer;
+}
+
+.c8 {
   min-height: 12px;
   min-width: 12px;
   margin: 10px;
@@ -2805,18 +2838,18 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
   background-color: #27AE60;
 }
 
-.c6 {
+.c7 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
 
-.c8 {
+.c9 {
   grid-column: status-indicator;
   float: right;
   text-align: left;
 }
 
-.c9 {
+.c10 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -2847,7 +2880,7 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
   margin-top: 25px;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2890,18 +2923,16 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
   color: #02A3EE;
 }
 
-.c4 {
+.c5 {
   min-width: 0;
 }
 
-.c10 {
-  cursor: pointer;
+.c11 {
   color: #F8F8F8;
   margin-left: 16px;
 }
 
-.c3 {
-  cursor: pointer;
+.c4 {
   margin-right: 10px;
   cursor: inherit;
 }
@@ -2920,7 +2951,7 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 }
@@ -2937,7 +2968,7 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     width: 100%;
     text-align: center;
   }
@@ -2953,7 +2984,7 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
       onClick={[Function]}
     >
       <i
-        className="c3 fab fa-freebsd"
+        className="c3 c4 fab fa-freebsd"
       />
       freebsd amd64
       <p>
@@ -2961,28 +2992,28 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
       </p>
     </a>
     <p
-      className="c4"
+      className="c5"
     />
     External IP address
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7 c8"
+          className="c8 c9"
           color="#27AE60"
         />
         <p
-          className="c9"
+          className="c10"
           color="#27AE60"
         >
           Connected
         </p>
       </div>
       <i
-        className="c10 fas fa-terminal"
+        className="c3 c11 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
@@ -3001,7 +3032,11 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
   opacity: 0.90;
 }
 
-.c7 {
+.c3 {
+  cursor: pointer;
+}
+
+.c8 {
   min-height: 12px;
   min-width: 12px;
   margin: 10px;
@@ -3010,18 +3045,18 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
   background-color: #27AE60;
 }
 
-.c6 {
+.c7 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
 
-.c8 {
+.c9 {
   grid-column: status-indicator;
   float: right;
   text-align: left;
 }
 
-.c9 {
+.c10 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -3052,7 +3087,7 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
   margin-top: 25px;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3095,18 +3130,16 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
   color: #02A3EE;
 }
 
-.c4 {
+.c5 {
   min-width: 0;
 }
 
-.c10 {
-  cursor: pointer;
+.c11 {
   color: #F8F8F8;
   margin-left: 16px;
 }
 
-.c3 {
-  cursor: pointer;
+.c4 {
   margin-right: 10px;
   cursor: inherit;
 }
@@ -3125,7 +3158,7 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 }
@@ -3142,7 +3175,7 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     width: 100%;
     text-align: center;
   }
@@ -3158,7 +3191,7 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
       onClick={[Function]}
     >
       <i
-        className="c3 fab fa-linux"
+        className="c3 c4 fab fa-linux"
       />
       linux amd64
       <p>
@@ -3166,28 +3199,28 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
       </p>
     </a>
     <p
-      className="c4"
+      className="c5"
     />
     External IP address
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7 c8"
+          className="c8 c9"
           color="#27AE60"
         />
         <p
-          className="c9"
+          className="c10"
           color="#27AE60"
         >
           Connected
         </p>
       </div>
       <i
-        className="c10 fas fa-terminal"
+        className="c3 c11 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
@@ -3206,7 +3239,11 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
   opacity: 0.90;
 }
 
-.c7 {
+.c3 {
+  cursor: pointer;
+}
+
+.c8 {
   min-height: 12px;
   min-width: 12px;
   margin: 10px;
@@ -3215,18 +3252,18 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
   background-color: #27AE60;
 }
 
-.c6 {
+.c7 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
 
-.c8 {
+.c9 {
   grid-column: status-indicator;
   float: right;
   text-align: left;
 }
 
-.c9 {
+.c10 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -3257,7 +3294,7 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
   margin-top: 25px;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3300,18 +3337,16 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
   color: #02A3EE;
 }
 
-.c4 {
+.c5 {
   min-width: 0;
 }
 
-.c10 {
-  cursor: pointer;
+.c11 {
   color: #F8F8F8;
   margin-left: 16px;
 }
 
-.c3 {
-  cursor: pointer;
+.c4 {
   margin-right: 10px;
   cursor: inherit;
 }
@@ -3330,7 +3365,7 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 }
@@ -3347,7 +3382,7 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     width: 100%;
     text-align: center;
   }
@@ -3363,7 +3398,7 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
       onClick={[Function]}
     >
       <i
-        className="c3 fas fa-question-circle"
+        className="c3 c4 fas fa-question-circle"
       />
       Operating system unkown
       <p>
@@ -3371,28 +3406,28 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
       </p>
     </a>
     <p
-      className="c4"
+      className="c5"
     />
     External IP address
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7 c8"
+          className="c8 c9"
           color="#27AE60"
         />
         <p
-          className="c9"
+          className="c10"
           color="#27AE60"
         >
           Connected
         </p>
       </div>
       <i
-        className="c10 fas fa-terminal"
+        className="c3 c11 fas fa-terminal"
         onClick={[Function]}
       />
     </div>

@@ -1,17 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`navbar handles add agent modal 1`] = `
-.c9 {
-  display: inline;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.c16 {
+.c7 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -21,48 +11,67 @@ exports[`navbar handles add agent modal 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
+}
+
+.c7:hover {
+  opacity: 0.90;
+}
+
+.c7:focus {
+  outline: none;
+}
+
+.c7:active {
+  opacity: 0.80;
+}
+
+.c7:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c9 {
   background-color: transparent;
   border: 1px solid;
+}
+
+.c11 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.c19 {
   display: grid;
   grid-template-rows: [title] 50px [description] 1fr;
   padding: 20px;
   min-height: 180px;
 }
 
-.c16:hover {
-  opacity: 0.90;
-}
-
-.c16:focus {
-  outline: none;
-}
-
-.c16:active {
-  opacity: 0.80;
-}
-
-.c16:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c18 {
+.c21 {
   grid-row: title;
   width: 80%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c19 {
+.c22 {
   grid-row: description;
   padding: 10px;
   font-size: 0.85rem;
 }
 
-.c10 {
+.c12 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
+}
+
+.c13 {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -73,7 +82,7 @@ exports[`navbar handles add agent modal 1`] = `
   width: 100%;
 }
 
-.c11 {
+.c14 {
   display: grid;
   grid-template-rows: [title] 50px [content] 1fr;
   height: 100%;
@@ -85,39 +94,39 @@ exports[`navbar handles add agent modal 1`] = `
   scrollbar-width: none;
 }
 
-.c11::-webkit-scrollbar {
+.c14::-webkit-scrollbar {
   display: none;
 }
 
-.c12 {
+.c15 {
   grid-row: title;
   width: 75%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c13 {
+.c16 {
   grid-row: content;
   padding: 20px;
 }
 
-.c14 {
+.c17 {
   display: grid;
   grid-template-columns: [column-one] 50% [column-two] 50%;
   margin: 20px 0px 20px 0px;
 }
 
-.c15 {
+.c18 {
   grid-column: column-one;
   margin-right: 10px;
 }
 
-.c20 {
+.c23 {
   grid-column: column-two;
   margin-left: 10px;
 }
 
-.c17 {
+.c20 {
   width: 100%;
 }
 
@@ -188,73 +197,19 @@ exports[`navbar handles add agent modal 1`] = `
   grid-column: logo;
 }
 
-.c8 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
+.c10 {
   grid-column: logout;
   float: right;
   max-width: 100px;
 }
 
-.c8:hover {
-  opacity: 0.90;
-}
-
-.c8:focus {
-  outline: none;
-}
-
-.c8:active {
-  opacity: 0.80;
-}
-
-.c8:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c7 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
+.c8 {
   grid-column: new-agent;
   max-width: 250px;
 }
 
-.c7:hover {
-  opacity: 0.90;
-}
-
-.c7:focus {
-  outline: none;
-}
-
-.c7:active {
-  opacity: 0.80;
-}
-
-.c7:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
 @media (max-width:47.9375em) {
-  .c10 {
+  .c13 {
     top: 0px;
     left: 0px;
     right: 0px;
@@ -268,14 +223,14 @@ exports[`navbar handles add agent modal 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c14 {
+  .c17 {
     grid-template-columns: [column-one] 100%;
     grid-template-rows: [row-one] 1fr [row-two] 1fr;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c15 {
+  .c18 {
     grid-row: row-one;
     margin-right: 0px;
     margin: 15px;
@@ -283,7 +238,7 @@ exports[`navbar handles add agent modal 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c20 {
+  .c23 {
     grid-column: column-one;
     grid-row: row-two;
     margin-left: 0px;
@@ -347,7 +302,7 @@ exports[`navbar handles add agent modal 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c8 {
+  .c10 {
     grid-column: main;
     grid-row: logout;
     max-width: 100%;
@@ -355,7 +310,7 @@ exports[`navbar handles add agent modal 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c8 {
     grid-column: main;
     grid-row: new-agent;
     max-width: 100%;
@@ -390,73 +345,73 @@ exports[`navbar handles add agent modal 1`] = `
       </a>
     </div>
     <button
-      className="c7"
+      className="c7 c8"
       id="newAgentButton"
       onClick={[Function]}
     >
       Add new agent
     </button>
     <button
-      className="c8"
+      className="c7 c9 c10"
       id="logoutButton"
       onClick={[Function]}
     >
       Logout
     </button>
     <div
-      className="c9"
+      className="c11"
       onClick={[Function]}
     >
       <div
-        className="c10"
+        className="c12 c13"
       >
         <div
-          className="c11"
+          className="c14"
         >
           <h2
-            className="c12"
+            className="c15"
           >
             Add new agent
           </h2>
           <div
-            className="c13"
+            className="c16"
           >
             <div
-              className="c14"
+              className="c17"
             >
               <div
-                className="c15"
+                className="c18"
               >
                 <button
-                  className="c16 c17"
+                  className="c7 c9 c19 c20"
                   onClick={[Function]}
                 >
                   <h3
-                    className="c18"
+                    className="c21"
                   >
                     Directly on target machine.
                   </h3>
                   <p
-                    className="c19"
+                    className="c22"
                   >
                     You have the correct permissions to download the binary directly on the target machine.
                   </p>
                 </button>
               </div>
               <div
-                className="c20"
+                className="c23"
               >
                 <button
-                  className="c16 c17"
+                  className="c7 c9 c19 c20"
                   onClick={[Function]}
                 >
                   <h3
-                    className="c18"
+                    className="c21"
                   >
                     Manual upload
                   </h3>
                   <p
-                    className="c19"
+                    className="c22"
                   >
                     You download and upload the binary yourself.
                   </p>
@@ -472,6 +427,40 @@ exports[`navbar handles add agent modal 1`] = `
 `;
 
 exports[`navbar handles add agent modal 2`] = `
+.c7 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c7:hover {
+  opacity: 0.90;
+}
+
+.c7:focus {
+  outline: none;
+}
+
+.c7:active {
+  opacity: 0.80;
+}
+
+.c7:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c9 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
 .c5 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -539,69 +528,15 @@ exports[`navbar handles add agent modal 2`] = `
   grid-column: logo;
 }
 
-.c8 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
+.c10 {
   grid-column: logout;
   float: right;
   max-width: 100px;
 }
 
-.c8:hover {
-  opacity: 0.90;
-}
-
-.c8:focus {
-  outline: none;
-}
-
-.c8:active {
-  opacity: 0.80;
-}
-
-.c8:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c7 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
+.c8 {
   grid-column: new-agent;
   max-width: 250px;
-}
-
-.c7:hover {
-  opacity: 0.90;
-}
-
-.c7:focus {
-  outline: none;
-}
-
-.c7:active {
-  opacity: 0.80;
-}
-
-.c7:disabled:hover {
-  opacity: 1;
-  cursor: auto;
 }
 
 @media (max-width:47.9375em) {
@@ -676,7 +611,7 @@ exports[`navbar handles add agent modal 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c8 {
+  .c10 {
     grid-column: main;
     grid-row: logout;
     max-width: 100%;
@@ -684,7 +619,7 @@ exports[`navbar handles add agent modal 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c8 {
     grid-column: main;
     grid-row: new-agent;
     max-width: 100%;
@@ -719,14 +654,14 @@ exports[`navbar handles add agent modal 2`] = `
       </a>
     </div>
     <button
-      className="c7"
+      className="c7 c8"
       id="newAgentButton"
       onClick={[Function]}
     >
       Add new agent
     </button>
     <button
-      className="c8"
+      className="c7 c9 c10"
       id="logoutButton"
       onClick={[Function]}
     >
@@ -737,6 +672,40 @@ exports[`navbar handles add agent modal 2`] = `
 `;
 
 exports[`navbar render admin link for admins 1`] = `
+.c7 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c7:hover {
+  opacity: 0.90;
+}
+
+.c7:focus {
+  outline: none;
+}
+
+.c7:active {
+  opacity: 0.80;
+}
+
+.c7:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c9 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
 .c5 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -804,69 +773,15 @@ exports[`navbar render admin link for admins 1`] = `
   grid-column: logo;
 }
 
-.c8 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
+.c10 {
   grid-column: logout;
   float: right;
   max-width: 100px;
 }
 
-.c8:hover {
-  opacity: 0.90;
-}
-
-.c8:focus {
-  outline: none;
-}
-
-.c8:active {
-  opacity: 0.80;
-}
-
-.c8:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c7 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
+.c8 {
   grid-column: new-agent;
   max-width: 250px;
-}
-
-.c7:hover {
-  opacity: 0.90;
-}
-
-.c7:focus {
-  outline: none;
-}
-
-.c7:active {
-  opacity: 0.80;
-}
-
-.c7:disabled:hover {
-  opacity: 1;
-  cursor: auto;
 }
 
 @media (max-width:47.9375em) {
@@ -925,7 +840,7 @@ exports[`navbar render admin link for admins 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c8 {
+  .c10 {
     grid-column: main;
     grid-row: logout;
     max-width: 100%;
@@ -933,7 +848,7 @@ exports[`navbar render admin link for admins 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c8 {
     grid-column: main;
     grid-row: new-agent;
     max-width: 100%;
@@ -975,14 +890,14 @@ exports[`navbar render admin link for admins 1`] = `
       </a>
     </div>
     <button
-      className="c7"
+      className="c7 c8"
       id="newAgentButton"
       onClick={[Function]}
     >
       Add new agent
     </button>
     <button
-      className="c8"
+      className="c7 c9 c10"
       id="logoutButton"
       onClick={[Function]}
     >
@@ -993,6 +908,40 @@ exports[`navbar render admin link for admins 1`] = `
 `;
 
 exports[`navbar renders correctly 1`] = `
+.c7 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c7:hover {
+  opacity: 0.90;
+}
+
+.c7:focus {
+  outline: none;
+}
+
+.c7:active {
+  opacity: 0.80;
+}
+
+.c7:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c9 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
 .c5 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1060,69 +1009,15 @@ exports[`navbar renders correctly 1`] = `
   grid-column: logo;
 }
 
-.c8 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
+.c10 {
   grid-column: logout;
   float: right;
   max-width: 100px;
 }
 
-.c8:hover {
-  opacity: 0.90;
-}
-
-.c8:focus {
-  outline: none;
-}
-
-.c8:active {
-  opacity: 0.80;
-}
-
-.c8:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c7 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
+.c8 {
   grid-column: new-agent;
   max-width: 250px;
-}
-
-.c7:hover {
-  opacity: 0.90;
-}
-
-.c7:focus {
-  outline: none;
-}
-
-.c7:active {
-  opacity: 0.80;
-}
-
-.c7:disabled:hover {
-  opacity: 1;
-  cursor: auto;
 }
 
 @media (max-width:47.9375em) {
@@ -1181,7 +1076,7 @@ exports[`navbar renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c8 {
+  .c10 {
     grid-column: main;
     grid-row: logout;
     max-width: 100%;
@@ -1189,7 +1084,7 @@ exports[`navbar renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c8 {
     grid-column: main;
     grid-row: new-agent;
     max-width: 100%;
@@ -1224,14 +1119,14 @@ exports[`navbar renders correctly 1`] = `
       </a>
     </div>
     <button
-      className="c7"
+      className="c7 c8"
       id="newAgentButton"
       onClick={[Function]}
     >
       Add new agent
     </button>
     <button
-      className="c8"
+      className="c7 c9 c10"
       id="logoutButton"
       onClick={[Function]}
     >
