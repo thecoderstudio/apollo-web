@@ -59,15 +59,15 @@ describe('navbar', () => {
   it('toggles collapsed', () => {
     const component = getComponent(store);
     const root = component.root;
-    const toggle = root.findByType('i')
-    const menu = root.findByType(PlainNavBar)
+    const toggle = root.findByType('i');
+    const menu = root.findByType(PlainNavBar);
     toggle.props.onClick();
     component.toJSON();
-    expect(menu.instance.state['collapsed']).toBe(false)
+    expect(menu.instance.state['collapsed']).toBe(false);
 
     toggle.props.onClick();
     component.toJSON();
-    expect(menu.instance.state['collapsed']).toBe(true)
+    expect(menu.instance.state['collapsed']).toBe(true);
   });
 
   it("render admin link for admins", () => {
