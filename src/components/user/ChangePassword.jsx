@@ -61,44 +61,44 @@ class ChangePassword extends React.PureComponent {
   }
 
   render() {
-  return (
-    <Formik
-      initialValues={{ password: '', passwordConfirm: '', oldPassword: ''}}
-      validationSchema={changePasswordSchema}
-      validateOnChange={false}
-      onSubmit={this.changePassword}>
-      {({ values, errors, handleChange, handleSubmit }) => (
-      <Form onSubmit={handleSubmit}>
-        <Input
-          name='oldPassword'
-          placeholder='Current password'
-          type='password'
-          value={values.oldPassword}
-          error={errors.oldPassword}
-          onChange={handleChange}
-        />
-        <Input
-          name='password'
-          type='password'
-          placeholder='New password'
-          value={values.password}
-          error={errors.password}
-          onChange={handleChange}
-        />
-        <Input
-          name='passwordConfirm'
-          type='password'
-          placeholder='Confirm new password'
-          value={values.passwordConfirm}
-          error={errors.passwordConfirm}
-          onChange={handleChange}
-        />
-        <StyledButton disabled={this.getDisabledButtonState(values) }>Change password</StyledButton>
-        <StyledOutlinedButton id='logoutButton' onClick={logout}>Cancel and logout</StyledOutlinedButton>
-      </Form>
-      )}
-    </Formik>
-  );
+    return (
+      <Formik
+        initialValues={{ password: '', passwordConfirm: '', oldPassword: ''}}
+        validationSchema={changePasswordSchema}
+        validateOnChange={false}
+        onSubmit={this.changePassword}>
+        {({ values, errors, handleChange, handleSubmit }) => (
+        <Form onSubmit={handleSubmit}>
+          <Input
+            name='oldPassword'
+            placeholder='Current password'
+            type='password'
+            value={values.oldPassword}
+            error={errors.oldPassword}
+            onChange={handleChange}
+          />
+          <Input
+            name='password'
+            type='password'
+            placeholder='New password'
+            value={values.password}
+            error={errors.password}
+            onChange={handleChange}
+          />
+          <Input
+            name='passwordConfirm'
+            type='password'
+            placeholder='Confirm new password'
+            value={values.passwordConfirm}
+            error={errors.passwordConfirm}
+            onChange={handleChange}
+          />
+          <StyledButton disabled={this.getDisabledButtonState(values) }>Change password</StyledButton>
+          <StyledOutlinedButton id='logoutButton' onClick={logout}>Cancel and logout</StyledOutlinedButton>
+        </Form>
+        )}
+      </Formik>
+    );
   }
 }
 
