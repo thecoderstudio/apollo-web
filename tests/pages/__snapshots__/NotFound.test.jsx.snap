@@ -93,6 +93,11 @@ exports[`not found renders correctly 1`] = `
   opacity: 0.80;
 }
 
+.c5:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
 @media (max-width:47.9375em) {
   .c0 {
     grid-template-columns: [content] 1fr;

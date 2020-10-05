@@ -28,6 +28,15 @@ exports[`inline terminal correctly renders connected 1`] = `
   opacity: 0.80;
 }
 
+.c1:disabled {
+  background-color: #3E3E3E;
+}
+
+.c1:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
 .c0 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
@@ -521,6 +530,15 @@ exports[`inline terminal disconnects 1`] = `
 
 .c1:active {
   opacity: 0.80;
+}
+
+.c1:disabled {
+  background-color: #3E3E3E;
+}
+
+.c1:disabled:hover {
+  opacity: 1;
+  cursor: auto;
 }
 
 .c0 {
