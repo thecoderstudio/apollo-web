@@ -8,12 +8,12 @@ import { handleError } from '../../actions/error';
 const Content = styled.div`
   display: grid;
   grid-template-rows: [title] 50px [list] 1fr;
-  width: 100%;
+  max-width: 100%;
   min-width: 0;
 
   background-color: ${props => props.theme.lightBlack};
   border-radius: 8px;
-  padding: 20px;
+  padding: 0px 16px;
 `;
 
 const ListTitle = styled.h2`
