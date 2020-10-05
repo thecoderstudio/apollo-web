@@ -34,15 +34,15 @@ class ChangePassword extends React.PureComponent {
   }
 
   changePassword(values, { setErrors }) {
-  axios.patch(
-    `${process.env.APOLLO_HTTP_URL}user/me`,
-      {
-        'old_password': values['oldPassword'],
-        'password': values['password'],
-        'password_confirm': values['passwordConfirm']
-      },
-    { withCredentials: true }
-  )
+    axios.patch(
+      `${process.env.APOLLO_HTTP_URL}user/me`,
+        {
+          'old_password': values['oldPassword'],
+          'password': values['password'],
+          'password_confirm': values['passwordConfirm']
+        },
+      { withCredentials: true }
+    )
     .then(_ => {
       fetchCurrentUser();
     })
