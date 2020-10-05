@@ -27,6 +27,11 @@ exports[`user list renders correctly 1`] = `
   opacity: 0.80;
 }
 
+.c3:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
 .c2 {
   margin: 0px 16px;
   display: -webkit-box;
@@ -128,6 +133,11 @@ exports[`user list renders correctly 2`] = `
 
 .c3:active {
   opacity: 0.80;
+}
+
+.c3:disabled:hover {
+  opacity: 1;
+  cursor: auto;
 }
 
 .c6 {

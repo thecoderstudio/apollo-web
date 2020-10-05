@@ -32,6 +32,5 @@ export function parseHTTPErrors(errorBody, httpToLocalMapping={}) {
       }
     }
   }
-
   return parsed;
 }
