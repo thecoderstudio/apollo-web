@@ -35,7 +35,7 @@ const NavigationBar = styled.div`
 const NavBarContent = styled.div`
   grid-column: content;
   display: grid;
-  grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px;
+  grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px [settings] 50px;
   grid-gap: 12px;
   height: auto;
 
@@ -141,6 +141,34 @@ const NewAgentButton = styled(Button)`
   }
 `;
 
+const SettingsIcon = styled.i`
+  grid-column: settings;
+  line-height: 50px;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: rotate(95deg);
+    cursor: pointer;
+  }
+
+  ${
+    media.phone`
+      display: none;
+    `
+  }
+`;
+
+const StyledSettingsLink = styled(StyledLink)`
+  display: none;
+
+  ${
+    media.phone`
+      display: inline;
+    `
+  }
+`;
+
 class NavBar extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -178,9 +206,11 @@ class NavBar extends React.PureComponent {
             {checkIfAdmin(this.props.currentUser) &&
               <StyledLink onClick={this.toggleCollapsed} to='/admin'>Admin</StyledLink>
             }
+            <StyledSettingsLink onClick={this.toggleCollapsed} to='/settings'>Settings</StyledSettingsLink>
           </Menu>
           <NewAgentButton id='newAgentButton' onClick={this.openAddAgentModal}>Add new agent</NewAgentButton>
           <Logout id='logoutButton' onClick={logout}>Logout</Logout>
+          <SettingsIcon className='fas fa-cog fa-lg' />
           {this.state.showAddAgent && <AddAgentModal onClose={this.closeAddAgentModal} />}
         </NavBarContent>
       </NavigationBar>
