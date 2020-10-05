@@ -69,7 +69,6 @@ describe('agentList', () => {
     });
   });
 
-
   it("correctly lists multiple agents", () => {
     const data = new Map();
     data.set('id', { id: "id", name: "name", connectionState: "connected" });

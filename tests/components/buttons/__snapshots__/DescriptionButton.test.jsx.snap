@@ -11,6 +11,12 @@ exports[`DescriptionButton renders correctly 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  display: grid;
+  grid-template-rows: [title] 50px [description] 1fr;
+  padding: 20px;
+  min-height: 180px;
 }
 
 .c0:hover {
@@ -25,42 +31,35 @@ exports[`DescriptionButton renders correctly 1`] = `
   opacity: 0.80;
 }
 
+.c0:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
 .c1 {
-  background-color: transparent;
-  border: 1px solid;
-}
-
-.c2 {
-  display: grid;
-  grid-template-rows: [title] 50px [description] 1fr;
-  padding: 20px;
-  min-height: 180px;
-}
-
-.c3 {
   grid-row: title;
   width: 80%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c4 {
+.c2 {
   grid-row: description;
   padding: 10px;
   font-size: 0.85rem;
 }
 
 <button
-  className="c0 c1 c2"
+  className="c0"
   onClick={[MockFunction]}
 >
   <h3
-    className="c3"
+    className="c1"
   >
     title
   </h3>
   <p
-    className="c4"
+    className="c2"
   >
     <div />
   </p>

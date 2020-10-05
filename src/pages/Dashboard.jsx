@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import AgentList from '../components/agent-list/AgentList';
 import media from '../util/media';
 
-
 const Content = styled.div`
   display: grid;
   grid-template-columns: [agent-listing] 1fr 1fr;

@@ -5,7 +5,9 @@ import waitForExpect from 'wait-for-expect';
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
 import NavBar, { NavBar as PlainNavBar } from '../../src/components/NavBar';
+import { store as globalStore } from '../../src/store';
 import { logout as logoutAction } from '../../src/actions/auth';
+import { removeCurrentUser } from '../../src/actions/current-user';
 
 const mockStore = configureStore([]);
 
@@ -21,13 +23,13 @@ function getComponent(store) {
 
 describe('navbar', () => {
   let store;
-  let spy;
+  let dispatchSpy;
 
   beforeEach(() => {
     store = mockStore({
       currentUser: {}
     });
-    spy = jest.spyOn(store, 'dispatch');
+    dispatchSpy = jest.spyOn(globalStore, 'dispatch');
   });
 
   it('renders correctly', () => {
@@ -35,15 +37,12 @@ describe('navbar', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('handles successful logout', async () => {
-    const component = getComponent(store);
-    const root = component.root;
-    root.findByProps({ id: 'logoutButton' }).props.onClick();
-    expect(component.toJSON()).toMatchSnapshot();
-
-    await waitForExpect(() => {
-      expect(spy).toHaveBeenCalledWith(logoutAction());
-    });
+  it("handles successful logout", () => {
+    let tree = getComponent(store);
+    const instance = tree.root;
+    instance.findByProps({id: 'logoutButton'}).props.onClick();
+    expect(dispatchSpy).toHaveBeenCalledWith(logoutAction());
+    expect(dispatchSpy).toHaveBeenCalledWith(removeCurrentUser());
   });
 
   it('handles add agent modal', async () => {
@@ -59,7 +58,7 @@ describe('navbar', () => {
   it('toggles collapsed', () => {
     const component = getComponent(store);
     const root = component.root;
-    const toggle = root.findByType('i');
+    const toggle = root.findByProps({id: 'collapseIcon'});
     const menu = root.findByType(PlainNavBar);
     toggle.props.onClick();
     component.toJSON();

@@ -43,10 +43,11 @@ const Error = styled.p`
 
 export default function Input(props) {
   const { className, error, ...rest } = props;
+  const hasError = error.length > 0;
   return (
     <Container className={className}>
-      <StyledInput hasError={error.length > 0} {...rest} />
-      { error !== '' && <Error>{error}</Error>}
+      <StyledInput hasError={hasError} {...rest} />
+      { hasError && <Error>{error}</Error>}
     </Container>
   );
 }

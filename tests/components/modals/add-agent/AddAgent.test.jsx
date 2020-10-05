@@ -16,6 +16,8 @@ function getComponent(spy, manualUpload=false) {
       manualUpload={manualUpload}
       selectedArchitecture='test'
       selectedOperatingSystem='test'
+      agentId='id'
+      secret='secret'
     />
   );
 }

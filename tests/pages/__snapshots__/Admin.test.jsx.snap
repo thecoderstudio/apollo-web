@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`user list renders correctly 1`] = `
-.c4 {
+.c3 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -11,32 +11,28 @@ exports[`user list renders correctly 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-}
-
-.c4:hover {
-  opacity: 0.90;
-}
-
-.c4:focus {
-  outline: none;
-}
-
-.c4:active {
-  opacity: 0.80;
-}
-
-.c5 {
   background-color: transparent;
   border: 1px solid;
 }
 
-.c1 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
+.c3:hover {
+  opacity: 0.90;
 }
 
-.c3 {
+.c3:focus {
+  outline: none;
+}
+
+.c3:active {
+  opacity: 0.80;
+}
+
+.c3:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c2 {
   margin: 0px 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -52,7 +48,7 @@ exports[`user list renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.c7 {
+.c5 {
   margin-top: 16px;
 }
 
@@ -60,12 +56,15 @@ exports[`user list renders correctly 1`] = `
   padding: 16px;
 }
 
-.c2 {
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
   padding: 8px 0px 0px;
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c4 {
     display: none;
   }
 }
@@ -77,17 +76,17 @@ exports[`user list renders correctly 1`] = `
     Admin dashboard
   </h1>
   <div
-    className="c1 c2"
+    className="c1"
   >
     <div>
       <div
-        className="c3"
+        className="c2"
       >
         <h2>
           Users
         </h2>
         <button
-          className="c4 c5"
+          className="c3"
           onClick={[Function]}
         >
           <i
@@ -95,14 +94,14 @@ exports[`user list renders correctly 1`] = `
           />
            
           <span
-            className="c6"
+            className="c4"
           >
             Create User
           </span>
         </button>
       </div>
       <div
-        className="c7"
+        className="c5"
       />
     </div>
   </div>
@@ -110,7 +109,7 @@ exports[`user list renders correctly 1`] = `
 `;
 
 exports[`user list renders correctly 2`] = `
-.c4 {
+.c3 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -120,36 +119,28 @@ exports[`user list renders correctly 2`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-}
-
-.c4:hover {
-  opacity: 0.90;
-}
-
-.c4:focus {
-  outline: none;
-}
-
-.c4:active {
-  opacity: 0.80;
-}
-
-.c5 {
   background-color: transparent;
   border: 1px solid;
 }
 
-.c1 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
+.c3:hover {
+  opacity: 0.90;
 }
 
-.c10 {
-  cursor: pointer;
+.c3:focus {
+  outline: none;
 }
 
-.c8 {
+.c3:active {
+  opacity: 0.80;
+}
+
+.c3:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c6 {
   min-height: 60px;
   padding: 0px 16px;
   margin: 0px;
@@ -161,11 +152,11 @@ exports[`user list renders correctly 2`] = `
   align-items: center;
 }
 
-.c9 {
+.c7 {
   margin: 0px;
 }
 
-.c12 {
+.c9 {
   float: right;
   width: 80px;
   padding: 4px;
@@ -174,13 +165,14 @@ exports[`user list renders correctly 2`] = `
   border-radius: 6px;
 }
 
-.c11 {
+.c8 {
+  cursor: pointer;
   float: right;
   margin-right: 10px;
   grid-column: 3;
 }
 
-.c3 {
+.c2 {
   margin: 0px 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -196,7 +188,7 @@ exports[`user list renders correctly 2`] = `
   justify-content: space-between;
 }
 
-.c7 {
+.c5 {
   margin-top: 16px;
 }
 
@@ -204,12 +196,15 @@ exports[`user list renders correctly 2`] = `
   padding: 16px;
 }
 
-.c2 {
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
   padding: 8px 0px 0px;
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c4 {
     display: none;
   }
 }
@@ -221,17 +216,17 @@ exports[`user list renders correctly 2`] = `
     Admin dashboard
   </h1>
   <div
-    className="c1 c2"
+    className="c1"
   >
     <div>
       <div
-        className="c3"
+        className="c2"
       >
         <h2>
           Users
         </h2>
         <button
-          className="c4 c5"
+          className="c3"
           onClick={[Function]}
         >
           <i
@@ -239,38 +234,38 @@ exports[`user list renders correctly 2`] = `
           />
            
           <span
-            className="c6"
+            className="c4"
           >
             Create User
           </span>
         </button>
       </div>
       <div
-        className="c7"
+        className="c5"
       >
         <div
-          className="c8"
+          className="c6"
         >
           <p
-            className="c9"
+            className="c7"
           >
             test
           </p>
           <i
-            className="c10 c11 far fa-trash-alt"
+            className="c8 far fa-trash-alt"
             onClick={[Function]}
           />
         </div>
         <div
-          className="c8"
+          className="c6"
         >
           <p
-            className="c9"
+            className="c7"
           >
             admin
           </p>
           <p
-            className="c12"
+            className="c9"
           >
             admin
           </p>

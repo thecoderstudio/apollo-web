@@ -23,6 +23,15 @@ const Button = styled.button`
   &:active {
     opacity: 0.80;
   }
+
+  &:disabled {
+    background-color: ${props => props.theme.darkGrey};
+
+    &:hover {
+      opacity: 1;
+      cursor: auto;
+    }
+  }
 `;
 
 export default Button;

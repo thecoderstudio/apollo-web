@@ -8,6 +8,7 @@ import { removeCurrentUser } from '../actions/current-user';
 import checkIfAdmin from '../util/admin';
 import OutlinedButton from './buttons/OutlinedButton';
 import AddAgentModal from './modals/add-agent/AddAgentModal';
+import { logout } from '../util/auth';
 import Link from './Link';
 
 const NavigationBar = styled.div`
@@ -175,6 +176,7 @@ class NavBar extends React.PureComponent {
       <NavigationBar collapsed={this.state.collapsed}>
         <Logo>Apollo</Logo>
         <MenuToggleIcon
+          id='collapseIcon'
           collapsed={this.state.collapsed}
           onClick={this.toggleCollapsed}
           className={this.state.collapsed ? 'fa fa-bars fa-lg' : 'fas fa-times fa-lg'}
@@ -187,7 +189,7 @@ class NavBar extends React.PureComponent {
             }
           </Menu>
           <NewAgentButton id='newAgentButton' onClick={this.openAddAgentModal}>Add new agent</NewAgentButton>
-          <Logout id='logoutButton' onClick={this.logout}>Logout</Logout>
+          <Logout id='logoutButton' onClick={logout}>Logout</Logout>
           {this.state.showAddAgent && <AddAgentModal onClose={this.closeAddAgentModal} />}
         </NavBarContent>
       </NavigationBar>

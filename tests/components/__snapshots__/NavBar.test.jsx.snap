@@ -1,36 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`navbar handles add agent modal 1`] = `
-.c7 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.c7:hover {
-  opacity: 0.90;
-}
-
-.c7:focus {
-  outline: none;
-}
-
-.c7:active {
-  opacity: 0.80;
-}
-
 .c9 {
-  background-color: transparent;
-  border: 1px solid;
-}
-
-.c11 {
   display: inline;
   position: fixed;
   top: 0;
@@ -40,33 +11,58 @@ exports[`navbar handles add agent modal 1`] = `
   z-index: 1;
 }
 
-.c19 {
+.c16 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
   display: grid;
   grid-template-rows: [title] 50px [description] 1fr;
   padding: 20px;
   min-height: 180px;
 }
 
-.c21 {
+.c16:hover {
+  opacity: 0.90;
+}
+
+.c16:focus {
+  outline: none;
+}
+
+.c16:active {
+  opacity: 0.80;
+}
+
+.c16:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c18 {
   grid-row: title;
   width: 80%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c22 {
+.c19 {
   grid-row: description;
   padding: 10px;
   font-size: 0.85rem;
 }
 
-.c12 {
+.c10 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
-}
-
-.c13 {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -77,7 +73,7 @@ exports[`navbar handles add agent modal 1`] = `
   width: 100%;
 }
 
-.c14 {
+.c11 {
   display: grid;
   grid-template-rows: [title] 50px [content] 1fr;
   height: 100%;
@@ -89,39 +85,39 @@ exports[`navbar handles add agent modal 1`] = `
   scrollbar-width: none;
 }
 
-.c14::-webkit-scrollbar {
+.c11::-webkit-scrollbar {
   display: none;
 }
 
-.c15 {
+.c12 {
   grid-row: title;
   width: 75%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c16 {
+.c13 {
   grid-row: content;
   padding: 20px;
 }
 
-.c17 {
+.c14 {
   display: grid;
   grid-template-columns: [column-one] 50% [column-two] 50%;
   margin: 20px 0px 20px 0px;
 }
 
-.c18 {
+.c15 {
   grid-column: column-one;
   margin-right: 10px;
 }
 
-.c23 {
+.c20 {
   grid-column: column-two;
   margin-left: 10px;
 }
 
-.c20 {
+.c17 {
   width: 100%;
 }
 
@@ -192,19 +188,73 @@ exports[`navbar handles add agent modal 1`] = `
   grid-column: logo;
 }
 
-.c10 {
+.c8 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
   grid-column: logout;
   float: right;
   max-width: 100px;
 }
 
-.c8 {
+.c8:hover {
+  opacity: 0.90;
+}
+
+.c8:focus {
+  outline: none;
+}
+
+.c8:active {
+  opacity: 0.80;
+}
+
+.c8:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c7 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
   grid-column: new-agent;
   max-width: 250px;
 }
 
+.c7:hover {
+  opacity: 0.90;
+}
+
+.c7:focus {
+  outline: none;
+}
+
+.c7:active {
+  opacity: 0.80;
+}
+
+.c7:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
 @media (max-width:47.9375em) {
-  .c13 {
+  .c10 {
     top: 0px;
     left: 0px;
     right: 0px;
@@ -218,14 +268,14 @@ exports[`navbar handles add agent modal 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c17 {
+  .c14 {
     grid-template-columns: [column-one] 100%;
     grid-template-rows: [row-one] 1fr [row-two] 1fr;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c18 {
+  .c15 {
     grid-row: row-one;
     margin-right: 0px;
     margin: 15px;
@@ -233,7 +283,7 @@ exports[`navbar handles add agent modal 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c23 {
+  .c20 {
     grid-column: column-one;
     grid-row: row-two;
     margin-left: 0px;
@@ -297,7 +347,7 @@ exports[`navbar handles add agent modal 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c10 {
+  .c8 {
     grid-column: main;
     grid-row: logout;
     max-width: 100%;
@@ -305,7 +355,7 @@ exports[`navbar handles add agent modal 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c8 {
+  .c7 {
     grid-column: main;
     grid-row: new-agent;
     max-width: 100%;
@@ -322,6 +372,7 @@ exports[`navbar handles add agent modal 1`] = `
   </div>
   <i
     className="c2 fa fa-bars fa-lg"
+    id="collapseIcon"
     onClick={[Function]}
   />
   <div
@@ -339,73 +390,73 @@ exports[`navbar handles add agent modal 1`] = `
       </a>
     </div>
     <button
-      className="c7 c8"
+      className="c7"
       id="newAgentButton"
       onClick={[Function]}
     >
       Add new agent
     </button>
     <button
-      className="c7 c9 c10"
+      className="c8"
       id="logoutButton"
       onClick={[Function]}
     >
       Logout
     </button>
     <div
-      className="c11"
+      className="c9"
       onClick={[Function]}
     >
       <div
-        className="c12 c13"
+        className="c10"
       >
         <div
-          className="c14"
+          className="c11"
         >
           <h2
-            className="c15"
+            className="c12"
           >
             Add new agent
           </h2>
           <div
-            className="c16"
+            className="c13"
           >
             <div
-              className="c17"
+              className="c14"
             >
               <div
-                className="c18"
+                className="c15"
               >
                 <button
-                  className="c7 c9 c19 c20"
+                  className="c16 c17"
                   onClick={[Function]}
                 >
                   <h3
-                    className="c21"
+                    className="c18"
                   >
                     Directly on target machine.
                   </h3>
                   <p
-                    className="c22"
+                    className="c19"
                   >
                     You have the correct permissions to download the binary directly on the target machine.
                   </p>
                 </button>
               </div>
               <div
-                className="c23"
+                className="c20"
               >
                 <button
-                  className="c7 c9 c19 c20"
+                  className="c16 c17"
                   onClick={[Function]}
                 >
                   <h3
-                    className="c21"
+                    className="c18"
                   >
                     Manual upload
                   </h3>
                   <p
-                    className="c22"
+                    className="c19"
                   >
                     You download and upload the binary yourself.
                   </p>
@@ -421,35 +472,6 @@ exports[`navbar handles add agent modal 1`] = `
 `;
 
 exports[`navbar handles add agent modal 2`] = `
-.c7 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.c7:hover {
-  opacity: 0.90;
-}
-
-.c7:focus {
-  outline: none;
-}
-
-.c7:active {
-  opacity: 0.80;
-}
-
-.c9 {
-  background-color: transparent;
-  border: 1px solid;
-}
-
 .c5 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -517,15 +539,69 @@ exports[`navbar handles add agent modal 2`] = `
   grid-column: logo;
 }
 
-.c10 {
+.c8 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
   grid-column: logout;
   float: right;
   max-width: 100px;
 }
 
-.c8 {
+.c8:hover {
+  opacity: 0.90;
+}
+
+.c8:focus {
+  outline: none;
+}
+
+.c8:active {
+  opacity: 0.80;
+}
+
+.c8:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c7 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
   grid-column: new-agent;
   max-width: 250px;
+}
+
+.c7:hover {
+  opacity: 0.90;
+}
+
+.c7:focus {
+  outline: none;
+}
+
+.c7:active {
+  opacity: 0.80;
+}
+
+.c7:disabled:hover {
+  opacity: 1;
+  cursor: auto;
 }
 
 @media (max-width:47.9375em) {
@@ -600,7 +676,7 @@ exports[`navbar handles add agent modal 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c10 {
+  .c8 {
     grid-column: main;
     grid-row: logout;
     max-width: 100%;
@@ -608,7 +684,7 @@ exports[`navbar handles add agent modal 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c8 {
+  .c7 {
     grid-column: main;
     grid-row: new-agent;
     max-width: 100%;
@@ -625,6 +701,7 @@ exports[`navbar handles add agent modal 2`] = `
   </div>
   <i
     className="c2 fa fa-bars fa-lg"
+    id="collapseIcon"
     onClick={[Function]}
   />
   <div
@@ -642,237 +719,14 @@ exports[`navbar handles add agent modal 2`] = `
       </a>
     </div>
     <button
-      className="c7 c8"
+      className="c7"
       id="newAgentButton"
       onClick={[Function]}
     >
       Add new agent
     </button>
     <button
-      className="c7 c9 c10"
-      id="logoutButton"
-      onClick={[Function]}
-    >
-      Logout
-    </button>
-  </div>
-</div>
-`;
-
-exports[`navbar handles successful logout 1`] = `
-.c7 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.c7:hover {
-  opacity: 0.90;
-}
-
-.c7:focus {
-  outline: none;
-}
-
-.c7:active {
-  opacity: 0.80;
-}
-
-.c9 {
-  background-color: transparent;
-  border: 1px solid;
-}
-
-.c5 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5:hover {
-  opacity: 0.90;
-}
-
-.c0 {
-  padding: 16px;
-  display: grid;
-  grid-template-columns: [logo] 200px [content] 1fr;
-  grid-gap: 16px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  z-index: 1;
-}
-
-.c3 {
-  grid-column: content;
-  display: grid;
-  grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px;
-  grid-gap: 12px;
-  height: auto;
-}
-
-.c2 {
-  grid-row: logo;
-  grid-column: toggle;
-  display: none;
-  position: relative;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
-  text-align: center;
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: -webkit-transform .3s ease-out;
-  -webkit-transition: transform .3s ease-out;
-  transition: transform .3s ease-out;
-}
-
-.c2:hover {
-  cursor: pointer;
-}
-
-.c6 {
-  maring-left: 16px;
-  margin-right: 16px;
-  float: left;
-}
-
-.c4 {
-  grid-column: menu;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.c1 {
-  grid-column: logo;
-}
-
-.c10 {
-  grid-column: logout;
-  float: right;
-  max-width: 100px;
-}
-
-.c8 {
-  grid-column: new-agent;
-  max-width: 250px;
-}
-
-@media (max-width:47.9375em) {
-  .c0 {
-    grid-template-columns: [main] 1fr [toggle] 24px;
-    grid-template-rows: [logo] 50px [content] 1fr;
-    position: static;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: static;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c3 {
-    display: none;
-    grid-column: main / -1;
-    grid-row: content;
-    height: 100%;
-    grid-template-columns: [main] 1fr;
-    grid-template-rows: [menu] 1fr [new-agent] 50px [logout] 50px;
-    maring-bottom: 32px;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c2 {
-    display: inline;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c6 {
-    width: 100%;
-    margin-bottom: 32px;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c4 {
-    -webkit-align-self: start;
-    -ms-flex-item-align: start;
-    align-self: start;
-    grid-column: main;
-    grid-row: menu;
-    margin-top: 32px;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c1 {
-    grid-column: main;
-    grid-row: logo;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c10 {
-    grid-column: main;
-    grid-row: logout;
-    max-width: 100%;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c8 {
-    grid-column: main;
-    grid-row: new-agent;
-    max-width: 100%;
-  }
-}
-
-<div
-  className="c0"
->
-  <div
-    className="c1"
-  >
-    Apollo
-  </div>
-  <i
-    className="c2 fa fa-bars fa-lg"
-    onClick={[Function]}
-  />
-  <div
-    className="c3"
-  >
-    <div
-      className="c4"
-    >
-      <a
-        className="c5 c6"
-        href="/"
-        onClick={[Function]}
-      >
-        Dashboard
-      </a>
-    </div>
-    <button
-      className="c7 c8"
-      id="newAgentButton"
-      onClick={[Function]}
-    >
-      Add new agent
-    </button>
-    <button
-      className="c7 c9 c10"
+      className="c8"
       id="logoutButton"
       onClick={[Function]}
     >
@@ -883,35 +737,6 @@ exports[`navbar handles successful logout 1`] = `
 `;
 
 exports[`navbar render admin link for admins 1`] = `
-.c7 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.c7:hover {
-  opacity: 0.90;
-}
-
-.c7:focus {
-  outline: none;
-}
-
-.c7:active {
-  opacity: 0.80;
-}
-
-.c9 {
-  background-color: transparent;
-  border: 1px solid;
-}
-
 .c5 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -979,15 +804,69 @@ exports[`navbar render admin link for admins 1`] = `
   grid-column: logo;
 }
 
-.c10 {
+.c8 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
   grid-column: logout;
   float: right;
   max-width: 100px;
 }
 
-.c8 {
+.c8:hover {
+  opacity: 0.90;
+}
+
+.c8:focus {
+  outline: none;
+}
+
+.c8:active {
+  opacity: 0.80;
+}
+
+.c8:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c7 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
   grid-column: new-agent;
   max-width: 250px;
+}
+
+.c7:hover {
+  opacity: 0.90;
+}
+
+.c7:focus {
+  outline: none;
+}
+
+.c7:active {
+  opacity: 0.80;
+}
+
+.c7:disabled:hover {
+  opacity: 1;
+  cursor: auto;
 }
 
 @media (max-width:47.9375em) {
@@ -1046,7 +925,7 @@ exports[`navbar render admin link for admins 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c10 {
+  .c8 {
     grid-column: main;
     grid-row: logout;
     max-width: 100%;
@@ -1054,7 +933,7 @@ exports[`navbar render admin link for admins 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c8 {
+  .c7 {
     grid-column: main;
     grid-row: new-agent;
     max-width: 100%;
@@ -1071,6 +950,7 @@ exports[`navbar render admin link for admins 1`] = `
   </div>
   <i
     className="c2 fa fa-bars fa-lg"
+    id="collapseIcon"
     onClick={[Function]}
   />
   <div
@@ -1095,14 +975,14 @@ exports[`navbar render admin link for admins 1`] = `
       </a>
     </div>
     <button
-      className="c7 c8"
+      className="c7"
       id="newAgentButton"
       onClick={[Function]}
     >
       Add new agent
     </button>
     <button
-      className="c7 c9 c10"
+      className="c8"
       id="logoutButton"
       onClick={[Function]}
     >
@@ -1113,35 +993,6 @@ exports[`navbar render admin link for admins 1`] = `
 `;
 
 exports[`navbar renders correctly 1`] = `
-.c7 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.c7:hover {
-  opacity: 0.90;
-}
-
-.c7:focus {
-  outline: none;
-}
-
-.c7:active {
-  opacity: 0.80;
-}
-
-.c9 {
-  background-color: transparent;
-  border: 1px solid;
-}
-
 .c5 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1209,15 +1060,69 @@ exports[`navbar renders correctly 1`] = `
   grid-column: logo;
 }
 
-.c10 {
+.c8 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
   grid-column: logout;
   float: right;
   max-width: 100px;
 }
 
-.c8 {
+.c8:hover {
+  opacity: 0.90;
+}
+
+.c8:focus {
+  outline: none;
+}
+
+.c8:active {
+  opacity: 0.80;
+}
+
+.c8:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c7 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
   grid-column: new-agent;
   max-width: 250px;
+}
+
+.c7:hover {
+  opacity: 0.90;
+}
+
+.c7:focus {
+  outline: none;
+}
+
+.c7:active {
+  opacity: 0.80;
+}
+
+.c7:disabled:hover {
+  opacity: 1;
+  cursor: auto;
 }
 
 @media (max-width:47.9375em) {
@@ -1276,7 +1181,7 @@ exports[`navbar renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c10 {
+  .c8 {
     grid-column: main;
     grid-row: logout;
     max-width: 100%;
@@ -1284,7 +1189,7 @@ exports[`navbar renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c8 {
+  .c7 {
     grid-column: main;
     grid-row: new-agent;
     max-width: 100%;
@@ -1301,6 +1206,7 @@ exports[`navbar renders correctly 1`] = `
   </div>
   <i
     className="c2 fa fa-bars fa-lg"
+    id="collapseIcon"
     onClick={[Function]}
   />
   <div
@@ -1318,14 +1224,14 @@ exports[`navbar renders correctly 1`] = `
       </a>
     </div>
     <button
-      className="c7 c8"
+      className="c7"
       id="newAgentButton"
       onClick={[Function]}
     >
       Add new agent
     </button>
     <button
-      className="c7 c9 c10"
+      className="c8"
       id="logoutButton"
       onClick={[Function]}
     >

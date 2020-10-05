@@ -25,7 +25,10 @@ describe('ProtectedRoute', () => {
 
   beforeEach(() => {
     store = mockStore({
-      authenticated: false
+      authenticated: false,
+      currentUser: {
+        hasChangedInitialPassword: true
+      }
     });
   });
 
@@ -39,7 +42,25 @@ describe('ProtectedRoute', () => {
     expect(tree).toMatchSnapshot();
 
     store = mockStore({
-      authenticated: true
+      authenticated: true,
+      currentUser: {
+        hasChangedInitialPassword: true
+      }
+    });
+
+    tree = getComponent(store).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('correctly handles authenticated and not password changed', () => {
+    let tree = getComponent(store).toJSON();
+    expect(tree).toMatchSnapshot();
+
+    store = mockStore({
+      authenticated: true,
+      currentUser: {
+        hasChangedInitialPassword: false
+      }
     });
 
     tree = getComponent(store).toJSON();
@@ -53,7 +74,8 @@ describe('ProtectedRoute', () => {
         username: 'admin',
         role: {
           name: 'admin'
-        }
+        },
+        hasChangedInitialPassword: true
       }
     });
 
@@ -68,7 +90,8 @@ describe('ProtectedRoute', () => {
       currentUser: {
         username: 'admin',
         role: null
-      }
+      },
+      hasChangedInitialPassword: true
     });
 
     const tree = getComponent(store, 'admin').toJSON();
