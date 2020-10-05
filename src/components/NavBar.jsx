@@ -2,9 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import media from '../util/media';
-import { logout as logoutAction } from '../actions/auth';
 import Button from './buttons/Button';
-import { removeCurrentUser } from '../actions/current-user';
 import checkIfAdmin from '../util/admin';
 import OutlinedButton from './buttons/OutlinedButton';
 import AddAgentModal from './modals/add-agent/AddAgentModal';
@@ -146,7 +144,6 @@ const NewAgentButton = styled(Button)`
 class NavBar extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.logout = this.logout.bind(this);
     this.openAddAgentModal = this.openAddAgentModal.bind(this);
     this.closeAddAgentModal = this.closeAddAgentModal.bind(this);
     this.toggleCollapsed = this.toggleCollapsed.bind(this);
