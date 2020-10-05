@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`app renders correctly authenticated 1`] = `
-.c6 {
+.c8 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -14,71 +14,104 @@ exports[`app renders correctly authenticated 1`] = `
   cursor: pointer;
 }
 
-.c6:hover {
+.c8:hover {
   opacity: 0.90;
 }
 
-.c6:focus {
+.c8:focus {
   outline: none;
 }
 
-.c6:active {
+.c8:active {
   opacity: 0.80;
 }
 
-.c8 {
+.c10 {
   background-color: transparent;
   border: 1px solid #4D02EE;
 }
 
-.c4 {
+.c6 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #F8F8F8;
 }
 
-.c4:hover {
+.c6:hover {
   opacity: 0.90;
 }
 
 .c1 {
-  height: 50px;
   padding: 16px;
+  background-color: #1B1B1B;
   display: grid;
-  grid-template-columns: [logo] 200px [menu] 1fr [new-agent] 250px [logout] 100px;
+  grid-template-columns: [logo] 200px [content] 1fr;
+  grid-gap: 16px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #1B1B1B;
+  z-index: 1;
 }
 
-.c5 {
-  margin-right: 16px;
+.c4 {
+  grid-column: content;
+  display: grid;
+  grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px;
+  grid-gap: 12px;
+  height: auto;
 }
 
 .c3 {
+  grid-row: logo;
+  grid-column: toggle;
+  display: none;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: -webkit-transform .3s ease-out;
+  -webkit-transition: transform .3s ease-out;
+  transition: transform .3s ease-out;
+}
+
+.c3:hover {
+  cursor: pointer;
+}
+
+.c7 {
+  maring-left: 16px;
+  margin-right: 16px;
+  float: left;
+}
+
+.c5 {
   grid-column: menu;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .c2 {
   grid-column: logo;
 }
 
-.c9 {
+.c11 {
   grid-column: logout;
   float: right;
-  width: 100px;
+  max-width: 100px;
 }
 
-.c7 {
+.c9 {
   grid-column: new-agent;
-  margin-left: 25px;
-  margin-right: 25px;
   max-width: 250px;
 }
 
-.c14 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -97,7 +130,7 @@ exports[`app renders correctly authenticated 1`] = `
   z-index: 2;
 }
 
-.c11 {
+.c13 {
   display: grid;
   grid-template-rows: [title] 50px [list] 1fr;
   width: 100%;
@@ -107,13 +140,13 @@ exports[`app renders correctly authenticated 1`] = `
   padding: 20px;
 }
 
-.c12 {
+.c14 {
   grid-row: title;
   width: 100%;
   min-width: 0;
 }
 
-.c13 {
+.c15 {
   width: 100%;
   min-width: 0;
   grid-row: list;
@@ -121,7 +154,7 @@ exports[`app renders correctly authenticated 1`] = `
   padding-left: 0;
 }
 
-.c10 {
+.c12 {
   display: grid;
   grid-template-columns: [agent-listing] 1fr 1fr;
   grid-template-rows: 1fr;
@@ -134,7 +167,78 @@ exports[`app renders correctly authenticated 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c10 {
+  .c1 {
+    grid-template-columns: [main] 1fr [toggle] 24px;
+    grid-template-rows: [logo] 50px [content] 1fr;
+    position: static;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: static;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c4 {
+    display: none;
+    grid-column: main / -1;
+    grid-row: content;
+    height: 100%;
+    grid-template-columns: [main] 1fr;
+    grid-template-rows: [menu] 1fr [new-agent] 50px [logout] 50px;
+    maring-bottom: 32px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    display: inline;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c7 {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c5 {
+    -webkit-align-self: start;
+    -ms-flex-item-align: start;
+    align-self: start;
+    grid-column: main;
+    grid-row: menu;
+    margin-top: 32px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c2 {
+    grid-column: main;
+    grid-row: logo;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c11 {
+    grid-column: main;
+    grid-row: logout;
+    max-width: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c9 {
+    grid-column: main;
+    grid-row: new-agent;
+    max-width: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c12 {
     grid-template-columns: [agent-listing] 1fr;
   }
 }
@@ -151,52 +255,60 @@ exports[`app renders correctly authenticated 1`] = `
       >
         Apollo
       </div>
+      <i
+        className="c3 fa fa-bars fa-lg"
+        onClick={[Function]}
+      />
       <div
-        className="c3"
+        className="c4"
       >
-        <a
-          className="c4 c5"
-          href="/"
+        <div
+          className="c5"
+        >
+          <a
+            className="c6 c7"
+            href="/"
+            onClick={[Function]}
+          >
+            Dashboard
+          </a>
+        </div>
+        <button
+          className="c8 c9"
+          id="newAgentButton"
           onClick={[Function]}
         >
-          Dashboard
-        </a>
+          Add new agent
+        </button>
+        <button
+          className="c8 c10 c11"
+          id="logoutButton"
+          onClick={[Function]}
+        >
+          Logout
+        </button>
       </div>
-      <button
-        className="c6 c7"
-        id="newAgentButton"
-        onClick={[Function]}
-      >
-        Add new agent
-      </button>
-      <button
-        className="c6 c8 c9"
-        id="logoutButton"
-        onClick={[Function]}
-      >
-        Logout
-      </button>
     </div>
     <div>
       <div
-        className="c10"
+        className="c12"
       >
         <div
-          className="c11"
+          className="c13"
         >
           <h2
-            className="c12"
+            className="c14"
           >
             Agents
           </h2>
           <ul
-            className="c13"
+            className="c15"
           />
         </div>
       </div>
     </div>
     <span
-      className="c14"
+      className="c16"
     />
   </div>
 </div>

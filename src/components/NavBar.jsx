@@ -65,6 +65,7 @@ const MenuToggleIcon = styled.i`
   text-align: center;
   transform: ${props => props.collapsed ? 'rotate(0deg)' : 'rotate(90deg)'};
   transition: transform .3s ease-out;
+
   ${
     media.phone`
       display: inline;
@@ -148,7 +149,7 @@ class NavBar extends React.PureComponent {
     this.openAddAgentModal = this.openAddAgentModal.bind(this);
     this.closeAddAgentModal = this.closeAddAgentModal.bind(this);
     this.toggleCollapsed = this.toggleCollapsed.bind(this);
-    this.state = { showAddAgent: false, collapsed: false };
+    this.state = { showAddAgent: false, collapsed: true };
   }
 
   openAddAgentModal() {
@@ -173,7 +174,11 @@ class NavBar extends React.PureComponent {
     return (
       <NavigationBar collapsed={this.state.collapsed}>
         <Logo>Apollo</Logo>
-        <MenuToggleIcon collapsed={this.state.collapsed} onClick={this.toggleCollapsed} className={this.state.collapsed ? 'fa fa-bars fa-lg' : 'fas fa-times fa-lg'}/>
+        <MenuToggleIcon
+          collapsed={this.state.collapsed}
+          onClick={this.toggleCollapsed}
+          className={this.state.collapsed ? 'fa fa-bars fa-lg' : 'fas fa-times fa-lg'}
+        />
         <NavBarContent collapsed={this.state.collapsed}>
           <Menu>
             <StyledLink onClick={this.toggleCollapsed} to='/'>Dashboard</StyledLink>
