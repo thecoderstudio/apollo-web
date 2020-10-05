@@ -141,7 +141,7 @@ const NewAgentButton = styled(Button)`
   }
 `;
 
-const SettingsIcon = styled.i`
+const SettingsIcon = styled(Link)`
   grid-column: settings;
   line-height: 50px;
   margin: 0 auto;

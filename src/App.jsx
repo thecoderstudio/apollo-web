@@ -12,6 +12,7 @@ import TerminalPage from './pages/TerminalPage';
 import Admin from './pages/Admin';
 import NotFound from './pages/NotFound';
 import { darkTheme } from './theme';
+import UserSettings from './pages/settings/UserSettings';
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=B612:wght@400;500,700&family=Roboto:wght@300;400&display=swap');
@@ -52,6 +53,7 @@ function App(props) {
               <ProtectedRoute exact path='/agent/:agentId/shell' component={TerminalPage} fallbackComponent={NotFound} />
               <ProtectedRoute exact path='/agent/:agentId' component={AgentDetail} fallbackComponent={NotFound} />
               <ProtectedRoute exact path='/admin' component={Admin} fallbackComponent={NotFound} role='admin' />
+              <ProtectedRoute exact path='/settings/user_settings' component={UserSettings} fallbackComponent={NotFound} />
               <Route component={NotFound} />
             </Switch>
             <Notifications />
