@@ -28,8 +28,9 @@ describe('app', () => {
 
   it("renders correctly authenticated", () => {
     const store = mockStore({
-      agent: [],
       authenticated: true,
+      agent: [],
+      notifications: new Map({}),
       currentUser: {
         hasChangedInitialPassword: false
       },

@@ -6,7 +6,9 @@ Enzyme.configure({ adapter: new Adapter() });
 
 process.env = {
   APOLLO_WS_URL: 'ws://localhost:1234/',
-  APOLLO_HTTP_URL: 'http://localhost:1234/'
+  APOLLO_HTTP_URL: 'http://localhost:1234/',
+  APOLLO_BASE_HTTP_URL: 'http://localhost:',
+  APOLLO_PORT: '1234'
 };
 Object.defineProperty(window, 'matchMedia', {
   writable: true,

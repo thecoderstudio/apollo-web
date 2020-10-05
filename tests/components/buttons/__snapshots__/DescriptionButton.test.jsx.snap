@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`DescriptionButton renders correctly 1`] = `
 .c0 {
   max-height: 50px;
   padding: 12px;
@@ -35,9 +35,39 @@ exports[`renders correctly 1`] = `
   border: 1px solid;
 }
 
+.c2 {
+  display: grid;
+  grid-template-rows: [title] 50px [description] 1fr;
+  padding: 20px;
+  min-height: 180px;
+}
+
+.c3 {
+  grid-row: title;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c4 {
+  grid-row: description;
+  padding: 10px;
+  font-size: 0.85rem;
+}
+
 <button
-  className="c0 c1"
+  className="c0 c1 c2"
+  onClick={[MockFunction]}
 >
-  Test
+  <h3
+    className="c3"
+  >
+    title
+  </h3>
+  <p
+    className="c4"
+  >
+    <div />
+  </p>
 </button>
 `;

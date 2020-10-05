@@ -1,0 +1,1376 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`add Agent Modal renders add agent correctly 1`] = `
+.c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.c9 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c9:hover {
+  opacity: 0.90;
+}
+
+.c9:focus {
+  outline: none;
+}
+
+.c9:active {
+  opacity: 0.80;
+}
+
+.c9:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c18 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.c10 {
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c14 {
+  grid-template-columns: [textfield] 1fr [copy] 50px;
+  display: grid;
+  height: 50px;
+}
+
+.c15 {
+  grid-column: textfield;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  padding: 15px;
+  overflow: auto;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.c15::-webkit-scrollbar {
+  background: transparent;
+}
+
+.c16 {
+  grid-column: copy;
+  height: 100%;
+}
+
+.c17 {
+  text-align: center;
+  display: block;
+}
+
+.c6 {
+  display: grid;
+  grid-template-columns: [column-one] 50% [column-two] 50%;
+  margin: 20px 0px 20px 0px;
+}
+
+.c7 {
+  grid-column: column-one;
+  margin-right: 10px;
+}
+
+.c8 {
+  grid-column: column-two;
+  margin-left: 10px;
+}
+
+.c19 {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c11 {
+  float: right;
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c12 {
+  display: grid;
+  grid-template-rows: [description] 1fr [commands] 1fr [button] 1fr;
+}
+
+.c20 {
+  grid-row: button;
+  margin-top: 20px;
+}
+
+.c13 {
+  grid-row: description;
+  margin: 20px 0px 20px 0px;
+}
+
+.c2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 600px;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+
+.c3 {
+  display: grid;
+  grid-template-rows: [title] 50px [content] 1fr;
+  height: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  -webkit-scrollbar-width: none;
+  -moz-scrollbar-width: none;
+  -ms-scrollbar-width: none;
+  scrollbar-width: none;
+}
+
+.c3::-webkit-scrollbar {
+  display: none;
+}
+
+.c4 {
+  grid-row: title;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c5 {
+  grid-row: content;
+  padding: 20px;
+}
+
+@media (max-width:47.9375em) {
+  .c6 {
+    grid-template-columns: [column-one] 100%;
+    grid-template-rows: [row-one] 1fr [row-two] 1fr;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c7 {
+    grid-row: row-one;
+    margin-right: 0px;
+    margin: 15px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c8 {
+    grid-column: column-one;
+    grid-row: row-two;
+    margin-left: 0px;
+    margin: 15px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c11 {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c2 {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 15px 0px 15px 0px;
+    width: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+<div
+  className="c0"
+  onClick={[Function]}
+>
+  <div
+    className="c1 c2"
+  >
+    <div
+      className="c3"
+    >
+      <h2
+        className="c4"
+      >
+        Add new agent
+      </h2>
+      <div
+        className="c5"
+      >
+        <div>
+          <div
+            className="c6"
+          >
+            <div
+              className="c7"
+            >
+              Download the binary and upload it to the target machine.
+            </div>
+            <div
+              className="c8"
+            >
+              <button
+                className="c9 c10 c11"
+                onClick={[Function]}
+              >
+                Download binary
+              </button>
+            </div>
+          </div>
+          <div
+            className="c12"
+          >
+            <p
+              className="c13"
+            >
+              Copy and run the command on the target machine to download run the client.
+            </p>
+            <div
+              className="c14"
+            >
+              <div
+                className="c15"
+              >
+                chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=undefined --secret=undefined --host=http://localhost:1234
+              </div>
+              <button
+                className="c9 c16"
+                id="copyToClipboardButton"
+                onClick={[Function]}
+              >
+                <i
+                  className="c17 fas fa-copy"
+                />
+              </button>
+            </div>
+            <button
+              className="c9 c18 c19 c20"
+              id="closeButton"
+              onClick={[MockFunction]}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`add Agent Modal renders correctly 1`] = `
+.c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.c8 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c8:hover {
+  opacity: 0.90;
+}
+
+.c8:focus {
+  outline: none;
+}
+
+.c8:active {
+  opacity: 0.80;
+}
+
+.c8:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c9 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c10 {
+  display: grid;
+  grid-template-rows: [title] 50px [description] 1fr;
+  padding: 20px;
+  min-height: 180px;
+}
+
+.c12 {
+  grid-row: title;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c13 {
+  grid-row: description;
+  padding: 10px;
+  font-size: 0.85rem;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.c2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 600px;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+
+.c3 {
+  display: grid;
+  grid-template-rows: [title] 50px [content] 1fr;
+  height: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  -webkit-scrollbar-width: none;
+  -moz-scrollbar-width: none;
+  -ms-scrollbar-width: none;
+  scrollbar-width: none;
+}
+
+.c3::-webkit-scrollbar {
+  display: none;
+}
+
+.c4 {
+  grid-row: title;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c5 {
+  grid-row: content;
+  padding: 20px;
+}
+
+.c6 {
+  display: grid;
+  grid-template-columns: [column-one] 50% [column-two] 50%;
+  margin: 20px 0px 20px 0px;
+}
+
+.c7 {
+  grid-column: column-one;
+  margin-right: 10px;
+}
+
+.c14 {
+  grid-column: column-two;
+  margin-left: 10px;
+}
+
+.c11 {
+  width: 100%;
+}
+
+@media (max-width:47.9375em) {
+  .c2 {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 15px 0px 15px 0px;
+    width: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c6 {
+    grid-template-columns: [column-one] 100%;
+    grid-template-rows: [row-one] 1fr [row-two] 1fr;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c7 {
+    grid-row: row-one;
+    margin-right: 0px;
+    margin: 15px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c14 {
+    grid-column: column-one;
+    grid-row: row-two;
+    margin-left: 0px;
+    margin: 15px;
+  }
+}
+
+<div
+  className="c0"
+  onClick={[Function]}
+>
+  <div
+    className="c1 c2"
+  >
+    <div
+      className="c3"
+    >
+      <h2
+        className="c4"
+      >
+        Add new agent
+      </h2>
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        >
+          <div
+            className="c7"
+          >
+            <button
+              className="c8 c9 c10 c11"
+              onClick={[Function]}
+            >
+              <h3
+                className="c12"
+              >
+                Directly on target machine.
+              </h3>
+              <p
+                className="c13"
+              >
+                You have the correct permissions to download the binary directly on the target machine.
+              </p>
+            </button>
+          </div>
+          <div
+            className="c14"
+          >
+            <button
+              className="c8 c9 c10 c11"
+              onClick={[Function]}
+            >
+              <h3
+                className="c12"
+              >
+                Manual upload
+              </h3>
+              <p
+                className="c13"
+              >
+                You download and upload the binary yourself.
+              </p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`add Agent Modal selects directly correctly 1`] = `
+.c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.c17 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c17:hover {
+  opacity: 0.90;
+}
+
+.c17:focus {
+  outline: none;
+}
+
+.c17:active {
+  opacity: 0.80;
+}
+
+.c17:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c18 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.c20 {
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c12 {
+  position: relative;
+}
+
+.c14 {
+  border: none;
+  border-radius: 5px;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c15 {
+  border-color: white transparent;
+  border-style: solid;
+  float: right;
+  margin-top: 5px;
+  border-width: 7px 7px 0px 7px;
+  height: 0px;
+  width: 0px;
+  margin-left: 10px;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.c9 {
+  height: 80px;
+}
+
+.c11 {
+  min-height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+  border: 1px solid transparent;
+}
+
+.c11:focus {
+  outline: none;
+  border: 1px solid;
+}
+
+.c16 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 20px 0px 20px 0px;
+}
+
+.c6 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: [text] 50% [dropdown] 50%;
+  height: 100px;
+}
+
+.c8 {
+  grid-column: dropdown;
+}
+
+.c13 {
+  width: 200px;
+  float: right;
+}
+
+.c7 {
+  grid-column: text;
+  line-height: 75px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.c21 {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c10 {
+  font-family: 'B612',sans-serif;
+  font-weight: 600;
+  width: 200px;
+  float: right;
+}
+
+.c19 {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 600px;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+
+.c3 {
+  display: grid;
+  grid-template-rows: [title] 50px [content] 1fr;
+  height: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  -webkit-scrollbar-width: none;
+  -moz-scrollbar-width: none;
+  -ms-scrollbar-width: none;
+  scrollbar-width: none;
+}
+
+.c3::-webkit-scrollbar {
+  display: none;
+}
+
+.c4 {
+  grid-row: title;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c5 {
+  grid-row: content;
+  padding: 20px;
+}
+
+@media (max-width:47.9375em) {
+  .c16 {
+    grid-template-columns: [column-one] 100%;
+    grid-template-rows: [row-one] 1fr [row-two] 1fr;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c6 {
+    height: 120px;
+    grid-template-columns: [column-one] 100%;
+    grid-template-rows: [text] 30px [dropdown] 85px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c8 {
+    grid-column: column-one;
+    grid-row: dropdown;
+    width: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c13 {
+    width: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c7 {
+    width: 100%;
+    line-height: 100%;
+    grid-column: column-one;
+    grid-row: text;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c21 {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c10 {
+    width: 100%;
+    grid-row: row-two;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c19 {
+    width: 100%;
+    grid-row: row-two;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c2 {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 15px 0px 15px 0px;
+    width: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+<div
+  className="c0"
+  onClick={[Function]}
+>
+  <div
+    className="c1 c2"
+  >
+    <div
+      className="c3"
+    >
+      <h2
+        className="c4"
+      >
+        Add new agent
+      </h2>
+      <div
+        className="c5"
+      >
+        <form
+          onSubmit={[Function]}
+        >
+          <div
+            className="c6"
+          >
+            <p
+              className="c7"
+            >
+              Agent name
+            </p>
+            <div
+              className="c8"
+            >
+              <div
+                className="c9 c10"
+              >
+                <input
+                  className="c11"
+                  name="name"
+                  onChange={[Function]}
+                  placeholder="007"
+                  type="name"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            className="c6"
+          >
+            <p
+              className="c7"
+            >
+              Operating system
+            </p>
+            <div
+              className="c8"
+            >
+              <div
+                className="c12 c13"
+              >
+                <div
+                  className="c14"
+                  id="dropdown"
+                  onClick={[Function]}
+                >
+                  linux
+                  <div
+                    className="c15"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="c6"
+          >
+            <p
+              className="c7"
+            >
+              Architecture
+            </p>
+            <div
+              className="c8"
+            >
+              <div
+                className="c12 c13"
+              >
+                <div
+                  className="c14"
+                  id="dropdown"
+                  onClick={[Function]}
+                >
+                  amd64
+                  <div
+                    className="c15"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="c16"
+          >
+            <button
+              className="c17 c18 c19"
+              id="closeButton"
+              onClick={[MockFunction]}
+              type="button"
+            >
+              Cancel
+            </button>
+            <button
+              className="c17 c20 c21"
+              onClick={null}
+            >
+              Create agent
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`add Agent Modal selects manual correctly 1`] = `
+.c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.c17 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c17:hover {
+  opacity: 0.90;
+}
+
+.c17:focus {
+  outline: none;
+}
+
+.c17:active {
+  opacity: 0.80;
+}
+
+.c17:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c18 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.c20 {
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c12 {
+  position: relative;
+}
+
+.c14 {
+  border: none;
+  border-radius: 5px;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.c15 {
+  border-color: white transparent;
+  border-style: solid;
+  float: right;
+  margin-top: 5px;
+  border-width: 7px 7px 0px 7px;
+  height: 0px;
+  width: 0px;
+  margin-left: 10px;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.c9 {
+  height: 80px;
+}
+
+.c11 {
+  min-height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+  border: 1px solid transparent;
+}
+
+.c11:focus {
+  outline: none;
+  border: 1px solid;
+}
+
+.c16 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 20px 0px 20px 0px;
+}
+
+.c6 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: [text] 50% [dropdown] 50%;
+  height: 100px;
+}
+
+.c8 {
+  grid-column: dropdown;
+}
+
+.c13 {
+  width: 200px;
+  float: right;
+}
+
+.c7 {
+  grid-column: text;
+  line-height: 75px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.c21 {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c10 {
+  font-family: 'B612',sans-serif;
+  font-weight: 600;
+  width: 200px;
+  float: right;
+}
+
+.c19 {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 600px;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+
+.c3 {
+  display: grid;
+  grid-template-rows: [title] 50px [content] 1fr;
+  height: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  -webkit-scrollbar-width: none;
+  -moz-scrollbar-width: none;
+  -ms-scrollbar-width: none;
+  scrollbar-width: none;
+}
+
+.c3::-webkit-scrollbar {
+  display: none;
+}
+
+.c4 {
+  grid-row: title;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c5 {
+  grid-row: content;
+  padding: 20px;
+}
+
+@media (max-width:47.9375em) {
+  .c16 {
+    grid-template-columns: [column-one] 100%;
+    grid-template-rows: [row-one] 1fr [row-two] 1fr;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c6 {
+    height: 120px;
+    grid-template-columns: [column-one] 100%;
+    grid-template-rows: [text] 30px [dropdown] 85px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c8 {
+    grid-column: column-one;
+    grid-row: dropdown;
+    width: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c13 {
+    width: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c7 {
+    width: 100%;
+    line-height: 100%;
+    grid-column: column-one;
+    grid-row: text;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c21 {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c10 {
+    width: 100%;
+    grid-row: row-two;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c19 {
+    width: 100%;
+    grid-row: row-two;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c2 {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 15px 0px 15px 0px;
+    width: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+<div
+  className="c0"
+  onClick={[Function]}
+>
+  <div
+    className="c1 c2"
+  >
+    <div
+      className="c3"
+    >
+      <h2
+        className="c4"
+      >
+        Add new agent
+      </h2>
+      <div
+        className="c5"
+      >
+        <form
+          onSubmit={[Function]}
+        >
+          <div
+            className="c6"
+          >
+            <p
+              className="c7"
+            >
+              Agent name
+            </p>
+            <div
+              className="c8"
+            >
+              <div
+                className="c9 c10"
+              >
+                <input
+                  className="c11"
+                  name="name"
+                  onChange={[Function]}
+                  placeholder="007"
+                  type="name"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            className="c6"
+          >
+            <p
+              className="c7"
+            >
+              Operating system
+            </p>
+            <div
+              className="c8"
+            >
+              <div
+                className="c12 c13"
+              >
+                <div
+                  className="c14"
+                  id="dropdown"
+                  onClick={[Function]}
+                >
+                  linux
+                  <div
+                    className="c15"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="c6"
+          >
+            <p
+              className="c7"
+            >
+              Architecture
+            </p>
+            <div
+              className="c8"
+            >
+              <div
+                className="c12 c13"
+              >
+                <div
+                  className="c14"
+                  id="dropdown"
+                  onClick={[Function]}
+                >
+                  amd64
+                  <div
+                    className="c15"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="c16"
+          >
+            <button
+              className="c17 c18 c19"
+              id="closeButton"
+              onClick={[MockFunction]}
+              type="button"
+            >
+              Cancel
+            </button>
+            <button
+              className="c17 c20 c21"
+              onClick={null}
+            >
+              Create agent
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;

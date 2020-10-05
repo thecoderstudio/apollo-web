@@ -18,7 +18,8 @@ exports[`renders correctly 1`] = `
 }
 
 .c1:focus {
-  outline: none border:1px solid;
+  outline: none;
+  border: 1px solid;
 }
 
 <div

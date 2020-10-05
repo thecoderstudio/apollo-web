@@ -1,11 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`agent detail correctly syncs with remote 1`] = `
-.c10 {
+.c6 {
+  cursor: pointer;
+}
+
+.c8 {
+  cursor: inherit;
+}
+
+.c12 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
+}
+
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -21,7 +32,7 @@ exports[`agent detail correctly syncs with remote 1`] = `
   height: 400px;
 }
 
-.c11 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -71,25 +82,23 @@ exports[`agent detail correctly syncs with remote 1`] = `
   padding-right: 40px;
 }
 
-.c8 {
+.c10 {
   grid-column: controls;
   width: 100%;
   min-width: 0;
 }
 
-.c9 {
+.c11 {
   width: 100%;
 }
 
-.c6 {
-  cursor: pointer;
+.c7 {
   margin-right: 10px;
   color: #F8F8F8;
   cursor: inherit;
 }
 
-.c7 {
-  cursor: inherit;
+.c9 {
   margin-top: 16px;
   width: 24px;
   height: 24px;
@@ -98,13 +107,13 @@ exports[`agent detail correctly syncs with remote 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c9 {
+  .c11 {
     display: none;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c9 {
     display: block;
   }
 }
@@ -157,7 +166,7 @@ exports[`agent detail correctly syncs with remote 1`] = `
               className="c5"
             >
               <i
-                className="c6 fab fa-apple"
+                className="c6 c7 fab fa-apple"
               />
               darwin
             </td>
@@ -179,18 +188,18 @@ exports[`agent detail correctly syncs with remote 1`] = `
         </tbody>
       </table>
       <i
-        className="c7 fas fa-terminal"
+        className="c8 c9 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
     <div
-      className="c8"
+      className="c10"
     >
       <div
-        className="c9"
+        className="c11"
       >
         <div
-          className="c10"
+          className="c12 c13"
         >
           <div>
             <h2>
@@ -199,7 +208,7 @@ exports[`agent detail correctly syncs with remote 1`] = `
           </div>
         </div>
         <div
-          className="c11"
+          className="c14"
         />
       </div>
     </div>
@@ -208,11 +217,22 @@ exports[`agent detail correctly syncs with remote 1`] = `
 `;
 
 exports[`agent detail deals with property updates correctly 1`] = `
-.c10 {
+.c6 {
+  cursor: pointer;
+}
+
+.c8 {
+  cursor: inherit;
+}
+
+.c12 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
+}
+
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -228,7 +248,7 @@ exports[`agent detail deals with property updates correctly 1`] = `
   height: 400px;
 }
 
-.c11 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -278,25 +298,23 @@ exports[`agent detail deals with property updates correctly 1`] = `
   padding-right: 40px;
 }
 
-.c8 {
+.c10 {
   grid-column: controls;
   width: 100%;
   min-width: 0;
 }
 
-.c9 {
+.c11 {
   width: 100%;
 }
 
-.c6 {
-  cursor: pointer;
+.c7 {
   margin-right: 10px;
   color: #F8F8F8;
   cursor: inherit;
 }
 
-.c7 {
-  cursor: inherit;
+.c9 {
   margin-top: 16px;
   width: 24px;
   height: 24px;
@@ -305,13 +323,13 @@ exports[`agent detail deals with property updates correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c9 {
+  .c11 {
     display: none;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c9 {
     display: block;
   }
 }
@@ -364,7 +382,7 @@ exports[`agent detail deals with property updates correctly 1`] = `
               className="c5"
             >
               <i
-                className="c6 fab fa-apple"
+                className="c6 c7 fab fa-apple"
               />
               darwin
             </td>
@@ -386,18 +404,18 @@ exports[`agent detail deals with property updates correctly 1`] = `
         </tbody>
       </table>
       <i
-        className="c7 fas fa-terminal"
+        className="c8 c9 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
     <div
-      className="c8"
+      className="c10"
     >
       <div
-        className="c9"
+        className="c11"
       >
         <div
-          className="c10"
+          className="c12 c13"
         >
           <div>
             <h2>
@@ -406,7 +424,7 @@ exports[`agent detail deals with property updates correctly 1`] = `
           </div>
         </div>
         <div
-          className="c11"
+          className="c14"
         />
       </div>
     </div>
@@ -415,11 +433,22 @@ exports[`agent detail deals with property updates correctly 1`] = `
 `;
 
 exports[`agent detail handles sync failure 1`] = `
-.c10 {
+.c6 {
+  cursor: pointer;
+}
+
+.c8 {
+  cursor: inherit;
+}
+
+.c12 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
+}
+
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -435,7 +464,7 @@ exports[`agent detail handles sync failure 1`] = `
   height: 400px;
 }
 
-.c11 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -485,25 +514,23 @@ exports[`agent detail handles sync failure 1`] = `
   padding-right: 40px;
 }
 
-.c8 {
+.c10 {
   grid-column: controls;
   width: 100%;
   min-width: 0;
 }
 
-.c9 {
+.c11 {
   width: 100%;
 }
 
-.c6 {
-  cursor: pointer;
+.c7 {
   margin-right: 10px;
   color: #F8F8F8;
   cursor: inherit;
 }
 
-.c7 {
-  cursor: inherit;
+.c9 {
   margin-top: 16px;
   width: 24px;
   height: 24px;
@@ -512,13 +539,13 @@ exports[`agent detail handles sync failure 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c9 {
+  .c11 {
     display: none;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c9 {
     display: block;
   }
 }
@@ -571,7 +598,7 @@ exports[`agent detail handles sync failure 1`] = `
               className="c5"
             >
               <i
-                className="c6 fab fa-apple"
+                className="c6 c7 fab fa-apple"
               />
               darwin
             </td>
@@ -593,18 +620,18 @@ exports[`agent detail handles sync failure 1`] = `
         </tbody>
       </table>
       <i
-        className="c7 fas fa-terminal"
+        className="c8 c9 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
     <div
-      className="c8"
+      className="c10"
     >
       <div
-        className="c9"
+        className="c11"
       >
         <div
-          className="c10"
+          className="c12 c13"
         >
           <div>
             <h2>
@@ -613,7 +640,7 @@ exports[`agent detail handles sync failure 1`] = `
           </div>
         </div>
         <div
-          className="c11"
+          className="c14"
         />
       </div>
     </div>
@@ -622,11 +649,22 @@ exports[`agent detail handles sync failure 1`] = `
 `;
 
 exports[`agent detail opens terminal 1`] = `
-.c10 {
+.c6 {
+  cursor: pointer;
+}
+
+.c8 {
+  cursor: inherit;
+}
+
+.c12 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
+}
+
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -642,7 +680,7 @@ exports[`agent detail opens terminal 1`] = `
   height: 400px;
 }
 
-.c11 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -692,25 +730,23 @@ exports[`agent detail opens terminal 1`] = `
   padding-right: 40px;
 }
 
-.c8 {
+.c10 {
   grid-column: controls;
   width: 100%;
   min-width: 0;
 }
 
-.c9 {
+.c11 {
   width: 100%;
 }
 
-.c6 {
-  cursor: pointer;
+.c7 {
   margin-right: 10px;
   color: #F8F8F8;
   cursor: inherit;
 }
 
-.c7 {
-  cursor: inherit;
+.c9 {
   margin-top: 16px;
   width: 24px;
   height: 24px;
@@ -719,13 +755,13 @@ exports[`agent detail opens terminal 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c9 {
+  .c11 {
     display: none;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c9 {
     display: block;
   }
 }
@@ -778,7 +814,7 @@ exports[`agent detail opens terminal 1`] = `
               className="c5"
             >
               <i
-                className="c6 fab fa-apple"
+                className="c6 c7 fab fa-apple"
               />
               darwin
             </td>
@@ -800,18 +836,18 @@ exports[`agent detail opens terminal 1`] = `
         </tbody>
       </table>
       <i
-        className="c7 fas fa-terminal"
+        className="c8 c9 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
     <div
-      className="c8"
+      className="c10"
     >
       <div
-        className="c9"
+        className="c11"
       >
         <div
-          className="c10"
+          className="c12 c13"
         >
           <div>
             <h2>
@@ -820,7 +856,7 @@ exports[`agent detail opens terminal 1`] = `
           </div>
         </div>
         <div
-          className="c11"
+          className="c14"
         />
       </div>
     </div>
@@ -829,11 +865,22 @@ exports[`agent detail opens terminal 1`] = `
 `;
 
 exports[`agent detail opens terminal 2`] = `
-.c10 {
+.c6 {
+  cursor: pointer;
+}
+
+.c8 {
+  cursor: inherit;
+}
+
+.c12 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
+}
+
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -849,7 +896,7 @@ exports[`agent detail opens terminal 2`] = `
   height: 400px;
 }
 
-.c11 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -899,25 +946,23 @@ exports[`agent detail opens terminal 2`] = `
   padding-right: 40px;
 }
 
-.c8 {
+.c10 {
   grid-column: controls;
   width: 100%;
   min-width: 0;
 }
 
-.c9 {
+.c11 {
   width: 100%;
 }
 
-.c6 {
-  cursor: pointer;
+.c7 {
   margin-right: 10px;
   color: #F8F8F8;
   cursor: inherit;
 }
 
-.c7 {
-  cursor: inherit;
+.c9 {
   margin-top: 16px;
   width: 24px;
   height: 24px;
@@ -926,13 +971,13 @@ exports[`agent detail opens terminal 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c9 {
+  .c11 {
     display: none;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c9 {
     display: block;
   }
 }
@@ -985,7 +1030,7 @@ exports[`agent detail opens terminal 2`] = `
               className="c5"
             >
               <i
-                className="c6 fab fa-apple"
+                className="c6 c7 fab fa-apple"
               />
               darwin
             </td>
@@ -1007,18 +1052,18 @@ exports[`agent detail opens terminal 2`] = `
         </tbody>
       </table>
       <i
-        className="c7 fas fa-terminal"
+        className="c8 c9 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
     <div
-      className="c8"
+      className="c10"
     >
       <div
-        className="c9"
+        className="c11"
       >
         <div
-          className="c10"
+          className="c12 c13"
         >
           <div>
             <h2>
@@ -1027,7 +1072,7 @@ exports[`agent detail opens terminal 2`] = `
           </div>
         </div>
         <div
-          className="c11"
+          className="c14"
         />
       </div>
     </div>
@@ -1037,19 +1082,19 @@ exports[`agent detail opens terminal 2`] = `
 
 exports[`agent detail opens terminal 3`] = `
 <div
-  className="sc-fzoyAV faFNuJ"
+  className="sc-fFSRdu fJuSmP"
 >
   <div
-    className="sc-fzoLag dKaLSX"
+    className="sc-bkbjAj kdvJj"
   >
     <div
-      className="sc-fzpjYC bERkfJ"
+      className="sc-dIvqjp kdsKS"
     >
       <div
-        className="sc-fzoXzr cDTEvD"
+        className="sc-iemXMA gMFpiq"
       >
         <div
-          className="sc-fzoLsD jZMuGW"
+          className="sc-jrsJCI bmKhFO"
           color="#C0392B"
         />
         <h1>
@@ -1060,45 +1105,45 @@ exports[`agent detail opens terminal 3`] = `
         <tbody>
           <tr>
             <td
-              className="sc-fznxsB fiiqHo"
+              className="sc-hHEjAm cAPAWn"
             >
               <b>
                 External IP address
               </b>
             </td>
             <td
-              className="sc-fznxsB fiiqHo"
+              className="sc-hHEjAm cAPAWn"
             >
               unknown
             </td>
           </tr>
           <tr>
             <td
-              className="sc-fznxsB fiiqHo"
+              className="sc-hHEjAm cAPAWn"
             >
               <b>
                 Operating system
               </b>
             </td>
             <td
-              className="sc-fznxsB fiiqHo"
+              className="sc-hHEjAm cAPAWn"
             >
               <i
-                className="sc-AxjAm sc-fzoiQi cRRUVZ fab fa-apple"
+                className="sc-bdnylx sc-fKgIGh kAOcqP fxulcm fab fa-apple"
               />
               darwin
             </td>
           </tr>
           <tr>
             <td
-              className="sc-fznxsB fiiqHo"
+              className="sc-hHEjAm cAPAWn"
             >
               <b>
                 Architecture
               </b>
             </td>
             <td
-              className="sc-fznxsB fiiqHo"
+              className="sc-hHEjAm cAPAWn"
             >
               amd64
             </td>
@@ -1106,18 +1151,18 @@ exports[`agent detail opens terminal 3`] = `
         </tbody>
       </table>
       <i
-        className="sc-AxjAm sc-fzqARJ izbLyp fas fa-terminal"
+        className="sc-bdnylx sc-bCwgka iEWuNR hBmAar fas fa-terminal"
         onClick={[Function]}
       />
     </div>
     <div
-      className="sc-fznJRM dVTkwc"
+      className="sc-dlMBXb iyBSXJ"
     >
       <div
-        className="sc-fznWqX lnpakc"
+        className="sc-kfYqjs eCjTHj"
       >
         <div
-          className="sc-AxirZ sc-AxheI chvKGe"
+          className="sc-gtssRu sc-gKAblj gANPar bNgdcg"
         >
           <div>
             <h2>
@@ -1126,7 +1171,7 @@ exports[`agent detail opens terminal 3`] = `
           </div>
         </div>
         <div
-          className="sc-AxmLO lcomMa"
+          className="sc-fujyUd dWblrL"
         />
       </div>
     </div>
@@ -1135,11 +1180,22 @@ exports[`agent detail opens terminal 3`] = `
 `;
 
 exports[`agent detail renders correctly 1`] = `
-.c10 {
+.c6 {
+  cursor: pointer;
+}
+
+.c8 {
+  cursor: inherit;
+}
+
+.c12 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
+}
+
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1155,7 +1211,7 @@ exports[`agent detail renders correctly 1`] = `
   height: 400px;
 }
 
-.c11 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1205,25 +1261,23 @@ exports[`agent detail renders correctly 1`] = `
   padding-right: 40px;
 }
 
-.c8 {
+.c10 {
   grid-column: controls;
   width: 100%;
   min-width: 0;
 }
 
-.c9 {
+.c11 {
   width: 100%;
 }
 
-.c6 {
-  cursor: pointer;
+.c7 {
   margin-right: 10px;
   color: #F8F8F8;
   cursor: inherit;
 }
 
-.c7 {
-  cursor: inherit;
+.c9 {
   margin-top: 16px;
   width: 24px;
   height: 24px;
@@ -1232,13 +1286,13 @@ exports[`agent detail renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c9 {
+  .c11 {
     display: none;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c9 {
     display: block;
   }
 }
@@ -1291,7 +1345,7 @@ exports[`agent detail renders correctly 1`] = `
               className="c5"
             >
               <i
-                className="c6 fab fa-apple"
+                className="c6 c7 fab fa-apple"
               />
               darwin
             </td>
@@ -1313,18 +1367,18 @@ exports[`agent detail renders correctly 1`] = `
         </tbody>
       </table>
       <i
-        className="c7 fas fa-terminal"
+        className="c8 c9 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
     <div
-      className="c8"
+      className="c10"
     >
       <div
-        className="c9"
+        className="c11"
       >
         <div
-          className="c10"
+          className="c12 c13"
         >
           <div>
             <h2>
@@ -1333,7 +1387,7 @@ exports[`agent detail renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c11"
+          className="c14"
         />
       </div>
     </div>

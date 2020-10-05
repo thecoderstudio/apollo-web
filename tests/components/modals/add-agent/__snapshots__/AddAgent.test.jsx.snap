@@ -1,0 +1,491 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Agent closes modal correctly 1`] = `
+.c4 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c4:hover {
+  opacity: 0.90;
+}
+
+.c4:focus {
+  outline: none;
+}
+
+.c4:active {
+  opacity: 0.80;
+}
+
+.c4:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c7 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c2 {
+  grid-template-columns: [textfield] 1fr [copy] 50px;
+  display: grid;
+  height: 50px;
+}
+
+.c3 {
+  grid-column: textfield;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  padding: 15px;
+  overflow: auto;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.c3::-webkit-scrollbar {
+  background: transparent;
+}
+
+.c5 {
+  grid-column: copy;
+  height: 100%;
+}
+
+.c6 {
+  text-align: center;
+  display: block;
+}
+
+.c8 {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c0 {
+  display: grid;
+  grid-template-rows: [description] 1fr [commands] 1fr [button] 1fr;
+}
+
+.c9 {
+  grid-row: button;
+  margin-top: 20px;
+}
+
+.c1 {
+  grid-row: description;
+  margin: 20px 0px 20px 0px;
+}
+
+<div>
+  <div
+    className="c0"
+  >
+    <p
+      className="c1"
+    >
+      Copy and run the command on the target machine to download run the client.
+    </p>
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        curl http://localhost:1234/agent/download?target_os=test&target_arch=test &gt; apollo-agent.bin && chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=id --secret=secret --host=http://localhost:1234
+      </div>
+      <button
+        className="c4 c5"
+        id="copyToClipboardButton"
+        onClick={[Function]}
+      >
+        <i
+          className="c6 fas fa-copy"
+        />
+      </button>
+    </div>
+    <button
+      className="c4 c7 c8 c9"
+      id="closeButton"
+      onClick={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": undefined,
+            },
+          ],
+        }
+      }
+    >
+      Close
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Add Agent renders correctly 1`] = `
+.c4 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c4:hover {
+  opacity: 0.90;
+}
+
+.c4:focus {
+  outline: none;
+}
+
+.c4:active {
+  opacity: 0.80;
+}
+
+.c4:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c7 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c2 {
+  grid-template-columns: [textfield] 1fr [copy] 50px;
+  display: grid;
+  height: 50px;
+}
+
+.c3 {
+  grid-column: textfield;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  padding: 15px;
+  overflow: auto;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.c3::-webkit-scrollbar {
+  background: transparent;
+}
+
+.c5 {
+  grid-column: copy;
+  height: 100%;
+}
+
+.c6 {
+  text-align: center;
+  display: block;
+}
+
+.c8 {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c0 {
+  display: grid;
+  grid-template-rows: [description] 1fr [commands] 1fr [button] 1fr;
+}
+
+.c9 {
+  grid-row: button;
+  margin-top: 20px;
+}
+
+.c1 {
+  grid-row: description;
+  margin: 20px 0px 20px 0px;
+}
+
+<div>
+  <div
+    className="c0"
+  >
+    <p
+      className="c1"
+    >
+      Copy and run the command on the target machine to download run the client.
+    </p>
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        curl http://localhost:1234/agent/download?target_os=test&target_arch=test &gt; apollo-agent.bin && chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=id --secret=secret --host=http://localhost:1234
+      </div>
+      <button
+        className="c4 c5"
+        id="copyToClipboardButton"
+        onClick={[Function]}
+      >
+        <i
+          className="c6 fas fa-copy"
+        />
+      </button>
+    </div>
+    <button
+      className="c4 c7 c8 c9"
+      id="closeButton"
+      onClick={[MockFunction]}
+    >
+      Close
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Add Agent renders correctly 2`] = `
+.c3 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c3:hover {
+  opacity: 0.90;
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:active {
+  opacity: 0.80;
+}
+
+.c3:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c12 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c4 {
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c8 {
+  grid-template-columns: [textfield] 1fr [copy] 50px;
+  display: grid;
+  height: 50px;
+}
+
+.c9 {
+  grid-column: textfield;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  padding: 15px;
+  overflow: auto;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.c9::-webkit-scrollbar {
+  background: transparent;
+}
+
+.c10 {
+  grid-column: copy;
+  height: 100%;
+}
+
+.c11 {
+  text-align: center;
+  display: block;
+}
+
+.c0 {
+  display: grid;
+  grid-template-columns: [column-one] 50% [column-two] 50%;
+  margin: 20px 0px 20px 0px;
+}
+
+.c1 {
+  grid-column: column-one;
+  margin-right: 10px;
+}
+
+.c2 {
+  grid-column: column-two;
+  margin-left: 10px;
+}
+
+.c13 {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c5 {
+  float: right;
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c6 {
+  display: grid;
+  grid-template-rows: [description] 1fr [commands] 1fr [button] 1fr;
+}
+
+.c14 {
+  grid-row: button;
+  margin-top: 20px;
+}
+
+.c7 {
+  grid-row: description;
+  margin: 20px 0px 20px 0px;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    grid-template-columns: [column-one] 100%;
+    grid-template-rows: [row-one] 1fr [row-two] 1fr;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c1 {
+    grid-row: row-one;
+    margin-right: 0px;
+    margin: 15px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c2 {
+    grid-column: column-one;
+    grid-row: row-two;
+    margin-left: 0px;
+    margin: 15px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c5 {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+<div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      Download the binary and upload it to the target machine.
+    </div>
+    <div
+      className="c2"
+    >
+      <button
+        className="c3 c4 c5"
+        onClick={[Function]}
+      >
+        Download binary
+      </button>
+    </div>
+  </div>
+  <div
+    className="c6"
+  >
+    <p
+      className="c7"
+    >
+      Copy and run the command on the target machine to download run the client.
+    </p>
+    <div
+      className="c8"
+    >
+      <div
+        className="c9"
+      >
+        chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=id --secret=secret --host=http://localhost:1234
+      </div>
+      <button
+        className="c3 c10"
+        id="copyToClipboardButton"
+        onClick={[Function]}
+      >
+        <i
+          className="c11 fas fa-copy"
+        />
+      </button>
+    </div>
+    <button
+      className="c3 c12 c13 c14"
+      id="closeButton"
+      onClick={[MockFunction]}
+    >
+      Close
+    </button>
+  </div>
+</div>
+`;

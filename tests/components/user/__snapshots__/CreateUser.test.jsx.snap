@@ -30,42 +30,16 @@ exports[`create user renders correctly 1`] = `
   cursor: auto;
 }
 
-.c8 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
+.c10 {
   background-color: transparent;
   border: 1px solid;
 }
 
-.c8:hover {
-  opacity: 0.90;
-}
-
-.c8:focus {
-  outline: none;
-}
-
-.c8:active {
-  opacity: 0.80;
-}
-
-.c8:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c5 {
+.c6 {
   height: 80px;
 }
 
-.c6 {
+.c7 {
   min-height: 50px;
   width: 100%;
   border: none;
@@ -77,8 +51,15 @@ exports[`create user renders correctly 1`] = `
   border: 1px solid transparent;
 }
 
-.c6:focus {
-  outline: none border:1px solid;
+.c7:focus {
+  outline: none;
+  border: 1px solid;
+}
+
+.c1 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
 }
 
 .c0 {
@@ -88,12 +69,10 @@ exports[`create user renders correctly 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
-.c1 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
+.c2 {
   position: absolute;
   left: 0;
   right: 0;
@@ -120,7 +99,7 @@ exports[`create user renders correctly 1`] = `
   box-sizing: border-box;
 }
 
-.c2 {
+.c3 {
   height: 100%;
   max-height: 450px;
   display: grid;
@@ -131,12 +110,12 @@ exports[`create user renders correctly 1`] = `
   align-items: center;
 }
 
-.c3 {
+.c4 {
   grid-row: title;
   text-align: center;
 }
 
-.c4 {
+.c5 {
   height: 95%;
   grid-row: form;
   display: grid;
@@ -144,7 +123,7 @@ exports[`create user renders correctly 1`] = `
   grid-row-gap: 40px;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -155,19 +134,19 @@ exports[`create user renders correctly 1`] = `
   justify-content: space-around;
 }
 
-.c7> button {
+.c8> button {
   min-width: 150px;
 }
 
 @media (max-width:47.9375em) {
-  .c1 {
+  .c2 {
     padding: 16px;
     height: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c8 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -183,25 +162,25 @@ exports[`create user renders correctly 1`] = `
   onClick={[Function]}
 >
   <div
-    className="c1"
+    className="c1 c2"
   >
     <div
-      className="c2"
+      className="c3"
     >
       <h2
-        className="c3"
+        className="c4"
       >
         Create new user
       </h2>
       <form
-        className="c4"
+        className="c5"
         onSubmit={[Function]}
       >
         <div
-          className="c5"
+          className="c6"
         >
           <input
-            className="c6"
+            className="c7"
             name="username"
             onChange={[Function]}
             placeholder="Username"
@@ -210,10 +189,10 @@ exports[`create user renders correctly 1`] = `
           />
         </div>
         <div
-          className="c5"
+          className="c6"
         >
           <input
-            className="c6"
+            className="c7"
             name="password"
             onChange={[Function]}
             placeholder="Password"
@@ -222,10 +201,10 @@ exports[`create user renders correctly 1`] = `
           />
         </div>
         <div
-          className="c5"
+          className="c6"
         >
           <input
-            className="c6"
+            className="c7"
             name="confirmPassword"
             onChange={[Function]}
             placeholder="Confirm password"
@@ -234,10 +213,10 @@ exports[`create user renders correctly 1`] = `
           />
         </div>
         <div
-          className="c7"
+          className="c8"
         >
           <button
-            className="c8"
+            className="c9 c10"
             onClick={[Function]}
           >
             Cancel

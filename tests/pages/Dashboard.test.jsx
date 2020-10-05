@@ -22,6 +22,7 @@ const getComponent = (store) => {
 describe('dashboard', () => {
   it("renders correctly", () => {
     const store = mockStore({
+      authenticated: true,
       agent: [],
       currentUser: {
         id: 'id',

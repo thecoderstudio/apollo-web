@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   error: PropTypes.string,
+  inverted: PropTypes.bool
 };
 
 const defaultProps = {
@@ -18,6 +19,8 @@ const Container = styled.div`
 const StyledInput = styled.input`
   min-height: 50px;
   width: 100%;
+  background: ${props => props.inverted ? props.theme.lightBlack : props.theme.white};
+  color: ${props => props.inverted ? props.theme.white : "" };
   border: none;
   border-radius: 5px;
   font-family: 'Libre Franklin', sans-serif;
@@ -25,8 +28,9 @@ const StyledInput = styled.input`
   padding-left: 10px;
   opacity: 0.9;
   border: 1px solid ${props => props.hasError ? props.theme.error : 'transparent'};
+
   &:focus{
-    outline: none
+    outline: none;
     border: 1px solid ${props => props.theme.accent};
   }
 `;
