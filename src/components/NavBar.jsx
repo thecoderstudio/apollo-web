@@ -210,7 +210,7 @@ class NavBar extends React.PureComponent {
           </Menu>
           <NewAgentButton id='newAgentButton' onClick={this.openAddAgentModal}>Add new agent</NewAgentButton>
           <Logout id='logoutButton' onClick={logout}>Logout</Logout>
-          <SettingsIcon className='fas fa-cog fa-lg' />
+          <SettingsIcon className='fas fa-cog fa-lg' to='/settings/user_settings' />
           {this.state.showAddAgent && <AddAgentModal onClose={this.closeAddAgentModal} />}
         </NavBarContent>
       </NavigationBar>

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import media from '../util/media';
 
 const Navigation = styled.div`
   max-width: 300px;
@@ -9,10 +8,10 @@ const Navigation = styled.div`
   background-color: ${props => props.theme.lightBlack};
 `;
 
-export default function SettingsSideNavigation() {
+function SettingsSideNavigation(props) {
   return (
-    <Navigation>
-
+    <Navigation className={props.className}>
+      hahahahha
     </Navigation>
   );
 }
