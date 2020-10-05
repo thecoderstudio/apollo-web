@@ -157,12 +157,6 @@ class NavBar extends React.PureComponent {
     this.setState({ showAddAgent: true });
   }
 
-  logout() {
-    let { dispatch } = this.props;
-    dispatch(logoutAction());
-    dispatch(removeCurrentUser());
-  }
-
   closeAddAgentModal() {
     this.setState({ showAddAgent: false });
   }
