@@ -23,17 +23,15 @@ const StyledCard = styled(Card)`
   transform:translate(-50%, -50%);
   width: 100%;
 
-  ${
-  media.phone`
-      top: 0px;
-      left: 0px;
-      right: 0px;
-      bottom: 0px;
-      padding: 15px 0px 15px 0px;
-      width: auto;
-      transform: none;
-    `
-}
+  ${media.phone`
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 15px 0px 15px 0px;
+    width: auto;
+    transform: none;
+  `}
 `;
 
 const ScrollableContent = styled.div`

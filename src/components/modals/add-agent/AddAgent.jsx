@@ -20,39 +20,33 @@ const TwoColumnGrid = styled.div`
   grid-template-columns: [column-one] 50% [column-two] 50%;
   margin: 20px 0px 20px 0px;
 
-  ${
-  media.phone`
-      grid-template-columns: [column-one] 100%;
-      grid-template-rows: [row-one] 1fr [row-two] 1fr;
-    `
-}
+  ${media.phone`
+    grid-template-columns: [column-one] 100%;
+    grid-template-rows: [row-one] 1fr [row-two] 1fr;
+  `}
 `;
 
 const ColumnOne = styled.div`
   grid-column: column-one;
   margin-right: 10px;
 
-  ${
-  media.phone`
-      grid-row: row-one;
-      margin-right: 0px;
-      margin: 15px;
-    `
-}
+  ${media.phone`
+    grid-row: row-one;
+    margin-right: 0px;
+    margin: 15px;
+  `}
 `;
 
 const ColumnTwo = styled.div`
   grid-column: column-two;
   margin-left: 10px;
 
-  ${
-  media.phone`
-      grid-column: column-one;
-      grid-row: row-two;
-      margin-left: 0px;
-      margin: 15px;
-    `
-}
+  ${media.phone`
+    grid-column: column-one;
+    grid-row: row-two;
+    margin-left: 0px;
+    margin: 15px;
+  `}
 `;
 
 const StyledButton = styled(OutlinedButton)`
@@ -69,13 +63,11 @@ const DownloadBinaryButton = styled(LoadingButton)`
   margin: auto;
   display: block;
 
-  ${
-  media.phone`
-      float: none;
-      margin-left: auto;
-      margin-right: auto;
-    `
-}
+  ${media.phone`
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  `}
 `;
 
 const ThreeRowDisplay = styled.div`

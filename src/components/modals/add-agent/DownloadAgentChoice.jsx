@@ -13,35 +13,29 @@ const TwoColumnGrid = styled.div`
   grid-template-columns: [column-one] 50% [column-two] 50%;
   gap: 20px;
 
-  ${
-  media.phone`
-      grid-template-columns: [column-one] 100%;
-      grid-template-rows: [row-one] 1fr [row-two] 1fr;
-    `
-}
+  ${media.phone`
+    grid-template-columns: [column-one] 100%;
+    grid-template-rows: [row-one] 1fr [row-two] 1fr;
+  `}
 `;
 
 const ColumnOne = styled.div`
   grid-column: column-one;
 
-  ${
-  media.phone`
-      grid-row: row-one;
-    `
-}
+  ${media.phone`
+    grid-row: row-one;
+  `}
 `;
 
 const ColumnTwo = styled.div`
   grid-column: column-two;
   margin-right: 20px;
 
-  ${
-  media.phone`
-      grid-column: column-one;
-      grid-row: row-two;
-      margin-right: 0px;
-    `
-}
+  ${media.phone`
+    grid-column: column-one;
+    grid-row: row-two;
+    margin-right: 0px;
+  `}
 `;
 
 const StyledDescriptionButton = styled(DescriptionButton)`

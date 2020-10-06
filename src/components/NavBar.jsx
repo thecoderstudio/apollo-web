@@ -10,25 +10,23 @@ import Icon from './Icon';
 
 const NavigationBar = styled.div`
   padding: 16px;
-  background-color: ${props => props.theme.lightBlack};
+  background-color: ${(props) => props.theme.lightBlack};
   display: grid;
   grid-template-columns: [logo] 100px [content] 1fr;
   grid-gap: 16px;
   align-items: center;
   z-index: 1;
 
-  ${
-    media.phone`
-      grid-template-columns: [main] 1fr [toggle] 24px;
-      grid-template-rows: [logo] 50px [content] 1fr;
+  ${media.phone`
+    grid-template-columns: [main] 1fr [toggle] 24px;
+    grid-template-rows: [logo] 50px [content] 1fr;
 
-      position: ${props => props.collapsed ? 'static' : 'fixed'};
-      top: 0px;
-      left: 0px;
-      right: 0px;
-      bottom: ${props => props.collapsed ? 'auto' : '0px'};
-    `
-  }
+    position: ${(props) => props.collapsed ? 'static' : 'fixed'};
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: ${(props) => props.collapsed ? 'auto' : '0px'};
+  `}
 `;
 
 const NavBarContent = styled.div`
@@ -38,17 +36,15 @@ const NavBarContent = styled.div`
   grid-gap: 12px;
   height: auto;
 
-  ${
-    media.phone`
-      display: ${props => props.collapsed ? 'none' : 'grid'};
-      grid-column: main / -1;
-      grid-row: content;
-      height: 100%;
+  ${media.phone`
+    display: ${(props) => props.collapsed ? 'none' : 'grid'};
+    grid-column: main / -1;
+    grid-row: content;
+    height: 100%;
 
-      grid-template-columns: [main] 1fr;
-      grid-template-rows: [menu] 1fr [new-agent] 50px [logout] 50px;
-    `
-  }
+    grid-template-columns: [main] 1fr;
+    grid-template-rows: [menu] 1fr [new-agent] 50px [logout] 50px;
+  `}
 `;
 
 const MenuToggleIcon = styled(Icon)`
@@ -60,14 +56,12 @@ const MenuToggleIcon = styled(Icon)`
   height: 32px;
   line-height: 32px;
   text-align: center;
-  transform: ${props => props.collapsed ? 'rotate(0deg)' : 'rotate(90deg)'};
+  transform: ${(props) => props.collapsed ? 'rotate(0deg)' : 'rotate(90deg)'};
   transition: transform .3s ease-out;
 
-  ${
-    media.phone`
-      display: inline;
-    `
-  }
+  ${media.phone`
+    display: inline;
+  `}
 
   &:hover {
     cursor: pointer;
@@ -75,41 +69,34 @@ const MenuToggleIcon = styled(Icon)`
 `;
 
 const StyledLink = styled(Link)`
-  maring-left: 16px;
-  margin-right: 16px;
+  margin: 0px 16px;
   float: left;
 
-  ${
-    media.phone`
-      width: 100%;
-      margin-bottom: 32px;
-    `
-  }
+  ${media.phone`
+    width: 100%;
+    margin-bottom: 32px;
+  `}
 `;
 
 const Menu = styled.div`
   grid-column: menu;
   align-self: center;
 
-  ${
-    media.phone`
-      align-self: start;
-      grid-column: main;
-      grid-row: menu;
-      margin-top: 32px;
-    `
-  }
+  ${media.phone`
+    align-self: start;
+    grid-column: main;
+    grid-row: menu;
+    margin-top: 32px;
+  `}
 `;
 
 const Logo = styled.div`
   grid-column: logo;
 
-  ${
-    media.phone`
-      grid-column: main;
-      grid-row: logo;
-    `
-  }
+  ${media.phone`
+    grid-column: main;
+    grid-row: logo;
+  `}
 `;
 
 const Logout = styled(OutlinedButton)`
@@ -117,13 +104,11 @@ const Logout = styled(OutlinedButton)`
   float: right;
   max-width: 100px;
 
-  ${
-    media.phone`
-      grid-column: main;
-      grid-row: logout;
-      max-width: 100%;
-    `
-  }
+  ${media.phone`
+    grid-column: main;
+    grid-row: logout;
+    max-width: 100%;
+  `}
 `;
 
 class NavBar extends React.PureComponent {
@@ -134,28 +119,31 @@ class NavBar extends React.PureComponent {
   }
 
   toggleCollapsed() {
-    this.setState({ collapsed: !this.state.collapsed });
+    const { collapsed } = this.state;
+    this.setState({ collapsed: !collapsed });
   }
 
   render() {
+    const { collapsed } = this.state;
+    const { currentUser } = this.props;
+
     return (
-      <NavigationBar collapsed={this.state.collapsed}>
+      <NavigationBar collapsed={collapsed}>
         <Logo>Apollo</Logo>
         <MenuToggleIcon
-          id='collapseIcon'
-          collapsed={this.state.collapsed}
+          id="collapseIcon"
+          collapsed={collapsed}
           onClick={this.toggleCollapsed}
-          className={this.state.collapsed ? 'fa fa-bars fa-lg' : 'fas fa-times fa-lg'}
+          className={collapsed ? 'fa fa-bars fa-lg' : 'fas fa-times fa-lg'}
         />
-        <NavBarContent collapsed={this.state.collapsed}>
+        <NavBarContent collapsed={collapsed}>
           <Menu>
-            <StyledLink onClick={this.toggleCollapsed} to='/'>Dashboard</StyledLink>
-            {checkIfAdmin(this.props.currentUser) &&
-              <StyledLink onClick={this.toggleCollapsed} to='/admin'>Admin</StyledLink>
-            }
+            <StyledLink onClick={this.toggleCollapsed} to="/">Dashboard</StyledLink>
+            {checkIfAdmin(currentUser)
+              && <StyledLink onClick={this.toggleCollapsed} to="/admin">Admin</StyledLink>}
           </Menu>
 
-          <Logout id='logoutButton' onClick={logout}>Logout</Logout>
+          <Logout id="logoutButton" onClick={logout}>Logout</Logout>
         </NavBarContent>
       </NavigationBar>
     );
@@ -163,7 +151,7 @@ class NavBar extends React.PureComponent {
 }
 
 export default connect(
-  state => ({ currentUser: state.currentUser })
+  (state) => ({ currentUser: state.currentUser })
 )(NavBar);
 
 export { NavBar };

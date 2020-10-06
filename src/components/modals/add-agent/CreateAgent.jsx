@@ -24,12 +24,10 @@ const TwoColumnGrid = styled.div`
   grid-template-columns: 50% 50%;
   margin: 20px 0px 20px 0px;
 
-  ${
-  media.phone`
-      grid-template-columns: [column-one] 100%;
-      grid-template-rows: [row-one] 1fr [row-two] 1fr;
-    `
-}
+  ${media.phone`
+    grid-template-columns: [column-one] 100%;
+    grid-template-rows: [row-one] 1fr [row-two] 1fr;
+  `}
 `;
 
 const TextAndInputFieldWrapper = styled.div`
@@ -50,24 +48,20 @@ const TextAndInputFieldWrapper = styled.div`
 const InputFieldWrapper = styled.div`
   grid-column: dropdown;
 
-  ${
-  media.phone`
-      grid-column: column-one;
-      grid-row: dropdown;
-      width: 100%;
-    `
-}
+  ${media.phone`
+    grid-column: column-one;
+    grid-row: dropdown;
+    width: 100%;
+  `}
 `;
 
 const StyledDropDown = styled(Dropdown)`
   width: 200px;
   float: right;
 
-  ${
-  media.phone`
-      width: 100%;
-    `
-}
+  ${media.phone`
+    width: 100%;
+  `}
 `;
 
 const TextWrapper = styled.p`
@@ -76,14 +70,12 @@ const TextWrapper = styled.p`
   margin-top: 0px;
   margin-bottom: 0px;
 
-  ${
-  media.phone`
-      width: 100%;
-      line-height: 100%;
-      grid-column: column-one;
-      grid-row: text;
-    `
-}
+  ${media.phone`
+    width: 100%;
+    line-height: 100%;
+    grid-column: column-one;
+    grid-row: text;
+  `}
 `;
 
 const CreateAgentButton = styled(LoadingButton)`
@@ -92,12 +84,10 @@ const CreateAgentButton = styled(LoadingButton)`
   margin: auto;
   display: block;
 
-  ${
-  media.phone`
-      width: 100%;
-      margin-top: 15px;
-    `
-}
+  ${media.phone`
+    width: 100%;
+    margin-top: 15px;
+  `}
 `;
 
 const StyledInput = styled(Input)`
@@ -106,12 +96,10 @@ const StyledInput = styled(Input)`
   width: 200px;
   float: right;
 
-  ${
-  media.phone`
-      width: 100%;
-      grid-row: row-two;
-    `
-}
+  ${media.phone`
+    width: 100%;
+    grid-row: row-two;
+  `}
 `;
 
 const CloseOutlinedButton = styled(OutlinedButton)`
@@ -120,12 +108,10 @@ const CloseOutlinedButton = styled(OutlinedButton)`
   margin: auto;
   display: block;
 
-  ${
-  media.phone`
-      width: 100%;
-      grid-row: row-two;
-    `
-}
+  ${media.phone`
+    width: 100%;
+    grid-row: row-two;
+  `}
 `;
 
 class CreateAgent extends React.PureComponent {
