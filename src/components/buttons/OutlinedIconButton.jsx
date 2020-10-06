@@ -6,7 +6,8 @@ import media from '../../util/media';
 
 const propTypes = {
   iconClassName: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired
 }
 
 const ButtonContent = styled.span`
