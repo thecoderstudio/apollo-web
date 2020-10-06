@@ -2,17 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import AgentListItem from './AgentListItem';
-import Button from '../buttons/Button';
 import { listAgents as listAgentsAction } from '../../actions/agent';
+import OutlinedIconButton from '../buttons/OutlinedIconButton';
 import { handleError } from '../../actions/error';
 import AddAgentModal from '../modals/add-agent/AddAgentModal';
-import media from '../../util/media';
 
 const Content = styled.div`
   display: grid;
   grid-template-rows: [header] 50px [list] 1fr;
-  width: 100%;
-  min-width: 0;
+  max-width: 100%;
+
   background-color: ${props => props.theme.lightBlack};
   border-radius: 8px;
   padding: 16px;
@@ -31,16 +30,6 @@ const List = styled.ul`
   grid-row: list;
   list-style: none;
   padding-left: 0;
-`;
-
-const NewAgentButton = styled(Button)`
-  max-width: 250px;
-
-  ${
-    media.phone`
-      max-width: 100%;
-    `
-  }
 `;
 
 class AgentList extends React.Component {
@@ -88,7 +77,9 @@ class AgentList extends React.Component {
       <Content className={this.props.className}>
         <Header>
           <h2>Agents</h2>
-          <NewAgentButton id='newAgentButton' onClick={this.openAddAgentModal}>Add new agent</NewAgentButton>
+          <OutlinedIconButton iconClassName="fas fa-plus" id='newAgentButton' onClick={this.openAddAgentModal}>
+            Add new agent
+          </OutlinedIconButton>
         </Header>
         <List>
           {this.generateAgents(this.props.agents)}
