@@ -122,7 +122,7 @@ class CreateAgent extends React.PureComponent {
     };
     this.createAgent = this.createAgent.bind(this);
     this.selectArchitecture = this.selectArchitecture.bind(this);
-    this.selectOperatingSystem = this.selectArchitecture.bind(this);
+    this.selectOperatingSystem = this.selectOperatingSystem.bind(this);
   }
 
   createAgent(values, { setErrors }) {

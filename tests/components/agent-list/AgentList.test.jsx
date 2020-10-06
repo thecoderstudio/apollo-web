@@ -6,15 +6,15 @@ import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import WS from 'jest-websocket-mock';
 import { ThemeProvider } from 'styled-components';
+import waitForExpect from 'wait-for-expect';
 import { store as globalStore } from '../../../src/store';
-import AgentList from '../../../src/components/agent-list/AgentList';
+import AgentList, { UnconnectedAgentList } from '../../../src/components/agent-list/AgentList';
 import { listAgents } from '../../../src/actions/agent';
 import { severity, notify } from '../../../src/actions/notification';
-import waitForExpect from 'wait-for-expect';
 import { darkTheme } from '../../../src/theme';
 
 // Mocks createPortal due to react-test-renderer incompatibility.
-ReactDOM.createPortal = node => node;
+ReactDOM.createPortal = (node) => node;
 const mockStore = configureStore([]);
 
 function getComponent(store) {
@@ -44,18 +44,18 @@ describe('agentList', () => {
     WS.clean();
   });
 
-  it("renders correctly", () => {
-    let tree = getComponent(store).toJSON();
+  it('renders correctly', () => {
+    const tree = getComponent(store).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it("correctly dispatches list agents", async () => {
+  it('correctly dispatches list agents', async () => {
     const data = [
-      { id: "id", name: "name", connectionState: "connected" },
-      { id: "id2", name: "name", connectionState: "connected" },
+      { id: 'id', name: 'name', connectionState: 'connected' },
+      { id: 'id2', name: 'name', connectionState: 'connected' }
     ];
 
-    const server = new WS(`ws://localhost:1234/agent`, { jsonProtocol: true });
+    const server = new WS('ws://localhost:1234/agent', { jsonProtocol: true });
     getComponent(store);
 
     await server.connected;
@@ -69,10 +69,10 @@ describe('agentList', () => {
     });
   });
 
-  it("correctly lists multiple agents", () => {
+  it('correctly lists multiple agents', () => {
     const data = new Map();
-    data.set('id', { id: "id", name: "name", connectionState: "connected" });
-    data.set('id2', { id: "id2", name: "name2", connectionState: "connected" });
+    data.set('id', { id: 'id', name: 'name', connectionState: 'connected' });
+    data.set('id2', { id: 'id2', name: 'name2', connectionState: 'connected' });
     store = mockStore({
       authenticated: true,
       agent: data
@@ -80,9 +80,19 @@ describe('agentList', () => {
     expect(getComponent(store)).toMatchSnapshot();
   });
 
-  it("handles websocket error", async () => {
+  it('handles add agent modal', () => {
+    const component = getComponent(store);
+    const { root } = component;
+    root.findByProps({ id: 'newAgentButton' }).props.onClick();
+    expect(component.toJSON()).toMatchSnapshot();
+
+    root.findByType(UnconnectedAgentList).instance.closeAddAgentModal();
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+
+  it('handles websocket error', async () => {
     const spy = jest.spyOn(globalStore, 'dispatch');
-    const server = new WS(`ws://localhost:1234/agent`, { jsonProtocol: true });
+    const server = new WS('ws://localhost:1234/agent', { jsonProtocol: true });
     getComponent(store).toJSON();
 
     await server.connected;
@@ -91,7 +101,7 @@ describe('agentList', () => {
       {
         id: 1,
         type: 'NOTIFY',
-        message: "Something went wrong fetching the agent list",
+        message: 'Something went wrong fetching the agent list',
         severity: severity.ERROR
       }
     );

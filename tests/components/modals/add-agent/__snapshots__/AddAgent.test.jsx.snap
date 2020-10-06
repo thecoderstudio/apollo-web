@@ -36,21 +36,17 @@ exports[`Add Agent closes modal correctly 1`] = `
 }
 
 .c2 {
-  grid-template-columns: [textfield] 1fr [copy] 50px;
+  grid-template-columns: [textField] 1fr [copy] 50px;
   display: grid;
   height: 50px;
 }
 
 .c3 {
-  grid-column: textfield;
+  grid-column: textField;
   border: none;
   border-radius: 5px;
   color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  text-align: left;
+  cursor: text;
   padding: 15px;
   overflow: auto;
   white-space: nowrap;
@@ -180,21 +176,17 @@ exports[`Add Agent renders correctly 1`] = `
 }
 
 .c2 {
-  grid-template-columns: [textfield] 1fr [copy] 50px;
+  grid-template-columns: [textField] 1fr [copy] 50px;
   display: grid;
   height: 50px;
 }
 
 .c3 {
-  grid-column: textfield;
+  grid-column: textField;
   border: none;
   border-radius: 5px;
   color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  text-align: left;
+  cursor: text;
   padding: 15px;
   overflow: auto;
   white-space: nowrap;
@@ -319,21 +311,17 @@ exports[`Add Agent renders correctly 2`] = `
 }
 
 .c8 {
-  grid-template-columns: [textfield] 1fr [copy] 50px;
+  grid-template-columns: [textField] 1fr [copy] 50px;
   display: grid;
   height: 50px;
 }
 
 .c9 {
-  grid-column: textfield;
+  grid-column: textField;
   border: none;
   border-radius: 5px;
   color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  text-align: left;
+  cursor: text;
   padding: 15px;
   overflow: auto;
   white-space: nowrap;

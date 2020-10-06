@@ -81,6 +81,7 @@ exports[`inline terminal correctly renders connected 1`] = `
       Object {
         "accent": "#4D02EE",
         "black": "#181818",
+        "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
         "connectedColor": "#27AE60",
         "connectingColor": "#F39C12",
         "darkGrey": "#3E3E3E",
@@ -94,6 +95,7 @@ exports[`inline terminal correctly renders connected 1`] = `
         "overlay": "rgba(37, 37, 37, 0.6)",
         "primary": "#02A3EE",
         "red": "#ED3E2A",
+        "smallTextSize": "0.85rem",
         "warning": "#ED852A",
         "white": "#F8F8F8",
       }
@@ -211,6 +213,7 @@ exports[`inline terminal correctly renders connected 2`] = `
       Object {
         "accent": "#4D02EE",
         "black": "#181818",
+        "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
         "connectedColor": "#27AE60",
         "connectingColor": "#F39C12",
         "darkGrey": "#3E3E3E",
@@ -224,6 +227,7 @@ exports[`inline terminal correctly renders connected 2`] = `
         "overlay": "rgba(37, 37, 37, 0.6)",
         "primary": "#02A3EE",
         "red": "#ED3E2A",
+        "smallTextSize": "0.85rem",
         "warning": "#ED852A",
         "white": "#F8F8F8",
       }
@@ -275,6 +279,7 @@ exports[`inline terminal correctly renders connected 2`] = `
                     Object {
                       "accent": "#4D02EE",
                       "black": "#181818",
+                      "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
                       "connectedColor": "#27AE60",
                       "connectingColor": "#F39C12",
                       "darkGrey": "#3E3E3E",
@@ -288,6 +293,7 @@ exports[`inline terminal correctly renders connected 2`] = `
                       "overlay": "rgba(37, 37, 37, 0.6)",
                       "primary": "#02A3EE",
                       "red": "#ED3E2A",
+                      "smallTextSize": "0.85rem",
                       "warning": "#ED852A",
                       "white": "#F8F8F8",
                     }
@@ -380,6 +386,7 @@ exports[`inline terminal correctly renders connecting 1`] = `
       Object {
         "accent": "#4D02EE",
         "black": "#181818",
+        "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
         "connectedColor": "#27AE60",
         "connectingColor": "#F39C12",
         "darkGrey": "#3E3E3E",
@@ -393,6 +400,7 @@ exports[`inline terminal correctly renders connecting 1`] = `
         "overlay": "rgba(37, 37, 37, 0.6)",
         "primary": "#02A3EE",
         "red": "#ED3E2A",
+        "smallTextSize": "0.85rem",
         "warning": "#ED852A",
         "white": "#F8F8F8",
       }
@@ -472,6 +480,7 @@ exports[`inline terminal correctly renders disconnected 1`] = `
       Object {
         "accent": "#4D02EE",
         "black": "#181818",
+        "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
         "connectedColor": "#27AE60",
         "connectingColor": "#F39C12",
         "darkGrey": "#3E3E3E",
@@ -485,6 +494,7 @@ exports[`inline terminal correctly renders disconnected 1`] = `
         "overlay": "rgba(37, 37, 37, 0.6)",
         "primary": "#02A3EE",
         "red": "#ED3E2A",
+        "smallTextSize": "0.85rem",
         "warning": "#ED852A",
         "white": "#F8F8F8",
       }
@@ -603,6 +613,7 @@ exports[`inline terminal disconnects 1`] = `
       Object {
         "accent": "#4D02EE",
         "black": "#181818",
+        "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
         "connectedColor": "#27AE60",
         "connectingColor": "#F39C12",
         "darkGrey": "#3E3E3E",
@@ -616,6 +627,7 @@ exports[`inline terminal disconnects 1`] = `
         "overlay": "rgba(37, 37, 37, 0.6)",
         "primary": "#02A3EE",
         "red": "#ED3E2A",
+        "smallTextSize": "0.85rem",
         "warning": "#ED852A",
         "white": "#F8F8F8",
       }

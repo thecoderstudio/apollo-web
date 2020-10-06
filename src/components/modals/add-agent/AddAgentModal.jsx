@@ -83,8 +83,8 @@ class AddAgentModal extends React.PureComponent {
       agentData: {
         agentId: response.data.id,
         secret: response.data.oauth_client.secret,
-        selectedOperatingSystem: operatingSystem,
-        selectedArchitecture: architecture
+        selectedArchitecture: architecture,
+        selectedOperatingSystem: operatingSystem
       }
     });
   }

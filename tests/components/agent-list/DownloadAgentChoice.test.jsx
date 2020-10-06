@@ -21,7 +21,7 @@ describe('download agent choice', () => {
   });
 
   it('selects directly correctly', () => {
-    const component = getComponent();
+    const component = getComponent(spy);
     const instance = component.root;
 
     instance.findByProps({ id: 'directlyButton' }).props.onClick();
@@ -30,7 +30,7 @@ describe('download agent choice', () => {
   });
 
   it('selects manual correctly', () => {
-    const component = getComponent();
+    const component = getComponent(spy);
     const instance = component.root;
 
     instance.findByProps({ id: 'manualButton' }).props.onClick();

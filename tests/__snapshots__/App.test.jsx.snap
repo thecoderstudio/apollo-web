@@ -40,35 +40,6 @@ exports[`app renders correctly authenticated 1`] = `
   border: 1px solid #4D02EE;
 }
 
-.c5 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
-  background-color: #1B1B1B;
-}
-
-.c8 {
-  height: 80px;
-}
-
-.c9 {
-  min-height: 50px;
-  width: 100%;
-  background: #F8F8F8;
-  border: none;
-  border-radius: 5px;
-  font-family: 'Libre Franklin',sans-serif;
-  font-size: 1rem;
-  padding-left: 10px;
-  opacity: 0.9;
-  border: 1px solid transparent;
-}
-
-.c9:focus {
-  outline: none;
-  border: 1px solid #4D02EE;
-}
-
 .c14 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -86,6 +57,36 @@ exports[`app renders correctly authenticated 1`] = `
   right: 0px;
   bottom: 32px;
   z-index: 2;
+}
+
+.c5 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+}
+
+.c8 {
+  height: 80px;
+}
+
+.c9 {
+  min-height: 50px;
+  width: 100%;
+  background: #F8F8F8;
+  color: #1B1B1B;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+  border: 1px solid transparent;
+}
+
+.c9:focus {
+  outline: none;
+  border: 1px solid #4D02EE;
 }
 
 .c7 {
@@ -266,7 +267,7 @@ exports[`app renders correctly authenticated 1`] = `
 `;
 
 exports[`app renders correctly authenticated and password changed 1`] = `
-.c8 {
+.c9 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -279,23 +280,23 @@ exports[`app renders correctly authenticated and password changed 1`] = `
   cursor: pointer;
 }
 
-.c8:hover {
+.c9:hover {
   opacity: 0.90;
 }
 
-.c8:focus {
+.c9:focus {
   outline: none;
 }
 
-.c8:active {
+.c9:active {
   opacity: 0.80;
 }
 
-.c8:disabled {
+.c9:disabled {
   background-color: #3E3E3E;
 }
 
-.c8:disabled:hover {
+.c9:disabled:hover {
   opacity: 1;
   cursor: auto;
 }
@@ -305,21 +306,25 @@ exports[`app renders correctly authenticated and password changed 1`] = `
   border: 1px solid #4D02EE;
 }
 
-.c6 {
+.c7 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #F8F8F8;
 }
 
-.c6:hover {
+.c7:hover {
   opacity: 0.90;
+}
+
+.c3 {
+  cursor: pointer;
 }
 
 .c1 {
   padding: 16px;
   background-color: #1B1B1B;
   display: grid;
-  grid-template-columns: [logo] 200px [content] 1fr;
+  grid-template-columns: [logo] 100px [content] 1fr;
   grid-gap: 16px;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -328,7 +333,7 @@ exports[`app renders correctly authenticated and password changed 1`] = `
   z-index: 1;
 }
 
-.c4 {
+.c5 {
   grid-column: content;
   display: grid;
   grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px;
@@ -336,7 +341,7 @@ exports[`app renders correctly authenticated and password changed 1`] = `
   height: auto;
 }
 
-.c3 {
+.c4 {
   grid-row: logo;
   grid-column: toggle;
   display: none;
@@ -353,17 +358,16 @@ exports[`app renders correctly authenticated and password changed 1`] = `
   transition: transform .3s ease-out;
 }
 
-.c3:hover {
+.c4:hover {
   cursor: pointer;
 }
 
-.c7 {
-  maring-left: 16px;
-  margin-right: 16px;
+.c8 {
+  margin: 0px 16px;
   float: left;
 }
 
-.c5 {
+.c6 {
   grid-column: menu;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
@@ -380,12 +384,7 @@ exports[`app renders correctly authenticated and password changed 1`] = `
   max-width: 100px;
 }
 
-.c9 {
-  grid-column: new-agent;
-  max-width: 250px;
-}
-
-.c16 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -404,23 +403,36 @@ exports[`app renders correctly authenticated and password changed 1`] = `
   z-index: 2;
 }
 
+.c15 {
+  margin-left: 8px;
+}
+
 .c13 {
   display: grid;
-  grid-template-rows: [title] 50px [list] 1fr;
+  grid-template-rows: [header] 50px [list] 1fr;
   max-width: 100%;
-  min-width: 0;
   background-color: #1B1B1B;
   border-radius: 8px;
-  padding: 0px 16px;
+  padding: 16px;
 }
 
 .c14 {
-  grid-row: title;
-  width: 100%;
-  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  grid-row: header;
 }
 
-.c15 {
+.c16 {
   width: 100%;
   min-width: 0;
   grid-row: list;
@@ -448,37 +460,36 @@ exports[`app renders correctly authenticated and password changed 1`] = `
     top: 0px;
     left: 0px;
     right: 0px;
-    bottom: static;
+    bottom: auto;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     display: none;
     grid-column: main / -1;
     grid-row: content;
     height: 100%;
     grid-template-columns: [main] 1fr;
     grid-template-rows: [menu] 1fr [new-agent] 50px [logout] 50px;
-    maring-bottom: 32px;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c3 {
+  .c4 {
     display: inline;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c8 {
     width: 100%;
     margin-bottom: 32px;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     -webkit-align-self: start;
     -ms-flex-item-align: start;
     align-self: start;
@@ -504,10 +515,8 @@ exports[`app renders correctly authenticated and password changed 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c9 {
-    grid-column: main;
-    grid-row: new-agent;
-    max-width: 100%;
+  .c15 {
+    display: none;
   }
 }
 
@@ -530,18 +539,18 @@ exports[`app renders correctly authenticated and password changed 1`] = `
         Apollo
       </div>
       <i
-        className="c3 fa fa-bars fa-lg"
+        className="c3 c4 fa fa-bars fa-lg"
         id="collapseIcon"
         onClick={[Function]}
       />
       <div
-        className="c4"
+        className="c5"
       >
         <div
-          className="c5"
+          className="c6"
         >
           <a
-            className="c6 c7"
+            className="c7 c8"
             href="/"
             onClick={[Function]}
           >
@@ -549,14 +558,7 @@ exports[`app renders correctly authenticated and password changed 1`] = `
           </a>
         </div>
         <button
-          className="c8 c9"
-          id="newAgentButton"
-          onClick={[Function]}
-        >
-          Add new agent
-        </button>
-        <button
-          className="c8 c10 c11"
+          className="c9 c10 c11"
           id="logoutButton"
           onClick={[Function]}
         >
@@ -571,19 +573,34 @@ exports[`app renders correctly authenticated and password changed 1`] = `
         <div
           className="c13"
         >
-          <h2
+          <div
             className="c14"
           >
-            Agents
-          </h2>
+            <h2>
+              Agents
+            </h2>
+            <button
+              className="c9 c10"
+              onClick={[Function]}
+            >
+              <i
+                className="fas fa-plus"
+              />
+              <span
+                className="c15"
+              >
+                Add new agent
+              </span>
+            </button>
+          </div>
           <ul
-            className="c15"
+            className="c16"
           />
         </div>
       </div>
     </div>
     <span
-      className="c16"
+      className="c17"
     />
   </div>
 </div>
@@ -624,35 +641,6 @@ exports[`app renders correctly unauthenticated 1`] = `
   cursor: auto;
 }
 
-.c5 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
-  background-color: #1B1B1B;
-}
-
-.c8 {
-  height: 80px;
-}
-
-.c9 {
-  min-height: 50px;
-  width: 100%;
-  background: #F8F8F8;
-  border: none;
-  border-radius: 5px;
-  font-family: 'Libre Franklin',sans-serif;
-  font-size: 1rem;
-  padding-left: 10px;
-  opacity: 0.9;
-  border: 1px solid transparent;
-}
-
-.c9:focus {
-  outline: none;
-  border: 1px solid #4D02EE;
-}
-
 .c11 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -670,6 +658,36 @@ exports[`app renders correctly unauthenticated 1`] = `
   right: 0px;
   bottom: 32px;
   z-index: 2;
+}
+
+.c5 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+}
+
+.c8 {
+  height: 80px;
+}
+
+.c9 {
+  min-height: 50px;
+  width: 100%;
+  background: #F8F8F8;
+  color: #1B1B1B;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+  border: 1px solid transparent;
+}
+
+.c9:focus {
+  outline: none;
+  border: 1px solid #4D02EE;
 }
 
 .c7 {

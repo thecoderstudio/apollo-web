@@ -1,678 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`navbar handles add agent modal 1`] = `
-.c7 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.c7:hover {
-  opacity: 0.90;
-}
-
-.c7:focus {
-  outline: none;
-}
-
-.c7:active {
-  opacity: 0.80;
-}
-
-.c7:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c9 {
-  background-color: transparent;
-  border: 1px solid;
-}
-
-.c11 {
-  display: inline;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.c19 {
-  display: grid;
-  grid-template-rows: [title] 50px [description] 1fr;
-  padding: 20px;
-  min-height: 180px;
-}
-
-.c21 {
-  grid-row: title;
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.c22 {
-  grid-row: description;
-  padding: 10px;
-  font-size: 0.85rem;
-}
-
-.c12 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
-}
-
-.c13 {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  max-width: 600px;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 100%;
-}
-
-.c14 {
-  display: grid;
-  grid-template-rows: [title] 50px [content] 1fr;
-  height: 100%;
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  -webkit-scrollbar-width: none;
-  -moz-scrollbar-width: none;
-  -ms-scrollbar-width: none;
-  scrollbar-width: none;
-}
-
-.c14::-webkit-scrollbar {
-  display: none;
-}
-
-.c15 {
-  grid-row: title;
-  width: 75%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.c16 {
-  grid-row: content;
-  padding: 20px;
-}
-
-.c17 {
-  display: grid;
-  grid-template-columns: [column-one] 50% [column-two] 50%;
-  margin: 20px 0px 20px 0px;
-}
-
-.c18 {
-  grid-column: column-one;
-  margin-right: 10px;
-}
-
-.c23 {
-  grid-column: column-two;
-  margin-left: 10px;
-}
-
-.c20 {
-  width: 100%;
-}
-
-.c5 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5:hover {
-  opacity: 0.90;
-}
-
-.c0 {
-  padding: 16px;
-  display: grid;
-  grid-template-columns: [logo] 200px [content] 1fr;
-  grid-gap: 16px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  z-index: 1;
-}
-
-.c3 {
-  grid-column: content;
-  display: grid;
-  grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px;
-  grid-gap: 12px;
-  height: auto;
-}
-
-.c2 {
-  grid-row: logo;
-  grid-column: toggle;
-  display: none;
-  position: relative;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
-  text-align: center;
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: -webkit-transform .3s ease-out;
-  -webkit-transition: transform .3s ease-out;
-  transition: transform .3s ease-out;
-}
-
-.c2:hover {
-  cursor: pointer;
-}
-
-.c6 {
-  maring-left: 16px;
-  margin-right: 16px;
-  float: left;
-}
-
-.c4 {
-  grid-column: menu;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.c1 {
-  grid-column: logo;
-}
-
-.c10 {
-  grid-column: logout;
-  float: right;
-  max-width: 100px;
-}
-
-.c8 {
-  grid-column: new-agent;
-  max-width: 250px;
-}
-
-@media (max-width:47.9375em) {
-  .c13 {
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    padding: 15px 0px 15px 0px;
-    width: auto;
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c17 {
-    grid-template-columns: [column-one] 100%;
-    grid-template-rows: [row-one] 1fr [row-two] 1fr;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c18 {
-    grid-row: row-one;
-    margin-right: 0px;
-    margin: 15px;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c23 {
-    grid-column: column-one;
-    grid-row: row-two;
-    margin-left: 0px;
-    margin: 15px;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c0 {
-    grid-template-columns: [main] 1fr [toggle] 24px;
-    grid-template-rows: [logo] 50px [content] 1fr;
-    position: static;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: static;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c3 {
-    display: none;
-    grid-column: main / -1;
-    grid-row: content;
-    height: 100%;
-    grid-template-columns: [main] 1fr;
-    grid-template-rows: [menu] 1fr [new-agent] 50px [logout] 50px;
-    maring-bottom: 32px;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c2 {
-    display: inline;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c6 {
-    width: 100%;
-    margin-bottom: 32px;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c4 {
-    -webkit-align-self: start;
-    -ms-flex-item-align: start;
-    align-self: start;
-    grid-column: main;
-    grid-row: menu;
-    margin-top: 32px;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c1 {
-    grid-column: main;
-    grid-row: logo;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c10 {
-    grid-column: main;
-    grid-row: logout;
-    max-width: 100%;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c8 {
-    grid-column: main;
-    grid-row: new-agent;
-    max-width: 100%;
-  }
-}
-
-<div
-  className="c0"
->
-  <div
-    className="c1"
-  >
-    Apollo
-  </div>
-  <i
-    className="c2 fa fa-bars fa-lg"
-    id="collapseIcon"
-    onClick={[Function]}
-  />
-  <div
-    className="c3"
-  >
-    <div
-      className="c4"
-    >
-      <a
-        className="c5 c6"
-        href="/"
-        onClick={[Function]}
-      >
-        Dashboard
-      </a>
-    </div>
-    <button
-      className="c7 c8"
-      id="newAgentButton"
-      onClick={[Function]}
-    >
-      Add new agent
-    </button>
-    <button
-      className="c7 c9 c10"
-      id="logoutButton"
-      onClick={[Function]}
-    >
-      Logout
-    </button>
-    <div
-      className="c11"
-      onClick={[Function]}
-    >
-      <div
-        className="c12 c13"
-      >
-        <div
-          className="c14"
-        >
-          <h2
-            className="c15"
-          >
-            Add new agent
-          </h2>
-          <div
-            className="c16"
-          >
-            <div
-              className="c17"
-            >
-              <div
-                className="c18"
-              >
-                <button
-                  className="c7 c9 c19 c20"
-                  onClick={[Function]}
-                >
-                  <h3
-                    className="c21"
-                  >
-                    Directly on target machine.
-                  </h3>
-                  <p
-                    className="c22"
-                  >
-                    You have the correct permissions to download the binary directly on the target machine.
-                  </p>
-                </button>
-              </div>
-              <div
-                className="c23"
-              >
-                <button
-                  className="c7 c9 c19 c20"
-                  onClick={[Function]}
-                >
-                  <h3
-                    className="c21"
-                  >
-                    Manual upload
-                  </h3>
-                  <p
-                    className="c22"
-                  >
-                    You download and upload the binary yourself.
-                  </p>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`navbar handles add agent modal 2`] = `
-.c7 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.c7:hover {
-  opacity: 0.90;
-}
-
-.c7:focus {
-  outline: none;
-}
-
-.c7:active {
-  opacity: 0.80;
-}
-
-.c7:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c9 {
-  background-color: transparent;
-  border: 1px solid;
-}
-
-.c5 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5:hover {
-  opacity: 0.90;
-}
-
-.c0 {
-  padding: 16px;
-  display: grid;
-  grid-template-columns: [logo] 200px [content] 1fr;
-  grid-gap: 16px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  z-index: 1;
-}
-
-.c3 {
-  grid-column: content;
-  display: grid;
-  grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px;
-  grid-gap: 12px;
-  height: auto;
-}
-
-.c2 {
-  grid-row: logo;
-  grid-column: toggle;
-  display: none;
-  position: relative;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
-  text-align: center;
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: -webkit-transform .3s ease-out;
-  -webkit-transition: transform .3s ease-out;
-  transition: transform .3s ease-out;
-}
-
-.c2:hover {
-  cursor: pointer;
-}
-
-.c6 {
-  maring-left: 16px;
-  margin-right: 16px;
-  float: left;
-}
-
-.c4 {
-  grid-column: menu;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.c1 {
-  grid-column: logo;
-}
-
-.c10 {
-  grid-column: logout;
-  float: right;
-  max-width: 100px;
-}
-
-.c8 {
-  grid-column: new-agent;
-  max-width: 250px;
-}
-
-@media (max-width:47.9375em) {
-
-}
-
-@media (max-width:47.9375em) {
-
-}
-
-@media (max-width:47.9375em) {
-
-}
-
-@media (max-width:47.9375em) {
-
-}
-
-@media (max-width:47.9375em) {
-  .c0 {
-    grid-template-columns: [main] 1fr [toggle] 24px;
-    grid-template-rows: [logo] 50px [content] 1fr;
-    position: static;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: static;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c3 {
-    display: none;
-    grid-column: main / -1;
-    grid-row: content;
-    height: 100%;
-    grid-template-columns: [main] 1fr;
-    grid-template-rows: [menu] 1fr [new-agent] 50px [logout] 50px;
-    maring-bottom: 32px;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c2 {
-    display: inline;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c6 {
-    width: 100%;
-    margin-bottom: 32px;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c4 {
-    -webkit-align-self: start;
-    -ms-flex-item-align: start;
-    align-self: start;
-    grid-column: main;
-    grid-row: menu;
-    margin-top: 32px;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c1 {
-    grid-column: main;
-    grid-row: logo;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c10 {
-    grid-column: main;
-    grid-row: logout;
-    max-width: 100%;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c8 {
-    grid-column: main;
-    grid-row: new-agent;
-    max-width: 100%;
-  }
-}
-
-<div
-  className="c0"
->
-  <div
-    className="c1"
-  >
-    Apollo
-  </div>
-  <i
-    className="c2 fa fa-bars fa-lg"
-    id="collapseIcon"
-    onClick={[Function]}
-  />
-  <div
-    className="c3"
-  >
-    <div
-      className="c4"
-    >
-      <a
-        className="c5 c6"
-        href="/"
-        onClick={[Function]}
-      >
-        Dashboard
-      </a>
-    </div>
-    <button
-      className="c7 c8"
-      id="newAgentButton"
-      onClick={[Function]}
-    >
-      Add new agent
-    </button>
-    <button
-      className="c7 c9 c10"
-      id="logoutButton"
-      onClick={[Function]}
-    >
-      Logout
-    </button>
-  </div>
-</div>
-`;
-
 exports[`navbar render admin link for admins 1`] = `
-.c7 {
+.c8 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -684,19 +13,19 @@ exports[`navbar render admin link for admins 1`] = `
   cursor: pointer;
 }
 
-.c7:hover {
+.c8:hover {
   opacity: 0.90;
 }
 
-.c7:focus {
+.c8:focus {
   outline: none;
 }
 
-.c7:active {
+.c8:active {
   opacity: 0.80;
 }
 
-.c7:disabled:hover {
+.c8:disabled:hover {
   opacity: 1;
   cursor: auto;
 }
@@ -706,19 +35,23 @@ exports[`navbar render admin link for admins 1`] = `
   border: 1px solid;
 }
 
-.c5 {
+.c6 {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c5:hover {
+.c6:hover {
   opacity: 0.90;
+}
+
+.c2 {
+  cursor: pointer;
 }
 
 .c0 {
   padding: 16px;
   display: grid;
-  grid-template-columns: [logo] 200px [content] 1fr;
+  grid-template-columns: [logo] 100px [content] 1fr;
   grid-gap: 16px;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -727,7 +60,7 @@ exports[`navbar render admin link for admins 1`] = `
   z-index: 1;
 }
 
-.c3 {
+.c4 {
   grid-column: content;
   display: grid;
   grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px;
@@ -735,7 +68,7 @@ exports[`navbar render admin link for admins 1`] = `
   height: auto;
 }
 
-.c2 {
+.c3 {
   grid-row: logo;
   grid-column: toggle;
   display: none;
@@ -752,17 +85,16 @@ exports[`navbar render admin link for admins 1`] = `
   transition: transform .3s ease-out;
 }
 
-.c2:hover {
+.c3:hover {
   cursor: pointer;
 }
 
-.c6 {
-  maring-left: 16px;
-  margin-right: 16px;
+.c7 {
+  margin: 0px 16px;
   float: left;
 }
 
-.c4 {
+.c5 {
   grid-column: menu;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
@@ -779,11 +111,6 @@ exports[`navbar render admin link for admins 1`] = `
   max-width: 100px;
 }
 
-.c8 {
-  grid-column: new-agent;
-  max-width: 250px;
-}
-
 @media (max-width:47.9375em) {
   .c0 {
     grid-template-columns: [main] 1fr [toggle] 24px;
@@ -792,37 +119,36 @@ exports[`navbar render admin link for admins 1`] = `
     top: 0px;
     left: 0px;
     right: 0px;
-    bottom: static;
+    bottom: auto;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c3 {
+  .c4 {
     display: none;
     grid-column: main / -1;
     grid-row: content;
     height: 100%;
     grid-template-columns: [main] 1fr;
     grid-template-rows: [menu] 1fr [new-agent] 50px [logout] 50px;
-    maring-bottom: 32px;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c3 {
     display: inline;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c7 {
     width: 100%;
     margin-bottom: 32px;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     -webkit-align-self: start;
     -ms-flex-item-align: start;
     align-self: start;
@@ -847,14 +173,6 @@ exports[`navbar render admin link for admins 1`] = `
   }
 }
 
-@media (max-width:47.9375em) {
-  .c8 {
-    grid-column: main;
-    grid-row: new-agent;
-    max-width: 100%;
-  }
-}
-
 <div
   className="c0"
 >
@@ -864,25 +182,25 @@ exports[`navbar render admin link for admins 1`] = `
     Apollo
   </div>
   <i
-    className="c2 fa fa-bars fa-lg"
+    className="c2 c3 fa fa-bars fa-lg"
     id="collapseIcon"
     onClick={[Function]}
   />
   <div
-    className="c3"
+    className="c4"
   >
     <div
-      className="c4"
+      className="c5"
     >
       <a
-        className="c5 c6"
+        className="c6 c7"
         href="/"
         onClick={[Function]}
       >
         Dashboard
       </a>
       <a
-        className="c5 c6"
+        className="c6 c7"
         href="/admin"
         onClick={[Function]}
       >
@@ -890,14 +208,7 @@ exports[`navbar render admin link for admins 1`] = `
       </a>
     </div>
     <button
-      className="c7 c8"
-      id="newAgentButton"
-      onClick={[Function]}
-    >
-      Add new agent
-    </button>
-    <button
-      className="c7 c9 c10"
+      className="c8 c9 c10"
       id="logoutButton"
       onClick={[Function]}
     >
@@ -908,7 +219,7 @@ exports[`navbar render admin link for admins 1`] = `
 `;
 
 exports[`navbar renders correctly 1`] = `
-.c7 {
+.c8 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -920,19 +231,19 @@ exports[`navbar renders correctly 1`] = `
   cursor: pointer;
 }
 
-.c7:hover {
+.c8:hover {
   opacity: 0.90;
 }
 
-.c7:focus {
+.c8:focus {
   outline: none;
 }
 
-.c7:active {
+.c8:active {
   opacity: 0.80;
 }
 
-.c7:disabled:hover {
+.c8:disabled:hover {
   opacity: 1;
   cursor: auto;
 }
@@ -942,19 +253,23 @@ exports[`navbar renders correctly 1`] = `
   border: 1px solid;
 }
 
-.c5 {
+.c6 {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c5:hover {
+.c6:hover {
   opacity: 0.90;
+}
+
+.c2 {
+  cursor: pointer;
 }
 
 .c0 {
   padding: 16px;
   display: grid;
-  grid-template-columns: [logo] 200px [content] 1fr;
+  grid-template-columns: [logo] 100px [content] 1fr;
   grid-gap: 16px;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -963,7 +278,7 @@ exports[`navbar renders correctly 1`] = `
   z-index: 1;
 }
 
-.c3 {
+.c4 {
   grid-column: content;
   display: grid;
   grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px;
@@ -971,7 +286,7 @@ exports[`navbar renders correctly 1`] = `
   height: auto;
 }
 
-.c2 {
+.c3 {
   grid-row: logo;
   grid-column: toggle;
   display: none;
@@ -988,17 +303,16 @@ exports[`navbar renders correctly 1`] = `
   transition: transform .3s ease-out;
 }
 
-.c2:hover {
+.c3:hover {
   cursor: pointer;
 }
 
-.c6 {
-  maring-left: 16px;
-  margin-right: 16px;
+.c7 {
+  margin: 0px 16px;
   float: left;
 }
 
-.c4 {
+.c5 {
   grid-column: menu;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
@@ -1015,11 +329,6 @@ exports[`navbar renders correctly 1`] = `
   max-width: 100px;
 }
 
-.c8 {
-  grid-column: new-agent;
-  max-width: 250px;
-}
-
 @media (max-width:47.9375em) {
   .c0 {
     grid-template-columns: [main] 1fr [toggle] 24px;
@@ -1028,37 +337,36 @@ exports[`navbar renders correctly 1`] = `
     top: 0px;
     left: 0px;
     right: 0px;
-    bottom: static;
+    bottom: auto;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c3 {
+  .c4 {
     display: none;
     grid-column: main / -1;
     grid-row: content;
     height: 100%;
     grid-template-columns: [main] 1fr;
     grid-template-rows: [menu] 1fr [new-agent] 50px [logout] 50px;
-    maring-bottom: 32px;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c3 {
     display: inline;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c7 {
     width: 100%;
     margin-bottom: 32px;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     -webkit-align-self: start;
     -ms-flex-item-align: start;
     align-self: start;
@@ -1083,14 +391,6 @@ exports[`navbar renders correctly 1`] = `
   }
 }
 
-@media (max-width:47.9375em) {
-  .c8 {
-    grid-column: main;
-    grid-row: new-agent;
-    max-width: 100%;
-  }
-}
-
 <div
   className="c0"
 >
@@ -1100,18 +400,18 @@ exports[`navbar renders correctly 1`] = `
     Apollo
   </div>
   <i
-    className="c2 fa fa-bars fa-lg"
+    className="c2 c3 fa fa-bars fa-lg"
     id="collapseIcon"
     onClick={[Function]}
   />
   <div
-    className="c3"
+    className="c4"
   >
     <div
-      className="c4"
+      className="c5"
     >
       <a
-        className="c5 c6"
+        className="c6 c7"
         href="/"
         onClick={[Function]}
       >
@@ -1119,14 +419,7 @@ exports[`navbar renders correctly 1`] = `
       </a>
     </div>
     <button
-      className="c7 c8"
-      id="newAgentButton"
-      onClick={[Function]}
-    >
-      Add new agent
-    </button>
-    <button
-      className="c7 c9 c10"
+      className="c8 c9 c10"
       id="logoutButton"
       onClick={[Function]}
     >

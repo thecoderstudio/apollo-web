@@ -37,39 +37,29 @@ describe('navbar', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("handles successful logout", () => {
-    let tree = getComponent(store);
+  it('handles successful logout', () => {
+    const tree = getComponent(store);
     const instance = tree.root;
-    instance.findByProps({id: 'logoutButton'}).props.onClick();
+    instance.findByProps({ id: 'logoutButton' }).props.onClick();
     expect(dispatchSpy).toHaveBeenCalledWith(logoutAction());
     expect(dispatchSpy).toHaveBeenCalledWith(removeCurrentUser());
   });
 
-  it('handles add agent modal', () => {
-    const component = getComponent(store);
-    const root = component.root;
-    root.findByProps({ id: 'newAgentButton' }).props.onClick();
-    expect(component.toJSON()).toMatchSnapshot();
-
-    root.findByType(PlainNavBar).instance.closeAddAgentModal();
-    expect(component.toJSON()).toMatchSnapshot();
-  });
-
   it('toggles collapsed', () => {
     const component = getComponent(store);
-    const root = component.root;
-    const toggle = root.findByProps({id: 'collapseIcon'});
+    const { root } = component;
+    const toggle = root.findByProps({ id: 'collapseIcon' });
     const menu = root.findByType(PlainNavBar);
     toggle.props.onClick();
     component.toJSON();
-    expect(menu.instance.state['collapsed']).toBe(false);
+    expect(menu.instance.state.collapsed).toBe(false);
 
     toggle.props.onClick();
     component.toJSON();
-    expect(menu.instance.state['collapsed']).toBe(true);
+    expect(menu.instance.state.collapsed).toBe(true);
   });
 
-  it("render admin link for admins", () => {
+  it('render admin link for admins', () => {
     store = mockStore({
       currentUser: {
         username: 'admin',
@@ -78,7 +68,7 @@ describe('navbar', () => {
         }
       }
     });
-    let tree = getComponent(store).toJSON();
+    const tree = getComponent(store).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

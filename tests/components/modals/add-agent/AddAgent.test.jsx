@@ -7,15 +7,17 @@ import NewAgentHandler from '../../../../src/lib/NewAgentHandler';
 
 jest.mock('axios');
 
-function getComponent(spy, manualUpload=false) {
+function getComponent(spy, manualUpload = false) {
   return renderer.create(
     <AddAgent
       onClose={spy}
       manualUpload={manualUpload}
-      selectedArchitecture='test'
-      selectedOperatingSystem='test'
-      agentId='id'
-      secret='secret'
+      agentData={{
+        selectedArchitecture: 'test',
+        selectedOperatingSystem: 'test',
+        agentId: 'id',
+        secret: 'secret'
+      }}
     />
   );
 }
@@ -50,7 +52,7 @@ describe('Add Agent', () => {
 
   it('calls download file correctly after successful get', async () => {
     const component = getComponent(spy, true);
-    const downloadFileSpy = jest.spyOn(NewAgentHandler.prototype, 'downloadFile').mockImplementation(() => { return; });
+    const downloadFileSpy = jest.spyOn(NewAgentHandler.prototype, 'downloadFile').mockImplementation(() => { });
 
     axios.get.mockResolvedValue({
       status: 200,
@@ -63,21 +65,21 @@ describe('Add Agent', () => {
     });
   });
 
-   it('Does not call download file on error', async () => {
-      const component = getComponent(spy, true);
-      const downloadFileSpy = jest.spyOn(NewAgentHandler.prototype, 'downloadFile').mockImplementation(() => { return; });
+  it('Does not call download file on error', async () => {
+    const component = getComponent(spy, true);
+    const downloadFileSpy = jest.spyOn(NewAgentHandler.prototype, 'downloadFile').mockImplementation(() => { });
 
-      axios.get.mockRejectedValue({
-        status: 400,
-        response: {
-          data: {}
-        }
-      });
-
-      component.root.findByProps({ id: 'downloadBinaryButton' }).props.onClick();
-
-      await waitForExpect(() => {
-        expect(downloadFileSpy).not.toHaveBeenCalled();
-      });
+    axios.get.mockRejectedValue({
+      status: 400,
+      response: {
+        data: {}
+      }
     });
+
+    component.root.findByProps({ id: 'downloadBinaryButton' }).props.onClick();
+
+    await waitForExpect(() => {
+      expect(downloadFileSpy).not.toHaveBeenCalled();
+    });
+  });
 });

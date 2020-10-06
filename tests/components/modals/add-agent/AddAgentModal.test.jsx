@@ -17,7 +17,16 @@ describe('add Agent Modal', () => {
   it('renders add agent correctly', () => {
     const component = getComponent();
     component.root.findByType(AddAgentModal).instance.setState(
-      { manualUpload: true, agentCreated: true }
+      {
+        manualUpload: true,
+        agentCreated: true,
+        agentData: {
+          agentId: 'id',
+          secret: 'secret',
+          selectedOperatingSystem: 'op',
+          selectedArchitecture: 'arc'
+        }
+      }
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
@@ -42,7 +51,7 @@ describe('add Agent Modal', () => {
         agentId: 'id',
         secret: 'secret',
         selectedOperatingSystem: 'op',
-        selectedArchitecture: 'arc'
+        selectedArchitecture: 'arch'
       }
     })).toBe(true);
   });

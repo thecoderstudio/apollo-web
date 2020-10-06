@@ -35,8 +35,11 @@ exports[`user list correctly toggles create user 1`] = `
   border: 1px solid;
 }
 
+.c3 {
+  margin-left: 8px;
+}
+
 .c6 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
 }
@@ -159,6 +162,12 @@ exports[`user list correctly toggles create user 1`] = `
 }
 
 @media (max-width:47.9375em) {
+  .c3 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
   .c7 {
     padding: 16px;
     height: 100%;
@@ -177,12 +186,6 @@ exports[`user list correctly toggles create user 1`] = `
   }
 }
 
-@media (max-width:47.9375em) {
-  .c3 {
-    display: none;
-  }
-}
-
 <div>
   <div
     className="c0"
@@ -197,11 +200,10 @@ exports[`user list correctly toggles create user 1`] = `
       <i
         className="fas fa-plus"
       />
-       
       <span
         className="c3"
       >
-        Create User
+        Create user
       </span>
     </button>
   </div>
@@ -320,6 +322,10 @@ exports[`user list correctly toggles create user 2`] = `
   border: 1px solid;
 }
 
+.c3 {
+  margin-left: 8px;
+}
+
 .c0 {
   margin: 0px 16px;
   display: -webkit-box;
@@ -341,17 +347,17 @@ exports[`user list correctly toggles create user 2`] = `
 }
 
 @media (max-width:47.9375em) {
-
-}
-
-@media (max-width:47.9375em) {
-
-}
-
-@media (max-width:47.9375em) {
   .c3 {
     display: none;
   }
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
 }
 
 <div>
@@ -368,11 +374,10 @@ exports[`user list correctly toggles create user 2`] = `
       <i
         className="fas fa-plus"
       />
-       
       <span
         className="c3"
       >
-        Create User
+        Create user
       </span>
     </button>
   </div>
@@ -417,6 +422,10 @@ exports[`user list doesn't try to render users on error 1`] = `
   border: 1px solid;
 }
 
+.c3 {
+  margin-left: 8px;
+}
+
 .c0 {
   margin: 0px 16px;
   display: -webkit-box;
@@ -457,11 +466,10 @@ exports[`user list doesn't try to render users on error 1`] = `
       <i
         className="fas fa-plus"
       />
-       
       <span
         className="c3"
       >
-        Create User
+        Create user
       </span>
     </button>
   </div>
@@ -504,6 +512,10 @@ exports[`user list refreshes on create user success 1`] = `
 .c2 {
   background-color: transparent;
   border: 1px solid;
+}
+
+.c3 {
+  margin-left: 8px;
 }
 
 .c7 {
@@ -572,11 +584,10 @@ exports[`user list refreshes on create user success 1`] = `
       <i
         className="fas fa-plus"
       />
-       
       <span
         className="c3"
       >
-        Create User
+        Create user
       </span>
     </button>
   </div>
@@ -635,6 +646,10 @@ exports[`user list renders correctly 1`] = `
   border: 1px solid;
 }
 
+.c3 {
+  margin-left: 8px;
+}
+
 .c0 {
   margin: 0px 16px;
   display: -webkit-box;
@@ -675,11 +690,10 @@ exports[`user list renders correctly 1`] = `
       <i
         className="fas fa-plus"
       />
-       
       <span
         className="c3"
       >
-        Create User
+        Create user
       </span>
     </button>
   </div>
@@ -722,6 +736,10 @@ exports[`user list renders correctly 2`] = `
 .c2 {
   background-color: transparent;
   border: 1px solid;
+}
+
+.c3 {
+  margin-left: 8px;
 }
 
 .c5 {
@@ -789,11 +807,10 @@ exports[`user list renders correctly 2`] = `
       <i
         className="fas fa-plus"
       />
-       
       <span
         className="c3"
       >
-        Create User
+        Create user
       </span>
     </button>
   </div>

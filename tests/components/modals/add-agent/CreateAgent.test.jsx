@@ -1,17 +1,15 @@
 import React from 'react';
-import configureStore from 'redux-mock-store';
 import waitForExpect from 'wait-for-expect';
 import axios from 'axios';
 import { StatusCodes } from 'http-status-codes';
 import renderer from 'react-test-renderer';
 import CreateAgent from '../../../../src/components/modals/add-agent/CreateAgent';
-import NewAgentHandler from '../../../../src/lib/NewAgentHandler';
 
 jest.mock('axios');
 
 function getComponent(spy, callbackSpy) {
   return renderer.create(
-    <CreateAgent onClose={spy} createAgentSuccessCallback={callbackSpy}/>
+    <CreateAgent onClose={spy} createAgentSuccessCallback={callbackSpy} />
   );
 }
 
@@ -19,10 +17,12 @@ function submitForm(root, name) {
   const nameInput = root.findByProps({ placeholder: '007' });
   const form = root.findByType('form');
 
-  nameInput.props.onChange({ currentTarget : {
-    name: 'name',
-    value: name
-  }});
+  nameInput.props.onChange({
+    currentTarget: {
+      name: 'name',
+      value: name
+    }
+  });
 
   form.props.onSubmit();
 }
@@ -53,7 +53,7 @@ describe('create Agent', () => {
   });
 
   it('validates input', async () => {
-    const component= getComponent(spy, callbackSpy);
+    const component = getComponent(spy, callbackSpy);
     const instance = component.root;
 
     submitForm(instance, '');
@@ -81,11 +81,11 @@ describe('create Agent', () => {
     });
   });
 
-  it('handle unsuccesful post', async () => {
+  it('handle unsuccessful post', async () => {
     axios.post.mockImplementationOnce(() => Promise.reject({
       response: {
         status: StatusCodes.BAD_REQUEST,
-        statusText: "Bad request",
+        statusText: 'Bad request',
         data: {}
       }
     }));
@@ -103,7 +103,7 @@ describe('create Agent', () => {
     axios.post.mockImplementationOnce(() => Promise.reject({
       response: {
         status: StatusCodes.INTERNAL_SERVER_ERROR,
-        statusText: "Something went wrong",
+        statusText: 'Something went wrong',
         data: {}
       }
     }));
@@ -116,12 +116,12 @@ describe('create Agent', () => {
     });
   });
 
-  it('Correctly sets architecure state', () => {
+  it('Correctly sets architecture state', () => {
     const component = getComponent();
     const createAgentInstance = component.root.findByType(CreateAgent).instance;
 
     createAgentInstance.selectArchitecture('test');
-    expect(createAgentInstance.state['selectedArchitecture']).toBe('test');
+    expect(createAgentInstance.state.selectedArchitecture).toBe('test');
   });
 
   it('Correctly sets operating system state', () => {
@@ -129,6 +129,6 @@ describe('create Agent', () => {
     const createAgentInstance = component.root.findByType(CreateAgent).instance;
 
     createAgentInstance.selectOperatingSystem('test');
-    expect(createAgentInstance.state['selectedOperatingSystem']).toBe('test');
+    expect(createAgentInstance.state.selectedOperatingSystem).toBe('test');
   });
 });

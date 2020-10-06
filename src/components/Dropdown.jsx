@@ -33,7 +33,7 @@ const DropDownContent = styled.ul`
   padding: 0;
   margin-top: 10px;
   width: 230px;
-  box-shadow: ${(props) => props.theme.boxShadow}
+  box-shadow: ${(props) => props.theme.boxShadow};
   z-index: 1;
 
   color: ${(props) => props.theme.white};
