@@ -25,7 +25,7 @@ const TextField = styled.div`
   cursor: text;
   text-align:left;
   padding: 15px;
-  background-color: ${props => props.theme.lightBlack};
+  background-color: ${(props) => props.theme.lightBlack};
   overflow: auto;
   white-space: nowrap;
   overflow-y: hidden;
@@ -47,15 +47,22 @@ const Icon = styled.i`
 `;
 
 class CopyToClipboard extends React.PureComponent {
-  copyToClipboard = () => {
-    navigator.clipboard.writeText(this.props.text);
+  constructor(props) {
+    super(props);
+    this.copyToClipboard = this.copyToClipboard.bind(this);
+  }
+
+  copyToClipboard() {
+    const { text } = this.props;
+    navigator.clipboard.writeText(text);
   }
 
   render() {
-    return(
+    const { text } = this.props;
+    return (
       <Wrapper>
-        <TextField>{this.props.text}</TextField>
-        <StyledButton id='copyToClipboardButton' onClick={this.copyToClipboard}><Icon className="fas fa-copy" /></StyledButton>
+        <TextField>{text}</TextField>
+        <StyledButton id="copyToClipboardButton" onClick={this.copyToClipboard}><Icon className="fas fa-copy" /></StyledButton>
       </Wrapper>
     );
   }
