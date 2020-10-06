@@ -22,7 +22,7 @@ const TextField = styled.div`
   font-family: 'B612', sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  cursor: pointer;
+  cursor: text;
   text-align:left;
   padding: 15px;
   background-color: ${props => props.theme.lightBlack};

@@ -30,7 +30,6 @@ describe('app', () => {
     const store = mockStore({
       authenticated: true,
       agent: [],
-      notifications: new Map({}),
       currentUser: {
         hasChangedInitialPassword: false
       },

@@ -74,9 +74,13 @@ class Dropdown extends React.PureComponent {
     super(props);
     this.state = { collapsed: true };
     this.node = React.createRef();
+    this.closeDropdown = this.closeDropdown.bind(this);
+    this.toggleCollapse = this.toggleCollapse.bind(this);
+    this.selectItem = this.selectItem.bind(this);
+    this.renderItems = this.renderItems.bind(this);
   }
 
-  closeDropdown = (e) => {
+  closeDropdown(e) {
     if (!this.state.collapsed && !this.node.current.contains(e.target)) {
       this.setState({ collapsed: true });
     }
@@ -86,16 +90,16 @@ class Dropdown extends React.PureComponent {
     document.addEventListener('mousedown', this.closeDropdown , false);
   }
 
-  toggleCollapse = () => {
+  toggleCollapse() {
     this.setState({ collapsed : !this.state.collapsed });
   }
 
-  selectItem = (option) => {
+  selectItem(option) {
     this.toggleCollapse();
     this.props.optionSelectedCallback(option);
   }
 
-  renderItems = () => {
+  renderItems() {
     return this.props.options.map(option => {
       if (option === this.props.selected) { return; }
       return <DropDownItem key={option} onClick={() => this.selectItem(option)}>{option}</DropDownItem>;

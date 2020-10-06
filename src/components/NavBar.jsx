@@ -6,6 +6,7 @@ import checkIfAdmin from '../util/admin';
 import OutlinedButton from './buttons/OutlinedButton';
 import { logout } from '../util/auth';
 import Link from './Link';
+import Icon from './Icon';
 
 const NavigationBar = styled.div`
   padding: 16px;
@@ -25,7 +26,7 @@ const NavigationBar = styled.div`
       top: 0px;
       left: 0px;
       right: 0px;
-      bottom: ${props => props.collapsed ? 'static' : '0px'};
+      bottom: ${props => props.collapsed ? 'auto' : '0px'};
     `
   }
 `;
@@ -46,12 +47,11 @@ const NavBarContent = styled.div`
 
       grid-template-columns: [main] 1fr;
       grid-template-rows: [menu] 1fr [new-agent] 50px [logout] 50px;
-      maring-bottom: 32px;
     `
   }
 `;
 
-const MenuToggleIcon = styled.i`
+const MenuToggleIcon = styled(Icon)`
   grid-row: logo;
   grid-column: toggle;
   display: none;
