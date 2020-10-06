@@ -69,7 +69,7 @@ class AddAgentModal extends React.PureComponent {
       manualUpload: null,
       agentCreated: false
     };
-    this.createAgentSuccessCallback = this.createAgentSuccessCallback.bind(this);
+    this.createAgentSucccreateAgentSuccessessCallback = this.createAgentSuccess.bind(this);
     this.setManualUpload = this.setManualUpload.bind(this);
   }
 
@@ -77,7 +77,7 @@ class AddAgentModal extends React.PureComponent {
     this.setState({ manualUpload: value });
   }
 
-  createAgentSuccessCallback(response, architecture, operatingSystem) {
+  createAgentSuccess(response, architecture, operatingSystem) {
     this.setState({
       agentCreated: true,
       agentData: {
@@ -100,7 +100,7 @@ class AddAgentModal extends React.PureComponent {
       content = (
         <CreateAgent
           onClose={onClose}
-          createAgentSuccessCallback={this.createAgentSuccessCallback}
+          createAgentSuccessCallback={this.createAgentSuccess}
         />
       );
     } else {

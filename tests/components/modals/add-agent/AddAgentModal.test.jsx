@@ -31,11 +31,23 @@ describe('add Agent Modal', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
+  it('correctly set manual upload', () => {
+    const component = getComponent();
+    const addAgentModalInstance = component.root.findByType(AddAgentModal).instance;
+
+    addAgentModalInstance.setManualUpload(true);
+
+    expect(JSON.stringify(addAgentModalInstance.state)).toBe(JSON.stringify({
+      manualUpload: true,
+      agentCreated: false
+    }));
+  });
+
   it('create agent success callback set state correctly', () => {
     const component = getComponent();
     const addAgentModalInstance = component.root.findByType(AddAgentModal).instance;
 
-    addAgentModalInstance.createAgentSuccessCallback(
+    addAgentModalInstance.createAgentSuccess(
       {
         data: {
           id: 'id',
