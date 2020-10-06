@@ -1,8 +1,6 @@
 import React from 'react';
-import configureStore from 'redux-mock-store';
 import waitForExpect from 'wait-for-expect';
 import axios from 'axios';
-import { StatusCodes } from 'http-status-codes';
 import renderer from 'react-test-renderer';
 import AddAgent from '../../../../src/components/modals/add-agent/AddAgent';
 import NewAgentHandler from '../../../../src/lib/NewAgentHandler';

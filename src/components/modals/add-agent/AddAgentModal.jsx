@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import ModalOverlay from '../ModalOverlay';
-import DescriptionButton from '../../buttons/DescriptionButton';
 import Card from '../../Card';
 import NewAgentHandler from "../../../lib/NewAgentHandler";
 import PropTypes from 'prop-types';
 import media from '../../../util/media';
 import AddAgent from '../add-agent/AddAgent';
 import CreateAgent from '../add-agent/CreateAgent';
+import DownloadAgentChoice from '../add-agent/DownloadAgentChoice';
 
 const propTypes = {
   onClose: PropTypes.func.isRequired
@@ -62,46 +62,6 @@ const Content = styled.div`
   padding: 20px;
 `;
 
-const TwoColumnGrid = styled.div`
-  display: grid;
-  grid-template-columns: [column-one] 50% [column-two] 50%;
-  gap: 20px;
-
-  ${
-    media.phone`
-      grid-template-columns: [column-one] 100%;
-      grid-template-rows: [row-one] 1fr [row-two] 1fr;
-    `
-  }
-`;
-
-const ColumnOne = styled.div`
-  grid-column: column-one;
-
-  ${
-    media.phone`
-      grid-row: row-one;
-    `
-  }
-`;
-
-const ColumnTwo = styled.div`
-  grid-column: column-two;
-  margin-right: 20px;
-
-  ${
-    media.phone`
-      grid-column: column-one;
-      grid-row: row-two;
-      margin-right: 0px;
-    `
-  }
-`;
-
-const StyledDescriptionButton = styled(DescriptionButton)`
-  width: 100%;
-`;
-
 class AddAgentModal extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -110,41 +70,22 @@ class AddAgentModal extends React.PureComponent {
       manualUpload: null,
       agentCreated: false,
     };
-    this.renderQuestion = this.renderQuestion.bind(this);
     this.createAgentSuccessCallback = this.createAgentSuccessCallback.bind(this);
+    this.setManualUpload = this.setManualUpload.bind(this);
   }
 
   setManualUpload(value) {
     this.setState({ manualUpload: value });
   }
 
-  renderQuestion() {
-    const directly = "Directly on target machine.";
-    const manual = "Manual upload";
-    return (
-      <TwoColumnGrid>
-        <ColumnOne>
-          <StyledDescriptionButton id='directlyButton' onClick={() => this.setManualUpload(false)} title={directly}>
-          You have the correct permissions to download the binary directly on the target machine.
-          </StyledDescriptionButton>
-        </ColumnOne>
-        <ColumnTwo>
-          <StyledDescriptionButton id='manualButton' onClick={() => this.setManualUpload(true)} title={manual}>
-            You download and upload the binary yourself.
-          </StyledDescriptionButton>
-        </ColumnTwo>
-      </TwoColumnGrid>
-    );
-  }
-
-	createAgentSuccessCallback(response, architecure, operatingSystem) {
+	createAgentSuccessCallback(response, architecture, operatingSystem) {
 		this.setState({
       agentCreated: true,
       agentData: {
         agentId: response.data['id'],
         secret: response.data['oauth_client']['secret'],
         selectedOperatingSystem: operatingSystem,
-        selectedArchitecture: architecure
+        selectedArchitecture: architecture
       }
     });
 	};
@@ -152,7 +93,7 @@ class AddAgentModal extends React.PureComponent {
   render() {
     let content;
     if (this.state.manualUpload === null) {
-      content = this.renderQuestion();
+      content = <DownloadAgentChoice setManualUploadCallback={this.setManualUpload} />
     } else if (!this.state.agentCreated) {
       content = <CreateAgent onClose={this.props.onClose} createAgentSuccessCallback={this.createAgentSuccessCallback} />;
     } else {

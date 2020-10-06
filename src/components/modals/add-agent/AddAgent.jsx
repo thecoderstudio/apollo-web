@@ -166,7 +166,7 @@ class AddAgent extends React.PureComponent {
           <Description>
             Copy and run the command on the target machine to download run the client.
           </Description>
-          <StyledCopyToClipboard id='copytoclip' text={this.getCommand()} />
+          <StyledCopyToClipboard text={this.getCommand()} />
           <CloseButton id='closeButton' onClick={this.props.onClose}>Close</CloseButton>
         </ThreeRowDisplay>
 			</div>
