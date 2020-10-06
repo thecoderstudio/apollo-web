@@ -44,15 +44,15 @@ describe('add Agent Modal', () => {
       }, 'arch', 'op'
     );
 
-    expect(JSON.stringify(addAgentModalInstance.state) === JSON.stringify({
+    expect(JSON.stringify(addAgentModalInstance.state)).toBe(JSON.stringify({
       manualUpload: null,
       agentCreated: true,
       agentData: {
         agentId: 'id',
         secret: 'secret',
-        selectedOperatingSystem: 'op',
-        selectedArchitecture: 'arch'
+        selectedArchitecture: 'arch',
+        selectedOperatingSystem: 'op'
       }
-    })).toBe(true);
+    }));
   });
 });
