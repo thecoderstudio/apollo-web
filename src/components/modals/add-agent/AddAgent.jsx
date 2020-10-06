@@ -6,7 +6,7 @@ import media from '../../../util/media';
 import OutlinedButton from '../../buttons/OutlinedButton';
 import LoadingButton from '../../buttons/LoadingButton';
 import CopyToClipboard from '../../CopyToClipboard';
-import NewAgentHandler from "../../../lib/NewAgentHandler";
+import NewAgentHandler from '../../../lib/NewAgentHandler';
 import { handleHTTPResponse } from '../../../actions/error';
 
 const propTypes = {
@@ -21,11 +21,11 @@ const TwoColumnGrid = styled.div`
   margin: 20px 0px 20px 0px;
 
   ${
-    media.phone`
+  media.phone`
       grid-template-columns: [column-one] 100%;
       grid-template-rows: [row-one] 1fr [row-two] 1fr;
     `
-  }
+}
 `;
 
 const ColumnOne = styled.div`
@@ -33,12 +33,12 @@ const ColumnOne = styled.div`
   margin-right: 10px;
 
   ${
-    media.phone`
+  media.phone`
       grid-row: row-one;
       margin-right: 0px;
       margin: 15px;
     `
-  }
+}
 `;
 
 const ColumnTwo = styled.div`
@@ -46,13 +46,13 @@ const ColumnTwo = styled.div`
   margin-left: 10px;
 
   ${
-    media.phone`
+  media.phone`
       grid-column: column-one;
       grid-row: row-two;
       margin-left: 0px;
       margin: 15px;
     `
-  }
+}
 `;
 
 const StyledButton = styled(OutlinedButton)`
@@ -70,12 +70,12 @@ const DownloadBinaryButton = styled(LoadingButton)`
   display: block;
 
   ${
-    media.phone`
+  media.phone`
       float: none;
       margin-left: auto;
       margin-right: auto;
     `
-  }
+}
 `;
 
 const ThreeRowDisplay = styled.div`
@@ -99,77 +99,90 @@ const Description = styled.p`
 `;
 
 class AddAgent extends React.PureComponent {
-	constructor(props) {
+  constructor(props) {
     super(props);
     this.newAgentHandler = new NewAgentHandler();
     this.state = {
       loading: false
     };
-	}
+    this.getCommand = this.getCommand.bind(this);
+    this.downloadBinary = this.downloadBinary.bind(this);
+  }
 
-	downloadBinary = () => {
+  getCommand() {
+    let command;
+    const { agentData, manualUpload } = this.props;
+
+    if (manualUpload) {
+      command = this.newAgentHandler.getExecuteCommand(
+        agentData.agentId,
+        agentData.secret
+      );
+    } else {
+      command = this.newAgentHandler.getDirectlyOnMachineCommand(
+        agentData.selectedOperatingSystem,
+        agentData.selectedArchitecture,
+        agentData.agentId,
+        agentData.secret
+      );
+    }
+    return command;
+  }
+
+  downloadBinary() {
+    const { agentData } = this.props;
+
     this.setState({ loading: true });
     axios.get(
       `${process.env.APOLLO_HTTP_URL}agent/download`,
       {
         withCredentials: true,
         params: {
-          target_os: this.props.agentData.selectedOperatingSystem,
-          target_arch: this.props.agentData.selectedArchitecture
+          target_os: agentData.selectedOperatingSystem,
+          target_arch: agentData.selectedArchitecture
         },
         responseType: 'arraybuffer'
-      },
+      }
     )
-      .then(response => {
+      .then((response) => {
         this.newAgentHandler.downloadFile(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         handleHTTPResponse(error.response, true, false);
       })
-      .finally(_ => {
-        this.setState({loading: false});
+      .finally((_) => {
+        this.setState({ loading: false });
       });
-  };
-
-	getCommand = () => {
-		let command;
-		if (this.props.manualUpload) {
-			command = this.newAgentHandler.getExecuteCommand(this.props.agentData.agentId, this.props.agentData.secret);
-		} else {
-			command = this.newAgentHandler.getDirectlyOnMachineCommand(
-        this.props.agentData.selectedOperatingSystem,
-        this.props.agentData.selectedArchitecture,
-        this.props.agentData.agentId,
-        this.props.agentData.secret
-      );
-    }
-    return command;
-	};
+  }
 
   render() {
+    const { manualUpload, onClose } = this.props;
+    const { loading } = this.state;
+
     return (
-			<div>
-        {this.props.manualUpload &&
+      <div>
+        {manualUpload
+          && (
           <TwoColumnGrid>
             <ColumnOne>
               Download the binary and upload it to the target machine.
             </ColumnOne>
             <ColumnTwo>
-              <DownloadBinaryButton id='downloadBinaryButton' loading={this.state.loading} onClick={this.downloadBinary}>
+              <DownloadBinaryButton id="downloadBinaryButton" loading={loading} onClick={this.downloadBinary}>
                 Download binary
               </DownloadBinaryButton>
             </ColumnTwo>
           </TwoColumnGrid>
-        }
+          )}
 
         <ThreeRowDisplay>
           <Description>
             Copy and run the command on the target machine to download run the client.
           </Description>
           <StyledCopyToClipboard text={this.getCommand()} />
-          <CloseButton id='closeButton' onClick={this.props.onClose}>Close</CloseButton>
+          <CloseButton id="closeButton" onClick={onClose}>Close</CloseButton>
         </ThreeRowDisplay>
-			</div>
+      </div>
     );
   }
 }

@@ -1,20 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import ModalOverlay from '../ModalOverlay';
 import Card from '../../Card';
-import NewAgentHandler from "../../../lib/NewAgentHandler";
-import PropTypes from 'prop-types';
+import NewAgentHandler from '../../../lib/NewAgentHandler';
 import media from '../../../util/media';
-import AddAgent from '../add-agent/AddAgent';
-import CreateAgent from '../add-agent/CreateAgent';
-import DownloadAgentChoice from '../add-agent/DownloadAgentChoice';
+import AddAgent from './AddAgent';
+import CreateAgent from './CreateAgent';
+import DownloadAgentChoice from './DownloadAgentChoice';
 
 const propTypes = {
   onClose: PropTypes.func.isRequired
 };
 
 const StyledCard = styled(Card)`
-  background-color: ${props => props.theme.black};
+  background-color: ${(props) => props.theme.black};
   position: fixed;
 
   top: 50%;
@@ -24,7 +24,7 @@ const StyledCard = styled(Card)`
   width: 100%;
 
   ${
-    media.phone`
+  media.phone`
       top: 0px;
       left: 0px;
       right: 0px;
@@ -33,7 +33,7 @@ const StyledCard = styled(Card)`
       width: auto;
       transform: none;
     `
-  }
+}
 `;
 
 const ScrollableContent = styled.div`
@@ -68,7 +68,7 @@ class AddAgentModal extends React.PureComponent {
     this.newAgentHandler = new NewAgentHandler();
     this.state = {
       manualUpload: null,
-      agentCreated: false,
+      agentCreated: false
     };
     this.createAgentSuccessCallback = this.createAgentSuccessCallback.bind(this);
     this.setManualUpload = this.setManualUpload.bind(this);
@@ -78,35 +78,44 @@ class AddAgentModal extends React.PureComponent {
     this.setState({ manualUpload: value });
   }
 
-	createAgentSuccessCallback(response, architecture, operatingSystem) {
-		this.setState({
+  createAgentSuccessCallback(response, architecture, operatingSystem) {
+    this.setState({
       agentCreated: true,
       agentData: {
-        agentId: response.data['id'],
-        secret: response.data['oauth_client']['secret'],
+        agentId: response.data.id,
+        secret: response.data.oauth_client.secret,
         selectedOperatingSystem: operatingSystem,
         selectedArchitecture: architecture
       }
     });
-	};
+  }
 
   render() {
     let content;
-    if (this.state.manualUpload === null) {
-      content = <DownloadAgentChoice setManualUploadCallback={this.setManualUpload} />
-    } else if (!this.state.agentCreated) {
-      content = <CreateAgent onClose={this.props.onClose} createAgentSuccessCallback={this.createAgentSuccessCallback} />;
+    const { agentCreated, manualUpload, agentData } = this.state;
+    const { onClose } = this.props;
+
+    if (manualUpload === null) {
+      content = <DownloadAgentChoice setManualUploadCallback={this.setManualUpload} />;
+    } else if (!agentCreated) {
+      content = (
+        <CreateAgent
+          onClose={onClose}
+          createAgentSuccessCallback={this.createAgentSuccessCallback}
+        />
+      );
     } else {
       content = (
         <AddAgent
-          onClose={this.props.onClose}
-          manualUpload={this.state.manualUpload === true}
-          agentData={this.state.agentData}
+          onClose={onClose}
+          manualUpload={manualUpload === true}
+          agentData={agentData}
         />
       );
     }
+
     return (
-      <ModalOverlay closeModalFunction={this.props.onClose}>
+      <ModalOverlay closeModalFunction={onClose}>
         <StyledCard>
           <ScrollableContent>
             <Title>Add new agent</Title>

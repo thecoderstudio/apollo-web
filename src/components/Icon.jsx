@@ -11,7 +11,7 @@ const defaultProps = {
 };
 
 const Icon = styled.i`
-  cursor: ${props => props.active ? 'pointer' : 'inherit'};
+  cursor: ${(props) => props.active ? 'pointer' : 'inherit'};
 `;
 
 Icon.propTypes = propTypes;

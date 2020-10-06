@@ -9,36 +9,16 @@ function getComponent() {
 }
 
 describe('add Agent Modal', () => {
-  let spy;
-
-  beforeEach(() => {
-    spy = jest.fn();
-  });
-
   it('renders correctly', () => {
     const tree = getComponent().toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('selects directly correctly', () => {
-    const component = getComponent();
-    const instance = component.root;
-
-    instance.findByProps({ id: 'directlyButton' }).props.onClick();
-    expect(component.toJSON()).toMatchSnapshot();
-  });
-
-  it('selects manual correctly', () => {
-    const component = getComponent();
-    const instance = component.root;
-
-    instance.findByProps({ id: 'manualButton' }).props.onClick();
-    expect(component.toJSON()).toMatchSnapshot();
-  });
-
   it('renders add agent correctly', () => {
     const component = getComponent();
-    component.root.findByType(AddAgentModal).instance.setState({manualUpload: true, agentCreated: true});
+    component.root.findByType(AddAgentModal).instance.setState(
+      { manualUpload: true, agentCreated: true }
+    );
     expect(component.toJSON()).toMatchSnapshot();
   });
 
@@ -50,12 +30,12 @@ describe('add Agent Modal', () => {
       {
         data: {
           id: 'id',
-          'oauth_client': {secret: 'secret'}
+          oauth_client: { secret: 'secret' }
         }
-      },'arch', 'op'
+      }, 'arch', 'op'
     );
 
-    expect(JSON.stringify(addAgentModalInstance.state) ===  JSON.stringify({
+    expect(JSON.stringify(addAgentModalInstance.state) === JSON.stringify({
       manualUpload: null,
       agentCreated: true,
       agentData: {
