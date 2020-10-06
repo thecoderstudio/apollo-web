@@ -12,7 +12,7 @@ import { createAgentSchema } from '../../../validation/agent';
 import { parseHTTPErrors } from '../../../util/parser';
 import { handleHTTPResponse } from '../../../actions/error';
 import media from '../../../util/media';
-import NewAgentHandler from "../../../lib/NewAgentHandler";
+import NewAgentHandler from '../../../lib/NewAgentHandler';
 
 const propTypes = {
   createAgentSuccessCallback: PropTypes.func.isRequired,
@@ -25,11 +25,11 @@ const TwoColumnGrid = styled.div`
   margin: 20px 0px 20px 0px;
 
   ${
-    media.phone`
+  media.phone`
       grid-template-columns: [column-one] 100%;
       grid-template-rows: [row-one] 1fr [row-two] 1fr;
     `
-  }
+}
 `;
 
 const TextAndInputFieldWrapper = styled.div`
@@ -39,24 +39,24 @@ const TextAndInputFieldWrapper = styled.div`
   height: 100px;
 
   ${
-    media.phone`
+  media.phone`
     height: 120px;
       grid-template-columns: [column-one] 100%;
       grid-template-rows: [text] 30px [dropdown] 85px;
     `
-  }
+}
 `;
 
 const InputFieldWrapper = styled.div`
   grid-column: dropdown;
 
   ${
-    media.phone`
+  media.phone`
       grid-column: column-one;
       grid-row: dropdown;
       width: 100%;
     `
-  }
+}
 `;
 
 const StyledDropDown = styled(Dropdown)`
@@ -64,10 +64,10 @@ const StyledDropDown = styled(Dropdown)`
   float: right;
 
   ${
-    media.phone`
+  media.phone`
       width: 100%;
     `
-  }
+}
 `;
 
 const TextWrapper = styled.p`
@@ -77,13 +77,13 @@ const TextWrapper = styled.p`
   margin-bottom: 0px;
 
   ${
-    media.phone`
+  media.phone`
       width: 100%;
       line-height: 100%;
       grid-column: column-one;
       grid-row: text;
     `
-  }
+}
 `;
 
 const CreateAgentButton = styled(LoadingButton)`
@@ -93,11 +93,11 @@ const CreateAgentButton = styled(LoadingButton)`
   display: block;
 
   ${
-    media.phone`
+  media.phone`
       width: 100%;
       margin-top: 15px;
     `
-  }
+}
 `;
 
 const StyledInput = styled(Input)`
@@ -107,11 +107,11 @@ const StyledInput = styled(Input)`
   float: right;
 
   ${
-    media.phone`
+  media.phone`
       width: 100%;
       grid-row: row-two;
     `
-  }
+}
 `;
 
 const CloseOutlinedButton = styled(OutlinedButton)`
@@ -121,11 +121,11 @@ const CloseOutlinedButton = styled(OutlinedButton)`
   display: block;
 
   ${
-    media.phone`
+  media.phone`
       width: 100%;
       grid-row: row-two;
     `
-  }
+}
 `;
 
 class CreateAgent extends React.PureComponent {
@@ -136,91 +136,103 @@ class CreateAgent extends React.PureComponent {
       selectedOperatingSystem: this.newAgentHandler.supportedOS[0],
       selectedArchitecture: this.newAgentHandler.supportedArch[0]
     };
+    this.createAgent = this.createAgent.bind(this);
+    this.selectArchitecture = this.selectArchitecture.bind(this);
+    this.selectOperatingSystem = this.selectArchitecture.bind(this);
   }
 
-  createAgent = (values, { setErrors }) => {
+  createAgent(values, { setErrors }) {
+    const { createAgentSuccessCallback } = this.props;
+    const { selectedArchitecture, selectedOperatingSystem } = this.state;
+
     this.setState({ loading: true });
     axios.post(
       `${process.env.APOLLO_HTTP_URL}agent`,
       values,
       { withCredentials: true }
     )
-      .then(response => {
-        this.props.createAgentSuccessCallback(
+      .then((response) => {
+        createAgentSuccessCallback(
           response,
-          this.state.selectedArchitecture,
-          this.state.selectedOperatingSystem
+          selectedArchitecture,
+          selectedOperatingSystem
         );
       })
-      .catch(error => {
+      .catch((error) => {
         handleHTTPResponse(error.response, true, true);
         if (error.response.status === StatusCodes.BAD_REQUEST) {
           setErrors(parseHTTPErrors(error.response.data, { name: 'name' }));
         }
         this.setState({ loading: false });
       });
-  };
+  }
 
-  selectArchitecture = (value) => {
+  selectArchitecture(value) {
     this.setState({ selectedArchitecture: value });
-  };
+  }
 
-  selectOperatingSystem = (value) => {
+  selectOperatingSystem(value) {
     this.setState({ selectedOperatingSystem: value });
-  };
+  }
 
   render() {
-    return(
+    const { selectedOperatingSystem, selectedArchitecture, loading } = this.state;
+    const { onClose } = this.props;
+    return (
       <Formik
-          initialValues={{ name: '' }}
-          validationSchema={createAgentSchema}
-          onSubmit={this.createAgent}>
-          {({ values, errors, handleChange, handleSubmit }) => (
-            <form onSubmit={handleSubmit}>
-              <TextAndInputFieldWrapper>
-                <TextWrapper>Agent name</TextWrapper>
-                <InputFieldWrapper>
-                  <StyledInput
-                    inverted
-                    name="name"
-                    type="name"
-                    value={values.name}
-                    error={errors.name}
-                    placeholder="007"
-                    onChange={handleChange} />
-                </InputFieldWrapper>
-              </TextAndInputFieldWrapper>
-              <TextAndInputFieldWrapper>
-                <TextWrapper>Operating system</TextWrapper>
-                <InputFieldWrapper>
-                  <StyledDropDown
-                    selected={this.state.selectedOperatingSystem}
-                    options={this.newAgentHandler.supportedOS}
-                    optionSelectedCallback={this.selectOperatingSystem}
-                  />
-                </InputFieldWrapper>
-              </TextAndInputFieldWrapper>
-              <TextAndInputFieldWrapper>
-                <TextWrapper>Architecture</TextWrapper>
-                <InputFieldWrapper>
-                  <StyledDropDown
-                    selected={this.state.selectedArchitecture}
-                    options={this.newAgentHandler.supportedArch}
-                    optionSelectedCallback={this.selectArchitecture}
-                  />
-                </InputFieldWrapper>
-              </TextAndInputFieldWrapper>
-              <TwoColumnGrid>
-                <CloseOutlinedButton type='button' id='closeButton' onClick={this.props.onClose}>
-                  Cancel
-                </CloseOutlinedButton>
-                <CreateAgentButton type='submit' id='createAgentButton' loading={this.state.loading}>
-                  Create agent
-                </CreateAgentButton>
-              </TwoColumnGrid>
-            </form>
-          )}
-        </Formik>
+        initialValues={{ name: '' }}
+        validationSchema={createAgentSchema}
+        onSubmit={this.createAgent}
+      >
+        {({
+          values, errors, handleChange, handleSubmit
+        }) => (
+          <form onSubmit={handleSubmit}>
+            <TextAndInputFieldWrapper>
+              <TextWrapper>Agent name</TextWrapper>
+              <InputFieldWrapper>
+                <StyledInput
+                  inverted
+                  name="name"
+                  type="name"
+                  value={values.name}
+                  error={errors.name}
+                  placeholder="007"
+                  onChange={handleChange}
+                />
+              </InputFieldWrapper>
+            </TextAndInputFieldWrapper>
+            <TextAndInputFieldWrapper>
+              <TextWrapper>Operating system</TextWrapper>
+              <InputFieldWrapper>
+                <StyledDropDown
+                  selected={selectedOperatingSystem}
+                  options={this.newAgentHandler.supportedOS}
+                  optionSelectedCallback={this.selectOperatingSystem}
+                />
+              </InputFieldWrapper>
+            </TextAndInputFieldWrapper>
+            <TextAndInputFieldWrapper>
+              <TextWrapper>Architecture</TextWrapper>
+              <InputFieldWrapper>
+                <StyledDropDown
+                  selected={selectedArchitecture}
+                  options={this.newAgentHandler.supportedArch}
+                  optionSelectedCallback={this.selectArchitecture}
+                />
+              </InputFieldWrapper>
+            </TextAndInputFieldWrapper>
+            <TwoColumnGrid>
+              <CloseOutlinedButton type="button" id="closeButton" onClick={onClose}>
+                Cancel
+              </CloseOutlinedButton>
+              <CreateAgentButton type="submit" id="createAgentButton" loading={loading}>
+                Create agent
+              </CreateAgentButton>
+            </TwoColumnGrid>
+          </form>
+        )}
+      </Formik>
     );
   }
 }
