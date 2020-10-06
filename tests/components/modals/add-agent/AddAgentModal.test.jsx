@@ -1,14 +1,6 @@
 import React from 'react';
-import configureStore from 'redux-mock-store';
-import waitForExpect from 'wait-for-expect';
-import { Provider } from 'react-redux';
-import axios from 'axios';
-import { StatusCodes } from 'http-status-codes';
 import renderer from 'react-test-renderer';
 import AddAgentModal from '../../../../src/components/modals/add-agent/AddAgentModal';
-import NewAgentHandler from '../../../../src/lib/NewAgentHandler';
-
-jest.mock('axios');
 
 function getComponent() {
   return renderer.create(
@@ -60,16 +52,18 @@ describe('add Agent Modal', () => {
           id: 'id',
           'oauth_client': {secret: 'secret'}
         }
-      },'test', 'test'
+      },'arch', 'op'
     );
 
     expect(JSON.stringify(addAgentModalInstance.state) ===  JSON.stringify({
       manualUpload: null,
       agentCreated: true,
-			agentId: 'id',
-      secret: 'secret',
-      selectedOperatingSystem: 'test',
-      selectedArchitecture: 'test'
+      agentData: {
+        agentId: 'id',
+        secret: 'secret',
+        selectedOperatingSystem: 'op',
+        selectedArchitecture: 'arc'
+      }
     })).toBe(true);
   });
 });

@@ -11,11 +11,8 @@ import { handleHTTPResponse } from '../../../actions/error';
 
 const propTypes = {
   manualUpload: PropTypes.bool.isRequired,
-  selectedArchitecture: PropTypes.string.isRequired,
-  selectedOperatingSystem: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
-  agentId: PropTypes.string.isRequired,
-  secret: PropTypes.string.isRequired
+  agentData: PropTypes.object.isRequired
 };
 
 const TwoColumnGrid = styled.div`
@@ -117,8 +114,8 @@ class AddAgent extends React.PureComponent {
       {
         withCredentials: true,
         params: {
-          target_os: this.props.selectedOperatingSystem,
-          target_arch: this.props.selectedArchitecture
+          target_os: this.props.agentData.selectedOperatingSystem,
+          target_arch: this.props.agentData.selectedArchitecture
         },
         responseType: 'arraybuffer'
       },
@@ -137,10 +134,13 @@ class AddAgent extends React.PureComponent {
 	getCommand = () => {
 		let command;
 		if (this.props.manualUpload) {
-			command = this.newAgentHandler.getExecuteCommand(this.props.agentId, this.props.secret);
+			command = this.newAgentHandler.getExecuteCommand(this.props.agentData.agentId, this.props.agentData.secret);
 		} else {
 			command = this.newAgentHandler.getDirectlyOnMachineCommand(
-        this.props.selectedOperatingSystem, this.props.selectedArchitecture, this.props.agentId, this.props.secret
+        this.props.agentData.selectedOperatingSystem,
+        this.props.agentData.selectedArchitecture,
+        this.props.agentData.agentId,
+        this.props.agentData.secret
       );
     }
     return command;

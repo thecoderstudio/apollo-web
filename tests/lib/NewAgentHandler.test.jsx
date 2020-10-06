@@ -5,10 +5,10 @@ describe('NewAgentHandler', () => {
 
   it('get directly on machine command', () => {
     expect(newAgentHandler.getDirectlyOnMachineCommand(
-      'test', 'test', 'test', 'test'
+      'os', 'arch', 'id', 'secret'
     )).toBe(
-      'curl http://localhost:1234/agent/download?target_os=test&target_arch=test > apollo-agent.bin &&' +
-      ' chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=test --secret=test --host=http://localhost:1234'
+      'curl http://localhost:1234/agent/download?target_os=os&target_arch=arch > apollo-agent.bin &&' +
+      ' chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=id --secret=secret --host=http://localhost:1234'
     );
   });
 

@@ -45,7 +45,7 @@ describe('navbar', () => {
     expect(dispatchSpy).toHaveBeenCalledWith(removeCurrentUser());
   });
 
-  it('handles add agent modal', async () => {
+  it('handles add agent modal', () => {
     const component = getComponent(store);
     const root = component.root;
     root.findByProps({ id: 'newAgentButton' }).props.onClick();

@@ -65,7 +65,7 @@ const Content = styled.div`
 const TwoColumnGrid = styled.div`
   display: grid;
   grid-template-columns: [column-one] 50% [column-two] 50%;
-  margin: 20px 0px 20px 0px;
+  gap: 20px;
 
   ${
     media.phone`
@@ -77,27 +77,23 @@ const TwoColumnGrid = styled.div`
 
 const ColumnOne = styled.div`
   grid-column: column-one;
-  margin-right: 10px;
 
   ${
     media.phone`
       grid-row: row-one;
-      margin-right: 0px;
-      margin: 15px;
     `
   }
 `;
 
 const ColumnTwo = styled.div`
   grid-column: column-two;
-  margin-left: 10px;
+  margin-right: 20px;
 
   ${
     media.phone`
       grid-column: column-one;
       grid-row: row-two;
-      margin-left: 0px;
-      margin: 15px;
+      margin-right: 0px;
     `
   }
 `;
@@ -114,13 +110,15 @@ class AddAgentModal extends React.PureComponent {
       manualUpload: null,
       agentCreated: false,
     };
+    this.renderQuestion = this.renderQuestion.bind(this);
+    this.createAgentSuccessCallback = this.createAgentSuccessCallback.bind(this);
   }
 
-  setManualUpload = (value) => {
+  setManualUpload(value) {
     this.setState({ manualUpload: value });
   }
 
-  renderQuestion = () => {
+  renderQuestion() {
     const directly = "Directly on target machine.";
     const manual = "Manual upload";
     return (
@@ -139,32 +137,31 @@ class AddAgentModal extends React.PureComponent {
     );
   }
 
-	createAgentSuccessCallback = (response, architecure, operatingSystem) => {
+	createAgentSuccessCallback(response, architecure, operatingSystem) {
 		this.setState({
       agentCreated: true,
-			agentId: response.data['id'],
-      secret: response.data['oauth_client']['secret'],
-      selectedOperatingSystem: operatingSystem,
-      selectedArchitecture: architecure
+      agentData: {
+        agentId: response.data['id'],
+        secret: response.data['oauth_client']['secret'],
+        selectedOperatingSystem: operatingSystem,
+        selectedArchitecture: architecure
+      }
     });
 	};
 
-  render = () => {
+  render() {
     let content;
     if (this.state.manualUpload === null) {
-     content = this.renderQuestion();
+      content = this.renderQuestion();
     } else if (!this.state.agentCreated) {
       content = <CreateAgent onClose={this.props.onClose} createAgentSuccessCallback={this.createAgentSuccessCallback} />;
     } else {
-
       content = (
         <AddAgent
           onClose={this.props.onClose}
           manualUpload={this.state.manualUpload === true}
-          selectedOperatingSystem={this.state.selectedOperatingSystem}
-          selectedArchitecture={this.state.selectedArchitecture}
-          secret={this.state.secret}
-          agentId={this.state.agentId} />
+          agentData={this.state.agentData}
+        />
       );
     }
     return (
