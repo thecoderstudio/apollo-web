@@ -2,10 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import media from '../util/media';
-import Button from './buttons/Button';
 import checkIfAdmin from '../util/admin';
 import OutlinedButton from './buttons/OutlinedButton';
-import AddAgentModal from './modals/add-agent/AddAgentModal';
 import { logout } from '../util/auth';
 import Link from './Link';
 
@@ -13,7 +11,7 @@ const NavigationBar = styled.div`
   padding: 16px;
   background-color: ${props => props.theme.lightBlack};
   display: grid;
-  grid-template-columns: [logo] 200px [content] 1fr;
+  grid-template-columns: [logo] 100px [content] 1fr;
   grid-gap: 16px;
   align-items: center;
   z-index: 1;
@@ -128,34 +126,11 @@ const Logout = styled(OutlinedButton)`
   }
 `;
 
-const NewAgentButton = styled(Button)`
-  grid-column: new-agent;
-  max-width: 250px;
-
-  ${
-    media.phone`
-      grid-column: main;
-      grid-row: new-agent;
-      max-width: 100%;
-    `
-  }
-`;
-
 class NavBar extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.openAddAgentModal = this.openAddAgentModal.bind(this);
-    this.closeAddAgentModal = this.closeAddAgentModal.bind(this);
     this.toggleCollapsed = this.toggleCollapsed.bind(this);
-    this.state = { showAddAgent: false, collapsed: true };
-  }
-
-  openAddAgentModal() {
-    this.setState({ showAddAgent: true });
-  }
-
-  closeAddAgentModal() {
-    this.setState({ showAddAgent: false });
+    this.state = { collapsed: true };
   }
 
   toggleCollapsed() {
@@ -179,9 +154,8 @@ class NavBar extends React.PureComponent {
               <StyledLink onClick={this.toggleCollapsed} to='/admin'>Admin</StyledLink>
             }
           </Menu>
-          <NewAgentButton id='newAgentButton' onClick={this.openAddAgentModal}>Add new agent</NewAgentButton>
+
           <Logout id='logoutButton' onClick={logout}>Logout</Logout>
-          {this.state.showAddAgent && <AddAgentModal onClose={this.closeAddAgentModal} />}
         </NavBarContent>
       </NavigationBar>
     );
