@@ -8,22 +8,17 @@ const propTypes = {
 };
 
 const Wrapper = styled.div`
-  grid-template-columns: [textfield] 1fr [copy] 50px;
+  grid-template-columns: [textField] 1fr [copy] 50px;
   display: grid;
   height: 50px;
 `;
 
 const TextField = styled.div`
-  grid-column: textfield;
-
+  grid-column: textField;
   border: none;
   border-radius: 5px;
   color: white;
-  font-family: 'B612', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
   cursor: text;
-  text-align:left;
   padding: 15px;
   background-color: ${(props) => props.theme.lightBlack};
   overflow: auto;

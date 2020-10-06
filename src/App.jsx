@@ -14,7 +14,7 @@ import NotFound from './pages/NotFound';
 import { darkTheme } from './theme';
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=B612:wght@400;500,700&family=Roboto:wght@300;400&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=Roboto:wght@300;400&display=swap');
 
   html, body {
     margin: 0px;
@@ -22,8 +22,8 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
     width: 100%;
     font-weight: 500;
-    color: ${props => props.theme.white};
-    background-color: ${props => props.theme.black};
+    color: ${(props) => props.theme.white};
+    background-color: ${(props) => props.theme.black};
   }
 
   body {
@@ -46,12 +46,12 @@ function App(props) {
       <ThemeProvider theme={darkTheme}>
         <BrowserRouter>
           <Content>
-            {props.authenticated && props.hasChangedPassword &&  <NavBar />}
+            {props.authenticated && props.hasChangedPassword && <NavBar />}
             <Switch>
-              <ProtectedRoute exact path='/' component={Dashboard} fallbackComponent={Welcome} />
-              <ProtectedRoute exact path='/agent/:agentId/shell' component={TerminalPage} fallbackComponent={NotFound} />
-              <ProtectedRoute exact path='/agent/:agentId' component={AgentDetail} fallbackComponent={NotFound} />
-              <ProtectedRoute exact path='/admin' component={Admin} fallbackComponent={NotFound} role='admin' />
+              <ProtectedRoute exact path="/" component={Dashboard} fallbackComponent={Welcome} />
+              <ProtectedRoute exact path="/agent/:agentId/shell" component={TerminalPage} fallbackComponent={NotFound} />
+              <ProtectedRoute exact path="/agent/:agentId" component={AgentDetail} fallbackComponent={NotFound} />
+              <ProtectedRoute exact path="/admin" component={Admin} fallbackComponent={NotFound} role="admin" />
               <Route component={NotFound} />
             </Switch>
             <Notifications />
@@ -64,8 +64,8 @@ function App(props) {
 }
 
 export default connect(
-  state => ({
+  (state) => ({
     authenticated: state.authenticated,
-    hasChangedPassword: state.currentUser.hasChangedInitialPassword,
+    hasChangedPassword: state.currentUser.hasChangedInitialPassword
   })
 )(App);

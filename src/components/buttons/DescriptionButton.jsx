@@ -1,7 +1,7 @@
 import React from 'react';
-import OutlinedButton from './OutlinedButton';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import OutlinedButton from './OutlinedButton';
 
 const propTypes = {
   children: PropTypes.node.isRequired,
@@ -26,14 +26,17 @@ const Title = styled.h3`
 const Description = styled.p`
   grid-row: description;
   padding: 10px;
-  font-size: 0.85rem;
+  font-size: ${(props) => props.theme.smallTextSize}
 `;
 
 function DescriptionButton(props) {
+  const {
+    className, onClick, title, children
+  } = props;
   return (
-    <StyledOutlinedButton className={props.className} onClick={props.onClick}>
-      <Title>{props.title}</Title>
-      <Description>{props.children}</Description>
+    <StyledOutlinedButton className={className} onClick={onClick}>
+      <Title>{title}</Title>
+      <Description>{children}</Description>
     </StyledOutlinedButton>
   );
 }

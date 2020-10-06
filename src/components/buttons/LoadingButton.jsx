@@ -1,16 +1,16 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
-import Button from "./Button";
+import Button from './Button';
 
 const propTypes = {
   loading: PropTypes.bool,
-  onClick: PropTypes.func
+  onClick: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 const defaultProps = {
-  loading: false,
-  onClick: null
+  loading: false
 };
 
 const rotate = keyframes`
@@ -35,9 +35,12 @@ const StyledButton = styled(Button)`
 
 class LoadingButton extends React.PureComponent {
   render() {
-    return(
-      <StyledButton className={this.props.className} onClick={this.props.onClick }>
-        {this.props.loading ? <Icon className='fas fa-spinner' /> : this.props.children}
+    const {
+      className, onClick, children, loading
+    } = this.props;
+    return (
+      <StyledButton className={className} onClick={onClick}>
+        {loading ? <Icon className="fas fa-spinner" /> : children}
       </StyledButton>
     );
   }
