@@ -5,12 +5,13 @@ import Button from './Button';
 
 const propTypes = {
   loading: PropTypes.bool,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   children: PropTypes.node.isRequired
 };
 
 const defaultProps = {
-  loading: false
+  loading: false,
+  onClick: null
 };
 
 const rotate = keyframes`
