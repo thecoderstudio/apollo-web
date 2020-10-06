@@ -30,6 +30,7 @@ const StyledCard = styled(Card)`
     bottom: 0px;
     padding: 15px 0px 15px 0px;
     width: auto;
+    max-width: 100%;
     transform: none;
   `}
 `;
