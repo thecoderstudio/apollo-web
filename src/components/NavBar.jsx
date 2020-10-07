@@ -10,7 +10,7 @@ import Icon from './Icon';
 
 const NavigationBar = styled.div`
   padding: 16px;
-  background-color: ${(props) => props.theme.lightBlack};
+  background-color: ${props => props.theme.lightBlack};
   display: grid;
   grid-template-columns: [logo] 100px [content] 1fr;
   grid-gap: 16px;
@@ -21,11 +21,11 @@ const NavigationBar = styled.div`
     grid-template-columns: [main] 1fr [toggle] 24px;
     grid-template-rows: [logo] 50px [content] 1fr;
 
-    position: ${(props) => props.collapsed ? 'static' : 'fixed'};
+    position: ${props => props.collapsed ? 'static' : 'fixed'};
     top: 0px;
     left: 0px;
     right: 0px;
-    bottom: ${(props) => props.collapsed ? 'auto' : '0px'};
+    bottom: ${props => props.collapsed ? 'auto' : '0px'};
   `}
 `;
 
@@ -37,7 +37,7 @@ const NavBarContent = styled.div`
   height: auto;
 
   ${media.phone`
-    display: ${(props) => props.collapsed ? 'none' : 'grid'};
+    display: ${props => props.collapsed ? 'none' : 'grid'};
     grid-column: main / -1;
     grid-row: content;
     height: 100%;
@@ -56,7 +56,7 @@ const MenuToggleIcon = styled(Icon)`
   height: 32px;
   line-height: 32px;
   text-align: center;
-  transform: ${(props) => props.collapsed ? 'rotate(0deg)' : 'rotate(90deg)'};
+  transform: ${props => props.collapsed ? 'rotate(0deg)' : 'rotate(90deg)'};
   transition: transform .3s ease-out;
 
   ${media.phone`
@@ -151,7 +151,7 @@ class NavBar extends React.PureComponent {
 }
 
 export default connect(
-  (state) => ({ currentUser: state.currentUser })
+  state => ({ currentUser: state.currentUser })
 )(NavBar);
 
 export { NavBar };

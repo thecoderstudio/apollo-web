@@ -8,8 +8,8 @@ const mockStore = configureStore([]);
 
 Object.assign(navigator, {
   clipboard: {
-    writeText: () => {},
-  },
+    writeText: () => {}
+  }
 });
 
 function getComponent(store, props) {
@@ -20,17 +20,17 @@ function getComponent(store, props) {
   );
 }
 
-describe('copy to clipboard', () => {
-  let store = mockStore({});
+describe("copy to clipboard", () => {
+  const store = mockStore({});
 
   it("renders correctly", () => {
-    const tree = getComponent(store, { text: 'test'}).toJSON();
+    const tree = getComponent(store, { text: 'test' }).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('onClick copies to clipboard', () => {
-  const spy = spyOn(navigator.clipboard, 'writeText');
-    const component= getComponent(store, { text: 'test'});
+  it("onClick copies to clipboard", () => {
+    const spy = spyOn(navigator.clipboard, 'writeText');
+    const component = getComponent(store, { text: 'test' });
     const instance = component.root;
 
     instance.findByProps({ id: 'copyToClipboardButton' }).props.onClick();

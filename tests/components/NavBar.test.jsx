@@ -32,12 +32,12 @@ describe('navbar', () => {
     dispatchSpy = jest.spyOn(globalStore, 'dispatch');
   });
 
-  it('renders correctly', () => {
+  it("renders correctly", () => {
     const tree = getComponent(store).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('handles successful logout', () => {
+  it("handles successful logout", () => {
     const tree = getComponent(store);
     const instance = tree.root;
     instance.findByProps({ id: 'logoutButton' }).props.onClick();
@@ -45,21 +45,21 @@ describe('navbar', () => {
     expect(dispatchSpy).toHaveBeenCalledWith(removeCurrentUser());
   });
 
-  it('toggles collapsed', () => {
+  it("toggles collapsed", () => {
     const component = getComponent(store);
     const { root } = component;
     const toggle = root.findByProps({ id: 'collapseIcon' });
     const menu = root.findByType(PlainNavBar);
     toggle.props.onClick();
-    component.toJSON();
+    expect(component.toJSON()).toMatchSnapshot();
     expect(menu.instance.state.collapsed).toBe(false);
 
     toggle.props.onClick();
-    component.toJSON();
+    expect(component.toJSON()).toMatchSnapshot();
     expect(menu.instance.state.collapsed).toBe(true);
   });
 
-  it('render admin link for admins', () => {
+  it("render admin link for admins", () => {
     store = mockStore({
       currentUser: {
         username: 'admin',

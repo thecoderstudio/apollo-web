@@ -23,7 +23,7 @@ describe('login', () => {
 
   beforeEach(() => {
     store = mockStore({
-      authenticated: false,
+      authenticated: false
     });
     store.dispatch = jest.fn();
   });
@@ -36,7 +36,7 @@ describe('login', () => {
   it("handles successful login", async () => {
     const component = getComponent(store);
     const root = component.root.findByType(UnconnectedLogin);
-    const instance = root.instance;
+    const { instance } = root;
     const spy = jest.spyOn(instance, 'loginSuccessCallback');
 
     axios.post.mockResolvedValue({
@@ -70,7 +70,7 @@ describe('login', () => {
   it("handles unsuccessful login", async () => {
     const component = getComponent(store);
     const root = component.root.findByType(UnconnectedLogin);
-    const instance = root.instance;
+    const { instance } = root;
     const spy = jest.spyOn(instance, 'loginSuccessCallback');
 
     axios.post.mockImplementationOnce(() => Promise.reject({
@@ -113,7 +113,7 @@ describe('login', () => {
   it("not calling callback on login success, fetch user fail.", async () => {
     const component = getComponent(store);
     const root = component.root.findByType(UnconnectedLogin);
-    const instance = root.instance;
+    const { instance } = root;
     const spy = jest.spyOn(instance, 'loginSuccessCallback');
 
     axios.post.mockResolvedValue({
@@ -128,13 +128,13 @@ describe('login', () => {
       }
     }));
 
-    root.findByProps({type: 'username'}).props.onChange({
+    root.findByProps({ type: 'username' }).props.onChange({
       currentTarget: {
         name: 'username',
         value: 'test'
       }
     });
-    root.findByProps({type: 'password'}).props.onChange({
+    root.findByProps({ type: 'password' }).props.onChange({
       currentTarget: {
         name: 'password',
         value: 'password'

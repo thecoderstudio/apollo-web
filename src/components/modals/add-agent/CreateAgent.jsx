@@ -135,14 +135,14 @@ class CreateAgent extends React.PureComponent {
       values,
       { withCredentials: true }
     )
-      .then((response) => {
+      .then(response => {
         createAgentSuccessCallback(
           response,
           selectedArchitecture,
           selectedOperatingSystem
         );
       })
-      .catch((error) => {
+      .catch(error => {
         handleHTTPResponse(error.response, true, true);
         if (error.response.status === StatusCodes.BAD_REQUEST) {
           setErrors(parseHTTPErrors(error.response.data, { name: 'name' }));
@@ -177,11 +177,11 @@ class CreateAgent extends React.PureComponent {
               <InputFieldWrapper>
                 <StyledInput
                   inverted
-                  name="name"
-                  type="name"
+                  name='name'
+                  type='nam"'
                   value={values.name}
                   error={errors.name}
-                  placeholder="007"
+                  placeholder='007'
                   onChange={handleChange}
                 />
               </InputFieldWrapper>
@@ -207,10 +207,10 @@ class CreateAgent extends React.PureComponent {
               </InputFieldWrapper>
             </TextAndInputFieldWrapper>
             <TwoColumnGrid>
-              <CloseOutlinedButton type="button" id="closeButton" onClick={onClose}>
+              <CloseOutlinedButton type='button' id='closeButton' onClick={onClose}>
                 Cancel
               </CloseOutlinedButton>
-              <CreateAgentButton type="submit" id="createAgentButton" loading={loading}>
+              <CreateAgentButton type='submit' id='createAgentButton' loading={loading}>
                 Create agent
               </CreateAgentButton>
             </TwoColumnGrid>

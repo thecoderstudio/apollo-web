@@ -136,13 +136,13 @@ class AddAgent extends React.PureComponent {
         responseType: 'arraybuffer'
       }
     )
-      .then((response) => {
+      .then(response => {
         this.newAgentHandler.downloadFile(response.data);
       })
-      .catch((error) => {
+      .catch(error => {
         handleHTTPResponse(error.response, true, false);
       })
-      .finally((_) => {
+      .finally(_ => {
         this.setState({ loading: false });
       });
   }
@@ -160,7 +160,7 @@ class AddAgent extends React.PureComponent {
               Download the binary and upload it to the target machine.
             </ColumnOne>
             <ColumnTwo>
-              <DownloadBinaryButton id="downloadBinaryButton" loading={loading} onClick={this.downloadBinary}>
+              <DownloadBinaryButton id='downloadBinaryButton' loading={loading} onClick={this.downloadBinary}>
                 Download binary
               </DownloadBinaryButton>
             </ColumnTwo>
@@ -172,7 +172,7 @@ class AddAgent extends React.PureComponent {
             Copy and run the command on the target machine to download run the client.
           </Description>
           <StyledCopyToClipboard text={this.getCommand()} />
-          <CloseButton id="closeButton" onClick={onClose}>Close</CloseButton>
+          <CloseButton id='closeButton' onClick={onClose}>Close</CloseButton>
         </ThreeRowDisplay>
       </div>
     );

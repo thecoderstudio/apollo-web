@@ -20,7 +20,7 @@ const TextField = styled.div`
   color: white;
   cursor: text;
   padding: 15px;
-  background-color: ${(props) => props.theme.lightBlack};
+  background-color: ${props => props.theme.lightBlack};
   overflow: auto;
   white-space: nowrap;
   overflow-y: hidden;
@@ -53,11 +53,11 @@ class CopyToClipboard extends React.PureComponent {
   }
 
   render() {
-    const { text } = this.props;
+    const { text, className } = this.props;
     return (
-      <Wrapper>
+      <Wrapper className={className}>
         <TextField>{text}</TextField>
-        <StyledButton id="copyToClipboardButton" onClick={this.copyToClipboard}><Icon className="fas fa-copy" /></StyledButton>
+        <StyledButton id='copyToClipboardButton' onClick={this.copyToClipboard}><Icon className="fas fa-copy" /></StyledButton>
       </Wrapper>
     );
   }
