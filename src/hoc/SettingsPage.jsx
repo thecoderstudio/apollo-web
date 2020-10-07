@@ -7,7 +7,7 @@ const ContentWrapper = styled.div`
   flex: 1 1 auto;
   display: grid;
   position: relative;
-  grid-template-columns: [navigation] 300px [content] 1fr;
+  grid-template-columns: [navigation] 225px [content] 1fr;
 `;
 
 const StyledNavigation = styled(SettingsSideNavigation)`
