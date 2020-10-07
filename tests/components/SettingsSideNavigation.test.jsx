@@ -16,7 +16,7 @@ describe('Settings side navigation', () => {
 
   beforeEach(() => {
     props = {
-      location: '/settings/user_settings'
+      location: { pathname: '/path' }
     };
   });
 
@@ -25,13 +25,12 @@ describe('Settings side navigation', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('correctly check if path is active', () => {
-    let tree = getComponent(props);
-    let instance = tree.root;
-    expect(instance.findByProps({ to: '/settings/user_settings' }.props.active)).toBe(true);
+  it('correctly check if path matches', () => {
+    const tree = getComponent(props);
+    const instance = tree.root;
+    const nav = instance.findByType(SettingsSideNavigation);
 
-    tree = getComponent({ location: '/something_else' });
-    instance = tree.root;
-    expect(instance.findByProps({ to: '/something_else' }.props.active)).toBe(false);
+    expect(nav.instance.checkIfPathIsActive('/path')).toBe(true);
+    expect(nav.instance.checkIfPathIsActive('/something_else')).toBe(false);
   });
 });
