@@ -43,6 +43,7 @@ exports[`dashboard Does not render change password 1`] = `
   display: grid;
   grid-template-rows: [header] 50px [list] 1fr;
   max-width: 100%;
+  min-width: 0;
   border-radius: 8px;
   padding: 16px;
 }
@@ -168,6 +169,7 @@ exports[`dashboard renders correctly 1`] = `
   display: grid;
   grid-template-rows: [header] 50px [list] 1fr;
   max-width: 100%;
+  min-width: 0;
   border-radius: 8px;
   padding: 16px;
 }

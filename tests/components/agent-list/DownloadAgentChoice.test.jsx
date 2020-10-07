@@ -8,19 +8,19 @@ function getComponent(spy) {
   );
 }
 
-describe('download agent choice', () => {
+describe("download agent choice", () => {
   let spy;
 
   beforeEach(() => {
     spy = jest.fn();
   });
 
-  it('renders correctly', () => {
+  it("renders correctly", () => {
     const tree = getComponent(spy).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('selects directly correctly', () => {
+  it("selects directly correctly", () => {
     const component = getComponent(spy);
     const instance = component.root;
 
@@ -29,7 +29,7 @@ describe('download agent choice', () => {
     expect(spy).toHaveBeenCalledWith(false);
   });
 
-  it('selects manual correctly', () => {
+  it("selects manual correctly", () => {
     const component = getComponent(spy);
     const instance = component.root;
 

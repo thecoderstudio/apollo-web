@@ -27,7 +27,7 @@ function submitForm(root, name) {
   form.props.onSubmit();
 }
 
-describe('create Agent', () => {
+describe("create Agent", () => {
   let spy;
   let callbackSpy;
 
@@ -36,12 +36,12 @@ describe('create Agent', () => {
     callbackSpy = jest.fn();
   });
 
-  it('renders correctly', () => {
+  it("renders correctly", () => {
     const tree = getComponent(spy, callbackSpy).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('closes modal correctly', async () => {
+  it("closes modal correctly", async () => {
     const component = getComponent(spy, callbackSpy);
     const instance = component.root;
     instance.findByProps({ id: 'closeButton' }).props.onClick();
@@ -52,7 +52,7 @@ describe('create Agent', () => {
     });
   });
 
-  it('validates input', async () => {
+  it("validates input", async () => {
     const component = getComponent(spy, callbackSpy);
     const instance = component.root;
 
@@ -64,7 +64,7 @@ describe('create Agent', () => {
     });
   });
 
-  it('creates agent', async () => {
+  it("creates agent", async () => {
     axios.post.mockResolvedValue({
       status: 200,
       data: { id: 'test', oauth_client: { secret: 'test' } }
@@ -81,7 +81,7 @@ describe('create Agent', () => {
     });
   });
 
-  it('handle unsuccessful post', async () => {
+  it("handle unsuccessful post", async () => {
     axios.post.mockImplementationOnce(() => Promise.reject({
       response: {
         status: StatusCodes.BAD_REQUEST,
@@ -103,7 +103,7 @@ describe('create Agent', () => {
     axios.post.mockImplementationOnce(() => Promise.reject({
       response: {
         status: StatusCodes.INTERNAL_SERVER_ERROR,
-        statusText: 'Something went wrong',
+        statusText: "Something went wrong",
         data: {}
       }
     }));
@@ -116,7 +116,7 @@ describe('create Agent', () => {
     });
   });
 
-  it('Correctly sets architecture state', () => {
+  it("Correctly sets architecture state", () => {
     const component = getComponent();
     const createAgentInstance = component.root.findByType(CreateAgent).instance;
 
@@ -124,7 +124,7 @@ describe('create Agent', () => {
     expect(createAgentInstance.state.selectedArchitecture).toBe('test');
   });
 
-  it('Correctly sets operating system state', () => {
+  it"'Correctly sets operating system state", () => {
     const component = getComponent();
     const createAgentInstance = component.root.findByType(CreateAgent).instance;
 

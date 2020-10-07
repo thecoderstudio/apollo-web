@@ -31,7 +31,7 @@ describe('Add Agent', () => {
     callbackSpy = jest.fn();
   });
 
-  it('renders correctly', () => {
+  it("renders correctly", () => {
     let tree = getComponent(spy).toJSON();
     expect(tree).toMatchSnapshot();
 
@@ -39,7 +39,7 @@ describe('Add Agent', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('closes modal correctly', async () => {
+  it("closes modal correctly", async () => {
     const component = getComponent(spy);
     const instance = component.root;
     instance.findByProps({ id: 'closeButton' }).props.onClick();
@@ -50,7 +50,7 @@ describe('Add Agent', () => {
     });
   });
 
-  it('calls download file correctly after successful get', async () => {
+  it("calls download file correctly after successful get", async () => {
     const component = getComponent(spy, true);
     const downloadFileSpy = jest.spyOn(NewAgentHandler.prototype, 'downloadFile').mockImplementation(() => { });
 
@@ -65,7 +65,7 @@ describe('Add Agent', () => {
     });
   });
 
-  it('Does not call download file on error', async () => {
+  it("Does not call download file on error", async () => {
     const component = getComponent(spy, true);
     const downloadFileSpy = jest.spyOn(NewAgentHandler.prototype, 'downloadFile').mockImplementation(() => { });
 

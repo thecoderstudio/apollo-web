@@ -8,13 +8,13 @@ function getComponent() {
   );
 }
 
-describe('add Agent Modal', () => {
+describe("add Agent Modal", () => {
   it('renders correctly', () => {
     const tree = getComponent().toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders add agent correctly', () => {
+  it("renders add agent correctly", () => {
     const component = getComponent();
     component.root.findByType(AddAgentModal).instance.setState(
       {
@@ -31,7 +31,7 @@ describe('add Agent Modal', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it('correctly set manual upload', () => {
+  it("correctly set manual upload", () => {
     const component = getComponent();
     const addAgentModalInstance = component.root.findByType(AddAgentModal).instance;
 
@@ -43,7 +43,7 @@ describe('add Agent Modal', () => {
     }));
   });
 
-  it('create agent success callback set state correctly', () => {
+  it("create agent success callback set state correctly", () => {
     const component = getComponent();
     const addAgentModalInstance = component.root.findByType(AddAgentModal).instance;
 

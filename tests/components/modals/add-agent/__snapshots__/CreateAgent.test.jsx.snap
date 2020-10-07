@@ -225,7 +225,7 @@ exports[`create Agent closes modal correctly 1`] = `
           name="name"
           onChange={[Function]}
           placeholder="007"
-          type="name"
+          type="nam\\""
           value=""
         />
       </div>
@@ -543,7 +543,7 @@ exports[`create Agent renders correctly 1`] = `
           name="name"
           onChange={[Function]}
           placeholder="007"
-          type="name"
+          type="nam\\""
           value=""
         />
       </div>

@@ -411,6 +411,7 @@ exports[`app renders correctly authenticated and password changed 1`] = `
   display: grid;
   grid-template-rows: [header] 50px [list] 1fr;
   max-width: 100%;
+  min-width: 0;
   background-color: #1B1B1B;
   border-radius: 8px;
   padding: 16px;

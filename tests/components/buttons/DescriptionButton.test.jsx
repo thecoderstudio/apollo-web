@@ -10,17 +10,16 @@ function getComponent(props) {
 
 describe('DescriptionButton', () => {
   const spy = jest.fn();
-  let props = { children: <div/>, onClick: spy, title: "title" };
+  const props = { children: <div />, onClick: spy, title: 'title' };
 
-  it('renders correctly', () => {
+  it("renders correctly", () => {
     const tree = getComponent(props).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('calls onClick correctly', () => {
+  it("calls onClick correctly", () => {
     const instance = getComponent({ ...props, loading: true }).root;
     instance.findByType('button').props.onClick();
     expect(spy).toHaveBeenCalled();
   });
 });
-
