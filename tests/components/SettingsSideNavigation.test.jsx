@@ -31,12 +31,12 @@ describe('Settings side navigation', () => {
   });
 
   it('correctly check if path is active', () => {
-    const tree = getComponent(props);
+    let tree = getComponent(props);
     const instance = tree.root;
     expect(instance.findByProps({ to: '/settings/user_settings' }.props.active)).toBe(true);
 
-    const tree = getComponent({
-      props = {
+    tree = getComponent({
+      {
         location: '/something_else'
       }
     });

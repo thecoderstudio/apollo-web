@@ -10,7 +10,7 @@ function getComponent() {
 
 describe('User settings', () => {
   it('render correctly', () => {
-    const tree = getComponent(props).toJSON();
+    const tree = getComponent().toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
