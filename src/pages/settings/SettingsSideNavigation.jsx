@@ -7,16 +7,16 @@ const Navigation = styled.div`
   max-width: 225px;
   width: 100%;
   background-color: ${(props) => props.theme.lightBlack};
-  box-shadow: inset 0px 0px 5px -1px #000000;
+  box-shadow: inset ${(props) => props.theme.boxShadow};
   padding-top: 32px;
   position: relative;
 `;
 
 const StyledLink = styled(({ active, ...props }) => <Link {...props} />)`
   padding: 12px;
-  margin: 0px 16px;
+
   border-radius: 4px;
-  width: 80%;
+  width: 100%;
   float: left;
   box-sizing: border-box;
   background-color: ${(props) => props.active ? props.theme.selectedBlack : props.theme.lightBlack};
