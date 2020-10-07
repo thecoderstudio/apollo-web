@@ -4,7 +4,7 @@ import WithSettingsNavigation from '../../hoc/SettingsPage';
 function UserSettings(props) {
   const { className } = props;
   return (
-    <div className={className}>asd</div>
+    <div className={className} />
   );
 }
 

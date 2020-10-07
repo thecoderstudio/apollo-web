@@ -8,6 +8,10 @@ const ContentWrapper = styled.div`
   display: grid;
   position: relative;
   grid-template-columns: [navigation] 225px [content] 1fr;
+
+  ${media.phone`
+    grid-template-columns: [content] 1fr;
+  `}
 `;
 
 const StyledNavigation = styled(SettingsSideNavigation)`
@@ -15,6 +19,10 @@ const StyledNavigation = styled(SettingsSideNavigation)`
   position: absolute;
   top: 0;
   bottom: 0;
+
+  ${media.phone`
+    display: none;
+  `}
 `;
 
 const ComponentWrapper = styled.div`

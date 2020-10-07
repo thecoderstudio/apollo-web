@@ -19,7 +19,7 @@ const NavigationBar = styled.div`
 
   ${media.phone`
     grid-template-columns: [main] 1fr [toggle] 24px;
-    grid-template-rows: [logo] 50px [content] 1fr;
+    grid-template-rows: [logo] 50px;
 
     position: ${(props) => props.collapsed ? 'static' : 'fixed'};
     top: 0px;
@@ -122,21 +122,17 @@ const SettingsIcon = styled(Link)`
     cursor: pointer;
   }
 
-  ${
-  media.phone`
-      display: none;
-    `
-}
+  ${media.phone`
+    display: none;
+  `}
 `;
 
 const StyledSettingsLink = styled(StyledLink)`
   display: none;
 
-  ${
-  media.phone`
-      display: inline;
-    `
-}
+  ${media.phone`
+    display: inline;
+  `}
 `;
 
 class NavBar extends React.PureComponent {
