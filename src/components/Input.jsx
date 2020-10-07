@@ -19,24 +19,24 @@ const Container = styled.div`
 const StyledInput = styled.input`
   min-height: 50px;
   width: 100%;
-  background: ${props => props.inverted ? props.theme.lightBlack : props.theme.white};
-  color: ${props => props.inverted ? props.theme.white : "" };
+  background: ${(props) => props.inverted ? props.theme.lightBlack : props.theme.white};
+  color: ${(props) => props.inverted ? props.theme.white : props.theme.lightBlack};
   border: none;
   border-radius: 5px;
   font-family: 'Libre Franklin', sans-serif;
   font-size: 1rem;
   padding-left: 10px;
   opacity: 0.9;
-  border: 1px solid ${props => props.hasError ? props.theme.error : 'transparent'};
+  border: 1px solid ${(props) => props.hasError ? props.theme.error : 'transparent'};
 
   &:focus{
     outline: none;
-    border: 1px solid ${props => props.theme.accent};
+    border: 1px solid ${(props) => props.theme.accent};
   }
 `;
 
 const Error = styled.p`
-  color: ${props => props.theme.error};
+  color: ${(props) => props.theme.error};
   margin-top: 5px;
   font-size: 0.9rem;
 `;

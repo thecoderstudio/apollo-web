@@ -4,8 +4,7 @@ import styled from 'styled-components';
 const Navigation = styled.div`
   max-width: 300px;
   width: 100%;
-  heigth: 100%;
-  background-color: ${props => props.theme.lightBlack};
+  background-color: ${(props) => props.theme.lightBlack};
 `;
 
 function SettingsSideNavigation(props) {
@@ -16,4 +15,4 @@ function SettingsSideNavigation(props) {
   );
 }
 
-export default SettingsSideNavigation
+export default SettingsSideNavigation;

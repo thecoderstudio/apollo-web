@@ -24,8 +24,6 @@ describe('login', () => {
   beforeEach(() => {
     store = mockStore({
       authenticated: false,
-      selectedArchitecture: "amd64",
-      selectedOperatingSystem: "linux"
     });
     store.dispatch = jest.fn();
   });

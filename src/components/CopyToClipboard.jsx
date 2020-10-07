@@ -8,24 +8,19 @@ const propTypes = {
 };
 
 const Wrapper = styled.div`
-  grid-template-columns: [textfield] 1fr [copy] 50px;
+  grid-template-columns: [textField] 1fr [copy] 50px;
   display: grid;
   height: 50px;
 `;
 
 const TextField = styled.div`
-  grid-column: textfield;
-
+  grid-column: textField;
   border: none;
   border-radius: 5px;
   color: white;
-  font-family: 'B612', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  text-align:left;
+  cursor: text;
   padding: 15px;
-  background-color: ${props => props.theme.lightBlack};
+  background-color: ${(props) => props.theme.lightBlack};
   overflow: auto;
   white-space: nowrap;
   overflow-y: hidden;
@@ -47,15 +42,22 @@ const Icon = styled.i`
 `;
 
 class CopyToClipboard extends React.PureComponent {
-  copyToClipboard = () => {
-    navigator.clipboard.writeText(this.props.text);
+  constructor(props) {
+    super(props);
+    this.copyToClipboard = this.copyToClipboard.bind(this);
+  }
+
+  copyToClipboard() {
+    const { text } = this.props;
+    navigator.clipboard.writeText(text);
   }
 
   render() {
-    return(
+    const { text } = this.props;
+    return (
       <Wrapper>
-        <TextField>{this.props.text}</TextField>
-        <StyledButton id='copyToClipboardButton' onClick={this.copyToClipboard}><Icon className="fas fa-copy" /></StyledButton>
+        <TextField>{text}</TextField>
+        <StyledButton id="copyToClipboardButton" onClick={this.copyToClipboard}><Icon className="fas fa-copy" /></StyledButton>
       </Wrapper>
     );
   }

@@ -31,7 +31,6 @@ describe('dashboard', () => {
         },
         hasChangedInitialPassword: false
       },
-      authenticated: true,
     });
     expect(getComponent(store)).toMatchSnapshot();
   });

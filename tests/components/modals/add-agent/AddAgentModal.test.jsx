@@ -1,14 +1,6 @@
 import React from 'react';
-import configureStore from 'redux-mock-store';
-import waitForExpect from 'wait-for-expect';
-import { Provider } from 'react-redux';
-import axios from 'axios';
-import { StatusCodes } from 'http-status-codes';
 import renderer from 'react-test-renderer';
 import AddAgentModal from '../../../../src/components/modals/add-agent/AddAgentModal';
-import NewAgentHandler from '../../../../src/lib/NewAgentHandler';
-
-jest.mock('axios');
 
 function getComponent() {
   return renderer.create(
@@ -17,59 +9,62 @@ function getComponent() {
 }
 
 describe('add Agent Modal', () => {
-  let spy;
-
-  beforeEach(() => {
-    spy = jest.fn();
-  });
-
   it('renders correctly', () => {
     const tree = getComponent().toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('selects directly correctly', () => {
-    const component = getComponent();
-    const instance = component.root;
-
-    instance.findByProps({ id: 'directlyButton' }).props.onClick();
-    expect(component.toJSON()).toMatchSnapshot();
-  });
-
-  it('selects manual correctly', () => {
-    const component = getComponent();
-    const instance = component.root;
-
-    instance.findByProps({ id: 'manualButton' }).props.onClick();
-    expect(component.toJSON()).toMatchSnapshot();
-  });
-
   it('renders add agent correctly', () => {
     const component = getComponent();
-    component.root.findByType(AddAgentModal).instance.setState({manualUpload: true, agentCreated: true});
+    component.root.findByType(AddAgentModal).instance.setState(
+      {
+        manualUpload: true,
+        agentCreated: true,
+        agentData: {
+          agentId: 'id',
+          secret: 'secret',
+          selectedOperatingSystem: 'op',
+          selectedArchitecture: 'arc'
+        }
+      }
+    );
     expect(component.toJSON()).toMatchSnapshot();
+  });
+
+  it('correctly set manual upload', () => {
+    const component = getComponent();
+    const addAgentModalInstance = component.root.findByType(AddAgentModal).instance;
+
+    addAgentModalInstance.setManualUpload(true);
+
+    expect(JSON.stringify(addAgentModalInstance.state)).toBe(JSON.stringify({
+      manualUpload: true,
+      agentCreated: false
+    }));
   });
 
   it('create agent success callback set state correctly', () => {
     const component = getComponent();
     const addAgentModalInstance = component.root.findByType(AddAgentModal).instance;
 
-    addAgentModalInstance.createAgentSuccessCallback(
+    addAgentModalInstance.createAgentSuccess(
       {
         data: {
           id: 'id',
-          'oauth_client': {secret: 'secret'}
+          oauth_client: { secret: 'secret' }
         }
-      },'test', 'test'
+      }, 'arch', 'op'
     );
 
-    expect(JSON.stringify(addAgentModalInstance.state) ===  JSON.stringify({
+    expect(JSON.stringify(addAgentModalInstance.state)).toBe(JSON.stringify({
       manualUpload: null,
       agentCreated: true,
-			agentId: 'id',
-      secret: 'secret',
-      selectedOperatingSystem: 'test',
-      selectedArchitecture: 'test'
-    })).toBe(true);
+      agentData: {
+        agentId: 'id',
+        secret: 'secret',
+        selectedArchitecture: 'arch',
+        selectedOperatingSystem: 'op'
+      }
+    }));
   });
 });

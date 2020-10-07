@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DescriptionButton renders correctly 1`] = `
+exports[`OutlinedIconButton renders correctly 1`] = `
 .c0 {
   max-height: 50px;
   padding: 12px;
@@ -36,37 +36,26 @@ exports[`DescriptionButton renders correctly 1`] = `
 }
 
 .c2 {
-  display: grid;
-  grid-template-rows: [title] 50px [description] 1fr;
-  padding: 20px;
-  min-height: 180px;
+  margin-left: 8px;
 }
 
-.c3 {
-  grid-row: title;
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.c4 {
-  grid-row: description;
-  padding: 10px;
+@media (max-width:47.9375em) {
+  .c2 {
+    display: none;
+  }
 }
 
 <button
-  className="c0 c1 c2"
+  className="c0 c1"
   onClick={[MockFunction]}
 >
-  <h3
-    className="c3"
-  >
-    title
-  </h3>
-  <p
-    className="c4"
+  <i
+    className="fa-plus"
+  />
+  <span
+    className="c2"
   >
     <div />
-  </p>
+  </span>
 </button>
 `;

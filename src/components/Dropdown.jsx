@@ -16,14 +16,11 @@ const Wrapper = styled.div`
 const DropDownButton = styled.div`
   border: none;
   border-radius: 5px;
-  color: ${props => props.theme.white};
-  font-family: 'B612', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
+  color: ${(props) => props.theme.white};
   cursor: pointer;
 
   padding: 15px;
-  background-color: ${props => props.theme.lightBlack};
+  background-color: ${(props) => props.theme.lightBlack};
 
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -36,16 +33,15 @@ const DropDownContent = styled.ul`
   padding: 0;
   margin-top: 10px;
   width: 230px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: ${(props) => props.theme.boxShadow};
   z-index: 1;
 
-  color: ${props => props.theme.white};
-  background-color: ${props => props.theme.lightBlack};
+  color: ${(props) => props.theme.white};
+  background-color: ${(props) => props.theme.lightBlack};
   border-radius: 4px;
 
   position: absolute;
 `;
-
 
 const DropDownItem = styled.li`
   padding: 15px;
@@ -65,7 +61,7 @@ const DropDownIcon = styled.div`
   height: 0px;
   width: 0px;
   margin-left: 10px;
-  transform: ${props => props.collapsed ? 'rotate(0)' : 'rotate(180deg)'};
+  transform: ${(props) => (props.collapsed ? 'rotate(0)' : 'rotate(180deg)')};
   transition: transform 0.3s;
 `;
 
@@ -74,46 +70,63 @@ class Dropdown extends React.PureComponent {
     super(props);
     this.state = { collapsed: true };
     this.node = React.createRef();
+    this.closeDropdown = this.closeDropdown.bind(this);
+    this.toggleCollapse = this.toggleCollapse.bind(this);
+    this.selectItem = this.selectItem.bind(this);
+    this.renderItems = this.renderItems.bind(this);
   }
 
-  closeDropdown = (e) => {
-    if (!this.state.collapsed && !this.node.current.contains(e.target)) {
+  componentDidMount() {
+    document.addEventListener('mousedown', this.closeDropdown, false);
+  }
+
+  closeDropdown(e) {
+    const { collapsed } = this.state;
+    if (!collapsed && !this.node.current.contains(e.target)) {
       this.setState({ collapsed: true });
     }
   }
 
-  componentDidMount() {
-    document.addEventListener('mousedown', this.closeDropdown , false);
+  toggleCollapse() {
+    const { collapsed } = this.state;
+    this.setState({ collapsed: !collapsed });
   }
 
-  toggleCollapse = () => {
-    this.setState({ collapsed : !this.state.collapsed });
-  }
+  selectItem(option) {
+    const { optionSelectedCallback } = this.props;
 
-  selectItem = (option) => {
     this.toggleCollapse();
-    this.props.optionSelectedCallback(option);
+    optionSelectedCallback(option);
   }
 
-  renderItems = () => {
-    return this.props.options.map(option => {
-      if (option === this.props.selected) { return; }
-      return <DropDownItem key={option} onClick={() => this.selectItem(option)}>{option}</DropDownItem>;
+  renderItems() {
+    const { options, selected } = this.props;
+
+    return options.map((option) => {
+      if (option === selected) { return; }
+      return (
+        <DropDownItem key={option} onClick={() => this.selectItem(option)}>
+          {option}
+        </DropDownItem>
+      );
     });
   }
 
   render() {
-    return(
-      <Wrapper className={this.props.className} ref={this.node}>
-        <DropDownButton id='dropdown' onClick={this.toggleCollapse}>
-          {this.props.selected}
-          <DropDownIcon collapsed={this.state.collapsed}/>
+    const { className, selected } = this.props;
+    const { collapsed } = this.state;
+    return (
+      <Wrapper className={className} ref={this.node}>
+        <DropDownButton id="dropdown" onClick={this.toggleCollapse}>
+          {selected}
+          <DropDownIcon collapsed={collapsed} />
         </DropDownButton>
-        {!this.state.collapsed &&
+        {!collapsed
+          && (
           <DropDownContent>
-           {this.renderItems()}
+            {this.renderItems()}
           </DropDownContent>
-         }
+          )}
       </Wrapper>
     );
   }

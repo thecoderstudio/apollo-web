@@ -2,8 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import { handleHTTPResponse } from '../../actions/error';
-import media from '../../util/media';
-import OutlinedButton from '../buttons/OutlinedButton';
+import OutlinedIconButton from '../buttons/OutlinedIconButton';
 import UserListItem from './UserListItem';
 import CreateUser from './CreateUser';
 
@@ -12,14 +11,6 @@ const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-`;
-
-const ButtonContent = styled.span`
-  ${
-    media.phone`
-      display: none;
-    `
-  }
 `;
 
 const List = styled.div`
@@ -79,9 +70,9 @@ export default class UserList extends React.PureComponent {
       <div>
         <Header>
           <h2>Users</h2>
-          <OutlinedButton onClick={this.createUser}>
-            <i className="fas fa-plus" /> <ButtonContent>Create User</ButtonContent>
-          </OutlinedButton>
+          <OutlinedIconButton onClick={this.createUser} iconClassName="fas fa-plus">
+            Create user
+          </OutlinedIconButton>
         </Header>
         <List>
           {this.state.users.map(user => {
