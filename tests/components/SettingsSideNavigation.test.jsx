@@ -35,11 +35,7 @@ describe('Settings side navigation', () => {
     const instance = tree.root;
     expect(instance.findByProps({ to: '/settings/user_settings' }.props.active)).toBe(true);
 
-    tree = getComponent({
-      {
-        location: '/something_else'
-      }
-    });
+    tree = getComponent({ location: '/something_else' });
     const instance = tree.root;
     expect(instance.findByProps({ to: '/settings/user_settings' }.props.active)).toBe(false);
   });
