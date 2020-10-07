@@ -47,6 +47,8 @@ const StyledLink = styled(({ active, ...props }) => <Link {...props} />)`
 `;
 
 const TextWrapper = styled.span`
+  margin: 0 8px;
+
   ${media.phone`
     display: none;
   `}
@@ -80,7 +82,6 @@ class SettingsSideNavigation extends React.PureComponent {
           to="/settings/user_settings"
         >
           <StyledIcon className="fas fa-user-cog" />
-          {' '}
           <TextWrapper>User settings</TextWrapper>
         </StyledLink>
       </Navigation>
