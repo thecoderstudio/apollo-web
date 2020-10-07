@@ -61,8 +61,6 @@ class SettingsSideNavigation extends React.PureComponent {
   }
 
   checkIfPathIsActive(path) {
-    console.log(this.props);
-    console.log(path);
     const { location } = this.props;
     const match = matchPath(location.pathname, {
       path,
