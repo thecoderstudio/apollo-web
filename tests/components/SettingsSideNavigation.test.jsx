@@ -1,11 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import configureStore from 'redux-mock-store';
-import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
 import SettingsSideNavigation from '../../src/components/SettingsSideNavigation';
-
-const mockStore = configureStore([]);
 
 function getComponent(props) {
   return renderer.create(
@@ -21,9 +17,8 @@ describe('Settings side navigation', () => {
   beforeEach(() => {
     props = {
       location: '/settings/user_settings'
-    }
+    };
   });
-
 
   it('renders correctly', () => {
     const tree = getComponent(props).toJSON();
@@ -32,11 +27,11 @@ describe('Settings side navigation', () => {
 
   it('correctly check if path is active', () => {
     let tree = getComponent(props);
-    const instance = tree.root;
+    let instance = tree.root;
     expect(instance.findByProps({ to: '/settings/user_settings' }.props.active)).toBe(true);
 
     tree = getComponent({ location: '/something_else' });
-    const instance = tree.root;
-    expect(instance.findByProps({ to: '/settings/user_settings' }.props.active)).toBe(false);
+    instance = tree.root;
+    expect(instance.findByProps({ to: '/something_else' }.props.active)).toBe(false);
   });
 });
