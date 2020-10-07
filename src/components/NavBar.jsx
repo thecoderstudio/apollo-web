@@ -19,7 +19,7 @@ const NavigationBar = styled.div`
 
   ${media.phone`
     grid-template-columns: [main] 1fr [toggle] 24px;
-    grid-template-rows: [logo] 50px;
+    grid-template-rows: [logo] 50px [content] 1fr;
 
     position: ${(props) => props.collapsed ? 'static' : 'fixed'};
     top: 0px;

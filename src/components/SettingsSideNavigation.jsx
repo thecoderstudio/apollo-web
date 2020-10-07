@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { matchPath } from 'react-router';
-import Link from '../../components/Link';
+import Link from './Link';
+import Icon from './Icon';
+import media from '../util/media';
 
 const Navigation = styled.div`
   max-width: 225px;
@@ -9,21 +11,45 @@ const Navigation = styled.div`
   background-color: ${(props) => props.theme.lightBlack};
   box-shadow: inset ${(props) => props.theme.boxShadow};
   padding-top: 32px;
-  position: relative;
+
+  ${media.phone`
+    width: 45px;
+  `}
+
+  transition: all 1s ease;
+  overflow: hidden;
+`;
+
+const IconWrapper = styled(Icon)`
+  margin: 0 8px;
+
+  ${media.phone`
+    margin: 0 auto;
+  `}
 `;
 
 const StyledLink = styled(({ active, ...props }) => <Link {...props} />)`
   padding: 12px;
-
+  margin-top: 24px;
   border-radius: 4px;
   width: 100%;
   float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
   box-sizing: border-box;
+  white-space: nowrap;
+
   background-color: ${(props) => props.active ? props.theme.selectedBlack : props.theme.lightBlack};
 
   &:hover {
     background-color: ${(props) => props.theme.selectedBlack};
   }
+`;
+
+const TextWrapper = styled.span`
+  ${media.phone`
+    display: none;
+  `}
 `;
 
 class SettingsSideNavigation extends React.PureComponent {
@@ -53,7 +79,9 @@ class SettingsSideNavigation extends React.PureComponent {
           active={this.checkIfPathIsActive('/settings/user_settings')}
           to="/settings/user_settings"
         >
-          User settings
+          <IconWrapper><Icon className="fas fa-user-cog" /></IconWrapper>
+          {' '}
+          <TextWrapper>User settings</TextWrapper>
         </StyledLink>
       </Navigation>
     );
