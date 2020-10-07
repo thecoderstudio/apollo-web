@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import SettingsSideNavigation from '../components/SettingsSideNavigation';
-import media from '../util/media';
 
 const ContentWrapper = styled.div`
   flex: 1 1 auto;

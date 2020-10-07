@@ -20,7 +20,7 @@ const Navigation = styled.div`
   overflow: hidden;
 `;
 
-const IconWrapper = styled(Icon)`
+const StyledIcon = styled(Icon)`
   margin: 0 8px;
 
   ${media.phone`
@@ -79,7 +79,7 @@ class SettingsSideNavigation extends React.PureComponent {
           active={this.checkIfPathIsActive('/settings/user_settings')}
           to="/settings/user_settings"
         >
-          <IconWrapper><Icon className="fas fa-user-cog" /></IconWrapper>
+          <StyledIcon className="fas fa-user-cog" />
           {' '}
           <TextWrapper>User settings</TextWrapper>
         </StyledLink>
