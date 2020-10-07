@@ -6,27 +6,28 @@ import media from '../util/media';
 const ContentWrapper = styled.div`
   flex: 1 1 auto;
   display: grid;
-  background-color: green;
   position: relative;
   grid-template-columns: [navigation] 300px [content] 1fr;
 `;
 
 const StyledNavigation = styled(SettingsSideNavigation)`
   grid-column: navigation;
-  position: absolute;;
+  position: absolute;
   top: 0;
   bottom: 0;
 `;
 
 const ComponentWrapper = styled.div`
   grid-column: content;
+  padding: 16px;
 `;
 
 function WithSettingsNavigation(Component) {
-  return function wrap() {
+  return function wrap(props) {
+    const { location } = props;
     return (
       <ContentWrapper>
-        <StyledNavigation />
+        <StyledNavigation location={location} />
         <ComponentWrapper>
           <Component />
         </ComponentWrapper>
