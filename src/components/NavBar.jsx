@@ -165,7 +165,7 @@ class NavBar extends React.PureComponent {
             <StyledLink onClick={this.toggleCollapsed} to="/">Dashboard</StyledLink>
             {checkIfAdmin(currentUser)
               && <StyledLink onClick={this.toggleCollapsed} to="/admin">Admin</StyledLink>}
-            <StyledSettingsLink onClick={this.toggleCollapsed} to="/settings">Settings</StyledSettingsLink>
+            <StyledSettingsLink onClick={this.toggleCollapsed} to="/settings/user_settings">Settings</StyledSettingsLink>
           </Menu>
           <Logout id="logoutButton" onClick={logout}>Logout</Logout>
           <SettingsIcon className="fas fa-cog fa-lg" to="/settings/user_settings" />
