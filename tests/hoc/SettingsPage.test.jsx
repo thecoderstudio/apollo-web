@@ -8,10 +8,10 @@ function getComponent() {
   );
 }
 
-describe('Settings page', () => {
+describe("settings page", () => {
   const props = { location: 'location' };
 
-  it('render correctly', () => {
+  it("render correctly", () => {
     const tree = getComponent(props).toJSON();
     expect(tree).toMatchSnapshot();
   });

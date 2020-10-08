@@ -11,13 +11,13 @@ function getComponent(props) {
   );
 }
 
-describe('User settings', () => {
+describe("User settings", () => {
   const props = {
     location: {
       pathname: '/path'
     }
   };
-  it('render correctly', () => {
+  it("render correctly", () => {
     expect(getComponent(props).toJSON()).toMatchSnapshot();
   });
 });

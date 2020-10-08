@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const StyledLink = styled(ReactLink)`
   text-decoration: none;
-  color: ${(props) => props.theme.white};
+  color: ${props => props.theme.white};
 
   &:hover {
     opacity: 0.90;

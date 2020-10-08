@@ -55,6 +55,7 @@ function App(props) {
               <ProtectedRoute exact path='/agent/:agentId/shell' component={TerminalPage} fallbackComponent={NotFound} />
               <ProtectedRoute exact path='/agent/:agentId' component={AgentDetail} fallbackComponent={NotFound} />
               <ProtectedRoute exact path='/admin' component={Admin} fallbackComponent={NotFound} role='admin' />
+              <ProtectedRoute exact path='/settings/user_settings' component={UserSettings} fallbackComponent={NotFound} />
               <Route component={NotFound} />
             </Switch>
             <Notifications />
