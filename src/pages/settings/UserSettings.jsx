@@ -1,5 +1,5 @@
 import React from 'react';
-import WithSettingsNavigation from '../../hoc/SettingsPage';
+import withSettingsNavigation from '../../hoc/SettingsPage';
 
 function UserSettings(props) {
   const { className } = props;
@@ -8,4 +8,4 @@ function UserSettings(props) {
   );
 }
 
-export default WithSettingsNavigation(UserSettings);
+export default withSettingsNavigation(UserSettings);

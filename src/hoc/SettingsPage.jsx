@@ -21,7 +21,7 @@ const ComponentWrapper = styled.div`
   padding: 16px;
 `;
 
-function WithSettingsNavigation(Component) {
+function withSettingsNavigation(Component) {
   return function wrap(props) {
     const { location } = props;
     return (
@@ -35,4 +35,4 @@ function WithSettingsNavigation(Component) {
   };
 }
 
-export default WithSettingsNavigation;
+export default withSettingsNavigation;
