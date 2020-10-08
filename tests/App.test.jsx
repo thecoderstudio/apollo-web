@@ -33,7 +33,7 @@ describe('app', () => {
       currentUser: {
         hasChangedInitialPassword: false
       },
-      notifications: new Map({}),
+      notifications: new Map({})
     });
     const tree = getComponent(store).toJSON();
     expect(tree).toMatchSnapshot();
@@ -46,7 +46,7 @@ describe('app', () => {
       currentUser: {
         hasChangedInitialPassword: true
       },
-      notifications: new Map({}),
+      notifications: new Map({})
     });
     const tree = getComponent(store).toJSON();
     expect(tree).toMatchSnapshot();

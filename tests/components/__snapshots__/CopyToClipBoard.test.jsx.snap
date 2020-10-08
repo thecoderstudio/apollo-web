@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`copy to clipboard renders correctly 1`] = `
+.c2 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c2:hover {
+  opacity: 0.90;
+}
+
+.c2:focus {
+  outline: none;
+}
+
+.c2:active {
+  opacity: 0.80;
+}
+
+.c2:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c0 {
+  grid-template-columns: [textField] 1fr [copy] 50px;
+  display: grid;
+  height: 50px;
+}
+
+.c1 {
+  grid-column: textField;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: text;
+  padding: 15px;
+  overflow: auto;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.c1::-webkit-scrollbar {
+  background: transparent;
+}
+
+.c3 {
+  grid-column: copy;
+  height: 100%;
+}
+
+.c4 {
+  text-align: center;
+  display: block;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    test
+  </div>
+  <button
+    className="c2 c3"
+    id="copyToClipboardButton"
+    onClick={[Function]}
+  >
+    <i
+      className="c4 fas fa-copy"
+    />
+  </button>
+</div>
+`;

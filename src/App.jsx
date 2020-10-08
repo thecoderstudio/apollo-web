@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0px;
     height: 100%;
     width: 100%;
+    font-weight: 500;
     color: ${props => props.theme.white};
     background-color: ${props => props.theme.black};
   }
@@ -45,7 +46,7 @@ function App(props) {
       <ThemeProvider theme={darkTheme}>
         <BrowserRouter>
           <Content>
-            {props.authenticated && props.hasChangedPassword &&  <NavBar />}
+            {props.authenticated && props.hasChangedPassword && <NavBar />}
             <Switch>
               <ProtectedRoute exact path='/' component={Dashboard} fallbackComponent={Welcome} />
               <ProtectedRoute exact path='/agent/:agentId/shell' component={TerminalPage} fallbackComponent={NotFound} />
@@ -65,6 +66,6 @@ function App(props) {
 export default connect(
   state => ({
     authenticated: state.authenticated,
-    hasChangedPassword: state.currentUser.hasChangedInitialPassword,
+    hasChangedPassword: state.currentUser.hasChangedInitialPassword
   })
 )(App);

@@ -1,84 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`app renders correctly authenticated 1`] = `
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: fixed;
-  left: 0px;
-  right: 0px;
-  bottom: 32px;
-  z-index: 2;
-}
-
-.c7 {
-  height: 80px;
-}
-
-.c8 {
-  min-height: 50px;
-  width: 100%;
-  border: none;
-  border-radius: 5px;
-  font-family: 'Libre Franklin',sans-serif;
-  font-size: 1rem;
-  padding-left: 10px;
-  opacity: 0.9;
-  border: 1px solid transparent;
-}
-
-.c8:focus {
-  outline: none border:1px solid #4D02EE;
-}
-
-.c6 {
-  width: 100%;
-}
-
-.c9 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  background-color: #4D02EE;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  width: 100%;
-}
-
-.c9:hover {
-  opacity: 0.90;
-}
-
-.c9:focus {
-  outline: none;
-}
-
-.c9:active {
-  opacity: 0.80;
-}
-
-.c9:disabled {
-  background-color: #3E3E3E;
-}
-
-.c9:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
 .c10 {
   max-height: 50px;
   padding: 12px;
@@ -90,10 +12,6 @@ exports[`app renders correctly authenticated 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  background-color: transparent;
-  border: 1px solid #4D02EE;
-  margin-top: 16px;
-  width: 100%;
 }
 
 .c10:hover {
@@ -115,6 +33,73 @@ exports[`app renders correctly authenticated 1`] = `
 .c10:disabled:hover {
   opacity: 1;
   cursor: auto;
+}
+
+.c12 {
+  background-color: transparent;
+  border: 1px solid #4D02EE;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 32px;
+  z-index: 2;
+}
+
+.c5 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+}
+
+.c8 {
+  height: 80px;
+}
+
+.c9 {
+  min-height: 50px;
+  width: 100%;
+  background: #F8F8F8;
+  color: #1B1B1B;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+  border: 1px solid transparent;
+}
+
+.c9:focus {
+  outline: none;
+  border: 1px solid #4D02EE;
+}
+
+.c7 {
+  width: 100%;
+}
+
+.c11 {
+  width: 100%;
+}
+
+.c13 {
+  margin-top: 16px;
+  width: 100%;
 }
 
 .c1 {
@@ -144,11 +129,7 @@ exports[`app renders correctly authenticated 1`] = `
   color: #02A3EE;
 }
 
-.c5 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
-  background-color: #1B1B1B;
+.c6 {
   width: 100%;
   max-width: 400px;
   height: 350px;
@@ -185,7 +166,7 @@ exports[`app renders correctly authenticated 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     box-shadow: none;
     background-color: #181818;
   }
@@ -219,17 +200,17 @@ exports[`app renders correctly authenticated 1`] = `
           Change your password
         </h1>
         <div
-          className="c5"
+          className="c5 c6"
         >
           <form
-            className="c6"
+            className="c7"
             onSubmit={[Function]}
           >
             <div
-              className="c7"
+              className="c8"
             >
               <input
-                className="c8"
+                className="c9"
                 name="oldPassword"
                 onChange={[Function]}
                 placeholder="Current password"
@@ -238,10 +219,10 @@ exports[`app renders correctly authenticated 1`] = `
               />
             </div>
             <div
-              className="c7"
+              className="c8"
             >
               <input
-                className="c8"
+                className="c9"
                 name="password"
                 onChange={[Function]}
                 placeholder="New password"
@@ -250,10 +231,10 @@ exports[`app renders correctly authenticated 1`] = `
               />
             </div>
             <div
-              className="c7"
+              className="c8"
             >
               <input
-                className="c8"
+                className="c9"
                 name="passwordConfirm"
                 onChange={[Function]}
                 placeholder="Confirm new password"
@@ -262,13 +243,13 @@ exports[`app renders correctly authenticated 1`] = `
               />
             </div>
             <button
-              className="c9"
+              className="c10 c11"
               disabled={true}
             >
               Change password
             </button>
             <button
-              className="c10"
+              className="c10 c12 c13"
               id="logoutButton"
               onClick={[Function]}
             >
@@ -279,193 +260,13 @@ exports[`app renders correctly authenticated 1`] = `
       </div>
     </div>
     <span
-      className="c11"
+      className="c14"
     />
   </div>
 </div>
 `;
 
 exports[`app renders correctly authenticated and password changed 1`] = `
-.c2 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #F8F8F8;
-}
-
-.c2:hover {
-  opacity: 0.90;
-}
-
-.c1 {
-  height: 50px;
-  padding: 16px;
-  display: grid;
-  grid-template-columns: 1fr 8fr [logout];
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #1B1B1B;
-}
-
-.c3 {
-  margin-right: 16px;
-}
-
-.c4 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  background-color: #4D02EE;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid #4D02EE;
-  grid-column: logout;
-  float: right;
-  width: 100px;
-  height: 75%;
-}
-
-.c4:hover {
-  opacity: 0.90;
-}
-
-.c4:focus {
-  outline: none;
-}
-
-.c4:active {
-  opacity: 0.80;
-}
-
-.c4:disabled {
-  background-color: #3E3E3E;
-}
-
-.c4:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: fixed;
-  left: 0px;
-  right: 0px;
-  bottom: 32px;
-  z-index: 2;
-}
-
-.c6 {
-  display: grid;
-  grid-template-rows: [title] 50px [list] 1fr;
-  max-width: 100%;
-  min-width: 0;
-  background-color: #1B1B1B;
-  border-radius: 8px;
-  padding: 0px 16px;
-}
-
-.c7 {
-  grid-row: title;
-  width: 100%;
-  min-width: 0;
-}
-
-.c8 {
-  width: 100%;
-  min-width: 0;
-  grid-row: list;
-  list-style: none;
-  padding-left: 0;
-}
-
-.c5 {
-  display: grid;
-  grid-template-columns: [agent-listing] 1fr 1fr;
-  grid-template-rows: 1fr;
-  margin: 25px;
-}
-
-.c0 {
-  height: 100%;
-  width: 100%;
-}
-
-@media (max-width:47.9375em) {
-  .c5 {
-    grid-template-columns: [agent-listing] 1fr;
-  }
-}
-
-<div>
-  <div
-    className="c0"
-  >
-    <div
-      className="c1"
-    >
-      <h3>
-        Apollo
-      </h3>
-      <div>
-        <a
-          className="c2 c3"
-          href="/"
-          onClick={[Function]}
-        >
-          Dashboard
-        </a>
-      </div>
-      <button
-        className="c4"
-        id="logoutButton"
-        onClick={[Function]}
-      >
-        Log out
-      </button>
-    </div>
-    <div>
-      <div
-        className="c5"
-      >
-        <div
-          className="c6"
-        >
-          <h2
-            className="c7"
-          >
-            Agents
-          </h2>
-          <ul
-            className="c8"
-          />
-        </div>
-      </div>
-    </div>
-    <span
-      className="c9"
-    />
-  </div>
-</div>
-`;
-
-exports[`app renders correctly unauthenticated 1`] = `
 .c9 {
   max-height: 50px;
   padding: 12px;
@@ -501,6 +302,89 @@ exports[`app renders correctly unauthenticated 1`] = `
 }
 
 .c10 {
+  background-color: transparent;
+  border: 1px solid #4D02EE;
+}
+
+.c7 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #F8F8F8;
+}
+
+.c7:hover {
+  opacity: 0.90;
+}
+
+.c3 {
+  cursor: pointer;
+}
+
+.c1 {
+  padding: 16px;
+  background-color: #1B1B1B;
+  display: grid;
+  grid-template-columns: [logo] 100px [content] 1fr;
+  grid-gap: 16px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.c5 {
+  grid-column: content;
+  display: grid;
+  grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px;
+  grid-gap: 12px;
+  height: auto;
+}
+
+.c4 {
+  grid-row: logo;
+  grid-column: toggle;
+  display: none;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: -webkit-transform .3s ease-out;
+  -webkit-transition: transform .3s ease-out;
+  transition: transform .3s ease-out;
+}
+
+.c4:hover {
+  cursor: pointer;
+}
+
+.c8 {
+  margin: 0px 16px;
+  float: left;
+}
+
+.c6 {
+  grid-column: menu;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c2 {
+  grid-column: logo;
+}
+
+.c11 {
+  grid-column: logout;
+  float: right;
+  max-width: 100px;
+}
+
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -519,13 +403,280 @@ exports[`app renders correctly unauthenticated 1`] = `
   z-index: 2;
 }
 
-.c7 {
-  height: 80px;
+.c15 {
+  margin-left: 8px;
+}
+
+.c13 {
+  display: grid;
+  grid-template-rows: [header] 50px [list] 1fr;
+  max-width: 100%;
+  min-width: 0;
+  background-color: #1B1B1B;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  grid-row: header;
+}
+
+.c16 {
+  width: 100%;
+  min-width: 0;
+  grid-row: list;
+  list-style: none;
+  padding-left: 0;
+}
+
+.c12 {
+  display: grid;
+  grid-template-columns: [agent-listing] 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin: 25px;
+}
+
+.c0 {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width:47.9375em) {
+  .c1 {
+    grid-template-columns: [main] 1fr [toggle] 24px;
+    grid-template-rows: [logo] 50px [content] 1fr;
+    position: static;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c5 {
+    display: none;
+    grid-column: main / -1;
+    grid-row: content;
+    height: 100%;
+    grid-template-columns: [main] 1fr;
+    grid-template-rows: [menu] 1fr [new-agent] 50px [logout] 50px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c4 {
+    display: inline;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c8 {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c6 {
+    -webkit-align-self: start;
+    -ms-flex-item-align: start;
+    align-self: start;
+    grid-column: main;
+    grid-row: menu;
+    margin-top: 32px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c2 {
+    grid-column: main;
+    grid-row: logo;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c11 {
+    grid-column: main;
+    grid-row: logout;
+    max-width: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c15 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c12 {
+    grid-template-columns: [agent-listing] 1fr;
+  }
+}
+
+<div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <div
+        className="c2"
+      >
+        Apollo
+      </div>
+      <i
+        className="c3 c4 fa fa-bars fa-lg"
+        id="collapseIcon"
+        onClick={[Function]}
+      />
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        >
+          <a
+            className="c7 c8"
+            href="/"
+            onClick={[Function]}
+          >
+            Dashboard
+          </a>
+        </div>
+        <button
+          className="c9 c10 c11"
+          id="logoutButton"
+          onClick={[Function]}
+        >
+          Logout
+        </button>
+      </div>
+    </div>
+    <div>
+      <div
+        className="c12"
+      >
+        <div
+          className="c13"
+        >
+          <div
+            className="c14"
+          >
+            <h2>
+              Agents
+            </h2>
+            <button
+              className="c9 c10"
+              onClick={[Function]}
+            >
+              <i
+                className="fas fa-plus"
+              />
+              <span
+                className="c15"
+              >
+                Add new agent
+              </span>
+            </button>
+          </div>
+          <ul
+            className="c16"
+          />
+        </div>
+      </div>
+    </div>
+    <span
+      className="c17"
+    />
+  </div>
+</div>
+`;
+
+exports[`app renders correctly unauthenticated 1`] = `
+.c10 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  background-color: #4D02EE;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c10:hover {
+  opacity: 0.90;
+}
+
+.c10:focus {
+  outline: none;
+}
+
+.c10:active {
+  opacity: 0.80;
+}
+
+.c10:disabled {
+  background-color: #3E3E3E;
+}
+
+.c10:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 32px;
+  z-index: 2;
+}
+
+.c5 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
 }
 
 .c8 {
+  height: 80px;
+}
+
+.c9 {
   min-height: 50px;
   width: 100%;
+  background: #F8F8F8;
+  color: #1B1B1B;
   border: none;
   border-radius: 5px;
   font-family: 'Libre Franklin',sans-serif;
@@ -535,11 +686,12 @@ exports[`app renders correctly unauthenticated 1`] = `
   border: 1px solid transparent;
 }
 
-.c8:focus {
-  outline: none border:1px solid #4D02EE;
+.c9:focus {
+  outline: none;
+  border: 1px solid #4D02EE;
 }
 
-.c6 {
+.c7 {
   height: 75%;
   display: grid;
   grid-template-rows: auto;
@@ -573,11 +725,7 @@ exports[`app renders correctly unauthenticated 1`] = `
   color: #02A3EE;
 }
 
-.c5 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
-  background-color: #1B1B1B;
+.c6 {
   width: 100%;
   max-width: 400px;
   height: 350px;
@@ -614,7 +762,7 @@ exports[`app renders correctly unauthenticated 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c6 {
     box-shadow: none;
     background-color: #181818;
   }
@@ -648,17 +796,17 @@ exports[`app renders correctly unauthenticated 1`] = `
           Log in to Apollo
         </h1>
         <div
-          className="c5"
+          className="c5 c6"
         >
           <form
-            className="c6"
+            className="c7"
             onSubmit={[Function]}
           >
             <div
-              className="c7"
+              className="c8"
             >
               <input
-                className="c8"
+                className="c9"
                 name="username"
                 onChange={[Function]}
                 placeholder="Username"
@@ -667,10 +815,10 @@ exports[`app renders correctly unauthenticated 1`] = `
               />
             </div>
             <div
-              className="c7"
+              className="c8"
             >
               <input
-                className="c8"
+                className="c9"
                 name="password"
                 onChange={[Function]}
                 placeholder="Password"
@@ -679,7 +827,7 @@ exports[`app renders correctly unauthenticated 1`] = `
               />
             </div>
             <button
-              className="c9"
+              className="c10"
             >
               Log in
             </button>
@@ -688,7 +836,7 @@ exports[`app renders correctly unauthenticated 1`] = `
       </div>
     </div>
     <span
-      className="c10"
+      className="c11"
     />
   </div>
 </div>

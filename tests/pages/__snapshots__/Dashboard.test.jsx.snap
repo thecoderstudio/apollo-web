@@ -1,22 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`dashboard Does not render change password 1`] = `
+.c3 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c3:hover {
+  opacity: 0.90;
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:active {
+  opacity: 0.80;
+}
+
+.c3:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c4 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c5 {
+  margin-left: 8px;
+}
+
 .c1 {
   display: grid;
-  grid-template-rows: [title] 50px [list] 1fr;
+  grid-template-rows: [header] 50px [list] 1fr;
   max-width: 100%;
   min-width: 0;
   border-radius: 8px;
-  padding: 0px 16px;
+  padding: 16px;
 }
 
 .c2 {
-  grid-row: title;
-  width: 100%;
-  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  grid-row: header;
 }
 
-.c3 {
+.c6 {
   width: 100%;
   min-width: 0;
   grid-row: list;
@@ -32,6 +80,12 @@ exports[`dashboard Does not render change password 1`] = `
 }
 
 @media (max-width:47.9375em) {
+  .c5 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
   .c0 {
     grid-template-columns: [agent-listing] 1fr;
   }
@@ -44,13 +98,28 @@ exports[`dashboard Does not render change password 1`] = `
     <div
       className="c1"
     >
-      <h2
+      <div
         className="c2"
       >
-        Agents
-      </h2>
+        <h2>
+          Agents
+        </h2>
+        <button
+          className="c3 c4"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-plus"
+          />
+          <span
+            className="c5"
+          >
+            Add new agent
+          </span>
+        </button>
+      </div>
       <ul
-        className="c3"
+        className="c6"
       />
     </div>
   </div>
@@ -58,22 +127,70 @@ exports[`dashboard Does not render change password 1`] = `
 `;
 
 exports[`dashboard renders correctly 1`] = `
+.c3 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c3:hover {
+  opacity: 0.90;
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:active {
+  opacity: 0.80;
+}
+
+.c3:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c4 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c5 {
+  margin-left: 8px;
+}
+
 .c1 {
   display: grid;
-  grid-template-rows: [title] 50px [list] 1fr;
+  grid-template-rows: [header] 50px [list] 1fr;
   max-width: 100%;
   min-width: 0;
   border-radius: 8px;
-  padding: 0px 16px;
+  padding: 16px;
 }
 
 .c2 {
-  grid-row: title;
-  width: 100%;
-  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  grid-row: header;
 }
 
-.c3 {
+.c6 {
   width: 100%;
   min-width: 0;
   grid-row: list;
@@ -89,6 +206,12 @@ exports[`dashboard renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
+  .c5 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
   .c0 {
     grid-template-columns: [agent-listing] 1fr;
   }
@@ -101,13 +224,28 @@ exports[`dashboard renders correctly 1`] = `
     <div
       className="c1"
     >
-      <h2
+      <div
         className="c2"
       >
-        Agents
-      </h2>
+        <h2>
+          Agents
+        </h2>
+        <button
+          className="c3 c4"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-plus"
+          />
+          <span
+            className="c5"
+          >
+            Add new agent
+          </span>
+        </button>
+      </div>
       <ul
-        className="c3"
+        className="c6"
       />
     </div>
   </div>

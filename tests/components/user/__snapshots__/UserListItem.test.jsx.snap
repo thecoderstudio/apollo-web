@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`user list item correctly closes modal 1`] = `
+.c3 {
+  cursor: pointer;
+}
+
 .c0 {
   min-height: 60px;
   padding: 0px 16px;
@@ -27,8 +31,7 @@ exports[`user list item correctly closes modal 1`] = `
   background-color: #4D02EE;
 }
 
-.c3 {
-  cursor: pointer;
+.c4 {
   color: #ED3E2A;
   float: right;
   margin-right: 10px;
@@ -47,108 +50,87 @@ exports[`user list item correctly closes modal 1`] = `
     not admin
   </p>
   <i
-    className="c3 far fa-trash-alt"
+    className="c3 c4 far fa-trash-alt"
     onClick={[Function]}
   />
 </div>
 `;
 
 exports[`user list item correctly opens modal 1`] = `
-.c4 {
+.c11 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  background-color: #4D02EE;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c11:hover {
+  opacity: 0.90;
+}
+
+.c11:focus {
+  outline: none;
+}
+
+.c11:active {
+  opacity: 0.80;
+}
+
+.c11:disabled {
+  background-color: #3E3E3E;
+}
+
+.c11:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c12 {
+  background-color: transparent;
+  border: 1px solid #4D02EE;
+}
+
+.c6 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+}
+
+.c5 {
   display: inline;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
   background-color: rgba(37,37,37,0.6);
 }
 
-.c8 {
+.c10 {
   display: grid;
   grid-template-columns: [cancel] 1fr [confirm] 1fr;
 }
 
-.c9 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  background-color: #4D02EE;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid #4D02EE;
+.c13 {
   margin: 20px;
   grid-column: cancel;
 }
 
-.c9:hover {
-  opacity: 0.90;
-}
-
-.c9:focus {
-  outline: none;
-}
-
-.c9:active {
-  opacity: 0.80;
-}
-
-.c9:disabled {
-  background-color: #3E3E3E;
-}
-
-.c9:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c10 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  background-color: #4D02EE;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
+.c14 {
   grid-column: confirm;
   margin: 20px;
   background-color: #ED3E2A;
 }
 
-.c10:hover {
-  opacity: 0.90;
-}
-
-.c10:focus {
-  outline: none;
-}
-
-.c10:active {
-  opacity: 0.80;
-}
-
-.c10:disabled {
-  background-color: #3E3E3E;
-}
-
-.c10:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c5 {
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
-  padding: 40px;
-  border-radius: 10px;
-  background-color: #1B1B1B;
+.c7 {
   display: grid;
   grid-template-rows: [title] 1fr [content] 1.5fr;
   position: fixed;
@@ -162,16 +144,20 @@ exports[`user list item correctly opens modal 1`] = `
   background-color: #181818;
 }
 
-.c6 {
+.c8 {
   grid-row: title;
   width: 75%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c7 {
+.c9 {
   grid-row: content;
   padding-top: 20px;
+}
+
+.c3 {
+  cursor: pointer;
 }
 
 .c0 {
@@ -200,8 +186,7 @@ exports[`user list item correctly opens modal 1`] = `
   background-color: #4D02EE;
 }
 
-.c3 {
-  cursor: pointer;
+.c4 {
   color: #ED3E2A;
   float: right;
   margin-right: 10px;
@@ -220,35 +205,35 @@ exports[`user list item correctly opens modal 1`] = `
     not admin
   </p>
   <i
-    className="c3 far fa-trash-alt"
+    className="c3 c4 far fa-trash-alt"
     onClick={[Function]}
   />
   <div
-    className="c4"
+    className="c5"
     onClick={[Function]}
   >
     <div
-      className="c5"
+      className="c6 c7"
     >
       <h2
-        className="c6"
+        className="c8"
       >
         Are you sure you want to delete undefined
       </h2>
       <div
-        className="c7"
+        className="c9"
       >
         <div
-          className="c8"
+          className="c10"
         >
           <button
-            className="c9"
+            className="c11 c12 c13"
             onClick={[Function]}
           >
             Cancel
           </button>
           <button
-            className="c10"
+            className="c11 c14"
             color="#ED3E2A"
             onClick={[Function]}
           >
@@ -305,6 +290,10 @@ exports[`user list item render correctly with role 1`] = `
 `;
 
 exports[`user list item render correctly without role 1`] = `
+.c2 {
+  cursor: pointer;
+}
+
 .c0 {
   min-height: 60px;
   padding: 0px 16px;
@@ -321,8 +310,7 @@ exports[`user list item render correctly without role 1`] = `
   margin: 0px;
 }
 
-.c2 {
-  cursor: pointer;
+.c3 {
   color: #ED3E2A;
   float: right;
   margin-right: 10px;
@@ -338,7 +326,7 @@ exports[`user list item render correctly without role 1`] = `
     test
   </p>
   <i
-    className="c2 far fa-trash-alt"
+    className="c2 c3 far fa-trash-alt"
     onClick={[Function]}
   />
 </div>

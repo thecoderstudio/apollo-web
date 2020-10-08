@@ -1,0 +1,548 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`add Agent Modal renders add agent correctly 1`] = `
+.c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.c1 {
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.c9 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c9:hover {
+  opacity: 0.90;
+}
+
+.c9:focus {
+  outline: none;
+}
+
+.c9:active {
+  opacity: 0.80;
+}
+
+.c9:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c19 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c10 {
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c14 {
+  grid-template-columns: [textField] 1fr [copy] 50px;
+  display: grid;
+  height: 50px;
+}
+
+.c16 {
+  grid-column: textField;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: text;
+  padding: 15px;
+  overflow: auto;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.c16::-webkit-scrollbar {
+  background: transparent;
+}
+
+.c17 {
+  grid-column: copy;
+  height: 100%;
+}
+
+.c18 {
+  text-align: center;
+  display: block;
+}
+
+.c6 {
+  display: grid;
+  grid-template-columns: [column-one] 50% [column-two] 50%;
+  margin: 20px 0px 20px 0px;
+}
+
+.c7 {
+  grid-column: column-one;
+  margin-right: 10px;
+}
+
+.c8 {
+  grid-column: column-two;
+  margin-left: 10px;
+}
+
+.c20 {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c11 {
+  float: right;
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c12 {
+  display: grid;
+  grid-template-rows: [description] 1fr [commands] 1fr [button] 1fr;
+}
+
+.c15 {
+  grid-row: commands;
+  margin-bottom: 20px;
+}
+
+.c21 {
+  grid-row: button;
+  margin-top: 20px;
+}
+
+.c13 {
+  grid-row: description;
+  margin: 20px 0px 20px 0px;
+}
+
+.c2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 600px;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+
+.c3 {
+  display: grid;
+  grid-template-rows: [title] 50px [content] 1fr;
+  height: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  -webkit-scrollbar-width: none;
+  -moz-scrollbar-width: none;
+  -ms-scrollbar-width: none;
+  scrollbar-width: none;
+}
+
+.c3::-webkit-scrollbar {
+  display: none;
+}
+
+.c4 {
+  grid-row: title;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c5 {
+  grid-row: content;
+  padding: 20px;
+}
+
+@media (max-width:47.9375em) {
+  .c6 {
+    grid-template-columns: [column-one] 100%;
+    grid-template-rows: [row-one] 1fr [row-two] 1fr;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c7 {
+    grid-row: row-one;
+    margin-right: 0px;
+    margin: 15px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c8 {
+    grid-column: column-one;
+    grid-row: row-two;
+    margin-left: 0px;
+    margin: 15px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c11 {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+  .c2 {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 15px 0px 15px 0px;
+    width: auto;
+    max-width: 100%;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
+<div
+  className="c0"
+  onClick={[Function]}
+>
+  <div
+    className="c1 c2"
+  >
+    <div
+      className="c3"
+    >
+      <h2
+        className="c4"
+      >
+        Add new agent
+      </h2>
+      <div
+        className="c5"
+      >
+        <div>
+          <div
+            className="c6"
+          >
+            <div
+              className="c7"
+            >
+              Download the binary and upload it to the target machine.
+            </div>
+            <div
+              className="c8"
+            >
+              <button
+                className="c9 c10 c11"
+                onClick={[Function]}
+              >
+                Download binary
+              </button>
+            </div>
+          </div>
+          <div
+            className="c12"
+          >
+            <p
+              className="c13"
+            >
+              Copy and run the command on the target machine to download run the client.
+            </p>
+            <div
+              className="c14 c15"
+            >
+              <div
+                className="c16"
+              >
+                chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=id --secret=secret --host=http://localhost:1234
+              </div>
+              <button
+                className="c9 c17"
+                id="copyToClipboardButton"
+                onClick={[Function]}
+              >
+                <i
+                  className="c18 fas fa-copy"
+                />
+              </button>
+            </div>
+            <button
+              className="c9 c19 c20 c21"
+              id="closeButton"
+              onClick={[MockFunction]}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`add Agent Modal renders correctly 1`] = `
+.c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.c1 {
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.c8 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c8:hover {
+  opacity: 0.90;
+}
+
+.c8:focus {
+  outline: none;
+}
+
+.c8:active {
+  opacity: 0.80;
+}
+
+.c8:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c9 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c10 {
+  display: grid;
+  grid-template-rows: [title] 50px [description] 1fr;
+  padding: 20px;
+  min-height: 180px;
+}
+
+.c12 {
+  grid-row: title;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c13 {
+  grid-row: description;
+  padding: 10px;
+}
+
+.c6 {
+  display: grid;
+  grid-template-columns: [column-one] 50% [column-two] 50%;
+  gap: 20px;
+}
+
+.c7 {
+  grid-column: column-one;
+}
+
+.c14 {
+  grid-column: column-two;
+  margin-right: 20px;
+}
+
+.c11 {
+  width: 100%;
+}
+
+.c2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 600px;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+
+.c3 {
+  display: grid;
+  grid-template-rows: [title] 50px [content] 1fr;
+  height: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  -webkit-scrollbar-width: none;
+  -moz-scrollbar-width: none;
+  -ms-scrollbar-width: none;
+  scrollbar-width: none;
+}
+
+.c3::-webkit-scrollbar {
+  display: none;
+}
+
+.c4 {
+  grid-row: title;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c5 {
+  grid-row: content;
+  padding: 20px;
+}
+
+@media (max-width:47.9375em) {
+  .c6 {
+    grid-template-columns: [column-one] 100%;
+    grid-template-rows: [row-one] 1fr [row-two] 1fr;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c7 {
+    grid-row: row-one;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c14 {
+    grid-column: column-one;
+    grid-row: row-two;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c2 {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 15px 0px 15px 0px;
+    width: auto;
+    max-width: 100%;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
+<div
+  className="c0"
+  onClick={[Function]}
+>
+  <div
+    className="c1 c2"
+  >
+    <div
+      className="c3"
+    >
+      <h2
+        className="c4"
+      >
+        Add new agent
+      </h2>
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+        >
+          <div
+            className="c7"
+          >
+            <button
+              className="c8 c9 c10 c11"
+              onClick={[Function]}
+            >
+              <h3
+                className="c12"
+              >
+                Directly on target machine.
+              </h3>
+              <p
+                className="c13"
+              >
+                You have the correct permissions to download the binary directly on the target machine.
+              </p>
+            </button>
+          </div>
+          <div
+            className="c14"
+          >
+            <button
+              className="c8 c9 c10 c11"
+              onClick={[Function]}
+            >
+              <h3
+                className="c12"
+              >
+                Manual upload
+              </h3>
+              <p
+                className="c13"
+              >
+                You download and upload the binary yourself.
+              </p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
