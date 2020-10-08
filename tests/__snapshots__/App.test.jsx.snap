@@ -605,7 +605,7 @@ exports[`app renders correctly authenticated and password changed 1`] = `
           </a>
           <a
             className="c7 c8 c9"
-            href="/settings"
+            href="/settings/user_settings"
             onClick={[Function]}
           >
             Settings

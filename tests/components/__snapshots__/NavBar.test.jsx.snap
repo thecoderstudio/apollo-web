@@ -240,7 +240,7 @@ exports[`navbar render admin link for admins 1`] = `
       </a>
       <a
         className="c6 c7 c8"
-        href="/settings"
+        href="/settings/user_settings"
         onClick={[Function]}
       >
         Settings
@@ -495,7 +495,7 @@ exports[`navbar renders correctly 1`] = `
       </a>
       <a
         className="c6 c7 c8"
-        href="/settings"
+        href="/settings/user_settings"
         onClick={[Function]}
       >
         Settings
@@ -762,7 +762,7 @@ exports[`navbar toggles collapsed 1`] = `
       </a>
       <a
         className="c6 c7 c8"
-        href="/settings"
+        href="/settings/user_settings"
         onClick={[Function]}
       >
         Settings
@@ -1029,7 +1029,7 @@ exports[`navbar toggles collapsed 2`] = `
       </a>
       <a
         className="c6 c7 c8"
-        href="/settings"
+        href="/settings/user_settings"
         onClick={[Function]}
       >
         Settings
