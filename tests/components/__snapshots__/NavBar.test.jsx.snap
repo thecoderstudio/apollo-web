@@ -518,7 +518,7 @@ exports[`navbar renders correctly 1`] = `
 `;
 
 exports[`navbar toggles collapsed 1`] = `
-.c8 {
+.c9 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -530,24 +530,24 @@ exports[`navbar toggles collapsed 1`] = `
   cursor: pointer;
 }
 
-.c8:hover {
+.c9:hover {
   opacity: 0.90;
 }
 
-.c8:focus {
+.c9:focus {
   outline: none;
 }
 
-.c8:active {
+.c9:active {
   opacity: 0.80;
 }
 
-.c8:disabled:hover {
+.c9:disabled:hover {
   opacity: 1;
   cursor: auto;
 }
 
-.c9 {
+.c10 {
   background-color: transparent;
   border: 1px solid;
 }
@@ -580,7 +580,7 @@ exports[`navbar toggles collapsed 1`] = `
 .c4 {
   grid-column: content;
   display: grid;
-  grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px;
+  grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px [settings] 50px;
   grid-gap: 12px;
   height: auto;
 }
@@ -622,10 +622,30 @@ exports[`navbar toggles collapsed 1`] = `
   grid-column: logo;
 }
 
-.c10 {
+.c11 {
   grid-column: logout;
   float: right;
   max-width: 100px;
+}
+
+.c12 {
+  grid-column: settings;
+  line-height: 50px;
+  margin: 0 auto;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.c12:hover {
+  -webkit-transform: rotate(95deg);
+  -ms-transform: rotate(95deg);
+  transform: rotate(95deg);
+  cursor: pointer;
+}
+
+.c8 {
+  display: none;
 }
 
 @media (max-width:47.9375em) {
@@ -695,10 +715,22 @@ exports[`navbar toggles collapsed 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c10 {
+  .c11 {
     grid-column: main;
     grid-row: logout;
     max-width: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c12 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c8 {
+    display: inline;
   }
 }
 
@@ -728,20 +760,32 @@ exports[`navbar toggles collapsed 1`] = `
       >
         Dashboard
       </a>
+      <a
+        className="c6 c7 c8"
+        href="/settings"
+        onClick={[Function]}
+      >
+        Settings
+      </a>
     </div>
     <button
-      className="c8 c9 c10"
+      className="c9 c10 c11"
       id="logoutButton"
       onClick={[Function]}
     >
       Logout
     </button>
+    <a
+      className="c6 c12 fas fa-cog fa-lg"
+      href="/settings/user_settings"
+      onClick={[Function]}
+    />
   </div>
 </div>
 `;
 
 exports[`navbar toggles collapsed 2`] = `
-.c8 {
+.c9 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -753,24 +797,24 @@ exports[`navbar toggles collapsed 2`] = `
   cursor: pointer;
 }
 
-.c8:hover {
+.c9:hover {
   opacity: 0.90;
 }
 
-.c8:focus {
+.c9:focus {
   outline: none;
 }
 
-.c8:active {
+.c9:active {
   opacity: 0.80;
 }
 
-.c8:disabled:hover {
+.c9:disabled:hover {
   opacity: 1;
   cursor: auto;
 }
 
-.c9 {
+.c10 {
   background-color: transparent;
   border: 1px solid;
 }
@@ -803,7 +847,7 @@ exports[`navbar toggles collapsed 2`] = `
 .c4 {
   grid-column: content;
   display: grid;
-  grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px;
+  grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px [settings] 50px;
   grid-gap: 12px;
   height: auto;
 }
@@ -845,10 +889,30 @@ exports[`navbar toggles collapsed 2`] = `
   grid-column: logo;
 }
 
-.c10 {
+.c11 {
   grid-column: logout;
   float: right;
   max-width: 100px;
+}
+
+.c12 {
+  grid-column: settings;
+  line-height: 50px;
+  margin: 0 auto;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.c12:hover {
+  -webkit-transform: rotate(95deg);
+  -ms-transform: rotate(95deg);
+  transform: rotate(95deg);
+  cursor: pointer;
+}
+
+.c8 {
+  display: none;
 }
 
 @media (max-width:47.9375em) {
@@ -918,10 +982,22 @@ exports[`navbar toggles collapsed 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c10 {
+  .c11 {
     grid-column: main;
     grid-row: logout;
     max-width: 100%;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c12 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c8 {
+    display: inline;
   }
 }
 
@@ -951,14 +1027,26 @@ exports[`navbar toggles collapsed 2`] = `
       >
         Dashboard
       </a>
+      <a
+        className="c6 c7 c8"
+        href="/settings"
+        onClick={[Function]}
+      >
+        Settings
+      </a>
     </div>
     <button
-      className="c8 c9 c10"
+      className="c9 c10 c11"
       id="logoutButton"
       onClick={[Function]}
     >
       Logout
     </button>
+    <a
+      className="c6 c12 fas fa-cog fa-lg"
+      href="/settings/user_settings"
+      onClick={[Function]}
+    />
   </div>
 </div>
 `;

@@ -18,7 +18,6 @@ describe('User settings', () => {
     }
   };
   it('render correctly', () => {
-    const tree = getComponent(props).toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(getComponent(props).toJSON()).toMatchSnapshot();
   });
 });

@@ -30,13 +30,13 @@ const StyledIcon = styled(Icon)`
 
 const StyledLink = styled(({ active, ...props }) => <Link {...props} />)`
   padding: 12px;
-  margin-tpropsx;
+  margin-top: 24px;
   border-radius: 4px;
   width: 100%;
   float: left;
   overflow: hidden;
   text-overflow: ellipsis;
-  box-spropsborder-box;
+  box-sizing: border-box;
   white-space: nowrap;
 
   background-color: ${props => props.active ? props.theme.selectedBlack : props.theme.lightBlack};
