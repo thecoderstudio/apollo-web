@@ -21,7 +21,12 @@ describe('Settings side navigation', () => {
   });
 
   it('renders correctly', () => {
-    const tree = getComponent(props).toJSON();
+    let tree = getComponent(props).toJSON();
+    expect(tree).toMatchSnapshot();
+
+    tree = getComponent({
+      location: { pathname: '/settings/user_settings' }
+    }).toJSON();
     expect(tree).toMatchSnapshot();
   });
 

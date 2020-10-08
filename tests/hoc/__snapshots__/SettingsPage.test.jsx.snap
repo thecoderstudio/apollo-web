@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Settings page render correctly 1`] = `null`;
+exports[`settings page render correctly 1`] = `null`;

@@ -9,7 +9,7 @@ function getComponent() {
 }
 
 describe("settings page", () => {
-  const props = { location: 'location' };
+  const props = { location: { pathname: 'location' } };
 
   it("render correctly", () => {
     const tree = getComponent(props).toJSON();
