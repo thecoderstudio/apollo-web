@@ -16,11 +16,11 @@ const Wrapper = styled.div`
 const DropDownButton = styled.div`
   border: none;
   border-radius: 5px;
-  color: ${(props) => props.theme.white};
+  color: ${props => props.theme.white};
   cursor: pointer;
 
   padding: 15px;
-  background-color: ${(props) => props.theme.lightBlack};
+  background-color: ${props => props.theme.lightBlack};
 
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -33,11 +33,11 @@ const DropDownContent = styled.ul`
   padding: 0;
   margin-top: 10px;
   width: 230px;
-  box-shadow: ${(props) => props.theme.boxShadow};
+  box-shadow: ${props => props.theme.boxShadow};
   z-index: 1;
 
-  color: ${(props) => props.theme.white};
-  background-color: ${(props) => props.theme.lightBlack};
+  color: ${props => props.theme.white};
+  background-color: ${props => props.theme.lightBlack};
   border-radius: 4px;
 
   position: absolute;
@@ -61,7 +61,7 @@ const DropDownIcon = styled.div`
   height: 0px;
   width: 0px;
   margin-left: 10px;
-  transform: ${(props) => (props.collapsed ? 'rotate(0)' : 'rotate(180deg)')};
+  transform: ${props => (props.collapsed ? 'rotate(0)' : 'rotate(180deg)')};
   transition: transform 0.3s;
 `;
 
@@ -102,7 +102,7 @@ class Dropdown extends React.PureComponent {
   renderItems() {
     const { options, selected } = this.props;
 
-    return options.map((option) => {
+    return options.map(option => {
       if (option === selected) { return; }
       return (
         <DropDownItem key={option} onClick={() => this.selectItem(option)}>
@@ -117,7 +117,7 @@ class Dropdown extends React.PureComponent {
     const { collapsed } = this.state;
     return (
       <Wrapper className={className} ref={this.node}>
-        <DropDownButton id="dropdown" onClick={this.toggleCollapse}>
+        <DropDownButton id='dropdown' onClick={this.toggleCollapse}>
           {selected}
           <DropDownIcon collapsed={collapsed} />
         </DropDownButton>

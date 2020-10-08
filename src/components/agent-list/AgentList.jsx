@@ -11,8 +11,8 @@ const Content = styled.div`
   display: grid;
   grid-template-rows: [header] 50px [list] 1fr;
   max-width: 100%;
-
-  background-color: ${(props) => props.theme.lightBlack};
+  min-width: 0;
+  background-color: ${props => props.theme.lightBlack};
   border-radius: 8px;
   padding: 16px;
 `;
@@ -54,9 +54,9 @@ class AgentList extends React.Component {
   setupWebSocket() {
     const server = new WebSocket(`${process.env.APOLLO_WS_URL}agent`);
     server.onerror = () => {
-      handleError('Something went wrong fetching the agent list');
+      handleError("Something went wrong fetching the agent list");
     };
-    server.onmessage = (event) => {
+    server.onmessage = event => {
       this.dispatchListAgents(event.data);
     };
   }
@@ -75,7 +75,7 @@ class AgentList extends React.Component {
       <Content className={this.props.className}>
         <Header>
           <h2>Agents</h2>
-          <OutlinedIconButton iconClassName="fas fa-plus" id="newAgentButton" onClick={this.openAddAgentModal}>
+          <OutlinedIconButton iconClassName="fas fa-plus" id='newAgentButton' onClick={this.openAddAgentModal}>
             Add new agent
           </OutlinedIconButton>
         </Header>
@@ -89,7 +89,7 @@ class AgentList extends React.Component {
 }
 
 export default connect(
-  (state) => ({ agents: state.agent })
+  state => ({ agents: state.agent })
 )(AgentList);
 
 export { AgentList as UnconnectedAgentList };

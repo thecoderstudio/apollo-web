@@ -45,7 +45,7 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
   cursor: auto;
 }
 
-.c18 {
+.c19 {
   background-color: transparent;
   border: 1px solid;
 }
@@ -63,7 +63,7 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
   height: 50px;
 }
 
-.c15 {
+.c16 {
   grid-column: textField;
   border: none;
   border-radius: 5px;
@@ -76,16 +76,16 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
   overflow-x: scroll;
 }
 
-.c15::-webkit-scrollbar {
+.c16::-webkit-scrollbar {
   background: transparent;
 }
 
-.c16 {
+.c17 {
   grid-column: copy;
   height: 100%;
 }
 
-.c17 {
+.c18 {
   text-align: center;
   display: block;
 }
@@ -106,7 +106,7 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
   margin-left: 10px;
 }
 
-.c19 {
+.c20 {
   width: 200px;
   height: 50px;
   margin: auto;
@@ -126,7 +126,12 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
   grid-template-rows: [description] 1fr [commands] 1fr [button] 1fr;
 }
 
-.c20 {
+.c15 {
+  grid-row: commands;
+  margin-bottom: 20px;
+}
+
+.c21 {
   grid-row: button;
   margin-top: 20px;
 }
@@ -281,25 +286,25 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
               Copy and run the command on the target machine to download run the client.
             </p>
             <div
-              className="c14"
+              className="c14 c15"
             >
               <div
-                className="c15"
+                className="c16"
               >
                 chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=id --secret=secret --host=http://localhost:1234
               </div>
               <button
-                className="c9 c16"
+                className="c9 c17"
                 id="copyToClipboardButton"
                 onClick={[Function]}
               >
                 <i
-                  className="c17 fas fa-copy"
+                  className="c18 fas fa-copy"
                 />
               </button>
             </div>
             <button
-              className="c9 c18 c19 c20"
+              className="c9 c19 c20 c21"
               id="closeButton"
               onClick={[MockFunction]}
             >

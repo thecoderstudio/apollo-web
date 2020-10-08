@@ -43,18 +43,18 @@ const StyledDescriptionButton = styled(DescriptionButton)`
 `;
 
 export default function DownloadAgentChoice(props) {
-  const directly = 'Directly on target machine.';
-  const manual = 'Manual upload';
+  const directly = "Directly on target machine.";
+  const manual = "Manual upload";
 
   return (
     <TwoColumnGrid>
       <ColumnOne>
-        <StyledDescriptionButton id="directlyButton" onClick={() => props.setManualUploadCallback(false)} title={directly}>
+        <StyledDescriptionButton id='directlyButton' onClick={() => props.setManualUploadCallback(false)} title={directly}>
           You have the correct permissions to download the binary directly on the target machine.
         </StyledDescriptionButton>
       </ColumnOne>
       <ColumnTwo>
-        <StyledDescriptionButton id="manualButton" onClick={() => props.setManualUploadCallback(true)} title={manual}>
+        <StyledDescriptionButton id='manualButton' onClick={() => props.setManualUploadCallback(true)} title={manual}>
           You download and upload the binary yourself.
         </StyledDescriptionButton>
       </ColumnTwo>

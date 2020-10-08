@@ -8,8 +8,8 @@ import media from '../util/media';
 const Navigation = styled.div`
   max-width: 225px;
   width: 100%;
-  background-color: ${(props) => props.theme.lightBlack};
-  box-shadow: inset ${(props) => props.theme.boxShadow};
+  background-color: ${props => props.theme.lightBlack};
+  box-shadow: inset ${props => props.theme.boxShadow};
   padding-top: 32px;
 
   ${media.phone`
@@ -30,19 +30,19 @@ const StyledIcon = styled(Icon)`
 
 const StyledLink = styled(({ active, ...props }) => <Link {...props} />)`
   padding: 12px;
-  margin-top: 24px;
+  margin-tpropsx;
   border-radius: 4px;
   width: 100%;
   float: left;
   overflow: hidden;
   text-overflow: ellipsis;
-  box-sizing: border-box;
+  box-spropsborder-box;
   white-space: nowrap;
 
-  background-color: ${(props) => props.active ? props.theme.selectedBlack : props.theme.lightBlack};
+  background-color: ${props => props.active ? props.theme.selectedBlack : props.theme.lightBlack};
 
   &:hover {
-    background-color: ${(props) => props.theme.selectedBlack};
+    background-color: ${props => props.theme.selectedBlack};
   }
 `;
 

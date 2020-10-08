@@ -14,7 +14,7 @@ const propTypes = {
 };
 
 const StyledCard = styled(Card)`
-  background-color: ${(props) => props.theme.black};
+  background-color: ${props => props.theme.black};
   position: fixed;
 
   top: 50%;
@@ -69,7 +69,7 @@ class AddAgentModal extends React.PureComponent {
       manualUpload: null,
       agentCreated: false
     };
-    this.createAgentSucccreateAgentSuccessessCallback = this.createAgentSuccess.bind(this);
+    this.createAgentSuccess = this.createAgentSuccess.bind(this);
     this.setManualUpload = this.setManualUpload.bind(this);
   }
 

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Add Agent closes modal correctly 1`] = `
-.c4 {
+.c5 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -13,24 +13,24 @@ exports[`Add Agent closes modal correctly 1`] = `
   cursor: pointer;
 }
 
-.c4:hover {
+.c5:hover {
   opacity: 0.90;
 }
 
-.c4:focus {
+.c5:focus {
   outline: none;
 }
 
-.c4:active {
+.c5:active {
   opacity: 0.80;
 }
 
-.c4:disabled:hover {
+.c5:disabled:hover {
   opacity: 1;
   cursor: auto;
 }
 
-.c7 {
+.c8 {
   background-color: transparent;
   border: 1px solid;
 }
@@ -41,7 +41,7 @@ exports[`Add Agent closes modal correctly 1`] = `
   height: 50px;
 }
 
-.c3 {
+.c4 {
   grid-column: textField;
   border: none;
   border-radius: 5px;
@@ -54,21 +54,21 @@ exports[`Add Agent closes modal correctly 1`] = `
   overflow-x: scroll;
 }
 
-.c3::-webkit-scrollbar {
+.c4::-webkit-scrollbar {
   background: transparent;
 }
 
-.c5 {
+.c6 {
   grid-column: copy;
   height: 100%;
 }
 
-.c6 {
+.c7 {
   text-align: center;
   display: block;
 }
 
-.c8 {
+.c9 {
   width: 200px;
   height: 50px;
   margin: auto;
@@ -80,7 +80,12 @@ exports[`Add Agent closes modal correctly 1`] = `
   grid-template-rows: [description] 1fr [commands] 1fr [button] 1fr;
 }
 
-.c9 {
+.c3 {
+  grid-row: commands;
+  margin-bottom: 20px;
+}
+
+.c10 {
   grid-row: button;
   margin-top: 20px;
 }
@@ -100,25 +105,25 @@ exports[`Add Agent closes modal correctly 1`] = `
       Copy and run the command on the target machine to download run the client.
     </p>
     <div
-      className="c2"
+      className="c2 c3"
     >
       <div
-        className="c3"
+        className="c4"
       >
         curl http://localhost:1234/agent/download?target_os=test&target_arch=test &gt; apollo-agent.bin && chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=id --secret=secret --host=http://localhost:1234
       </div>
       <button
-        className="c4 c5"
+        className="c5 c6"
         id="copyToClipboardButton"
         onClick={[Function]}
       >
         <i
-          className="c6 fas fa-copy"
+          className="c7 fas fa-copy"
         />
       </button>
     </div>
     <button
-      className="c4 c7 c8 c9"
+      className="c5 c8 c9 c10"
       id="closeButton"
       onClick={
         [MockFunction] {
@@ -141,7 +146,7 @@ exports[`Add Agent closes modal correctly 1`] = `
 `;
 
 exports[`Add Agent renders correctly 1`] = `
-.c4 {
+.c5 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -153,24 +158,24 @@ exports[`Add Agent renders correctly 1`] = `
   cursor: pointer;
 }
 
-.c4:hover {
+.c5:hover {
   opacity: 0.90;
 }
 
-.c4:focus {
+.c5:focus {
   outline: none;
 }
 
-.c4:active {
+.c5:active {
   opacity: 0.80;
 }
 
-.c4:disabled:hover {
+.c5:disabled:hover {
   opacity: 1;
   cursor: auto;
 }
 
-.c7 {
+.c8 {
   background-color: transparent;
   border: 1px solid;
 }
@@ -181,7 +186,7 @@ exports[`Add Agent renders correctly 1`] = `
   height: 50px;
 }
 
-.c3 {
+.c4 {
   grid-column: textField;
   border: none;
   border-radius: 5px;
@@ -194,21 +199,21 @@ exports[`Add Agent renders correctly 1`] = `
   overflow-x: scroll;
 }
 
-.c3::-webkit-scrollbar {
+.c4::-webkit-scrollbar {
   background: transparent;
 }
 
-.c5 {
+.c6 {
   grid-column: copy;
   height: 100%;
 }
 
-.c6 {
+.c7 {
   text-align: center;
   display: block;
 }
 
-.c8 {
+.c9 {
   width: 200px;
   height: 50px;
   margin: auto;
@@ -220,7 +225,12 @@ exports[`Add Agent renders correctly 1`] = `
   grid-template-rows: [description] 1fr [commands] 1fr [button] 1fr;
 }
 
-.c9 {
+.c3 {
+  grid-row: commands;
+  margin-bottom: 20px;
+}
+
+.c10 {
   grid-row: button;
   margin-top: 20px;
 }
@@ -240,25 +250,25 @@ exports[`Add Agent renders correctly 1`] = `
       Copy and run the command on the target machine to download run the client.
     </p>
     <div
-      className="c2"
+      className="c2 c3"
     >
       <div
-        className="c3"
+        className="c4"
       >
         curl http://localhost:1234/agent/download?target_os=test&target_arch=test &gt; apollo-agent.bin && chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=id --secret=secret --host=http://localhost:1234
       </div>
       <button
-        className="c4 c5"
+        className="c5 c6"
         id="copyToClipboardButton"
         onClick={[Function]}
       >
         <i
-          className="c6 fas fa-copy"
+          className="c7 fas fa-copy"
         />
       </button>
     </div>
     <button
-      className="c4 c7 c8 c9"
+      className="c5 c8 c9 c10"
       id="closeButton"
       onClick={[MockFunction]}
     >
@@ -298,7 +308,7 @@ exports[`Add Agent renders correctly 2`] = `
   cursor: auto;
 }
 
-.c12 {
+.c13 {
   background-color: transparent;
   border: 1px solid;
 }
@@ -316,7 +326,7 @@ exports[`Add Agent renders correctly 2`] = `
   height: 50px;
 }
 
-.c9 {
+.c10 {
   grid-column: textField;
   border: none;
   border-radius: 5px;
@@ -329,16 +339,16 @@ exports[`Add Agent renders correctly 2`] = `
   overflow-x: scroll;
 }
 
-.c9::-webkit-scrollbar {
+.c10::-webkit-scrollbar {
   background: transparent;
 }
 
-.c10 {
+.c11 {
   grid-column: copy;
   height: 100%;
 }
 
-.c11 {
+.c12 {
   text-align: center;
   display: block;
 }
@@ -359,7 +369,7 @@ exports[`Add Agent renders correctly 2`] = `
   margin-left: 10px;
 }
 
-.c13 {
+.c14 {
   width: 200px;
   height: 50px;
   margin: auto;
@@ -379,7 +389,12 @@ exports[`Add Agent renders correctly 2`] = `
   grid-template-rows: [description] 1fr [commands] 1fr [button] 1fr;
 }
 
-.c14 {
+.c9 {
+  grid-row: commands;
+  margin-bottom: 20px;
+}
+
+.c15 {
   grid-row: button;
   margin-top: 20px;
 }
@@ -450,25 +465,25 @@ exports[`Add Agent renders correctly 2`] = `
       Copy and run the command on the target machine to download run the client.
     </p>
     <div
-      className="c8"
+      className="c8 c9"
     >
       <div
-        className="c9"
+        className="c10"
       >
         chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=id --secret=secret --host=http://localhost:1234
       </div>
       <button
-        className="c3 c10"
+        className="c3 c11"
         id="copyToClipboardButton"
         onClick={[Function]}
       >
         <i
-          className="c11 fas fa-copy"
+          className="c12 fas fa-copy"
         />
       </button>
     </div>
     <button
-      className="c3 c12 c13 c14"
+      className="c3 c13 c14 c15"
       id="closeButton"
       onClick={[MockFunction]}
     >

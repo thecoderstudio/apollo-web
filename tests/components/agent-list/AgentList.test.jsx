@@ -14,7 +14,7 @@ import { severity, notify } from '../../../src/actions/notification';
 import { darkTheme } from '../../../src/theme';
 
 // Mocks createPortal due to react-test-renderer incompatibility.
-ReactDOM.createPortal = (node) => node;
+ReactDOM.createPortal = node => node;
 const mockStore = configureStore([]);
 
 function getComponent(store) {
@@ -29,7 +29,7 @@ function getComponent(store) {
   );
 }
 
-describe('agentList', () => {
+describe("agentList", () => {
   let store;
 
   beforeEach(() => {
@@ -44,12 +44,12 @@ describe('agentList', () => {
     WS.clean();
   });
 
-  it('renders correctly', () => {
+  it("renders correctly", () => {
     const tree = getComponent(store).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('correctly dispatches list agents', async () => {
+  it("correctly dispatches list agents", async () => {
     const data = [
       { id: 'id', name: 'name', connectionState: 'connected' },
       { id: 'id2', name: 'name', connectionState: 'connected' }
@@ -69,7 +69,7 @@ describe('agentList', () => {
     });
   });
 
-  it('correctly lists multiple agents', () => {
+  it("correctly lists multiple agents", () => {
     const data = new Map();
     data.set('id', { id: 'id', name: 'name', connectionState: 'connected' });
     data.set('id2', { id: 'id2', name: 'name2', connectionState: 'connected' });
@@ -80,7 +80,7 @@ describe('agentList', () => {
     expect(getComponent(store)).toMatchSnapshot();
   });
 
-  it('handles add agent modal', () => {
+  it("handles add agent modal", () => {
     const component = getComponent(store);
     const { root } = component;
     root.findByProps({ id: 'newAgentButton' }).props.onClick();
@@ -90,7 +90,7 @@ describe('agentList', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it('handles websocket error', async () => {
+  it("handles websocket error", async () => {
     const spy = jest.spyOn(globalStore, 'dispatch');
     const server = new WS('ws://localhost:1234/agent', { jsonProtocol: true });
     getComponent(store).toJSON();
@@ -101,7 +101,7 @@ describe('agentList', () => {
       {
         id: 1,
         type: 'NOTIFY',
-        message: 'Something went wrong fetching the agent list',
+        message: "Something went wrong fetching the agent list",
         severity: severity.ERROR
       }
     );
