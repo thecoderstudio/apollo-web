@@ -124,7 +124,7 @@ describe("create Agent", () => {
     expect(createAgentInstance.state.selectedArchitecture).toBe('test');
   });
 
-  it"'Correctly sets operating system state", () => {
+  it("Correctly sets operating system state", () => {
     const component = getComponent();
     const createAgentInstance = component.root.findByType(CreateAgent).instance;
 
