@@ -2,10 +2,10 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
-import { store as globalStore } from '../../../src/store';
 import waitForExpect from 'wait-for-expect';
 import axios from 'axios';
 import { StatusCodes } from 'http-status-codes';
+import { store as globalStore } from '../../../src/store';
 import ChangePassword from '../../../src/components/user/ChangePassword';
 import { logout as logoutAction } from '../../../src/actions/auth';
 
@@ -26,20 +26,26 @@ function submitForm(root, oldPassword, password, passwordConfirm) {
   const passwordConfirmInput = root.findByProps({ placeholder: 'Confirm new password' });
   const form = root.findByType('form');
 
-  oldPasswordInput.props.onChange({ currentTarget: {
-    name: 'oldPassword',
-    value: oldPassword
-  }});
+  oldPasswordInput.props.onChange({
+    currentTarget: {
+      name: 'oldPassword',
+      value: oldPassword
+    }
+  });
 
-  passwordInput.props.onChange({ currentTarget: {
-    name: 'password',
-    value: password
-  }});
+  passwordInput.props.onChange({
+    currentTarget: {
+      name: 'password',
+      value: password
+    }
+  });
 
-  passwordConfirmInput.props.onChange({ currentTarget: {
-    name: 'passwordConfirm',
-    value: passwordConfirm
-  }});
+  passwordConfirmInput.props.onChange({
+    currentTarget: {
+      name: 'passwordConfirm',
+      value: passwordConfirm
+    }
+  });
 
   form.props.onSubmit();
 }
@@ -66,7 +72,7 @@ describe("change password", () => {
 
   it("validates input", async () => {
     const component = getComponent(store);
-    const root = component.root;
+    const { root } = component;
 
     submitForm(root, '', 'password', 'password');
     submitForm(root, 'oldPassword', 'passw', 'passw');
@@ -79,7 +85,7 @@ describe("change password", () => {
 
   it('patch successfully', async () => {
     const component = getComponent(store);
-    const root = component.root;
+    const { root } = component;
 
     axios.get.mockResolvedValue({
       status: StatusCodes.OK,
@@ -99,7 +105,7 @@ describe("change password", () => {
 
   it('handles unsuccessful patch', async () => {
     const component = getComponent(store);
-    const root = component.root;
+    const { root } = component;
 
     axios.patch.mockImplementationOnce(() => Promise.reject({
       response: {
@@ -128,9 +134,9 @@ describe("change password", () => {
   });
 
   it("handles successful logout", async () => {
-    let tree = getComponent(store);
+    const tree = getComponent(store);
     const instance = tree.root;
-    instance.findByProps({id: 'logoutButton'}).props.onClick();
+    instance.findByProps({ id: 'logoutButton' }).props.onClick();
 
     await waitForExpect(() => {
       expect(dispatchSpy).toHaveBeenCalledWith(logoutAction());

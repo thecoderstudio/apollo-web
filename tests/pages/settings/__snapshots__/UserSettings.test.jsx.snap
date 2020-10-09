@@ -65,6 +65,65 @@ exports[`User settings render correctly 1`] = `
   padding: 16px;
 }
 
+.c12 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c12:hover {
+  opacity: 0.90;
+}
+
+.c12:focus {
+  outline: none;
+}
+
+.c12:active {
+  opacity: 0.80;
+}
+
+.c12:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c10 {
+  height: 80px;
+}
+
+.c11 {
+  min-height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+  border: 1px solid transparent;
+}
+
+.c11:focus {
+  outline: none;
+  border: 1px solid;
+}
+
+.c9 {
+  width: 100%;
+  max-width: 300px;
+}
+
+.c13 {
+  width: 100%;
+}
+
 @media (max-width:47.9375em) {
   .c1 {
     width: 45px;
@@ -80,6 +139,12 @@ exports[`User settings render correctly 1`] = `
 @media (max-width:47.9375em) {
   .c7 {
     display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    grid-template-columns: [navigation] 40px [content] 1fr;
   }
 }
 
@@ -107,7 +172,72 @@ exports[`User settings render correctly 1`] = `
   <div
     className="c8"
   >
-    <div />
+    <h1>
+      User settings
+    </h1>
+    <form
+      className="c9"
+      onSubmit={[Function]}
+    >
+      <h3>
+        Update your user settings
+      </h3>
+      <div
+        className="c10"
+      >
+        <input
+          className="c11"
+          name="username"
+          onChange={[Function]}
+          placeholder="Username"
+          type="username"
+          value=""
+        />
+      </div>
+      <div
+        className="c10"
+      >
+        <input
+          className="c11"
+          name="oldPassword"
+          onChange={[Function]}
+          placeholder="Current password"
+          type="password"
+          value=""
+        />
+      </div>
+      <div
+        className="c10"
+      >
+        <input
+          className="c11"
+          name="password"
+          onChange={[Function]}
+          placeholder="New password"
+          type="password"
+          value=""
+        />
+      </div>
+      <div
+        className="c10"
+      >
+        <input
+          className="c11"
+          name="passwordConfirm"
+          onChange={[Function]}
+          placeholder="Confirm new password"
+          type="password"
+          value=""
+        />
+      </div>
+      <button
+        className="c12 c13"
+        disabled={true}
+        id="updateUserDetailsButton"
+      >
+        Update user details
+      </button>
+    </form>
   </div>
 </div>
 `;

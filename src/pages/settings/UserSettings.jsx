@@ -66,7 +66,7 @@ class UserSettings extends React.PureComponent {
   }
 
   render() {
-    const { className, currentUser } = this.props;
+    const { className } = this.props;
 
     return (
       <Formik
@@ -89,7 +89,7 @@ class UserSettings extends React.PureComponent {
             <Input
               inverted
               name='username'
-              placeholder={currentUser.username}
+              placeholder='Username'
               type='username'
               value={values.username}
               error={errors.username}
@@ -130,6 +130,4 @@ class UserSettings extends React.PureComponent {
   }
 }
 
-export default connect(
-  state => ({ currentUser: state.currentUser })
-)(withSettingsNavigation(UserSettings, 'User settings'));
+export default connect()(withSettingsNavigation(UserSettings, 'User settings'));
