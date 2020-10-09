@@ -8,4 +8,4 @@ function UserSettings(props) {
   );
 }
 
-export default withSettingsNavigation(UserSettings);
+export default withSettingsNavigation(UserSettings, 'User settings');

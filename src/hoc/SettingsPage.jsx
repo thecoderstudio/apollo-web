@@ -1,12 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import SettingsSideNavigation from '../components/SettingsSideNavigation';
+import media from '../util/media';
 
 const ContentWrapper = styled.div`
   flex: 1 1 auto;
   display: grid;
   position: relative;
   grid-template-columns: [navigation] 225px [content] 1fr;
+
+  ${media.phone`
+  grid-template-columns: [navigation] 40px [content] 1fr;
+  `}
 `;
 
 const StyledNavigation = styled(SettingsSideNavigation)`
@@ -21,13 +26,14 @@ const ComponentWrapper = styled.div`
   padding: 16px;
 `;
 
-function withSettingsNavigation(Component) {
+function withSettingsNavigation(Component, title) {
   return function wrap(props) {
     const { location } = props;
     return (
       <ContentWrapper>
         <StyledNavigation location={location} />
         <ComponentWrapper>
+          <h1>{title}</h1>
           <Component />
         </ComponentWrapper>
       </ContentWrapper>
