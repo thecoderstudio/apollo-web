@@ -34,7 +34,7 @@ function withSettingsNavigation(Component, title) {
         <StyledNavigation location={location} />
         <ComponentWrapper>
           <h1>{title}</h1>
-          <Component />
+          <Component {...props} />
         </ComponentWrapper>
       </ContentWrapper>
     );

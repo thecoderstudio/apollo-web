@@ -1,8 +1,9 @@
-var id = 0;
+let id = 0;
 const severity = {
   INFO: 'info',
   WARNING: 'warning',
-  ERROR: 'error'
+  ERROR: 'error',
+  SUCCESS: 'success'
 };
 
 function notify(message, severity) {

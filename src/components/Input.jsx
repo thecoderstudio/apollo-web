@@ -19,8 +19,8 @@ const Container = styled.div`
 const StyledInput = styled.input`
   min-height: 50px;
   width: 100%;
-  background: ${props => props.inverted ? props.theme.lightBlack : props.theme.white};
-  color: ${props => props.inverted ? props.theme.white : props.theme.lightBlack};
+  background: ${props => props.inverted ? props.theme.inputBlack : props.theme.white};
+  color: ${props => props.inverted ? props.theme.white : props.theme.inputBlack};
   border: none;
   border-radius: 5px;
   font-family: 'Libre Franklin', sans-serif;
