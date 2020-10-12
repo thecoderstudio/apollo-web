@@ -107,10 +107,9 @@ describe("User settings", () => {
     const component = getComponent(store, props);
     const { root } = component;
 
-    submitForm(root, '', 'oldPassword', 'password', 'password');
     submitForm(root, 'username', '', 'password', 'password');
     submitForm(root, 'username', 'oldPassword', 'passw', 'passw');
-    submitForm(root, 'username', 'oldpassword', 'password1', 'password2');
+    submitForm(root, 'oldpassword', 'password1', 'password2');
 
     await waitForExpect(() => {
       expect(axios.patch).not.toHaveBeenCalled();
