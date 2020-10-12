@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import axios from 'axios';
 import { Formik } from 'formik';
 import { StatusCodes } from 'http-status-codes';
-import withSettingsNavigation from '../../hoc/SettingsPage';
+import SettingsPageWrapper from '../../components/SettingsPageWrapper';
 import Button from "../../components/buttons/Button";
 import { UpdateUserSchema } from '../../validation/user';
 import Input from '../../components/Input';
@@ -37,8 +37,9 @@ class UserSettings extends React.PureComponent {
     return data;
   }
 
-  updateUser(values, { setErrors }) {
+  updateUser(values, setErrors, resetForm) {
     const { dispatch } = this.props;
+
     axios.patch(
       `${process.env.APOLLO_HTTP_URL}user/me`,
       this.createDictionaryWithoutEmptyFields(values),
@@ -46,6 +47,7 @@ class UserSettings extends React.PureComponent {
     )
       .then(response => {
         dispatch(notifyAction("User data updated", severity.SUCCESS));
+        resetForm();
         fetchCurrentUser();
       })
       .catch(error => {
@@ -69,65 +71,69 @@ class UserSettings extends React.PureComponent {
     const { className } = this.props;
 
     return (
-      <Formik
-        className={className}
-        initialValues={{
-          username: '',
-          password: '',
-          passwordConfirm: '',
-          oldPassword: ''
-        }}
-        validationSchema={UpdateUserSchema}
-        validateOnChange={false}
-        onSubmit={this.updateUser}
-      >
-        {({
-          values, errors, handleChange, handleSubmit
-        }) => (
-          <Form onSubmit={handleSubmit}>
-            <h3>Update your user settings</h3>
-            <Input
-              inverted
-              name='username'
-              placeholder='Username'
-              type='username'
-              value={values.username}
-              error={errors.username}
-              onChange={handleChange}
-            />
-            <Input
-              inverted
-              name='oldPassword'
-              placeholder='Current password'
-              type='password'
-              value={values.oldPassword}
-              error={errors.oldPassword}
-              onChange={handleChange}
-            />
-            <Input
-              inverted
-              name='password'
-              type='password'
-              placeholder='New password'
-              value={values.password}
-              error={errors.password}
-              onChange={handleChange}
-            />
-            <Input
-              inverted
-              name='passwordConfirm'
-              type='password'
-              placeholder='Confirm new password'
-              value={values.passwordConfirm}
-              error={errors.passwordConfirm}
-              onChange={handleChange}
-            />
-            <StyledButton id='updateUserDetailsButton' disabled={this.checkForNonEmptyField(values)}>Update user details</StyledButton>
-          </Form>
-        )}
-      </Formik>
+      <SettingsPageWrapper {...this.props}>
+        <Formik
+          className={className}
+          initialValues={{
+            username: '',
+            password: '',
+            passwordConfirm: '',
+            oldPassword: ''
+          }}
+          validationSchema={UpdateUserSchema}
+          validateOnChange={false}
+          onSubmit={(values, { setErrors, resetForm }) => {
+            this.updateUser(values, setErrors, resetForm);
+          }}
+        >
+          {({
+            values, errors, handleChange, handleSubmit
+          }) => (
+            <Form onSubmit={handleSubmit}>
+              <h3>Update your user settings</h3>
+              <Input
+                inverted
+                name='username'
+                placeholder='Username'
+                type='username'
+                value={values.username}
+                error={errors.username}
+                onChange={handleChange}
+              />
+              <Input
+                inverted
+                name='oldPassword'
+                placeholder='Current password'
+                type='password'
+                value={values.oldPassword}
+                error={errors.oldPassword}
+                onChange={handleChange}
+              />
+              <Input
+                inverted
+                name='password'
+                type='password'
+                placeholder='New password'
+                value={values.password}
+                error={errors.password}
+                onChange={handleChange}
+              />
+              <Input
+                inverted
+                name='passwordConfirm'
+                type='password'
+                placeholder='Confirm new password'
+                value={values.passwordConfirm}
+                error={errors.passwordConfirm}
+                onChange={handleChange}
+              />
+              <StyledButton id='updateUserDetailsButton' disabled={this.checkForNonEmptyField(values)}>Update user details</StyledButton>
+            </Form>
+          )}
+        </Formik>
+      </SettingsPageWrapper>
     );
   }
 }
 
-export default connect()(withSettingsNavigation(UserSettings, 'User settings'));
+export default connect()(UserSettings, 'User settings');

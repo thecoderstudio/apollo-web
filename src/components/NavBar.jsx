@@ -5,7 +5,7 @@ import media from '../util/media';
 import checkIfAdmin from '../util/admin';
 import OutlinedButton from './buttons/OutlinedButton';
 import { logout } from '../util/auth';
-import Link from './Link';
+import Link from './links/Link';
 import Icon from './Icon';
 
 const NavigationBar = styled.div`

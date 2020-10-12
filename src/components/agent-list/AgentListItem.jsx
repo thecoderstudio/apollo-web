@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Tippy from '@tippyjs/react';
-import Link from '../Link';
+import Link from '../links/Link';
 import Icon from '../Icon';
 import ConnectionState from '../connection-state/ConnectionState';
 import { openTerminal } from '../terminal/Terminal';

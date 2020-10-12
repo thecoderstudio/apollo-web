@@ -14,16 +14,6 @@ exports[`User settings render correctly 1`] = `
   cursor: pointer;
 }
 
-.c1 {
-  max-width: 225px;
-  width: 100%;
-  box-shadow: inset;
-  padding-top: 32px;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-  overflow: hidden;
-}
-
 .c6 {
   margin: 0 8px;
 }
@@ -42,6 +32,16 @@ exports[`User settings render correctly 1`] = `
 
 .c7 {
   margin: 0 8px;
+}
+
+.c1 {
+  max-width: 225px;
+  width: 100%;
+  box-shadow: inset;
+  padding-top: 32px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  overflow: hidden;
 }
 
 .c0 {
@@ -125,12 +125,6 @@ exports[`User settings render correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c1 {
-    width: 45px;
-  }
-}
-
-@media (max-width:47.9375em) {
   .c6 {
     margin: 0 auto;
   }
@@ -143,8 +137,8 @@ exports[`User settings render correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c0 {
-    grid-template-columns: [navigation] 40px [content] 1fr;
+  .c1 {
+    width: 45px;
   }
 }
 
@@ -172,9 +166,6 @@ exports[`User settings render correctly 1`] = `
   <div
     className="c8"
   >
-    <h1>
-      User settings
-    </h1>
     <form
       className="c9"
       onSubmit={[Function]}
