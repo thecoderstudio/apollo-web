@@ -3,10 +3,10 @@ import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
 import SettingsPageWrapper from '../../src/components/SettingsPageWrapper';
 
-function getComponent() {
+function getComponent(props) {
   return renderer.create(
     <BrowserRouter>
-      <SettingsPageWrapper><div /></SettingsPageWrapper>
+      <SettingsPageWrapper {...props}><div /></SettingsPageWrapper>
     </BrowserRouter>
   );
 }

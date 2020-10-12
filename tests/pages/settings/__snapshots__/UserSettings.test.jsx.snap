@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User settings render correctly 1`] = `
+.c3 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3:hover {
+  opacity: 0.90;
+}
+
+.c5 {
+  cursor: pointer;
+}
+
+.c6 {
+  margin: 0 8px;
+}
+
+.c4 {
+  padding: 12px;
+  margin-top: 24px;
+  border-radius: 4px;
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.c7 {
+  margin: 0 8px;
+}
+
+.c1 {
+  max-width: 225px;
+  width: 100%;
+  box-shadow: inset;
+  padding-top: 32px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  overflow: hidden;
+}
+
+.c0 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: grid;
+  position: relative;
+  grid-template-columns: [navigation] 225px [content] 1fr;
+}
+
+.c2 {
+  grid-column: navigation;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.c8 {
+  grid-column: content;
+  padding: 16px;
+}
+
+.c12 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c12:hover {
+  opacity: 0.90;
+}
+
+.c12:focus {
+  outline: none;
+}
+
+.c12:active {
+  opacity: 0.80;
+}
+
+.c12:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c10 {
+  height: 80px;
+}
+
+.c11 {
+  min-height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Libre Franklin',sans-serif;
+  font-size: 1rem;
+  padding-left: 10px;
+  opacity: 0.9;
+  border: 1px solid transparent;
+}
+
+.c11:focus {
+  outline: none;
+  border: 1px solid;
+}
+
+.c9 {
+  width: 100%;
+  max-width: 300px;
+}
+
+.c13 {
+  width: 100%;
+}
+
+@media (max-width:47.9375em) {
+  .c6 {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c7 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c1 {
+    width: 45px;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1 c2"
+  >
+    <a
+      className="c3 c4"
+      href="/settings/user_settings"
+      onClick={[Function]}
+    >
+      <i
+        className="c5 c6 fas fa-user-cog"
+      />
+      <span
+        className="c7"
+      >
+        User settings
+      </span>
+    </a>
+  </div>
+  <div
+    className="c8"
+  >
+    <form
+      className="c9"
+      onSubmit={[Function]}
+    >
+      <h3>
+        Update your user settings
+      </h3>
+      <div
+        className="c10"
+      >
+        <input
+          className="c11"
+          name="username"
+          onChange={[Function]}
+          placeholder="Username"
+          type="username"
+          value=""
+        />
+      </div>
+      <div
+        className="c10"
+      >
+        <input
+          className="c11"
+          name="oldPassword"
+          onChange={[Function]}
+          placeholder="Current password"
+          type="password"
+          value=""
+        />
+      </div>
+      <div
+        className="c10"
+      >
+        <input
+          className="c11"
+          name="password"
+          onChange={[Function]}
+          placeholder="New password"
+          type="password"
+          value=""
+        />
+      </div>
+      <div
+        className="c10"
+      >
+        <input
+          className="c11"
+          name="passwordConfirm"
+          onChange={[Function]}
+          placeholder="Confirm new password"
+          type="password"
+          value=""
+        />
+      </div>
+      <button
+        className="c12 c13"
+        disabled={true}
+        id="updateUserDetailsButton"
+      >
+        Update user details
+      </button>
+    </form>
+  </div>
+</div>
+`;
