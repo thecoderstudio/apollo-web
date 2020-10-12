@@ -1,14 +1,17 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import SettingsPage from '../../src/hoc/SettingsPage';
+import { BrowserRouter } from 'react-router-dom';
+import SettingsPageWrapper from '../../src/components/SettingsPageWrapper';
 
 function getComponent() {
   return renderer.create(
-    <SettingsPage />
+    <BrowserRouter>
+      <SettingsPageWrapper><div /></SettingsPageWrapper>
+    </BrowserRouter>
   );
 }
 
-describe("settings page", () => {
+describe("settings page wrapper", () => {
   const props = { location: { pathname: 'location' } };
 
   it("render correctly", () => {

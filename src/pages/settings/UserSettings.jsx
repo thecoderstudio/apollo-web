@@ -1,11 +1,10 @@
 import React from 'react';
-import withSettingsNavigation from '../../hoc/SettingsPage';
+import SettingsPageWrapper from '../../components/SettingsPageWrapper';
 
 function UserSettings(props) {
-  const { className } = props;
   return (
-    <div className={className} />
+    <SettingsPageWrapper {...props}><div /></SettingsPageWrapper>
   );
 }
 
-export default withSettingsNavigation(UserSettings);
+export default UserSettings;

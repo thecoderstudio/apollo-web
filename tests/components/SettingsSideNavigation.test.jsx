@@ -1,13 +1,10 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import SettingsSideNavigation from '../../src/components/SettingsSideNavigation';
 
 function getComponent(props) {
   return renderer.create(
-    <BrowserRouter>
-      <SettingsSideNavigation {...props} />
-    </BrowserRouter>
+    <SettingsSideNavigation {...props} />
   );
 }
 
@@ -25,17 +22,8 @@ describe('Settings side navigation', () => {
     expect(tree).toMatchSnapshot();
 
     tree = getComponent({
-      location: { pathname: '/settings/user_settings' }
+      location: { pathname: '/path' }
     }).toJSON();
     expect(tree).toMatchSnapshot();
-  });
-
-  it('correctly check if path matches', () => {
-    const tree = getComponent(props);
-    const instance = tree.root;
-    const nav = instance.findByType(SettingsSideNavigation);
-
-    expect(nav.instance.checkIfPathIsActive('/path')).toBe(true);
-    expect(nav.instance.checkIfPathIsActive('/something_else')).toBe(false);
   });
 });
