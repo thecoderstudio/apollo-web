@@ -39,7 +39,7 @@ class UserSettings extends React.PureComponent {
 
   updateUser(values, setErrors, resetForm) {
     const { dispatch } = this.props;
-
+    console.log("called times x");
     axios.patch(
       `${process.env.APOLLO_HTTP_URL}user/me`,
       this.createDictionaryWithoutEmptyFields(values),
@@ -83,6 +83,7 @@ class UserSettings extends React.PureComponent {
           validationSchema={UpdateUserSchema}
           validateOnChange={false}
           onSubmit={(values, { setErrors, resetForm }) => {
+            console.log(values);
             this.updateUser(values, setErrors, resetForm);
           }}
         >

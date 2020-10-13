@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
-import renderer from 'react-test-renderer';
+import renderer, { act } from 'react-test-renderer';
 import waitForExpect from 'wait-for-expect';
 import axios from 'axios';
 import { StatusCodes } from 'http-status-codes';
@@ -13,51 +13,55 @@ const mockStore = configureStore([]);
 jest.mock('axios');
 
 function getComponent(store, props) {
-  return renderer.create(
-    <Provider store={store}>
-      <BrowserRouter>
-        <UserSettings {...props} />
-      </BrowserRouter>
-    </Provider>
-  );
+  let root;
+  act(() => {
+    root = renderer.create(
+      <Provider store={store}>
+        <BrowserRouter>
+          <UserSettings {...props} />
+        </BrowserRouter>
+      </Provider>
+    );
+  });
+  return root;
 }
 
-function submitForm(root, username, oldPassword, password, passwordConfirm) {
-  const usernameInput = root.findByProps({ placeholder: 'Username' });
-  const oldPasswordInput = root.findByProps({ placeholder: 'Current password' });
-  const passwordInput = root.findByProps({ placeholder: 'New password' });
-  const passwordConfirmInput = root.findByProps({ placeholder: 'Confirm new password' });
-  const form = root.findByType('form');
-
-  usernameInput.props.onChange({
-    currentTarget: {
-      name: 'username',
-      value: username
-    }
+function updateField(input, name, value) {
+  act(() => {
+    input.props.onChange({
+      currentTarget: {
+        name,
+        value
+      }
+    });
   });
+}
 
-  oldPasswordInput.props.onChange({
-    currentTarget: {
-      name: 'oldPassword',
-      value: oldPassword
-    }
-  });
+function submitForm(component, username, oldPassword, password, passwordConfirm) {
+  const usernameInput = component.root.findByProps({ placeholder: 'Username' });
+  const oldPasswordInput = component.root.findByProps({ placeholder: 'Current password' });
+  const passwordInput = component.root.findByProps({ placeholder: 'New password' });
+  const passwordConfirmInput = component.root.findByProps({ placeholder: 'Confirm new password' });
+  const form = component.root.findByType('form');
 
-  passwordInput.props.onChange({
-    currentTarget: {
-      name: 'password',
-      value: password
-    }
-  });
+  updateField(usernameInput, 'username', username);
+  updateField(oldPasswordInput, 'oldPassword', oldPassword);
+  updateField(passwordInput, 'password', password);
+  updateField(passwordConfirmInput, 'passwordConfirm', passwordConfirm);
 
-  passwordConfirmInput.props.onChange({
-    currentTarget: {
-      name: 'passwordConfirm',
-      value: passwordConfirm
-    }
+  form.props.onSubmit({ preventDefault: jest.fn() });
+}
+
+async function testFormValidation(component, username, oldPassword, password, passwordConfirm) {
+  submitForm(component, username, oldPassword, password, passwordConfirm);
+  await new Promise(resolve => setImmediate(resolve));
+  component.toJSON();
+  const errors = component.root.findAllByProps({ id: 'error' });
+
+  await waitForExpect(() => {
+    expect(errors).not.toBe([]);
+    expect(axios.patch).not.toHaveBeenCalled();
   });
-  console.log("SUBMITTING");
-  form.props.onSubmit();
 }
 
 describe("User settings", () => {
@@ -78,13 +82,16 @@ describe("User settings", () => {
     spy = jest.spyOn(store, 'dispatch');
   });
 
+  afterEach(() => {
+    spy.mockClear();
+  });
+
   it("render correctly", () => {
     expect(getComponent(store, props).toJSON()).toMatchSnapshot();
   });
 
   it('patch successfully', async () => {
     const component = getComponent(store, props);
-    const { root } = component;
 
     axios.get.mockResolvedValue({
       status: StatusCodes.OK,
@@ -95,7 +102,7 @@ describe("User settings", () => {
       status: StatusCodes.OK
     });
 
-    submitForm(root, 'username', 'oldpassword', 'password', 'password');
+    await submitForm(component, 'username', 'oldpassword', 'password', 'password');
 
     await waitForExpect(() => {
       expect(axios.patch).toHaveBeenCalled();
@@ -104,22 +111,14 @@ describe("User settings", () => {
   });
 
   it("validates input", async () => {
-    const component = getComponent(store, props);
-    const { root } = component;
-
-    submitForm(root, 'username', 'oldPassword', 'passw', 'passw');
-    submitForm(root, 'username', 'oldPassword', 'passw');
-    submitForm(root, 'username', 'oldPassword', 'password1', 'password2');
-    submitForm(root, 'username', '', 'password', 'password');
-
-    await waitForExpect(() => {
-      expect(spy).not.toHaveBeenCalled();
-    });
+    await testFormValidation(getComponent(store, props), 'username', 'oldPassword', 'passw', 'passw');
+    await testFormValidation(getComponent(store, props), 'username', 'oldPassword', 'passw');
+    await testFormValidation(getComponent(store, props), 'username', '', 'password', 'password');
+    await testFormValidation(getComponent(store, props), 'username', 'oldPassword', 'password1', 'password2');
   });
 
   it('handles unsuccessful patch', async () => {
     const component = getComponent(store, props);
-    const { root } = component;
 
     axios.patch.mockImplementationOnce(() => Promise.reject({
       response: {
@@ -129,7 +128,7 @@ describe("User settings", () => {
       }
     }));
 
-    submitForm(root, 'username', 'oldPassword', 'password', 'password');
+    await submitForm(component, 'username', 'oldPassword', 'password', 'password');
 
     axios.patch.mockImplementationOnce(() => Promise.reject({
       response: {
@@ -139,7 +138,7 @@ describe("User settings", () => {
       }
     }));
 
-    submitForm(root, 'username', 'oldPassword', 'password', 'password');
+    await submitForm(component, 'username', 'oldPassword', 'password', 'password');
 
     await waitForExpect(() => {
       expect(axios.patch).toHaveBeenCalledTimes(2);

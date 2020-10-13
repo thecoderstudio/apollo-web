@@ -47,7 +47,7 @@ export default function Input(props) {
   return (
     <Container className={className}>
       <StyledInput hasError={hasError} {...rest} />
-      { hasError && <Error>{error}</Error>}
+      { hasError && <Error id='error'>{error}</Error>}
     </Container>
   );
 }
