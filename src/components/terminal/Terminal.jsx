@@ -66,13 +66,13 @@ export class Terminal extends React.PureComponent {
 
   connect() {
     const { agent, agentEndpoint } = this.props;
-    const socket = new WebSocket(
+    this.socket = new WebSocket(
       `${process.env.APOLLO_WS_URL}agent/${agent.id}/${agentEndpoint}`
     );
-    socket.onerror = this.onSocketError;
-    socket.onclose = this.onSocketClose;
+    this.socket.onerror = this.onSocketError;
+    this.socket.onclose = this.onSocketClose;
 
-    const attachAddon = new AttachAddon(socket);
+    const attachAddon = new AttachAddon(this.socket);
     this.fitAddon = new FitAddon();
     this.term.loadAddon(attachAddon);
     this.term.loadAddon(this.fitAddon);
@@ -83,6 +83,12 @@ export class Terminal extends React.PureComponent {
     this.term.open(this.terminalRef.current);
     this.fit();
     this.write(`Connecting to agent ${styledName}...\n\r\n`);
+  }
+
+  componentWillUnmount() {
+    if (this.socket != null) {
+      this.socket.close();
+    }
   }
 
   onSocketError() {
