@@ -103,7 +103,7 @@ describe("User settings", () => {
     });
 
     await submitForm(component, 'username', 'oldpassword', 'password', 'password');
-
+    component.toJSON();
     await waitForExpect(() => {
       expect(axios.patch).toHaveBeenCalled();
       expect(spy).toHaveBeenCalledWith(notifyAction("User data updated", severity.SUCCESS));
@@ -111,10 +111,12 @@ describe("User settings", () => {
   });
 
   it("validates input", async () => {
-    await testFormValidation(getComponent(store, props), 'username', 'oldPassword', 'passw', 'passw');
-    await testFormValidation(getComponent(store, props), 'username', 'oldPassword', 'passw');
-    await testFormValidation(getComponent(store, props), 'username', '', 'password', 'password');
-    await testFormValidation(getComponent(store, props), 'username', 'oldPassword', 'password1', 'password2');
+    const component = getComponent(store, props);
+    await testFormValidation(component, 'username', 'oldPassword', 'passw', 'passw');
+    await testFormValidation(component, 'username', 'oldPassword', 'passw');
+    await testFormValidation(component, 'username', '', 'password', 'password');
+    await testFormValidation(component, 'username', 'password', '', 'password');
+    await testFormValidation(component, 'username', 'oldPassword', 'password1', 'password2');
   });
 
   it('handles unsuccessful patch', async () => {

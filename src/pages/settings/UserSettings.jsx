@@ -39,7 +39,6 @@ class UserSettings extends React.PureComponent {
 
   updateUser(values, setErrors, resetForm) {
     const { dispatch } = this.props;
-    console.log("called times x");
     axios.patch(
       `${process.env.APOLLO_HTTP_URL}user/me`,
       this.createDictionaryWithoutEmptyFields(values),

@@ -6,7 +6,7 @@ import PathAwareLink from '../../../src/components/links/PathAwareLink';
 function getComponent(props) {
   return renderer.create(
     <BrowserRouter>
-      <PathAwareLink to='path' {...props} />
+      <PathAwareLink to='/path' {...props} />
     </BrowserRouter>
   );
 }
