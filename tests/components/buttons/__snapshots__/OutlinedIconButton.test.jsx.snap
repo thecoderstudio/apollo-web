@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OutlinedIconButton renders correctly 1`] = `
+.c0 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c0:hover {
+  opacity: 0.90;
+}
+
+.c0:focus {
+  outline: none;
+}
+
+.c0:active {
+  opacity: 0.80;
+}
+
+.c0:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c1 {
+  margin-left: 8px;
+}
+
+@media (max-width:47.9375em) {
+  .c1 {
+    display: none;
+  }
+}
+
+<button
+  className="c0"
+  onClick={[MockFunction]}
+>
+  <i
+    className="fa-plus"
+  />
+  <span
+    className="c1"
+  >
+    <div />
+  </span>
+</button>
+`;

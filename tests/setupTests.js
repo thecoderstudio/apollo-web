@@ -6,7 +6,8 @@ Enzyme.configure({ adapter: new Adapter() });
 
 process.env = {
   APOLLO_WS_URL: 'ws://localhost:1234/',
-  APOLLO_HTTP_URL: 'http://localhost:1234/'
+  APOLLO_HTTP_URL: 'http://localhost:1234/',
+  EXTERNAL_APOLLO_HTTP_URL: 'http://localhost:1234'
 };
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -18,6 +19,6 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
+    dispatchEvent: jest.fn()
+  }))
 });

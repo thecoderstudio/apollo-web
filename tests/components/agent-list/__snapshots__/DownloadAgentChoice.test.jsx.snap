@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`download agent choice renders correctly 1`] = `
+.c2 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  display: grid;
+  grid-template-rows: [title] 50px [description] 1fr;
+  padding: 20px;
+  min-height: 180px;
+}
+
+.c2:hover {
+  opacity: 0.90;
+}
+
+.c2:focus {
+  outline: none;
+}
+
+.c2:active {
+  opacity: 0.80;
+}
+
+.c2:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c4 {
+  grid-row: title;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c5 {
+  grid-row: description;
+  padding: 10px;
+}
+
+.c0 {
+  display: grid;
+  grid-template-columns: [column-one] 50% [column-two] 50%;
+  gap: 20px;
+}
+
+.c1 {
+  grid-column: column-one;
+}
+
+.c6 {
+  grid-column: column-two;
+  margin-right: 20px;
+}
+
+.c3 {
+  width: 100%;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    grid-template-columns: [column-one] 100%;
+    grid-template-rows: [row-one] 1fr [row-two] 1fr;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c1 {
+    grid-row: row-one;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c6 {
+    grid-column: column-one;
+    grid-row: row-two;
+    margin-right: 0px;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <button
+      className="c2 c3"
+      onClick={[Function]}
+    >
+      <h3
+        className="c4"
+      >
+        Directly on target machine.
+      </h3>
+      <p
+        className="c5"
+      >
+        You have the correct permissions to download the binary directly on the target machine.
+      </p>
+    </button>
+  </div>
+  <div
+    className="c6"
+  >
+    <button
+      className="c2 c3"
+      onClick={[Function]}
+    >
+      <h3
+        className="c4"
+      >
+        Manual upload
+      </h3>
+      <p
+        className="c5"
+      >
+        You download and upload the binary yourself.
+      </p>
+    </button>
+  </div>
+</div>
+`;

@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import axios from 'axios';
 import waitForExpect from 'wait-for-expect';
 import { StatusCodes } from 'http-status-codes';
-import Login from '../../src/pages/Login';
+import Login, { UnconnectedLogin } from '../../src/components/authentication/Login';
 
 const mockStore = configureStore([]);
 jest.mock('axios');
@@ -35,14 +35,17 @@ describe('login', () => {
 
   it("handles successful login", async () => {
     const component = getComponent(store);
-    const root = component.root.findByProps({ authenticated: false });
-    const instance = root.instance;
+    const root = component.root.findByType(UnconnectedLogin);
+    const { instance } = root;
+    const spy = jest.spyOn(instance, 'loginSuccessCallback');
 
     axios.post.mockResolvedValue({
-      status: StatusCodes.OK 
+      status: StatusCodes.OK
     });
+
     axios.get.mockResolvedValue({
-      status: StatusCodes.OK 
+      status: StatusCodes.OK,
+      data: {}
     });
 
     root.findByProps({ type: 'username' }).props.onChange({
@@ -60,14 +63,15 @@ describe('login', () => {
     root.findByType('form').props.onSubmit();
 
     await waitForExpect(() => {
-      expect(instance.props.dispatch).toHaveBeenCalled();
+      expect(spy).toHaveBeenCalled();
     });
   });
 
   it("handles unsuccessful login", async () => {
     const component = getComponent(store);
-    const root = component.root.findByProps({ authenticated: false });
-    const instance = root.instance;
+    const root = component.root.findByType(UnconnectedLogin);
+    const { instance } = root;
+    const spy = jest.spyOn(instance, 'loginSuccessCallback');
 
     axios.post.mockImplementationOnce(() => Promise.reject({
       response: {
@@ -102,18 +106,20 @@ describe('login', () => {
     root.findByType('form').props.onSubmit();
 
     await waitForExpect(() => {
-      expect(instance.props.dispatch).not.toHaveBeenCalled();
+      expect(spy).not.toHaveBeenCalled();
     });
   });
 
-  it("handler get current user failure", async () => {
+  it("not calling callback on login success, fetch user fail.", async () => {
     const component = getComponent(store);
-    const root = component.root.findByProps({authenticated: false});
-    const instance = root.instance;
+    const root = component.root.findByType(UnconnectedLogin);
+    const { instance } = root;
+    const spy = jest.spyOn(instance, 'loginSuccessCallback');
 
     axios.post.mockResolvedValue({
-      status: StatusCodes.OK 
+      status: StatusCodes.OK
     });
+
     axios.get.mockImplementationOnce(() => Promise.reject({
       response: {
         status: StatusCodes.INTERNAL_SERVER_ERROR,
@@ -122,14 +128,13 @@ describe('login', () => {
       }
     }));
 
-
-    root.findByProps({type: 'username'}).props.onChange({ 
+    root.findByProps({ type: 'username' }).props.onChange({
       currentTarget: {
         name: 'username',
         value: 'test'
       }
     });
-    root.findByProps({type: 'password'}).props.onChange({
+    root.findByProps({ type: 'password' }).props.onChange({
       currentTarget: {
         name: 'password',
         value: 'password'
@@ -138,18 +143,7 @@ describe('login', () => {
     root.findByType('form').props.onSubmit();
 
     await waitForExpect(() => {
-      expect(instance.props.dispatch).toHaveBeenCalledTimes(1);
+      expect(spy).not.toHaveBeenCalled();
     });
-  });
-
-  it("correctly sets pathname on authentication", () => {
-    const component = getComponent(store);
-    const root = component.root.findByProps({ authenticated: false });
-    const instance = root.instance;
-    instance.componentDidUpdate();
-
-    instance.props = ({ authenticated: true });
-    instance.componentDidUpdate();
-    expect(window.location.pathname).toEqual("/");
   });
 });

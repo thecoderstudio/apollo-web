@@ -6,7 +6,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import NavBar from './components/NavBar';
 import Notifications from './components/notifications/Notifications';
 import Dashboard from './pages/Dashboard';
-import Login from './pages/Login';
+import Welcome from './pages/Welcome';
 import AgentDetail from './pages/AgentDetail';
 import TerminalPage from './pages/TerminalPage';
 import Linpeas from './pages/actions/Linpeas';
@@ -22,8 +22,9 @@ const GlobalStyle = createGlobalStyle`
     padding: 0px;
     height: 100%;
     width: 100%;
+    font-weight: 500;
     color: ${props => props.theme.white};
-    background-color: ${props => props.theme.black}; 
+    background-color: ${props => props.theme.black};
   }
 
   body {
@@ -46,9 +47,9 @@ function App(props) {
       <ThemeProvider theme={darkTheme}>
         <BrowserRouter>
           <Content>
-            {props.authenticated && <NavBar />}
+            {props.authenticated && props.hasChangedPassword && <NavBar />}
             <Switch>
-              <ProtectedRoute exact path='/' component={Dashboard} fallbackComponent={Login} />
+              <ProtectedRoute exact path='/' component={Dashboard} fallbackComponent={Welcome} />
               <ProtectedRoute exact path='/agent/:agentId/action/linpeas' component={Linpeas} fallbackComponent={NotFound} />
               <ProtectedRoute exact path='/agent/:agentId/shell' component={TerminalPage} fallbackComponent={NotFound} />
               <ProtectedRoute exact path='/agent/:agentId' component={AgentDetail} fallbackComponent={NotFound} />
@@ -65,5 +66,8 @@ function App(props) {
 }
 
 export default connect(
-  state => ({authenticated: state.authenticated})
+  state => ({
+    authenticated: state.authenticated,
+    hasChangedPassword: state.currentUser.hasChangedInitialPassword
+  })
 )(App);

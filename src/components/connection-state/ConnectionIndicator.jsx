@@ -29,7 +29,6 @@ export function getColor(connectionState, theme) {
   }
 }
 
-
 function ConnectionIndicator(props) {
   return <Indicator className={props.className} color={getColor(props.connectionState, props.theme)} />;
 }

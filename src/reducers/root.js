@@ -10,5 +10,5 @@ export default combineReducers({
   authenticated: authReducer,
   currentUser: currentUserReducer,
   notifications: notificationReducer,
-  theme: themeReducer
+  theme: themeReducer,
 });

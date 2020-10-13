@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`agentList correctly lists multiple agents 1`] = `
-.c4 {
+.c6 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #F8F8F8;
 }
 
-.c4:hover {
+.c6:hover {
   opacity: 0.90;
 }
 
-.c10 {
+.c12 {
   min-height: 12px;
   min-width: 12px;
   margin: 10px;
@@ -20,18 +20,18 @@ exports[`agentList correctly lists multiple agents 1`] = `
   background-color: #27AE60;
 }
 
-.c9 {
+.c11 {
   display: grid;
   grid-template-columns: [status-indicator] 20px [status-text] 1fr;
 }
 
-.c11 {
+.c13 {
   grid-column: status-indicator;
   float: right;
   text-align: left;
 }
 
-.c12 {
+.c14 {
   grid-column: status-text;
   position: relative;
   margin: 0;
@@ -41,7 +41,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
   color: #27AE60;
 }
 
-.c3 {
+.c5 {
   display: grid;
   grid-template-columns: auto 100px 175px;
   grid-column-gap: 8px;
@@ -62,7 +62,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
   margin-top: 25px;
 }
 
-.c8 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -78,7 +78,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
   min-width: 0;
 }
 
-.c5 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -95,49 +95,99 @@ exports[`agentList correctly lists multiple agents 1`] = `
   min-width: 0;
 }
 
-.c5 p {
+.c7 p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.c5:hover {
+.c7:hover {
   color: #02A3EE;
 }
 
-.c7 {
+.c9 {
   min-width: 0;
 }
 
-.c13 {
+.c15 {
   cursor: pointer;
   color: #F8F8F8;
   margin-left: 16px;
 }
 
-.c6 {
+.c8 {
   cursor: pointer;
   margin-right: 10px;
   cursor: inherit;
 }
 
+.c2 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  background-color: #4D02EE;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #4D02EE;
+}
+
+.c2:hover {
+  opacity: 0.90;
+}
+
+.c2:focus {
+  outline: none;
+}
+
+.c2:active {
+  opacity: 0.80;
+}
+
+.c2:disabled {
+  background-color: #3E3E3E;
+}
+
+.c2:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c3 {
+  margin-left: 8px;
+}
+
 .c0 {
   display: grid;
-  grid-template-rows: [title] 50px [list] 1fr;
+  grid-template-rows: [header] 50px [list] 1fr;
   max-width: 100%;
   min-width: 0;
   background-color: #1B1B1B;
   border-radius: 8px;
-  padding: 20px;
+  padding: 16px;
 }
 
 .c1 {
-  grid-row: title;
-  width: 100%;
-  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  grid-row: header;
 }
 
-.c2 {
+.c4 {
   width: 100%;
   min-width: 0;
   grid-row: list;
@@ -146,7 +196,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c3 {
+  .c5 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -159,13 +209,13 @@ exports[`agentList correctly lists multiple agents 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c8 {
+  .c10 {
     width: 100%;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c5 {
+  .c7 {
     width: 100%;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -176,33 +226,54 @@ exports[`agentList correctly lists multiple agents 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c9 {
     width: 100%;
     text-align: center;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    display: none;
   }
 }
 
 <div
   className="c0"
 >
-  <h2
+  <div
     className="c1"
   >
-    Agents
-  </h2>
+    <h2>
+      Agents
+    </h2>
+    <button
+      className="c2"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-plus"
+      />
+      <span
+        className="c3"
+      >
+        Add new agent
+      </span>
+    </button>
+  </div>
   <ul
-    className="c2"
+    className="c4"
   >
     <li
-      className="c3"
+      className="c5"
     >
       <a
-        className="c4 c5"
+        className="c6 c7"
         href="/agent/id"
         onClick={[Function]}
       >
         <i
-          className="c6 fas fa-question-circle"
+          className="c8 fas fa-question-circle"
         />
         Operating system unkown
         <p>
@@ -210,42 +281,42 @@ exports[`agentList correctly lists multiple agents 1`] = `
         </p>
       </a>
       <p
-        className="c7"
+        className="c9"
       />
       External IP address
       <div
-        className="c8"
+        className="c10"
       >
         <div
-          className="c9"
+          className="c11"
         >
           <div
-            className="c10 c11"
+            className="c12 c13"
             color="#27AE60"
           />
           <p
-            className="c12"
+            className="c14"
             color="#27AE60"
           >
             Connected
           </p>
         </div>
         <i
-          className="c13 fas fa-terminal"
+          className="c15 fas fa-terminal"
           onClick={[Function]}
         />
       </div>
     </li>
     <li
-      className="c3"
+      className="c5"
     >
       <a
-        className="c4 c5"
+        className="c6 c7"
         href="/agent/id2"
         onClick={[Function]}
       >
         <i
-          className="c6 fas fa-question-circle"
+          className="c8 fas fa-question-circle"
         />
         Operating system unkown
         <p>
@@ -253,28 +324,28 @@ exports[`agentList correctly lists multiple agents 1`] = `
         </p>
       </a>
       <p
-        className="c7"
+        className="c9"
       />
       External IP address
       <div
-        className="c8"
+        className="c10"
       >
         <div
-          className="c9"
+          className="c11"
         >
           <div
-            className="c10 c11"
+            className="c12 c13"
             color="#27AE60"
           />
           <p
-            className="c12"
+            className="c14"
             color="#27AE60"
           >
             Connected
           </p>
         </div>
         <i
-          className="c13 fas fa-terminal"
+          className="c15 fas fa-terminal"
           onClick={[Function]}
         />
       </div>
@@ -283,24 +354,201 @@ exports[`agentList correctly lists multiple agents 1`] = `
 </div>
 `;
 
-exports[`agentList renders correctly 1`] = `
+exports[`agentList handles add agent modal 1`] = `
+.c2 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  background-color: #4D02EE;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #4D02EE;
+}
+
+.c2:hover {
+  opacity: 0.90;
+}
+
+.c2:focus {
+  outline: none;
+}
+
+.c2:active {
+  opacity: 0.80;
+}
+
+.c2:disabled {
+  background-color: #3E3E3E;
+}
+
+.c2:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c3 {
+  margin-left: 8px;
+}
+
+.c5 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(37,37,37,0.6);
+}
+
+.c12 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  background-color: #4D02EE;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #4D02EE;
+  display: grid;
+  grid-template-rows: [title] 50px [description] 1fr;
+  padding: 20px;
+  min-height: 180px;
+}
+
+.c12:hover {
+  opacity: 0.90;
+}
+
+.c12:focus {
+  outline: none;
+}
+
+.c12:active {
+  opacity: 0.80;
+}
+
+.c12:disabled {
+  background-color: #3E3E3E;
+}
+
+.c12:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c14 {
+  grid-row: title;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c15 {
+  grid-row: description;
+  padding: 10px;
+  font-size: 0.85rem;
+}
+
+.c10 {
+  display: grid;
+  grid-template-columns: [column-one] 50% [column-two] 50%;
+  gap: 20px;
+}
+
+.c11 {
+  grid-column: column-one;
+}
+
+.c16 {
+  grid-column: column-two;
+  margin-right: 20px;
+}
+
+.c13 {
+  width: 100%;
+}
+
+.c6 {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1B1B1B;
+  background-color: #181818;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 600px;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+
+.c7 {
+  display: grid;
+  grid-template-rows: [title] 50px [content] 1fr;
+  height: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  -webkit-scrollbar-width: none;
+  -moz-scrollbar-width: none;
+  -ms-scrollbar-width: none;
+  scrollbar-width: none;
+}
+
+.c7::-webkit-scrollbar {
+  display: none;
+}
+
+.c8 {
+  grid-row: title;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c9 {
+  grid-row: content;
+  padding: 20px;
+}
+
 .c0 {
   display: grid;
-  grid-template-rows: [title] 50px [list] 1fr;
+  grid-template-rows: [header] 50px [list] 1fr;
   max-width: 100%;
   min-width: 0;
   background-color: #1B1B1B;
   border-radius: 8px;
-  padding: 20px;
+  padding: 16px;
 }
 
 .c1 {
-  grid-row: title;
-  width: 100%;
-  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  grid-row: header;
 }
 
-.c2 {
+.c4 {
   width: 100%;
   min-width: 0;
   grid-row: list;
@@ -308,16 +556,373 @@ exports[`agentList renders correctly 1`] = `
   padding-left: 0;
 }
 
+@media (max-width:47.9375em) {
+  .c3 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c10 {
+    grid-template-columns: [column-one] 100%;
+    grid-template-rows: [row-one] 1fr [row-two] 1fr;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c11 {
+    grid-row: row-one;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c16 {
+    grid-column: column-one;
+    grid-row: row-two;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c6 {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 15px 0px 15px 0px;
+    width: auto;
+    max-width: 100%;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
 <div
   className="c0"
 >
-  <h2
+  <div
     className="c1"
   >
-    Agents
-  </h2>
+    <h2>
+      Agents
+    </h2>
+    <button
+      className="c2"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-plus"
+      />
+      <span
+        className="c3"
+      >
+        Add new agent
+      </span>
+    </button>
+  </div>
   <ul
-    className="c2"
+    className="c4"
+  />
+  <div
+    className="c5"
+    onClick={[Function]}
+  >
+    <div
+      className="c6"
+    >
+      <div
+        className="c7"
+      >
+        <h2
+          className="c8"
+        >
+          Add new agent
+        </h2>
+        <div
+          className="c9"
+        >
+          <div
+            className="c10"
+          >
+            <div
+              className="c11"
+            >
+              <button
+                className="c12 c13"
+                onClick={[Function]}
+              >
+                <h3
+                  className="c14"
+                >
+                  Directly on target machine.
+                </h3>
+                <p
+                  className="c15"
+                >
+                  You have the correct permissions to download the binary directly on the target machine.
+                </p>
+              </button>
+            </div>
+            <div
+              className="c16"
+            >
+              <button
+                className="c12 c13"
+                onClick={[Function]}
+              >
+                <h3
+                  className="c14"
+                >
+                  Manual upload
+                </h3>
+                <p
+                  className="c15"
+                >
+                  You download and upload the binary yourself.
+                </p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`agentList handles add agent modal 2`] = `
+.c2 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  background-color: #4D02EE;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #4D02EE;
+}
+
+.c2:hover {
+  opacity: 0.90;
+}
+
+.c2:focus {
+  outline: none;
+}
+
+.c2:active {
+  opacity: 0.80;
+}
+
+.c2:disabled {
+  background-color: #3E3E3E;
+}
+
+.c2:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c3 {
+  margin-left: 8px;
+}
+
+.c0 {
+  display: grid;
+  grid-template-rows: [header] 50px [list] 1fr;
+  max-width: 100%;
+  min-width: 0;
+  background-color: #1B1B1B;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  grid-row: header;
+}
+
+.c4 {
+  width: 100%;
+  min-width: 0;
+  grid-row: list;
+  list-style: none;
+  padding-left: 0;
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+@media (max-width:47.9375em) {
+
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h2>
+      Agents
+    </h2>
+    <button
+      className="c2"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-plus"
+      />
+      <span
+        className="c3"
+      >
+        Add new agent
+      </span>
+    </button>
+  </div>
+  <ul
+    className="c4"
+  />
+</div>
+`;
+
+exports[`agentList renders correctly 1`] = `
+.c2 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  background-color: #4D02EE;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #4D02EE;
+}
+
+.c2:hover {
+  opacity: 0.90;
+}
+
+.c2:focus {
+  outline: none;
+}
+
+.c2:active {
+  opacity: 0.80;
+}
+
+.c2:disabled {
+  background-color: #3E3E3E;
+}
+
+.c2:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c3 {
+  margin-left: 8px;
+}
+
+.c0 {
+  display: grid;
+  grid-template-rows: [header] 50px [list] 1fr;
+  max-width: 100%;
+  min-width: 0;
+  background-color: #1B1B1B;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  grid-row: header;
+}
+
+.c4 {
+  width: 100%;
+  min-width: 0;
+  grid-row: list;
+  list-style: none;
+  padding-left: 0;
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    display: none;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h2>
+      Agents
+    </h2>
+    <button
+      className="c2"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-plus"
+      />
+      <span
+        className="c3"
+      >
+        Add new agent
+      </span>
+    </button>
+  </div>
+  <ul
+    className="c4"
   />
 </div>
 `;

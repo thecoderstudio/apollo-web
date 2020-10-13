@@ -115,7 +115,7 @@ describe("agent detail", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("renders unkown platform info correctly", () => {
+  it("renders unknown platform info correctly", () => {
     const newAgent = Object.assign({}, defaultAgent);
     newAgent['operatingSystem'] = null;
     newAgent['architecture'] = null;
