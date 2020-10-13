@@ -40,11 +40,15 @@ describe('notifications', () => {
       notifications: new Map({
         0: {
           message: "test 1",
-          severity: severity.info
+          severity: severity.INFO
         },
         1: {
           message: "test 2",
-          severity: severity.warning 
+          severity: severity.WARNING
+        },
+        3: {
+          message: "test 3",
+          severity: severity.SUCCESS
         }
       })
     });
@@ -54,7 +58,7 @@ describe('notifications', () => {
     expect(tree).toMatchSnapshot();
 
     await waitForExpect(() => {
-      expect(store.dispatch).toHaveBeenCalledTimes(2);
+      expect(store.dispatch).toHaveBeenCalledTimes(3);
       tree = getComponent(store).toJSON();
       expect(tree).toMatchSnapshot();
     });

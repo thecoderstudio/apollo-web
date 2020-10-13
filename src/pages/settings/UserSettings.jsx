@@ -26,6 +26,7 @@ class UserSettings extends React.PureComponent {
   constructor(props) {
     super(props);
     this.updateUser = this.updateUser.bind(this);
+    this.updateUserSuccessCallback = this.updateUserSuccessCallback.bind(this);
   }
 
   createDictionaryWithoutEmptyFields(values) {
@@ -37,17 +38,22 @@ class UserSettings extends React.PureComponent {
     return data;
   }
 
-  updateUser(values, setErrors, resetForm) {
+  updateUserSuccessCallback(resetForm) {
     const { dispatch } = this.props;
+
+    dispatch(notifyAction("User data updated", severity.SUCCESS));
+    resetForm();
+    fetchCurrentUser();
+  }
+
+  updateUser(values, setErrors, resetForm) {
     axios.patch(
       `${process.env.APOLLO_HTTP_URL}user/me`,
       this.createDictionaryWithoutEmptyFields(values),
       { withCredentials: true }
     )
       .then(response => {
-        dispatch(notifyAction("User data updated", severity.SUCCESS));
-        resetForm();
-        fetchCurrentUser();
+        this.updateUserSuccessCallback(resetForm);
       })
       .catch(error => {
         handleHTTPResponse(error.response, true, true);
@@ -137,3 +143,5 @@ class UserSettings extends React.PureComponent {
 }
 
 export default connect()(UserSettings, 'User settings');
+
+export { UserSettings as UnconnectedUserSettings };

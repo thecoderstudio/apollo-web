@@ -6,7 +6,7 @@ import renderer, { act } from 'react-test-renderer';
 import waitForExpect from 'wait-for-expect';
 import axios from 'axios';
 import { StatusCodes } from 'http-status-codes';
-import UserSettings from '../../../src/pages/settings/UserSettings';
+import UserSettings, { UnconnectedUserSettings } from '../../../src/pages/settings/UserSettings';
 import { severity, notify as notifyAction } from '../../../src/actions/notification';
 
 const mockStore = configureStore([]);
@@ -92,6 +92,9 @@ describe("User settings", () => {
 
   it('patch successfully', async () => {
     const component = getComponent(store, props);
+    const root = component.root.findByType(UnconnectedUserSettings);
+    const { instance } = root;
+    const callbackSpy = jest.spyOn(instance, 'updateUserSuccessCallback');
 
     axios.get.mockResolvedValue({
       status: StatusCodes.OK,
@@ -102,11 +105,12 @@ describe("User settings", () => {
       status: StatusCodes.OK
     });
 
-    await submitForm(component, 'username', 'oldpassword', 'password', 'password');
+    submitForm(component, 'username', 'oldpassword', 'password', 'password');
+
     component.toJSON();
     await waitForExpect(() => {
       expect(axios.patch).toHaveBeenCalled();
-      expect(spy).toHaveBeenCalledWith(notifyAction("User data updated", severity.SUCCESS));
+      expect(callbackSpy).toHaveBeenCalled();
     });
   });
 
@@ -114,7 +118,6 @@ describe("User settings", () => {
     const component = getComponent(store, props);
     await testFormValidation(component, 'username', 'oldPassword', 'passw', 'passw');
     await testFormValidation(component, 'username', 'oldPassword', 'passw');
-    await testFormValidation(component, 'username', '', 'password', 'password');
     await testFormValidation(component, 'username', 'password', '', 'password');
     await testFormValidation(component, 'username', 'oldPassword', 'password1', 'password2');
   });
@@ -130,7 +133,7 @@ describe("User settings", () => {
       }
     }));
 
-    await submitForm(component, 'username', 'oldPassword', 'password', 'password');
+    submitForm(component, 'username', 'oldPassword', 'password', 'password');
 
     axios.patch.mockImplementationOnce(() => Promise.reject({
       response: {
@@ -140,7 +143,7 @@ describe("User settings", () => {
       }
     }));
 
-    await submitForm(component, 'username', 'oldPassword', 'password', 'password');
+    submitForm(component, 'username', 'oldPassword', 'password', 'password');
 
     await waitForExpect(() => {
       expect(axios.patch).toHaveBeenCalledTimes(2);
