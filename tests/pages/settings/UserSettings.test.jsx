@@ -56,7 +56,7 @@ function submitForm(root, username, oldPassword, password, passwordConfirm) {
       value: passwordConfirm
     }
   });
-
+  console.log("SUBMITTING");
   form.props.onSubmit();
 }
 
@@ -107,12 +107,13 @@ describe("User settings", () => {
     const component = getComponent(store, props);
     const { root } = component;
 
-    submitForm(root, 'username', '', 'password', 'password');
     submitForm(root, 'username', 'oldPassword', 'passw', 'passw');
-    submitForm(root, '', 'oldpassword', 'password1', 'password2');
+    submitForm(root, 'username', 'oldPassword', 'passw');
+    submitForm(root, 'username', 'oldPassword', 'password1', 'password2');
+    submitForm(root, 'username', '', 'password', 'password');
 
     await waitForExpect(() => {
-      expect(axios.patch).not.toHaveBeenCalled();
+      expect(spy).not.toHaveBeenCalled();
     });
   });
 
