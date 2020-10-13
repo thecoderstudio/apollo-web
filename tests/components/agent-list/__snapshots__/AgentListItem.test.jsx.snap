@@ -1332,6 +1332,8 @@ exports[`agent list item opens and closes the terminal 1`] = `
                                         "operatingSystem": undefined,
                                       }
                                     }
+                                    agentEndpoint="shell"
+                                    readOnly={false}
                                     theme={
                                       Object {
                                         "accent": "#4D02EE",

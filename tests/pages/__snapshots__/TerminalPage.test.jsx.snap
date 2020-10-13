@@ -97,6 +97,8 @@ exports[`agent list item correctly renders 1`] = `
                   "name": "fake",
                 }
               }
+              agentEndpoint="shell"
+              readOnly={false}
               theme={
                 Object {
                   "accent": "#4D02EE",
