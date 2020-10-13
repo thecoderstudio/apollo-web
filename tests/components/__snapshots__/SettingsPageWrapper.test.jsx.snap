@@ -39,8 +39,8 @@ exports[`settings page wrapper render correctly 1`] = `
   width: 100%;
   box-shadow: inset;
   padding-top: 32px;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: 0.75s ease-in-out;
+  transition: 0.75s ease-in-out;
   overflow: hidden;
 }
 
@@ -51,6 +51,8 @@ exports[`settings page wrapper render correctly 1`] = `
   display: grid;
   position: relative;
   grid-template-columns: [navigation] 225px [content] 1fr;
+  -webkit-transition: 0.75s ease-in-out;
+  transition: 0.75s ease-in-out;
 }
 
 .c2 {
@@ -80,6 +82,12 @@ exports[`settings page wrapper render correctly 1`] = `
 @media (max-width:47.9375em) {
   .c1 {
     width: 45px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    grid-template-columns: [navigation] 45px [content] 1fr;
   }
 }
 

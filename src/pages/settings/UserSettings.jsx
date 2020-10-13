@@ -92,7 +92,6 @@ class UserSettings extends React.PureComponent {
           validationSchema={UpdateUserSchema}
           validateOnChange={false}
           onSubmit={(values, { setErrors, resetForm }) => {
-            console.log(values);
             this.updateUser(values, setErrors, resetForm);
           }}
         >

@@ -39,8 +39,8 @@ exports[`User settings render correctly 1`] = `
   width: 100%;
   box-shadow: inset;
   padding-top: 32px;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: 0.75s ease-in-out;
+  transition: 0.75s ease-in-out;
   overflow: hidden;
 }
 
@@ -51,6 +51,8 @@ exports[`User settings render correctly 1`] = `
   display: grid;
   position: relative;
   grid-template-columns: [navigation] 225px [content] 1fr;
+  -webkit-transition: 0.75s ease-in-out;
+  transition: 0.75s ease-in-out;
 }
 
 .c2 {
@@ -65,7 +67,7 @@ exports[`User settings render correctly 1`] = `
   padding: 16px;
 }
 
-.c12 {
+.c13 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -77,19 +79,19 @@ exports[`User settings render correctly 1`] = `
   cursor: pointer;
 }
 
-.c12:hover {
+.c13:hover {
   opacity: 0.90;
 }
 
-.c12:focus {
+.c13:focus {
   outline: none;
 }
 
-.c12:active {
+.c13:active {
   opacity: 0.80;
 }
 
-.c12:disabled:hover {
+.c13:disabled:hover {
   opacity: 1;
   cursor: auto;
 }
@@ -98,7 +100,7 @@ exports[`User settings render correctly 1`] = `
   height: 80px;
 }
 
-.c11 {
+.c12 {
   min-height: 50px;
   width: 100%;
   border: none;
@@ -110,7 +112,7 @@ exports[`User settings render correctly 1`] = `
   border: 1px solid transparent;
 }
 
-.c11:focus {
+.c12:focus {
   outline: none;
   border: 1px solid;
 }
@@ -120,7 +122,11 @@ exports[`User settings render correctly 1`] = `
   max-width: 300px;
 }
 
-.c13 {
+.c11 {
+  margin-bottom: 15px;
+}
+
+.c14 {
   width: 100%;
 }
 
@@ -139,6 +145,12 @@ exports[`User settings render correctly 1`] = `
 @media (max-width:47.9375em) {
   .c1 {
     width: 45px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    grid-template-columns: [navigation] 45px [content] 1fr;
   }
 }
 
@@ -174,10 +186,10 @@ exports[`User settings render correctly 1`] = `
         Update your user settings
       </h3>
       <div
-        className="c10"
+        className="c10 c11"
       >
         <input
-          className="c11"
+          className="c12"
           name="username"
           onChange={[Function]}
           placeholder="Username"
@@ -186,10 +198,10 @@ exports[`User settings render correctly 1`] = `
         />
       </div>
       <div
-        className="c10"
+        className="c10 c11"
       >
         <input
-          className="c11"
+          className="c12"
           name="oldPassword"
           onChange={[Function]}
           placeholder="Current password"
@@ -198,10 +210,10 @@ exports[`User settings render correctly 1`] = `
         />
       </div>
       <div
-        className="c10"
+        className="c10 c11"
       >
         <input
-          className="c11"
+          className="c12"
           name="password"
           onChange={[Function]}
           placeholder="New password"
@@ -210,10 +222,10 @@ exports[`User settings render correctly 1`] = `
         />
       </div>
       <div
-        className="c10"
+        className="c10 c11"
       >
         <input
-          className="c11"
+          className="c12"
           name="passwordConfirm"
           onChange={[Function]}
           placeholder="Confirm new password"
@@ -222,7 +234,7 @@ exports[`User settings render correctly 1`] = `
         />
       </div>
       <button
-        className="c12 c13"
+        className="c13 c14"
         disabled={true}
         id="updateUserDetailsButton"
       >
