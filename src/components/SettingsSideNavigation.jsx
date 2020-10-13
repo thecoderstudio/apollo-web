@@ -14,12 +14,12 @@ const Navigation = styled.div`
   background-color: ${props => props.theme.lightBlack};
   box-shadow: inset ${props => props.theme.boxShadow};
   padding-top: 32px;
+  transition: 0.75s ease-in-out;
+  overflow: hidden;
+
   ${media.phone`
     width: 45px;
   `}
-
-  transition: all 1s ease;
-  overflow: hidden;
 `;
 
 export default function SettingsSideNavigation(props) {

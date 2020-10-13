@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Switch } from 'react-router-dom';
 import SettingsSideNavigation from "./SettingsSideNavigation";
+import media from '../util/media';
 
 const propTypes = {
   location: PropTypes.object.isRequired,
@@ -14,6 +15,11 @@ const ContentWrapper = styled.div`
   display: grid;
   position: relative;
   grid-template-columns: [navigation] 225px [content] 1fr;
+  transition: 0.75s ease-in-out;
+
+  ${media.phone`
+    grid-template-columns: [navigation] 45px [content] 1fr;
+  `}
 `;
 
 const StyledNavigation = styled(SettingsSideNavigation)`
