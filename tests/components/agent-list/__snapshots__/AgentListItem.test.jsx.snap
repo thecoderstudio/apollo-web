@@ -4,11 +4,12 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #F8F8F8;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c1:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c7 {
@@ -164,6 +165,7 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
   >
     <a
       className="c1 c2"
+      disabled={false}
       href="/agent/fakeid"
       onClick={[Function]}
     >
@@ -209,11 +211,12 @@ exports[`agent list item opens and closes the terminal 1`] = `
 .c2 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #F8F8F8;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c2:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c8 {
@@ -515,23 +518,28 @@ exports[`agent list item opens and closes the terminal 1`] = `
               >
                 <Link
                   className="c1"
+                  disabled={false}
                   to="/agent/fakeid"
                 >
                   <Styled(Link)
                     className="c1"
+                    disabled={false}
                     to="/agent/fakeid"
                   >
                     <Link
                       className="c2 c1"
+                      disabled={false}
                       to="/agent/fakeid"
                     >
                       <LinkAnchor
                         className="c2 c1"
+                        disabled={false}
                         href="/agent/fakeid"
                         navigate={[Function]}
                       >
                         <a
                           className="c2 c1"
+                          disabled={false}
                           href="/agent/fakeid"
                           onClick={[Function]}
                         >
@@ -1582,11 +1590,12 @@ exports[`agent list item opens and closes the terminal 2`] = `
 .c2 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #F8F8F8;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c2:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c8 {
@@ -1805,23 +1814,28 @@ exports[`agent list item opens and closes the terminal 2`] = `
               >
                 <Link
                   className="c1"
+                  disabled={false}
                   to="/agent/fakeid"
                 >
                   <Styled(Link)
                     className="c1"
+                    disabled={false}
                     to="/agent/fakeid"
                   >
                     <Link
                       className="c2 c1"
+                      disabled={false}
                       to="/agent/fakeid"
                     >
                       <LinkAnchor
                         className="c2 c1"
+                        disabled={false}
                         href="/agent/fakeid"
                         navigate={[Function]}
                       >
                         <a
                           className="c2 c1"
+                          disabled={false}
                           href="/agent/fakeid"
                           onClick={[Function]}
                         >
@@ -1987,11 +2001,12 @@ exports[`agent list item renders connected correctly 1`] = `
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #F8F8F8;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c1:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c7 {
@@ -2147,6 +2162,7 @@ exports[`agent list item renders connected correctly 1`] = `
   >
     <a
       className="c1 c2"
+      disabled={false}
       href="/agent/fakeid"
       onClick={[Function]}
     >
@@ -2192,11 +2208,12 @@ exports[`agent list item renders disconnected correctly 1`] = `
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #F8F8F8;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c1:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c7 {
@@ -2352,6 +2369,7 @@ exports[`agent list item renders disconnected correctly 1`] = `
   >
     <a
       className="c1 c2"
+      disabled={false}
       href="/agent/fakeid"
       onClick={[Function]}
     >
@@ -2397,11 +2415,12 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #F8F8F8;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c1:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c7 {
@@ -2557,6 +2576,7 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
   >
     <a
       className="c1 c2"
+      disabled={false}
       href="/agent/fakeid"
       onClick={[Function]}
     >
@@ -2602,11 +2622,12 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #F8F8F8;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c1:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c7 {
@@ -2762,6 +2783,7 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
   >
     <a
       className="c1 c2"
+      disabled={false}
       href="/agent/fakeid"
       onClick={[Function]}
     >
@@ -2807,11 +2829,12 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #F8F8F8;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c1:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c7 {
@@ -2967,6 +2990,7 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
   >
     <a
       className="c1 c2"
+      disabled={false}
       href="/agent/fakeid"
       onClick={[Function]}
     >
@@ -3012,11 +3036,12 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #F8F8F8;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c1:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c7 {
@@ -3172,6 +3197,7 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
   >
     <a
       className="c1 c2"
+      disabled={false}
       href="/agent/fakeid"
       onClick={[Function]}
     >
@@ -3217,11 +3243,12 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #F8F8F8;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c1:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c7 {
@@ -3377,6 +3404,7 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
   >
     <a
       className="c1 c2"
+      disabled={false}
       href="/agent/fakeid"
       onClick={[Function]}
     >

@@ -4,10 +4,12 @@ exports[`navbar render admin link for admins 1`] = `
 .c5 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c5:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c0 {
@@ -185,6 +187,7 @@ exports[`navbar render admin link for admins 1`] = `
     >
       <a
         className="c5 c6"
+        disabled={false}
         href="/"
         onClick={[Function]}
       >
@@ -192,6 +195,7 @@ exports[`navbar render admin link for admins 1`] = `
       </a>
       <a
         className="c5 c6"
+        disabled={false}
         href="/admin"
         onClick={[Function]}
       >
@@ -213,10 +217,12 @@ exports[`navbar renders correctly 1`] = `
 .c5 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c5:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c0 {
@@ -394,6 +400,7 @@ exports[`navbar renders correctly 1`] = `
     >
       <a
         className="c5 c6"
+        disabled={false}
         href="/"
         onClick={[Function]}
       >
@@ -415,10 +422,12 @@ exports[`navbar toggles collapsed 1`] = `
 .c5 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c5:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c0 {
@@ -608,6 +617,7 @@ exports[`navbar toggles collapsed 1`] = `
     >
       <a
         className="c5 c6"
+        disabled={false}
         href="/"
         onClick={[Function]}
       >
@@ -629,10 +639,12 @@ exports[`navbar toggles collapsed 2`] = `
 .c5 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c5:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c0 {
@@ -822,6 +834,7 @@ exports[`navbar toggles collapsed 2`] = `
     >
       <a
         className="c5 c6"
+        disabled={false}
         href="/"
         onClick={[Function]}
       >

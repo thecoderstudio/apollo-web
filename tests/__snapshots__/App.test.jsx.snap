@@ -328,11 +328,12 @@ exports[`app renders correctly authenticated and password changed 1`] = `
 .c6 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #F8F8F8;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c6:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c1 {
@@ -601,6 +602,7 @@ exports[`app renders correctly authenticated and password changed 1`] = `
         >
           <a
             className="c6 c7"
+            disabled={false}
             href="/"
             onClick={[Function]}
           >

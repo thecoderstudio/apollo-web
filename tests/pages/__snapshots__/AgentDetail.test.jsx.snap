@@ -45,11 +45,12 @@ exports[`agent detail correctly syncs with remote 1`] = `
 .c15 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #F8F8F8;
+  cursor: inherit;
+  pointer-events: none;
 }
 
 .c15:hover {
-  opacity: 0.90;
+  opacity: 0.2;
 }
 
 .c16 {
@@ -62,6 +63,7 @@ exports[`agent detail correctly syncs with remote 1`] = `
   -ms-flex-align: center;
   align-items: center;
   margin: 16px;
+  opacity: 0.2;
 }
 
 .c18 {
@@ -94,6 +96,7 @@ exports[`agent detail correctly syncs with remote 1`] = `
   grid-column: content;
   grid-row: body;
   margin: 0;
+  color: #F8F8F8;
 }
 
 .c12 {
@@ -297,6 +300,7 @@ exports[`agent detail correctly syncs with remote 1`] = `
       <div>
         <a
           className="c15 c16 c17"
+          disabled={true}
           href="/agent/fakeid/action/linpeas"
           onClick={[Function]}
         >
@@ -367,11 +371,12 @@ exports[`agent detail deals with property updates correctly 1`] = `
 .c15 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #F8F8F8;
+  cursor: inherit;
+  pointer-events: none;
 }
 
 .c15:hover {
-  opacity: 0.90;
+  opacity: 0.2;
 }
 
 .c16 {
@@ -384,6 +389,7 @@ exports[`agent detail deals with property updates correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   margin: 16px;
+  opacity: 0.2;
 }
 
 .c18 {
@@ -416,6 +422,7 @@ exports[`agent detail deals with property updates correctly 1`] = `
   grid-column: content;
   grid-row: body;
   margin: 0;
+  color: #F8F8F8;
 }
 
 .c12 {
@@ -619,6 +626,7 @@ exports[`agent detail deals with property updates correctly 1`] = `
       <div>
         <a
           className="c15 c16 c17"
+          disabled={true}
           href="/agent/fakeid/action/linpeas"
           onClick={[Function]}
         >
@@ -689,11 +697,12 @@ exports[`agent detail handles sync failure 1`] = `
 .c15 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #F8F8F8;
+  cursor: inherit;
+  pointer-events: none;
 }
 
 .c15:hover {
-  opacity: 0.90;
+  opacity: 0.2;
 }
 
 .c16 {
@@ -706,6 +715,7 @@ exports[`agent detail handles sync failure 1`] = `
   -ms-flex-align: center;
   align-items: center;
   margin: 16px;
+  opacity: 0.2;
 }
 
 .c18 {
@@ -738,6 +748,7 @@ exports[`agent detail handles sync failure 1`] = `
   grid-column: content;
   grid-row: body;
   margin: 0;
+  color: #F8F8F8;
 }
 
 .c12 {
@@ -941,6 +952,7 @@ exports[`agent detail handles sync failure 1`] = `
       <div>
         <a
           className="c15 c16 c17"
+          disabled={true}
           href="/agent/fakeid/action/linpeas"
           onClick={[Function]}
         >
@@ -1011,11 +1023,12 @@ exports[`agent detail opens terminal 1`] = `
 .c15 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #F8F8F8;
+  cursor: inherit;
+  pointer-events: none;
 }
 
 .c15:hover {
-  opacity: 0.90;
+  opacity: 0.2;
 }
 
 .c16 {
@@ -1028,6 +1041,7 @@ exports[`agent detail opens terminal 1`] = `
   -ms-flex-align: center;
   align-items: center;
   margin: 16px;
+  opacity: 0.2;
 }
 
 .c18 {
@@ -1060,6 +1074,7 @@ exports[`agent detail opens terminal 1`] = `
   grid-column: content;
   grid-row: body;
   margin: 0;
+  color: #F8F8F8;
 }
 
 .c12 {
@@ -1263,6 +1278,7 @@ exports[`agent detail opens terminal 1`] = `
       <div>
         <a
           className="c15 c16 c17"
+          disabled={true}
           href="/agent/fakeid/action/linpeas"
           onClick={[Function]}
         >
@@ -1333,11 +1349,12 @@ exports[`agent detail opens terminal 2`] = `
 .c15 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #F8F8F8;
+  cursor: inherit;
+  pointer-events: none;
 }
 
 .c15:hover {
-  opacity: 0.90;
+  opacity: 0.2;
 }
 
 .c16 {
@@ -1350,6 +1367,7 @@ exports[`agent detail opens terminal 2`] = `
   -ms-flex-align: center;
   align-items: center;
   margin: 16px;
+  opacity: 0.2;
 }
 
 .c18 {
@@ -1382,6 +1400,7 @@ exports[`agent detail opens terminal 2`] = `
   grid-column: content;
   grid-row: body;
   margin: 0;
+  color: #F8F8F8;
 }
 
 .c12 {
@@ -1585,6 +1604,7 @@ exports[`agent detail opens terminal 2`] = `
       <div>
         <a
           className="c15 c16 c17"
+          disabled={true}
           href="/agent/fakeid/action/linpeas"
           onClick={[Function]}
         >
@@ -1717,7 +1737,8 @@ exports[`agent detail opens terminal 3`] = `
       </h2>
       <div>
         <a
-          className="sc-fzpans iLhCQY sc-fzplWN iqyMKS sc-fzoyAV cVEmlz"
+          className="sc-fzpans jnuHzE sc-fzplWN dsNVAP sc-fzoyAV cVEmlz"
+          disabled={true}
           href="/agent/fakeid/action/linpeas"
           onClick={[Function]}
         >
@@ -1732,7 +1753,7 @@ exports[`agent detail opens terminal 3`] = `
             Run LinPEAS
           </h4>
           <p
-            className="sc-fznZeY iiiQU"
+            className="sc-fznZeY cRuoVs"
           >
             LinPEAS is a script that search for possible paths to escalate privileges on Linux/Unix hosts
           </p>
@@ -1788,11 +1809,12 @@ exports[`agent detail renders correctly 1`] = `
 .c15 {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #F8F8F8;
+  cursor: inherit;
+  pointer-events: none;
 }
 
 .c15:hover {
-  opacity: 0.90;
+  opacity: 0.2;
 }
 
 .c16 {
@@ -1805,6 +1827,7 @@ exports[`agent detail renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   margin: 16px;
+  opacity: 0.2;
 }
 
 .c18 {
@@ -1837,6 +1860,7 @@ exports[`agent detail renders correctly 1`] = `
   grid-column: content;
   grid-row: body;
   margin: 0;
+  color: #F8F8F8;
 }
 
 .c12 {
@@ -2040,6 +2064,7 @@ exports[`agent detail renders correctly 1`] = `
       <div>
         <a
           className="c15 c16 c17"
+          disabled={true}
           href="/agent/fakeid/action/linpeas"
           onClick={[Function]}
         >
