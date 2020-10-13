@@ -109,7 +109,7 @@ describe("User settings", () => {
 
     submitForm(root, 'username', '', 'password', 'password');
     submitForm(root, 'username', 'oldPassword', 'passw', 'passw');
-    submitForm(root, 'oldpassword', 'password1', 'password2');
+    submitForm(root, '', 'oldpassword', 'password1', 'password2');
 
     await waitForExpect(() => {
       expect(axios.patch).not.toHaveBeenCalled();
