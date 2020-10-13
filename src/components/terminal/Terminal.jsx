@@ -86,9 +86,7 @@ export class Terminal extends React.PureComponent {
   }
 
   componentWillUnmount() {
-    if (this.socket != null) {
-      this.socket.close();
-    }
+    this.socket.close();
   }
 
   onSocketError() {
