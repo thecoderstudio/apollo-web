@@ -18,6 +18,10 @@ const Form = styled.form`
   max-width: 300px;
 `;
 
+const StyledInput = styled(Input)`
+  margin-bottom: 15px;
+`;
+
 const StyledButton = styled(Button)`
   width: 100%;
 `;
@@ -97,7 +101,7 @@ class UserSettings extends React.PureComponent {
           }) => (
             <Form onSubmit={handleSubmit}>
               <h3>Update your user settings</h3>
-              <Input
+              <StyledInput
                 inverted
                 name='username'
                 placeholder='Username'
@@ -106,7 +110,7 @@ class UserSettings extends React.PureComponent {
                 error={errors.username}
                 onChange={handleChange}
               />
-              <Input
+              <StyledInput
                 inverted
                 name='oldPassword'
                 placeholder='Current password'
@@ -115,7 +119,7 @@ class UserSettings extends React.PureComponent {
                 error={errors.oldPassword}
                 onChange={handleChange}
               />
-              <Input
+              <StyledInput
                 inverted
                 name='password'
                 type='password'
@@ -124,7 +128,7 @@ class UserSettings extends React.PureComponent {
                 error={errors.password}
                 onChange={handleChange}
               />
-              <Input
+              <StyledInput
                 inverted
                 name='passwordConfirm'
                 type='password'
