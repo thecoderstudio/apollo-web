@@ -1,11 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`agent detail correctly syncs with remote 1`] = `
-.c10 {
+.c6 {
+  cursor: pointer;
+}
+
+.c8 {
+  cursor: inherit;
+}
+
+.c12 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
+}
+
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -21,7 +32,7 @@ exports[`agent detail correctly syncs with remote 1`] = `
   height: 400px;
 }
 
-.c11 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -42,7 +53,7 @@ exports[`agent detail correctly syncs with remote 1`] = `
   background-color: #C0392B;
 }
 
-.c15 {
+.c18 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #F8F8F8;
@@ -50,11 +61,11 @@ exports[`agent detail correctly syncs with remote 1`] = `
   pointer-events: none;
 }
 
-.c15:hover {
+.c18:hover {
   opacity: 0.2;
 }
 
-.c16 {
+.c19 {
   display: grid;
   grid-template-columns: [image] 50px [content] 1fr;
   grid-template-rows: [title] 1fr [body] 1fr;
@@ -67,7 +78,7 @@ exports[`agent detail correctly syncs with remote 1`] = `
   opacity: 0.2;
 }
 
-.c18 {
+.c21 {
   display: grid;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -86,34 +97,34 @@ exports[`agent detail correctly syncs with remote 1`] = `
   border-radius: 5px;
 }
 
-.c19 {
+.c22 {
   grid-column: content;
   grid-row: title;
   color: #02A3EE;
   margin: 0 0 8px 0;
 }
 
-.c20 {
+.c23 {
   grid-column: content;
   grid-row: body;
   margin: 0;
   color: #F8F8F8;
 }
 
-.c12 {
+.c15 {
   width: 100%;
 }
 
-.c14 {
+.c17 {
   width: 100%;
 }
 
-.c14 > div {
+.c17 > div {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.c17 {
+.c20 {
   margin: 16px 16px 16px 0;
 }
 
@@ -146,25 +157,23 @@ exports[`agent detail correctly syncs with remote 1`] = `
   padding-right: 40px;
 }
 
-.c8 {
+.c10 {
   grid-column: controls;
   width: 100%;
   min-width: 0;
 }
 
-.c9 {
+.c11 {
   width: 100%;
 }
 
-.c6 {
-  cursor: pointer;
+.c7 {
   margin-right: 10px;
   color: #F8F8F8;
   cursor: inherit;
 }
 
-.c7 {
-  cursor: inherit;
+.c9 {
   margin-top: 16px;
   width: 24px;
   height: 24px;
@@ -172,24 +181,24 @@ exports[`agent detail correctly syncs with remote 1`] = `
   display: none;
 }
 
-.c13 {
+.c16 {
   margin-top: 150px;
 }
 
 @media (max-width:47.9375em) {
-  .c14 > div {
+  .c17 > div {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c9 {
+  .c11 {
     display: none;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c9 {
     display: block;
   }
 }
@@ -242,7 +251,7 @@ exports[`agent detail correctly syncs with remote 1`] = `
               className="c5"
             >
               <i
-                className="c6 fab fa-apple"
+                className="c6 c7 fab fa-apple"
               />
               darwin
             </td>
@@ -264,18 +273,18 @@ exports[`agent detail correctly syncs with remote 1`] = `
         </tbody>
       </table>
       <i
-        className="c7 fas fa-terminal"
+        className="c8 c9 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
     <div
-      className="c8"
+      className="c10"
     >
       <div
-        className="c9"
+        className="c11"
       >
         <div
-          className="c10"
+          className="c12 c13"
         >
           <div>
             <h2>
@@ -284,39 +293,39 @@ exports[`agent detail correctly syncs with remote 1`] = `
           </div>
         </div>
         <div
-          className="c11"
+          className="c14"
         />
       </div>
     </div>
   </div>
   <div
-    className="c12 c13"
+    className="c15 c16"
   >
     <div
-      className="c14"
+      className="c17"
     >
       <h2>
         Enumeration
       </h2>
       <div>
         <a
-          className="c15 c16 c17"
+          className="c18 c19 c20"
           disabled={true}
           href="/agent/fakeid/action/linpeas"
           onClick={[Function]}
         >
           <i
-            className="c18 material-icons"
+            className="c21 material-icons"
           >
             assessment
           </i>
           <h4
-            className="c19"
+            className="c22"
           >
             Run LinPEAS
           </h4>
           <p
-            className="c20"
+            className="c23"
           >
             LinPEAS is a script that search for possible paths to escalate privileges on Linux/Unix hosts
           </p>
@@ -328,11 +337,22 @@ exports[`agent detail correctly syncs with remote 1`] = `
 `;
 
 exports[`agent detail deals with property updates correctly 1`] = `
-.c10 {
+.c6 {
+  cursor: pointer;
+}
+
+.c8 {
+  cursor: inherit;
+}
+
+.c12 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
+}
+
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -348,7 +368,7 @@ exports[`agent detail deals with property updates correctly 1`] = `
   height: 400px;
 }
 
-.c11 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -369,7 +389,7 @@ exports[`agent detail deals with property updates correctly 1`] = `
   background-color: #C0392B;
 }
 
-.c15 {
+.c18 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #F8F8F8;
@@ -377,11 +397,11 @@ exports[`agent detail deals with property updates correctly 1`] = `
   pointer-events: none;
 }
 
-.c15:hover {
+.c18:hover {
   opacity: 0.2;
 }
 
-.c16 {
+.c19 {
   display: grid;
   grid-template-columns: [image] 50px [content] 1fr;
   grid-template-rows: [title] 1fr [body] 1fr;
@@ -394,7 +414,7 @@ exports[`agent detail deals with property updates correctly 1`] = `
   opacity: 0.2;
 }
 
-.c18 {
+.c21 {
   display: grid;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -413,34 +433,34 @@ exports[`agent detail deals with property updates correctly 1`] = `
   border-radius: 5px;
 }
 
-.c19 {
+.c22 {
   grid-column: content;
   grid-row: title;
   color: #02A3EE;
   margin: 0 0 8px 0;
 }
 
-.c20 {
+.c23 {
   grid-column: content;
   grid-row: body;
   margin: 0;
   color: #F8F8F8;
 }
 
-.c12 {
+.c15 {
   width: 100%;
 }
 
-.c14 {
+.c17 {
   width: 100%;
 }
 
-.c14 > div {
+.c17 > div {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.c17 {
+.c20 {
   margin: 16px 16px 16px 0;
 }
 
@@ -473,25 +493,23 @@ exports[`agent detail deals with property updates correctly 1`] = `
   padding-right: 40px;
 }
 
-.c8 {
+.c10 {
   grid-column: controls;
   width: 100%;
   min-width: 0;
 }
 
-.c9 {
+.c11 {
   width: 100%;
 }
 
-.c6 {
-  cursor: pointer;
+.c7 {
   margin-right: 10px;
   color: #F8F8F8;
   cursor: inherit;
 }
 
-.c7 {
-  cursor: inherit;
+.c9 {
   margin-top: 16px;
   width: 24px;
   height: 24px;
@@ -499,24 +517,24 @@ exports[`agent detail deals with property updates correctly 1`] = `
   display: none;
 }
 
-.c13 {
+.c16 {
   margin-top: 150px;
 }
 
 @media (max-width:47.9375em) {
-  .c14 > div {
+  .c17 > div {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c9 {
+  .c11 {
     display: none;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c9 {
     display: block;
   }
 }
@@ -569,7 +587,7 @@ exports[`agent detail deals with property updates correctly 1`] = `
               className="c5"
             >
               <i
-                className="c6 fab fa-apple"
+                className="c6 c7 fab fa-apple"
               />
               darwin
             </td>
@@ -591,18 +609,18 @@ exports[`agent detail deals with property updates correctly 1`] = `
         </tbody>
       </table>
       <i
-        className="c7 fas fa-terminal"
+        className="c8 c9 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
     <div
-      className="c8"
+      className="c10"
     >
       <div
-        className="c9"
+        className="c11"
       >
         <div
-          className="c10"
+          className="c12 c13"
         >
           <div>
             <h2>
@@ -611,39 +629,39 @@ exports[`agent detail deals with property updates correctly 1`] = `
           </div>
         </div>
         <div
-          className="c11"
+          className="c14"
         />
       </div>
     </div>
   </div>
   <div
-    className="c12 c13"
+    className="c15 c16"
   >
     <div
-      className="c14"
+      className="c17"
     >
       <h2>
         Enumeration
       </h2>
       <div>
         <a
-          className="c15 c16 c17"
+          className="c18 c19 c20"
           disabled={true}
           href="/agent/fakeid/action/linpeas"
           onClick={[Function]}
         >
           <i
-            className="c18 material-icons"
+            className="c21 material-icons"
           >
             assessment
           </i>
           <h4
-            className="c19"
+            className="c22"
           >
             Run LinPEAS
           </h4>
           <p
-            className="c20"
+            className="c23"
           >
             LinPEAS is a script that search for possible paths to escalate privileges on Linux/Unix hosts
           </p>
@@ -655,11 +673,22 @@ exports[`agent detail deals with property updates correctly 1`] = `
 `;
 
 exports[`agent detail handles sync failure 1`] = `
-.c10 {
+.c6 {
+  cursor: pointer;
+}
+
+.c8 {
+  cursor: inherit;
+}
+
+.c12 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
+}
+
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -675,7 +704,7 @@ exports[`agent detail handles sync failure 1`] = `
   height: 400px;
 }
 
-.c11 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -696,7 +725,7 @@ exports[`agent detail handles sync failure 1`] = `
   background-color: #C0392B;
 }
 
-.c15 {
+.c18 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #F8F8F8;
@@ -704,11 +733,11 @@ exports[`agent detail handles sync failure 1`] = `
   pointer-events: none;
 }
 
-.c15:hover {
+.c18:hover {
   opacity: 0.2;
 }
 
-.c16 {
+.c19 {
   display: grid;
   grid-template-columns: [image] 50px [content] 1fr;
   grid-template-rows: [title] 1fr [body] 1fr;
@@ -721,7 +750,7 @@ exports[`agent detail handles sync failure 1`] = `
   opacity: 0.2;
 }
 
-.c18 {
+.c21 {
   display: grid;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -740,34 +769,34 @@ exports[`agent detail handles sync failure 1`] = `
   border-radius: 5px;
 }
 
-.c19 {
+.c22 {
   grid-column: content;
   grid-row: title;
   color: #02A3EE;
   margin: 0 0 8px 0;
 }
 
-.c20 {
+.c23 {
   grid-column: content;
   grid-row: body;
   margin: 0;
   color: #F8F8F8;
 }
 
-.c12 {
+.c15 {
   width: 100%;
 }
 
-.c14 {
+.c17 {
   width: 100%;
 }
 
-.c14 > div {
+.c17 > div {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.c17 {
+.c20 {
   margin: 16px 16px 16px 0;
 }
 
@@ -800,25 +829,23 @@ exports[`agent detail handles sync failure 1`] = `
   padding-right: 40px;
 }
 
-.c8 {
+.c10 {
   grid-column: controls;
   width: 100%;
   min-width: 0;
 }
 
-.c9 {
+.c11 {
   width: 100%;
 }
 
-.c6 {
-  cursor: pointer;
+.c7 {
   margin-right: 10px;
   color: #F8F8F8;
   cursor: inherit;
 }
 
-.c7 {
-  cursor: inherit;
+.c9 {
   margin-top: 16px;
   width: 24px;
   height: 24px;
@@ -826,24 +853,24 @@ exports[`agent detail handles sync failure 1`] = `
   display: none;
 }
 
-.c13 {
+.c16 {
   margin-top: 150px;
 }
 
 @media (max-width:47.9375em) {
-  .c14 > div {
+  .c17 > div {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c9 {
+  .c11 {
     display: none;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c9 {
     display: block;
   }
 }
@@ -896,7 +923,7 @@ exports[`agent detail handles sync failure 1`] = `
               className="c5"
             >
               <i
-                className="c6 fab fa-apple"
+                className="c6 c7 fab fa-apple"
               />
               darwin
             </td>
@@ -918,18 +945,18 @@ exports[`agent detail handles sync failure 1`] = `
         </tbody>
       </table>
       <i
-        className="c7 fas fa-terminal"
+        className="c8 c9 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
     <div
-      className="c8"
+      className="c10"
     >
       <div
-        className="c9"
+        className="c11"
       >
         <div
-          className="c10"
+          className="c12 c13"
         >
           <div>
             <h2>
@@ -938,39 +965,39 @@ exports[`agent detail handles sync failure 1`] = `
           </div>
         </div>
         <div
-          className="c11"
+          className="c14"
         />
       </div>
     </div>
   </div>
   <div
-    className="c12 c13"
+    className="c15 c16"
   >
     <div
-      className="c14"
+      className="c17"
     >
       <h2>
         Enumeration
       </h2>
       <div>
         <a
-          className="c15 c16 c17"
+          className="c18 c19 c20"
           disabled={true}
           href="/agent/fakeid/action/linpeas"
           onClick={[Function]}
         >
           <i
-            className="c18 material-icons"
+            className="c21 material-icons"
           >
             assessment
           </i>
           <h4
-            className="c19"
+            className="c22"
           >
             Run LinPEAS
           </h4>
           <p
-            className="c20"
+            className="c23"
           >
             LinPEAS is a script that search for possible paths to escalate privileges on Linux/Unix hosts
           </p>
@@ -982,11 +1009,22 @@ exports[`agent detail handles sync failure 1`] = `
 `;
 
 exports[`agent detail opens terminal 1`] = `
-.c10 {
+.c6 {
+  cursor: pointer;
+}
+
+.c8 {
+  cursor: inherit;
+}
+
+.c12 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
+}
+
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1002,7 +1040,7 @@ exports[`agent detail opens terminal 1`] = `
   height: 400px;
 }
 
-.c11 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1023,7 +1061,7 @@ exports[`agent detail opens terminal 1`] = `
   background-color: #C0392B;
 }
 
-.c15 {
+.c18 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #F8F8F8;
@@ -1031,11 +1069,11 @@ exports[`agent detail opens terminal 1`] = `
   pointer-events: none;
 }
 
-.c15:hover {
+.c18:hover {
   opacity: 0.2;
 }
 
-.c16 {
+.c19 {
   display: grid;
   grid-template-columns: [image] 50px [content] 1fr;
   grid-template-rows: [title] 1fr [body] 1fr;
@@ -1048,7 +1086,7 @@ exports[`agent detail opens terminal 1`] = `
   opacity: 0.2;
 }
 
-.c18 {
+.c21 {
   display: grid;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -1067,34 +1105,34 @@ exports[`agent detail opens terminal 1`] = `
   border-radius: 5px;
 }
 
-.c19 {
+.c22 {
   grid-column: content;
   grid-row: title;
   color: #02A3EE;
   margin: 0 0 8px 0;
 }
 
-.c20 {
+.c23 {
   grid-column: content;
   grid-row: body;
   margin: 0;
   color: #F8F8F8;
 }
 
-.c12 {
+.c15 {
   width: 100%;
 }
 
-.c14 {
+.c17 {
   width: 100%;
 }
 
-.c14 > div {
+.c17 > div {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.c17 {
+.c20 {
   margin: 16px 16px 16px 0;
 }
 
@@ -1127,25 +1165,23 @@ exports[`agent detail opens terminal 1`] = `
   padding-right: 40px;
 }
 
-.c8 {
+.c10 {
   grid-column: controls;
   width: 100%;
   min-width: 0;
 }
 
-.c9 {
+.c11 {
   width: 100%;
 }
 
-.c6 {
-  cursor: pointer;
+.c7 {
   margin-right: 10px;
   color: #F8F8F8;
   cursor: inherit;
 }
 
-.c7 {
-  cursor: inherit;
+.c9 {
   margin-top: 16px;
   width: 24px;
   height: 24px;
@@ -1153,24 +1189,24 @@ exports[`agent detail opens terminal 1`] = `
   display: none;
 }
 
-.c13 {
+.c16 {
   margin-top: 150px;
 }
 
 @media (max-width:47.9375em) {
-  .c14 > div {
+  .c17 > div {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c9 {
+  .c11 {
     display: none;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c9 {
     display: block;
   }
 }
@@ -1223,7 +1259,7 @@ exports[`agent detail opens terminal 1`] = `
               className="c5"
             >
               <i
-                className="c6 fab fa-apple"
+                className="c6 c7 fab fa-apple"
               />
               darwin
             </td>
@@ -1245,18 +1281,18 @@ exports[`agent detail opens terminal 1`] = `
         </tbody>
       </table>
       <i
-        className="c7 fas fa-terminal"
+        className="c8 c9 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
     <div
-      className="c8"
+      className="c10"
     >
       <div
-        className="c9"
+        className="c11"
       >
         <div
-          className="c10"
+          className="c12 c13"
         >
           <div>
             <h2>
@@ -1265,39 +1301,39 @@ exports[`agent detail opens terminal 1`] = `
           </div>
         </div>
         <div
-          className="c11"
+          className="c14"
         />
       </div>
     </div>
   </div>
   <div
-    className="c12 c13"
+    className="c15 c16"
   >
     <div
-      className="c14"
+      className="c17"
     >
       <h2>
         Enumeration
       </h2>
       <div>
         <a
-          className="c15 c16 c17"
+          className="c18 c19 c20"
           disabled={true}
           href="/agent/fakeid/action/linpeas"
           onClick={[Function]}
         >
           <i
-            className="c18 material-icons"
+            className="c21 material-icons"
           >
             assessment
           </i>
           <h4
-            className="c19"
+            className="c22"
           >
             Run LinPEAS
           </h4>
           <p
-            className="c20"
+            className="c23"
           >
             LinPEAS is a script that search for possible paths to escalate privileges on Linux/Unix hosts
           </p>
@@ -1309,11 +1345,22 @@ exports[`agent detail opens terminal 1`] = `
 `;
 
 exports[`agent detail opens terminal 2`] = `
-.c10 {
+.c6 {
+  cursor: pointer;
+}
+
+.c8 {
+  cursor: inherit;
+}
+
+.c12 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
+}
+
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1329,7 +1376,7 @@ exports[`agent detail opens terminal 2`] = `
   height: 400px;
 }
 
-.c11 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1350,7 +1397,7 @@ exports[`agent detail opens terminal 2`] = `
   background-color: #C0392B;
 }
 
-.c15 {
+.c18 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #F8F8F8;
@@ -1358,11 +1405,11 @@ exports[`agent detail opens terminal 2`] = `
   pointer-events: none;
 }
 
-.c15:hover {
+.c18:hover {
   opacity: 0.2;
 }
 
-.c16 {
+.c19 {
   display: grid;
   grid-template-columns: [image] 50px [content] 1fr;
   grid-template-rows: [title] 1fr [body] 1fr;
@@ -1375,7 +1422,7 @@ exports[`agent detail opens terminal 2`] = `
   opacity: 0.2;
 }
 
-.c18 {
+.c21 {
   display: grid;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -1394,34 +1441,34 @@ exports[`agent detail opens terminal 2`] = `
   border-radius: 5px;
 }
 
-.c19 {
+.c22 {
   grid-column: content;
   grid-row: title;
   color: #02A3EE;
   margin: 0 0 8px 0;
 }
 
-.c20 {
+.c23 {
   grid-column: content;
   grid-row: body;
   margin: 0;
   color: #F8F8F8;
 }
 
-.c12 {
+.c15 {
   width: 100%;
 }
 
-.c14 {
+.c17 {
   width: 100%;
 }
 
-.c14 > div {
+.c17 > div {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.c17 {
+.c20 {
   margin: 16px 16px 16px 0;
 }
 
@@ -1454,25 +1501,23 @@ exports[`agent detail opens terminal 2`] = `
   padding-right: 40px;
 }
 
-.c8 {
+.c10 {
   grid-column: controls;
   width: 100%;
   min-width: 0;
 }
 
-.c9 {
+.c11 {
   width: 100%;
 }
 
-.c6 {
-  cursor: pointer;
+.c7 {
   margin-right: 10px;
   color: #F8F8F8;
   cursor: inherit;
 }
 
-.c7 {
-  cursor: inherit;
+.c9 {
   margin-top: 16px;
   width: 24px;
   height: 24px;
@@ -1480,24 +1525,24 @@ exports[`agent detail opens terminal 2`] = `
   display: none;
 }
 
-.c13 {
+.c16 {
   margin-top: 150px;
 }
 
 @media (max-width:47.9375em) {
-  .c14 > div {
+  .c17 > div {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c9 {
+  .c11 {
     display: none;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c9 {
     display: block;
   }
 }
@@ -1550,7 +1595,7 @@ exports[`agent detail opens terminal 2`] = `
               className="c5"
             >
               <i
-                className="c6 fab fa-apple"
+                className="c6 c7 fab fa-apple"
               />
               darwin
             </td>
@@ -1572,18 +1617,18 @@ exports[`agent detail opens terminal 2`] = `
         </tbody>
       </table>
       <i
-        className="c7 fas fa-terminal"
+        className="c8 c9 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
     <div
-      className="c8"
+      className="c10"
     >
       <div
-        className="c9"
+        className="c11"
       >
         <div
-          className="c10"
+          className="c12 c13"
         >
           <div>
             <h2>
@@ -1592,39 +1637,39 @@ exports[`agent detail opens terminal 2`] = `
           </div>
         </div>
         <div
-          className="c11"
+          className="c14"
         />
       </div>
     </div>
   </div>
   <div
-    className="c12 c13"
+    className="c15 c16"
   >
     <div
-      className="c14"
+      className="c17"
     >
       <h2>
         Enumeration
       </h2>
       <div>
         <a
-          className="c15 c16 c17"
+          className="c18 c19 c20"
           disabled={true}
           href="/agent/fakeid/action/linpeas"
           onClick={[Function]}
         >
           <i
-            className="c18 material-icons"
+            className="c21 material-icons"
           >
             assessment
           </i>
           <h4
-            className="c19"
+            className="c22"
           >
             Run LinPEAS
           </h4>
           <p
-            className="c20"
+            className="c23"
           >
             LinPEAS is a script that search for possible paths to escalate privileges on Linux/Unix hosts
           </p>
@@ -1637,19 +1682,19 @@ exports[`agent detail opens terminal 2`] = `
 
 exports[`agent detail opens terminal 3`] = `
 <div
-  className="sc-fzqARJ iuGSwY"
+  className="sc-bCwgka cpPqQQ"
 >
   <div
-    className="sc-fzqNqU bDSmdZ"
+    className="sc-iwaifL bcDlbF"
   >
     <div
-      className="sc-fzoNJl dDjYGa"
+      className="sc-lmgQde fNtBws"
     >
       <div
-        className="sc-fzoyTs fEcysN"
+        className="sc-cxNIbT fdtLQN"
       >
         <div
-          className="sc-fzoLsD jZMuGW"
+          className="sc-jrsJCI bmKhFO"
           color="#C0392B"
         />
         <h1>
@@ -1660,45 +1705,45 @@ exports[`agent detail opens terminal 3`] = `
         <tbody>
           <tr>
             <td
-              className="sc-fzoXWK ruPLA"
+              className="sc-iJCRLp kKdtsi"
             >
               <b>
                 External IP address
               </b>
             </td>
             <td
-              className="sc-fzoXWK ruPLA"
+              className="sc-iJCRLp kKdtsi"
             >
               unknown
             </td>
           </tr>
           <tr>
             <td
-              className="sc-fzoXWK ruPLA"
+              className="sc-iJCRLp kKdtsi"
             >
               <b>
                 Operating system
               </b>
             </td>
             <td
-              className="sc-fzoXWK ruPLA"
+              className="sc-iJCRLp kKdtsi"
             >
               <i
-                className="sc-AxjAm sc-fznMAR jaccxL fab fa-apple"
+                className="sc-bdnylx sc-bYwzba kAOcqP erDHdr fab fa-apple"
               />
               darwin
             </td>
           </tr>
           <tr>
             <td
-              className="sc-fzoXWK ruPLA"
+              className="sc-iJCRLp kKdtsi"
             >
               <b>
                 Architecture
               </b>
             </td>
             <td
-              className="sc-fzoXWK ruPLA"
+              className="sc-iJCRLp kKdtsi"
             >
               amd64
             </td>
@@ -1706,18 +1751,18 @@ exports[`agent detail opens terminal 3`] = `
         </tbody>
       </table>
       <i
-        className="sc-AxjAm sc-fznWOq cLLLHm fas fa-terminal"
+        className="sc-bdnylx sc-kLokih iEWuNR jNdfvu fas fa-terminal"
         onClick={[Function]}
       />
     </div>
     <div
-      className="sc-fzpmMD ghLLDH"
+      className="sc-giAqnE fHiCCV"
     >
       <div
-        className="sc-fznxKY cLKlRY"
+        className="sc-ezzayL fzoNWW"
       >
         <div
-          className="sc-AxirZ sc-AxheI iasZbb"
+          className="sc-gtssRu sc-gKAblj eJLYUo bNgdcg"
         >
           <div>
             <h2>
@@ -1726,39 +1771,39 @@ exports[`agent detail opens terminal 3`] = `
           </div>
         </div>
         <div
-          className="sc-AxmLO lcomMa"
+          className="sc-fujyUd dWblrL"
         />
       </div>
     </div>
   </div>
   <div
-    className="sc-fzokOt bjmRIa sc-fzolEj iujTBr"
+    className="sc-ksluoS kiDXUP sc-iklIKw kgTcoj"
   >
     <div
-      className="sc-fzqNJr iKYGjY"
+      className="sc-fnVYJo lbWjxS"
     >
       <h2>
         Enumeration
       </h2>
       <div>
         <a
-          className="sc-fzpans hRmTvs sc-fzplWN dsNVAP sc-fzoyAV cVEmlz"
+          className="sc-kEqYlL dEthvt sc-iqAbSa lZTyw sc-fFSRdu ebbFiF"
           disabled={true}
           href="/agent/fakeid/action/linpeas"
           onClick={[Function]}
         >
           <i
-            className="sc-fznyAO kNRnzM material-icons"
+            className="sc-crzoUp eWJLFD material-icons"
           >
             assessment
           </i>
           <h4
-            className="sc-fznKkj pWBOS"
+            className="sc-dIsAE bSbXbf"
           >
             Run LinPEAS
           </h4>
           <p
-            className="sc-fznZeY cRuoVs"
+            className="sc-bqGHjH fmWzVN"
           >
             LinPEAS is a script that search for possible paths to escalate privileges on Linux/Unix hosts
           </p>
@@ -1770,11 +1815,22 @@ exports[`agent detail opens terminal 3`] = `
 `;
 
 exports[`agent detail renders correctly 1`] = `
-.c10 {
+.c6 {
+  cursor: pointer;
+}
+
+.c8 {
+  cursor: inherit;
+}
+
+.c12 {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
   padding: 40px;
   border-radius: 10px;
   background-color: #1B1B1B;
+}
+
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1790,7 +1846,7 @@ exports[`agent detail renders correctly 1`] = `
   height: 400px;
 }
 
-.c11 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1811,7 +1867,7 @@ exports[`agent detail renders correctly 1`] = `
   background-color: #C0392B;
 }
 
-.c15 {
+.c18 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #F8F8F8;
@@ -1819,11 +1875,11 @@ exports[`agent detail renders correctly 1`] = `
   pointer-events: none;
 }
 
-.c15:hover {
+.c18:hover {
   opacity: 0.2;
 }
 
-.c16 {
+.c19 {
   display: grid;
   grid-template-columns: [image] 50px [content] 1fr;
   grid-template-rows: [title] 1fr [body] 1fr;
@@ -1836,7 +1892,7 @@ exports[`agent detail renders correctly 1`] = `
   opacity: 0.2;
 }
 
-.c18 {
+.c21 {
   display: grid;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -1855,34 +1911,34 @@ exports[`agent detail renders correctly 1`] = `
   border-radius: 5px;
 }
 
-.c19 {
+.c22 {
   grid-column: content;
   grid-row: title;
   color: #02A3EE;
   margin: 0 0 8px 0;
 }
 
-.c20 {
+.c23 {
   grid-column: content;
   grid-row: body;
   margin: 0;
   color: #F8F8F8;
 }
 
-.c12 {
+.c15 {
   width: 100%;
 }
 
-.c14 {
+.c17 {
   width: 100%;
 }
 
-.c14 > div {
+.c17 > div {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.c17 {
+.c20 {
   margin: 16px 16px 16px 0;
 }
 
@@ -1915,25 +1971,23 @@ exports[`agent detail renders correctly 1`] = `
   padding-right: 40px;
 }
 
-.c8 {
+.c10 {
   grid-column: controls;
   width: 100%;
   min-width: 0;
 }
 
-.c9 {
+.c11 {
   width: 100%;
 }
 
-.c6 {
-  cursor: pointer;
+.c7 {
   margin-right: 10px;
   color: #F8F8F8;
   cursor: inherit;
 }
 
-.c7 {
-  cursor: inherit;
+.c9 {
   margin-top: 16px;
   width: 24px;
   height: 24px;
@@ -1941,24 +1995,24 @@ exports[`agent detail renders correctly 1`] = `
   display: none;
 }
 
-.c13 {
+.c16 {
   margin-top: 150px;
 }
 
 @media (max-width:47.9375em) {
-  .c14 > div {
+  .c17 > div {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c9 {
+  .c11 {
     display: none;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c9 {
     display: block;
   }
 }
@@ -2011,7 +2065,7 @@ exports[`agent detail renders correctly 1`] = `
               className="c5"
             >
               <i
-                className="c6 fab fa-apple"
+                className="c6 c7 fab fa-apple"
               />
               darwin
             </td>
@@ -2033,18 +2087,18 @@ exports[`agent detail renders correctly 1`] = `
         </tbody>
       </table>
       <i
-        className="c7 fas fa-terminal"
+        className="c8 c9 fas fa-terminal"
         onClick={[Function]}
       />
     </div>
     <div
-      className="c8"
+      className="c10"
     >
       <div
-        className="c9"
+        className="c11"
       >
         <div
-          className="c10"
+          className="c12 c13"
         >
           <div>
             <h2>
@@ -2053,39 +2107,39 @@ exports[`agent detail renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c11"
+          className="c14"
         />
       </div>
     </div>
   </div>
   <div
-    className="c12 c13"
+    className="c15 c16"
   >
     <div
-      className="c14"
+      className="c17"
     >
       <h2>
         Enumeration
       </h2>
       <div>
         <a
-          className="c15 c16 c17"
+          className="c18 c19 c20"
           disabled={true}
           href="/agent/fakeid/action/linpeas"
           onClick={[Function]}
         >
           <i
-            className="c18 material-icons"
+            className="c21 material-icons"
           >
             assessment
           </i>
           <h4
-            className="c19"
+            className="c22"
           >
             Run LinPEAS
           </h4>
           <p
-            className="c20"
+            className="c23"
           >
             LinPEAS is a script that search for possible paths to escalate privileges on Linux/Unix hosts
           </p>

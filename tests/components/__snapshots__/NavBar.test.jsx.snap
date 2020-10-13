@@ -1,15 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`navbar render admin link for admins 1`] = `
-.c5 {
+.c8 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c8:hover {
+  opacity: 0.90;
+}
+
+.c8:focus {
+  outline: none;
+}
+
+.c8:active {
+  opacity: 0.80;
+}
+
+.c8:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c9 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c6 {
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   pointer-events: inherit;
 }
 
-.c5:hover {
+.c6:hover {
   opacity: 0.9;
+}
+
+.c2 {
+  cursor: pointer;
 }
 
 .c0 {
@@ -24,7 +62,7 @@ exports[`navbar render admin link for admins 1`] = `
   z-index: 1;
 }
 
-.c3 {
+.c4 {
   grid-column: content;
   display: grid;
   grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px;
@@ -32,8 +70,7 @@ exports[`navbar render admin link for admins 1`] = `
   height: auto;
 }
 
-.c2 {
-  cursor: pointer;
+.c3 {
   grid-row: logo;
   grid-column: toggle;
   display: none;
@@ -50,16 +87,16 @@ exports[`navbar render admin link for admins 1`] = `
   transition: transform .3s ease-out;
 }
 
-.c2:hover {
+.c3:hover {
   cursor: pointer;
 }
 
-.c6 {
+.c7 {
   margin: 0px 16px;
   float: left;
 }
 
-.c4 {
+.c5 {
   grid-column: menu;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
@@ -70,38 +107,10 @@ exports[`navbar render admin link for admins 1`] = `
   grid-column: logo;
 }
 
-.c7 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
+.c10 {
   grid-column: logout;
   float: right;
   max-width: 100px;
-}
-
-.c7:hover {
-  opacity: 0.90;
-}
-
-.c7:focus {
-  outline: none;
-}
-
-.c7:active {
-  opacity: 0.80;
-}
-
-.c7:disabled:hover {
-  opacity: 1;
-  cursor: auto;
 }
 
 @media (max-width:47.9375em) {
@@ -117,7 +126,7 @@ exports[`navbar render admin link for admins 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c3 {
+  .c4 {
     display: none;
     grid-column: main / -1;
     grid-row: content;
@@ -128,20 +137,20 @@ exports[`navbar render admin link for admins 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c3 {
     display: inline;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c7 {
     width: 100%;
     margin-bottom: 32px;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     -webkit-align-self: start;
     -ms-flex-item-align: start;
     align-self: start;
@@ -159,7 +168,7 @@ exports[`navbar render admin link for admins 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c10 {
     grid-column: main;
     grid-row: logout;
     max-width: 100%;
@@ -175,18 +184,18 @@ exports[`navbar render admin link for admins 1`] = `
     Apollo
   </div>
   <i
-    className="c2 fa fa-bars fa-lg"
+    className="c2 c3 fa fa-bars fa-lg"
     id="collapseIcon"
     onClick={[Function]}
   />
   <div
-    className="c3"
+    className="c4"
   >
     <div
-      className="c4"
+      className="c5"
     >
       <a
-        className="c5 c6"
+        className="c6 c7"
         disabled={false}
         href="/"
         onClick={[Function]}
@@ -194,7 +203,7 @@ exports[`navbar render admin link for admins 1`] = `
         Dashboard
       </a>
       <a
-        className="c5 c6"
+        className="c6 c7"
         disabled={false}
         href="/admin"
         onClick={[Function]}
@@ -203,7 +212,7 @@ exports[`navbar render admin link for admins 1`] = `
       </a>
     </div>
     <button
-      className="c7"
+      className="c8 c9 c10"
       id="logoutButton"
       onClick={[Function]}
     >
@@ -214,15 +223,53 @@ exports[`navbar render admin link for admins 1`] = `
 `;
 
 exports[`navbar renders correctly 1`] = `
-.c5 {
+.c8 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c8:hover {
+  opacity: 0.90;
+}
+
+.c8:focus {
+  outline: none;
+}
+
+.c8:active {
+  opacity: 0.80;
+}
+
+.c8:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c9 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c6 {
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   pointer-events: inherit;
 }
 
-.c5:hover {
+.c6:hover {
   opacity: 0.9;
+}
+
+.c2 {
+  cursor: pointer;
 }
 
 .c0 {
@@ -237,7 +284,7 @@ exports[`navbar renders correctly 1`] = `
   z-index: 1;
 }
 
-.c3 {
+.c4 {
   grid-column: content;
   display: grid;
   grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px;
@@ -245,8 +292,7 @@ exports[`navbar renders correctly 1`] = `
   height: auto;
 }
 
-.c2 {
-  cursor: pointer;
+.c3 {
   grid-row: logo;
   grid-column: toggle;
   display: none;
@@ -263,16 +309,16 @@ exports[`navbar renders correctly 1`] = `
   transition: transform .3s ease-out;
 }
 
-.c2:hover {
+.c3:hover {
   cursor: pointer;
 }
 
-.c6 {
+.c7 {
   margin: 0px 16px;
   float: left;
 }
 
-.c4 {
+.c5 {
   grid-column: menu;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
@@ -283,38 +329,10 @@ exports[`navbar renders correctly 1`] = `
   grid-column: logo;
 }
 
-.c7 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
+.c10 {
   grid-column: logout;
   float: right;
   max-width: 100px;
-}
-
-.c7:hover {
-  opacity: 0.90;
-}
-
-.c7:focus {
-  outline: none;
-}
-
-.c7:active {
-  opacity: 0.80;
-}
-
-.c7:disabled:hover {
-  opacity: 1;
-  cursor: auto;
 }
 
 @media (max-width:47.9375em) {
@@ -330,7 +348,7 @@ exports[`navbar renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c3 {
+  .c4 {
     display: none;
     grid-column: main / -1;
     grid-row: content;
@@ -341,20 +359,20 @@ exports[`navbar renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c3 {
     display: inline;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c7 {
     width: 100%;
     margin-bottom: 32px;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     -webkit-align-self: start;
     -ms-flex-item-align: start;
     align-self: start;
@@ -372,7 +390,7 @@ exports[`navbar renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c10 {
     grid-column: main;
     grid-row: logout;
     max-width: 100%;
@@ -388,18 +406,18 @@ exports[`navbar renders correctly 1`] = `
     Apollo
   </div>
   <i
-    className="c2 fa fa-bars fa-lg"
+    className="c2 c3 fa fa-bars fa-lg"
     id="collapseIcon"
     onClick={[Function]}
   />
   <div
-    className="c3"
+    className="c4"
   >
     <div
-      className="c4"
+      className="c5"
     >
       <a
-        className="c5 c6"
+        className="c6 c7"
         disabled={false}
         href="/"
         onClick={[Function]}
@@ -408,7 +426,7 @@ exports[`navbar renders correctly 1`] = `
       </a>
     </div>
     <button
-      className="c7"
+      className="c8 c9 c10"
       id="logoutButton"
       onClick={[Function]}
     >
@@ -419,15 +437,53 @@ exports[`navbar renders correctly 1`] = `
 `;
 
 exports[`navbar toggles collapsed 1`] = `
-.c5 {
+.c8 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c8:hover {
+  opacity: 0.90;
+}
+
+.c8:focus {
+  outline: none;
+}
+
+.c8:active {
+  opacity: 0.80;
+}
+
+.c8:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c9 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c6 {
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   pointer-events: inherit;
 }
 
-.c5:hover {
+.c6:hover {
   opacity: 0.9;
+}
+
+.c2 {
+  cursor: pointer;
 }
 
 .c0 {
@@ -442,7 +498,7 @@ exports[`navbar toggles collapsed 1`] = `
   z-index: 1;
 }
 
-.c3 {
+.c4 {
   grid-column: content;
   display: grid;
   grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px;
@@ -450,8 +506,7 @@ exports[`navbar toggles collapsed 1`] = `
   height: auto;
 }
 
-.c2 {
-  cursor: pointer;
+.c3 {
   grid-row: logo;
   grid-column: toggle;
   display: none;
@@ -468,16 +523,16 @@ exports[`navbar toggles collapsed 1`] = `
   transition: transform .3s ease-out;
 }
 
-.c2:hover {
+.c3:hover {
   cursor: pointer;
 }
 
-.c6 {
+.c7 {
   margin: 0px 16px;
   float: left;
 }
 
-.c4 {
+.c5 {
   grid-column: menu;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
@@ -488,38 +543,10 @@ exports[`navbar toggles collapsed 1`] = `
   grid-column: logo;
 }
 
-.c7 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
+.c10 {
   grid-column: logout;
   float: right;
   max-width: 100px;
-}
-
-.c7:hover {
-  opacity: 0.90;
-}
-
-.c7:focus {
-  outline: none;
-}
-
-.c7:active {
-  opacity: 0.80;
-}
-
-.c7:disabled:hover {
-  opacity: 1;
-  cursor: auto;
 }
 
 @media (max-width:47.9375em) {
@@ -543,7 +570,7 @@ exports[`navbar toggles collapsed 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c3 {
+  .c4 {
     display: grid;
     grid-column: main / -1;
     grid-row: content;
@@ -558,20 +585,20 @@ exports[`navbar toggles collapsed 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c3 {
     display: inline;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c7 {
     width: 100%;
     margin-bottom: 32px;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     -webkit-align-self: start;
     -ms-flex-item-align: start;
     align-self: start;
@@ -589,7 +616,7 @@ exports[`navbar toggles collapsed 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c10 {
     grid-column: main;
     grid-row: logout;
     max-width: 100%;
@@ -605,18 +632,18 @@ exports[`navbar toggles collapsed 1`] = `
     Apollo
   </div>
   <i
-    className="c2 fas fa-times fa-lg"
+    className="c2 c3 fas fa-times fa-lg"
     id="collapseIcon"
     onClick={[Function]}
   />
   <div
-    className="c3"
+    className="c4"
   >
     <div
-      className="c4"
+      className="c5"
     >
       <a
-        className="c5 c6"
+        className="c6 c7"
         disabled={false}
         href="/"
         onClick={[Function]}
@@ -625,7 +652,7 @@ exports[`navbar toggles collapsed 1`] = `
       </a>
     </div>
     <button
-      className="c7"
+      className="c8 c9 c10"
       id="logoutButton"
       onClick={[Function]}
     >
@@ -636,15 +663,53 @@ exports[`navbar toggles collapsed 1`] = `
 `;
 
 exports[`navbar toggles collapsed 2`] = `
-.c5 {
+.c8 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c8:hover {
+  opacity: 0.90;
+}
+
+.c8:focus {
+  outline: none;
+}
+
+.c8:active {
+  opacity: 0.80;
+}
+
+.c8:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c9 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c6 {
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   pointer-events: inherit;
 }
 
-.c5:hover {
+.c6:hover {
   opacity: 0.9;
+}
+
+.c2 {
+  cursor: pointer;
 }
 
 .c0 {
@@ -659,7 +724,7 @@ exports[`navbar toggles collapsed 2`] = `
   z-index: 1;
 }
 
-.c3 {
+.c4 {
   grid-column: content;
   display: grid;
   grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px;
@@ -667,8 +732,7 @@ exports[`navbar toggles collapsed 2`] = `
   height: auto;
 }
 
-.c2 {
-  cursor: pointer;
+.c3 {
   grid-row: logo;
   grid-column: toggle;
   display: none;
@@ -685,16 +749,16 @@ exports[`navbar toggles collapsed 2`] = `
   transition: transform .3s ease-out;
 }
 
-.c2:hover {
+.c3:hover {
   cursor: pointer;
 }
 
-.c6 {
+.c7 {
   margin: 0px 16px;
   float: left;
 }
 
-.c4 {
+.c5 {
   grid-column: menu;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
@@ -705,38 +769,10 @@ exports[`navbar toggles collapsed 2`] = `
   grid-column: logo;
 }
 
-.c7 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
+.c10 {
   grid-column: logout;
   float: right;
   max-width: 100px;
-}
-
-.c7:hover {
-  opacity: 0.90;
-}
-
-.c7:focus {
-  outline: none;
-}
-
-.c7:active {
-  opacity: 0.80;
-}
-
-.c7:disabled:hover {
-  opacity: 1;
-  cursor: auto;
 }
 
 @media (max-width:47.9375em) {
@@ -756,7 +792,7 @@ exports[`navbar toggles collapsed 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c3 {
+  .c4 {
     display: none;
     grid-column: main / -1;
     grid-row: content;
@@ -771,7 +807,7 @@ exports[`navbar toggles collapsed 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
+  .c3 {
     display: inline;
   }
 }
@@ -781,14 +817,14 @@ exports[`navbar toggles collapsed 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c7 {
     width: 100%;
     margin-bottom: 32px;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     -webkit-align-self: start;
     -ms-flex-item-align: start;
     align-self: start;
@@ -806,7 +842,7 @@ exports[`navbar toggles collapsed 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c7 {
+  .c10 {
     grid-column: main;
     grid-row: logout;
     max-width: 100%;
@@ -822,18 +858,18 @@ exports[`navbar toggles collapsed 2`] = `
     Apollo
   </div>
   <i
-    className="c2 fa fa-bars fa-lg"
+    className="c2 c3 fa fa-bars fa-lg"
     id="collapseIcon"
     onClick={[Function]}
   />
   <div
-    className="c3"
+    className="c4"
   >
     <div
-      className="c4"
+      className="c5"
     >
       <a
-        className="c5 c6"
+        className="c6 c7"
         disabled={false}
         href="/"
         onClick={[Function]}
@@ -842,7 +878,7 @@ exports[`navbar toggles collapsed 2`] = `
       </a>
     </div>
     <button
-      className="c7"
+      className="c8 c9 c10"
       id="logoutButton"
       onClick={[Function]}
     >

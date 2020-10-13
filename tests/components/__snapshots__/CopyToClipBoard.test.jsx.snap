@@ -1,6 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`copy to clipboard renders correctly 1`] = `
+.c2 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c2:hover {
+  opacity: 0.90;
+}
+
+.c2:focus {
+  outline: none;
+}
+
+.c2:active {
+  opacity: 0.80;
+}
+
+.c2:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
 .c0 {
   grid-template-columns: [textField] 1fr [copy] 50px;
   display: grid;
@@ -24,38 +53,12 @@ exports[`copy to clipboard renders correctly 1`] = `
   background: transparent;
 }
 
-.c2 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
+.c3 {
   grid-column: copy;
   height: 100%;
 }
 
-.c2:hover {
-  opacity: 0.90;
-}
-
-.c2:focus {
-  outline: none;
-}
-
-.c2:active {
-  opacity: 0.80;
-}
-
-.c2:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c3 {
+.c4 {
   text-align: center;
   display: block;
 }
@@ -69,12 +72,12 @@ exports[`copy to clipboard renders correctly 1`] = `
     test
   </div>
   <button
-    className="c2"
+    className="c2 c3"
     id="copyToClipboardButton"
     onClick={[Function]}
   >
     <i
-      className="c3 fas fa-copy"
+      className="c4 fas fa-copy"
     />
   </button>
 </div>

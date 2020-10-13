@@ -1,6 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Add Agent closes modal correctly 1`] = `
+.c5 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c5:hover {
+  opacity: 0.90;
+}
+
+.c5:focus {
+  outline: none;
+}
+
+.c5:active {
+  opacity: 0.80;
+}
+
+.c5:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c8 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
 .c2 {
   grid-template-columns: [textField] 1fr [copy] 50px;
   display: grid;
@@ -24,39 +58,20 @@ exports[`Add Agent closes modal correctly 1`] = `
   background: transparent;
 }
 
-.c5 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
+.c6 {
   grid-column: copy;
   height: 100%;
 }
 
-.c5:hover {
-  opacity: 0.90;
-}
-
-.c5:focus {
-  outline: none;
-}
-
-.c5:active {
-  opacity: 0.80;
-}
-
-.c5:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c6 {
+.c7 {
   text-align: center;
+  display: block;
+}
+
+.c9 {
+  width: 200px;
+  height: 50px;
+  margin: auto;
   display: block;
 }
 
@@ -70,41 +85,9 @@ exports[`Add Agent closes modal correctly 1`] = `
   margin-bottom: 20px;
 }
 
-.c7 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
-  width: 200px;
-  height: 50px;
-  margin: auto;
-  display: block;
+.c10 {
   grid-row: button;
   margin-top: 20px;
-}
-
-.c7:hover {
-  opacity: 0.90;
-}
-
-.c7:focus {
-  outline: none;
-}
-
-.c7:active {
-  opacity: 0.80;
-}
-
-.c7:disabled:hover {
-  opacity: 1;
-  cursor: auto;
 }
 
 .c1 {
@@ -130,17 +113,17 @@ exports[`Add Agent closes modal correctly 1`] = `
         curl http://localhost:1234/agent/download?target_os=test&target_arch=test &gt; apollo-agent.bin && chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=id --secret=secret --host=http://localhost:1234
       </div>
       <button
-        className="c5"
+        className="c5 c6"
         id="copyToClipboardButton"
         onClick={[Function]}
       >
         <i
-          className="c6 fas fa-copy"
+          className="c7 fas fa-copy"
         />
       </button>
     </div>
     <button
-      className="c7"
+      className="c5 c8 c9 c10"
       id="closeButton"
       onClick={
         [MockFunction] {
@@ -163,6 +146,40 @@ exports[`Add Agent closes modal correctly 1`] = `
 `;
 
 exports[`Add Agent renders correctly 1`] = `
+.c5 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c5:hover {
+  opacity: 0.90;
+}
+
+.c5:focus {
+  outline: none;
+}
+
+.c5:active {
+  opacity: 0.80;
+}
+
+.c5:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c8 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
 .c2 {
   grid-template-columns: [textField] 1fr [copy] 50px;
   display: grid;
@@ -186,39 +203,20 @@ exports[`Add Agent renders correctly 1`] = `
   background: transparent;
 }
 
-.c5 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
+.c6 {
   grid-column: copy;
   height: 100%;
 }
 
-.c5:hover {
-  opacity: 0.90;
-}
-
-.c5:focus {
-  outline: none;
-}
-
-.c5:active {
-  opacity: 0.80;
-}
-
-.c5:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c6 {
+.c7 {
   text-align: center;
+  display: block;
+}
+
+.c9 {
+  width: 200px;
+  height: 50px;
+  margin: auto;
   display: block;
 }
 
@@ -232,41 +230,9 @@ exports[`Add Agent renders correctly 1`] = `
   margin-bottom: 20px;
 }
 
-.c7 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
-  width: 200px;
-  height: 50px;
-  margin: auto;
-  display: block;
+.c10 {
   grid-row: button;
   margin-top: 20px;
-}
-
-.c7:hover {
-  opacity: 0.90;
-}
-
-.c7:focus {
-  outline: none;
-}
-
-.c7:active {
-  opacity: 0.80;
-}
-
-.c7:disabled:hover {
-  opacity: 1;
-  cursor: auto;
 }
 
 .c1 {
@@ -292,17 +258,17 @@ exports[`Add Agent renders correctly 1`] = `
         curl http://localhost:1234/agent/download?target_os=test&target_arch=test &gt; apollo-agent.bin && chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=id --secret=secret --host=http://localhost:1234
       </div>
       <button
-        className="c5"
+        className="c5 c6"
         id="copyToClipboardButton"
         onClick={[Function]}
       >
         <i
-          className="c6 fas fa-copy"
+          className="c7 fas fa-copy"
         />
       </button>
     </div>
     <button
-      className="c7"
+      className="c5 c8 c9 c10"
       id="closeButton"
       onClick={[MockFunction]}
     >
@@ -323,10 +289,6 @@ exports[`Add Agent renders correctly 2`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  width: 100%;
-  height: 50px;
-  margin: auto;
-  display: block;
 }
 
 .c3:hover {
@@ -346,13 +308,25 @@ exports[`Add Agent renders correctly 2`] = `
   cursor: auto;
 }
 
-.c7 {
+.c13 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c4 {
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+.c8 {
   grid-template-columns: [textField] 1fr [copy] 50px;
   display: grid;
   height: 50px;
 }
 
-.c9 {
+.c10 {
   grid-column: textField;
   border: none;
   border-radius: 5px;
@@ -365,42 +339,16 @@ exports[`Add Agent renders correctly 2`] = `
   overflow-x: scroll;
 }
 
-.c9::-webkit-scrollbar {
+.c10::-webkit-scrollbar {
   background: transparent;
 }
 
-.c10 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
+.c11 {
   grid-column: copy;
   height: 100%;
 }
 
-.c10:hover {
-  opacity: 0.90;
-}
-
-.c10:focus {
-  outline: none;
-}
-
-.c10:active {
-  opacity: 0.80;
-}
-
-.c10:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c11 {
+.c12 {
   text-align: center;
   display: block;
 }
@@ -421,8 +369,7 @@ exports[`Add Agent renders correctly 2`] = `
   margin-left: 10px;
 }
 
-.c4 {
-  float: right;
+.c14 {
   width: 200px;
   height: 50px;
   margin: auto;
@@ -430,53 +377,29 @@ exports[`Add Agent renders correctly 2`] = `
 }
 
 .c5 {
-  display: grid;
-  grid-template-rows: [description] 1fr [commands] 1fr [button] 1fr;
-}
-
-.c8 {
-  grid-row: commands;
-  margin-bottom: 20px;
-}
-
-.c12 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
+  float: right;
   width: 200px;
   height: 50px;
   margin: auto;
   display: block;
+}
+
+.c6 {
+  display: grid;
+  grid-template-rows: [description] 1fr [commands] 1fr [button] 1fr;
+}
+
+.c9 {
+  grid-row: commands;
+  margin-bottom: 20px;
+}
+
+.c15 {
   grid-row: button;
   margin-top: 20px;
 }
 
-.c12:hover {
-  opacity: 0.90;
-}
-
-.c12:focus {
-  outline: none;
-}
-
-.c12:active {
-  opacity: 0.80;
-}
-
-.c12:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c6 {
+.c7 {
   grid-row: description;
   margin: 20px 0px 20px 0px;
 }
@@ -506,7 +429,7 @@ exports[`Add Agent renders correctly 2`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     float: none;
     margin-left: auto;
     margin-right: auto;
@@ -526,7 +449,7 @@ exports[`Add Agent renders correctly 2`] = `
       className="c2"
     >
       <button
-        className="c3 c4"
+        className="c3 c4 c5"
         onClick={[Function]}
       >
         Download binary
@@ -534,33 +457,33 @@ exports[`Add Agent renders correctly 2`] = `
     </div>
   </div>
   <div
-    className="c5"
+    className="c6"
   >
     <p
-      className="c6"
+      className="c7"
     >
       Copy and run the command on the target machine to download run the client.
     </p>
     <div
-      className="c7 c8"
+      className="c8 c9"
     >
       <div
-        className="c9"
+        className="c10"
       >
         chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=id --secret=secret --host=http://localhost:1234
       </div>
       <button
-        className="c10"
+        className="c3 c11"
         id="copyToClipboardButton"
         onClick={[Function]}
       >
         <i
-          className="c11 fas fa-copy"
+          className="c12 fas fa-copy"
         />
       </button>
     </div>
     <button
-      className="c12"
+      className="c3 c13 c14 c15"
       id="closeButton"
       onClick={[MockFunction]}
     >

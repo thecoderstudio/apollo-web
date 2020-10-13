@@ -11,8 +11,6 @@ exports[`dashboard Does not render change password 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
 }
 
 .c3:hover {
@@ -33,6 +31,11 @@ exports[`dashboard Does not render change password 1`] = `
 }
 
 .c4 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c5 {
   margin-left: 8px;
 }
 
@@ -61,7 +64,7 @@ exports[`dashboard Does not render change password 1`] = `
   grid-row: header;
 }
 
-.c5 {
+.c6 {
   width: 100%;
   min-width: 0;
   grid-row: list;
@@ -77,7 +80,7 @@ exports[`dashboard Does not render change password 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     display: none;
   }
 }
@@ -102,21 +105,21 @@ exports[`dashboard Does not render change password 1`] = `
           Agents
         </h2>
         <button
-          className="c3"
+          className="c3 c4"
           onClick={[Function]}
         >
           <i
             className="fas fa-plus"
           />
           <span
-            className="c4"
+            className="c5"
           >
             Add new agent
           </span>
         </button>
       </div>
       <ul
-        className="c5"
+        className="c6"
       />
     </div>
   </div>
@@ -134,8 +137,6 @@ exports[`dashboard renders correctly 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
 }
 
 .c3:hover {
@@ -156,6 +157,11 @@ exports[`dashboard renders correctly 1`] = `
 }
 
 .c4 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c5 {
   margin-left: 8px;
 }
 
@@ -184,7 +190,7 @@ exports[`dashboard renders correctly 1`] = `
   grid-row: header;
 }
 
-.c5 {
+.c6 {
   width: 100%;
   min-width: 0;
   grid-row: list;
@@ -200,7 +206,7 @@ exports[`dashboard renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c4 {
+  .c5 {
     display: none;
   }
 }
@@ -225,21 +231,21 @@ exports[`dashboard renders correctly 1`] = `
           Agents
         </h2>
         <button
-          className="c3"
+          className="c3 c4"
           onClick={[Function]}
         >
           <i
             className="fas fa-plus"
           />
           <span
-            className="c4"
+            className="c5"
           >
             Add new agent
           </span>
         </button>
       </div>
       <ul
-        className="c5"
+        className="c6"
       />
     </div>
   </div>

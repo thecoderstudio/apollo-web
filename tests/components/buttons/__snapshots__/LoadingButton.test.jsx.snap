@@ -11,10 +11,6 @@ exports[`LoadingButton renders correctly 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  width: 100%;
-  height: 50px;
-  margin: auto;
-  display: block;
 }
 
 .c0:hover {
@@ -34,18 +30,20 @@ exports[`LoadingButton renders correctly 1`] = `
   cursor: auto;
 }
 
+.c1 {
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
 <button
-  className="c0"
+  className="c0 c1"
   onClick={[MockFunction]}
 />
 `;
 
 exports[`LoadingButton shows loading indicator 1`] = `
-.c1 {
-  -webkit-animation: fvtopB 1.5s infinite linear;
-  animation: fvtopB 1.5s infinite linear;
-}
-
 .c0 {
   max-height: 50px;
   padding: 12px;
@@ -56,10 +54,6 @@ exports[`LoadingButton shows loading indicator 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  width: 100%;
-  height: 50px;
-  margin: auto;
-  display: block;
 }
 
 .c0:hover {
@@ -79,12 +73,24 @@ exports[`LoadingButton shows loading indicator 1`] = `
   cursor: auto;
 }
 
+.c2 {
+  -webkit-animation: fvtopB 1.5s infinite linear;
+  animation: fvtopB 1.5s infinite linear;
+}
+
+.c1 {
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
 <button
-  className="c0"
+  className="c0 c1"
   onClick={[MockFunction]}
 >
   <i
-    className="c1 fas fa-spinner"
+    className="c2 fas fa-spinner"
   />
 </button>
 `;

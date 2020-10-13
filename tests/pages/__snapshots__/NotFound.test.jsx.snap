@@ -1,15 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`not found renders correctly 1`] = `
-.c6 {
+.c8 {
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   pointer-events: inherit;
 }
 
-.c6:hover {
+.c8:hover {
   opacity: 0.9;
+}
+
+.c5 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c5:hover {
+  opacity: 0.90;
+}
+
+.c5:focus {
+  outline: none;
+}
+
+.c5:active {
+  opacity: 0.80;
+}
+
+.c5:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c6 {
+  background-color: transparent;
+  border: 1px solid;
 }
 
 .c0 {
@@ -67,37 +101,9 @@ exports[`not found renders correctly 1`] = `
   font-size: 2em;
 }
 
-.c5 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
+.c7 {
   margin-top: 64px;
   border: 1px solid;
-}
-
-.c5:hover {
-  opacity: 0.90;
-}
-
-.c5:focus {
-  outline: none;
-}
-
-.c5:active {
-  opacity: 0.80;
-}
-
-.c5:disabled:hover {
-  opacity: 1;
-  cursor: auto;
 }
 
 @media (max-width:47.9375em) {
@@ -145,10 +151,10 @@ exports[`not found renders correctly 1`] = `
       Houston, we have a problem
     </h2>
     <button
-      className="c5"
+      className="c5 c6 c7"
     >
       <a
-        className="c6"
+        className="c8"
         disabled={false}
         href="/"
         onClick={[Function]}

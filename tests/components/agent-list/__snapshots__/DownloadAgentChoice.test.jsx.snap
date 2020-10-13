@@ -11,12 +11,6 @@ exports[`download agent choice renders correctly 1`] = `
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
-  display: grid;
-  grid-template-rows: [title] 50px [description] 1fr;
-  padding: 20px;
-  min-height: 180px;
 }
 
 .c2:hover {
@@ -36,14 +30,26 @@ exports[`download agent choice renders correctly 1`] = `
   cursor: auto;
 }
 
+.c3 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
 .c4 {
+  display: grid;
+  grid-template-rows: [title] 50px [description] 1fr;
+  padding: 20px;
+  min-height: 180px;
+}
+
+.c6 {
   grid-row: title;
   width: 80%;
   margin: 0 auto;
   text-align: center;
 }
 
-.c5 {
+.c7 {
   grid-row: description;
   padding: 10px;
 }
@@ -58,12 +64,12 @@ exports[`download agent choice renders correctly 1`] = `
   grid-column: column-one;
 }
 
-.c6 {
+.c8 {
   grid-column: column-two;
   margin-right: 20px;
 }
 
-.c3 {
+.c5 {
   width: 100%;
 }
 
@@ -81,7 +87,7 @@ exports[`download agent choice renders correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c6 {
+  .c8 {
     grid-column: column-one;
     grid-row: row-two;
     margin-right: 0px;
@@ -95,35 +101,35 @@ exports[`download agent choice renders correctly 1`] = `
     className="c1"
   >
     <button
-      className="c2 c3"
+      className="c2 c3 c4 c5"
       onClick={[Function]}
     >
       <h3
-        className="c4"
+        className="c6"
       >
         Directly on target machine.
       </h3>
       <p
-        className="c5"
+        className="c7"
       >
         You have the correct permissions to download the binary directly on the target machine.
       </p>
     </button>
   </div>
   <div
-    className="c6"
+    className="c8"
   >
     <button
-      className="c2 c3"
+      className="c2 c3 c4 c5"
       onClick={[Function]}
     >
       <h3
-        className="c4"
+        className="c6"
       >
         Manual upload
       </h3>
       <p
-        className="c5"
+        className="c7"
       >
         You download and upload the binary yourself.
       </p>

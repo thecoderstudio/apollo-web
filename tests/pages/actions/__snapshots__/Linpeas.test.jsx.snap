@@ -29,7 +29,7 @@ exports[`linpeas correctly renders 1`] = `
       }
     }
   >
-    <ThemeProvider
+    <Component
       theme={
         Object {
           "accent": "#4D02EE",
@@ -159,7 +159,7 @@ exports[`linpeas correctly renders 1`] = `
           </TerminalPage>
         </Connect(TerminalPage)>
       </Linpeas>
-    </ThemeProvider>
+    </Component>
   </Provider>
 </div>
 `;
