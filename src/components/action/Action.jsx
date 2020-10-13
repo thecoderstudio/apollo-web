@@ -7,8 +7,13 @@ const propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   agentId: PropTypes.string.isRequired,
-  endpoint: PropTypes.string.isRequired
+  endpoint: PropTypes.string.isRequired,
+  disabled: PropTypes.bool
 }; 
+
+const defaultProps = {
+  disabled: false
+};
 
 const Container = styled(Link)`
   display: grid;
@@ -17,6 +22,7 @@ const Container = styled(Link)`
   grid-column-gap: 30px;
   align-items: center;
   margin: 16px;
+  opacity: ${props => props.disabled ? 0.2 : 1};
 `;
 
 const Image = styled.i`
@@ -43,12 +49,13 @@ const Body = styled.p`
   grid-column: content;
   grid-row: body;
   margin: 0;
+  color: ${props => props.theme.white};
 `;
 
 function Action(props) {
-  const {title, children, agentId, endpoint, ...rest} = props;
+  const {title, children, agentId, endpoint, disabled, ...rest} = props;
   return (
-    <Container {...rest} to={`/agent/${agentId}/action/${endpoint}`}>
+    <Container {...rest} disabled={disabled} to={`/agent/${agentId}/action/${endpoint}`}>
       <Image className="material-icons">assessment</Image>
       <Title>{title}</Title>
       <Body>{children}</Body>
@@ -57,5 +64,6 @@ function Action(props) {
 }
 
 Action.propTypes = propTypes;
+Action.defaultProps = defaultProps;
 
 export default Action;
