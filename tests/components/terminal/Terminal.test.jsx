@@ -19,7 +19,7 @@ describe('Terminal', () => {
 
   beforeEach(() => {
     termWriteSpy = jest.spyOn(Terminal.prototype, 'write');
-    wrapper = mount(<Terminal theme={darkTheme} agent={mockAgent} />)
+    wrapper = mount(<Terminal theme={darkTheme} agent={mockAgent} />);
     terminal = wrapper.find(Terminal).instance();
   });
 

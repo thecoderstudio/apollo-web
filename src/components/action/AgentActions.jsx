@@ -37,7 +37,7 @@ class AgentActions extends React.PureComponent {
           <div>
             <AgentAction
               agentId={this.props.agent.id}
-              disabled={this.props.agent.connectionState != 'connected'}
+              disabled={this.props.agent.connectionState !== 'connected'}
               endpoint="linpeas"
               title="Run LinPEAS">
               LinPEAS is a script that search for possible paths to escalate privileges on Linux/Unix hosts
