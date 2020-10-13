@@ -4,6 +4,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
 .c6 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  color: #F8F8F8;
   cursor: pointer;
   pointer-events: inherit;
 }

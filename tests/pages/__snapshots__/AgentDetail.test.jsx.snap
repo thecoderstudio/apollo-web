@@ -45,6 +45,7 @@ exports[`agent detail correctly syncs with remote 1`] = `
 .c15 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  color: #F8F8F8;
   cursor: inherit;
   pointer-events: none;
 }
@@ -371,6 +372,7 @@ exports[`agent detail deals with property updates correctly 1`] = `
 .c15 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  color: #F8F8F8;
   cursor: inherit;
   pointer-events: none;
 }
@@ -697,6 +699,7 @@ exports[`agent detail handles sync failure 1`] = `
 .c15 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  color: #F8F8F8;
   cursor: inherit;
   pointer-events: none;
 }
@@ -1023,6 +1026,7 @@ exports[`agent detail opens terminal 1`] = `
 .c15 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  color: #F8F8F8;
   cursor: inherit;
   pointer-events: none;
 }
@@ -1349,6 +1353,7 @@ exports[`agent detail opens terminal 2`] = `
 .c15 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  color: #F8F8F8;
   cursor: inherit;
   pointer-events: none;
 }
@@ -1737,7 +1742,7 @@ exports[`agent detail opens terminal 3`] = `
       </h2>
       <div>
         <a
-          className="sc-fzpans jnuHzE sc-fzplWN dsNVAP sc-fzoyAV cVEmlz"
+          className="sc-fzpans hRmTvs sc-fzplWN dsNVAP sc-fzoyAV cVEmlz"
           disabled={true}
           href="/agent/fakeid/action/linpeas"
           onClick={[Function]}
@@ -1809,6 +1814,7 @@ exports[`agent detail renders correctly 1`] = `
 .c15 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  color: #F8F8F8;
   cursor: inherit;
   pointer-events: none;
 }

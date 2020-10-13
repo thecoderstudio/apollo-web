@@ -4,6 +4,7 @@ exports[`agent list item doesn't open the terminal if not connected 1`] = `
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  color: #F8F8F8;
   cursor: pointer;
   pointer-events: inherit;
 }
@@ -211,6 +212,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
 .c2 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  color: #F8F8F8;
   cursor: pointer;
   pointer-events: inherit;
 }
@@ -1590,6 +1592,7 @@ exports[`agent list item opens and closes the terminal 2`] = `
 .c2 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  color: #F8F8F8;
   cursor: pointer;
   pointer-events: inherit;
 }
@@ -2001,6 +2004,7 @@ exports[`agent list item renders connected correctly 1`] = `
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  color: #F8F8F8;
   cursor: pointer;
   pointer-events: inherit;
 }
@@ -2208,6 +2212,7 @@ exports[`agent list item renders disconnected correctly 1`] = `
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  color: #F8F8F8;
   cursor: pointer;
   pointer-events: inherit;
 }
@@ -2415,6 +2420,7 @@ exports[`agent list item renders the various operating systems correctly 1`] = `
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  color: #F8F8F8;
   cursor: pointer;
   pointer-events: inherit;
 }
@@ -2622,6 +2628,7 @@ exports[`agent list item renders the various operating systems correctly 2`] = `
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  color: #F8F8F8;
   cursor: pointer;
   pointer-events: inherit;
 }
@@ -2829,6 +2836,7 @@ exports[`agent list item renders the various operating systems correctly 3`] = `
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  color: #F8F8F8;
   cursor: pointer;
   pointer-events: inherit;
 }
@@ -3036,6 +3044,7 @@ exports[`agent list item renders the various operating systems correctly 4`] = `
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  color: #F8F8F8;
   cursor: pointer;
   pointer-events: inherit;
 }
@@ -3243,6 +3252,7 @@ exports[`agent list item renders the various operating systems correctly 5`] = `
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  color: #F8F8F8;
   cursor: pointer;
   pointer-events: inherit;
 }

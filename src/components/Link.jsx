@@ -13,6 +13,7 @@ const defaultProps = {
 
 const StyledLink = styled(ReactLink)`
   text-decoration: none;
+  color: ${props => props.theme.white};
   cursor: ${props => props.disabled ? 'inherit' : 'pointer'};
   pointer-events: ${props => props.disabled ? 'none': 'inherit'};
 

@@ -328,6 +328,7 @@ exports[`app renders correctly authenticated and password changed 1`] = `
 .c6 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  color: #F8F8F8;
   cursor: pointer;
   pointer-events: inherit;
 }
