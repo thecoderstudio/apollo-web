@@ -2,6 +2,15 @@
 
 exports[`Action renders correctly 1`] = `
 .c0 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:hover {
+  opacity: 0.90;
+}
+
+.c1 {
   display: grid;
   grid-template-columns: [image] 50px [content] 1fr;
   grid-template-rows: [title] 1fr [body] 1fr;
@@ -13,7 +22,7 @@ exports[`Action renders correctly 1`] = `
   margin: 16px;
 }
 
-.c1 {
+.c2 {
   display: grid;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -31,35 +40,37 @@ exports[`Action renders correctly 1`] = `
   border-radius: 5px;
 }
 
-.c2 {
+.c3 {
   grid-column: content;
   grid-row: title;
   margin: 0 0 8px 0;
 }
 
-.c3 {
+.c4 {
   grid-column: content;
   grid-row: body;
   margin: 0;
 }
 
-<div
-  className="c0 verify"
+<a
+  className="c0 c1 verify"
+  href="/agent/undefined/action/undefined"
+  onClick={[Function]}
 >
   <i
-    className="c1 material-icons"
+    className="c2 material-icons"
   >
     assessment
   </i>
   <h4
-    className="c2"
+    className="c3"
   >
     test title
   </h4>
   <p
-    className="c3"
+    className="c4"
   >
     test
   </p>
-</div>
+</a>
 `;
