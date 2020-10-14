@@ -7,15 +7,12 @@ const Container = styled.div`
   width: 100%;
 `;
 
-const Title = styled.h1`
-  text-align: center;
-`;
-
 const Category = styled.div`
   width: 100%;
   > div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
     ${
       media.phone`
         grid-template-columns: 1fr;

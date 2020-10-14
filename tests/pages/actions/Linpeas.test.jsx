@@ -28,13 +28,13 @@ function getComponentTags(store) {
 }
 
 describe('linpeas', () => {
-  const server = new WS(`ws://localhost:1234/agent/a2346886-83ba-442d-9fb7-d024c6274e22/action/linpeas`);
+  const server = new WS(`ws://localhost:1234/agent/fakeid/action/linpeas`);
 
   afterEach(() => {
     WS.clean();
   });
 
-  it('correctly renders', () => {
+  it('correctly renders', async () => {
     const agents = new Map();
     agents.set('fakeid', {
       id: 'fakeid',
@@ -45,6 +45,7 @@ describe('linpeas', () => {
       agent: agents
     });
     const wrapper = mount(getComponentTags(store));
+    await server.connected;
     expect(wrapper).toMatchSnapshot();
   });
 });

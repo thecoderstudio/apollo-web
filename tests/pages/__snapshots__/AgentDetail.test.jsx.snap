@@ -1682,16 +1682,16 @@ exports[`agent detail opens terminal 2`] = `
 
 exports[`agent detail opens terminal 3`] = `
 <div
-  className="sc-bCwgka cpPqQQ"
+  className="sc-fKgIGh bDKESv"
 >
   <div
-    className="sc-iwaifL bcDlbF"
+    className="sc-bCwgka iOcLUC"
   >
     <div
-      className="sc-lmgQde fNtBws"
+      className="sc-cxNIbT drJJXc"
     >
       <div
-        className="sc-cxNIbT fdtLQN"
+        className="sc-iwaifL jDTbtD"
       >
         <div
           className="sc-jrsJCI bmKhFO"
@@ -1705,45 +1705,45 @@ exports[`agent detail opens terminal 3`] = `
         <tbody>
           <tr>
             <td
-              className="sc-iJCRLp kKdtsi"
+              className="sc-lmgQde fNjJMq"
             >
               <b>
                 External IP address
               </b>
             </td>
             <td
-              className="sc-iJCRLp kKdtsi"
+              className="sc-lmgQde fNjJMq"
             >
               unknown
             </td>
           </tr>
           <tr>
             <td
-              className="sc-iJCRLp kKdtsi"
+              className="sc-lmgQde fNjJMq"
             >
               <b>
                 Operating system
               </b>
             </td>
             <td
-              className="sc-iJCRLp kKdtsi"
+              className="sc-lmgQde fNjJMq"
             >
               <i
-                className="sc-bdnylx sc-bYwzba kAOcqP erDHdr fab fa-apple"
+                className="sc-bdnylx sc-ezzayL kAOcqP mEpUr fab fa-apple"
               />
               darwin
             </td>
           </tr>
           <tr>
             <td
-              className="sc-iJCRLp kKdtsi"
+              className="sc-lmgQde fNjJMq"
             >
               <b>
                 Architecture
               </b>
             </td>
             <td
-              className="sc-iJCRLp kKdtsi"
+              className="sc-lmgQde fNjJMq"
             >
               amd64
             </td>
@@ -1751,15 +1751,15 @@ exports[`agent detail opens terminal 3`] = `
         </tbody>
       </table>
       <i
-        className="sc-bdnylx sc-kLokih iEWuNR jNdfvu fas fa-terminal"
+        className="sc-bdnylx sc-bYwzba iEWuNR gUvqgN fas fa-terminal"
         onClick={[Function]}
       />
     </div>
     <div
-      className="sc-giAqnE fHiCCV"
+      className="sc-iJCRLp hLZKbq"
     >
       <div
-        className="sc-ezzayL fzoNWW"
+        className="sc-giAqnE hocBmK"
       >
         <div
           className="sc-gtssRu sc-gKAblj eJLYUo bNgdcg"
@@ -1777,17 +1777,17 @@ exports[`agent detail opens terminal 3`] = `
     </div>
   </div>
   <div
-    className="sc-ksluoS kiDXUP sc-iklIKw kgTcoj"
+    className="sc-ksluoS kiDXUP sc-kLokih iQMGjK"
   >
     <div
-      className="sc-fnVYJo lbWjxS"
+      className="sc-hBMVcZ jwrFuO"
     >
       <h2>
         Enumeration
       </h2>
       <div>
         <a
-          className="sc-kEqYlL dEthvt sc-iqAbSa lZTyw sc-fFSRdu ebbFiF"
+          className="sc-kEqYlL dEthvt sc-iqAbSa lZTyw sc-fnVYJo gnRoYv"
           disabled={true}
           href="/agent/fakeid/action/linpeas"
           onClick={[Function]}
