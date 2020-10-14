@@ -9,6 +9,7 @@ import media from '../../util/media';
 const propTypes = {
   to: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
+  iconClassName: PropTypes.string.isRequired,
   location: PropTypes.object.isRequired
 };
 
@@ -65,13 +66,13 @@ export default class PathAwareLink extends React.PureComponent {
   }
 
   render() {
-    const { children, to } = this.props;
+    const { children, to, iconClassName } = this.props;
     return (
       <StyledLink
         active={this.checkIfPathIsActive(to)}
         to={to}
       >
-        <StyledIcon className="fas fa-user-cog" />
+        <StyledIcon className={iconClassName} />
         <TextWrapper>{children}</TextWrapper>
       </StyledLink>
     );

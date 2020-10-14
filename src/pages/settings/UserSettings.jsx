@@ -1,9 +1,8 @@
 import React from 'react';
-import SettingsPageWrapper from '../../components/SettingsPageWrapper';
 
-function UserSettings(props) {
+function UserSettings() {
   return (
-    <SettingsPageWrapper {...props}><div /></SettingsPageWrapper>
+    <div />
   );
 }
 
