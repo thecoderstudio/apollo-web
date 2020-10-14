@@ -14,10 +14,12 @@ exports[`settings page render correctly 1`] = `
 .c3 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c3:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c5 {
@@ -91,6 +93,7 @@ exports[`settings page render correctly 1`] = `
   >
     <a
       className="c3 c4"
+      disabled={false}
       href="/settings/user_settings"
       onClick={[Function]}
     >
