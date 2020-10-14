@@ -12,7 +12,6 @@ import TerminalPage from './pages/TerminalPage';
 import Admin from './pages/Admin';
 import NotFound from './pages/NotFound';
 import { darkTheme } from './theme';
-// import UserSettings from './pages/settings/UserSettings';
 import SettingsPage from './pages/settings/SettingsPage';
 
 const GlobalStyle = createGlobalStyle`
