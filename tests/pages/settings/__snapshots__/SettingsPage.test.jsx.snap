@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`settings page wrapper render correctly 1`] = `
+exports[`settings page render correctly 1`] = `
+.c1 {
+  max-width: 225px;
+  width: 100%;
+  box-shadow: inset;
+  padding-top: 32px;
+  -webkit-transition: 0.75s ease-in-out;
+  transition: 0.75s ease-in-out;
+  overflow: hidden;
+}
+
 .c3 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -34,16 +44,6 @@ exports[`settings page wrapper render correctly 1`] = `
   margin: 0 8px;
 }
 
-.c1 {
-  max-width: 225px;
-  width: 100%;
-  box-shadow: inset;
-  padding-top: 32px;
-  -webkit-transition: 0.75s ease-in-out;
-  transition: 0.75s ease-in-out;
-  overflow: hidden;
-}
-
 .c0 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -51,8 +51,6 @@ exports[`settings page wrapper render correctly 1`] = `
   display: grid;
   position: relative;
   grid-template-columns: [navigation] 225px [content] 1fr;
-  -webkit-transition: 0.75s ease-in-out;
-  transition: 0.75s ease-in-out;
 }
 
 .c2 {
@@ -68,6 +66,12 @@ exports[`settings page wrapper render correctly 1`] = `
 }
 
 @media (max-width:47.9375em) {
+  .c1 {
+    width: 45px;
+  }
+}
+
+@media (max-width:47.9375em) {
   .c6 {
     margin: 0 auto;
   }
@@ -76,18 +80,6 @@ exports[`settings page wrapper render correctly 1`] = `
 @media (max-width:47.9375em) {
   .c7 {
     display: none;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c1 {
-    width: 45px;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c0 {
-    grid-template-columns: [navigation] 45px [content] 1fr;
   }
 }
 
@@ -114,8 +106,6 @@ exports[`settings page wrapper render correctly 1`] = `
   </div>
   <div
     className="c8"
-  >
-    <div />
-  </div>
+  />
 </div>
 `;

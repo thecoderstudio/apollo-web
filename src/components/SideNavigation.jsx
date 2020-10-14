@@ -2,10 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import media from '../util/media';
-import PathAwareLink from './links/PathAwareLink';
 
 const propTypes = {
-  location: PropTypes.object.isRequired
+  children: PropTypes.node.isRequired
 };
 
 const Navigation = styled.div`
@@ -22,14 +21,14 @@ const Navigation = styled.div`
   `}
 `;
 
-export default function SettingsSideNavigation(props) {
-  const { className, location } = props;
+export default function SideNavigation(props) {
+  const { className, children } = props;
 
   return (
     <Navigation className={className}>
-      <PathAwareLink location={location} to='/settings/user_settings'>User settings</PathAwareLink>
+      {children}
     </Navigation>
   );
 }
 
-SettingsSideNavigation.propTypes = propTypes;
+SideNavigation.propTypes = propTypes;

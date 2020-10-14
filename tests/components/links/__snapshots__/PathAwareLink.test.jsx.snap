@@ -52,7 +52,7 @@ exports[`Settings side navigation renders correctly 1`] = `
   onClick={[Function]}
 >
   <i
-    className="c2 c3 fas fa-user-cog"
+    className="c2 c3"
   />
   <span
     className="c4"
@@ -112,7 +112,7 @@ exports[`Settings side navigation renders correctly 2`] = `
   onClick={[Function]}
 >
   <i
-    className="c2 c3 fas fa-user-cog"
+    className="c2 c3"
   />
   <span
     className="c4"

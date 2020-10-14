@@ -1,12 +1,12 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
-import SettingsSideNavigation from '../../src/components/SettingsSideNavigation';
+import renderer from 'react-test-renderer';
+import SideNavigation from '../../src/components/SideNavigation';
 
 function getComponent(props) {
   return renderer.create(
     <BrowserRouter>
-      <SettingsSideNavigation {...props} />
+      <SideNavigation {...props} />
     </BrowserRouter>
   );
 }
