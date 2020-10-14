@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import { ThemeProvider } from 'styled-components';
@@ -23,13 +24,15 @@ function getComponentTags(agent) {
   return (
     <Provider store={store}>
       <ThemeProvider theme={darkTheme}>
-        <AgentDetail 
-          match={{
-            params: {
-              agentId: "fakeid" 
-            }
-          }}
-        />
+        <BrowserRouter>
+          <AgentDetail 
+            match={{
+              params: {
+                agentId: "fakeid" 
+              }
+            }}
+          />
+        </BrowserRouter>
       </ThemeProvider>
     </Provider>
   );
