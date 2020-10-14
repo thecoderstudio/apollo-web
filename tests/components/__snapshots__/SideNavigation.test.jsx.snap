@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Settings side navigation renders correctly 1`] = `
+.c0 {
+  max-width: 225px;
+  width: 100%;
+  box-shadow: inset;
+  padding-top: 32px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  overflow: hidden;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    width: 45px;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Settings side navigation renders correctly 2`] = `
+.c0 {
+  max-width: 225px;
+  width: 100%;
+  box-shadow: inset;
+  padding-top: 32px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  overflow: hidden;
+}
+
+@media (max-width:47.9375em) {
+  .c0 {
+    width: 45px;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
