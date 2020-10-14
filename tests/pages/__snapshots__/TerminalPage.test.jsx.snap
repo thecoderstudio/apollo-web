@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`agent list item correctly renders 1`] = `
+exports[`terminal page correctly renders 1`] = `
 .c0 {
   height: 100%;
   width: 100%;
@@ -100,6 +100,8 @@ exports[`agent list item correctly renders 1`] = `
                   "name": "fake",
                 }
               }
+              agentEndpoint="shell"
+              readOnly={false}
               theme={
                 Object {
                   "accent": "#4D02EE",

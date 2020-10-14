@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import WS from 'jest-websocket-mock';
 import { mount } from 'enzyme';
-import TerminalPage from '../../src/pages/TerminalPage';
-import { darkTheme } from '../../src/theme';
+import Linpeas from '../../../src/pages/actions/Linpeas';
+import { darkTheme } from '../../../src/theme';
 
 const mockStore = configureStore([]);
 
@@ -14,7 +14,7 @@ function getComponentTags(store) {
     <div>
       <Provider store={store}>
         <ThemeProvider theme={darkTheme}>
-          <TerminalPage
+          <Linpeas
             match={{
               params: {
                 agentId: "fakeid"
@@ -27,14 +27,14 @@ function getComponentTags(store) {
   );
 }
 
-describe('terminal page', () => {
-  const server = new WS(`ws://localhost:1234/agent/a2346886-83ba-442d-9fb7-d024c6274e22/shell`);
+describe('linpeas', () => {
+  const server = new WS(`ws://localhost:1234/agent/fakeid/action/linpeas`);
 
   afterEach(() => {
     WS.clean();
   });
 
-  it('correctly renders', () => {
+  it('correctly renders', async () => {
     const agents = new Map();
     agents.set('fakeid', {
       id: 'fakeid',
@@ -45,6 +45,7 @@ describe('terminal page', () => {
       agent: agents
     });
     const wrapper = mount(getComponentTags(store));
+    await server.connected;
     expect(wrapper).toMatchSnapshot();
   });
 });

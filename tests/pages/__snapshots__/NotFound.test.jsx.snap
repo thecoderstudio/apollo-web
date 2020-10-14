@@ -4,10 +4,12 @@ exports[`not found renders correctly 1`] = `
 .c8 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c8:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c5 {
@@ -153,6 +155,7 @@ exports[`not found renders correctly 1`] = `
     >
       <a
         className="c8"
+        disabled={false}
         href="/"
         onClick={[Function]}
       >
