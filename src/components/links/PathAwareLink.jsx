@@ -15,8 +15,9 @@ const propTypes = {
 
 const StyledIcon = styled(Icon)`
   margin: 0 8px;
+
   ${media.phone`
-    margin: 0 auto;
+      margin: 0 auto;
   `}
 `;
 

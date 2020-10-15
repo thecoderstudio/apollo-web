@@ -11,15 +11,78 @@ exports[`Settings side navigation renders correctly 1`] = `
   overflow: hidden;
 }
 
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  pointer-events: inherit;
+}
+
+.c1:hover {
+  opacity: 0.9;
+}
+
+.c3 {
+  cursor: pointer;
+}
+
+.c4 {
+  margin: 0 8px;
+}
+
+.c2 {
+  padding: 12px;
+  margin-top: 24px;
+  border-radius: 4px;
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.c5 {
+  margin: 0 8px;
+}
+
 @media (max-width:47.9375em) {
   .c0 {
     width: 45px;
   }
 }
 
+@media (max-width:47.9375em) {
+  .c4 {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c5 {
+    display: none;
+  }
+}
+
 <div
   className="c0"
-/>
+>
+  <a
+    className="c1 c2"
+    disabled={false}
+    href="/settings/test"
+    onClick={[Function]}
+  >
+    <i
+      className="c3 c4 fas fa-user-cog"
+    />
+    <span
+      className="c5"
+    >
+      Settings
+    </span>
+  </a>
+</div>
 `;
 
 exports[`Settings side navigation renders correctly 2`] = `
@@ -33,13 +96,76 @@ exports[`Settings side navigation renders correctly 2`] = `
   overflow: hidden;
 }
 
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  pointer-events: inherit;
+}
+
+.c1:hover {
+  opacity: 0.9;
+}
+
+.c3 {
+  cursor: pointer;
+}
+
+.c4 {
+  margin: 0 8px;
+}
+
+.c2 {
+  padding: 12px;
+  margin-top: 24px;
+  border-radius: 4px;
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.c5 {
+  margin: 0 8px;
+}
+
 @media (max-width:47.9375em) {
   .c0 {
     width: 45px;
   }
 }
 
+@media (max-width:47.9375em) {
+  .c4 {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c5 {
+    display: none;
+  }
+}
+
 <div
   className="c0"
-/>
+>
+  <a
+    className="c1 c2"
+    disabled={false}
+    href="/settings/test"
+    onClick={[Function]}
+  >
+    <i
+      className="c3 c4 fas fa-user-cog"
+    />
+    <span
+      className="c5"
+    >
+      Settings
+    </span>
+  </a>
+</div>
 `;

@@ -53,9 +53,7 @@ const Body = styled.p`
 `;
 
 function Action(props) {
-  const {
-    title, children, agentId, endpoint, disabled, ...rest
-  } = props;
+  const { title, children, agentId, endpoint, disabled, ...rest } = props;
   return (
     <Container {...rest} disabled={disabled} to={`/agent/${agentId}/action/${endpoint}`}>
       <Image className="material-icons">assessment</Image>

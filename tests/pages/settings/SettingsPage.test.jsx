@@ -12,7 +12,14 @@ function getComponent(props) {
 }
 
 describe("settings page", () => {
-  const props = { location: { pathname: 'location' }, match: { url: '/location' } };
+  const props = {
+    location: {
+      pathname: 'location'
+    },
+    match: {
+      url: '/location'
+    }
+  };
 
   it("render correctly", () => {
     const tree = getComponent(props).toJSON();

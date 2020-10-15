@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 import SideNavigation from '../../components/SideNavigation';
 import UserSettings from './UserSettings';
 import PathAwareLink from '../../components/links/PathAwareLink';
+import NotFound from '../NotFound';
 
 const propTypes = {
   location: PropTypes.object.isRequired
@@ -45,6 +46,7 @@ export default function SettingsPage(props) {
       <ComponentWrapper>
         <Switch>
           <Route exact path={`${match.url}/user_settings`} component={UserSettings} />
+          <Route component={NotFound} />
         </Switch>
       </ComponentWrapper>
     </ContentWrapper>

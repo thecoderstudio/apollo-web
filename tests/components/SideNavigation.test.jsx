@@ -2,11 +2,20 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import SideNavigation from '../../src/components/SideNavigation';
+import PathAwareLink from '../../src/components/links/PathAwareLink';
 
 function getComponent(props) {
   return renderer.create(
     <BrowserRouter>
-      <SideNavigation {...props} />
+      <SideNavigation {...props}>
+        <PathAwareLink
+          location={props.location}
+          to='/settings/test'
+          iconClassName='fas fa-user-cog'
+        >
+          Settings
+        </PathAwareLink>
+      </SideNavigation>
     </BrowserRouter>
   );
 }
@@ -16,7 +25,9 @@ describe('Settings side navigation', () => {
 
   beforeEach(() => {
     props = {
-      location: { pathname: '/path' }
+      location: {
+        pathname: '/path'
+      }
     };
   });
 
@@ -25,7 +36,9 @@ describe('Settings side navigation', () => {
     expect(tree).toMatchSnapshot();
 
     tree = getComponent({
-      location: { pathname: '/path' }
+      location: {
+        pathname: '/path'
+      }
     }).toJSON();
     expect(tree).toMatchSnapshot();
   });
