@@ -16,9 +16,11 @@ const Navigation = styled.div`
   transition: 0.75s ease-in-out;
   overflow: hidden;
 
-  ${media.phone`
-    width: 45px;
-  `}
+  ${
+    media.phone`
+      width: 45px;
+    `
+  }
 `;
 
 export default function SideNavigation(props) {

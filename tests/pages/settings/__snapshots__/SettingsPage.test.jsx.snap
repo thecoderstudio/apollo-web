@@ -11,6 +11,35 @@ exports[`settings page render correctly 1`] = `
   overflow: hidden;
 }
 
+.c14 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c14:hover {
+  opacity: 0.90;
+}
+
+.c14:focus {
+  outline: none;
+}
+
+.c14:active {
+  opacity: 0.80;
+}
+
+.c14:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
 .c3 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -44,35 +73,6 @@ exports[`settings page render correctly 1`] = `
 
 .c7 {
   margin: 0 8px;
-}
-
-.c14 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.c14:hover {
-  opacity: 0.90;
-}
-
-.c14:focus {
-  outline: none;
-}
-
-.c14:active {
-  opacity: 0.80;
-}
-
-.c14:disabled:hover {
-  opacity: 1;
-  cursor: auto;
 }
 
 .c15 {
