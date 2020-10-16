@@ -13,12 +13,14 @@ const mockAgent = {
 
 describe('Terminal', () => {
   const server = new WS(`ws://localhost:1234/agent/a2346886-83ba-442d-9fb7-d024c6274e22/shell`);
+  var wrapper;
   var terminal;
   var termWriteSpy;
 
   beforeEach(() => {
     termWriteSpy = jest.spyOn(Terminal.prototype, 'write');
-    terminal = mount(<Terminal theme={darkTheme} agent={mockAgent} />).find(Terminal).instance();
+    wrapper = mount(<Terminal theme={darkTheme} agent={mockAgent} />);
+    terminal = wrapper.find(Terminal).instance();
   });
 
   afterEach(() => {
@@ -71,6 +73,12 @@ describe('Terminal', () => {
         "\n\r\nConnection with server is closed"
       ));
     });
+  });
+
+  it('disconnects when about to unmount', async () => {
+    await server.connected;
+    wrapper.unmount();
+    await server.closed;
   });
 });
 

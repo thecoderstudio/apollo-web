@@ -280,7 +280,9 @@ exports[`inline terminal correctly renders connected 2`] = `
                       "name": "agentName",
                     }
                   }
+                  agentEndpoint="shell"
                   className="c2"
+                  readOnly={false}
                   theme={
                     Object {
                       "accent": "#4D02EE",

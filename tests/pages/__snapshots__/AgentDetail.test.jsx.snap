@@ -53,6 +53,81 @@ exports[`agent detail correctly syncs with remote 1`] = `
   background-color: #C0392B;
 }
 
+.c18 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #F8F8F8;
+  cursor: inherit;
+  pointer-events: none;
+}
+
+.c18:hover {
+  opacity: 0.2;
+}
+
+.c19 {
+  display: grid;
+  grid-template-columns: [image] 50px [content] 1fr;
+  grid-template-rows: [title] 1fr [body] 1fr;
+  grid-column-gap: 30px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 16px;
+  opacity: 0.2;
+}
+
+.c21 {
+  display: grid;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-column: image;
+  grid-row: 1 / 3;
+  height: 50px;
+  width: 100%;
+  color: #02A3EE;
+  border: 1px solid #02A3EE;
+  border-radius: 5px;
+}
+
+.c22 {
+  grid-column: content;
+  grid-row: title;
+  color: #02A3EE;
+  margin: 0 0 8px 0;
+}
+
+.c23 {
+  grid-column: content;
+  grid-row: body;
+  margin: 0;
+  color: #F8F8F8;
+}
+
+.c15 {
+  width: 100%;
+}
+
+.c17 {
+  width: 100%;
+}
+
+.c17 > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.c20 {
+  margin: 16px 16px 16px 0;
+}
+
 .c0 {
   margin: 32px;
 }
@@ -104,6 +179,16 @@ exports[`agent detail correctly syncs with remote 1`] = `
   height: 24px;
   color: #363636;
   display: none;
+}
+
+.c16 {
+  margin-top: 150px;
+}
+
+@media (max-width:47.9375em) {
+  .c17 > div {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width:47.9375em) {
@@ -213,6 +298,41 @@ exports[`agent detail correctly syncs with remote 1`] = `
       </div>
     </div>
   </div>
+  <div
+    className="c15 c16"
+  >
+    <div
+      className="c17"
+    >
+      <h2>
+        Enumeration
+      </h2>
+      <div>
+        <a
+          className="c18 c19 c20"
+          disabled={true}
+          href="/agent/fakeid/action/linpeas"
+          onClick={[Function]}
+        >
+          <i
+            className="c21 material-icons"
+          >
+            assessment
+          </i>
+          <h4
+            className="c22"
+          >
+            Run LinPEAS
+          </h4>
+          <p
+            className="c23"
+          >
+            LinPEAS is a script that search for possible paths to escalate privileges on Linux/Unix hosts
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
@@ -269,6 +389,81 @@ exports[`agent detail deals with property updates correctly 1`] = `
   background-color: #C0392B;
 }
 
+.c18 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #F8F8F8;
+  cursor: inherit;
+  pointer-events: none;
+}
+
+.c18:hover {
+  opacity: 0.2;
+}
+
+.c19 {
+  display: grid;
+  grid-template-columns: [image] 50px [content] 1fr;
+  grid-template-rows: [title] 1fr [body] 1fr;
+  grid-column-gap: 30px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 16px;
+  opacity: 0.2;
+}
+
+.c21 {
+  display: grid;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-column: image;
+  grid-row: 1 / 3;
+  height: 50px;
+  width: 100%;
+  color: #02A3EE;
+  border: 1px solid #02A3EE;
+  border-radius: 5px;
+}
+
+.c22 {
+  grid-column: content;
+  grid-row: title;
+  color: #02A3EE;
+  margin: 0 0 8px 0;
+}
+
+.c23 {
+  grid-column: content;
+  grid-row: body;
+  margin: 0;
+  color: #F8F8F8;
+}
+
+.c15 {
+  width: 100%;
+}
+
+.c17 {
+  width: 100%;
+}
+
+.c17 > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.c20 {
+  margin: 16px 16px 16px 0;
+}
+
 .c0 {
   margin: 32px;
 }
@@ -320,6 +515,16 @@ exports[`agent detail deals with property updates correctly 1`] = `
   height: 24px;
   color: #363636;
   display: none;
+}
+
+.c16 {
+  margin-top: 150px;
+}
+
+@media (max-width:47.9375em) {
+  .c17 > div {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width:47.9375em) {
@@ -429,6 +634,41 @@ exports[`agent detail deals with property updates correctly 1`] = `
       </div>
     </div>
   </div>
+  <div
+    className="c15 c16"
+  >
+    <div
+      className="c17"
+    >
+      <h2>
+        Enumeration
+      </h2>
+      <div>
+        <a
+          className="c18 c19 c20"
+          disabled={true}
+          href="/agent/fakeid/action/linpeas"
+          onClick={[Function]}
+        >
+          <i
+            className="c21 material-icons"
+          >
+            assessment
+          </i>
+          <h4
+            className="c22"
+          >
+            Run LinPEAS
+          </h4>
+          <p
+            className="c23"
+          >
+            LinPEAS is a script that search for possible paths to escalate privileges on Linux/Unix hosts
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
@@ -485,6 +725,81 @@ exports[`agent detail handles sync failure 1`] = `
   background-color: #C0392B;
 }
 
+.c18 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #F8F8F8;
+  cursor: inherit;
+  pointer-events: none;
+}
+
+.c18:hover {
+  opacity: 0.2;
+}
+
+.c19 {
+  display: grid;
+  grid-template-columns: [image] 50px [content] 1fr;
+  grid-template-rows: [title] 1fr [body] 1fr;
+  grid-column-gap: 30px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 16px;
+  opacity: 0.2;
+}
+
+.c21 {
+  display: grid;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-column: image;
+  grid-row: 1 / 3;
+  height: 50px;
+  width: 100%;
+  color: #02A3EE;
+  border: 1px solid #02A3EE;
+  border-radius: 5px;
+}
+
+.c22 {
+  grid-column: content;
+  grid-row: title;
+  color: #02A3EE;
+  margin: 0 0 8px 0;
+}
+
+.c23 {
+  grid-column: content;
+  grid-row: body;
+  margin: 0;
+  color: #F8F8F8;
+}
+
+.c15 {
+  width: 100%;
+}
+
+.c17 {
+  width: 100%;
+}
+
+.c17 > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.c20 {
+  margin: 16px 16px 16px 0;
+}
+
 .c0 {
   margin: 32px;
 }
@@ -536,6 +851,16 @@ exports[`agent detail handles sync failure 1`] = `
   height: 24px;
   color: #363636;
   display: none;
+}
+
+.c16 {
+  margin-top: 150px;
+}
+
+@media (max-width:47.9375em) {
+  .c17 > div {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width:47.9375em) {
@@ -642,6 +967,41 @@ exports[`agent detail handles sync failure 1`] = `
         <div
           className="c14"
         />
+      </div>
+    </div>
+  </div>
+  <div
+    className="c15 c16"
+  >
+    <div
+      className="c17"
+    >
+      <h2>
+        Enumeration
+      </h2>
+      <div>
+        <a
+          className="c18 c19 c20"
+          disabled={true}
+          href="/agent/fakeid/action/linpeas"
+          onClick={[Function]}
+        >
+          <i
+            className="c21 material-icons"
+          >
+            assessment
+          </i>
+          <h4
+            className="c22"
+          >
+            Run LinPEAS
+          </h4>
+          <p
+            className="c23"
+          >
+            LinPEAS is a script that search for possible paths to escalate privileges on Linux/Unix hosts
+          </p>
+        </a>
       </div>
     </div>
   </div>
@@ -701,6 +1061,81 @@ exports[`agent detail opens terminal 1`] = `
   background-color: #C0392B;
 }
 
+.c18 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #F8F8F8;
+  cursor: inherit;
+  pointer-events: none;
+}
+
+.c18:hover {
+  opacity: 0.2;
+}
+
+.c19 {
+  display: grid;
+  grid-template-columns: [image] 50px [content] 1fr;
+  grid-template-rows: [title] 1fr [body] 1fr;
+  grid-column-gap: 30px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 16px;
+  opacity: 0.2;
+}
+
+.c21 {
+  display: grid;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-column: image;
+  grid-row: 1 / 3;
+  height: 50px;
+  width: 100%;
+  color: #02A3EE;
+  border: 1px solid #02A3EE;
+  border-radius: 5px;
+}
+
+.c22 {
+  grid-column: content;
+  grid-row: title;
+  color: #02A3EE;
+  margin: 0 0 8px 0;
+}
+
+.c23 {
+  grid-column: content;
+  grid-row: body;
+  margin: 0;
+  color: #F8F8F8;
+}
+
+.c15 {
+  width: 100%;
+}
+
+.c17 {
+  width: 100%;
+}
+
+.c17 > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.c20 {
+  margin: 16px 16px 16px 0;
+}
+
 .c0 {
   margin: 32px;
 }
@@ -752,6 +1187,16 @@ exports[`agent detail opens terminal 1`] = `
   height: 24px;
   color: #363636;
   display: none;
+}
+
+.c16 {
+  margin-top: 150px;
+}
+
+@media (max-width:47.9375em) {
+  .c17 > div {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width:47.9375em) {
@@ -858,6 +1303,41 @@ exports[`agent detail opens terminal 1`] = `
         <div
           className="c14"
         />
+      </div>
+    </div>
+  </div>
+  <div
+    className="c15 c16"
+  >
+    <div
+      className="c17"
+    >
+      <h2>
+        Enumeration
+      </h2>
+      <div>
+        <a
+          className="c18 c19 c20"
+          disabled={true}
+          href="/agent/fakeid/action/linpeas"
+          onClick={[Function]}
+        >
+          <i
+            className="c21 material-icons"
+          >
+            assessment
+          </i>
+          <h4
+            className="c22"
+          >
+            Run LinPEAS
+          </h4>
+          <p
+            className="c23"
+          >
+            LinPEAS is a script that search for possible paths to escalate privileges on Linux/Unix hosts
+          </p>
+        </a>
       </div>
     </div>
   </div>
@@ -917,6 +1397,81 @@ exports[`agent detail opens terminal 2`] = `
   background-color: #C0392B;
 }
 
+.c18 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #F8F8F8;
+  cursor: inherit;
+  pointer-events: none;
+}
+
+.c18:hover {
+  opacity: 0.2;
+}
+
+.c19 {
+  display: grid;
+  grid-template-columns: [image] 50px [content] 1fr;
+  grid-template-rows: [title] 1fr [body] 1fr;
+  grid-column-gap: 30px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 16px;
+  opacity: 0.2;
+}
+
+.c21 {
+  display: grid;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-column: image;
+  grid-row: 1 / 3;
+  height: 50px;
+  width: 100%;
+  color: #02A3EE;
+  border: 1px solid #02A3EE;
+  border-radius: 5px;
+}
+
+.c22 {
+  grid-column: content;
+  grid-row: title;
+  color: #02A3EE;
+  margin: 0 0 8px 0;
+}
+
+.c23 {
+  grid-column: content;
+  grid-row: body;
+  margin: 0;
+  color: #F8F8F8;
+}
+
+.c15 {
+  width: 100%;
+}
+
+.c17 {
+  width: 100%;
+}
+
+.c17 > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.c20 {
+  margin: 16px 16px 16px 0;
+}
+
 .c0 {
   margin: 32px;
 }
@@ -968,6 +1523,16 @@ exports[`agent detail opens terminal 2`] = `
   height: 24px;
   color: #363636;
   display: none;
+}
+
+.c16 {
+  margin-top: 150px;
+}
+
+@media (max-width:47.9375em) {
+  .c17 > div {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width:47.9375em) {
@@ -1077,21 +1642,56 @@ exports[`agent detail opens terminal 2`] = `
       </div>
     </div>
   </div>
+  <div
+    className="c15 c16"
+  >
+    <div
+      className="c17"
+    >
+      <h2>
+        Enumeration
+      </h2>
+      <div>
+        <a
+          className="c18 c19 c20"
+          disabled={true}
+          href="/agent/fakeid/action/linpeas"
+          onClick={[Function]}
+        >
+          <i
+            className="c21 material-icons"
+          >
+            assessment
+          </i>
+          <h4
+            className="c22"
+          >
+            Run LinPEAS
+          </h4>
+          <p
+            className="c23"
+          >
+            LinPEAS is a script that search for possible paths to escalate privileges on Linux/Unix hosts
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`agent detail opens terminal 3`] = `
 <div
-  className="sc-fFSRdu fJuSmP"
+  className="sc-fKgIGh bDKESv"
 >
   <div
-    className="sc-bkbjAj kdvJj"
+    className="sc-bCwgka iOcLUC"
   >
     <div
-      className="sc-dIvqjp kdsKS"
+      className="sc-cxNIbT drJJXc"
     >
       <div
-        className="sc-iemXMA gMFpiq"
+        className="sc-iwaifL jDTbtD"
       >
         <div
           className="sc-jrsJCI bmKhFO"
@@ -1105,45 +1705,45 @@ exports[`agent detail opens terminal 3`] = `
         <tbody>
           <tr>
             <td
-              className="sc-hHEjAm cAPAWn"
+              className="sc-lmgQde fNjJMq"
             >
               <b>
                 External IP address
               </b>
             </td>
             <td
-              className="sc-hHEjAm cAPAWn"
+              className="sc-lmgQde fNjJMq"
             >
               unknown
             </td>
           </tr>
           <tr>
             <td
-              className="sc-hHEjAm cAPAWn"
+              className="sc-lmgQde fNjJMq"
             >
               <b>
                 Operating system
               </b>
             </td>
             <td
-              className="sc-hHEjAm cAPAWn"
+              className="sc-lmgQde fNjJMq"
             >
               <i
-                className="sc-bdnylx sc-fKgIGh kAOcqP fxulcm fab fa-apple"
+                className="sc-bdnylx sc-ezzayL kAOcqP mEpUr fab fa-apple"
               />
               darwin
             </td>
           </tr>
           <tr>
             <td
-              className="sc-hHEjAm cAPAWn"
+              className="sc-lmgQde fNjJMq"
             >
               <b>
                 Architecture
               </b>
             </td>
             <td
-              className="sc-hHEjAm cAPAWn"
+              className="sc-lmgQde fNjJMq"
             >
               amd64
             </td>
@@ -1151,15 +1751,15 @@ exports[`agent detail opens terminal 3`] = `
         </tbody>
       </table>
       <i
-        className="sc-bdnylx sc-bCwgka iEWuNR hBmAar fas fa-terminal"
+        className="sc-bdnylx sc-bYwzba iEWuNR gUvqgN fas fa-terminal"
         onClick={[Function]}
       />
     </div>
     <div
-      className="sc-dlMBXb iyBSXJ"
+      className="sc-iJCRLp hLZKbq"
     >
       <div
-        className="sc-kfYqjs eCjTHj"
+        className="sc-giAqnE hocBmK"
       >
         <div
           className="sc-gtssRu sc-gKAblj eJLYUo bNgdcg"
@@ -1173,6 +1773,41 @@ exports[`agent detail opens terminal 3`] = `
         <div
           className="sc-fujyUd dWblrL"
         />
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-ksluoS kiDXUP sc-kLokih iQMGjK"
+  >
+    <div
+      className="sc-hBMVcZ jwrFuO"
+    >
+      <h2>
+        Enumeration
+      </h2>
+      <div>
+        <a
+          className="sc-kEqYlL dEthvt sc-iqAbSa lZTyw sc-fnVYJo gnRoYv"
+          disabled={true}
+          href="/agent/fakeid/action/linpeas"
+          onClick={[Function]}
+        >
+          <i
+            className="sc-crzoUp eWJLFD material-icons"
+          >
+            assessment
+          </i>
+          <h4
+            className="sc-dIsAE bSbXbf"
+          >
+            Run LinPEAS
+          </h4>
+          <p
+            className="sc-bqGHjH fmWzVN"
+          >
+            LinPEAS is a script that search for possible paths to escalate privileges on Linux/Unix hosts
+          </p>
+        </a>
       </div>
     </div>
   </div>
@@ -1232,6 +1867,81 @@ exports[`agent detail renders correctly 1`] = `
   background-color: #C0392B;
 }
 
+.c18 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #F8F8F8;
+  cursor: inherit;
+  pointer-events: none;
+}
+
+.c18:hover {
+  opacity: 0.2;
+}
+
+.c19 {
+  display: grid;
+  grid-template-columns: [image] 50px [content] 1fr;
+  grid-template-rows: [title] 1fr [body] 1fr;
+  grid-column-gap: 30px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 16px;
+  opacity: 0.2;
+}
+
+.c21 {
+  display: grid;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-column: image;
+  grid-row: 1 / 3;
+  height: 50px;
+  width: 100%;
+  color: #02A3EE;
+  border: 1px solid #02A3EE;
+  border-radius: 5px;
+}
+
+.c22 {
+  grid-column: content;
+  grid-row: title;
+  color: #02A3EE;
+  margin: 0 0 8px 0;
+}
+
+.c23 {
+  grid-column: content;
+  grid-row: body;
+  margin: 0;
+  color: #F8F8F8;
+}
+
+.c15 {
+  width: 100%;
+}
+
+.c17 {
+  width: 100%;
+}
+
+.c17 > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.c20 {
+  margin: 16px 16px 16px 0;
+}
+
 .c0 {
   margin: 32px;
 }
@@ -1283,6 +1993,16 @@ exports[`agent detail renders correctly 1`] = `
   height: 24px;
   color: #363636;
   display: none;
+}
+
+.c16 {
+  margin-top: 150px;
+}
+
+@media (max-width:47.9375em) {
+  .c17 > div {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width:47.9375em) {
@@ -1389,6 +2109,41 @@ exports[`agent detail renders correctly 1`] = `
         <div
           className="c14"
         />
+      </div>
+    </div>
+  </div>
+  <div
+    className="c15 c16"
+  >
+    <div
+      className="c17"
+    >
+      <h2>
+        Enumeration
+      </h2>
+      <div>
+        <a
+          className="c18 c19 c20"
+          disabled={true}
+          href="/agent/fakeid/action/linpeas"
+          onClick={[Function]}
+        >
+          <i
+            className="c21 material-icons"
+          >
+            assessment
+          </i>
+          <h4
+            className="c22"
+          >
+            Run LinPEAS
+          </h4>
+          <p
+            className="c23"
+          >
+            LinPEAS is a script that search for possible paths to escalate privileges on Linux/Unix hosts
+          </p>
+        </a>
       </div>
     </div>
   </div>

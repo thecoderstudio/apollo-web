@@ -4,10 +4,12 @@ exports[`Settings side navigation renders correctly 1`] = `
 .c0 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c0:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c2 {
@@ -48,6 +50,7 @@ exports[`Settings side navigation renders correctly 1`] = `
 
 <a
   className="c0 c1"
+  disabled={false}
   href="/path"
   onClick={[Function]}
 >
@@ -64,10 +67,12 @@ exports[`Settings side navigation renders correctly 2`] = `
 .c0 {
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c0:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c2 {
@@ -108,6 +113,7 @@ exports[`Settings side navigation renders correctly 2`] = `
 
 <a
   className="c0 c1"
+  disabled={false}
   href="/path"
   onClick={[Function]}
 >

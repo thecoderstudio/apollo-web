@@ -8,7 +8,14 @@ import chalk from 'chalk';
 import { handleError } from '../../actions/error';
 
 const propTypes = {
-  agent: PropTypes.object.isRequired
+  agent: PropTypes.object.isRequired,
+  agentEndpoint: PropTypes.string,
+  readOnly: PropTypes.bool
+};
+
+const defaultProps = {
+  agentEndpoint: "shell",
+  readOnly: false
 };
 
 const Container = styled.div`
@@ -26,13 +33,6 @@ const StyledXTerm = styled.div`
   }
 `;
 
-const TERMINAL_SETTINGS = {
-  theme : {
-    background: "#ffffff00"
-  },
-  allowTransparency: true
-};
-
 const CHALK_SETTINGS = {
   enabled: true,
   level: 2
@@ -44,7 +44,7 @@ export class Terminal extends React.PureComponent {
   constructor(props) {
     super(props);
     this.terminalRef = React.createRef();
-    this.term = new XTerm(TERMINAL_SETTINGS);
+    this.term = new XTerm(this.getTerminalSettings(props.readOnly));
     this.chalk = new chalk.Instance(CHALK_SETTINGS);
     this.onSocketError = this.onSocketError.bind(this);
     this.onSocketClose = this.onSocketClose.bind(this);
@@ -54,15 +54,25 @@ export class Terminal extends React.PureComponent {
     this.connect();
   }
 
-  connect() {
-    const agent = this.props.agent;
-    const socket = new WebSocket(
-      `${process.env.APOLLO_WS_URL}agent/${agent.id}/shell`
-    );
-    socket.onerror = this.onSocketError;
-    socket.onclose = this.onSocketClose;
+  getTerminalSettings(readOnly) {
+    return {
+      theme : {
+        background: "#ffffff00"
+      },
+      allowTransparency: true,
+      disableStdin: !readOnly
+    };
+  }
 
-    const attachAddon = new AttachAddon(socket);
+  connect() {
+    const { agent, agentEndpoint } = this.props;
+    this.socket = new WebSocket(
+      `${process.env.APOLLO_WS_URL}agent/${agent.id}/${agentEndpoint}`
+    );
+    this.socket.onerror = this.onSocketError;
+    this.socket.onclose = this.onSocketClose;
+
+    const attachAddon = new AttachAddon(this.socket);
     this.fitAddon = new FitAddon();
     this.term.loadAddon(attachAddon);
     this.term.loadAddon(this.fitAddon);
@@ -73,6 +83,10 @@ export class Terminal extends React.PureComponent {
     this.term.open(this.terminalRef.current);
     this.fit();
     this.write(`Connecting to agent ${styledName}...\n\r\n`);
+  }
+
+  componentWillUnmount() {
+    this.socket.close();
   }
 
   onSocketError() {
@@ -113,6 +127,7 @@ export class Terminal extends React.PureComponent {
 }
 
 Terminal.propTypes = propTypes;
+Terminal.defaultProps = defaultProps;
 
 export function openTerminal(agentId) {
   const location = window.location;

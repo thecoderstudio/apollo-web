@@ -9,6 +9,7 @@ import Dashboard from './pages/Dashboard';
 import Welcome from './pages/Welcome';
 import AgentDetail from './pages/AgentDetail';
 import TerminalPage from './pages/TerminalPage';
+import Linpeas from './pages/actions/Linpeas';
 import Admin from './pages/Admin';
 import NotFound from './pages/NotFound';
 import { darkTheme } from './theme';
@@ -52,6 +53,7 @@ function App(props) {
             {props.authenticated && props.hasChangedPassword && <NavBar />}
             <Switch>
               <ProtectedRoute exact path='/' component={Dashboard} fallbackComponent={Welcome} />
+              <ProtectedRoute exact path='/agent/:agentId/action/linpeas' component={Linpeas} fallbackComponent={NotFound} />
               <ProtectedRoute exact path='/agent/:agentId/shell' component={TerminalPage} fallbackComponent={NotFound} />
               <ProtectedRoute exact path='/agent/:agentId' component={AgentDetail} fallbackComponent={NotFound} />
               <ProtectedRoute exact path='/admin' component={Admin} fallbackComponent={NotFound} role='admin' />

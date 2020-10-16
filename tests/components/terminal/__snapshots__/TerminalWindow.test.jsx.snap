@@ -755,6 +755,8 @@ exports[`terminal window correctly renders connected 1`] = `
                               "name": "agentName",
                             }
                           }
+                          agentEndpoint="shell"
+                          readOnly={false}
                           theme={
                             Object {
                               "accent": "#4D02EE",
@@ -1744,6 +1746,8 @@ exports[`terminal window correctly renders disconnected 1`] = `
                               "name": "agentName",
                             }
                           }
+                          agentEndpoint="shell"
+                          readOnly={false}
                           theme={
                             Object {
                               "accent": "#4D02EE",
@@ -2733,6 +2737,8 @@ exports[`terminal window resizes 1`] = `
                               "name": "agentName",
                             }
                           }
+                          agentEndpoint="shell"
+                          readOnly={false}
                           theme={
                             Object {
                               "accent": "#4D02EE",

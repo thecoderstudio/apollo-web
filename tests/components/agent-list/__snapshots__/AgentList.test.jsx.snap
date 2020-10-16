@@ -5,10 +5,12 @@ exports[`agentList correctly lists multiple agents 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #F8F8F8;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c7:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c9 {
@@ -274,6 +276,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
     >
       <a
         className="c7 c8"
+        disabled={false}
         href="/agent/id"
         onClick={[Function]}
       >
@@ -317,6 +320,7 @@ exports[`agentList correctly lists multiple agents 1`] = `
     >
       <a
         className="c7 c8"
+        disabled={false}
         href="/agent/id2"
         onClick={[Function]}
       >

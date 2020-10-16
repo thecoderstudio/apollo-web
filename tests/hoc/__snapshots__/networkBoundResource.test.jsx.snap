@@ -96,10 +96,12 @@ exports[`network bound resource renders not found 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #F8F8F8;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c8:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c5 {
@@ -252,6 +254,7 @@ exports[`network bound resource renders not found 1`] = `
     >
       <a
         className="c8"
+        disabled={false}
         href="/"
         onClick={[Function]}
       >
@@ -281,10 +284,12 @@ exports[`network bound resource renders success from remote 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #F8F8F8;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c8:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c5 {
@@ -437,6 +442,7 @@ exports[`network bound resource renders success from remote 1`] = `
     >
       <a
         className="c8"
+        disabled={false}
         href="/"
         onClick={[Function]}
       >

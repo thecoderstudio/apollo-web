@@ -1,19 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import Link from '../links/Link';
 
 const propTypes = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  agentId: PropTypes.string.isRequired,
+  endpoint: PropTypes.string.isRequired,
+  disabled: PropTypes.bool
 };
 
-const Container = styled.div`
+const defaultProps = {
+  disabled: false
+};
+
+const Container = styled(Link)`
   display: grid;
   grid-template-columns: [image] 50px [content] 1fr;
   grid-template-rows: [title] 1fr [body] 1fr;
   grid-column-gap: 30px;
   align-items: center;
   margin: 16px;
+  opacity: ${props => props.disabled ? 0.2 : 1};
 `;
 
 const Image = styled.i`
@@ -40,12 +49,13 @@ const Body = styled.p`
   grid-column: content;
   grid-row: body;
   margin: 0;
+  color: ${props => props.theme.white};
 `;
 
 function Action(props) {
-  const {title, children, ...rest} = props;
+  const { title, children, agentId, endpoint, disabled, ...rest } = props;
   return (
-    <Container {...rest}>
+    <Container {...rest} disabled={disabled} to={`/agent/${agentId}/action/${endpoint}`}>
       <Image className="material-icons">assessment</Image>
       <Title>{title}</Title>
       <Body>{children}</Body>
@@ -54,5 +64,6 @@ function Action(props) {
 }
 
 Action.propTypes = propTypes;
+Action.defaultProps = defaultProps;
 
 export default Action;

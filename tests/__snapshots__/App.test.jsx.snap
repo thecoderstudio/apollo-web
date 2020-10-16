@@ -317,10 +317,12 @@ exports[`app renders correctly authenticated and password changed 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #F8F8F8;
+  cursor: pointer;
+  pointer-events: inherit;
 }
 
 .c7:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .c3 {
@@ -598,6 +600,7 @@ exports[`app renders correctly authenticated and password changed 1`] = `
         >
           <a
             className="c7 c8"
+            disabled={false}
             href="/"
             onClick={[Function]}
           >
@@ -605,6 +608,7 @@ exports[`app renders correctly authenticated and password changed 1`] = `
           </a>
           <a
             className="c7 c8 c9"
+            disabled={false}
             href="/settings/user_settings"
             onClick={[Function]}
           >
@@ -620,6 +624,7 @@ exports[`app renders correctly authenticated and password changed 1`] = `
         </button>
         <a
           className="c7 c13 fas fa-cog fa-lg"
+          disabled={false}
           href="/settings/user_settings"
           onClick={[Function]}
         />
