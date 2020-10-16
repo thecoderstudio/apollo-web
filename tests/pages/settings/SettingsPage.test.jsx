@@ -1,32 +1,33 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import SettingsPage from '../../../src/pages/settings/SettingsPage';
 
-function getComponent(props) {
+function getComponent(props, path) {
   return renderer.create(
-    <BrowserRouter>
+    <MemoryRouter initialEntries={[path]}>
       <SettingsPage {...props} />
-    </BrowserRouter>
+    </MemoryRouter>
   );
 }
 
 describe("settings page", () => {
   const props = {
     location: {
-      pathname: '/settings/location'
+      pathname: '/settings/user_settings'
     },
     match: {
       url: '/settings'
     }
   };
 
-  it("render correctly", () => {
-    let tree = getComponent(props).toJSON();
+  it("render correctly user settings", () => {
+    const tree = getComponent(props, props.location.pathname).toJSON();
     expect(tree).toMatchSnapshot();
+  });
 
-    props.location.pathname = '/settings/x';
-    tree = getComponent(props).toJSON();
+  it("render correctly not found", () => {
+    const tree = getComponent(props, 'settings/notfound').toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
