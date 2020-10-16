@@ -7,10 +7,10 @@ import Icon from '../Icon';
 import media from '../../util/media';
 
 const propTypes = {
-	to: PropTypes.string.isRequired,
-	children: PropTypes.node.isRequired,
-	iconClassName: PropTypes.string.isRequired,
-	location: PropTypes.object.isRequired
+  to: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  iconClassName: PropTypes.string.isRequired,
+  location: PropTypes.object.isRequired
 };
 
 const StyledIcon = styled(Icon)`
@@ -51,36 +51,36 @@ const TextWrapper = styled.span`
 `;
 
 export default class PathAwareLink extends React.PureComponent {
-	constructor(props) {
-		super(props);
-		this.checkIfPathIsActive = this.checkIfPathIsActive.bind(this);
-	}
+  constructor(props) {
+    super(props);
+    this.checkIfPathIsActive = this.checkIfPathIsActive.bind(this);
+  }
 
-	checkIfPathIsActive(path) {
-		const { location } = this.props;
-		const match = matchPath(location.pathname, {
-			path,
-			exact: true,
-			strict: false
-		});
-		if (!match) {
-			return false;
-		}
-		return match.isExact;
-	}
+  checkIfPathIsActive(path) {
+    const { location } = this.props;
+    const match = matchPath(location.pathname, {
+      path,
+      exact: true,
+      strict: false
+    });
+    if (!match) {
+      return false;
+    }
+    return match.isExact;
+  }
 
-	render() {
-		const { children, to, iconClassName } = this.props;
-		return (
-  <StyledLink
-  active={this.checkIfPathIsActive(to)}
-  to={to}
-			>
-  <StyledIcon className={iconClassName} />
-  <TextWrapper>{children}</TextWrapper>
-			</StyledLink>
-		);
-	}
+  render() {
+    const { children, to, iconClassName } = this.props;
+    return (
+      <StyledLink
+        active={this.checkIfPathIsActive(to)}
+        to={to}
+      >
+        <StyledIcon className={iconClassName} />
+        <TextWrapper>{children}</TextWrapper>
+      </StyledLink>
+    );
+  }
 }
 
 PathAwareLink.propTypes = propTypes;
