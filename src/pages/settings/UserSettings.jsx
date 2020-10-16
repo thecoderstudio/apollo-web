@@ -33,11 +33,13 @@ class UserSettings extends React.PureComponent {
   }
 
   createDictionaryWithoutEmptyFields(values) {
-    const data = {};
+    const data = new Object();
     values.username !== '' && (data.username = values.username);
-    values.oldPassword !== '' && (data.old_password = values.oldPassword);
-    values.password !== '' && (data.password = values.password);
-    values.passwordConfirm !== '' && (data.password_confirm = values.passwordConfirm);
+    if (values.password !== '') {
+      data.password = values.password;
+      data.password_confirm = values.passwordConfirm;
+      data.old_password = values.password;
+    }
     return data;
   }
 
@@ -53,7 +55,9 @@ class UserSettings extends React.PureComponent {
     axios.patch(
       `${process.env.APOLLO_HTTP_URL}user/me`,
       this.createDictionaryWithoutEmptyFields(values),
-      { withCredentials: true }
+      {
+        withCredentials: true
+      }
     )
       .then(response => {
         this.updateUserSuccessCallback(resetForm);
@@ -93,9 +97,7 @@ class UserSettings extends React.PureComponent {
           this.updateUser(values, setErrors, resetForm);
         }}
       >
-        {({
-          values, errors, handleChange, handleSubmit
-        }) => (
+        {({ values, errors, handleChange, handleSubmit }) => (
           <Form onSubmit={handleSubmit}>
             <h3>Update your user settings</h3>
             <StyledInput
