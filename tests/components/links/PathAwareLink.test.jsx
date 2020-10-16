@@ -16,7 +16,9 @@ describe('Settings side navigation', () => {
 
   beforeEach(() => {
     props = {
-      location: { pathname: '/path' }
+      location: {
+        pathname: '/path'
+      }
     };
   });
 
@@ -25,7 +27,9 @@ describe('Settings side navigation', () => {
     expect(tree).toMatchSnapshot();
 
     tree = getComponent({
-      location: { pathname: '/settings/user_settings' }
+      location: {
+        pathname: '/settings/user_settings'
+      }
     }).toJSON();
     expect(tree).toMatchSnapshot();
   });
