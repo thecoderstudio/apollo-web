@@ -14,15 +14,19 @@ function getComponent(props) {
 describe("settings page", () => {
   const props = {
     location: {
-      pathname: 'location'
+      pathname: '/settings/location'
     },
     match: {
-      url: '/location'
+      url: '/settings'
     }
   };
 
   it("render correctly", () => {
-    const tree = getComponent(props).toJSON();
+    let tree = getComponent(props).toJSON();
+    expect(tree).toMatchSnapshot();
+
+    props.location.pathname = '/settings/x';
+    tree = getComponent(props).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

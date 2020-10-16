@@ -19,7 +19,8 @@ const StyledIcon = styled(Icon)`
   ${
     media.phone`
       margin: 0 auto;
-  `}
+    `
+  }
 `;
 
 const StyledLink = styled(({ active, ...props }) => <Link {...props} />)`

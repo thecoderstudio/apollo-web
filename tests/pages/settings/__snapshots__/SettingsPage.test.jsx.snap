@@ -265,3 +265,269 @@ exports[`settings page render correctly 1`] = `
   </div>
 </div>
 `;
+
+exports[`settings page render correctly 2`] = `
+.c1 {
+  max-width: 225px;
+  width: 100%;
+  box-shadow: inset;
+  padding-top: 32px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  overflow: hidden;
+}
+
+.c3 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  pointer-events: inherit;
+}
+
+.c3:hover {
+  opacity: 0.9;
+}
+
+.c5 {
+  cursor: pointer;
+}
+
+.c6 {
+  margin: 0 8px;
+}
+
+.c4 {
+  padding: 12px;
+  margin-top: 24px;
+  border-radius: 4px;
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.c7 {
+  margin: 0 8px;
+}
+
+.c14 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c14:hover {
+  opacity: 0.90;
+}
+
+.c14:focus {
+  outline: none;
+}
+
+.c14:active {
+  opacity: 0.80;
+}
+
+.c14:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c15 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c9 {
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translate(-50%,0);
+  -ms-transform: translate(-50%,0);
+  transform: translate(-50%,0);
+  width: 100%;
+  max-width: 1750px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: [img] 1fr [content] 1fr;
+  justify-items: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c10 {
+  grid-column: img;
+  width: 75%;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  grid-column: content;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c12 {
+  margin: 0px;
+  text-align: center;
+  font-size: 20em;
+}
+
+.c13 {
+  margin: 0px;
+  text-align: center;
+  font-size: 2em;
+}
+
+.c16 {
+  margin-top: 64px;
+  border: 1px solid;
+}
+
+.c0 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: grid;
+  position: relative;
+  grid-template-columns: [navigation] 225px [content] 1fr;
+}
+
+.c2 {
+  grid-column: navigation;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.c8 {
+  grid-column: content;
+  padding: 16px;
+}
+
+@media (max-width:47.9375em) {
+  .c1 {
+    width: 45px;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c6 {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c7 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c9 {
+    grid-template-columns: [content] 1fr;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c10 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c12 {
+    font-size: 10em;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c13 {
+    font-size: 1em;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1 c2"
+  >
+    <a
+      className="c3 c4"
+      disabled={false}
+      href="/settings/user_settings"
+      onClick={[Function]}
+    >
+      <i
+        className="c5 c6 fas fa-user-cog"
+      />
+      <span
+        className="c7"
+      >
+        User settings
+      </span>
+    </a>
+  </div>
+  <div
+    className="c8"
+  >
+    <div
+      className="c9"
+    >
+      <img
+        className="c10"
+        src={[Function]}
+      />
+      <div
+        className="c11"
+      >
+        <h1
+          className="c12"
+        >
+          404
+        </h1>
+        <h2
+          className="c13"
+        >
+          Houston, we have a problem
+        </h2>
+        <button
+          className="c14 c15 c16"
+        >
+          <a
+            className="c3"
+            disabled={false}
+            href="/"
+            onClick={[Function]}
+          >
+            Reroute
+          </a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
