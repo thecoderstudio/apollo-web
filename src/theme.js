@@ -2,6 +2,7 @@ export const darkTheme = {
   name: 'dark',
   black: '#181818',
   lightBlack: '#1B1B1B',
+  selectedBlack: '#252525',
   white: '#F8F8F8',
   inactive: '#363636',
   darkWhite: '#F1F1F1',

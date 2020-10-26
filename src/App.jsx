@@ -13,6 +13,7 @@ import Linpeas from './pages/actions/Linpeas';
 import Admin from './pages/Admin';
 import NotFound from './pages/NotFound';
 import { darkTheme } from './theme';
+import SettingsPage from './pages/settings/SettingsPage';
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=Roboto:wght@300;400&display=swap');
@@ -39,6 +40,8 @@ const GlobalStyle = createGlobalStyle`
 const Content = styled.div`
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-flow: column;
 `;
 
 function App(props) {
@@ -54,6 +57,7 @@ function App(props) {
               <ProtectedRoute exact path='/agent/:agentId/shell' component={TerminalPage} fallbackComponent={NotFound} />
               <ProtectedRoute exact path='/agent/:agentId' component={AgentDetail} fallbackComponent={NotFound} />
               <ProtectedRoute exact path='/admin' component={Admin} fallbackComponent={NotFound} role='admin' />
+              <ProtectedRoute path='/settings' component={SettingsPage} fallbackComponent={NotFound} />
               <Route component={NotFound} />
             </Switch>
             <Notifications />

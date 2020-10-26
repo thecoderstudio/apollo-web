@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import media from '../util/media';
-import Link from '../components/Link';
+import Link from '../components/links/Link';
 import OutlinedButton from '../components/buttons/OutlinedButton';
 import notFoundImg from '../images/lost.svg';
 

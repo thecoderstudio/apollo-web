@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import configureStore from 'redux-mock-store';
-import waitForExpect from 'wait-for-expect';
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
 import NavBar, { NavBar as PlainNavBar } from '../../src/components/NavBar';

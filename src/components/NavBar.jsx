@@ -5,7 +5,7 @@ import media from '../util/media';
 import checkIfAdmin from '../util/admin';
 import OutlinedButton from './buttons/OutlinedButton';
 import { logout } from '../util/auth';
-import Link from './Link';
+import Link from './links/Link';
 import Icon from './Icon';
 
 const NavigationBar = styled.div`
@@ -32,7 +32,7 @@ const NavigationBar = styled.div`
 const NavBarContent = styled.div`
   grid-column: content;
   display: grid;
-  grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px;
+  grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px [settings] 50px;
   grid-gap: 12px;
   height: auto;
 
@@ -111,6 +111,30 @@ const Logout = styled(OutlinedButton)`
   `}
 `;
 
+const SettingsIcon = styled(Link)`
+  grid-column: settings;
+  line-height: 50px;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: rotate(95deg);
+    cursor: pointer;
+  }
+
+  ${media.phone`
+    display: none;
+  `}
+`;
+
+const StyledSettingsLink = styled(StyledLink)`
+  display: none;
+
+  ${media.phone`
+    display: inline;
+  `}
+`;
+
 class NavBar extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -141,9 +165,10 @@ class NavBar extends React.PureComponent {
             <StyledLink onClick={this.toggleCollapsed} to="/">Dashboard</StyledLink>
             {checkIfAdmin(currentUser)
               && <StyledLink onClick={this.toggleCollapsed} to="/admin">Admin</StyledLink>}
+            <StyledSettingsLink onClick={this.toggleCollapsed} to="/settings/user_settings">Settings</StyledSettingsLink>
           </Menu>
-
           <Logout id="logoutButton" onClick={logout}>Logout</Logout>
+          <SettingsIcon className="fas fa-cog fa-lg" to="/settings/user_settings" />
         </NavBarContent>
       </NavigationBar>
     );

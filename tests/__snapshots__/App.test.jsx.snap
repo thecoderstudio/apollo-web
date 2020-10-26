@@ -155,6 +155,13 @@ exports[`app renders correctly authenticated 1`] = `
 .c0 {
   height: 100%;
   width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
 }
 
 @media (max-width:47.9375em) {
@@ -267,7 +274,7 @@ exports[`app renders correctly authenticated 1`] = `
 `;
 
 exports[`app renders correctly authenticated and password changed 1`] = `
-.c9 {
+.c10 {
   max-height: 50px;
   padding: 12px;
   border: none;
@@ -280,28 +287,28 @@ exports[`app renders correctly authenticated and password changed 1`] = `
   cursor: pointer;
 }
 
-.c9:hover {
+.c10:hover {
   opacity: 0.90;
 }
 
-.c9:focus {
+.c10:focus {
   outline: none;
 }
 
-.c9:active {
+.c10:active {
   opacity: 0.80;
 }
 
-.c9:disabled {
+.c10:disabled {
   background-color: #3E3E3E;
 }
 
-.c9:disabled:hover {
+.c10:disabled:hover {
   opacity: 1;
   cursor: auto;
 }
 
-.c10 {
+.c11 {
   background-color: transparent;
   border: 1px solid #4D02EE;
 }
@@ -338,7 +345,7 @@ exports[`app renders correctly authenticated and password changed 1`] = `
 .c5 {
   grid-column: content;
   display: grid;
-  grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px;
+  grid-template-columns: [menu] 1fr [new-agent] 250px [logout] 100px [settings] 50px;
   grid-gap: 12px;
   height: auto;
 }
@@ -380,13 +387,33 @@ exports[`app renders correctly authenticated and password changed 1`] = `
   grid-column: logo;
 }
 
-.c11 {
+.c12 {
   grid-column: logout;
   float: right;
   max-width: 100px;
 }
 
-.c17 {
+.c13 {
+  grid-column: settings;
+  line-height: 50px;
+  margin: 0 auto;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.c13:hover {
+  -webkit-transform: rotate(95deg);
+  -ms-transform: rotate(95deg);
+  transform: rotate(95deg);
+  cursor: pointer;
+}
+
+.c9 {
+  display: none;
+}
+
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -405,11 +432,11 @@ exports[`app renders correctly authenticated and password changed 1`] = `
   z-index: 2;
 }
 
-.c15 {
+.c17 {
   margin-left: 8px;
 }
 
-.c13 {
+.c15 {
   display: grid;
   grid-template-rows: [header] 50px [list] 1fr;
   max-width: 100%;
@@ -419,7 +446,7 @@ exports[`app renders correctly authenticated and password changed 1`] = `
   padding: 16px;
 }
 
-.c14 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -435,7 +462,7 @@ exports[`app renders correctly authenticated and password changed 1`] = `
   grid-row: header;
 }
 
-.c16 {
+.c18 {
   width: 100%;
   min-width: 0;
   grid-row: list;
@@ -443,7 +470,7 @@ exports[`app renders correctly authenticated and password changed 1`] = `
   padding-left: 0;
 }
 
-.c12 {
+.c14 {
   display: grid;
   grid-template-columns: [agent-listing] 1fr 1fr;
   grid-template-rows: 1fr;
@@ -453,6 +480,13 @@ exports[`app renders correctly authenticated and password changed 1`] = `
 .c0 {
   height: 100%;
   width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
 }
 
 @media (max-width:47.9375em) {
@@ -510,7 +544,7 @@ exports[`app renders correctly authenticated and password changed 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c11 {
+  .c12 {
     grid-column: main;
     grid-row: logout;
     max-width: 100%;
@@ -518,13 +552,25 @@ exports[`app renders correctly authenticated and password changed 1`] = `
 }
 
 @media (max-width:47.9375em) {
-  .c15 {
+  .c13 {
     display: none;
   }
 }
 
 @media (max-width:47.9375em) {
-  .c12 {
+  .c9 {
+    display: inline;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c17 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c14 {
     grid-template-columns: [agent-listing] 1fr;
   }
 }
@@ -560,51 +606,65 @@ exports[`app renders correctly authenticated and password changed 1`] = `
           >
             Dashboard
           </a>
+          <a
+            className="c7 c8 c9"
+            disabled={false}
+            href="/settings/user_settings"
+            onClick={[Function]}
+          >
+            Settings
+          </a>
         </div>
         <button
-          className="c9 c10 c11"
+          className="c10 c11 c12"
           id="logoutButton"
           onClick={[Function]}
         >
           Logout
         </button>
+        <a
+          className="c7 c13 fas fa-cog fa-lg"
+          disabled={false}
+          href="/settings/user_settings"
+          onClick={[Function]}
+        />
       </div>
     </div>
     <div>
       <div
-        className="c12"
+        className="c14"
       >
         <div
-          className="c13"
+          className="c15"
         >
           <div
-            className="c14"
+            className="c16"
           >
             <h2>
               Agents
             </h2>
             <button
-              className="c9 c10"
+              className="c10 c11"
               onClick={[Function]}
             >
               <i
                 className="fas fa-plus"
               />
               <span
-                className="c15"
+                className="c17"
               >
                 Add new agent
               </span>
             </button>
           </div>
           <ul
-            className="c16"
+            className="c18"
           />
         </div>
       </div>
     </div>
     <span
-      className="c17"
+      className="c19"
     />
   </div>
 </div>
@@ -754,6 +814,13 @@ exports[`app renders correctly unauthenticated 1`] = `
 .c0 {
   height: 100%;
   width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
 }
 
 @media (max-width:47.9375em) {

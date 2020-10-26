@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Settings side navigation renders correctly 1`] = `
+.c0 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  pointer-events: inherit;
+}
+
+.c0:hover {
+  opacity: 0.9;
+}
+
+.c2 {
+  cursor: pointer;
+}
+
+.c3 {
+  margin: 0 8px;
+}
+
+.c1 {
+  padding: 12px;
+  margin-top: 24px;
+  border-radius: 4px;
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.c4 {
+  margin: 0 8px;
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c4 {
+    display: none;
+  }
+}
+
+<a
+  className="c0 c1"
+  disabled={false}
+  href="/path"
+  onClick={[Function]}
+>
+  <i
+    className="c2 c3"
+  />
+  <span
+    className="c4"
+  />
+</a>
+`;
+
+exports[`Settings side navigation renders correctly 2`] = `
+.c0 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  pointer-events: inherit;
+}
+
+.c0:hover {
+  opacity: 0.9;
+}
+
+.c2 {
+  cursor: pointer;
+}
+
+.c3 {
+  margin: 0 8px;
+}
+
+.c1 {
+  padding: 12px;
+  margin-top: 24px;
+  border-radius: 4px;
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.c4 {
+  margin: 0 8px;
+}
+
+@media (max-width:47.9375em) {
+  .c3 {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c4 {
+    display: none;
+  }
+}
+
+<a
+  className="c0 c1"
+  disabled={false}
+  href="/path"
+  onClick={[Function]}
+>
+  <i
+    className="c2 c3"
+  />
+  <span
+    className="c4"
+  />
+</a>
+`;

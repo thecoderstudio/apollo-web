@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import Link from '../Link';
+import Link from '../links/Link';
 
 const propTypes = {
   title: PropTypes.string.isRequired,
@@ -9,7 +9,7 @@ const propTypes = {
   agentId: PropTypes.string.isRequired,
   endpoint: PropTypes.string.isRequired,
   disabled: PropTypes.bool
-}; 
+};
 
 const defaultProps = {
   disabled: false
