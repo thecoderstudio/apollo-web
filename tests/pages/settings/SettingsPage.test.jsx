@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { BrowserRouter, MemoryRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import SettingsPage from '../../../src/pages/settings/SettingsPage';
 
 function getComponent(props, path) {
