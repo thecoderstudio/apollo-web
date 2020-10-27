@@ -38,7 +38,7 @@ class UserSettings extends React.PureComponent {
     if (values.password !== '') {
       data.password = values.password;
       data.password_confirm = values.passwordConfirm;
-      data.old_password = values.password;
+      data.old_password = values.oldPassword;
     }
     return data;
   }

@@ -69,4 +69,6 @@ const UpdateUserSchema = Yup.object().shape({
     })
 });
 
-export { changePasswordSchema, createUserSchema, UpdateUserSchema };
+export {
+  changePasswordSchema, createUserSchema, UpdateUserSchema
+};
