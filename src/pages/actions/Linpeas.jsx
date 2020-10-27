@@ -12,8 +12,8 @@ const Fab = styled.div`
   position: absolute;
   width: 55px;
   height: 55px;
-  bottom: 50px;
-  right: 50px;
+  bottom: 30px;
+  right: 30px;
   background-color: ${props => props.theme.primary};
   border-radius: 50%;
   z-index: 5;
