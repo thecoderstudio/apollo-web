@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Card from '../Card';
 
 const Container = styled(Card)`
   position: absolute;
@@ -13,7 +14,7 @@ const Container = styled(Card)`
   max-width: 400px;
   transform: translateY(-50%);
 
-  box-sizing:border-box;
+  box-sizing: border-box;
 `;
 
 export default class DownloadLinpeas extends React.PureComponent {
