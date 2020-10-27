@@ -1,13 +1,19 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import configureStore from 'redux-mock-store';
+import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import SettingsPage from '../../../src/pages/settings/SettingsPage';
 
+const mockStore = configureStore([]);
+
 function getComponent(props, path) {
   return renderer.create(
-    <MemoryRouter initialEntries={[path]}>
-      <SettingsPage {...props} />
-    </MemoryRouter>
+    <Provider store={mockStore()}>
+      <MemoryRouter initialEntries={[path]}>
+        <SettingsPage {...props} />
+      </MemoryRouter>
+    </Provider>
   );
 }
 

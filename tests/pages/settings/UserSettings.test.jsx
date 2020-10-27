@@ -7,7 +7,6 @@ import waitForExpect from 'wait-for-expect';
 import axios from 'axios';
 import { StatusCodes } from 'http-status-codes';
 import UserSettings, { UnconnectedUserSettings } from '../../../src/pages/settings/UserSettings';
-import { severity, notify as notifyAction } from '../../../src/actions/notification';
 
 const mockStore = configureStore([]);
 jest.mock('axios');
@@ -38,10 +37,18 @@ function updateField(input, name, value) {
 }
 
 function submitForm(component, username, oldPassword, password, passwordConfirm) {
-  const usernameInput = component.root.findByProps({ placeholder: 'Username' });
-  const oldPasswordInput = component.root.findByProps({ placeholder: 'Current password' });
-  const passwordInput = component.root.findByProps({ placeholder: 'New password' });
-  const passwordConfirmInput = component.root.findByProps({ placeholder: 'Confirm new password' });
+  const usernameInput = component.root.findByProps({
+    placeholder: 'Username'
+  });
+  const oldPasswordInput = component.root.findByProps({
+    placeholder: 'Current password'
+  });
+  const passwordInput = component.root.findByProps({
+    placeholder: 'New password'
+  });
+  const passwordConfirmInput = component.root.findByProps({
+    placeholder: 'Confirm new password'
+  });
   const form = component.root.findByType('form');
 
   updateField(usernameInput, 'username', username);
@@ -49,14 +56,18 @@ function submitForm(component, username, oldPassword, password, passwordConfirm)
   updateField(passwordInput, 'password', password);
   updateField(passwordConfirmInput, 'passwordConfirm', passwordConfirm);
 
-  form.props.onSubmit({ preventDefault: jest.fn() });
+  form.props.onSubmit({
+    preventDefault: jest.fn()
+  });
 }
 
 async function testFormValidation(component, username, oldPassword, password, passwordConfirm) {
   submitForm(component, username, oldPassword, password, passwordConfirm);
   await new Promise(resolve => setImmediate(resolve));
   component.toJSON();
-  const errors = component.root.findAllByProps({ id: 'error' });
+  const errors = component.root.findAllByProps({
+    id: 'error'
+  });
 
   await waitForExpect(() => {
     expect(errors).not.toBe([]);
@@ -98,14 +109,15 @@ describe("User settings", () => {
 
     axios.get.mockResolvedValue({
       status: StatusCodes.OK,
-      data: {}
+      data: {
+      }
     });
 
     axios.patch.mockResolvedValue({
       status: StatusCodes.OK
     });
 
-    submitForm(component, 'username', 'oldpassword', 'password', 'password');
+    submitForm(component, 'username', '', '', '');
 
     component.toJSON();
     await waitForExpect(() => {
@@ -129,7 +141,8 @@ describe("User settings", () => {
       response: {
         status: StatusCodes.BAD_REQUEST,
         statusText: "Bad request",
-        data: {}
+        data: {
+        }
       }
     }));
 
@@ -139,7 +152,8 @@ describe("User settings", () => {
       response: {
         status: StatusCodes.INTERNAL_SERVER_ERROR,
         statusText: "Something went wrong",
-        data: {}
+        data: {
+        }
       }
     }));
 
