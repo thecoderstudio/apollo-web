@@ -4,13 +4,26 @@ import TerminalPage from '../TerminalPage';
 import DownloadLinpeas from '../../components/action/DownloadLinpeas';
 import Icon from '../../components/Icon';
 
+const Container = styled.div`
+  height: 100%;
+`;
+
 const Fab = styled.div`
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  bottom: 20px;
-  background-color: red;
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  bottom: 50px;
+  right: 50px;
+  background-color: ${props => props.theme.primary};
+  border-radius: 50%;
   z-index: 5;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  * {
+    margin: 0 auto;
+  }
 `;
 
 export default class Linpeas extends React.PureComponent {
@@ -30,13 +43,13 @@ export default class Linpeas extends React.PureComponent {
 
   render() {
     return (
-      <div>
+      <Container>
         <TerminalPage agentEndpoint='action/linpeas' readOnly {...this.props} />
         <Fab onClick={this.startExporting}>
-          <Icon />
+          <Icon className="fas fa-download" />
         </Fab>
         { this.state.exporting && <DownloadLinpeas /> }
-      </div>
+      </Container>
     );
   }
 }
