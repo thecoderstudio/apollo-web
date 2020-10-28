@@ -3,11 +3,13 @@ import styled from 'styled-components';
 import Switch from 'react-switch';
 import { Formik } from 'formik';
 import axios from 'axios';
+import { handleHTTPResponse } from '../../actions/error';
 import media from '../../util/media';
 import Card from '../Card';
 import Input from '../Input';
 import Button from '../buttons/Button';
 import OutlinedButton from '../buttons/OutlinedButton';
+import ModalOverlay from '../modals/ModalOverlay';
 import { downloadResponse } from '../../util/http';
 
 const Container = styled(Card)`
@@ -23,7 +25,6 @@ const Container = styled(Card)`
   transform: translateY(-50%);
 
   box-sizing: border-box;
-  z-index: 10;
 `;
 
 const Title = styled.h2`
@@ -63,8 +64,9 @@ const Buttons = styled.div`
 export default class DownloadLinpeas extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.setAnsi = this.setAnsi.bind(this);
+    this.close = this.close.bind(this);
     this.export = this.export.bind(this);
+    this.setAnsi = this.setAnsi.bind(this);
     this.state = { ansi: false };
   }
 
@@ -84,42 +86,51 @@ export default class DownloadLinpeas extends React.PureComponent {
       }
     )
       .then(response => {
-        console.log(response);
         downloadResponse(response);
+        this.close();
       })
       .catch(error => {
-        console.log(error);
+        handleHTTPResponse(error.response, true, true);
+        if (error.response.status === StatusCodes.BAD_REQUEST) {
+          setErrors(parseHTTPErrors(error.response.data, { filename: 'filename' }));
+        }
       });
+  }
+
+  close() {
+    this.props.onClose();
   }
 
   render() {
     const { agent } = this.props;
 
     return (
-      <Container>
-        <Title>Export report</Title>
-        <Formik
-          initialValues={{ filename: '' }}
-          validateOnChange={false}
-          onSubmit={this.export}>
-          {({ values, errors, handleChange, handleSubmit }) => (
-            <Form onSubmit={handleSubmit}>
-              <div>
-                <h4>Filename</h4>
-                <Input placeholder={`LinPEAS-${agent.name}.txt`} />
-              </div>
-              <SwitchGroup>
-                <h4>ANSI</h4>
-                <Switch onChange={this.setAnsi} checked={this.state.ansi} />
-              </SwitchGroup>
-              <Buttons>
-                <OutlinedButton>Cancel</OutlinedButton>
-                <Button>Export</Button>
-              </Buttons>
-            </Form>
-          )}
-        </Formik>
-      </Container>
+      <ModalOverlay closeModalFunction={this.close}>
+        <Container>
+          <Title>Export report</Title>
+          <Formik
+            initialValues={{ filename: '' }}
+            validateOnChange={false}
+            onSubmit={this.export}>
+            {({ values, errors, handleChange, handleSubmit }) => (
+              <Form onSubmit={handleSubmit}>
+                <div>
+                  <h4>Filename</h4>
+                  <Input placeholder={`LinPEAS-${agent.name}.txt`} />
+                </div>
+                <SwitchGroup>
+                  <h4>ANSI</h4>
+                  <Switch onChange={this.setAnsi} checked={this.state.ansi} />
+                </SwitchGroup>
+                <Buttons>
+                  <OutlinedButton onClick={this.close}>Cancel</OutlinedButton>
+                  <Button>Export</Button>
+                </Buttons>
+              </Form>
+            )}
+          </Formik>
+        </Container>
+      </ModalOverlay>
     );
   }
 }

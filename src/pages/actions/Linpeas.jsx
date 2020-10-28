@@ -31,6 +31,7 @@ class Linpeas extends React.PureComponent {
   constructor(props) {
     super(props);
     this.startExporting = this.startExporting.bind(this);
+    this.stopExporting = this.stopExporting.bind(this);
     this.state = {
       exporting: false
     };
@@ -39,6 +40,12 @@ class Linpeas extends React.PureComponent {
   startExporting() {
     this.setState({
       exporting: true
+    });
+  }
+
+  stopExporting() {
+    this.setState({
+      exporting: false
     });
   }
 
@@ -52,7 +59,7 @@ class Linpeas extends React.PureComponent {
         <Fab onClick={this.startExporting}>
           <Icon className="fas fa-download" />
         </Fab>
-        { this.state.exporting && <DownloadLinpeas agent={agent} /> }
+        { this.state.exporting && <DownloadLinpeas agent={agent} onClose={this.stopExporting} /> }
       </Container>
     );
   }
