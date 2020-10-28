@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
 import TerminalPage from '../TerminalPage';
 import DownloadLinpeas from '../../components/action/DownloadLinpeas';
@@ -26,7 +27,7 @@ const Fab = styled.div`
   }
 `;
 
-export default class Linpeas extends React.PureComponent {
+class Linpeas extends React.PureComponent {
   constructor(props) {
     super(props);
     this.startExporting = this.startExporting.bind(this);
@@ -42,14 +43,21 @@ export default class Linpeas extends React.PureComponent {
   }
 
   render() {
+    const { match: { params } } = this.props;
+    const agent = this.props.agents.get(params.agentId);
+
     return (
       <Container>
         <TerminalPage agentEndpoint='action/linpeas' readOnly {...this.props} />
         <Fab onClick={this.startExporting}>
           <Icon className="fas fa-download" />
         </Fab>
-        { this.state.exporting && <DownloadLinpeas /> }
+        { this.state.exporting && <DownloadLinpeas agent={agent} /> }
       </Container>
     );
   }
 }
+
+export default connect(
+  state => ({agents: state.agent})
+)(Linpeas);
