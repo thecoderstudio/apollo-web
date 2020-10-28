@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Switch from 'react-switch';
 import { Formik } from 'formik';
 import axios from 'axios';
+import { exportLinpeasSchema } from '../../validation/linpeas';
 import { handleHTTPResponse } from '../../actions/error';
 import media from '../../util/media';
 import Card from '../Card';
@@ -81,7 +82,8 @@ export default class DownloadLinpeas extends React.PureComponent {
       {
         withCredentials: true,
         params: {
-          ansi: this.state.ansi
+          ansi: this.state.ansi,
+          filename: values.filename ? values.filename : null
         },
       }
     )
@@ -110,13 +112,19 @@ export default class DownloadLinpeas extends React.PureComponent {
           <Title>Export report</Title>
           <Formik
             initialValues={{ filename: '' }}
+            validationSchema={exportLinpeasSchema}
             validateOnChange={false}
             onSubmit={this.export}>
             {({ values, errors, handleChange, handleSubmit }) => (
               <Form onSubmit={handleSubmit}>
                 <div>
                   <h4>Filename</h4>
-                  <Input placeholder={`LinPEAS-${agent.name}.txt`} />
+                  <Input
+                    name="filename"
+                    value={values.filename}
+                    error={errors.filename}
+                    onChange={handleChange}
+                    placeholder={`LinPEAS-${agent.name}.txt`} />
                 </div>
                 <SwitchGroup>
                   <h4>ANSI</h4>
