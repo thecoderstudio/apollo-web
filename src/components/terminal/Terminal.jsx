@@ -51,6 +51,7 @@ export class Terminal extends React.PureComponent {
     this.write = this.write.bind(this);
     this.fit = this.fit.bind(this);
     this.connect = this.connect.bind(this);
+    this.state = { success: true };
     this.connect();
   }
 
@@ -90,11 +91,13 @@ export class Terminal extends React.PureComponent {
   }
 
   onSocketError() {
+    this.setState({ success: false });
     handleError(socketErrorMessage, false);
     this.write(this.chalk.hex(this.props.theme.error).bold(socketErrorMessage));
   }
 
   onSocketClose() {
+    this.props.onSocketClose(this.state.success);
     this.write(this.chalk.hex(this.props.theme.error).bold(
       "\n\r\nConnection with server is closed"
     ));

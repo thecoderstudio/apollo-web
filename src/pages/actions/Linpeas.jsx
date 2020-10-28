@@ -32,8 +32,10 @@ class Linpeas extends React.PureComponent {
     super(props);
     this.startExporting = this.startExporting.bind(this);
     this.stopExporting = this.stopExporting.bind(this);
+    this.setComplete = this.setComplete.bind(this);
     this.state = {
-      exporting: false
+      exporting: false,
+      complete: false
     };
   }
 
@@ -49,16 +51,27 @@ class Linpeas extends React.PureComponent {
     });
   }
 
+  setComplete(complete) {
+    this.setState({
+      complete
+    });
+  }
+
   render() {
     const { match: { params } } = this.props;
     const agent = this.props.agents.get(params.agentId);
 
     return (
       <Container>
-        <TerminalPage agentEndpoint='action/linpeas' readOnly {...this.props} />
-        <Fab onClick={this.startExporting}>
-          <Icon className="fas fa-download" />
-        </Fab>
+        <TerminalPage 
+          agentEndpoint='action/linpeas'
+          onSocketClose={this.setComplete}
+          readOnly {...this.props} />
+        { this.state.complete && 
+          <Fab onClick={this.startExporting}>
+            <Icon className="fas fa-download" />
+          </Fab>
+        }
         { this.state.exporting && <DownloadLinpeas agent={agent} onClose={this.stopExporting} /> }
       </Container>
     );

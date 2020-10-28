@@ -24,6 +24,7 @@ class TerminalPage extends React.PureComponent {
       ref={this.terminalRef}
       readOnly={this.props.readOnly}
       agentEndpoint={this.props.agentEndpoint}
+      onSocketClose={this.props.onSocketClose}
       agent={this.props.agents.get(params.agentId)} />;
   }
 }
