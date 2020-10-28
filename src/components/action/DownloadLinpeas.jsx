@@ -20,6 +20,7 @@ const Container = styled(Card)`
   transform: translateY(-50%);
 
   box-sizing: border-box;
+  z-index: 10;
 `;
 
 const Form = styled.form`
@@ -53,6 +54,16 @@ const Buttons = styled.div`
 `;
 
 export default class DownloadLinpeas extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.setAnsi = this.setAnsi.bind(this);
+    this.state = { ansi: false };
+  }
+
+  setAnsi(ansi) {
+    this.setState({ ansi });
+  }
+
   render() {
     return (
       <Container>
@@ -62,8 +73,8 @@ export default class DownloadLinpeas extends React.PureComponent {
             <Input />
           </div>
           <SwitchGroup>
-            <h4>ASCII</h4>
-            <Switch />
+            <h4>ANSI</h4>
+            <Switch onChange={this.setAnsi} checked={this.state.ansi} />
           </SwitchGroup>
           <Buttons>
             <OutlinedButton>Cancel</OutlinedButton>
