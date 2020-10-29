@@ -10,12 +10,14 @@ import { handleError } from '../../actions/error';
 const propTypes = {
   agent: PropTypes.object.isRequired,
   agentEndpoint: PropTypes.string,
-  readOnly: PropTypes.bool
+  readOnly: PropTypes.bool,
+  onSocketClose: PropTypes.func
 };
 
 const defaultProps = {
   agentEndpoint: "shell",
-  readOnly: false
+  readOnly: false,
+  onSocketClose: _ => {}
 };
 
 const Container = styled.div`
