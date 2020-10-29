@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import TerminalPage from '../TerminalPage';
-import DownloadLinpeas from '../../components/action/DownloadLinpeas';
+import ExportLinpeas from '../../components/action/ExportLinpeas';
 import Icon from '../../components/Icon';
 
 const Container = styled.div`
@@ -72,7 +72,7 @@ class Linpeas extends React.PureComponent {
             <Icon className="fas fa-download" />
           </Fab>
         }
-        { this.state.exporting && <DownloadLinpeas agent={agent} onClose={this.stopExporting} /> }
+        { this.state.exporting && <ExportLinpeas agent={agent} onClose={this.stopExporting} /> }
       </Container>
     );
   }
