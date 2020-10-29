@@ -61,7 +61,9 @@ function submitForm(component, username, oldPassword, password, passwordConfirm)
   });
 }
 
-async function testFormValidation(component, username, oldPassword, password, passwordConfirm, expectedError) {
+async function testFormValidation(
+  component, username, oldPassword, password, passwordConfirm, expectedError
+) {
   submitForm(component, username, oldPassword, password, passwordConfirm);
   await new Promise(resolve => setImmediate(resolve));
   component.toJSON();

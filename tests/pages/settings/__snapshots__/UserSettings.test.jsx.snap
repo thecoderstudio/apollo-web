@@ -54,6 +54,7 @@ exports[`User settings render correctly 1`] = `
 .c0 {
   width: 100%;
   max-width: 300px;
+  margin: 0 auto;
 }
 
 .c2 {
@@ -80,7 +81,7 @@ exports[`User settings render correctly 1`] = `
       onChange={[Function]}
       placeholder="Username"
       type="username"
-      value=""
+      value="admin"
     />
   </div>
   <div
@@ -121,7 +122,7 @@ exports[`User settings render correctly 1`] = `
   </div>
   <button
     className="c4 c5"
-    disabled={true}
+    disabled={false}
     id="updateUserDetailsButton"
   >
     Update user details

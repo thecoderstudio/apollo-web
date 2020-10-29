@@ -79,6 +79,7 @@ exports[`inline terminal correctly renders connected 1`] = `
   <Component
     theme={
       Object {
+        "InputBlack": "#1f1f1f",
         "accent": "#4D02EE",
         "black": "#181818",
         "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
@@ -90,7 +91,6 @@ exports[`inline terminal correctly renders connected 1`] = `
         "error": "#ED3E2A",
         "green": "#32E67E",
         "inactive": "#363636",
-        "inputBlack": "#1f1f1f",
         "lightBlack": "#1B1B1B",
         "name": "dark",
         "overlay": "rgba(37, 37, 37, 0.6)",
@@ -214,6 +214,7 @@ exports[`inline terminal correctly renders connected 2`] = `
   <Component
     theme={
       Object {
+        "InputBlack": "#1f1f1f",
         "accent": "#4D02EE",
         "black": "#181818",
         "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
@@ -225,7 +226,6 @@ exports[`inline terminal correctly renders connected 2`] = `
         "error": "#ED3E2A",
         "green": "#32E67E",
         "inactive": "#363636",
-        "inputBlack": "#1f1f1f",
         "lightBlack": "#1B1B1B",
         "name": "dark",
         "overlay": "rgba(37, 37, 37, 0.6)",
@@ -285,6 +285,7 @@ exports[`inline terminal correctly renders connected 2`] = `
                   readOnly={false}
                   theme={
                     Object {
+                      "InputBlack": "#1f1f1f",
                       "accent": "#4D02EE",
                       "black": "#181818",
                       "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
@@ -296,7 +297,6 @@ exports[`inline terminal correctly renders connected 2`] = `
                       "error": "#ED3E2A",
                       "green": "#32E67E",
                       "inactive": "#363636",
-                      "inputBlack": "#1f1f1f",
                       "lightBlack": "#1B1B1B",
                       "name": "dark",
                       "overlay": "rgba(37, 37, 37, 0.6)",
@@ -395,6 +395,7 @@ exports[`inline terminal correctly renders connecting 1`] = `
   <Component
     theme={
       Object {
+        "InputBlack": "#1f1f1f",
         "accent": "#4D02EE",
         "black": "#181818",
         "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
@@ -406,7 +407,6 @@ exports[`inline terminal correctly renders connecting 1`] = `
         "error": "#ED3E2A",
         "green": "#32E67E",
         "inactive": "#363636",
-        "inputBlack": "#1f1f1f",
         "lightBlack": "#1B1B1B",
         "name": "dark",
         "overlay": "rgba(37, 37, 37, 0.6)",
@@ -492,6 +492,7 @@ exports[`inline terminal correctly renders disconnected 1`] = `
   <Component
     theme={
       Object {
+        "InputBlack": "#1f1f1f",
         "accent": "#4D02EE",
         "black": "#181818",
         "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
@@ -503,7 +504,6 @@ exports[`inline terminal correctly renders disconnected 1`] = `
         "error": "#ED3E2A",
         "green": "#32E67E",
         "inactive": "#363636",
-        "inputBlack": "#1f1f1f",
         "lightBlack": "#1B1B1B",
         "name": "dark",
         "overlay": "rgba(37, 37, 37, 0.6)",
@@ -628,6 +628,7 @@ exports[`inline terminal disconnects 1`] = `
   <Component
     theme={
       Object {
+        "InputBlack": "#1f1f1f",
         "accent": "#4D02EE",
         "black": "#181818",
         "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
@@ -639,7 +640,6 @@ exports[`inline terminal disconnects 1`] = `
         "error": "#ED3E2A",
         "green": "#32E67E",
         "inactive": "#363636",
-        "inputBlack": "#1f1f1f",
         "lightBlack": "#1B1B1B",
         "name": "dark",
         "overlay": "rgba(37, 37, 37, 0.6)",

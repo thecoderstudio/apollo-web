@@ -203,6 +203,12 @@ exports[`settings page render correctly not found 1`] = `
   }
 }
 
+@media (max-width:47.9375em) {
+  .c0 {
+    grid-template-columns: [navigation] 45px [content] 1fr;
+  }
+}
+
 <div
   className="c0"
 >

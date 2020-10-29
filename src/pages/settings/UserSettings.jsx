@@ -83,7 +83,7 @@ class UserSettings extends React.PureComponent {
       <Formik
         className={className}
         initialValues={{
-          username: this.props.currentUser.username,
+          username: this.props.username,
           password: '',
           passwordConfirm: '',
           oldPassword: ''
@@ -144,7 +144,7 @@ class UserSettings extends React.PureComponent {
 }
 
 export default connect(state => ({
-  currentUser: state.currentUser
+  username: state.currentUser.username
 }))(UserSettings, 'User settings');
 
 export { UserSettings as UnconnectedUserSettings };

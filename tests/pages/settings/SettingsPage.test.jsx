@@ -19,6 +19,9 @@ function getComponent(props, path) {
 
 describe("settings page", () => {
   const props = {
+    currentUser: {
+      username: 'admin'
+    },
     location: {
       pathname: '/settings/user_settings'
     },
