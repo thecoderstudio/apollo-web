@@ -278,6 +278,7 @@ exports[`inline terminal correctly renders connected 2`] = `
                   }
                   agentEndpoint="shell"
                   className="c2"
+                  onSocketClose={[Function]}
                   readOnly={false}
                   theme={
                     Object {

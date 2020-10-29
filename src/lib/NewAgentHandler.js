@@ -13,11 +13,4 @@ export default class NewAgentHandler {
     let command = `chmod +x apollo-agent.bin && ./apollo-agent.bin --agent-id=${agentId} --secret=${secret}`;
     return command += ` --host=${process.env.EXTERNAL_APOLLO_HTTP_URL}`;
   }
-
-  downloadFile(data) {
-    const link = document.createElement('a');
-    link.href = window.URL.createObjectURL(new Blob([data]));
-    link.download = 'apollo-agent.bin';
-    link.click();
-  }
 }

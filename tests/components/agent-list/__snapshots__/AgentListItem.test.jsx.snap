@@ -1370,6 +1370,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
                                       }
                                     }
                                     agentEndpoint="shell"
+                                    onSocketClose={[Function]}
                                     readOnly={false}
                                     theme={
                                       Object {

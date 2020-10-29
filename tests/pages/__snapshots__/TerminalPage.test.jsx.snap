@@ -101,6 +101,7 @@ exports[`terminal page correctly renders 1`] = `
                 }
               }
               agentEndpoint="shell"
+              onSocketClose={[Function]}
               readOnly={false}
               theme={
                 Object {

@@ -752,6 +752,7 @@ exports[`terminal window correctly renders connected 1`] = `
                             }
                           }
                           agentEndpoint="shell"
+                          onSocketClose={[Function]}
                           readOnly={false}
                           theme={
                             Object {
@@ -1737,6 +1738,7 @@ exports[`terminal window correctly renders disconnected 1`] = `
                             }
                           }
                           agentEndpoint="shell"
+                          onSocketClose={[Function]}
                           readOnly={false}
                           theme={
                             Object {
@@ -2722,6 +2724,7 @@ exports[`terminal window resizes 1`] = `
                             }
                           }
                           agentEndpoint="shell"
+                          onSocketClose={[Function]}
                           readOnly={false}
                           theme={
                             Object {

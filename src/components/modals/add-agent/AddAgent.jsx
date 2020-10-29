@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import { downloadResponse } from '../../../util/http';
 import media from '../../../util/media';
 import OutlinedButton from '../../buttons/OutlinedButton';
 import LoadingButton from '../../buttons/LoadingButton';
@@ -137,9 +138,10 @@ class AddAgent extends React.PureComponent {
       }
     )
       .then(response => {
-        this.newAgentHandler.downloadFile(response.data);
+        downloadResponse(response, 'apollo-agent.bin');
       })
       .catch(error => {
+        console.log(error);
         handleHTTPResponse(error.response, true, false);
       })
       .finally(_ => {
