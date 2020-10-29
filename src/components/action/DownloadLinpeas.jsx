@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Switch from 'react-switch';
 import { Formik } from 'formik';
 import axios from 'axios';
+import { StatusCodes } from 'http-status-codes';
 import { exportLinpeasSchema } from '../../validation/linpeas';
 import { handleHTTPResponse } from '../../actions/error';
 import media from '../../util/media';
@@ -95,6 +96,8 @@ export default class DownloadLinpeas extends React.PureComponent {
         handleHTTPResponse(error.response, true, true);
         if (error.response.status === StatusCodes.BAD_REQUEST) {
           setErrors(parseHTTPErrors(error.response.data, { filename: 'filename' }));
+        } else {
+          this.close();
         }
       });
   }
