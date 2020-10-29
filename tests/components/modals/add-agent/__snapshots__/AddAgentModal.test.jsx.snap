@@ -8,7 +8,7 @@ exports[`add Agent Modal renders add agent correctly 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 10;
 }
 
 .c1 {
@@ -326,7 +326,7 @@ exports[`add Agent Modal renders correctly 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 10;
 }
 
 .c1 {

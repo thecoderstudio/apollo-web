@@ -421,7 +421,7 @@ exports[`agentList handles add agent modal 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 10;
   background-color: rgba(37,37,37,0.6);
 }
 

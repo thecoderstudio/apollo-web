@@ -1,45 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`create user renders correctly 1`] = `
-.c9 {
-  max-height: 50px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: 'B612',sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.c9:hover {
-  opacity: 0.90;
-}
-
-.c9:focus {
-  outline: none;
-}
-
-.c9:active {
-  opacity: 0.80;
-}
-
-.c9:disabled:hover {
-  opacity: 1;
-  cursor: auto;
-}
-
-.c10 {
-  background-color: transparent;
-  border: 1px solid;
-}
-
-.c6 {
+.c5 {
   height: 80px;
 }
 
-.c7 {
+.c6 {
   min-height: 50px;
   width: 100%;
   border: none;
@@ -51,14 +17,9 @@ exports[`create user renders correctly 1`] = `
   border: 1px solid transparent;
 }
 
-.c7:focus {
+.c6:focus {
   outline: none;
   border: 1px solid;
-}
-
-.c1 {
-  padding: 40px;
-  border-radius: 10px;
 }
 
 .c0 {
@@ -68,7 +29,46 @@ exports[`create user renders correctly 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 10;
+}
+
+.c8 {
+  max-height: 50px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'B612',sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.c8:hover {
+  opacity: 0.90;
+}
+
+.c8:focus {
+  outline: none;
+}
+
+.c8:active {
+  opacity: 0.80;
+}
+
+.c8:disabled:hover {
+  opacity: 1;
+  cursor: auto;
+}
+
+.c9 {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.c1 {
+  padding: 40px;
+  border-radius: 10px;
 }
 
 .c2 {
@@ -78,51 +78,27 @@ exports[`create user renders correctly 1`] = `
   top: 50%;
   margin-left: auto;
   margin-right: auto;
-  min-height: 450px;
+  min-height: 250px;
   width: 100%;
   max-width: 400px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   box-sizing: border-box;
 }
 
 .c3 {
-  height: 100%;
-  max-height: 450px;
-  display: grid;
-  grid-template-rows: [title] 1fr [form ]4fr;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c4 {
-  grid-row: title;
   text-align: center;
 }
 
-.c5 {
-  height: 95%;
-  grid-row: form;
+.c4 {
+  height: 100%;
   display: grid;
   grid-template-rows: auto;
-  grid-row-gap: 40px;
+  grid-row-gap: 20px;
 }
 
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -133,19 +109,13 @@ exports[`create user renders correctly 1`] = `
   justify-content: space-around;
 }
 
-.c8> button {
+.c7> button {
   min-width: 150px;
+  margin: 16px 0px;
 }
 
 @media (max-width:47.9375em) {
-  .c2 {
-    padding: 16px;
-    height: 100%;
-  }
-}
-
-@media (max-width:47.9375em) {
-  .c8 {
+  .c7 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -163,23 +133,21 @@ exports[`create user renders correctly 1`] = `
   <div
     className="c1 c2"
   >
-    <div
+    <h2
       className="c3"
     >
-      <h2
-        className="c4"
-      >
-        Create new user
-      </h2>
-      <form
-        className="c5"
-        onSubmit={[Function]}
-      >
+      Create new user
+    </h2>
+    <form
+      className="c4"
+      onSubmit={[Function]}
+    >
+      <div>
         <div
-          className="c6"
+          className="c5"
         >
           <input
-            className="c7"
+            className="c6"
             name="username"
             onChange={[Function]}
             placeholder="Username"
@@ -188,10 +156,10 @@ exports[`create user renders correctly 1`] = `
           />
         </div>
         <div
-          className="c6"
+          className="c5"
         >
           <input
-            className="c7"
+            className="c6"
             name="password"
             onChange={[Function]}
             placeholder="Password"
@@ -200,10 +168,10 @@ exports[`create user renders correctly 1`] = `
           />
         </div>
         <div
-          className="c6"
+          className="c5"
         >
           <input
-            className="c7"
+            className="c6"
             name="confirmPassword"
             onChange={[Function]}
             placeholder="Confirm password"
@@ -211,23 +179,23 @@ exports[`create user renders correctly 1`] = `
             value=""
           />
         </div>
-        <div
+      </div>
+      <div
+        className="c7"
+      >
+        <button
+          className="c8 c9"
+          onClick={[Function]}
+        >
+          Cancel
+        </button>
+        <button
           className="c8"
         >
-          <button
-            className="c9 c10"
-            onClick={[Function]}
-          >
-            Cancel
-          </button>
-          <button
-            className="c9"
-          >
-            Create user
-          </button>
-        </div>
-      </form>
-    </div>
+          Create user
+        </button>
+      </div>
+    </form>
   </div>
 </div>
 `;
