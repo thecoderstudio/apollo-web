@@ -2,7 +2,7 @@ import { StatusCodes } from 'http-status-codes';
 import { store } from '../store';
 import { severity, notify as notifyAction } from './notification';
 
-function handleError(error, notify = true) {
+function handleError(error, notify=true) {
   if (!notify) {
     return;
   }
@@ -10,7 +10,7 @@ function handleError(error, notify = true) {
   store.dispatch(notifyAction(error, severity.ERROR));
 }
 
-function handleHTTPResponse(response, notify = true, allowBadRequests = false) {
+function handleHTTPResponse(response, notify=true, allowBadRequests=false) {
   if (response.status >= 200 && response.status < 400) {
     return true;
   } else if (response.status === StatusCodes.BAD_REQUEST && allowBadRequests) {
