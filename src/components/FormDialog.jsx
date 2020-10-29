@@ -1,11 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { Formik } from 'formik';
 import media from '../util/media';
 import ModalOverlay from './modals/ModalOverlay';
 import OutlinedButton from './buttons/OutlinedButton';
 import Button from './buttons/Button';
 import Card from './Card';
+
+const propTypes = {
+  title: PropTypes.string.isRequired,
+  primaryActionTitle: PropTypes.string.isRequired,
+  children: PropTypes.func.isRequired,
+  onClose: PropTypes.func
+}
+
+const defaultProps = {
+  onClose: () => {}
+}
 
 const Container = styled(Card)`
   position: absolute;
@@ -50,7 +62,7 @@ const Buttons = styled.div`
   }
 `;
 
-export default class FormDialog extends React.PureComponent {
+class FormDialog extends React.PureComponent {
   constructor(props) {
     super(props);
     this.close = this.close.bind(this);
@@ -89,3 +101,8 @@ export default class FormDialog extends React.PureComponent {
     );
   }
 }
+
+FormDialog.propTypes = propTypes;
+FormDialog.defaultProps = defaultProps;
+
+export default FormDialog;
