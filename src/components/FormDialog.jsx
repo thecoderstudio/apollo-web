@@ -13,7 +13,7 @@ const propTypes = {
   primaryActionTitle: PropTypes.string.isRequired,
   children: PropTypes.func.isRequired,
   onClose: PropTypes.func
-}
+};
 
 const defaultProps = {
   onClose: () => {}

@@ -141,7 +141,6 @@ class AddAgent extends React.PureComponent {
         downloadResponse(response, 'apollo-agent.bin');
       })
       .catch(error => {
-        console.log(error);
         handleHTTPResponse(error.response, true, false);
       })
       .finally(_ => {
