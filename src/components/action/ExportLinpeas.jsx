@@ -7,7 +7,7 @@ import { exportLinpeasSchema } from '../../validation/linpeas';
 import { handleHTTPResponse } from '../../actions/error';
 import media from '../../util/media';
 import Input from '../Input';
-import FormDialog from '../ConfirmationDialog';
+import FormDialog from '../FormDialog';
 import { downloadResponse } from '../../util/http';
 
 const SwitchGroup = styled.div`

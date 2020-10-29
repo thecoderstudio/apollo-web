@@ -39,6 +39,7 @@ const Buttons = styled.div`
 
   &> button {
     min-width: 150px;
+    margin: 16px 0px;
   }
 
   ${

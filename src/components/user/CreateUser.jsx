@@ -8,7 +8,7 @@ import { createUserSchema } from '../../validation/user';
 import { parseHTTPErrors } from '../../util/parser';
 import media from '../../util/media';
 import Input from '../Input';
-import FormDialog from '../ConfirmationDialog';
+import FormDialog from '../FormDialog';
 
 export default class CreateUser extends React.PureComponent {
   constructor(props) {
