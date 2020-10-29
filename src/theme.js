@@ -2,7 +2,7 @@ export const darkTheme = {
   name: 'dark',
   black: '#181818',
   lightBlack: '#1B1B1B',
-  inputBlack: '#1f1f1f',
+  InputBlack: '#1f1f1f',
   selectedBlack: '#252525',
   white: '#F8F8F8',
   inactive: '#363636',

@@ -61,7 +61,7 @@ function submitForm(component, username, oldPassword, password, passwordConfirm)
   });
 }
 
-async function testFormValidation(component, username, oldPassword, password, passwordConfirm) {
+async function testFormValidation(component, username, oldPassword, password, passwordConfirm, expectedError) {
   submitForm(component, username, oldPassword, password, passwordConfirm);
   await new Promise(resolve => setImmediate(resolve));
   component.toJSON();
@@ -70,7 +70,7 @@ async function testFormValidation(component, username, oldPassword, password, pa
   });
 
   await waitForExpect(() => {
-    expect(errors).not.toBe([]);
+    expect(errors).toContain(expectedError);
     expect(axios.patch).not.toHaveBeenCalled();
   });
 }
@@ -128,10 +128,10 @@ describe("User settings", () => {
 
   it("validates input", async () => {
     const component = getComponent(store, props);
-    await testFormValidation(component, 'username', 'oldPassword', 'passw', 'passw');
-    await testFormValidation(component, 'username', 'oldPassword', 'passw');
-    await testFormValidation(component, 'username', 'password', '', 'password');
-    await testFormValidation(component, 'username', 'oldPassword', 'password1', 'password2');
+    await testFormValidation(component, 'username', 'oldPassword', 'passw', 'passw', 'Minimal 8 characters');
+    await testFormValidation(component, 'username', 'oldPassword', 'password', '', 'Confirm password is required when password is given');
+    await testFormValidation(component, 'username', 'password', '', 'password', 'Passwords must match');
+    await testFormValidation(component, 'username', 'oldPassword', 'password1', 'password2', 'Passwords must match');
   });
 
   it('handles unsuccessful patch', async () => {

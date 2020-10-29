@@ -6,6 +6,7 @@ import SideNavigation from '../../components/SideNavigation';
 import UserSettings from './UserSettings';
 import PathAwareLink from '../../components/links/PathAwareLink';
 import NotFound from '../NotFound';
+import media from '../../util/media';
 
 const propTypes = {
   location: PropTypes.object.isRequired
@@ -16,6 +17,12 @@ const ContentWrapper = styled.div`
   display: grid;
   position: relative;
   grid-template-columns: [navigation] 225px [content] 1fr;
+
+  ${
+    media.phone`
+    grid-template-columns: [navigation] 45px [content] 1fr;
+    `
+  }
 `;
 
 const StyledNavigation = styled(SideNavigation)`

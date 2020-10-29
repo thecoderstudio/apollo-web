@@ -1,7 +1,7 @@
 import * as Yup from 'yup';
 
 const requiredError = "Required";
-const minimalEightCharacters = "Min 8 characters";
+const minimalEightCharacters = "Minimal 8 characters";
 const passwordsDontMatch = "Passwords must match";
 const passwordCantMatchOldValue = "Password can't match old password";
 const confirmPasswordRequired = "Confirm password is required when password is given";

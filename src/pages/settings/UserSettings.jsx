@@ -15,6 +15,7 @@ import { severity, notify as notifyAction } from '../../actions/notification';
 const Form = styled.form`
   width: 100%;
   max-width: 300px;
+  margin: 0 auto;
 `;
 
 const StyledInput = styled(Input)`
@@ -32,15 +33,11 @@ class UserSettings extends React.PureComponent {
     this.updateUserSuccessCallback = this.updateUserSuccessCallback.bind(this);
   }
 
-  createDictionaryWithoutEmptyFields(values) {
-    const data = new Object();
-    values.username !== '' && (data.username = values.username);
-    if (values.password !== '') {
-      data.password = values.password;
-      data.password_confirm = values.passwordConfirm;
-      data.old_password = values.oldPassword;
-    }
-    return data;
+  filterOutEmptyFields(values) {
+    return Object.keys(values)
+      .filter(key => values[key] !== '')
+      .reduce((filtered, key) => (filtered[key] = values[key], filtered), {
+      });
   }
 
   updateUserSuccessCallback(resetForm) {
@@ -54,7 +51,7 @@ class UserSettings extends React.PureComponent {
   updateUser(values, setErrors, resetForm) {
     axios.patch(
       `${process.env.APOLLO_HTTP_URL}user/me`,
-      this.createDictionaryWithoutEmptyFields(values),
+      this.filterOutEmptyFields(values),
       {
         withCredentials: true
       }
@@ -86,7 +83,7 @@ class UserSettings extends React.PureComponent {
       <Formik
         className={className}
         initialValues={{
-          username: '',
+          username: this.props.currentUser.username,
           password: '',
           passwordConfirm: '',
           oldPassword: ''
@@ -136,7 +133,9 @@ class UserSettings extends React.PureComponent {
               error={errors.passwordConfirm}
               onChange={handleChange}
             />
-            <StyledButton id='updateUserDetailsButton' disabled={this.checkForNonEmptyField(values)}>Update user details</StyledButton>
+            <StyledButton id='updateUserDetailsButton' disabled={this.checkForNonEmptyField(values)}>
+              Update user details
+            </StyledButton>
           </Form>
         )}
       </Formik>
@@ -144,6 +143,8 @@ class UserSettings extends React.PureComponent {
   }
 }
 
-export default connect()(UserSettings, 'User settings');
+export default connect(state => ({
+  currentUser: state.currentUser
+}))(UserSettings, 'User settings');
 
 export { UserSettings as UnconnectedUserSettings };
