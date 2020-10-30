@@ -7,9 +7,9 @@ import SettingsPage from '../../../src/pages/settings/SettingsPage';
 
 const mockStore = configureStore([]);
 
-function getComponent(props, path) {
+function getComponent(store, props, path) {
   return renderer.create(
-    <Provider store={mockStore()}>
+    <Provider store={store}>
       <MemoryRouter initialEntries={[path]}>
         <SettingsPage {...props} />
       </MemoryRouter>
@@ -19,9 +19,6 @@ function getComponent(props, path) {
 
 describe("settings page", () => {
   const props = {
-    currentUser: {
-      username: 'admin'
-    },
     location: {
       pathname: '/settings/user_settings'
     },
@@ -29,14 +26,23 @@ describe("settings page", () => {
       url: '/settings'
     }
   };
+  let store;
+
+  beforeEach(() => {
+    store = mockStore({
+      currentUser: {
+        username: 'admin'
+      }
+    });
+  });
 
   it("render correctly user settings", () => {
-    const tree = getComponent(props, props.location.pathname).toJSON();
+    const tree = getComponent(store, props, props.location.pathname).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it("render correctly not found", () => {
-    const tree = getComponent(props, 'settings/notfound').toJSON();
+    const tree = getComponent(store, props, 'settings/notfound').toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

@@ -336,6 +336,7 @@ exports[`settings page render correctly user settings 1`] = `
 .c9 {
   width: 100%;
   max-width: 300px;
+  margin: 0 auto;
 }
 
 .c11 {
@@ -420,6 +421,12 @@ exports[`settings page render correctly user settings 1`] = `
   }
 }
 
+@media (max-width:47.9375em) {
+  .c0 {
+    grid-template-columns: [navigation] 45px [content] 1fr;
+  }
+}
+
 <div
   className="c0"
 >
@@ -461,7 +468,7 @@ exports[`settings page render correctly user settings 1`] = `
           onChange={[Function]}
           placeholder="Username"
           type="username"
-          value=""
+          value="admin"
         />
       </div>
       <div
@@ -502,7 +509,7 @@ exports[`settings page render correctly user settings 1`] = `
       </div>
       <button
         className="c13 c14"
-        disabled={true}
+        disabled={false}
         id="updateUserDetailsButton"
       >
         Update user details
