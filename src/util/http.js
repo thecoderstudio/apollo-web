@@ -14,8 +14,9 @@ function getFilenameFromHeaders(headers) {
     try {
       return headers['content-disposition'].split('filename=')[1];
     } catch (error) {
-      if (!(error instanceof TypeError)) {
-        throw error;
+      if (error instanceof TypeError) {
+        return;
       }
+      throw error;
     }
 }

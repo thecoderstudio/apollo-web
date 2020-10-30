@@ -34,6 +34,19 @@ describe('downloadResponse', () => {
     expect(link.click).toHaveBeenCalledTimes(1);
   });
 
+  it("throws an exception when not giving a response", () => {
+    const splitMock = jest.fn();
+    splitMock.mockImplementation(() => { throw "test" });
+    const response = {
+      headers: {
+        'content-disposition': {
+          split: splitMock
+        }
+      }
+    };
+    expect(() => { downloadResponse(response) }).toThrow("test");
+  });
+
   it("downloads the response with a given name", () => {
     const link = {
       click: jest.fn()
