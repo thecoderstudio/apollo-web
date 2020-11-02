@@ -11,6 +11,11 @@ import media from '../../util/media';
 import FormModal from '../modals/FormModal';
 import Input from '../Input';
 
+const propTypes = {
+  agent = PropTypes.object.isRequired,
+  onClose = PropTypes.func.isRequired
+}
+
 const SwitchGroup = styled.div`
   display: flex;
   width: 100%;
@@ -18,7 +23,7 @@ const SwitchGroup = styled.div`
   align-items: center;
 `;
 
-export default class ExportLinpeas extends React.PureComponent {
+class ExportLinpeas extends React.PureComponent {
   constructor(props) {
     super(props);
     this.close = this.close.bind(this);
@@ -93,3 +98,7 @@ export default class ExportLinpeas extends React.PureComponent {
     );
   }
 }
+
+ExportLinpeas.propTypes = propTypes;
+
+export default ExportLinpeas
