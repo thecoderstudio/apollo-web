@@ -24,6 +24,7 @@ const Container = styled.div`
   height: 100%;
   width: 100%;
   padding: 20px;
+  box-sizing: border-box;
 `;
 
 const StyledXTerm = styled.div`

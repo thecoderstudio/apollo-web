@@ -265,6 +265,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   height: 100%;
   width: 100%;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .c21 {
@@ -811,6 +812,7 @@ exports[`agent list item opens and closes the terminal 1`] = `
   height: 100%;
   width: 100%;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .c9 {

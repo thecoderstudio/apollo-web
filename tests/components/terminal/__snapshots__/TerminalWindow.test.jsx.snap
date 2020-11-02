@@ -12,6 +12,7 @@ exports[`terminal window correctly renders connected 1`] = `
   height: 100%;
   width: 100%;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .c9 {
@@ -220,6 +221,7 @@ exports[`terminal window correctly renders connected 1`] = `
   height: 100%;
   width: 100%;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .c9 {
@@ -998,6 +1000,7 @@ exports[`terminal window correctly renders disconnected 1`] = `
   height: 100%;
   width: 100%;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .c9 {
@@ -1206,6 +1209,7 @@ exports[`terminal window correctly renders disconnected 1`] = `
   height: 100%;
   width: 100%;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .c9 {
@@ -1984,6 +1988,7 @@ exports[`terminal window resizes 1`] = `
   height: 100%;
   width: 100%;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .c9 {
@@ -2192,6 +2197,7 @@ exports[`terminal window resizes 1`] = `
   height: 100%;
   width: 100%;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .c9 {

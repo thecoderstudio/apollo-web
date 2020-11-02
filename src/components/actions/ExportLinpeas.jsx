@@ -15,7 +15,7 @@ import Input from '../Input';
 const propTypes = {
   agent: PropTypes.object.isRequired,
   onClose: PropTypes.func.isRequired
-}
+};
 
 const SwitchGroup = styled.div`
   display: flex;
@@ -102,4 +102,4 @@ class ExportLinpeas extends React.PureComponent {
 
 ExportLinpeas.propTypes = propTypes;
 
-export default ExportLinpeas
+export default ExportLinpeas;
