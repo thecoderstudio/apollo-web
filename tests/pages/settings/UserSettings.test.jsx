@@ -8,6 +8,7 @@ import waitForExpect from 'wait-for-expect';
 import axios from 'axios';
 import { StatusCodes } from 'http-status-codes';
 import UserSettings, { UnconnectedUserSettings } from '../../../src/pages/settings/UserSettings';
+import UpdateUserSchema from '../../../src/validation/user';
 
 const mockStore = configureStore([]);
 jest.mock('axios');
@@ -36,7 +37,6 @@ function updateField(input, name, value) {
     });
   });
 }
-const flushPromises = () => new Promise(setImmediate);
 
 function submitForm(component, username, oldPassword, password, passwordConfirm) {
   const usernameInput = component.root.findByProps({
@@ -63,19 +63,21 @@ function submitForm(component, username, oldPassword, password, passwordConfirm)
   });
 }
 
-async function testFormValidation(
-  component, username, oldPassword, password, passwordConfirm, expectedError
+async function validateInput(
+  schema, username, oldPassword, password, passwordConfirm, expectedError
 ) {
-  submitForm(component, username, oldPassword, password, passwordConfirm);
+  let error;
+  await schema.validate({
+    username,
+    oldPassword,
+    password,
+    passwordConfirm
+  }).catch(err => {
+    error = err;
+  });
 
-  component.toJSON();
-  const errors = component.root.findAllByProps({
-    id: 'error'
-  });
-  await waitForExpect(() => {
-    expect(errors).toBe([expectedError]);
-    expect(axios.patch).not.toHaveBeenCalled();
-  });
+  expect(error.message).toBe(expectedError);
+  expect(axios.patch).not.toHaveBeenCalled();
 }
 
 describe("User settings", () => {
@@ -131,10 +133,11 @@ describe("User settings", () => {
 
   it("validates input", async () => {
     const component = getComponent(store, props);
-    await testFormValidation(component, 'username', 'oldPassword', 'passw', 'passw', 'Minimal 8 characters');
-    // await testFormValidation(component, 'username', 'oldPassword', 'password', '', 'Confirm password is required when password is given');
-    // await testFormValidation(component, 'username', 'password', '', 'password', 'Passwords must match');
-    // await testFormValidation(component, 'username', 'oldPassword', 'password1', 'password2', 'Passwords must match');
+    const schema = component.root.findByType(Formik).props.validationSchema;
+    await validateInput(schema, 'username', 'oldPassword', 'passw', 'passw', 'Minimal 8 characters');
+    await validateInput(schema, 'username', 'oldPassword', 'password', undefined, 'Confirm password is required when password is given');
+    await validateInput(schema, 'username', 'password', '', 'password', 'Passwords must match');
+    await validateInput(schema, 'username', 'oldPassword', 'password1', 'password2', 'Passwords must match');
   });
 
   it('handles unsuccessful patch', async () => {
