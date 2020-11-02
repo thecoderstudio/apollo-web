@@ -17,14 +17,14 @@ function getComponent(onClose) {
   );
 }
 
-function submitForm(root, filename=null, ansi=false) {
+function submitForm(root, filename='', ansi=false) {
   const filenameInput = root.findByProps({name: 'filename'});
   const ansiSwitch = root.findByProps({checked: false});
   const form = root.findByType('form');
 
   filenameInput.props.onChange({ currentTarget: {
     name: 'filename',
-    vcalue: filename
+    value: filename
   }});
   ansiSwitch.props.onChange(ansi);
   form.props.onSubmit();
@@ -53,6 +53,42 @@ describe("export linpeas", () => {
     });
   });
 
+  it("downloads with custom input", async () => {
+    const onClose = jest.fn();
+    const component = getComponent(onClose);
+    const root = component.root;
+
+    HTTP.downloadResponse = jest.fn();
+    axios.get.mockResolvedValue({
+      status: StatusCodes.OK
+    });
+
+    submitForm(root, "test", true);
+    await waitForExpect(() => {
+      expect(onClose).toHaveBeenCalled();
+      expect(HTTP.downloadResponse).toHaveBeenCalled();
+    });
+  });
+
+  it("validates", async () => {
+    const onClose = jest.fn();
+    const component = getComponent(onClose);
+    const root = component.root;
+
+    HTTP.downloadResponse = jest.fn();
+    axios.get.mockResolvedValue({
+      status: StatusCodes.OK
+    });
+
+    submitForm(root, "a".repeat(101), true);
+    await waitForExpect(() => {
+      expect(onClose).not.toHaveBeenCalled();
+      expect(HTTP.downloadResponse).not.toHaveBeenCalled();
+      const tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+  });
+
   it("handles input failure", async () => {
     const onClose = jest.fn();
     const component = getComponent(onClose);
@@ -77,7 +113,7 @@ describe("export linpeas", () => {
     });
   });
 
-  it("handler generic failure", async () => {
+  it("handles generic failure", async () => {
     const onClose = jest.fn();
     const component = getComponent(onClose);
     const root = component.root;
