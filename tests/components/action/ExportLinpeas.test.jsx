@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import axios from 'axios';
 import { StatusCodes } from 'http-status-codes';
 import waitForExpect from 'wait-for-expect';
-import ExportLinpeas from '../../../src/components/action/ExportLinpeas';
+import ExportLinpeas from '../../../src/components/actions/ExportLinpeas';
 import * as HTTP from '../../../src/util/http';
 
 jest.mock('axios');

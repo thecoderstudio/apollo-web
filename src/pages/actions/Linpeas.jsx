@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import TerminalPage from '../TerminalPage';
-import ExportLinpeas from '../../components/action/ExportLinpeas';
+import ExportLinpeas from '../../components/actions/ExportLinpeas';
 import Icon from '../../components/Icon';
 
 const Container = styled.div`
