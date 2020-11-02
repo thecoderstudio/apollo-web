@@ -33,12 +33,6 @@ function submitForm(root, username, password, confirmPassword) {
 }
 
 describe("create user", () => {
-  beforeEach(() => {
-    process.env = {
-      APOLLO_HTTP_URL: 'http://localhost:1234/'
-    };
-  });
-
   it("renders correctly", () => {
     const tree = getComponent().toJSON();
     expect(tree).toMatchSnapshot();

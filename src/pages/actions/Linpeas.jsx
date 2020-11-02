@@ -68,7 +68,7 @@ class Linpeas extends React.PureComponent {
           onSocketClose={this.setComplete}
           readOnly {...this.props} />
         { this.state.complete && 
-          <Fab onClick={this.startExporting}>
+          <Fab id="export" onClick={this.startExporting}>
             <Icon className="fas fa-download" />
           </Fab>
         }
