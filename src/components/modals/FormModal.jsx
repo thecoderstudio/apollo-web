@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Formik } from 'formik';
-import media from '../util/media';
-import ModalOverlay from './modals/ModalOverlay';
-import OutlinedButton from './buttons/OutlinedButton';
-import Button from './buttons/Button';
-import Card from './Card';
+import media from '../../util/media';
+import OutlinedButton from '../buttons/OutlinedButton';
+import Button from '../buttons/Button';
+import Card from '../Card';
+import ModalOverlay from './ModalOverlay';
 
 const propTypes = {
   title: PropTypes.string.isRequired,
@@ -62,7 +62,7 @@ const Buttons = styled.div`
   }
 `;
 
-class FormDialog extends React.PureComponent {
+class FormModal extends React.PureComponent {
   constructor(props) {
     super(props);
     this.close = this.close.bind(this);
@@ -102,7 +102,7 @@ class FormDialog extends React.PureComponent {
   }
 }
 
-FormDialog.propTypes = propTypes;
-FormDialog.defaultProps = defaultProps;
+FormModal.propTypes = propTypes;
+FormModal.defaultProps = defaultProps;
 
-export default FormDialog;
+export default FormModal;

@@ -8,7 +8,7 @@ import { createUserSchema } from '../../validation/user';
 import { parseHTTPErrors } from '../../util/parser';
 import media from '../../util/media';
 import Input from '../Input';
-import FormDialog from '../FormDialog';
+import FormModal from '../modals/FormModal';
 
 export default class CreateUser extends React.PureComponent {
   constructor(props) {
@@ -44,7 +44,7 @@ export default class CreateUser extends React.PureComponent {
 
   render() {
     return (
-      <FormDialog
+      <FormModal
         title="Create new user"
         primaryActionTitle="Create user"
         initialValues={{ username: '', password: '', confirmPassword: '' }}
@@ -78,7 +78,7 @@ export default class CreateUser extends React.PureComponent {
               autocomplete="new-password" />
           </div>
         )}
-      </FormDialog>
+      </FormModal>
     );
   }
 }

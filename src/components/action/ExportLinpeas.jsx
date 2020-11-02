@@ -8,7 +8,7 @@ import { handleHTTPResponse } from '../../actions/error';
 import { downloadResponse } from '../../util/http';
 import { parseHTTPErrors } from '../../util/parser';
 import media from '../../util/media';
-import FormDialog from '../FormDialog';
+import FormModal from '../modals/FormModal';
 import Input from '../Input';
 
 const SwitchGroup = styled.div`
@@ -65,7 +65,7 @@ export default class ExportLinpeas extends React.PureComponent {
     const { agent, onClose } = this.props;
 
     return (
-      <FormDialog
+      <FormModal
         title="Export report"
         primaryActionTitle="Export"
         onClose={onClose}
@@ -89,7 +89,7 @@ export default class ExportLinpeas extends React.PureComponent {
               </SwitchGroup>
             </div>
           )}
-        </FormDialog>
+        </FormModal>
     );
   }
 }

@@ -1,16 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`export linpeas handles input failure 1`] = `
-.c0 {
-  display: inline;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-}
-
 .c10 {
   max-height: 50px;
   padding: 12px;
@@ -48,6 +38,16 @@ exports[`export linpeas handles input failure 1`] = `
 .c1 {
   padding: 40px;
   border-radius: 10px;
+}
+
+.c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
 }
 
 .c2 {
@@ -372,16 +372,6 @@ exports[`export linpeas handles input failure 1`] = `
 `;
 
 exports[`export linpeas renders correctly 1`] = `
-.c0 {
-  display: inline;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-}
-
 .c9 {
   max-height: 50px;
   padding: 12px;
@@ -419,6 +409,16 @@ exports[`export linpeas renders correctly 1`] = `
 .c1 {
   padding: 40px;
   border-radius: 10px;
+}
+
+.c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
 }
 
 .c2 {
@@ -733,16 +733,6 @@ exports[`export linpeas renders correctly 1`] = `
 `;
 
 exports[`export linpeas validates 1`] = `
-.c0 {
-  display: inline;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-}
-
 .c10 {
   max-height: 50px;
   padding: 12px;
@@ -780,6 +770,16 @@ exports[`export linpeas validates 1`] = `
 .c1 {
   padding: 40px;
   border-radius: 10px;
+}
+
+.c0 {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
 }
 
 .c2 {
