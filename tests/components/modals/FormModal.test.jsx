@@ -32,6 +32,11 @@ describe("form modal", () => {
     expect(spy).toHaveBeenCalled();
   });
 
+  it("has an optional onClose", () => {
+    const component = getComponent();
+    component.root.findAllByType('button')[0].props.onClick();
+  });
+
   it("submits", () => {
     const spy = jest.fn();
     const component = getComponent(null, spy);

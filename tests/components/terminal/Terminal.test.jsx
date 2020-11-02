@@ -67,6 +67,7 @@ describe('Terminal', () => {
   });
 
   it('correctly handles connection closure', async () => {
+    wrapper = mount(<Terminal theme={darkTheme} agent={mockAgent} />);
     await server.connected;
     server.close();
 
@@ -79,7 +80,6 @@ describe('Terminal', () => {
   });
 
   it('disconnects when about to unmount', async () => {
-    socketCloseSpy = undefined;
     await server.connected;
     wrapper.unmount();
     await server.closed;
