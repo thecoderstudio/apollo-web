@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Switch from 'react-switch';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import { StatusCodes } from 'http-status-codes';
 import { exportLinpeasSchema } from '../../validation/linpeas';
 import { handleHTTPResponse } from '../../actions/error';
@@ -12,8 +13,8 @@ import FormModal from '../modals/FormModal';
 import Input from '../Input';
 
 const propTypes = {
-  agent = PropTypes.object.isRequired,
-  onClose = PropTypes.func.isRequired
+  agent: PropTypes.object.isRequired,
+  onClose: PropTypes.func.isRequired
 }
 
 const SwitchGroup = styled.div`
