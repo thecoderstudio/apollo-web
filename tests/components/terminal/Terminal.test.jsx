@@ -20,7 +20,7 @@ describe('Terminal', () => {
 
   beforeEach(() => {
     termWriteSpy = jest.spyOn(Terminal.prototype, 'write');
-    socketCloseSpy = jest.fn()
+    socketCloseSpy = jest.fn();
     wrapper = mount(<Terminal theme={darkTheme} agent={mockAgent} onSocketClose={socketCloseSpy} />);
     terminal = wrapper.find(Terminal).instance();
   });

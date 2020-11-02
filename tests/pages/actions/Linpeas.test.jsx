@@ -58,11 +58,11 @@ describe('linpeas', () => {
     expect(wrapper).toMatchSnapshot();
 
     wrapper.find('#export').first().simulate('click');
-    wrapper.update()
+    wrapper.update();
     expect(wrapper).toMatchSnapshot();
 
     instance.stopExporting();
-    wrapper.update()
+    wrapper.update();
     expect(wrapper).toMatchSnapshot();
   });
 });

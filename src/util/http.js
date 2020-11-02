@@ -3,7 +3,7 @@ function getFilenameFromHeaders(headers) {
       return headers['content-disposition'].split('filename=')[1];
     } catch (error) {
       if (error instanceof TypeError) {
-        return;
+        return null;
       }
       throw error;
     }

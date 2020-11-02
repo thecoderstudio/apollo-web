@@ -17,7 +17,7 @@ const Fab = styled.div`
   right: 30px;
   background-color: ${props => props.theme.primary};
   border-radius: 50%;
-  z-index: 5;
+  z-index: 2;
   display: flex;
   align-items: center;
   cursor: pointer;
