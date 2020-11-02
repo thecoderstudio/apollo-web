@@ -242,7 +242,7 @@ exports[`linpeas correctly toggles export dialog 1`] = `
   right: 30px;
   background-color: #02A3EE;
   border-radius: 50%;
-  z-index: 5;
+  z-index: 2;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -638,7 +638,7 @@ exports[`linpeas correctly toggles export dialog 2`] = `
   right: 30px;
   background-color: #02A3EE;
   border-radius: 50%;
-  z-index: 5;
+  z-index: 2;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1387,7 +1387,7 @@ exports[`linpeas correctly toggles export dialog 3`] = `
   right: 30px;
   background-color: #02A3EE;
   border-radius: 50%;
-  z-index: 5;
+  z-index: 2;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
