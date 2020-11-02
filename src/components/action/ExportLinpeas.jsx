@@ -5,10 +5,11 @@ import axios from 'axios';
 import { StatusCodes } from 'http-status-codes';
 import { exportLinpeasSchema } from '../../validation/linpeas';
 import { handleHTTPResponse } from '../../actions/error';
-import media from '../../util/media';
-import Input from '../Input';
-import FormDialog from '../FormDialog';
 import { downloadResponse } from '../../util/http';
+import { parseHTTPErrors } from '../../util/parser';
+import media from '../../util/media';
+import FormDialog from '../FormDialog';
+import Input from '../Input';
 
 const SwitchGroup = styled.div`
   display: flex;

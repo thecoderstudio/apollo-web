@@ -46,11 +46,54 @@ describe("export linpeas", () => {
       status: StatusCodes.OK
     });
 
-    root.findByType('form').props.onSubmit({ preventDefault: jest.fn() });
     submitForm(root);
     await waitForExpect(() => {
       expect(onClose).toHaveBeenCalled();
       expect(HTTP.downloadResponse).toHaveBeenCalled();
+    });
+  });
+
+  it("handles input failure", async () => {
+    const onClose = jest.fn();
+    const component = getComponent(onClose);
+    const root = component.root;
+
+    axios.get.mockImplementationOnce(() => Promise.reject({
+      response: {
+        status: StatusCodes.BAD_REQUEST,
+        statusText: "Bad request",
+        data: {
+          filename: 'Wrong filename'
+        }
+      }
+    }));
+
+    submitForm(root);
+    await waitForExpect(() => {
+      expect(axios.get).toHaveBeenCalled();
+      expect(onClose).not.toHaveBeenCalled();
+      const tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+  });
+
+  it("handler generic failure", async () => {
+    const onClose = jest.fn();
+    const component = getComponent(onClose);
+    const root = component.root;
+
+    axios.get.mockImplementationOnce(() => Promise.reject({
+      response: {
+        status: StatusCodes.INTERNAL_SERVER_ERROR,
+        statusText: "Server error",
+        data: {}
+      }
+    }));
+
+    submitForm(root);
+    await waitForExpect(() => {
+      expect(axios.get).toHaveBeenCalled();
+      expect(onClose).toHaveBeenCalled();
     });
   });
 });
