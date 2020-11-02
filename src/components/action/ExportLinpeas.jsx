@@ -20,6 +20,7 @@ const SwitchGroup = styled.div`
 export default class ExportLinpeas extends React.PureComponent {
   constructor(props) {
     super(props);
+    this.close = this.close.bind(this);
     this.export = this.export.bind(this);
     this.setAnsi = this.setAnsi.bind(this);
     this.state = { ansi: false };
@@ -27,6 +28,10 @@ export default class ExportLinpeas extends React.PureComponent {
 
   setAnsi(ansi) {
     this.setState({ ansi });
+  }
+
+  close() {
+    this.props.onClose();
   }
 
   export(values, { setErrors }) {

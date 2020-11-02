@@ -1,6 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import axios from 'axios';
+import { StatusCodes } from 'http-status-codes';
+import waitForExpect from 'wait-for-expect';
 import ExportLinpeas from '../../../src/components/action/ExportLinpeas';
+import * as HTTP from '../../../src/util/http';
+
+jest.mock('axios');
 
 function getComponent(onClose) {
   const agent = {
@@ -11,9 +17,40 @@ function getComponent(onClose) {
   );
 }
 
+function submitForm(root, filename=null, ansi=false) {
+  const filenameInput = root.findByProps({name: 'filename'});
+  const ansiSwitch = root.findByProps({checked: false});
+  const form = root.findByType('form');
+
+  filenameInput.props.onChange({ currentTarget: {
+    name: 'filename',
+    vcalue: filename
+  }});
+  ansiSwitch.props.onChange(ansi);
+  form.props.onSubmit();
+}
+
 describe("export linpeas", () => {
   it("renders correctly", () => {
     const tree = getComponent().toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  it("downloads successfully", async () => {
+    const onClose = jest.fn();
+    const component = getComponent(onClose);
+    const root = component.root;
+
+    HTTP.downloadResponse = jest.fn();
+    axios.get.mockResolvedValue({
+      status: StatusCodes.OK
+    });
+
+    root.findByType('form').props.onSubmit({ preventDefault: jest.fn() });
+    submitForm(root);
+    await waitForExpect(() => {
+      expect(onClose).toHaveBeenCalled();
+      expect(HTTP.downloadResponse).toHaveBeenCalled();
+    });
   });
 });
