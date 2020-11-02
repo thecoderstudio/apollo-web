@@ -51,10 +51,10 @@ describe('linpeas', () => {
 
   it("correctly toggles export dialog", () => {
     const wrapper = mount(getComponentTags(store));
-    const instance = wrapper.find(Linpeas).childAt(0).instance()
+    const instance = wrapper.find(Linpeas).childAt(0).instance();
 
     instance.setComplete(true);
-    wrapper.update()
+    wrapper.update();
     expect(wrapper).toMatchSnapshot();
 
     wrapper.find('#export').first().simulate('click');

@@ -11,7 +11,7 @@ jest.mock('axios');
 function getComponent(onClose) {
   const agent = {
     name: 'test'
-  }
+  };
   return renderer.create(
     <ExportLinpeas onClose={onClose} agent={agent} />
   );

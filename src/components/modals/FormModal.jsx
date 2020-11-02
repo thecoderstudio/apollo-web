@@ -17,7 +17,7 @@ const propTypes = {
 
 const defaultProps = {
   onClose: () => {}
-}
+};
 
 const Container = styled(Card)`
   position: absolute;

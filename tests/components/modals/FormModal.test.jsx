@@ -13,7 +13,7 @@ function getComponent(onClose, onSubmit) {
         onSubmit={onSubmit}>
         {(values, errors, handleChange) => {
           expect(values.test).toEqual('');
-          return <p>Test form</p>
+          return <p>Test form</p>;
         }}
     </FormModal>
   );

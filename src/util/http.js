@@ -1,3 +1,14 @@
+function getFilenameFromHeaders(headers) {
+    try {
+      return headers['content-disposition'].split('filename=')[1];
+    } catch (error) {
+      if (error instanceof TypeError) {
+        return;
+      }
+      throw error;
+    }
+}
+
 export function downloadResponse(response, filename=null) {
   let newFilename = filename;
   if (!newFilename) {
@@ -8,15 +19,4 @@ export function downloadResponse(response, filename=null) {
   link.href = window.URL.createObjectURL(new Blob([response.data]));
   link.download = newFilename;
   link.click();
-}
-
-function getFilenameFromHeaders(headers) {
-    try {
-      return headers['content-disposition'].split('filename=')[1];
-    } catch (error) {
-      if (error instanceof TypeError) {
-        return;
-      }
-      throw error;
-    }
 }

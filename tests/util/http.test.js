@@ -36,7 +36,7 @@ describe('downloadResponse', () => {
 
   it("throws an exception when not giving a response", () => {
     const splitMock = jest.fn();
-    splitMock.mockImplementation(() => { throw "test" });
+    splitMock.mockImplementation(() => { throw "test"; });
     const response = {
       headers: {
         'content-disposition': {
@@ -44,7 +44,7 @@ describe('downloadResponse', () => {
         }
       }
     };
-    expect(() => { downloadResponse(response) }).toThrow("test");
+    expect(() => { downloadResponse(response); }).toThrow("test");
   });
 
   it("downloads the response with a given name", () => {
