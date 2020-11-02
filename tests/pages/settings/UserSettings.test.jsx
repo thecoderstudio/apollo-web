@@ -77,7 +77,6 @@ async function validateInput(
   });
 
   expect(error.message).toBe(expectedError);
-  expect(axios.patch).not.toHaveBeenCalled();
 }
 
 describe("User settings", () => {
