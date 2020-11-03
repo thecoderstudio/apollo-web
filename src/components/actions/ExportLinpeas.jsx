@@ -8,7 +8,6 @@ import { exportLinpeasSchema } from '../../validation/linpeas';
 import { handleHTTPResponse } from '../../actions/error';
 import { downloadResponse } from '../../util/http';
 import { parseHTTPErrors } from '../../util/parser';
-import media from '../../util/media';
 import FormModal from '../modals/FormModal';
 import Input from '../Input';
 
@@ -50,7 +49,7 @@ class ExportLinpeas extends React.PureComponent {
         params: {
           ansi: this.state.ansi,
           filename: values.filename ? values.filename : null
-        },
+        }
       }
     )
       .then(response => {

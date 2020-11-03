@@ -6,15 +6,15 @@ import FormModal from '../../../src/components/modals/FormModal';
 function getComponent(onClose, onSubmit) {
   return renderer.create(
     <FormModal
-        title="Test"
-        primaryActionTitle="Create"
-        initialValues={{ test: '' }}
-        onClose={onClose}
-        onSubmit={onSubmit}>
-        {(values, errors, handleChange) => {
-          expect(values.test).toEqual('');
-          return <p>Test form</p>;
-        }}
+      title="Test"
+      primaryActionTitle="Create"
+      initialValues={{ test: '' }}
+      onClose={onClose}
+      onSubmit={onSubmit}>
+      {(values, errors, handleChange) => {
+        expect(values.test).toEqual('');
+        return <p>Test form</p>;
+      }}
     </FormModal>
   );
 }
