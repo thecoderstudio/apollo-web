@@ -1,13 +1,19 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import configureStore from 'redux-mock-store';
+import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import SettingsPage from '../../../src/pages/settings/SettingsPage';
 
-function getComponent(props, path) {
+const mockStore = configureStore([]);
+
+function getComponent(store, props, path) {
   return renderer.create(
-    <MemoryRouter initialEntries={[path]}>
-      <SettingsPage {...props} />
-    </MemoryRouter>
+    <Provider store={store}>
+      <MemoryRouter initialEntries={[path]}>
+        <SettingsPage {...props} />
+      </MemoryRouter>
+    </Provider>
   );
 }
 
@@ -20,14 +26,23 @@ describe("settings page", () => {
       url: '/settings'
     }
   };
+  let store;
+
+  beforeEach(() => {
+    store = mockStore({
+      currentUser: {
+        username: 'admin'
+      }
+    });
+  });
 
   it("render correctly user settings", () => {
-    const tree = getComponent(props, props.location.pathname).toJSON();
+    const tree = getComponent(store, props, props.location.pathname).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it("render correctly not found", () => {
-    const tree = getComponent(props, 'settings/notfound').toJSON();
+    const tree = getComponent(store, props, 'settings/notfound').toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

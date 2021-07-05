@@ -19,8 +19,8 @@ const Container = styled.div`
 const StyledInput = styled.input`
   min-height: 50px;
   width: 100%;
-  background: ${props => props.inverted ? props.theme.lightBlack : props.theme.white};
-  color: ${props => props.inverted ? props.theme.white : props.theme.lightBlack};
+  background: ${props => props.inverted ? props.theme.InputBlack : props.theme.white};
+  color: ${props => props.inverted ? props.theme.white : props.theme.InputBlack};
   border: none;
   border-radius: 5px;
   font-family: 'Libre Franklin', sans-serif;
@@ -47,7 +47,7 @@ export default function Input(props) {
   return (
     <Container className={className}>
       <StyledInput hasError={hasError} {...rest} />
-      { hasError && <Error>{error}</Error>}
+      { hasError && <Error id='error'>{error}</Error>}
     </Container>
   );
 }

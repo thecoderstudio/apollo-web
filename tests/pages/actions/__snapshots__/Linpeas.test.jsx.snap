@@ -32,6 +32,7 @@ exports[`linpeas correctly renders 1`] = `
     <Component
       theme={
         Object {
+          "InputBlack": "#1f1f1f",
           "accent": "#4D02EE",
           "black": "#181818",
           "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
@@ -50,6 +51,7 @@ exports[`linpeas correctly renders 1`] = `
           "red": "#ED3E2A",
           "selectedBlack": "#252525",
           "smallTextSize": "0.85rem",
+          "success": "#27AE60",
           "warning": "#ED852A",
           "white": "#F8F8F8",
         }
@@ -119,6 +121,7 @@ exports[`linpeas correctly renders 1`] = `
                 readOnly={true}
                 theme={
                   Object {
+                    "InputBlack": "#1f1f1f",
                     "accent": "#4D02EE",
                     "black": "#181818",
                     "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
@@ -137,6 +140,7 @@ exports[`linpeas correctly renders 1`] = `
                     "red": "#ED3E2A",
                     "selectedBlack": "#252525",
                     "smallTextSize": "0.85rem",
+                    "success": "#27AE60",
                     "warning": "#ED852A",
                     "white": "#F8F8F8",
                   }

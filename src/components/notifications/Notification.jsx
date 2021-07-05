@@ -66,11 +66,13 @@ class Notification extends React.PureComponent {
   }
 
   getColor(notificationSeverity) {
-    switch(notificationSeverity) {
+    switch (notificationSeverity) {
       case severity.WARNING:
         return this.props.theme.warning;
       case severity.ERROR:
         return this.props.theme.error;
+      case severity.SUCCESS:
+        return this.props.theme.success;
       default:
         return this.props.theme.accent;
     }
@@ -85,11 +87,11 @@ class Notification extends React.PureComponent {
   }
 
   render() {
-    let color = this.getColor(this.props.severity);
+    const color = this.getColor(this.props.severity);
 
     return (
       <Container className={this.props.className} color={color}>
-        <CloseIcon className="fas fa-times" onClick={this.dismissSelf}/>
+        <CloseIcon className="fas fa-times" onClick={this.dismissSelf} />
         <Message>{this.props.message}</Message>
       </Container>
     );
@@ -97,6 +99,6 @@ class Notification extends React.PureComponent {
 }
 
 Notification.propTypes = propTypes;
-Notification.defaultProps = defaultProps; 
+Notification.defaultProps = defaultProps;
 
 export default withTheme(connect()(Notification));
