@@ -4,6 +4,7 @@ import axios from 'axios';
 import renderer from 'react-test-renderer';
 import AddAgent from '../../../../src/components/modals/add-agent/AddAgent';
 import NewAgentHandler from '../../../../src/lib/NewAgentHandler';
+import * as HTTP from '../../../../src/util/http';
 
 jest.mock('axios');
 
@@ -52,7 +53,7 @@ describe('Add Agent', () => {
 
   it("calls download file correctly after successful get", async () => {
     const component = getComponent(spy, true);
-    const downloadFileSpy = jest.spyOn(NewAgentHandler.prototype, 'downloadFile').mockImplementation(() => { });
+    HTTP.downloadResponse = jest.fn();
 
     axios.get.mockResolvedValue({
       status: 200,
@@ -61,13 +62,13 @@ describe('Add Agent', () => {
     component.root.findByProps({ id: 'downloadBinaryButton' }).props.onClick();
 
     await waitForExpect(() => {
-      expect(downloadFileSpy).toHaveBeenCalled();
+      expect(HTTP.downloadResponse).toHaveBeenCalled();
     });
   });
 
   it("Does not call download file on error", async () => {
     const component = getComponent(spy, true);
-    const downloadFileSpy = jest.spyOn(NewAgentHandler.prototype, 'downloadFile').mockImplementation(() => { });
+    HTTP.downloadResponse = jest.fn();
 
     axios.get.mockRejectedValue({
       status: 400,
@@ -79,7 +80,7 @@ describe('Add Agent', () => {
     component.root.findByProps({ id: 'downloadBinaryButton' }).props.onClick();
 
     await waitForExpect(() => {
-      expect(downloadFileSpy).not.toHaveBeenCalled();
+      expect(HTTP.downloadResponse).not.toHaveBeenCalled();
     });
   });
 });

@@ -25,13 +25,13 @@ describe('ConfirmationModal', () => {
     expect(getComponent(props).toJSON()).toMatchSnapshot();
   });
 
-  it('calls delete function', () => {
+  it('calls cancel function', () => {
     const component = getComponent(props);
     component.root.findAllByType('button')[0].props.onClick();
     expect(cancelSpy).toHaveBeenCalled();
   });
 
-  it('calls cancel button', () => {
+  it('calls confirmation button', () => {
     const component = getComponent(props);
     component.root.findAllByType('button')[1].props.onClick();
     expect(confirmSpy).toHaveBeenCalled();

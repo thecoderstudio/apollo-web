@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
-import Action from '../../../src/components/action/Action';
+import Action from '../../../src/components/actions/Action';
 
 describe("Action", () => {
   it("renders correctly", () => {

@@ -7,73 +7,8 @@ import { handleHTTPResponse } from '../../actions/error';
 import { createUserSchema } from '../../validation/user';
 import { parseHTTPErrors } from '../../util/parser';
 import media from '../../util/media';
-import Button from '../buttons/Button';
-import OutlinedButton from '../buttons/OutlinedButton';
 import Input from '../Input';
-import Card from '../Card';
-import ModalOverlay from '../modals/ModalOverlay';
-
-const Container = styled(Card)`
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 450px;
-  width: 100%;
-  max-width: 400px;
-  transform: translateY(-50%);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-sizing:border-box;
-
-  ${
-    media.phone`
-      padding: 16px;
-      height: 100%;
-    `
-  }
-`;
-
-const Content = styled.div`
-  height: 100%;
-  max-height: 450px;
-  display: grid;
-  grid-template-rows: [title] 1fr [form ]4fr;
-  align-items: center;
-`;
-
-const Title = styled.h2`
-  grid-row: title;
-  text-align: center;
-`;
-
-const Form = styled.form`
-  height: 95%;
-  grid-row: form;
-  display: grid;
-  grid-template-rows: auto;
-  grid-row-gap: 40px;
-`;
-
-const Buttons = styled.div`
-  display: flex;
-  justify-content: space-around;
-
-  &> button {
-    min-width: 150px;
-  }
-
-  ${
-    media.phone`
-      justify-content: space-between;
-      flex-direction: column-reverse;
-    `
-  }
-`;
+import FormModal from '../modals/FormModal';
 
 export default class CreateUser extends React.PureComponent {
   constructor(props) {
@@ -109,50 +44,41 @@ export default class CreateUser extends React.PureComponent {
 
   render() {
     return (
-      <ModalOverlay closeModalFunction={this.close}>
-        <Container>
-          <Content>
-            <Title>Create new user</Title>
-            <Formik
-              initialValues={{ username: '', password: '', confirmPassword: '' }}
-              validationSchema={createUserSchema}
-              validateOnChange={false}
-              onSubmit={this.createUser}>
-              {({ values, errors, handleChange, handleSubmit }) => (
-                <Form onSubmit={handleSubmit}>
-                  <Input
-                    name="username"
-                    type="username"
-                    placeholder="Username"
-                    value={values.username}
-                    error={errors.username}
-                    onChange={handleChange} />
-                  <Input
-                    name="password"
-                    type="password"
-                    placeholder="Password"
-                    value={values.password}
-                    error={errors.password}
-                    onChange={handleChange}
-                    autocomplete="new-password" />
-                  <Input
-                    name="confirmPassword"
-                    type="password"
-                    placeholder="Confirm password"
-                    value={values.confirmPassword}
-                    error={errors.confirmPassword}
-                    onChange={handleChange}
-                    autocomplete="new-password" />
-                  <Buttons>
-                    <OutlinedButton onClick={this.close}>Cancel</OutlinedButton>
-                    <Button>Create user</Button>
-                  </Buttons>
-                </Form>
-              )}
-            </Formik>
-          </Content>
-        </Container>
-      </ModalOverlay>
+      <FormModal
+        title="Create new user"
+        primaryActionTitle="Create user"
+        initialValues={{ username: '', password: '', confirmPassword: '' }}
+        validationSchema={createUserSchema}
+        onClose={this.close}
+        onSubmit={this.createUser}>
+        {(values, errors, handleChange) => (
+          <div>
+            <Input
+              name="username"
+              type="username"
+              placeholder="Username"
+              value={values.username}
+              error={errors.username}
+              onChange={handleChange} />
+            <Input
+              name="password"
+              type="password"
+              placeholder="Password"
+              value={values.password}
+              error={errors.password}
+              onChange={handleChange}
+              autocomplete="new-password" />
+            <Input
+              name="confirmPassword"
+              type="password"
+              placeholder="Confirm password"
+              value={values.confirmPassword}
+              error={errors.confirmPassword}
+              onChange={handleChange}
+              autocomplete="new-password" />
+          </div>
+        )}
+      </FormModal>
     );
   }
 }

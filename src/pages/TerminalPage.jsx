@@ -5,7 +5,8 @@ import Terminal from '../components/terminal/Terminal';
 
 const propTypes = {
   agentEndpoint: PropTypes.string,
-  readOnly: PropTypes.bool
+  readOnly: PropTypes.bool,
+  onSocketClose: PropTypes.func
 };
 
 class TerminalPage extends React.PureComponent {
@@ -24,6 +25,7 @@ class TerminalPage extends React.PureComponent {
       ref={this.terminalRef}
       readOnly={this.props.readOnly}
       agentEndpoint={this.props.agentEndpoint}
+      onSocketClose={this.props.onSocketClose}
       agent={this.props.agents.get(params.agentId)} />;
   }
 }

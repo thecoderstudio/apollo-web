@@ -16,10 +16,12 @@ describe('Terminal', () => {
   var wrapper;
   var terminal;
   var termWriteSpy;
+  var socketCloseSpy;
 
   beforeEach(() => {
     termWriteSpy = jest.spyOn(Terminal.prototype, 'write');
-    wrapper = mount(<Terminal theme={darkTheme} agent={mockAgent} />);
+    socketCloseSpy = jest.fn();
+    wrapper = mount(<Terminal theme={darkTheme} agent={mockAgent} onSocketClose={socketCloseSpy} />);
     terminal = wrapper.find(Terminal).instance();
   });
 
@@ -40,6 +42,7 @@ describe('Terminal', () => {
     expect(termWriteSpy).toHaveBeenCalledWith(terminal.chalk.hex(darkTheme.error).bold(
       "Something went wrong in the connection with the agent."
     ));
+    expect(socketCloseSpy).toHaveBeenCalledWith(false);
     expect(termWriteSpy).toHaveBeenCalledWith(terminal.chalk.hex(darkTheme.error).bold(
       "\n\r\nConnection with server is closed"
     ));
@@ -64,6 +67,7 @@ describe('Terminal', () => {
   });
 
   it('correctly handles connection closure', async () => {
+    wrapper = mount(<Terminal theme={darkTheme} agent={mockAgent} />);
     await server.connected;
     server.close();
 

@@ -6,7 +6,7 @@ import Icon from '../components/Icon';
 import InlineTerminal from '../components/terminal/InlineTerminal';
 import { openTerminal } from '../components/terminal/Terminal';
 import ConnectionIndicator from '../components/connection-state/ConnectionIndicator';
-import AgentActions from '../components/action/AgentActions';
+import AgentActions from '../components/actions/AgentActions';
 import withNetworkBoundResource from '../hoc/networkBoundResource';
 import { getFontAwesomeClass } from '../util/agent';
 import { parseSnakeCaseObj } from '../util/parser';

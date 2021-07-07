@@ -10,18 +10,21 @@ import { handleError } from '../../actions/error';
 const propTypes = {
   agent: PropTypes.object.isRequired,
   agentEndpoint: PropTypes.string,
-  readOnly: PropTypes.bool
+  readOnly: PropTypes.bool,
+  onSocketClose: PropTypes.func
 };
 
 const defaultProps = {
   agentEndpoint: "shell",
-  readOnly: false
+  readOnly: false,
+  onSocketClose: _ => {}
 };
 
 const Container = styled.div`
   height: 100%;
   width: 100%;
   padding: 20px;
+  box-sizing: border-box;
 `;
 
 const StyledXTerm = styled.div`
@@ -51,6 +54,7 @@ export class Terminal extends React.PureComponent {
     this.write = this.write.bind(this);
     this.fit = this.fit.bind(this);
     this.connect = this.connect.bind(this);
+    this.state = { success: true };
     this.connect();
   }
 
@@ -90,11 +94,13 @@ export class Terminal extends React.PureComponent {
   }
 
   onSocketError() {
+    this.setState({ success: false });
     handleError(socketErrorMessage, false);
     this.write(this.chalk.hex(this.props.theme.error).bold(socketErrorMessage));
   }
 
   onSocketClose() {
+    this.props.onSocketClose(this.state.success);
     this.write(this.chalk.hex(this.props.theme.error).bold(
       "\n\r\nConnection with server is closed"
     ));
