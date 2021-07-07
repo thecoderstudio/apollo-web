@@ -60,7 +60,7 @@ export class Terminal extends React.PureComponent {
         background: "#ffffff00"
       },
       allowTransparency: true,
-      disableStdin: !readOnly
+      disableStdin: readOnly
     };
   }
 
